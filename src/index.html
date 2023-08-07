@@ -1,30 +1,130 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Полный комплекс услуг: от производителя до торговой точки и потребителя</title>
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=0"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <link rel="shortcut icon" type="image/png" sizes="16x16" href="" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>
+            Полный комплекс услуг: от производителя до торговой точки и
+            потребителя
+        </title>
+        <meta name="description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=0"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="" />
+        <link rel="stylesheet" href="./css/fancybox.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
 
-  <body>
-    <header class="header">
-      
-    </header>
-    <main class="content">
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <a href="/" class="header-logo header__logo">
+                    <img
+                        src="../img/logo.svg"
+                        alt="Континент"
+                        width="236"
+                        height="46"
+                        class="header-logo__img"
+                    />
+                </a>
+                <div class="header__block">
+                    <div class="header-lk header__lk">
+                        <a href="#" class="header-lk__link">
+                            Кабинет клиента
+                        </a>
+                        <a href="#" class="header-lk__link">
+                            Кабинет сотрудника
+                        </a>
+                    </div>
+                    <nav class="header-nav header__nav">
+                        <ul class="header-nav__list">
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">
+                                    Продукция
+                                </a>
+                            </li>
+                            <li class="header-nav__item">
+                                <span class="header-nav__link">
+                                    О компании
+                                    <svg
+                                        width="12"
+                                        height="7"
+                                        class="header-nav__icon"
+                                    >
+                                        <use
+                                            xlink:href="../img/svg-sprite.svg#arrow-dropdown"
+                                        ></use>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">
+                                    Карьера
+                                </a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">
+                                    Об оплате
+                                </a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-phone header__phone">
+                    <button
+                        title="заказать звонок"
+                        aria-label="заказать звонок"
+                        class="header-phone__btn"
+                    >
+                        заказать звонок
+                    </button>
+                    <a href="tel: 88007005528" class="header-phone__link">
+                        8 800 700 55 28
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="content content--home">
+            <section class="home-preview">
+                <div class="home-preview__content">
+                    <h1 class="title title--size-lg home-preview__title">
+                        Полный комплекс услуг: <br />
+                        от производителя <br />
+                        до торговой точки и потребителя
+                    </h1>
+                    <p class="home-preview__text">
+                        Лучший сервис – каждому клиенту. Лучшие продукты в
+                        каждый дом.
+                    </p>
+                </div>
+                <button
+                    data-fancybox="video"
+                    data-src="https://www.youtube.com/watch?v=eoNLyVgyOKs&ab_channel=MrChay_"
+                    class="btn-play-video home-preview__btn"
+                >
+                    <div class="btn-play-video__icon"></div>
+                    <span class="btn-play-video__text">Видео о нас</span>
+                </button>
+            </section>
+            <section class="delivery-geography">
+                <div class="delivery-geography__map">
+                    <h2 class="title title--size-lg delivery-geography__title">
+                        География доставки
+                    </h2>
+                </div>
+            </section>
+        </main>
+        <footer class="footer"></footer>
 
-    </main>
-    <footer class="footer">
-
-    </footer>
-
-    <script src="./js/script.js"></script>
-  </body>
+        <script src="./js/fancybox.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
 </html>

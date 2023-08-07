@@ -1,0 +1,99 @@
+.header {
+    padding: 27px 8.3% 32px;
+    background-color: #fff;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__logo {
+        display: flex;
+        margin-right: 3.4%;
+        width: 236px;
+    }
+
+    &__lk {
+        margin-bottom: 20px;
+    }
+}
+
+.header-logo {
+    &__img {
+        width: 100%;
+    }
+}
+
+.header-lk {
+    &__link {
+        color: #2d3da0;
+        font-size: 14px;
+        margin-right: 40px;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.header-nav {
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__item {
+        margin-right: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 17px;
+        color: #2d3da0;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__icon {
+        fill: #2d3da0;
+        margin-top: 2px;
+        margin-left: 8px;
+    }
+}
+
+.header-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+
+    &__btn {
+        background: none;
+        color: #2d3da0;
+        font-size: 14px;
+        margin-bottom: 18px;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__link {
+        color: #6f6f6f;
+        font-size: 20px;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

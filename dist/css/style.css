@@ -376,6 +376,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   font-size: 16px;
+  background-color: #29357f;
 }
 
 header {
@@ -400,4 +401,230 @@ main {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.title {
+  color: #fff;
+}
+.title--size-lg {
+  font-size: 44px;
+  font-weight: 600;
+}
+.title--size-xl {
+  font-size: 47px;
+}
+
+.text {
+  color: #fff;
+}
+.text--size-md {
+  font-size: 18px;
+}
+.text--size-sm {
+  font-size: 16px;
+}
+
+.header {
+  padding: 27px 8.3% 32px;
+  background-color: #fff;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 3.4%;
+  width: 236px;
+}
+.header__lk {
+  margin-bottom: 20px;
+}
+
+.header-logo__img {
+  width: 100%;
+}
+
+.header-lk__link {
+  color: #2d3da0;
+  font-size: 14px;
+  margin-right: 40px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.header-lk__link:hover {
+  opacity: 0.7;
+}
+
+.header-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+}
+.header-nav__item {
+  margin-right: 30px;
+}
+.header-nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 17px;
+  color: #2d3da0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.header-nav__link:hover {
+  opacity: 0.7;
+}
+.header-nav__icon {
+  fill: #2d3da0;
+  margin-top: 2px;
+  margin-left: 8px;
+}
+
+.header-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  margin-left: auto;
+}
+.header-phone__btn {
+  background: none;
+  color: #2d3da0;
+  font-size: 14px;
+  margin-bottom: 18px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.header-phone__btn:hover {
+  opacity: 0.7;
+}
+.header-phone__link {
+  color: #6f6f6f;
+  font-size: 20px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.header-phone__link:hover {
+  opacity: 0.7;
+}
+
+.home-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 100px 16.7%;
+  background: url("../img/preview-home-bg.jpg") center bottom/cover no-repeat;
+  min-height: 839px;
+}
+.home-preview__content {
+  max-width: 800px;
+}
+.home-preview__title {
+  margin-bottom: 33px;
+}
+.home-preview__text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.btn-play-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: none;
+}
+.btn-play-video__icon {
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 10px;
+  width: 74px;
+  height: 74px;
+  background-color: #fff;
+  -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  margin-bottom: 25px;
+}
+.btn-play-video__icon::before {
+  content: "";
+  grid-area: -1/1;
+  width: 47px;
+  height: 47px;
+  background-color: #707ed6;
+  -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+.btn-play-video__text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.delivery-geography {
+  position: relative;
+  background-color: #5c60a7;
+  min-height: 2000px;
+}
+.delivery-geography::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 168px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#3e498c), to(rgba(91, 96, 167, 0)));
+  background-image: linear-gradient(0deg, #3e498c 0%, rgba(91, 96, 167, 0) 100%);
+}
+.delivery-geography__map {
+  padding-top: 270px;
+  padding-left: 18.8%;
+  min-height: 535px;
+  background: url("../img/elivery-geography-map-maska.svg") center 100%/cover no-repeat, url("../img/delivery-geography-map.jpg") center top/cover no-repeat;
 }
