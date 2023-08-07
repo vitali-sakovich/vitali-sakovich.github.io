@@ -610,7 +610,6 @@ button {
 .delivery-geography {
   position: relative;
   background-color: #5c60a7;
-  min-height: 2000px;
 }
 .delivery-geography::before {
   content: "";
@@ -626,5 +625,46 @@ button {
   padding-top: 270px;
   padding-left: 18.8%;
   min-height: 535px;
-  background: url("../img/elivery-geography-map-maska.svg") center 100%/cover no-repeat, url("../img/delivery-geography-map.jpg") center top/cover no-repeat;
+  background: url("../img/elivery-geography-map-maska.svg") center 101%/100% auto no-repeat, url("../img/delivery-geography-map.jpg") center top/cover no-repeat;
+}
+.delivery-geography__title {
+  max-width: 200px;
+}
+.delivery-geography__block {
+  display: grid;
+  justify-items: center;
+}
+.delivery-geography__gif {
+  grid-area: -1/1;
+}
+.delivery-geography__name {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  grid-area: -1/1;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+  max-width: 250px;
+  -webkit-transform: rotate(-11deg) skew(-13deg);
+  -ms-transform: rotate(-11deg) skew(-13deg);
+  transform: rotate(-11deg) skew(-13deg);
+}
+.delivery-geography__name--1 {
+  margin-bottom: 850px;
+  margin-right: 100px;
+}
+.delivery-geography__name--2 {
+  margin-bottom: 380px;
+  margin-left: 1110px;
+}
+.delivery-geography__name--3 {
+  margin-top: 680px;
+  margin-left: 400px;
+  max-width: 300px;
+}
+.delivery-geography__name--4 {
+  margin-top: 100px;
+  margin-right: 950px;
+  text-align: right;
 }

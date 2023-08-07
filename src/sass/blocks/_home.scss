@@ -58,7 +58,6 @@
 .delivery-geography {
     position: relative;
     background-color: #5c60a7;
-    min-height: 2000px;
 
     &::before {
         content: "";
@@ -78,8 +77,55 @@
         padding-top: 270px;
         padding-left: 18.8%;
         min-height: 535px;
-        background: url("../img/elivery-geography-map-maska.svg") center 100% /
-                cover no-repeat,
+        background: url("../img/elivery-geography-map-maska.svg") center 101% /100% auto no-repeat,
             url("../img/delivery-geography-map.jpg") center top/cover no-repeat;
+    }
+
+    &__title {
+        max-width: 200px;
+    }
+
+    &__block {
+        display: grid;
+        justify-items: center;
+    }
+
+    &__gif {
+        grid-area: -1/1;
+    }
+
+    &__name {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        grid-area: -1/1;
+        font-size: 22px;
+        color: #fff;
+        font-weight: 700;
+        max-width: 250px;
+        transform: rotate(-11deg) skew(-13deg);
+
+        &--1 {
+            margin-bottom: 850px;
+            margin-right: 100px;
+        }
+
+        &--2 {
+            margin-bottom: 380px;
+            margin-left: 1110px;
+        }
+
+        &--3 {
+            margin-top: 680px;
+            margin-left: 400px;
+            max-width: 300px;
+        }
+
+        
+        &--4 {
+            margin-top: 100px;
+            margin-right: 950px;
+            text-align: right;
+        }
     }
 }
