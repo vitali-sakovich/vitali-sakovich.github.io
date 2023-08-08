@@ -15,6 +15,7 @@
         <meta name="format-detection" content="telephone=no" />
         <link rel="shortcut icon" type="image/png" sizes="16x16" href="" />
         <link rel="stylesheet" href="./css/fancybox.css" />
+        <link rel="stylesheet" href="./css/swiper.css" />
         <link rel="stylesheet" href="./css/style.css" />
     </head>
 
@@ -121,50 +122,524 @@
                     </h2>
                 </div>
                 <div class="delivery-geography__block">
-                    <img src="../img/compilation.gif" alt="Структура производства" class="delivery-geography__gif">
-                    <span class="delivery-geography__name delivery-geography__name--1">
-                        Поставщики <br> и производители 
+                    <img
+                        src="../img/compilation.gif"
+                        alt="Структура производства"
+                        class="delivery-geography__gif"
+                    />
+                    <span
+                        class="delivery-geography__name delivery-geography__name--1"
+                    >
+                        Поставщики <br />
+                        и производители
                     </span>
-                    <span class="delivery-geography__name delivery-geography__name--2">
+                    <span
+                        class="delivery-geography__name delivery-geography__name--2"
+                    >
                         Собственный автопарк
                     </span>
-                    <span class="delivery-geography__name delivery-geography__name--3">
-                        Магазины возле дома 
+                    <span
+                        class="delivery-geography__name delivery-geography__name--3"
+                    >
+                        Магазины возле дома
                     </span>
-                    <span class="delivery-geography__name delivery-geography__name--4">
+                    <span
+                        class="delivery-geography__name delivery-geography__name--4"
+                    >
                         Логистический центр
                     </span>
                 </div>
             </section>
             <section class="advantage">
                 <div class="advantage__grid">
-                    <div class="advantage-card advantage__card">
-                        <h5 class="advantage-card__title">
-                            Собственный автопарк
-                        </h5>
-                        <p class="advantage-card__text">
-                            Авто не старше 5-ти лет
-                            Контроль температуры и влажности
-                            100% GPS и ГЛОНАСС
-                        </p>
-                        <a href="#" class="advantage-card__link">
+                    <a href="#" class="advantage-card advantage__card">
+                        <div class="advantage-card__content">
+                            <h5 class="advantage-card__title">
+                                Собственный автопарк
+                            </h5>
+                            <div class="advantage-card__desc">
+                                <p class="advantage-card__text">
+                                    Авто не старше 5-ти лет
+                                </p>
+                                <p class="advantage-card__text">
+                                    Контроль температуры и влажности
+                                </p>
+                                <p class="advantage-card__text">
+                                    100% GPS и ГЛОНАСС
+                                </p>
+                            </div>
                             <svg
-                            width="49"
-                            height="49"
-                            class="advantage-card__arrow"
+                                width="49"
+                                height="49"
+                                class="advantage-card__arrow"
+                            >
+                                <use
+                                    xlink:href="../img/svg-sprite.svg#arrow-icon"
+                                ></use>
+                            </svg>
+                        </div>
+                        <picture class="advantage-card__picture">
+                            <source
+                                srcset="../img/advantage-card-1.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="../img/advantage-card-1.png"
+                                width="455"
+                                height="365"
+                                alt="Собственный автопарк"
+                                class="advantage-card__img"
+                            />
+                        </picture>
+                    </a>
+                    <a href="#" class="advantage-card advantage__card">
+                        <div class="advantage-card__content">
+                            <h5 class="advantage-card__title">
+                                Складские комплексы
+                            </h5>
+                            <div class="advantage-card__desc">
+                                <p class="advantage-card__text">
+                                    Автоматизированный штучный подбор с
+                                    контролем товара по штрихкоду
+                                </p>
+                                <p class="advantage-card__text">
+                                    Современная WMS на всех складах
+                                </p>
+                                <p class="advantage-card__text">
+                                    Терминалы комплектовщиков со
+                                    штрихкодированием и Voice-information
+                                </p>
+                            </div>
+                            <svg
+                                width="49"
+                                height="49"
+                                class="advantage-card__arrow"
+                            >
+                                <use
+                                    xlink:href="../img/svg-sprite.svg#arrow-icon"
+                                ></use>
+                            </svg>
+                        </div>
+                        <picture class="advantage-card__picture">
+                            <source
+                                srcset="../img/advantage-card-2.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="../img/advantage-card-2.png"
+                                width="365"
+                                height="403"
+                                alt="Собственный автопарк"
+                                class="advantage-card__img"
+                            />
+                        </picture>
+                    </a>
+                    <a href="#" class="advantage-card advantage__card">
+                        <div class="advantage-card__content">
+                            <h5 class="advantage-card__title">Карьера</h5>
+                            <div
+                                class="advantage-card__desc advantage-card__desc--col"
+                            >
+                                <p
+                                    class="advantage-card__text advantage-card__text--weight-600"
+                                >
+                                    Современные офисы
+                                </p>
+                                <p
+                                    class="advantage-card__text advantage-card__text--weight-600"
+                                >
+                                    Служебные автомобили для менеджеров
+                                </p>
+                                <p
+                                    class="advantage-card__text advantage-card__text--weight-600"
+                                >
+                                    Комфортные рабочие места
+                                </p>
+                                <p
+                                    class="advantage-card__text advantage-card__text--weight-600"
+                                >
+                                    Система мониторинга здоровья сотрудников
+                                </p>
+                            </div>
+                            <svg
+                                width="49"
+                                height="49"
+                                class="advantage-card__arrow"
+                            >
+                                <use
+                                    xlink:href="../img/svg-sprite.svg#arrow-icon"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <div class="advantage-card advantage__card">
+                        <div class="advantage-card-top advantage-card__top">
+                            <picture class="advantage-card-top__picture">
+                                <source
+                                    srcset="../img/edi.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="../img/edi.png"
+                                    width="138"
+                                    height="51"
+                                    alt="EDI"
+                                    class="advantage-card-top__img"
+                                />
+                            </picture>
+                            <span class="advantage-card-top__symbol">+</span>
+                            <picture class="advantage-card-top__picture">
+                                <source
+                                    srcset="../img/edo.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="../img/edo.png"
+                                    width="101"
+                                    height="60"
+                                    alt="EDI"
+                                    class="advantage-card-top__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="advantage-card-box">
+                            <span class="advantage-card-box__title"
+                                >Интеграции:</span
+                            >
+                            <div class="advantage-card-box__images">
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/egais.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/egais.png"
+                                        width="68"
+                                        height="96"
+                                        alt="ЕГАИС"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/merkuri.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/merkuri.png"
+                                        width="94"
+                                        height="89"
+                                        alt="Меркурий"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/chestni-snak.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/chestni-snak.png"
+                                        width="53"
+                                        height="87"
+                                        alt="Честный знак"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/fgis.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/fgis.png"
+                                        width="69"
+                                        height="97"
+                                        alt="ФГИС Зерно"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="advantage-card advantage__card advantage-card--col"
+                    >
+                        <div
+                            class="advantage-card-box advantage-card-box--market"
                         >
-                            <use
-                                xlink:href="../img/svg-sprite.svg#arrow-icon"
-                            ></use>
-                        </svg>
-                        </a>
+                            <span class="advantage-card-box__title"
+                                >Маркетплейсы</span
+                            >
+                            <div class="advantage-card-box__images">
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/ozon.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/ozon.png"
+                                        width="94"
+                                        height="20"
+                                        alt="ozon"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/ya.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/ya.png"
+                                        width="106"
+                                        height="24"
+                                        alt="Яндекс Маркет"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/wildberries.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/wildberries.png"
+                                        width="144"
+                                        height="42"
+                                        alt="wildberries"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                        <div
+                            class="advantage-card-box advantage-card-box--market"
+                        >
+                            <span class="advantage-card-box__title">B2B</span>
+                            <div class="advantage-card-box__images">
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/may24.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/may24.png"
+                                        width="93"
+                                        height="19"
+                                        alt="MAY 24"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/b2b.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/b2b.png"
+                                        width="86"
+                                        height="28"
+                                        alt="B2B портал"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/telesez.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/telesez.png"
+                                        width="121"
+                                        height="26"
+                                        alt="Телесейлз сервис"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                                <picture class="advantage-card-box__picture">
+                                    <source
+                                        srcset="../img/logo/med.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="../img/logo/med.png"
+                                        width="57"
+                                        height="31"
+                                        alt="МЁD"
+                                        class="advantage-card-box__img"
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="advantage-card advantage__card advantage-card--number"
+                    >
+                        <div class="advantage-card-number">
+                            <div class="advantage-card-number__box">
+                                <span class="advantage-card-number__value"
+                                    >2000+</span
+                                >
+                                <span class="advantage-card-number__name"
+                                    >Населенных пунктов</span
+                                >
+                            </div>
+                            <div class="advantage-card-number__box">
+                                <span class="advantage-card-number__value"
+                                    >29000+</span
+                                >
+                                <span class="advantage-card-number__name"
+                                    >Клиентов</span
+                                >
+                            </div>
+                            <div class="advantage-card-number__box">
+                                <span class="advantage-card-number__value"
+                                    >1700+</span
+                                >
+                                <span class="advantage-card-number__name"
+                                    >Сотрудников</span
+                                >
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
+            <section class="clients">
+                <div class="clients__head">
+                    <h2 class="clients__title">Наши клиенты</h2>
+                    <div class="clients__text">
+                        Магазины и сети, построившие бизнес на сотрудничестве с
+                        нами
+                    </div>
+                </div>
+                <div class="swiper clients-slider clients__slider">
+                    <div class="swiper-wrapper clients-slider__wrapper">
+                        <div class="swiper-slide clients-slider__slide">
+                            <picture class="clients-slider__picture">
+                                <source
+                                    srcset="../img/logo/krasnijr.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="../img/logo/krasnijr.png"
+                                    width="216"
+                                    height="46"
+                                    alt="КрасныйЯр"
+                                    class="clients-slider__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide clients-slider__slide">
+                            <picture class="clients-slider__picture">
+                                <source
+                                    srcset="../img/logo/comandor.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="../img/logo/comandor.png"
+                                    width="259"
+                                    height="41"
+                                    alt="Командор"
+                                    class="clients-slider__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide clients-slider__slide">
+                            <picture class="clients-slider__picture">
+                                <source
+                                    srcset="../img/logo/5.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="../img/logo/5.png"
+                                    width="263"
+                                    height="60"
+                                    alt="Пятёрочка"
+                                    class="clients-slider__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide clients-slider__slide">
+                            <picture class="clients-slider__picture">
+                                <source
+                                    srcset="../img/logo/krasnijr.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="../img/logo/krasnijr.png"
+                                    width="216"
+                                    height="46"
+                                    alt="КрасныйЯр"
+                                    class="clients-slider__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide clients-slider__slide">
+                            <picture class="clients-slider__picture">
+                                <source
+                                    srcset="../img/logo/comandor.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="../img/logo/comandor.png"
+                                    width="259"
+                                    height="41"
+                                    alt="Командор"
+                                    class="clients-slider__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide clients-slider__slide">
+                            <picture class="clients-slider__picture">
+                                <source
+                                    srcset="../img/logo/5.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="../img/logo/5.png"
+                                    width="263"
+                                    height="60"
+                                    alt="Пятёрочка"
+                                    class="clients-slider__img"
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-button-next clients-slider-btn clients-slider__next"
+                    >
+                        <svg
+                            width="14"
+                            height="40"
+                            class="clients-slider-btn__icon"
+                        >
+                            <use
+                                xlink:href="../img/svg-sprite.svg#arrow-slider"
+                            ></use>
+                        </svg>
+                    </div>
+                    <div
+                        class="swiper-button-prev clients-slider-btn clients-slider__prev"
+                    >
+                        <svg
+                            width="14"
+                            height="40"
+                            class="clients-slider-btn__icon"
+                        >
+                            <use
+                                xlink:href="../img/svg-sprite.svg#arrow-slider"
+                            ></use>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <section class="section-form"></section>
         </main>
         <footer class="footer"></footer>
 
         <script src="./js/fancybox.js"></script>
+        <script src="./js/swiper.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>
