@@ -46,7 +46,12 @@
     }
 
     &__item {
+        position: relative;
         margin-right: 30px;
+
+        &:hover {
+            --nav-dropdown: block;
+        }
     }
 
     &__link {
@@ -64,7 +69,6 @@
 
     &__icon {
         fill: #2d3da0;
-        margin-top: 2px;
         margin-left: 8px;
     }
 }
@@ -95,5 +99,136 @@
         &:hover {
             opacity: 0.7;
         }
+    }
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 77%;
+    transform: translateX(-50%);
+    padding-top: 15px;
+    display: var(--nav-dropdown, none);
+
+    &__block {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.7));
+        min-width: 260px;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        font-size: 17px;
+        color: #2d3da0;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    overflow: auto;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &--show {
+        opacity: 1;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.7;
+        background-color: #000;
+    }
+
+    &__block {
+        z-index: 50;
+        background-color: #5c60a7;
+        height: 100%;
+        min-width: 436px;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 46px 40px 35px 35px;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    &__close {
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        width: 23px;
+        height: 23px;
+        background: none;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            grid-area: -1/1;
+            width: 2px;
+            height: 30px;
+            background-color: #fff;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__content {
+        padding-top: 49px;
+        padding-bottom: 40px;
+        padding-left: 35px;
+    }
+
+    &__text {
+        color: #fff;
+        line-height: 20px;
+        max-width: 270px;
+        margin-bottom: 33px;
     }
 }

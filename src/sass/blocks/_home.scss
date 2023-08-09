@@ -77,7 +77,8 @@
         padding-top: 270px;
         padding-left: 18.8%;
         min-height: 535px;
-        background: url("../img/elivery-geography-map-maska.svg") center 101% /100% auto no-repeat,
+        background: url("../img/elivery-geography-map-maska.svg") center 101% /100%
+                auto no-repeat,
             url("../img/delivery-geography-map.jpg") center top/cover no-repeat;
     }
 
@@ -121,7 +122,6 @@
             max-width: 300px;
         }
 
-        
         &--4 {
             margin-top: 100px;
             margin-right: 950px;
@@ -146,21 +146,25 @@
     overflow: hidden;
     transition: background-color 0.3s;
 
-    &:nth-child(-n+4) {
+    @media screen and (max-width: 1700px) {
+        padding-left: 107px;
+    }
+
+    &:nth-child(-n + 4) {
         min-height: 449px;
     }
 
     &:first-child,
     &:nth-child(4) {
-        background-color: #343F86;
+        background-color: #343f86;
     }
 
     &:nth-child(2) {
-        background-color: #29357F;
+        background-color: #29357f;
     }
 
     &:nth-child(3) {
-        background: url('../img/advantage-card-3.png') center/cover no-repeat;
+        background: url("../img/advantage-card-3.png") center/cover no-repeat;
     }
 
     &:nth-child(4) {
@@ -227,7 +231,7 @@
     &__arrow {
         display: flex;
         margin-top: auto;
-        fill: #707ED6;
+        fill: #707ed6;
     }
 
     &__picture {
@@ -257,7 +261,7 @@
     align-items: center;
 
     &__symbol {
-        color: #FFF;
+        color: #fff;
         font-size: 54px;
         font-weight: 300;
         margin-right: 15px;
@@ -277,18 +281,26 @@
 
         &:first-child {
             padding-left: 8.3vw;
+
+            @media screen and (max-width: 1700px) {
+                padding-left: 107px;
+            }
         }
 
         &:last-child {
-            background-color: #3D488B;
+            background-color: #3d488b;
             padding-left: 4.2vw;
+
+            @media screen and (max-width: 1700px) {
+                padding-left: 31px;
+            }
         }
     }
 
     &__title {
         font-size: 20px;
         font-weight: 600;
-        color: #FFF;
+        color: #fff;
         margin-bottom: 20px;
 
         #{$self}--market & {
@@ -309,7 +321,7 @@
         #{$self}--market & {
             margin-bottom: 35px;
         }
-    } 
+    }
 }
 
 .advantage-card-number {
@@ -332,7 +344,7 @@
     }
 
     &__name {
-        color: #FFF;
+        color: #fff;
         line-height: 24px;
         max-width: 150px;
     }
@@ -390,7 +402,7 @@
     }
 
     &__icon {
-        fill: var(--icon-fill, #B6B6B6);
+        fill: var(--icon-fill, #b6b6b6);
         transition: fill 0.3s;
     }
 }
@@ -398,7 +410,7 @@
 .section-form {
     display: flex;
     background: url("../img/form-bg.jpg") right center/auto 100% no-repeat,
-    #001545;
+        #001545;
     padding-top: 150px;
     padding-bottom: 130px;
     padding-left: 22%;
@@ -414,14 +426,14 @@
     &__title {
         font-size: 54px;
         font-weight: 600;
-        color: #FFF;
+        color: #fff;
         margin-bottom: 35px;
     }
 
     &__text {
         font-size: 18px;
         line-height: 26px;
-        color: #FFF;
+        color: #fff;
     }
 }
 
@@ -439,7 +451,7 @@
         width: 162px;
         height: 48px;
         border-radius: 3px;
-        background-color: #6F7DD6;
+        background-color: #6f7dd6;
         color: #fff;
         margin-right: 18px;
     }
@@ -458,6 +470,7 @@
         --placeholder-size: 12px;
         --placeholder-color: #fff;
         --clear-opacity: 1;
+        --clear-events: auto;
     }
 
     &--textarea {
@@ -471,16 +484,16 @@
     }
 
     &__input {
-        background-color: rgba(255, 255, 255, 0.10);
+        background-color: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0);
         transition: border-color 0.3s;
         outline: none;
         border-radius: 5px;
         font-size: 18px;
-        color: #FFF;
+        color: #fff;
         padding-right: 60px;
         padding-left: 16px;
-    
+
         &:focus {
             border-color: rgba(255, 255, 255, 0.25);
         }
@@ -504,6 +517,7 @@
         opacity: var(--clear-opacity, 0);
         transition: opacity 0.3s;
         will-change: opacity;
+        pointer-events: var(--clear-events, none);
 
         &:hover {
             --fill-icon: #fff;
@@ -518,7 +532,10 @@
         color: var(--placeholder-color, rgba(255, 255, 255, 0.63));
         font-size: var(--placeholder-size, 18px);
         transition: transform 0.3s, color 0.3s, font-size 0.3s;
-        transform: translate(var(--placeholder-x, 16px), var(--placeholder-y, 14px));
+        transform: translate(
+            var(--placeholder-x, 16px),
+            var(--placeholder-y, 14px)
+        );
         will-change: transform, color, font-size;
     }
 
@@ -549,13 +566,13 @@
         align-items: center;
         width: 16px;
         min-width: 16px;
-        height: 16px; 
+        height: 16px;
         border-radius: 2px;
-        border: 1px solid rgba(255, 255, 255, 0.50);
+        border: 1px solid rgba(255, 255, 255, 0.5);
     }
 
     &__icon {
-        fill: rgba(255, 255, 255, 0.50);
+        fill: rgba(255, 255, 255, 0.5);
         opacity: var(--icon-opacity, 0);
         transition: opacity 0.3s;
     }

@@ -45,6 +45,38 @@
                                         <use xlink:href="../img/svg-sprite.svg#arrow-dropdown"></use>
                                     </svg>
                                 </span>
+
+                                <div class="nav-dropdown">
+                                    <div class="nav-dropdown__block">
+                                        <ul class="nav-dropdown__list">
+                                            <li class="nav-dropdown__item">
+                                                <a href="#" class="nav-dropdown__link">
+                                                    Услуги
+                                                </a>
+                                            </li>
+                                            <li class="nav-dropdown__item">
+                                                <a href="#" class="nav-dropdown__link">
+                                                    Складские комплексы
+                                                </a>
+                                            </li>
+                                            <li class="nav-dropdown__item">
+                                                <a href="#" class="nav-dropdown__link">
+                                                    Автопарк
+                                                </a>
+                                            </li>
+                                            <li class="nav-dropdown__item">
+                                                <a href="#" class="nav-dropdown__link">
+                                                    Облачные технологии
+                                                </a>
+                                            </li>
+                                            <li class="nav-dropdown__item">
+                                                <a href="#" class="nav-dropdown__link">
+                                                    Охрана труда и безопасность
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
                             <li class="header-nav__item">
                                 <a href="#" class="header-nav__link">
@@ -65,7 +97,7 @@
                     </nav>
                 </div>
                 <div class="header-phone header__phone">
-                    <button title="заказать звонок" aria-label="заказать звонок" class="header-phone__btn">
+                    <button title="заказать звонок" aria-label="заказать звонок" data-open-modal=".popup--feedback" class="header-phone__btn js-open-modal">
                         заказать звонок
                     </button>
                     <a href="tel: 88007005528" class="header-phone__link">
@@ -382,7 +414,7 @@
                             </button>
                         </label>
                         <div class="form__row">
-                            <button type="submit" title="Отправить" aria-label="Отправить" class="form__btn">
+                            <button type="submit" class="form__btn">
                                 Отправить
                             </button>
                             <div class="checkbox form__checkbox">
@@ -441,7 +473,7 @@
                     </div>
                     <div class="footer__contacts">
                         <a href="tel: 88007005528" class="footer-contact-link">8 800 700 55 28</a>
-                        <button class="footer-popup-btn footer__btn">
+                        <button data-open-modal=".popup--feedback" class="footer-popup-btn footer__btn js-open-modal">
                             заказать звонок
                         </button>
                         <a href="mailto: reception@contlog.ru" class="footer-contact-link">reception@contlog.ru</a>
@@ -518,6 +550,76 @@
                         <span class="develeper__text">Создание сайта</span>
                         <img src="../img/salt.png" alt="Соль">
                     </a>
+                </div>
+            </div>
+
+            <div class="popup popup--feedback">
+                <div class="popup__overlay"></div>
+                <div class="popup__block">
+                    <div class="popup__head">
+                        <h4 class="popup__title">Заказать звонок</h4>
+                        <button aria-label="Закрыть" title="Закрыть" class="popup__close"></button>
+                    </div>
+                    <div class="popup__content">
+                        <form action="javascript:void(0);" method="post" class="form">
+                            <label class="label form__label js-label">
+                                <input type="text" name="name" class="label__input js-input first-elem">
+                                <span class="label__placeholder">Ваше имя</span>
+                                <button type="button" title="Очистить поле" aria-label="Очистить поле" class="label__clear js-clear-input">
+                                    <svg width="16" height="16" class="label__icon">
+                                        <use xlink:href="../img/svg-sprite.svg#clear"></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="label form__label js-label">
+                                <input type="text" name="phone" required class="label__input js-input js-input-mask last-elem">
+                                <span class="label__placeholder">Контактный номер *</span>
+                                <button type="button" title="Очистить поле" aria-label="Очистить поле" class="label__clear js-clear-input">
+                                    <svg width="16" height="16" class="label__icon">
+                                        <use xlink:href="../img/svg-sprite.svg#clear"></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <div class="form__row">
+                                <button type="submit" class="form__btn first-elem">
+                                    Отправить
+                                </button>
+                                <div class="checkbox form__checkbox">
+                                    <label class="checkbox__label">
+                                        <input type="checkbox" name="ch" checked="checked" class="checkbox__input">
+                                        <span class="checkbox__data">
+                                            <svg width="12" height="10" class="checkbox__icon">
+                                                <use xlink:href="../img/svg-sprite.svg#chek"></use>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <span class="checkbox__span">Я даю свое согласие на
+                                        <a href="#" class="checkbox__link">обработку персональных данных</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup popup--thank">
+                <div class="popup__overlay"></div>
+                <div class="popup__block">
+                    <div class="popup__head">
+                        <h4 class="popup__title">Спасибо</h4>
+                        <button aria-label="Закрыть" title="Закрыть" class="popup__close"></button>
+                    </div>
+                    <div class="popup__content">
+                        <div class="popup__thank">
+                            <p class="popup__text">
+                                Наш менеджер свяжется с вами в ближайшее время
+                            </p>
+                            <button type="button" class="form__btn">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
