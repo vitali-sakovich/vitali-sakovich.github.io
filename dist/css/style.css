@@ -545,6 +545,229 @@ button {
   opacity: 0.7;
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.footer__container {
+  width: 100%;
+  max-width: 1280px;
+}
+.footer__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.footer__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.footer__btn {
+  background: none;
+  font-size: 14px;
+  color: #FFF;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  margin-top: 6px;
+  margin-bottom: 39px;
+}
+.footer__btn:hover {
+  opacity: 0.8;
+}
+.footer__network {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.footer__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__store {
+  margin-left: 25px;
+}
+.footer__copyright, .footer__link {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+}
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 22px;
+}
+.footer__link {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.footer__link:not(:last-child) {
+  margin-right: 50px;
+}
+.footer__link:hover {
+  opacity: 0.7;
+}
+
+.footer-nav__list {
+  list-style: none;
+}
+.footer-nav__item {
+  margin-bottom: 36px;
+}
+.footer-nav__link {
+  font-size: 18px;
+  color: #fff;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.footer-nav__link:hover {
+  opacity: 0.7;
+}
+.footer-nav__subnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  max-width: 500px;
+  margin-top: 12px;
+}
+
+.footer-subnav__link {
+  font-size: 15px;
+  color: #fff;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0.7;
+  margin-right: 37px;
+  margin-bottom: 8px;
+}
+.footer-subnav__link:hover {
+  opacity: 0.9;
+}
+
+.footer-contact-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+  color: #fff;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.footer-contact-link:hover {
+  opacity: 0.7;
+}
+
+.footer-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer-network__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 14px;
+}
+
+.footer-store {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.footer-store__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+.footer-store__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 200px;
+}
+.footer-store:nth-child(2) .footer-store__list {
+  max-width: 230px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.footer-store__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+.footer-store:nth-child(2) .footer-store__picture {
+  margin-left: 20px;
+}
+
+.develeper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.develeper__text {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
 .home-preview {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1007,6 +1230,13 @@ button {
 .label {
   display: grid;
 }
+.label--is-active {
+  --placeholder-x: 0;
+  --placeholder-y: -20px;
+  --placeholder-size: 12px;
+  --placeholder-color: #fff;
+  --clear-opacity: 1;
+}
 .label--textarea {
   height: auto;
 }
@@ -1048,6 +1278,10 @@ button {
   background: none;
   width: 40px;
   height: 48px;
+  opacity: var(--clear-opacity, 0);
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  will-change: opacity;
 }
 .label__clear:hover {
   --fill-icon: #fff;
@@ -1061,11 +1295,16 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: rgba(255, 255, 255, 0.63);
-  font-size: 18px;
-  -webkit-transform: translate(16px, 14px);
-  -ms-transform: translate(16px, 14px);
-  transform: translate(16px, 14px);
+  color: var(--placeholder-color, rgba(255, 255, 255, 0.63));
+  font-size: var(--placeholder-size, 18px);
+  -webkit-transition: color 0.3s, font-size 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, font-size 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, color 0.3s, font-size 0.3s;
+  transition: transform 0.3s, color 0.3s, font-size 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translate(var(--placeholder-x, 16px), var(--placeholder-y, 14px));
+  -ms-transform: translate(var(--placeholder-x, 16px), var(--placeholder-y, 14px));
+  transform: translate(var(--placeholder-x, 16px), var(--placeholder-y, 14px));
+  will-change: transform, color, font-size;
 }
 .label__icon {
   fill: var(--fill-icon, rgba(255, 255, 255, 0.7));

@@ -13,21 +13,39 @@
         });
     })();
 
-    // очистка инпута
+    // события на инпут
     (() => {
-        function clearInput(clearInput) {
-            const input = clearInput.querySelector(".js-input");
-            const clearBtn = clearInput.querySelector(".js-clear-input");
+        function inputEvent(label) {
+            const input = label.querySelector(".js-input");
+            const clearBtn = label.querySelector(".js-clear-input");
 
-            if (!clearBtn) {
-                return;
+            function inputValueСheck() {
+                if (input.value != "") {
+                    label.classList.add("label--is-active");
+                } else {
+                    label.classList.remove("label--is-active");
+                }
             }
 
-            clearBtn.addEventListener("click", function (e) {
-                input.value = "";
-            });
+            function inputFocus() {
+                label.classList.add("label--is-active");
+            }
+
+            input.addEventListener("input", inputValueСheck);
+            input.addEventListener("focus", inputFocus);
+            input.addEventListener("blur", inputValueСheck);
+
+            if (clearBtn) {
+                clearBtn.addEventListener("click", () => {
+                    input.value = "";
+                    inputValueСheck();
+                });
+            }
+
+            inputValueСheck();
         }
+
         const label = document.querySelectorAll(".js-label");
-        label.forEach(clearInput);
+        label.forEach(inputEvent);
     })();
 })();

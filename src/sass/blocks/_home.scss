@@ -452,6 +452,14 @@
 .label {
     display: grid;
 
+    &--is-active {
+        --placeholder-x: 0;
+        --placeholder-y: -20px;
+        --placeholder-size: 12px;
+        --placeholder-color: #fff;
+        --clear-opacity: 1;
+    }
+
     &--textarea {
         height: auto;
     }
@@ -493,6 +501,9 @@
         background: none;
         width: 40px;
         height: 48px;
+        opacity: var(--clear-opacity, 0);
+        transition: opacity 0.3s;
+        will-change: opacity;
 
         &:hover {
             --fill-icon: #fff;
@@ -504,9 +515,11 @@
         align-self: self-start;
         pointer-events: none;
         user-select: none;
-        color: rgba(255, 255, 255, 0.63);
-        font-size: 18px;
-        transform: translate(16px, 14px);
+        color: var(--placeholder-color, rgba(255, 255, 255, 0.63));
+        font-size: var(--placeholder-size, 18px);
+        transition: transform 0.3s, color 0.3s, font-size 0.3s;
+        transform: translate(var(--placeholder-x, 16px), var(--placeholder-y, 14px));
+        will-change: transform, color, font-size;
     }
 
     &__icon {
