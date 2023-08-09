@@ -342,7 +342,73 @@
                     </div>
                 </div>
             </section>
-            <section class="section-form"></section>
+            <section class="section-form">
+                <div class="section-form__block">
+                    <form action="javascript:void(0);" method="post" class="form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" required class="label__input js-input">
+                            <span class="label__placeholder">Название компании *</span>
+                            <button type="button" title="Очистить поле" aria-label="Очистить поле" class="label__clear js-clear-input">
+                                <svg width="16" height="16" class="label__icon">
+                                    <use xlink:href="../img/svg-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" class="label__input js-input">
+                            <span class="label__placeholder">Ваше имя</span>
+                            <button type="button" title="Очистить поле" aria-label="Очистить поле" class="label__clear js-clear-input">
+                                <svg width="16" height="16" class="label__icon">
+                                    <use xlink:href="../img/svg-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" required class="label__input js-input">
+                            <span class="label__placeholder">Контактный номер *</span>
+                            <button type="button" title="Очистить поле" aria-label="Очистить поле" class="label__clear js-clear-input">
+                                <svg width="16" height="16" class="label__icon">
+                                    <use xlink:href="../img/svg-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label label--textarea form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="label__input js-input label__input--textarea"></textarea>
+                            <span class="label__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить поле" aria-label="Очистить поле" class="label__clear js-clear-input">
+                                <svg width="16" height="16" class="label__icon">
+                                    <use xlink:href="../img/svg-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__row">
+                            <button type="submit" title="Отправить" aria-label="Отправить" class="form__btn">
+                                Отправить
+                            </button>
+                            <div class="checkbox form__checkbox">
+                                <label class="checkbox__label">
+                                    <input type="checkbox" name="ch" checked="checked" class="checkbox__input">
+                                    <span class="checkbox__data">
+                                        <svg width="12" height="10" class="checkbox__icon">
+                                            <use xlink:href="../img/svg-sprite.svg#chek"></use>
+                                        </svg>
+                                    </span>
+                                </label>
+                                <span class="checkbox__span">Я даю свое согласие на
+                                    <a href="#" class="checkbox__link">обработку персональных данных</a>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="section-form__desc">
+                    <h2 class="section-form__title">Работайте с нами!</h2>
+                    <p class="section-form__text">
+                        Оставьте свои контакты для получения информации о
+                        сотрудничестве
+                    </p>
+                </div>
+            </section>
         </main>
         <footer class="footer"></footer>
 
