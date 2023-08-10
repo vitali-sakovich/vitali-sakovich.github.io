@@ -12,6 +12,13 @@
         padding: 80px 9% 80px 8.3%;
         min-height: 569px;
     }
+    @media screen and (max-width: 899.98px) {
+        padding: 0;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        background: #5c60a7;
+        min-height: 0;
+    }
 
     &__content {
         max-width: 800px;
@@ -19,10 +26,29 @@
         @media screen and (max-width: 1199.98px) {
             max-width: 600px;
         }
+        @media screen and (max-width: 899.98px) {
+            width: 100%;
+            max-width: 100%;
+            padding: 36px 6% 40px;
+        }
     }
 
     &__title {
+        margin-top: 0;
         margin-bottom: 33px;
+        font-size: 44px;
+        font-weight: 600;
+        color: #fff;
+
+        @media screen and (max-width: 899.98px) {
+            font-size: 25px;
+            margin-bottom: 28px;
+            max-width: 600px;
+
+            & br {
+                display: none;
+            }
+        }
     }
 
     &__text {
@@ -32,6 +58,18 @@
 
         @media screen and (max-width: 1199.98px) {
             max-width: 400px;
+        }
+    }
+
+    &__inner {
+        @media screen and (max-width: 899.98px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 365px;
+            background: url("../img/preview-home-bg.jpg") center bottom/cover
+                no-repeat;
         }
     }
 }
@@ -70,6 +108,15 @@
     }
 }
 
+@keyframes moving {
+    0% {
+        background-position-x: 140%;
+    }
+    100% {
+        background-position-x: -40%;
+    }
+}
+
 .delivery-geography {
     position: relative;
     background-color: #5c60a7;
@@ -90,6 +137,7 @@
 
     &__map {
         display: grid;
+        position: relative;
         min-height: 535px;
         background: url("../img/elivery-geography-map-maska.svg") center 101% /100%
                 auto no-repeat,
@@ -97,15 +145,48 @@
 
         @media screen and (max-width: 1700px) {
             background-size: 1920px auto, cover;
-        }   
-        
+        }
+
         @media screen and (max-width: 930px) {
             min-height: 500px;
+        }
+        @media screen and (max-width: 899.98px) {
+            font-size: 1.6vw;
+            height: em(540, $fz);
+            min-height: 0;
+            background: url("../img/delivery-geography-map.jpg") center
+                top/cover no-repeat;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            grid-area: -1/1;
+            width: 100%;
+            height: 50%;
+            background: url("../img/cloud.png") 100% / contain no-repeat;
+            animation: moving linear alternate infinite;
+            will-change: background-position;
+        }
+
+        &::before {
+            animation-duration: 100s;
+        }
+
+        &::after {
+            margin-top: 7%;
+            transform: scaleX(-1);
+            opacity: 0.5;
+            animation-duration: 150s;
+
+            @media screen and (max-width: 899.98px) {
+                align-self: self-end;
+            }
         }
     }
 
     &__city {
-        grid-area: -1/1; 
+        grid-area: -1/1;
         width: em(940, $fz);
     }
 
@@ -114,12 +195,21 @@
         margin-top: 270px;
         margin-left: 18.8%;
         max-width: 200px;
+        font-size: 44px;
+        font-weight: 600;
+        color: #fff;
 
         @media screen and (max-width: 1500px) {
             margin-left: 8.3%;
         }
         @media screen and (max-width: 1199.98px) {
             margin-top: 280px;
+        }
+        @media screen and (max-width: 899.98px) {
+            $fz: 34;
+            font-size: em(106, $fz);
+            margin-left: 6%;
+            margin-top: em(230, $fz);
         }
     }
 
@@ -187,6 +277,9 @@
     @media screen and (max-width: 1199.98px) {
         font-size: 15px;
     }
+    @media screen and (max-width: 899.98px) {
+        font-size: inherit;
+    }
 
     &__item {
         display: flex;
@@ -200,72 +293,72 @@
         }
 
         &--yekaterinburg {
-            --img-width: #{em(44, $fz)}; 
+            --img-width: #{em(44, $fz)};
             transform: translate(em(-341, $fz), em(-189, $fz));
         }
 
         &--сhelyabinsk {
-            --img-width: #{em(31, $fz)}; 
+            --img-width: #{em(31, $fz)};
             transform: translate(em(-381, $fz), em(-129, $fz));
         }
 
         &--tyumen {
-            --img-width: #{em(25, $fz)}; 
+            --img-width: #{em(25, $fz)};
             transform: translate(em(-233, $fz), em(-143, $fz));
         }
 
         &--kurgan {
-            --img-width: #{em(37, $fz)}; 
+            --img-width: #{em(37, $fz)};
             transform: translate(em(-340, $fz), em(-89, $fz));
         }
 
         &--omsk {
-            --img-width: #{em(31, $fz)}; 
+            --img-width: #{em(31, $fz)};
             transform: translate(em(-157, $fz), em(-36, $fz));
         }
 
         &--tomsk {
-            --img-width: #{em(27, $fz)}; 
+            --img-width: #{em(27, $fz)};
             transform: translate(em(9, $fz), em(-51, $fz));
         }
 
         &--novosibirsk {
-            --img-width: #{em(35, $fz)}; 
+            --img-width: #{em(35, $fz)};
             transform: translate(em(-74, $fz), em(12, $fz));
         }
 
         &--barnaul {
-            --img-width: #{em(29, $fz)}; 
+            --img-width: #{em(29, $fz)};
             transform: translate(em(-34, $fz), em(67, $fz));
         }
 
         &--buisk {
-            --img-width: #{em(22, $fz)}; 
+            --img-width: #{em(22, $fz)};
             transform: translate(em(12, $fz), em(109, $fz));
         }
 
         &--kemerovo {
-            --img-width: #{em(27, $fz)}; 
+            --img-width: #{em(27, $fz)};
             transform: translate(em(116, $fz), em(10, $fz));
         }
 
         &--novokuznetsk {
-            --img-width: #{em(24, $fz)}; 
+            --img-width: #{em(24, $fz)};
             transform: translate(em(140, $fz), em(56, $fz));
         }
 
         &--abakan {
-            --img-width: #{em(28, $fz)}; 
+            --img-width: #{em(28, $fz)};
             transform: translate(em(214, $fz), em(98, $fz));
         }
 
         &--krasnoyarsk {
-            --img-width: #{em(27, $fz)}; 
+            --img-width: #{em(27, $fz)};
             transform: translate(em(244, $fz), em(-38, $fz));
         }
 
         &--irkutsk {
-            --img-width: #{em(27, $fz)}; 
+            --img-width: #{em(27, $fz)};
             transform: translate(em(388, $fz), em(84, $fz));
         }
     }
@@ -281,10 +374,10 @@
         display: flex;
         margin-right: var(--margin-right-img, #{em(15, $fz)});
         margin-left: var(--margin-left-img, 0);
-        filter: drop-shadow(em(0 5 17, $fz) #0E1E7D);
+        filter: drop-shadow(em(0 5 17, $fz) #0e1e7d);
     }
 
-    &__img{
+    &__img {
         width: var(--img-width);
         height: auto;
     }
@@ -326,12 +419,18 @@
     @media screen and (max-width: 1199.98px) {
         padding-left: 17vw;
     }
+    @media screen and (max-width: 899.98px) {
+        padding-left: 12.6vw;
+    }
 
     &:nth-child(-n + 4) {
         min-height: 449px;
 
         @media screen and (max-width: 1500px) {
             min-height: 360px;
+        }
+        @media screen and (max-width: 899.98px) {
+            min-height: 350px;
         }
     }
 
@@ -365,6 +464,10 @@
         @media screen and (max-width: 1199.98px) {
             padding-top: 83px;
             padding-bottom: 85px;
+        }
+        @media screen and (max-width: 899.98px) {
+            padding-top: 45px;
+            padding-bottom: 51px;
         }
     }
 
@@ -404,6 +507,10 @@
         @media screen and (max-width: 1500px) {
             font-size: 30px;
             max-width: 370px;
+        }
+        @media screen and (max-width: 899.98px) {
+            font-size: 25px;
+            max-width: 300px;
         }
     }
 
@@ -457,6 +564,9 @@
             @media screen and (max-width: 1199.98px) {
                 margin-right: 60px;
             }
+            @media screen and (max-width: 899.98px) {
+                margin-right: -95px;
+            }
         }
 
         #{$self}:nth-child(2) & {
@@ -469,6 +579,9 @@
             }
             @media screen and (max-width: 1199.98px) {
                 margin-right: 96px;
+            }
+            @media screen and (max-width: 899.98px) {
+                margin-right: -60px;
             }
         }
     }
@@ -543,6 +656,9 @@
             @media screen and (max-width: 1199.98px) {
                 padding-left: 17vw;
             }
+            @media screen and (max-width: 899.98px) {
+                padding-left: 12.6vw;
+            }
         }
 
         &:last-child {
@@ -591,6 +707,12 @@
                 margin-right: 20px;
             }
         }
+
+        #{$self}--market:first-child & {
+            @media screen and (max-width: 899.98px) {
+                margin-right: 20px;
+            }
+        }
     }
 
     &__picture {
@@ -614,6 +736,9 @@
             @media screen and (max-width: 1199.98px) {
                 margin-right: 20%;
             }
+            @media screen and (max-width: 899.98px) {
+                margin-right: 9%;
+            }
         }
     }
 
@@ -622,6 +747,10 @@
         font-weight: 600;
         color: #fff;
         margin-bottom: 13px;
+
+        @media screen and (max-width: 899.98px) {
+            font-size: 42px;
+        }
     }
 
     &__name {
@@ -644,27 +773,51 @@
         padding-left: 8.3vw;
         padding-right: 8.3vw;
     }
+    @media screen and (max-width: 899.98px) {
+        padding: 42px 0 50px;
+    }
 
     &__slider {
         padding-right: 35px;
         padding-left: 35px;
+        min-height: 50px;
+
+        @media screen and (max-width: 899.98px) {
+            margin-right: 6%;
+            margin-left: 6%;
+        }
     }
 
     &__head {
         display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
+
+        @media screen and (max-width: 899.98px) {
+            padding-left: 12.6vw;
+            padding-right: 12.6vw;
+            margin-bottom: 40px;
+        }
     }
 
     &__title {
         font-size: 54px;
         font-weight: 600;
+
+        @media screen and (max-width: 899.98px) {
+            font-size: 34px;
+            max-width: 200px;
+        }
     }
 
     &__text {
         font-size: 18px;
         line-height: 26px;
         max-width: 370px;
+
+        @media screen and (max-width: 899.98px) {
+            max-width: 230px;
+        }
     }
 }
 
@@ -672,19 +825,25 @@
     &__slide {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     &__wrapper {
         align-items: center;
+        min-height: 40px;
     }
 
     &__next {
         transform: scaleX(-1);
-        --swiper-navigation-sides-offset: -5px;
+        --swiper-navigation-sides-offset: -6px;
     }
 
     &__prev {
-        --swiper-navigation-sides-offset: -5px;
+        --swiper-navigation-sides-offset: -6px;
+    }
+
+    &__picture {
+        display: flex;
     }
 
     &__img {
@@ -692,8 +851,6 @@
         height: auto;
     }
 }
-
-
 
 .clients-slider-btn {
     height: 100%;
@@ -719,7 +876,6 @@
 .section-form {
     display: flex;
     position: relative;
-   
     background-color: #001545;
     padding-top: 150px;
     padding-bottom: 130px;
@@ -729,8 +885,13 @@
         padding-left: 8.3%;
     }
 
+    @media screen and (max-width: 899.98px) {
+        flex-direction: column-reverse;
+        padding: 48px 12% 70px;
+    }
+
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         bottom: 0;
@@ -746,11 +907,20 @@
     &__block {
         margin-right: 97px;
         z-index: 1;
+
+        @media screen and (max-width: 899.98px) {
+            margin-right: 0;
+        }
     }
 
     &__desc {
         max-width: 330px;
         z-index: 1;
+
+        @media screen and (max-width: 899.98px) {
+            max-width: 500px;
+            margin-bottom: 50px;
+        }
     }
 
     &__title {
@@ -758,6 +928,11 @@
         font-weight: 600;
         color: #fff;
         margin-bottom: 35px;
+
+        @media screen and (max-width: 899.98px) {
+            font-size: 34px;
+            margin-bottom: 21px;
+        }
     }
 
     &__text {

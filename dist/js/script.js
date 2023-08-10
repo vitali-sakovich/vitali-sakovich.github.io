@@ -8,6 +8,17 @@ var swiper = new Swiper(".clients-slider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        600: {
+            slidesPerView: 2,
+        },
+        900: {
+            slidesPerView: 3,
+        },
+    },
 });
 
 // события на инпут
@@ -156,8 +167,8 @@ document.addEventListener("click", function (e) {
         if (!menu.classList.contains("header__wrapper--is-active")) {
             document.body.classList.add("hidden");
             btn.classList.add("burger--is-active");
-            menu.classList.add("header__wrapper--is-active");
             menu.style.display = "flex";
+            menu.classList.add("header__wrapper--is-active");
         } else {
             menu.classList.remove("header__wrapper--is-active");
             btn.classList.remove("burger--is-active");

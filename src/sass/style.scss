@@ -68,6 +68,10 @@ button {
     &--size-lg {
         font-size: 44px;
         font-weight: 600;
+
+        @media screen and (max-width: 899.98px) {
+            font-size: 34px;
+        }
     }
 
     &--size-xl {

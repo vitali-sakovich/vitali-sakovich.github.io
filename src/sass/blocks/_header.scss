@@ -48,10 +48,10 @@
             padding-top: 83px;
             height: 100%;
             opacity: 0;
-            transition: opacity 0.3s;
+            animation: hidden 0.3s forwards;
 
             &--is-active {
-                opacity: 1;
+                animation: shows 0.3s forwards;
             }
         }
     }
@@ -104,6 +104,21 @@
     }
 }
 
+@keyframes shows {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hidden {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .header-logo {
     &__img {
         width: 100%;
@@ -116,7 +131,7 @@
         display: flex;
         justify-content: center;
         padding: 20px;
-        border-bottom: 1px solid #D8D8D8;
+        border-bottom: 1px solid #d8d8d8;
     }
     &__link {
         color: #2d3da0;
@@ -130,9 +145,9 @@
             }
         }
         @media screen and (max-width: 899.98px) {
-            color: #2D3DA0;
+            color: #2d3da0;
         }
-        
+
         &:hover {
             opacity: 0.7;
         }
@@ -175,7 +190,7 @@
             margin-right: 15px;
             margin-top: 7px;
         }
-        
+
         @media screen and (max-width: 899.98px) {
             margin-top: 0;
             margin-bottom: 34px;
@@ -221,7 +236,7 @@
         align-items: center;
         justify-content: center;
         padding-bottom: 15px;
-        border-bottom: 1px solid #D8D8D8;
+        border-bottom: 1px solid #d8d8d8;
     }
 
     &__btn {
@@ -416,6 +431,13 @@
     align-content: center;
     z-index: 110;
 
+    &--is-active {
+        --burget-item-rotate-first: 45deg;
+        --burget-item-rotate-last: -45deg;
+        --burget-item-y: 0;
+        --item-center: none;
+    }
+
     @media screen and (max-width: 899.98px) {
         display: grid;
     }
@@ -424,14 +446,21 @@
         grid-area: -1/1;
         width: 30px;
         height: 3px;
-        background-color: #313C84;
+        background-color: #313c84;
+        transition: transform 0.2s;
+
+        &:first-child {
+            display: var(--item-center, block);
+        }
 
         &:nth-child(2) {
-          transform: translateY(-8px);
+            transform: translateY(var(--burget-item-y, -8px))
+                rotate(var(--burget-item-rotate-first, 0));
         }
 
         &:nth-child(3) {
-            transform: translateY(8px);
+            transform: translateY(var(--burget-item-y, 8px))
+                rotate(var(--burget-item-rotate-last, 0));
         }
     }
 }
