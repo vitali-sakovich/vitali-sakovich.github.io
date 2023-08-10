@@ -147,3 +147,24 @@ document.addEventListener("click", function (e) {
         });
     });
 });
+
+(() => {
+    const menu = document.querySelector(".header__wrapper");
+    const btn = document.querySelector(".burger");
+
+    btn.addEventListener("click", () => {
+        if (!menu.classList.contains("header__wrapper--is-active")) {
+            document.body.classList.add("hidden");
+            btn.classList.add("burger--is-active");
+            menu.classList.add("header__wrapper--is-active");
+            menu.style.display = "flex";
+        } else {
+            menu.classList.remove("header__wrapper--is-active");
+            btn.classList.remove("burger--is-active");
+            window.setTimeout(function () {
+                menu.style.display = "none";
+            }, 300);
+            document.body.classList.remove("hidden");
+        }
+    });
+})();

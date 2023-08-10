@@ -31,114 +31,128 @@
                         class="header-logo__img"
                     />
                 </a>
-                <div class="header__block">
-                    <div class="header-lk header__lk">
-                        <a href="#" class="header-lk__link">
-                            Кабинет клиента
-                        </a>
-                        <a href="#" class="header-lk__link">
-                            Кабинет сотрудника
+                <div class="header__wrapper">
+                    <div class="header__block">
+                        <div class="header-lk header__lk">
+                            <a
+                                href="https://clients.contlog.ru/"
+                                class="header-lk__link"
+                            >
+                                Кабинет клиента
+                            </a>
+                            <a
+                                href="https://my.contlog.ru/"
+                                class="header-lk__link"
+                            >
+                                Кабинет сотрудника
+                            </a>
+                        </div>
+                        <nav class="header-nav header__nav">
+                            <ul class="header-nav__list">
+                                <li class="header-nav__item">
+                                    <a href="#" class="header-nav__link">
+                                        Продукция
+                                    </a>
+                                </li>
+                                <li class="header-nav__item">
+                                    <span class="header-nav__link">
+                                        О компании
+                                        <svg
+                                            width="12"
+                                            height="7"
+                                            class="header-nav__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/svg-sprite.svg#arrow-dropdown"
+                                            ></use>
+                                        </svg>
+                                    </span>
+
+                                    <div class="nav-dropdown">
+                                        <div class="nav-dropdown__block">
+                                            <ul class="nav-dropdown__list">
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Услуги
+                                                    </a>
+                                                </li>
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Складские комплексы
+                                                    </a>
+                                                </li>
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Автопарк
+                                                    </a>
+                                                </li>
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Облачные технологии
+                                                    </a>
+                                                </li>
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Охрана труда и
+                                                        безопасность
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-nav__item">
+                                    <a href="#" class="header-nav__link">
+                                        Карьера
+                                    </a>
+                                </li>
+                                <li class="header-nav__item">
+                                    <a href="#" class="header-nav__link">
+                                        Об оплате
+                                    </a>
+                                </li>
+                                <li class="header-nav__item">
+                                    <a href="#" class="header-nav__link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-phone header__phone">
+                        <button
+                            title="заказать звонок"
+                            aria-label="заказать звонок"
+                            data-open-modal=".popup--feedback"
+                            class="header-phone__btn js-open-modal"
+                        >
+                            заказать звонок
+                        </button>
+                        <a href="tel: 88007005528" class="header-phone__link">
+                            8 800 700 55 28
                         </a>
                     </div>
-                    <nav class="header-nav header__nav">
-                        <ul class="header-nav__list">
-                            <li class="header-nav__item">
-                                <a href="#" class="header-nav__link">
-                                    Продукция
-                                </a>
-                            </li>
-                            <li class="header-nav__item">
-                                <span class="header-nav__link">
-                                    О компании
-                                    <svg
-                                        width="12"
-                                        height="7"
-                                        class="header-nav__icon"
-                                    >
-                                        <use
-                                            xlink:href="./img/svg-sprite.svg#arrow-dropdown"
-                                        ></use>
-                                    </svg>
-                                </span>
-
-                                <div class="nav-dropdown">
-                                    <div class="nav-dropdown__block">
-                                        <ul class="nav-dropdown__list">
-                                            <li class="nav-dropdown__item">
-                                                <a
-                                                    href="#"
-                                                    class="nav-dropdown__link"
-                                                >
-                                                    Услуги
-                                                </a>
-                                            </li>
-                                            <li class="nav-dropdown__item">
-                                                <a
-                                                    href="#"
-                                                    class="nav-dropdown__link"
-                                                >
-                                                    Складские комплексы
-                                                </a>
-                                            </li>
-                                            <li class="nav-dropdown__item">
-                                                <a
-                                                    href="#"
-                                                    class="nav-dropdown__link"
-                                                >
-                                                    Автопарк
-                                                </a>
-                                            </li>
-                                            <li class="nav-dropdown__item">
-                                                <a
-                                                    href="#"
-                                                    class="nav-dropdown__link"
-                                                >
-                                                    Облачные технологии
-                                                </a>
-                                            </li>
-                                            <li class="nav-dropdown__item">
-                                                <a
-                                                    href="#"
-                                                    class="nav-dropdown__link"
-                                                >
-                                                    Охрана труда и безопасность
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="header-nav__item">
-                                <a href="#" class="header-nav__link">
-                                    Карьера
-                                </a>
-                            </li>
-                            <li class="header-nav__item">
-                                <a href="#" class="header-nav__link">
-                                    Об оплате
-                                </a>
-                            </li>
-                            <li class="header-nav__item">
-                                <a href="#" class="header-nav__link">
-                                    Контакты
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
-                <div class="header-phone header__phone">
-                    <button
-                        title="заказать звонок"
-                        aria-label="заказать звонок"
-                        data-open-modal=".popup--feedback"
-                        class="header-phone__btn js-open-modal"
-                    >
-                        заказать звонок
-                    </button>
-                    <a href="tel: 88007005528" class="header-phone__link">
-                        8 800 700 55 28
-                    </a>
-                </div>
+                <button type="button" aria-label="Меню" class="burger">
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                </button>
             </div>
         </header>
         <main class="content content--home">
@@ -165,6 +179,246 @@
             </section>
             <section class="delivery-geography">
                 <div class="delivery-geography__map">
+                    <div class="map-city delivery-geography__city">
+                        <div
+                            class="map-city__item map-city__item--yekaterinburg"
+                        >
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/yekaterinburg.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/yekaterinburg.png"
+                                    width="44"
+                                    height="38"
+                                    alt="Екатеринбург"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Екатеринбург </span>
+                        </div>
+                        <div class="map-city__item map-city__item--сhelyabinsk">
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/сhelyabinsk.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/сhelyabinsk.png"
+                                    width="31"
+                                    height="41"
+                                    alt="Челябинск"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Челябинск </span>
+                        </div>
+                        <div class="map-city__item map-city__item--tyumen">
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/tyumen.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/tyumen.png"
+                                    width="25"
+                                    height="41"
+                                    alt="Тюмень"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Тюмень </span>
+                        </div>
+                        <div class="map-city__item map-city__item--kurgan">
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/kurgan.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/kurgan.png"
+                                    width="37"
+                                    height="39"
+                                    alt="Курган"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Курган </span>
+                        </div>
+                        <div class="map-city__item map-city__item--omsk">
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/omsk.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/omsk.png"
+                                    width="31"
+                                    height="39"
+                                    alt="Омск"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Омск </span>
+                        </div>
+                        <div
+                            class="map-city__item map-city__item--tomsk map-city__item--reverse"
+                        >
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/tomsk.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/tomsk.png"
+                                    width="27"
+                                    height="46"
+                                    alt="Томск"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Томск </span>
+                        </div>
+                        <div
+                            class="map-city__item map-city__item--novosibirsk map-city__item--reverse"
+                        >
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/novosibirsk.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/novosibirsk.png"
+                                    width="35"
+                                    height="36"
+                                    alt="Новосибирск"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Новосибирск </span>
+                        </div>
+                        <div
+                            class="map-city__item map-city__item--barnaul map-city__item--reverse"
+                        >
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/barnaul.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/barnaul.png"
+                                    width="29"
+                                    height="36"
+                                    alt="Барнаул"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Барнаул </span>
+                        </div>
+                        <div
+                            class="map-city__item map-city__item--buisk map-city__item--reverse"
+                        >
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/buisk.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/buisk.png"
+                                    width="22"
+                                    height="35"
+                                    alt="Буйск"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Буйск </span>
+                        </div>
+                        <div class="map-city__item map-city__item--kemerovo">
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/kemerovo.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/kemerovo.png"
+                                    width="27"
+                                    height="34"
+                                    alt="Кемерово"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Кемерово </span>
+                        </div>
+                        <div
+                            class="map-city__item map-city__item--novokuznetsk"
+                        >
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/novokuznetsk.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/novokuznetsk.png"
+                                    width="24"
+                                    height="41"
+                                    alt="Новокузнецк"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Новокузнецк </span>
+                        </div>
+                        <div class="map-city__item map-city__item--abakan">
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/abakan.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/abakan.png"
+                                    width="28"
+                                    height="36"
+                                    alt="Абакан"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Абакан </span>
+                        </div>
+                        <div class="map-city__item map-city__item--krasnoyarsk">
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/krasnoyarsk.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/krasnoyarsk.png"
+                                    width="27"
+                                    height="42"
+                                    alt="Красноярск"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Красноярск </span>
+                        </div>
+                        <div
+                            class="map-city__item map-city__item--irkutsk map-city__item--reverse"
+                        >
+                            <picture class="map-city__picture">
+                                <source
+                                    srcset="./img/logo/irkutsk.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/logo/irkutsk.png"
+                                    width="27"
+                                    height="35"
+                                    alt="Иркутск"
+                                    class="map-city__img"
+                                />
+                            </picture>
+                            <span class="map-city__name"> Иркутск </span>
+                        </div>
+                    </div>
                     <h2 class="title title--size-lg delivery-geography__title">
                         География доставки
                     </h2>
@@ -354,59 +608,80 @@
                             <span class="advantage-card-box__title"
                                 >Интеграции:</span
                             >
-                            <div class="advantage-card-box__images">
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/egais.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/egais.png"
-                                        width="68"
-                                        height="96"
-                                        alt="ЕГАИС"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/merkuri.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/merkuri.png"
-                                        width="94"
-                                        height="89"
-                                        alt="Меркурий"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/chestni-snak.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/chestni-snak.png"
-                                        width="53"
-                                        height="87"
-                                        alt="Честный знак"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/fgis.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/fgis.png"
-                                        width="69"
-                                        height="97"
-                                        alt="ФГИС Зерно"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
+                            <div class="advantage-card-box__list">
+                                <div class="advantage-card-box__item">
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/egais.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/egais.png"
+                                            width="68"
+                                            height="96"
+                                            alt="ЕГАИС"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="advantage-card-box__item">
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/merkuri.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/merkuri.png"
+                                            width="94"
+                                            height="89"
+                                            alt="Меркурий"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="advantage-card-box__item">
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="
+                                                ./img/logo/chestni-snak.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/chestni-snak.png"
+                                            width="53"
+                                            height="87"
+                                            alt="Честный знак"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="advantage-card-box__item">
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/fgis.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/fgis.png"
+                                            width="69"
+                                            height="97"
+                                            alt="ФГИС Зерно"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -419,105 +694,158 @@
                             <span class="advantage-card-box__title"
                                 >Маркетплейсы</span
                             >
-                            <div class="advantage-card-box__images">
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/ozon.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/ozon.png"
-                                        width="94"
-                                        height="20"
-                                        alt="ozon"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/ya.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/ya.png"
-                                        width="106"
-                                        height="24"
-                                        alt="Яндекс Маркет"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/wildberries.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/wildberries.png"
-                                        width="144"
-                                        height="42"
-                                        alt="wildberries"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
+                            <div class="advantage-card-box__list">
+                                <a
+                                    href="https://www.ozon.ru/seller/kontinent-122638/products/?miniapp=seller_122638"
+                                    target="_blank"
+                                    class="advantage-card-box__item"
+                                >
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/ozon.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/ozon.png"
+                                            width="94"
+                                            height="20"
+                                            alt="ozon"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </a>
+
+                                <a
+                                    href="https://market.yandex.ru/business--kontinent-ekspress/51280193"
+                                    target="_blank"
+                                    class="advantage-card-box__item"
+                                >
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/ya.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/ya.png"
+                                            width="106"
+                                            height="24"
+                                            alt="Яндекс Маркет"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </a>
+
+                                <a
+                                    href="https://www.wildberries.ru/seller/698972"
+                                    target="_blank"
+                                    class="advantage-card-box__item"
+                                >
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/wildberries.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/wildberries.png"
+                                            width="144"
+                                            height="42"
+                                            alt="wildberries"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </a>
                             </div>
                         </div>
                         <div
                             class="advantage-card-box advantage-card-box--market"
                         >
                             <span class="advantage-card-box__title">B2B</span>
-                            <div class="advantage-card-box__images">
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/may24.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/may24.png"
-                                        width="93"
-                                        height="19"
-                                        alt="MAY 24"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/b2b.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/b2b.png"
-                                        width="86"
-                                        height="28"
-                                        alt="B2B портал"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/telesez.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/telesez.png"
-                                        width="121"
-                                        height="26"
-                                        alt="Телесейлз сервис"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
-                                <picture class="advantage-card-box__picture">
-                                    <source
-                                        srcset="./img/logo/med.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/logo/med.png"
-                                        width="57"
-                                        height="31"
-                                        alt="МЁD"
-                                        class="advantage-card-box__img"
-                                    />
-                                </picture>
+                            <div class="advantage-card-box__list">
+                                <a
+                                    href="https://may24.ru/catalog/distr-kontinent/"
+                                    target="_blank"
+                                    class="advantage-card-box__item"
+                                >
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/may24.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/may24.png"
+                                            width="93"
+                                            height="19"
+                                            alt="MAY 24"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </a>
+
+                                <div class="advantage-card-box__item">
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/b2b.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/b2b.png"
+                                            width="86"
+                                            height="28"
+                                            alt="B2B портал"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <div class="advantage-card-box__item">
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/telesez.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/telesez.png"
+                                            width="121"
+                                            height="26"
+                                            alt="Телесейлз сервис"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </div>
+
+                                <a
+                                    href="https://web.mead.club/#/"
+                                    target="_blank"
+                                    class="advantage-card-box__item"
+                                >
+                                    <picture
+                                        class="advantage-card-box__picture"
+                                    >
+                                        <source
+                                            srcset="./img/logo/med.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/logo/med.png"
+                                            width="57"
+                                            height="31"
+                                            alt="МЁD"
+                                            class="advantage-card-box__img"
+                                        />
+                                    </picture>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -832,9 +1160,7 @@
                                 >
                             </li>
                             <li class="footer-nav__item">
-                                <a href="#" class="footer-nav__link"
-                                    >О компании</a
-                                >
+                                <span class="footer-nav__link">О компании</span>
                                 <div class="footer-subnav footer-nav__subnav">
                                     <a href="#" class="footer-subnav__link"
                                         >Услуги</a
@@ -884,7 +1210,11 @@
                             >reception@contlog.ru</a
                         >
                         <div class="footer-network footer__network">
-                            <a href="#" class="footer-network__link">
+                            <a
+                                href="https://vk.com/ooocontinent"
+                                target="_blank"
+                                class="footer-network__link"
+                            >
                                 <picture class="footer-network__picture">
                                     <source
                                         srcset="./img/logo/vk.webp"
@@ -899,7 +1229,11 @@
                                     />
                                 </picture>
                             </a>
-                            <a href="#" class="footer-network__link">
+                            <a
+                                href="https://krasnoyarsk.hh.ru/employer/103905"
+                                target="_blank"
+                                class="footer-network__link"
+                            >
                                 <picture class="footer-network__picture">
                                     <source
                                         srcset="./img/logo/hh.webp"
@@ -919,58 +1253,74 @@
                             <div class="footer-store footer__store">
                                 <span class="footer-store__name">B2B</span>
                                 <div class="footer-store__list">
-                                    <picture class="footer-store__picture">
-                                        <source
-                                            srcset="./img/logo/b2b.webp"
-                                            type="image/webp"
-                                        />
-                                        <img
-                                            src="./img/logo/b2b.png"
-                                            width="86"
-                                            height="28"
-                                            alt="B2B портал"
-                                            class="footer-store__img"
-                                        />
-                                    </picture>
-                                    <picture class="footer-store__picture">
-                                        <source
-                                            srcset="./img/logo/may24.webp"
-                                            type="image/webp"
-                                        />
-                                        <img
-                                            src="./img/logo/may24.png"
-                                            width="93"
-                                            height="19"
-                                            alt="MAY 24"
-                                            class="footer-store__img"
-                                        />
-                                    </picture>
-                                    <picture class="footer-store__picture">
-                                        <source
-                                            srcset="./img/logo/med.webp"
-                                            type="image/webp"
-                                        />
-                                        <img
-                                            src="./img/logo/med.png"
-                                            width="48"
-                                            height="26"
-                                            alt="МЁD"
-                                            class="footer-store__img"
-                                        />
-                                    </picture>
-                                    <picture class="footer-store__picture">
-                                        <source
-                                            srcset="./img/logo/telesez.webp"
-                                            type="image/webp"
-                                        />
-                                        <img
-                                            src="./img/logo/telesez.png"
-                                            width="121"
-                                            height="26"
-                                            alt="Телесейлз сервис"
-                                            class="footer-store__img"
-                                        />
-                                    </picture>
+                                    <div class="footer-store__link">
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/b2b.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/b2b.png"
+                                                width="86"
+                                                height="28"
+                                                alt="B2B портал"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </div>
+                                    <a
+                                        href=" https://may24.ru/catalog/distr-kontinent/"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/may24.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/may24.png"
+                                                width="93"
+                                                height="19"
+                                                alt="MAY 24"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                    <a
+                                        href="https://web.mead.club/#/"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/med.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/med.png"
+                                                width="48"
+                                                height="26"
+                                                alt="МЁD"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                    <div class="footer-store__link">
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/telesez.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/telesez.png"
+                                                width="121"
+                                                height="26"
+                                                alt="Телесейлз сервис"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </div>
                                 </div>
                             </div>
                             <div class="footer-store footer__store">
@@ -978,45 +1328,65 @@
                                     >Мы на маркетплейсах</span
                                 >
                                 <div class="footer-store__list">
-                                    <picture class="footer-store__picture">
-                                        <source
-                                            srcset="./img/logo/wildberries.webp"
-                                            type="image/webp"
-                                        />
-                                        <img
-                                            src="./img/logo/wildberries.png"
-                                            width="94"
-                                            height="30"
-                                            alt="wildberries"
-                                            class="footer-store__img"
-                                        />
-                                    </picture>
-                                    <picture class="footer-store__picture">
-                                        <source
-                                            srcset="./img/logo/ozon.webp"
-                                            type="image/webp"
-                                        />
-                                        <img
-                                            src="./img/logo/ozon.png"
-                                            width="94"
-                                            height="20"
-                                            alt="ozon"
-                                            class="footer-store__img"
-                                        />
-                                    </picture>
-                                    <picture class="footer-store__picture">
-                                        <source
-                                            srcset="./img/logo/ya.webp"
-                                            type="image/webp"
-                                        />
-                                        <img
-                                            src="./img/logo/ya.png"
-                                            width="100"
-                                            height="21"
-                                            alt="Яндекс Маркет"
-                                            class="footer-store__img"
-                                        />
-                                    </picture>
+                                    <a
+                                        href="https://www.wildberries.ru/seller/698972"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="
+                                                    ./img/logo/wildberries.webp
+                                                "
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/wildberries.png"
+                                                width="94"
+                                                height="30"
+                                                alt="wildberries"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                    <a
+                                        href="https://www.ozon.ru/seller/kontinent-122638/products/?miniapp=seller_122638"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/ozon.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/ozon.png"
+                                                width="94"
+                                                height="20"
+                                                alt="ozon"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                    <a
+                                        href=" https://market.yandex.ru/business--kontinent-ekspress/51280193"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/ya.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/ya.png"
+                                                width="100"
+                                                height="21"
+                                                alt="Яндекс Маркет"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1039,6 +1409,7 @@
                     </div>
                     <a
                         href="https://websalt.ru/"
+                        target="_blank"
                         class="develeper footer__develeper"
                     >
                         <span class="develeper__text">Создание сайта</span>
@@ -1068,6 +1439,7 @@
                                 <input
                                     type="text"
                                     name="name"
+                                    required
                                     class="label__input js-input first-elem"
                                 />
                                 <span class="label__placeholder">Ваше имя</span>
@@ -1096,7 +1468,7 @@
                                     class="label__input js-input js-input-mask last-elem"
                                 />
                                 <span class="label__placeholder"
-                                    >Контактный номер *</span
+                                    >Контактный номер</span
                                 >
                                 <button
                                     type="button"

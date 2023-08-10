@@ -7,11 +7,14 @@
     &__container {
         width: 100%;
         max-width: 1280px;
+
+        @media screen and (max-width: 1500px) {
+            max-width: 850px;
+        }
     }
 
     &__block {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
         margin-bottom: 50px;
     }
 
@@ -24,6 +27,13 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        grid-area: -1/1;
+        justify-self: end;
+    }
+
+    &__nav {
+        grid-area: -1/1;
+        justify-self: self-start;
     }
 
     &__btn {
@@ -92,7 +102,7 @@
         color: #fff;
         transition: opacity 0.3s;
 
-        &:hover {
+        &[href]:hover {
             opacity: 0.7;
         }
     }
@@ -169,6 +179,9 @@
 
     &__picture {
         display: flex;
+    }
+
+    &__link {
         margin-bottom: 20px;
 
         #{$self}:nth-child(2) & {
