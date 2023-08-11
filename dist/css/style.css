@@ -458,9 +458,33 @@ button {
   font-size: 16px;
 }
 
-.content {
+.content--products {
   --form-title-width: 380px;
   --form-text-width: 280px;
+}
+
+.error-text {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  padding-left: 16.7%;
+  color: #fff;
+}
+@media screen and (max-width: 1500px) {
+  .error-text {
+    padding-left: 8.3%;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .error-text {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .error-text {
+    padding-right: 5.4%;
+    padding-left: 5.4%;
+  }
 }
 
 .header {

@@ -97,8 +97,29 @@ button {
 }
 
 .content {
-    --form-title-width: 380px;
-    --form-text-width: 280px;
+    &--products {
+        --form-title-width: 380px;
+        --form-text-width: 280px;
+    }
+}
+
+.error-text {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 16.7%;
+    color: #fff;
+
+    @media screen and (max-width: 1500px) {
+        padding-left: 8.3%;
+    }
+    @media screen and (max-width: 899.98px) {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+    @media screen and (max-width: 599.98px) {
+        padding-right: 5.4%;
+        padding-left: 5.4%;
+    }
 }
 
 @import "blocks/header";
