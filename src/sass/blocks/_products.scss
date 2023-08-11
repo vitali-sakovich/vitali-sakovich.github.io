@@ -1,5 +1,12 @@
 .products {
-   overflow: hidden;
+   &__text {
+    color: #fff;
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 370px;
+    margin-left: 700px;
+    margin-top: -50px;
+   }
 
    &__container {
     display: flex;

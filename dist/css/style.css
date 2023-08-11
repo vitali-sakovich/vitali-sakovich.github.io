@@ -2963,8 +2963,13 @@ button {
   color: inherit;
 }
 
-.products {
-  overflow: hidden;
+.products__text {
+  color: #fff;
+  font-size: 18px;
+  line-height: 26px;
+  max-width: 370px;
+  margin-left: 700px;
+  margin-top: -50px;
 }
 .products__container {
   display: -webkit-box;
