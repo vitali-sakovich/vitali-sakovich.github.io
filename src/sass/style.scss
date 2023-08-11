@@ -64,6 +64,7 @@ button {
 
 .title {
     color: #fff;
+    font-weight: 400;
 
     &--size-lg {
         font-size: 44px;
@@ -91,6 +92,12 @@ button {
     }
 }
 
+.content {
+    --form-title-width: 380px;
+    --form-text-width: 280px;
+}
+
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/home";
+@import "blocks/products";

@@ -1061,11 +1061,11 @@
     }
 
     &__desc {
-        max-width: 330px;
+        max-width: var(--form-title-width, 330px);
         z-index: 1;
 
         @media screen and (max-width: 899.98px) {
-            max-width: 500px;
+            --form-title-width: 500px;
             margin-bottom: 50px;
         }
     }
@@ -1089,6 +1089,7 @@
         font-size: 18px;
         line-height: 26px;
         color: #fff;
+        max-width: var(--form-text-width, 100%);
     }
 }
 

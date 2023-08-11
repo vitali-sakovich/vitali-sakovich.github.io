@@ -1,0 +1,121 @@
+.products {
+   overflow: hidden;
+
+   &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 16.7% 100px;
+   }
+
+   &__item {
+    max-width: 14.28%;
+    width: 100%;
+    transition: padding 0.3s;
+
+    &--active {
+        --block-show: flex;
+        --brend-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.10) 100%);
+        padding-bottom: var(--height-block);
+    }
+   }
+
+   &__brend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 118px;
+    padding: 20px;
+    background-image: var(--brend-bg);
+    cursor: pointer;
+   }
+
+   &__img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+   }
+
+   &__subbrend {
+    display: var(--block-show, none);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.10);
+    left: 0;
+    right: 0;
+    padding-right: 16.7%;
+    padding-left: 16.7%;
+    flex-wrap: wrap;
+    transition: height 0.3s;
+    overflow: hidden;
+    height: 0;
+    animation: showsBrend 0.3s forwards;
+   }
+
+   &__picture {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+   }
+}
+@keyframes showsBrend {
+    100% {
+        height: var(--height-block); 
+    }
+}
+
+.products-subbrend {
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding: 20px;
+        max-width: 14.28%;
+        width: 100%;
+        height: 118px;
+    }
+}
+
+.tabs {
+    &__pane {
+        display: none;
+
+        &--show {
+            display: block;
+        }
+    }
+}
+
+.tabs-form {
+    &__nav {
+        display: flex;
+        border-radius: 31px;
+        background: rgba(255, 255, 255, 0.17);
+        margin-bottom: 50px;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        width: 50%;
+        height: 54px;
+        border-radius: 31px;
+        transition: background-color 0.3s, color 0.3s;
+        font-size: 18px;
+        color: #fff;
+
+        &.tabs__btn--active {
+            background-color: #D9E0E7;
+            color: #000;
+        }
+    }
+}

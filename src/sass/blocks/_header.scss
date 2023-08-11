@@ -492,3 +492,31 @@
         }
     }
 }
+
+.title-block {
+    padding-top: 26px;
+    padding-left: 16.7%;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+
+    &__link {
+        font-weight: 400;
+        color: #FFF;
+        opacity: 0.5;
+        margin-right: 15px;
+        transition: opacity 0.3s;
+
+        &[href]:hover {
+            opacity: 0.7;
+        }
+    }
+}
