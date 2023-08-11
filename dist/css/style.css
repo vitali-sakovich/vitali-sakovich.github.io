@@ -2968,7 +2968,10 @@ button {
   font-size: 18px;
   line-height: 26px;
   max-width: 370px;
-  margin-left: 700px;
+  margin-left: 370px;
+}
+.products__desc {
+  padding-left: 16.7%;
   margin-top: -50px;
 }
 .products__container {
