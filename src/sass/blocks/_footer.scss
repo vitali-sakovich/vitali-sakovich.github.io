@@ -108,8 +108,26 @@
         }
     }
 
+    &__inner {
+        @media screen and (max-width: 599.98px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 250px;
+        }
+    }
+
+    &__copyright {
+        @media screen and (min-width: 599.98px) {
+            & br {
+                display: none;
+            }
+        }
+    }
+
     &__copyright,
     &__link {
+        text-align: center;
         font-size: 14px;
         color: #fff;
         opacity: 0.5;
