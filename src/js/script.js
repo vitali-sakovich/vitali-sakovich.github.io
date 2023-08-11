@@ -235,11 +235,16 @@ document.addEventListener("click", function (e) {
         }
     }
 
-    new ItcTabs(".tabs");
+    if (document.querySelector(".tabs")) {
+        new ItcTabs(".tabs");
+    }
 })();
 
 (() => {
     const products = document.querySelector(".products");
+
+    if (!products) return;
+
     let selectedItem;
 
     products.onclick = function (event) {
