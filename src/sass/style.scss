@@ -77,6 +77,10 @@ button {
 
     &--size-xl {
         font-size: 47px;
+
+        @media screen and (max-width: 599.98px) {
+            font-size: 27px;
+        }
     }
 }
 

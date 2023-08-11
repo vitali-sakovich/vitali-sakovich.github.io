@@ -497,6 +497,19 @@
     padding-top: 26px;
     padding-left: 16.7%;
 
+    @media screen and (max-width: 1500px) {
+        padding-left: 8.3%;
+    }
+    @media screen and (max-width: 899.98px) {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+    @media screen and (max-width: 599.98px) {
+        padding-top: 20px;
+        padding-right: 5.4%;
+        padding-left: 5.4%;
+    }
+
     &__title {
         margin-top: 0;
         margin-bottom: 0;
@@ -508,9 +521,13 @@
     align-items: center;
     padding-bottom: 17px;
 
+    @media screen and (max-width: 599.98px) {
+        padding-bottom: 10px;
+    }
+
     &__link {
         font-weight: 400;
-        color: #FFF;
+        color: #fff;
         opacity: 0.5;
         margin-right: 15px;
         transition: opacity 0.3s;
