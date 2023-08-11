@@ -144,6 +144,9 @@
 }
 
 .products-subbrend {
+    @media screen and (max-width: 599.98px) {
+        padding-bottom: 25px;
+    }
     &__item {
         display: flex;
         align-items: center;

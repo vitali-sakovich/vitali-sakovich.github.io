@@ -3179,6 +3179,11 @@ button {
     height: var(--height-block);
   }
 }
+@media screen and (max-width: 599.98px) {
+  .products-subbrend {
+    padding-bottom: 25px;
+  }
+}
 .products-subbrend__item {
   display: -webkit-box;
   display: -ms-flexbox;
