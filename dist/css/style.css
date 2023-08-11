@@ -1455,14 +1455,13 @@ button {
   align-items: flex-end;
   padding: 100px 16.7%;
   background: url("../img/preview-home-bg.jpg") center bottom/cover no-repeat;
-  min-height: 839px;
+  min-height: calc(100vh - 117px);
 }
 @media screen and (max-width: 1500px) {
   .home-preview {
     padding-left: 8.3%;
     padding-right: 9%;
     padding: 80px 9% 80px 8.3%;
-    min-height: 569px;
   }
 }
 @media screen and (max-width: 899.98px) {
@@ -1658,6 +1657,8 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  z-index: 1;
+  opacity: 0.7;
 }
 @media (prefers-reduced-motion: no-preference) {
   .delivery-geography__map::before {
@@ -1795,6 +1796,7 @@ button {
   --margin-left-img: 0.9375em;
 }
 .map-city__item--yekaterinburg {
+  display: none;
   --img-width: 2.75em;
   -webkit-transform: translate(-21.3125em, -11.8125em);
   -ms-transform: translate(-21.3125em, -11.8125em);

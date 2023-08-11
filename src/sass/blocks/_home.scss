@@ -4,13 +4,12 @@
     align-items: flex-end;
     padding: 100px 16.7%;
     background: url("../img/preview-home-bg.jpg") center bottom/cover no-repeat;
-    min-height: 839px;
+    min-height: calc(100vh - 117px);
 
     @media screen and (max-width: 1500px) {
         padding-left: 8.3%;
         padding-right: 9%;
         padding: 80px 9% 80px 8.3%;
-        min-height: 569px;
     }
     @media screen and (max-width: 899.98px) {
         padding: 0;
@@ -177,6 +176,8 @@
             will-change: background-position;
             pointer-events: none;
             user-select: none;
+            z-index: 1;
+            opacity: 0.7;
 
             @media (prefers-reduced-motion: no-preference) {
                 animation: moving 100s linear infinite both;
@@ -298,6 +299,7 @@
         }
 
         &--yekaterinburg {
+            display: none;
             --img-width: #{em(44, $fz)};
             transform: translate(em(-341, $fz), em(-189, $fz));
         }
