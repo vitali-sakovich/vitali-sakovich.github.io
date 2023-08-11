@@ -310,6 +310,7 @@
         }
 
         &--tyumen {
+            display: none;
             --img-width: #{em(25, $fz)};
             transform: translate(em(-233, $fz), em(-143, $fz));
         }

@@ -1809,6 +1809,7 @@ button {
   transform: translate(-23.8125em, -8.0625em);
 }
 .map-city__item--tyumen {
+  display: none;
   --img-width: 1.5625em;
   -webkit-transform: translate(-14.5625em, -8.9375em);
   -ms-transform: translate(-14.5625em, -8.9375em);
