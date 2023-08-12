@@ -3287,3 +3287,284 @@ button {
   background-color: #d9e0e7;
   color: #000;
 }
+
+.technologies__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1500px) {
+  .technologies__container {
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .technologies__container {
+    padding-top: 40px;
+  }
+}
+.technologies__container::before, .technologies__container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgba(91, 95, 167, 0.469);
+}
+.technologies__container::before {
+  top: 5%;
+  height: 46%;
+  -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+  clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+}
+.technologies__container::after {
+  content: "";
+  bottom: 0;
+  height: 27%;
+  -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+}
+.technologies__block {
+  margin-bottom: 130px;
+  z-index: 1;
+}
+@media screen and (max-width: 1500px) {
+  .technologies__block {
+    margin-bottom: 110px;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .technologies__block {
+    margin-bottom: 70px;
+  }
+}
+
+.technologies-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16.7%;
+  padding-right: 8.3%;
+}
+@media screen and (max-width: 1500px) {
+  .technologies-block {
+    padding-left: 8.3%;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .technologies-block {
+    padding-right: 6%;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .technologies-block {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    padding-right: 5.4%;
+    padding-left: 5.4%;
+  }
+}
+.technologies-block--reverse {
+  --padding-left-content: 7.6%;
+  --padding-right-content: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 8.3%;
+  padding-right: 16.7%;
+}
+@media screen and (max-width: 1700px) {
+  .technologies-block--reverse {
+    --padding-left-content: 5%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .technologies-block--reverse {
+    padding-right: 8.3%;
+    padding-left: 4%;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .technologies-block--reverse {
+    padding-right: 4%;
+    padding-left: 3%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-block--reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    padding-right: 5.4%;
+    padding-left: 5.4%;
+  }
+}
+.technologies-block__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 75px;
+  padding-right: var(--padding-right-content, 7.6%);
+  padding-left: var(--padding-left-content);
+  width: 42%;
+}
+@media screen and (max-width: 1700px) {
+  .technologies-block__content {
+    padding-right: var(--padding-right-content, 5%);
+  }
+}
+@media screen and (max-width: 1500px) {
+  .technologies-block__content {
+    padding-right: var(--padding-right-content, 10px);
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .technologies-block__content {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .technologies-block__content {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-block__content {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.technologies-block__title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 35px;
+  max-width: 560px;
+}
+@media screen and (max-width: 899.98px) {
+  .technologies-block__title {
+    font-size: 25px;
+    margin-bottom: 27px;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-block__title {
+    max-width: 100%;
+  }
+}
+.technologies-block__desc {
+  max-width: 430px;
+  padding-left: 30px;
+}
+@media screen and (max-width: 1199.98px) {
+  .technologies-block__desc {
+    padding-left: 0;
+  }
+}
+.technologies-block__text {
+  color: #fff;
+  line-height: 20px;
+}
+.technologies-block__text:not(:last-child) {
+  margin-bottom: 15px;
+}
+.technologies-block__picture {
+  width: 58%;
+}
+@media screen and (max-width: 899.98px) {
+  .technologies-block__picture {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-block__picture {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
+.technologies-block__img {
+  width: 100%;
+  height: auto;
+}
+
+.technologies-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.technologies-info__block {
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-bottom: 33px;
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-info__block {
+    padding-right: 5.4%;
+  }
+}
+.technologies-info__block:first-child {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding-left: 21%;
+}
+@media screen and (max-width: 1500px) {
+  .technologies-info__block:first-child {
+    padding-left: 16.6%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-info__block:first-child {
+    padding-left: 5.4%;
+  }
+}
+.technologies-info__block:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 40px;
+}
+@media screen and (max-width: 599.98px) {
+  .technologies-info__block:nth-child(2) {
+    padding-left: 5.4%;
+  }
+}
+.technologies-info__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 17px;
+  max-width: 428px;
+}
+.technologies-info__text {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.technologies-info__icon {
+  fill: #e8e9f1;
+  opacity: 0.375;
+}
