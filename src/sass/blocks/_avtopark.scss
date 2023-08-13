@@ -1,0 +1,455 @@
+.avtopark {
+    &__container {
+        position: relative;
+        overflow: hidden;
+        margin-top: -170px;
+        z-index: -1;
+
+        @media screen and (min-width: 899.99px) {
+            display: grid;
+        }
+        @media screen and (max-width: 1500px) {
+            margin-top: -130px;
+        }
+        @media screen and (max-width: 1199.98px) {
+            margin-top: -100px;
+        }
+        @media screen and (max-width: 599.98px) {
+            margin-top: -20px;
+        }
+    }
+
+    &__images {
+        width: 100%;
+
+        @media screen and (min-width: 899.99px) {
+            grid-area: -1/1;
+        }
+    }
+
+    &__picture {
+        display: flex;
+        width: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        @media screen and (min-width: 899.99px) {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-area: -1/1;
+        }
+        @media screen and (max-width: 899.98px) {
+            background-color: #5b5fa9;
+            margin-top: -2px;
+            padding-right: 6%;
+            padding-bottom: 20px;
+            padding-left: 6%;
+        }
+        @media screen and (max-width: 599.98px) {
+            padding-right: 5.4%;
+            padding-left: 5.4%;
+            margin-top: -40px;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__number {
+        display: flex;
+        font-size: 46px;
+        font-weight: 700;
+        color: #fff;
+        transform: translate(-20vw, -34vw) rotate(-12deg) skew(-13deg);
+        letter-spacing: 1px;
+
+        @media screen and (min-width: 899.99px) {
+            grid-area: -1/1;
+        }
+
+        @media screen and (max-width: 1199.98px) {
+            transform: translate(-17vw, -34vw) rotate(-12deg) skew(-13deg);
+        }
+
+        @media screen and (max-width: 899.98px) {
+            transform: rotate(-12deg) skew(-13deg);
+            margin-bottom: 100px;
+        }
+        @media screen and (max-width: 599.98px) {
+            font-size: 30px;
+            margin-bottom: 60px;
+        }
+        @media screen and (max-width: 359.98px) {
+            font-size: 27px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (min-width: 899.99px) {
+            grid-area: -1/1;
+        }
+    }
+}
+
+.avtopark-info {
+    $self: &;
+
+    @media screen and (min-width: 899.99px) {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    @media screen and (max-width: 899.98px) {
+        flex-flow: row wrap;
+    }
+
+    &__item {
+        @media screen and (min-width: 899.99px) {
+            grid-area: -1/1;
+            max-width: 240px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -20px;
+                width: 1px;
+                background-image: linear-gradient(
+                    0deg,
+                    #fff,
+                    #fff 50%,
+                    transparent 50%,
+                    transparent 100%
+                );
+                background-size: 1px 8px;
+            }
+        }
+
+        @media screen and (max-width: 899.98px) {
+            display: flex;
+            flex-flow: row wrap;
+            transform: translate(0, 0) !important;
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &--garage {
+            transform: translate(37vw, -44vw);
+            max-width: 150px;
+
+            @media screen and (min-width: 2500px) {
+                transform: translate(35.2vw, -43.5vw);
+            }
+            @media screen and (max-width: 1700px) {
+                transform: translate(38vw, -45.5vw);
+            }
+            @media screen and (max-width: 1500px) {
+                transform: translate(39.4vw, -45vw);
+            }
+            @media screen and (max-width: 1300px) {
+                transform: translate(40.7vw, -46vw);
+            }
+            @media screen and (max-width: 1199.98px) {
+                transform: translate(43vw, -45vw);
+            }
+            @media screen and (min-width: 899.99px) {
+                &::before {
+                    height: 100px;
+                    top: 0;
+                }
+            }
+            @media screen and (max-width: 899.98px) {
+                max-width: 100%;
+                order: 1;
+            }
+        }
+
+        &--temperature {
+            --margin-top-number: 0;
+            transform: translate(-24.3vw, 4.1vw);
+            max-width: 170px;
+
+            @media screen and (min-width: 2500px) {
+                transform: translate(-26.5vw, 1.6vw);
+            }
+            @media screen and (max-width: 1700px) {
+                transform: translate(-24vw, 5vw);
+            }
+            @media screen and (max-width: 1500px) {
+                transform: translate(-23vw, 6vw);
+            }
+            @media screen and (max-width: 1300px) {
+                transform: translate(-22vw, 7vw);
+            }
+            @media screen and (min-width: 899.99px) {
+                &::before {
+                    height: 128px;
+                    bottom: 100%;
+                }
+            }
+            @media screen and (max-width: 899.98px) {
+                max-width: 100%;
+                order: 2;
+            }
+        }
+
+        &--truck {
+            transform: translate(-4.3vw, 5.5vw);
+            max-width: 191px;
+
+            @media screen and (min-width: 2500px) {
+                transform: translate(-7vw, 3vw);
+            }
+            @media screen and (max-width: 1700px) {
+                transform: translate(-3.7vw, 6vw);
+            }
+            @media screen and (max-width: 1500px) {
+                transform: translate(-2.5vw, 8vw);
+            }
+            @media screen and (max-width: 1300px) {
+                transform: translate(-1vw, 8.7vw);
+            }
+            @media screen and (min-width: 899.99px) {
+                &::before {
+                    height: 190px;
+                    bottom: 30%;
+                }
+            }
+
+            @media screen and (max-width: 899.98px) {
+                max-width: 100%;
+                order: 3;
+            }
+        }
+
+        &--car {
+            --margin-top-number: 0;
+            transform: translate(13vw, 40.2vw);
+
+            @media screen and (min-width: 2500px) {
+                transform: translate(13vw, 38vw);
+            }
+            @media screen and (max-width: 1700px) {
+                transform: translate(14.5vw, 41vw);
+            }
+            @media screen and (max-width: 1500px) {
+                transform: translate(14vw, 43vw);
+            }
+            @media screen and (max-width: 1300px) {
+                transform: translate(15vw, 44vw);
+            }
+            @media screen and (max-width: 1199.98px) {
+                transform: translate(7vw, 48vw);
+            }
+            @media screen and (min-width: 899.99px) {
+                &::before {
+                    height: 95px;
+                    bottom: 100%;
+                    left: 52px;
+                }
+            }
+            @media screen and (max-width: 899.98px) {
+                max-width: 100%;
+                order: 5;
+            }
+        }
+
+        &--retail {
+            transform: translate(30.5vw, 25.3vw);
+
+            @media screen and (min-width: 2500px) {
+                transform: translate(29vw, 21.6vw);
+            }
+            @media screen and (max-width: 1700px) {
+                transform: translate(31.5vw, 27.5vw);
+            }
+            @media screen and (max-width: 1500px) {
+                transform: translate(33vw, 30vw);
+            }
+            @media screen and (max-width: 1300px) {
+                transform: translate(34.5vw, 32.3vw);
+            }
+            @media screen and (max-width: 1199.98px) {
+                transform: translate(32vw, 35vw);
+            }
+            @media screen and (min-width: 899.99px) {
+                &::before {
+                    height: 420px;
+                    bottom: 10%;
+                }
+            }
+            @media screen and (max-width: 899.98px) {
+                max-width: 500px;
+                order: 4;
+            }
+
+            #{$self}__box {
+                &:last-child {
+                    --margin-top-number: 0;
+                    --margin-bottom-number: 0;
+                }
+            }
+        }
+    }
+
+    &__text {
+        position: relative;
+        font-size: 14px;
+        color: #fff;
+
+        @media screen and (max-width: 899.98px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__number {
+        position: relative;
+        margin-top: var(--margin-top-number, 10px);
+        margin-bottom: var(--margin-bottom-number, 10px);
+        font-weight: 500;
+        color: #fff;
+
+        @media screen and (max-width: 899.98px) {
+            margin-top: 0;
+        }
+    }
+
+    &__box {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+
+            @media screen and (max-width: 899.98px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media screen and (max-width: 899.98px) {
+            max-width: 100%;
+            width: 195px;
+            margin-right: 30px;
+        }
+        @media screen and (max-width: 599.98px) {
+            margin-right: 10px;
+            width: 150px;
+        }
+        @media screen and (max-width: 359.98px) {
+            width: 130px;
+        }
+    }
+
+    @media screen and (min-width: 899.99px) {
+        &__point,
+        &__planet,
+        &__truck,
+        &__car {
+            &::after {
+                content: "";
+                position: absolute;
+                background-size: 100% 100%;
+                z-index: 1;
+            }
+        }
+
+        &__point {
+            &::after {
+                background-image: url("../img/point.svg");
+                width: 19px;
+                height: 18px;
+                top: -1px;
+                left: -29px;
+            }
+        }
+
+        &__truck {
+            &::after {
+                width: 27px;
+                height: 37px;
+                background-image: url("../img/truck.svg");
+                top: -30%;
+                left: -32px;
+            }
+        }
+
+        &__car {
+            &::after {
+                width: 27px;
+                height: 23px;
+                background-image: url("../img/car.svg");
+                top: -8%;
+                left: 40px;
+            }
+        }
+
+        &__planet {
+            &::after {
+                width: 28px;
+                height: 28px;
+                background-image: url("../img/planet.svg");
+                top: 4px;
+                left: -34px;
+            }
+        }
+    }
+}
+
+.avtopark-technologies {
+    @media screen and (min-width: 899.99px) {
+        margin-top: -30px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-top: -58px;
+    }
+    @media screen and (max-width: 899.98px) {
+        padding-top: 40px;
+    }
+    @media screen and (max-width: 599.98px) {
+        margin-top: -80px;
+    }
+
+    &__block {
+        margin-bottom: 115px;
+
+        @media screen and (max-width: 899.98px) {
+            margin-bottom: 80px;
+        }
+
+        &:first-child {
+            .technologies-block__content {
+                @media screen and (min-width: 899.99px) {
+                    padding-top: 80px;
+                }
+                @media screen and (min-width: 1200px) {
+                    padding-top: 160px;
+                }
+            }
+        }
+    }
+
+    .technologies-block__text:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .technologies-block__desc {
+        padding-left: 0;
+    }
+    .technologies-block__text {
+        font-size: 20px;
+    }
+
+    .technologies-block__title {
+        max-width: 400px;
+    }
+}

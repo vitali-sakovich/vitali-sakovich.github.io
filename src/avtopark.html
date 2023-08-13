@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Автопарк</title>
+        <meta name="description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,user-scalable=0"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="" />
+        <link rel="stylesheet" href="./css/fancybox.css" />
+        <link rel="stylesheet" href="./css/swiper.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <a href="/" class="header-logo header__logo">
+                    <img
+                        src="./img/logo.svg"
+                        alt="Континент"
+                        width="236"
+                        height="46"
+                        class="header-logo__img"
+                    />
+                </a>
+                <div class="header__wrapper">
+                    <div class="header__block">
+                        <div class="header-lk header__lk">
+                            <a
+                                href="https://clients.contlog.ru/"
+                                class="header-lk__link"
+                            >
+                                Кабинет клиента
+                            </a>
+                            <a
+                                href="https://my.contlog.ru/"
+                                class="header-lk__link"
+                            >
+                                Кабинет сотрудника
+                            </a>
+                        </div>
+                        <nav class="header-nav header__nav">
+                            <ul class="header-nav__list">
+                                <li class="header-nav__item">
+                                    <a href="#" class="header-nav__link">
+                                        Продукция
+                                    </a>
+                                </li>
+                                <li class="header-nav__item">
+                                    <span class="header-nav__link">
+                                        О компании
+                                        <svg
+                                            width="12"
+                                            height="7"
+                                            class="header-nav__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/svg-sprite.svg#arrow-dropdown"
+                                            ></use>
+                                        </svg>
+                                    </span>
+
+                                    <div class="nav-dropdown">
+                                        <div class="nav-dropdown__block">
+                                            <ul class="nav-dropdown__list">
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Услуги
+                                                    </a>
+                                                </li>
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Складские комплексы
+                                                    </a>
+                                                </li>
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Автопарк
+                                                    </a>
+                                                </li>
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Облачные технологии
+                                                    </a>
+                                                </li>
+                                                <li class="nav-dropdown__item">
+                                                    <a
+                                                        href="#"
+                                                        class="nav-dropdown__link"
+                                                    >
+                                                        Охрана труда и
+                                                        безопасность
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-nav__item">
+                                    <a href="#" class="header-nav__link">
+                                        Карьера
+                                    </a>
+                                </li>
+                                <li class="header-nav__item">
+                                    <a href="#" class="header-nav__link">
+                                        Об оплате
+                                    </a>
+                                </li>
+                                <li class="header-nav__item">
+                                    <a href="#" class="header-nav__link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-phone header__phone">
+                        <button
+                            title="заказать звонок"
+                            aria-label="заказать звонок"
+                            data-open-modal=".popup--feedback"
+                            class="header-phone__btn js-open-modal"
+                        >
+                            заказать звонок
+                        </button>
+                        <a href="tel: 88007005528" class="header-phone__link">
+                            8 800 700 55 28
+                        </a>
+                    </div>
+                </div>
+                <button type="button" aria-label="Меню" class="burger">
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                </button>
+            </div>
+        </header>
+        <div class="title-block">
+            <div class="breadcrumb">
+                <a href="/" class="breadcrumb__link">Главная</a>
+            </div>
+            <h1 class="title title-block__title title--size-xl">Автопарк</h1>
+        </div>
+        <main class="content content--avtopark">
+            <section class="avtopark">
+                <div class="avtopark__container">
+                    <div class="avtopark__images">
+                        <picture class="avtopark__picture">
+                            <source
+                                srcset="./img/autopark.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                src="./img/autopark.png"
+                                width="1920"
+                                height="2152"
+                                alt="Автопарк"
+                                class="avtopark__img"
+                            />
+                        </picture>
+                    </div>
+                    <div class="avtopark__content">
+                        <span class="avtopark__number">160+ автомобилей</span>
+                        <div class="avtopark-info avtopark__info">
+                            <div
+                                class="avtopark-info__item avtopark-info__item--garage avtopark-info__point"
+                            >
+                                <div class="avtopark-info__box">
+                                    <span class="avtopark-info__text"
+                                        >Общая площадь гаражных боксов</span
+                                    >
+                                    <span class="avtopark-info__number"
+                                        >3000+ м2</span
+                                    >
+                                </div>
+                            </div>
+                            <div
+                                class="avtopark-info__item avtopark-info__item--temperature avtopark-info__point"
+                            >
+                                <div class="avtopark-info__box">
+                                    <span class="avtopark-info__number"
+                                        >Температурный режим при доставке</span
+                                    >
+                                </div>
+                            </div>
+                            <div
+                                class="avtopark-info__item avtopark-info__item--truck"
+                            >
+                                <div class="avtopark-info__box">
+                                    <span
+                                        class="avtopark-info__number avtopark-info__truck"
+                                        >90+ грузовых автомобилей</span
+                                    >
+                                    <span class="avtopark-info__text"
+                                        >от 2 до 20 тонн</span
+                                    >
+                                </div>
+                                <div class="avtopark-info__box">
+                                    <span
+                                        class="avtopark-info__text avtopark-info__point"
+                                        >Общая грузоподъемность</span
+                                    >
+                                    <span class="avtopark-info__number"
+                                        >400+ тонн</span
+                                    >
+                                </div>
+                            </div>
+                            <div
+                                class="avtopark-info__item avtopark-info__item--car avtopark-info__car"
+                            >
+                                <div class="avtopark-info__box">
+                                    <span class="avtopark-info__number"
+                                        >70+</span
+                                    >
+                                    <span class="avtopark-info__text"
+                                        >легковых служебных автомобилей</span
+                                    >
+                                </div>
+                            </div>
+                            <div
+                                class="avtopark-info__item avtopark-info__item--retail"
+                            >
+                                <div
+                                    class="avtopark-info__box avtopark-info__point"
+                                >
+                                    <span class="avtopark-info__text"
+                                        >доставляем в</span
+                                    >
+                                    <span class="avtopark-info__number"
+                                        >20 000+</span
+                                    >
+                                    <span class="avtopark-info__text"
+                                        >торговых точек</span
+                                    >
+                                </div>
+                                <div
+                                    class="avtopark-info__box avtopark-info__planet"
+                                >
+                                    <span class="avtopark-info__number"
+                                        >110 экваторов</span
+                                    >
+                                    <span class="avtopark-info__text"
+                                        >в год проезжают наши автомобили (4 640
+                                        000 км)
+                                    </span>
+                                </div>
+                                <div
+                                    class="avtopark-info__box avtopark-info__point"
+                                >
+                                    <span class="avtopark-info__text"
+                                        >Мы доставляем</span
+                                    >
+                                    <span class="avtopark-info__number"
+                                        >90 000 м3</span
+                                    >
+                                    <span class="avtopark-info__number"
+                                        >30 000 тонн</span
+                                    >
+                                </div>
+                                <div
+                                    class="avtopark-info__box avtopark-info__point"
+                                >
+                                    <span class="avtopark-info__number"
+                                        >Контроль скоростного режима</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="avtopark-technologies">
+                <div
+                    class="technologies-block avtopark-technologies__block technologies-block--reverse"
+                >
+                    <div class="technologies-block__content">
+                        <h4 class="technologies-block__title">
+                            Автоматическая маршрутизация доставки
+                        </h4>
+                        <div class="technologies-block__desc">
+                            <p class="technologies-block__text">
+                                Использование нейросетей
+                            </p>
+                            <p class="technologies-block__text">
+                                Оптимальные маршруты для минимизации пробега
+                            </p>
+                            <p class="technologies-block__text">
+                                Экспедирование груза
+                            </p>
+                        </div>
+                    </div>
+                    <picture class="technologies-block__picture">
+                        <source srcset="./img/routing.webp" type="image/webp" />
+                        <img
+                            src="./img/routing.png"
+                            width="848"
+                            height="583"
+                            alt=" Автоматическая маршрутизация доставки"
+                            class="technologies-block__img"
+                        />
+                    </picture>
+                </div>
+                <div class="technologies-block avtopark-technologies__block">
+                    <div class="technologies-block__content">
+                        <h4 class="technologies-block__title">
+                            Мониторинг автотранспорта
+                        </h4>
+                        <div class="technologies-block__desc">
+                            <p class="technologies-block__text">
+                                ГЛОНАСC и GPS на автомобилях
+                            </p>
+                            <p class="technologies-block__text">
+                                Датчики уровня топлива на автомобилях доставки
+                            </p>
+                            <p class="technologies-block__text">
+                                Онлайн-отслеживание статуса доставки в личном
+                                кабинете
+                            </p>
+                        </div>
+                    </div>
+                    <picture class="technologies-block__picture">
+                        <source
+                            srcset="./img/monitoring.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            src="./img/monitoring.png"
+                            width="849"
+                            height="570"
+                            alt="Мониторинг автотранспорта"
+                            class="technologies-block__img"
+                        />
+                    </picture>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__block">
+                    <div class="footer-nav footer__nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="#" class="footer-nav__link"
+                                    >Продукция</a
+                                >
+                            </li>
+                            <li class="footer-nav__item">
+                                <span class="footer-nav__link">О компании</span>
+                                <div class="footer-subnav footer-nav__subnav">
+                                    <a href="#" class="footer-subnav__link"
+                                        >Услуги</a
+                                    >
+                                    <a href="#" class="footer-subnav__link"
+                                        >Складские комплексы</a
+                                    >
+                                    <a href="#" class="footer-subnav__link"
+                                        >Автопарк</a
+                                    >
+                                    <a href="#" class="footer-subnav__link"
+                                        >Облачные технологии</a
+                                    >
+                                    <a href="#" class="footer-subnav__link"
+                                        >Охрана труда и безопасность</a
+                                    >
+                                </div>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="#" class="footer-nav__link">Карьера</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="#" class="footer-nav__link"
+                                    >Информация об оплате</a
+                                >
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="#" class="footer-nav__link"
+                                    >Контакты</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__contacts">
+                        <a href="tel: 88007005528" class="footer-contact-link"
+                            >8 800 700 55 28</a
+                        >
+                        <button
+                            data-open-modal=".popup--feedback"
+                            class="footer-popup-btn footer__btn js-open-modal"
+                        >
+                            заказать звонок
+                        </button>
+                        <a
+                            href="mailto: reception@contlog.ru"
+                            class="footer-contact-link"
+                            >reception@contlog.ru</a
+                        >
+                        <div class="footer-network footer__network">
+                            <a
+                                href="https://vk.com/ooocontinent"
+                                target="_blank"
+                                class="footer-network__link"
+                            >
+                                <picture class="footer-network__picture">
+                                    <source
+                                        srcset="./img/logo/vk.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/logo/vk.png"
+                                        width="32"
+                                        height="33"
+                                        alt="Вконтакте"
+                                        class="footer-network__img"
+                                    />
+                                </picture>
+                            </a>
+                            <a
+                                href="https://krasnoyarsk.hh.ru/employer/103905"
+                                target="_blank"
+                                class="footer-network__link"
+                            >
+                                <picture class="footer-network__picture">
+                                    <source
+                                        srcset="./img/logo/hh.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/logo/hh.png"
+                                        width="36"
+                                        height="37"
+                                        alt="hh"
+                                        class="footer-network__img"
+                                    />
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="footer__box">
+                            <div class="footer-store footer__store">
+                                <span class="footer-store__name">B2B</span>
+                                <div class="footer-store__list">
+                                    <div class="footer-store__link">
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/b2b.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/b2b.png"
+                                                width="86"
+                                                height="28"
+                                                alt="B2B портал"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </div>
+                                    <a
+                                        href="https://may24.ru/catalog/distr-kontinent/"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/may24.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/may24.png"
+                                                width="93"
+                                                height="19"
+                                                alt="MAY 24"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                    <a
+                                        href="https://web.mead.club/#/"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/med.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/med.png"
+                                                width="48"
+                                                height="26"
+                                                alt="МЁD"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                    <div class="footer-store__link">
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/telesez.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/telesez.png"
+                                                width="121"
+                                                height="26"
+                                                alt="Телесейлз сервис"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-store footer__store">
+                                <span class="footer-store__name"
+                                    >Мы на маркетплейсах</span
+                                >
+                                <div class="footer-store__list">
+                                    <a
+                                        href="https://www.wildberries.ru/seller/698972"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="
+                                                    ./img/logo/wildberries.webp
+                                                "
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/wildberries.png"
+                                                width="94"
+                                                height="30"
+                                                alt="wildberries"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                    <a
+                                        href="https://www.ozon.ru/seller/kontinent-122638/products/?miniapp=seller_122638"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/ozon.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/ozon.png"
+                                                width="94"
+                                                height="20"
+                                                alt="ozon"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                    <a
+                                        href="https://market.yandex.ru/business--kontinent-ekspress/51280193"
+                                        target="_blank"
+                                        class="footer-store__link"
+                                    >
+                                        <picture class="footer-store__picture">
+                                            <source
+                                                srcset="./img/logo/ya.webp"
+                                                type="image/webp"
+                                            />
+                                            <img
+                                                src="./img/logo/ya.png"
+                                                width="100"
+                                                height="21"
+                                                alt="Яндекс Маркет"
+                                                class="footer-store__img"
+                                            />
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__inner">
+                        <span class="footer__copyright"
+                            >2023 © КОНТИНЕНТ. <br />
+                            Торгово-логистическая компания</span
+                        >
+                        <div class="footer__links">
+                            <a href="#" class="footer__link">
+                                Политика конфиденциальности
+                            </a>
+                            <a href="#" class="footer__link">
+                                Согласие на обработку персональных данных
+                            </a>
+                        </div>
+                    </div>
+                    <a
+                        href="https://websalt.ru/"
+                        target="_blank"
+                        class="develeper footer__develeper"
+                    >
+                        <span class="develeper__text">Создание сайта</span>
+                        <img src="./img/salt.png" alt="Соль" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="popup popup--feedback">
+                <div class="popup__overlay"></div>
+                <div class="popup__block">
+                    <div class="popup__head">
+                        <h4 class="popup__title">Заказать звонок</h4>
+                        <button
+                            aria-label="Закрыть"
+                            title="Закрыть"
+                            class="popup__close"
+                        ></button>
+                    </div>
+                    <div class="popup__content">
+                        <form
+                            action="javascript:void(0);"
+                            method="post"
+                            class="form"
+                        >
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    class="label__input js-input first-elem"
+                                />
+                                <span class="label__placeholder">Ваше имя</span>
+                                <button
+                                    type="button"
+                                    title="Очистить поле"
+                                    aria-label="Очистить поле"
+                                    class="label__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        class="label__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/svg-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    required
+                                    class="label__input js-input js-input-mask last-elem"
+                                />
+                                <span class="label__placeholder"
+                                    >Контактный номер</span
+                                >
+                                <button
+                                    type="button"
+                                    title="Очистить поле"
+                                    aria-label="Очистить поле"
+                                    class="label__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        class="label__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/svg-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <div class="form__row">
+                                <button
+                                    type="submit"
+                                    class="form__btn first-elem"
+                                >
+                                    Отправить
+                                </button>
+                                <div class="checkbox form__checkbox">
+                                    <label class="checkbox__label">
+                                        <input
+                                            type="checkbox"
+                                            name="ch"
+                                            checked="checked"
+                                            class="checkbox__input"
+                                        />
+                                        <span class="checkbox__data">
+                                            <svg
+                                                width="12"
+                                                height="10"
+                                                class="checkbox__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/svg-sprite.svg#chek"
+                                                ></use>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                    <span class="checkbox__span"
+                                        >Я даю свое согласие на
+                                        <a href="#" class="checkbox__link"
+                                            >обработку персональных данных</a
+                                        >
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup popup--thank">
+                <div class="popup__overlay"></div>
+                <div class="popup__block">
+                    <div class="popup__head">
+                        <h4 class="popup__title">Спасибо</h4>
+                        <button
+                            aria-label="Закрыть"
+                            title="Закрыть"
+                            class="popup__close"
+                        ></button>
+                    </div>
+                    <div class="popup__content">
+                        <div class="popup__thank">
+                            <p class="popup__text">
+                                Наш менеджер свяжется с вами в ближайшее время
+                            </p>
+                            <button type="button" class="form__btn">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/fancybox.js"></script>
+        <script src="./js/swiper.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
