@@ -1,5 +1,13 @@
 Fancybox.bind("[data-fancybox]", {});
 
+if (document.querySelector(".vacancies-select__select")) {
+    new NativejsSelect({
+        selector: ".vacancies-select__select",
+        disableMobile: false,
+        enableSearch: false,
+    });
+}
+
 var swiper = new Swiper(".clients-slider", {
     slidesPerView: 3,
     spaceBetween: 30,
