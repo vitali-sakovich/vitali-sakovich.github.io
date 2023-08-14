@@ -101,6 +101,10 @@ button {
         --form-title-width: 380px;
         --form-text-width: 280px;
     }
+
+    &--paument {
+        padding-top: 40px;
+    }
 }
 
 .error-text {
@@ -130,3 +134,4 @@ button {
 @import "blocks/avtopark";
 @import "blocks/services";
 @import "blocks/labor-protection";
+@import "blocks/payment";

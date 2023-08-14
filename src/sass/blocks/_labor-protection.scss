@@ -126,6 +126,13 @@
         padding-left: 5.4%;
     }
 
+    &--paument {
+        margin-bottom: 50px;
+
+        @media screen and (max-width: 899.98px) {
+            margin-bottom: 30px;
+        }
+    }
 
     &__link {
         margin-bottom: 44px;

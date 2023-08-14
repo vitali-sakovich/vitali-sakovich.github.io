@@ -468,6 +468,9 @@ button {
   --form-title-width: 380px;
   --form-text-width: 280px;
 }
+.content--paument {
+  padding-top: 40px;
+}
 
 .error-text {
   padding-top: 40px;
@@ -1125,6 +1128,7 @@ button {
 .title-block__title {
   margin-top: 0;
   margin-bottom: 0;
+  padding-right: 60px;
 }
 
 .breadcrumb {
@@ -4529,6 +4533,14 @@ button {
     padding-left: 5.4%;
   }
 }
+.downloads--paument {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 899.98px) {
+  .downloads--paument {
+    margin-bottom: 30px;
+  }
+}
 .downloads__link {
   margin-bottom: 44px;
 }
@@ -4573,4 +4585,186 @@ button {
   font-size: 14px;
   line-height: 22px;
   color: #fff;
+}
+
+.paument {
+  padding-right: 16.7%;
+  padding-left: 16.7%;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1500px) {
+  .paument {
+    padding-right: 8.3%;
+    padding-left: 8.3%;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .paument {
+    padding-right: 6%;
+    padding-left: 6%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .paument {
+    padding-right: 5.4%;
+    padding-left: 5.4%;
+  }
+}
+.paument__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 899.98px) {
+  .paument__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.paument__title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  min-width: 280px;
+  margin-right: 90px;
+}
+@media screen and (max-width: 1199.98px) {
+  .paument__title {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .paument__title {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .paument__title {
+    font-size: 25px;
+  }
+}
+.paument__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 27px;
+}
+@media screen and (max-width: 599.98px) {
+  .paument__name {
+    margin-bottom: 20px;
+  }
+}
+.paument__box {
+  margin-bottom: 28px;
+}
+.paument__box p {
+  line-height: 25px;
+}
+.paument__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.paument__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 36px;
+}
+@media screen and (max-width: 599.98px) {
+  .paument__picture {
+    margin-right: 0;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 359.98px) {
+  .paument__picture {
+    margin-right: -10px;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+}
+.paument__text {
+  line-height: 25px;
+  margin-bottom: 25px;
+}
+
+.requisites-downloads {
+  padding-right: 16.7%;
+  padding-left: 16.7%;
+}
+@media screen and (max-width: 1500px) {
+  .requisites-downloads {
+    padding-right: 8.3%;
+    padding-left: 8.3%;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .requisites-downloads {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .requisites-downloads {
+    padding-right: 5.4%;
+    padding-left: 5.4%;
+  }
+}
+.requisites-downloads__title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 63px;
+}
+@media screen and (max-width: 899.98px) {
+  .requisites-downloads__title {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .requisites-downloads__title {
+    font-size: 25px;
+  }
+}
+.requisites-downloads__container {
+  display: grid;
+  grid-template-columns: repeat(2, 434px);
+  grid-gap: 44px 206px;
+}
+@media screen and (max-width: 1500px) {
+  .requisites-downloads__container {
+    grid-column-gap: 13%;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .requisites-downloads__container {
+    grid-template-columns: repeat(2, 380px);
+    grid-column-gap: 10%;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .requisites-downloads__container {
+    grid-column-gap: 5%;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .requisites-downloads__container {
+    grid-template-columns: 1fr;
+  }
 }
