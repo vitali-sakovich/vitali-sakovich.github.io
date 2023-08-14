@@ -267,3 +267,75 @@ document.addEventListener("click", function (e) {
         node.style.setProperty("--height-block", block.scrollHeight + "px");
     }
 })();
+
+/* Add file for form vacancy */
+(function () {
+    window.onload = function () {
+        if (document.forms.vacancy != null) {
+            const divFiles =
+                document.forms.vacancy.querySelector(".form__files"); // "vacancy" it is name form
+
+            if (divFiles != null) {
+                /!* Events form *!/;
+                divFiles.addEventListener("change", eventChangeInput);
+                divFiles.addEventListener("click", eventClickBtnDelete);
+
+                /!* Functions *!/;
+                function eventClickBtnDelete(e) {
+                    if (e.target.classList.contains("file-delete")) {
+                        e.preventDefault();
+                        e.target.parentElement.parentElement.remove();
+                    }
+                }
+
+                function eventChangeInput(e) {
+                    if (e.target.tagName == "INPUT") {
+                        if (e.target.files != null) {
+                            let input = e.target;
+                            let label = e.target.parentElement;
+                            let divFiles = label.parentElement;
+                            let span = label.querySelector("span");
+                            let btnDelete = label.querySelector(".file-delete");
+                            let countFormFile =
+                                divFiles.querySelectorAll(".file").length;
+                            if (countFormFile > 5) return;
+
+                            /!* Update text *!/;
+                            span.innerHTML = `
+                          ${input.files[0].name}
+                            <button type="button" title="удалить файл" aria-label="удалить файл" class="file-delete file__delete">
+                                <svg width="16" height="16" class="file-delete__icon">
+                                    <use xlink:href="./img/svg-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                      `;
+                            /!* Add new block *!/;
+                            if (btnDelete == null) {
+                                divFiles.insertAdjacentHTML(
+                                    "beforeend",
+                                    `
+                              <label class="file form__file">
+                                  <input type="file" name="file${countFormFile}" hidden/>
+                                  <span class="file__name">
+                                      Прикрепить файл
+                                      <svg
+                                      width="16"
+                                      height="20"
+                                      class="file__icon"
+                                  >
+                                      <use
+                                          xlink:href="./img/svg-sprite.svg#attach"
+                                      ></use>
+                                    </svg>
+                                  </span>
+                              </label>
+                          `
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+})();

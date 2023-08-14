@@ -1090,6 +1090,12 @@
         line-height: 26px;
         color: #fff;
         max-width: var(--form-text-width, 100%);
+
+        @media screen and (max-width: 899.98px) {
+            br {
+                display: none;
+            }
+        }
     }
 }
 
@@ -1128,6 +1134,83 @@
         @media screen and (max-width: 599.98px) {
             flex-direction: column;
         }
+    }
+
+    &__files {
+        display: flex;
+        flex-direction: column;
+        padding: 14px;
+        border: 2px dashed rgba(255, 255, 255, 0.38);
+        border-radius: 5px;
+        margin-bottom: 5px;
+        max-width: 360px;
+
+        @media screen and (max-width: 599.98px) {
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 18px;
+        color: #fff;
+        margin-bottom: 33px;
+    }
+
+    &__file {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &:nth-child(5) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.file {
+    display: none;
+
+    &:nth-child(-n+5) {
+        display: block;
+    }
+
+    &__name {
+        display: flex;
+        position: relative;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.63);
+        cursor: pointer;
+        padding-right: 25px;
+    }
+
+    &__icon {
+        fill: #fff;
+        margin-right: 10px;
+    }
+
+    &__delete {
+        position: absolute;
+        right: 0;
+  
+    }
+}
+
+.file-delete {
+    background: none;
+
+    &:hover {
+        --fill-icon: #fff;
+    }
+
+    &__icon {
+        transition: fill 0.3s;
+        fill: var(--fill-icon, rgba(255, 255, 255, 0.7));
+        pointer-events: none;
     }
 }
 

@@ -105,6 +105,10 @@ button {
     &--paument {
         padding-top: 40px;
     }
+
+    &--vacancy {
+        --form-title-width: 380px;
+    }
 }
 
 .error-text {
@@ -135,3 +139,4 @@ button {
 @import "blocks/services";
 @import "blocks/labor-protection";
 @import "blocks/payment";
+@import "blocks/vacancy";
