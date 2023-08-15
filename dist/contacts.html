@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./css/fancybox.css">
         <link rel="stylesheet" href="./css/swiper.css">
         <link rel="stylesheet" href="./css/style.css">
-
+    </head>
     <body>
         <header class="header">
             <div class="header__container">
@@ -235,37 +235,37 @@
                 <script src="https://api-maps.yandex.ru/2.1/?apikey=0aa2f6b6-353d-4a10-bb62-97763a975ef4&amp;lang=ru_RU" type="text/javascript"></script>
                 <script type="text/javascript">
                     ymaps.ready(function () {
-                      var myMap = new ymaps.Map('map', {
-                        center: [55.968343, 92.907710],
-                        zoom: 16,
-                        controls: ['smallMapDefaultSet'],
-                      });
-                      let addresFirst = new ymaps.Placemark(
-                        [55.968343, 92.907710],
-                        {
-                          hintContent: 'г. Красноярск, ул. Лесопильщиков, д. 160',
-                          balloonContent:
-                            'КОНТИНЕНТ. Торгово-логистическая компания',
-                          iconContent: '',
-                        },
-                        {
-                          iconLayout: 'default#imageWithContent',
-                          iconImageHref: './img/marker.svg',
-                          iconImageSize: [86, 54],
-                          iconImageOffset: [-45, -45],
-                          iconContentOffset: [0, 0],
-                        }
-                      );
-                      myMap.geoObjects.add(addresFirst);
-                      myMap.behaviors.disable('scrollZoom');
+                        var myMap = new ymaps.Map("map", {
+                            center: [55.968343, 92.90771],
+                            zoom: 16,
+                            controls: ["smallMapDefaultSet"],
+                        });
+                        let addresFirst = new ymaps.Placemark(
+                            [55.968343, 92.90771],
+                            {
+                                hintContent:
+                                    "г. Красноярск, ул. Лесопильщиков, д. 160",
+                                balloonContent:
+                                    "КОНТИНЕНТ. Торгово-логистическая компания",
+                                iconContent: "",
+                            },
+                            {
+                                iconLayout: "default#imageWithContent",
+                                iconImageHref: "./img/marker.svg",
+                                iconImageSize: [86, 54],
+                                iconImageOffset: [-45, -45],
+                                iconContentOffset: [0, 0],
+                            }
+                        );
+                        myMap.geoObjects.add(addresFirst);
+                        myMap.behaviors.disable("scrollZoom");
                     });
-                  </script>
+                </script>
                 <div class="map__block" id="map"></div>
             </section>
             <section class="section-form">
                 <div class="section-form__block">
                     <form action="javascript:void(0);" method="post" class="form">
-
                         <label class="label form__label js-label">
                             <input type="text" name="name" required class="label__input js-input">
                             <span class="label__placeholder">Ваше имя</span>
@@ -324,8 +324,9 @@
                     </form>
                 </div>
                 <div class="section-form__desc">
-                    <h2 class="section-form__title">Есть вопрос
-                        или предложение?</h2>
+                    <h2 class="section-form__title">
+                        Есть вопрос или предложение?
+                    </h2>
                     <p class="section-form__text">
                         Оставьте сообщение и мы свяжемся с вами
                     </p>
@@ -532,4 +533,4 @@
         <script src="./js/swiper.js"></script>
         <script src="./js/script.js"></script>
     </body>
-</head></html>
+</html>
