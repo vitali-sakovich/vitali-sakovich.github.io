@@ -3,12 +3,29 @@
     flex-direction: column;
     padding: 70px 16.7% 80px;
 
+    @media screen and (max-width: 1500px) {
+        padding-right: 8.3%;
+        padding-left: 8.3%;
+    }
+    @media screen and (max-width: 899.98px) {
+        padding-top: 40px;
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+    @media screen and (max-width: 599.98px) {
+        padding: 30px 5.4% 40px;
+    }
+
     &__name {
         display: flex;
         margin-bottom: 30px;
         font-size: 20px;
         font-weight: 600;
         color: #fff;
+
+        @media screen and (max-width: 499.98px) {
+            margin-bottom: 23px;
+        }
     }
 
     &__contact {
@@ -22,12 +39,36 @@
         grid-template-columns: repeat(2, 390px);
         grid-column-gap: 140px;
         margin-bottom: 90px;
+
+        @media screen and (max-width: 1199.98px) {
+            grid-column-gap: 60px;
+        }
+
+        @media screen and (max-width: 899.98px) {
+            grid-template-columns: 1fr;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 499.98px) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__box {
+        @media screen and (max-width: 899.98px) {
+            margin-bottom: 40px;
+        }
     }
 }
 
 .contact {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 499.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     &__name {
         display: flex;
@@ -48,12 +89,21 @@
         color: #fff;
         min-width: 130px;
         margin-right: 40px;
+
+        @media screen and (max-width: 499.98px) {
+            margin-right: 0;
+            margin-bottom: 7px;
+        }
     }
 
     &__link {
         color: #fff;
         font-weight: 600;
         transition: opacity 0.3s;
+
+        @media screen and (max-width: 499.98px) {
+            margin-left: 33px;
+        }
 
         &:hover {
             opacity: 0.7;
@@ -68,21 +118,40 @@
 .requisites {
     &__container {
         display: flex;
+
+        @media screen and (max-width: 899.98px) {
+            flex-direction: column;
+        }
     }
 
     &__block {
         margin-right: 40px;
+
+        @media screen and (max-width: 1199.98px) {
+            max-width: 500px;
+            margin-right: 20px;
+        }
+
+        @media screen and (max-width: 899.98px) {
+            max-width: 100%;
+            margin-right: 0;
+        }
     }
 
     &__title {
         font-size: 30px;
         font-weight: 600;
-        color: #fff;  
+        color: #fff;
         margin-bottom: 30px;
+
+        @media screen and (max-width: 499.98px) {
+            font-size: 20px;
+            margin-bottom: 23px;
+        }
     }
 
     &__name {
-        color: #FFF;
+        color: #fff;
         margin-bottom: 30px;
     }
 
@@ -96,9 +165,22 @@
     align-items: center;
     color: #fff;
 
+    @media screen and (max-width: 499.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     &__name {
         min-width: 150px;
         margin-right: 60px;
+
+        @media screen and (max-width: 899.98px) {
+            margin-right: 50px;
+        }
+        @media screen and (max-width: 499.98px) {
+            margin-right: 0;
+            margin-bottom: 7px;
+        }
     }
 
     &__value {
@@ -121,7 +203,6 @@
     width: 100%;
     height: 50%;
 }
-
 
 .ymaps-2-1-79-map-copyrights-promo,
 .ymaps-2-1-79-controls__toolbar {

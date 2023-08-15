@@ -124,6 +124,10 @@ button {
     &--contacts {
         --form-title-width: 500px;
         --form-text-width: 212px;
+
+        @media screen and (max-width: 1199.98px) {
+            --form-block-margin-right: 40px;
+        }
     }
 }
 

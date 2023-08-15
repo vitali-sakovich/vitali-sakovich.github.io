@@ -489,6 +489,11 @@ button {
   --form-title-width: 500px;
   --form-text-width: 212px;
 }
+@media screen and (max-width: 1199.98px) {
+  .content--contacts {
+    --form-block-margin-right: 40px;
+  }
+}
 
 .error-text {
   padding-top: 40px;
@@ -5417,6 +5422,24 @@ button {
   flex-direction: column;
   padding: 70px 16.7% 80px;
 }
+@media screen and (max-width: 1500px) {
+  .contacts {
+    padding-right: 8.3%;
+    padding-left: 8.3%;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .contacts {
+    padding-top: 40px;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .contacts {
+    padding: 30px 5.4% 40px;
+  }
+}
 .contacts__name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5425,6 +5448,11 @@ button {
   font-size: 20px;
   font-weight: 600;
   color: #fff;
+}
+@media screen and (max-width: 499.98px) {
+  .contacts__name {
+    margin-bottom: 23px;
+  }
 }
 .contacts__contact:not(:last-child) {
   margin-bottom: 30px;
@@ -5435,6 +5463,27 @@ button {
   grid-column-gap: 140px;
   margin-bottom: 90px;
 }
+@media screen and (max-width: 1199.98px) {
+  .contacts__row {
+    grid-column-gap: 60px;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .contacts__row {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 499.98px) {
+  .contacts__row {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .contacts__box {
+    margin-bottom: 40px;
+  }
+}
 
 .contact {
   display: -webkit-box;
@@ -5443,6 +5492,17 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+@media screen and (max-width: 499.98px) {
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
 }
 .contact__name {
   display: -webkit-box;
@@ -5474,11 +5534,22 @@ button {
   min-width: 130px;
   margin-right: 40px;
 }
+@media screen and (max-width: 499.98px) {
+  .contact__name {
+    margin-right: 0;
+    margin-bottom: 7px;
+  }
+}
 .contact__link {
   color: #fff;
   font-weight: 600;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+@media screen and (max-width: 499.98px) {
+  .contact__link {
+    margin-left: 33px;
+  }
 }
 .contact__link:hover {
   opacity: 0.7;
@@ -5492,8 +5563,28 @@ button {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 899.98px) {
+  .requisites__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 .requisites__block {
   margin-right: 40px;
+}
+@media screen and (max-width: 1199.98px) {
+  .requisites__block {
+    max-width: 500px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .requisites__block {
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 .requisites__title {
   font-size: 30px;
@@ -5501,8 +5592,14 @@ button {
   color: #fff;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 499.98px) {
+  .requisites__title {
+    font-size: 20px;
+    margin-bottom: 23px;
+  }
+}
 .requisites__name {
-  color: #FFF;
+  color: #fff;
   margin-bottom: 30px;
 }
 .requisites__item {
@@ -5518,9 +5615,31 @@ button {
   align-items: center;
   color: #fff;
 }
+@media screen and (max-width: 499.98px) {
+  .requisites-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
 .requisites-item__name {
   min-width: 150px;
   margin-right: 60px;
+}
+@media screen and (max-width: 899.98px) {
+  .requisites-item__name {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 499.98px) {
+  .requisites-item__name {
+    margin-right: 0;
+    margin-bottom: 7px;
+  }
 }
 .requisites-item__value {
   font-weight: 600;
