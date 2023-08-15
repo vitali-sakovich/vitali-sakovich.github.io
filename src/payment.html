@@ -574,7 +574,7 @@
                                         </picture>
                                     </div>
                                     <a
-                                        href="https://may24.ru/catalog/distr-kontinent/"
+                                        href=" https://may24.ru/catalog/distr-kontinent/"
                                         target="_blank"
                                         class="footer-store__link"
                                     >
@@ -674,7 +674,7 @@
                                         </picture>
                                     </a>
                                     <a
-                                        href="https://market.yandex.ru/business--kontinent-ekspress/51280193"
+                                        href=" https://market.yandex.ru/business--kontinent-ekspress/51280193"
                                         target="_blank"
                                         class="footer-store__link"
                                     >
@@ -722,143 +722,134 @@
                     </a>
                 </div>
             </div>
+        </footer>
 
-            <div class="popup popup--feedback">
-                <div class="popup__overlay"></div>
-                <div class="popup__block">
-                    <div class="popup__head">
-                        <h4 class="popup__title">Заказать звонок</h4>
-                        <button
-                            aria-label="Закрыть"
-                            title="Закрыть"
-                            class="popup__close"
-                        ></button>
-                    </div>
-                    <div class="popup__content">
-                        <form
-                            action="javascript:void(0);"
-                            method="post"
-                            class="form"
-                        >
-                            <label class="label form__label js-label">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                    class="label__input js-input first-elem"
-                                />
-                                <span class="label__placeholder">Ваше имя</span>
-                                <button
-                                    type="button"
-                                    title="Очистить поле"
-                                    aria-label="Очистить поле"
-                                    class="label__clear js-clear-input"
-                                >
-                                    <svg
-                                        width="16"
-                                        height="16"
-                                        class="label__icon"
-                                    >
-                                        <use
-                                            xlink:href="./img/svg-sprite.svg#clear"
-                                        ></use>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="label form__label js-label">
-                                <input
-                                    type="text"
-                                    name="phone"
-                                    required
-                                    class="label__input js-input js-input-mask last-elem"
-                                />
-                                <span class="label__placeholder"
-                                    >Контактный номер</span
-                                >
-                                <button
-                                    type="button"
-                                    title="Очистить поле"
-                                    aria-label="Очистить поле"
-                                    class="label__clear js-clear-input"
-                                >
-                                    <svg
-                                        width="16"
-                                        height="16"
-                                        class="label__icon"
-                                    >
-                                        <use
-                                            xlink:href="./img/svg-sprite.svg#clear"
-                                        ></use>
-                                    </svg>
-                                </button>
-                            </label>
-                            <div class="form__row">
-                                <button
-                                    type="submit"
-                                    class="form__btn first-elem"
-                                >
-                                    Отправить
-                                </button>
-                                <div class="checkbox form__checkbox">
-                                    <label class="checkbox__label">
-                                        <input
-                                            type="checkbox"
-                                            name="ch"
-                                            checked="checked"
-                                            class="checkbox__input"
-                                        />
-                                        <span class="checkbox__data">
-                                            <svg
-                                                width="12"
-                                                height="10"
-                                                class="checkbox__icon"
-                                            >
-                                                <use
-                                                    xlink:href="./img/svg-sprite.svg#chek"
-                                                ></use>
-                                            </svg>
-                                        </span>
-                                    </label>
-                                    <span class="checkbox__span"
-                                        >Я даю свое согласие на
-                                        <a href="#" class="checkbox__link"
-                                            >обработку персональных данных</a
-                                        >
-                                    </span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+        <div class="popup popup--feedback">
+            <div class="popup__overlay"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h4 class="popup__title">Заказать звонок</h4>
+                    <button
+                        aria-label="Закрыть"
+                        title="Закрыть"
+                        class="popup__close"
+                    ></button>
                 </div>
-            </div>
-
-            <div class="popup popup--thank">
-                <div class="popup__overlay"></div>
-                <div class="popup__block">
-                    <div class="popup__head">
-                        <h4 class="popup__title">Спасибо</h4>
-                        <button
-                            aria-label="Закрыть"
-                            title="Закрыть"
-                            class="popup__close"
-                        ></button>
-                    </div>
-                    <div class="popup__content">
-                        <div class="popup__thank">
-                            <p class="popup__text">
-                                Наш менеджер свяжется с вами в ближайшее время
-                            </p>
-                            <button type="button" class="form__btn">
+                <div class="popup__content">
+                    <form
+                        action="javascript:void(0);"
+                        method="post"
+                        class="form"
+                    >
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="name"
+                                data-rule="required|name"
+                                class="label__input js-input first-elem"
+                            />
+                            <span class="label__placeholder">Ваше имя</span>
+                            <button
+                                type="button"
+                                title="Очистить поле"
+                                aria-label="Очистить поле"
+                                class="label__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="label__icon">
+                                    <use
+                                        xlink:href="./img/svg-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="phone"
+                                data-rule="required|phone"
+                                class="label__input js-input js-input-mask last-elem"
+                            />
+                            <span class="label__placeholder"
+                                >Контактный номер</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить поле"
+                                aria-label="Очистить поле"
+                                class="label__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="label__icon">
+                                    <use
+                                        xlink:href="./img/svg-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__row">
+                            <button type="submit" class="form__btn first-elem">
                                 Отправить
                             </button>
+                            <div class="checkbox form__checkbox">
+                                <label class="checkbox__label">
+                                    <input
+                                        type="checkbox"
+                                        name="ch"
+                                        checked="checked"
+                                        class="checkbox__input"
+                                    />
+                                    <span class="checkbox__data">
+                                        <svg
+                                            width="12"
+                                            height="10"
+                                            class="checkbox__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/svg-sprite.svg#chek"
+                                            ></use>
+                                        </svg>
+                                    </span>
+                                </label>
+                                <span class="checkbox__span"
+                                    >Я даю свое согласие на
+                                    <a href="#" class="checkbox__link"
+                                        >обработку персональных данных</a
+                                    >
+                                </span>
+                            </div>
                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup--thank">
+            <div class="popup__overlay"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h4 class="popup__title">Спасибо</h4>
+                    <button
+                        aria-label="Закрыть"
+                        title="Закрыть"
+                        class="popup__close"
+                    ></button>
+                </div>
+                <div class="popup__content">
+                    <div class="popup__thank">
+                        <p class="popup__text">
+                            Наш менеджер свяжется с вами в ближайшее время
+                        </p>
+                        <button type="button" class="form__btn">
+                            Отправить
+                        </button>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
 
         <script src="./js/fancybox.js"></script>
         <script src="./js/swiper.js"></script>
+        <script src="./js/nativejs-select.min.js"></script>
+        <script src="./js/js-form-validator.min.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>

@@ -1021,8 +1021,6 @@
     }
 }
 
-
-
 .section-form {
     display: flex;
     position: relative;
@@ -1258,6 +1256,18 @@
         --placeholder-color: #fff;
         --clear-opacity: 1;
         --clear-events: auto;
+
+        .label__input.not ~ .label__placeholder {
+            --placeholder-x: 16px;
+            --placeholder-y: 14px;
+            --placeholder-size: 18px;
+            --placeholder-color: rgba(255, 255, 255, 0.63);
+
+            & ~ .label__clear {
+                --clear-opacity: 0;
+                --clear-events: none;
+            }
+        }
     }
 
     &--textarea {
@@ -1291,6 +1301,10 @@
             min-height: 77px;
             padding-top: 12px;
             resize: vertical;
+        }
+
+        &.error {
+            border: 1px solid #d61a1a;
         }
     }
 

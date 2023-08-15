@@ -150,6 +150,13 @@ button {
     }
 }
 
+.error[data-type="validator-error"] {
+    text-align: right;
+    font-size: 12px;
+    color: #d61a1a;
+    margin-top: 2px;
+}
+
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/home";
