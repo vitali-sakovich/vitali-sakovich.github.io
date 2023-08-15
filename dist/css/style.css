@@ -2710,6 +2710,30 @@ button {
   }
 }
 
+.clients-slider-btn {
+  height: 100%;
+  background-color: #fff;
+  --swiper-navigation-top-offset: 40%;
+  margin-top: 0 !important;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.clients-slider-btn:hover {
+  --icon-fill: #000;
+}
+.clients-slider-btn::after {
+  display: none;
+}
+.clients-slider-btn__icon {
+  fill: var(--icon-fill, #b6b6b6);
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+  width: 14px !important;
+  height: 40px !important;
+}
+
 .clients-slider__slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2728,9 +2752,9 @@ button {
   min-height: 40px;
 }
 .clients-slider__next {
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
+  -webkit-transform: translateY(-50%) scaleX(-1);
+  -ms-transform: translateY(-50%) scaleX(-1);
+  transform: translateY(-50%) scaleX(-1);
   --swiper-navigation-sides-offset: -6px;
 }
 .clients-slider__prev {
@@ -2744,25 +2768,6 @@ button {
 .clients-slider__img {
   max-width: 100%;
   height: auto;
-}
-
-.clients-slider-btn {
-  height: 100%;
-  background-color: #fff;
-  --swiper-navigation-top-offset: 40%;
-}
-.clients-slider-btn:hover {
-  --icon-fill: #000;
-}
-.clients-slider-btn::after {
-  display: none;
-}
-.clients-slider-btn__icon {
-  fill: var(--icon-fill, #b6b6b6);
-  -webkit-transition: fill 0.3s;
-  transition: fill 0.3s;
-  width: 14px !important;
-  height: 40px !important;
 }
 
 .section-form {
