@@ -139,6 +139,7 @@ button {
         padding-right: 5.4%;
         padding-left: 5.4%;
     }
+    background: hsl(201, 96%, 10%), url('../../Assets/Images/back1.jpg') center/cover no-repeat;
 }
 
 @import "blocks/header";
@@ -151,3 +152,4 @@ button {
 @import "blocks/labor-protection";
 @import "blocks/payment";
 @import "blocks/vacancy";
+@import "blocks/contacts";

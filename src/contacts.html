@@ -158,181 +158,27 @@
             </div>
             <h1 class="title title-block__title title--size-xl">Вакансия</h1>
         </div>
-        <main class="content content--vacancy">
-            <section class="vacancy">
-                <div class="vacancy__block">
-                    <div class="vacancy__head">
-                        <div class="vacancy__inner">
-                            <h6 class="vacancy__title">Водитель штабелера</h6>
-                            <p class="vacancy__city">г. Красноярск</p>
-                        </div>
-                        <a href="#" class="vacancy__btn"
-                            >Откликнуться на вакансию</a
-                        >
-                    </div>
-                    <div class="vacancy__desc">
-                        <div class="vacancy__box">
-                            <span class="vacancy__text">Обязанности</span>
-                            <ul class="vacancy__list">
-                                <li class="vacancy__item">
-                                    <p>Работа с штабелером</p>
-                                </li>
-                                <li class="vacancy__item">
-                                    <p>Подготовка отчетной документации</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="vacancy__box">
-                            <span class="vacancy__text">Условия</span>
-                            <ul class="vacancy__list">
-                                <li class="vacancy__item">
-                                    <p>Официальное трудоустройство</p>
-                                </li>
-                                <li class="vacancy__item">
-                                    <p>График 5/2 с 8 до 17</p>
-                                </li>
-                                <li class="vacancy__item">
-                                    <p>Столовая для сотрудников</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-form">
-                <div class="section-form__block">
-                    <form
-                        action="javascript:void(0);"
-                        method="post"
-                        id="vacancy"
-                        name="vacancy"
-                        class="form"
-                    >
-                        <label class="label form__label js-label">
-                            <input
-                                type="text"
-                                name="name"
-                                class="label__input js-input"
-                            />
-                            <span class="label__placeholder">Ваше имя *</span>
-                            <button
-                                type="button"
-                                title="Очистить поле"
-                                aria-label="Очистить поле"
-                                class="label__clear js-clear-input"
-                            >
-                                <svg width="16" height="16" class="label__icon">
-                                    <use
-                                        xlink:href="./img/svg-sprite.svg#clear"
-                                    ></use>
-                                </svg>
-                            </button>
-                        </label>
-                        <label class="label form__label js-label">
-                            <input
-                                type="text"
-                                name="phone"
-                                required
-                                class="label__input js-input js-input-mask"
-                            />
-                            <span class="label__placeholder"
-                                >Контактный номер *</span
-                            >
-                            <button
-                                type="button"
-                                title="Очистить поле"
-                                aria-label="Очистить поле"
-                                class="label__clear js-clear-input"
-                            >
-                                <svg width="16" height="16" class="label__icon">
-                                    <use
-                                        xlink:href="./img/svg-sprite.svg#clear"
-                                    ></use>
-                                </svg>
-                            </button>
-                        </label>
-                        <label class="label form__label js-label">
-                            <input
-                                type="email"
-                                name="email"
-                                class="label__input js-input js-input-mask"
-                            />
-                            <span class="label__placeholder">E-mail</span>
-                            <button
-                                type="button"
-                                title="Очистить поле"
-                                aria-label="Очистить поле"
-                                class="label__clear js-clear-input"
-                            >
-                                <svg width="16" height="16" class="label__icon">
-                                    <use
-                                        xlink:href="./img/svg-sprite.svg#clear"
-                                    ></use>
-                                </svg>
-                            </button>
-                        </label>
-                        <div class="form__files">
-                            <label class="file form__file">
-                                <input type="file" name="file" hidden />
-                                <span class="file__name">
-                                    Прикрепить файл
+        <main class="content content--contacts">
+            <section class="contacts">
+                <div class="contacts__row">
+                    <div class="contacts__box">
+                        <span class="contacts__name">Отдел продаж</span>
+                        <div class="contacts__inner">
+                            <div class="contact contacts__contact">
+                                <span class="contact__name">
                                     <svg
-                                        width="16"
-                                        height="20"
-                                        class="file__icon"
+                                        width="12"
+                                        height="7"
+                                        class="contact__icon"
                                     >
                                         <use
-                                            xlink:href="./img/svg-sprite.svg#attach"
+                                            xlink:href="./img/svg-sprite.svg#phone"
                                         ></use>
                                     </svg>
                                 </span>
-                            </label>
-                        </div>
-                        <p class="form__text">
-                            Файлы не больше 5 мб, doc, не больше 5 шт.
-                        </p>
-                        <div class="form__row">
-                            <button type="submit" class="form__btn">
-                                Отправить
-                            </button>
-                            <div class="checkbox form__checkbox">
-                                <label class="checkbox__label">
-                                    <input
-                                        type="checkbox"
-                                        name="ch"
-                                        checked="checked"
-                                        class="checkbox__input"
-                                    />
-                                    <span class="checkbox__data">
-                                        <svg
-                                            width="12"
-                                            height="10"
-                                            class="checkbox__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/svg-sprite.svg#chek"
-                                            ></use>
-                                        </svg>
-                                    </span>
-                                </label>
-                                <span class="checkbox__span"
-                                    >Я даю свое согласие на
-                                    <a href="#" class="checkbox__link"
-                                        >обработку персональных данных</a
-                                    >
-                                </span>
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="section-form__desc">
-                    <h2 class="section-form__title">
-                        Откликнуться на вакансию
-                    </h2>
-                    <p class="section-form__text">
-                        Оставьте заявку,<br />
-                        и мы свяжемся с вами
-                    </p>
+                    </div>
                 </div>
             </section>
         </main>
