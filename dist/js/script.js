@@ -100,15 +100,12 @@ var swiper = new Swiper(".clients-slider", {
                         (keyCode > 47 && keyCode < 58)
                     ) {
                         this.value = new_value;
-                        if (this.classList.contains("js-input-mask")) {
-                            this.classList.remove("not");
-                        }
+                        this.classList.remove("not");
                     }
                     if (event.type == "blur" && this.value.length < 5) {
+                        this.value = "";
                         this.classList.add("not");
                     }
-
-                    console.log(this.value);
                 }
 
                 input.addEventListener("input", mask, false);
