@@ -120,6 +120,11 @@ button {
             --form-block-margin-right: 57px;
         }
     }
+
+    &--contacts {
+        --form-title-width: 500px;
+        --form-text-width: 212px;
+    }
 }
 
 .error-text {
@@ -139,7 +144,6 @@ button {
         padding-right: 5.4%;
         padding-left: 5.4%;
     }
-    background: hsl(201, 96%, 10%), url('../../Assets/Images/back1.jpg') center/cover no-repeat;
 }
 
 @import "blocks/header";

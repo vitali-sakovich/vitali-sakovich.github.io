@@ -1,0 +1,129 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 16.7% 80px;
+
+    &__name {
+        display: flex;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    &__contact {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(2, 390px);
+        grid-column-gap: 140px;
+        margin-bottom: 90px;
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+
+    &__name {
+        display: flex;
+        align-items: center;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        min-width: 20px;
+        margin-right: 13px;
+        padding-bottom: 2px;
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        min-width: 130px;
+        margin-right: 40px;
+    }
+
+    &__link {
+        color: #fff;
+        font-weight: 600;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__icon {
+        fill: #486295;
+    }
+}
+
+.requisites {
+    &__container {
+        display: flex;
+    }
+
+    &__block {
+        margin-right: 40px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;  
+        margin-bottom: 30px;
+    }
+
+    &__name {
+        color: #FFF;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+    }
+}
+
+.requisites-item {
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    &__name {
+        min-width: 150px;
+        margin-right: 60px;
+    }
+
+    &__value {
+        font-weight: 600;
+    }
+}
+
+.map {
+    &__block {
+        width: 100%;
+        height: 440px;
+    }
+}
+
+#map-container {
+    height: 50%;
+}
+
+#editor {
+    width: 100%;
+    height: 50%;
+}
+
+
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-controls__toolbar {
+    display: none;
+}
