@@ -34,6 +34,7 @@ var swiper = new Swiper(".clients-slider", {
     function inputEvent(label) {
         const input = label.querySelector(".js-input");
         const clearBtn = label.querySelector(".js-clear-input");
+        const textarea = label.querySelector("textarea");
 
         function inputValueСheck() {
             if (input.value != "") {
@@ -55,6 +56,20 @@ var swiper = new Swiper(".clients-slider", {
             clearBtn.addEventListener("click", () => {
                 input.value = "";
                 inputValueСheck();
+
+                if (textarea) {
+                    textarea.style.height = 75 + "px";
+                }
+            });
+        }
+
+        if (textarea) {
+            textarea.style.height = textarea.setAttribute(
+                "style",
+                "height: " + textarea.scrollHeight + "px"
+            );
+            textarea.addEventListener("input", (e) => {
+                textarea.style.height = textarea.scrollHeight + "px";
             });
         }
 
@@ -63,19 +78,6 @@ var swiper = new Swiper(".clients-slider", {
 
     const label = document.querySelectorAll(".js-label");
     label.forEach(inputEvent);
-})();
-
-// автовысота textarea
-(function () {
-    document.querySelectorAll("textarea").forEach((el) => {
-        el.style.height = el.setAttribute(
-            "style",
-            "height: " + el.scrollHeight + "px"
-        );
-        el.addEventListener("input", (e) => {
-            el.style.height = el.scrollHeight + "px";
-        });
-    });
 })();
 
 (() => {
