@@ -2836,7 +2836,7 @@ button {
 }
 @media screen and (min-width: 599.99px) {
   .section-form--vacancies::before {
-    background-size: auto 180%;
+    background-size: auto 120%;
   }
 }
 @media screen and (min-width: 1501px) {
@@ -3007,6 +3007,11 @@ button {
   color: rgba(255, 255, 255, 0.63);
   cursor: pointer;
   padding-right: 25px;
+  width: 100%;
+}
+.file__name--file {
+  display: block;
+  word-wrap: break-word;
 }
 .file__icon {
   fill: #fff;
@@ -3014,6 +3019,7 @@ button {
 }
 .file__delete {
   position: absolute;
+  top: 4px;
   right: 0;
 }
 
@@ -3074,10 +3080,19 @@ button {
   border-color: rgba(255, 255, 255, 0.25);
 }
 .label__input--textarea {
-  height: 77px;
+  height: 75px;
   min-height: 77px;
   padding-top: 12px;
+  padding-bottom: 12px;
   resize: vertical;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.label__input--textarea::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 .label__input.error {
   border: 1px solid #d61a1a;

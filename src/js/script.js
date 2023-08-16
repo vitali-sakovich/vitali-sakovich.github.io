@@ -65,6 +65,19 @@ var swiper = new Swiper(".clients-slider", {
     label.forEach(inputEvent);
 })();
 
+// автовысота textarea
+(function () {
+    document.querySelectorAll("textarea").forEach((el) => {
+        el.style.height = el.setAttribute(
+            "style",
+            "height: " + el.scrollHeight + "px"
+        );
+        el.addEventListener("input", (e) => {
+            el.style.height = el.scrollHeight + "px";
+        });
+    });
+})();
+
 (() => {
     window.addEventListener("DOMContentLoaded", function () {
         [].forEach.call(
@@ -339,9 +352,9 @@ document.addEventListener("click", function (e) {
 /* Add file for form vacancy */
 (function () {
     window.onload = function () {
-        if (document.forms.vacancy != null) {
-            const divFiles =
-                document.forms.vacancy.querySelector(".form__files"); // "vacancy" it is name form
+        const form = document.querySelector("#vacancy");
+        if (form != null) {
+            const divFiles = form.querySelector(".form__files");
 
             if (divFiles != null) {
                 /!* Events form *!/;
@@ -366,6 +379,7 @@ document.addEventListener("click", function (e) {
                             let btnDelete = label.querySelector(".file-delete");
                             let countFormFile =
                                 divFiles.querySelectorAll(".file").length;
+                            span.classList.add("file__name--file");
                             if (countFormFile > 5) return;
 
                             /!* Update text *!/;
