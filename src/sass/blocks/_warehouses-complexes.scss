@@ -1,0 +1,226 @@
+.warehouses-desc {
+    $self: &;
+    background-color: #222D6E;
+
+    &__head {
+        padding: 75px 20px 75px 8.6vw;
+
+        #{$self}--wms & {
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 457px 318px;  
+        background-color: #29357f;
+
+        #{$self}--work & {
+            grid-template-rows: 457px 173px;  
+        }
+    }
+
+    &__box {
+        display: grid;
+        padding: 50px;
+
+        &:nth-child(1) {
+            grid-area: 1/1/1/3;
+
+            #{$self}--work & {
+                grid-area: 1/1/1/2;
+
+                #{$self}__text {
+                    max-width: 180px;
+                }
+            }
+        }
+
+        #{$self}--ring &:nth-child(6) {
+            grid-area: 2/3/3/5;
+        }
+
+        #{$self}--work &:nth-child(3) {
+            grid-area: 1/3/1/5;
+            padding: 0;
+
+            .warehouses-desc__label {
+                width: 211px;
+            }
+        }
+
+
+        #{$self}--work &:nth-child(4) {
+            grid-area: 2/1/2/3;
+        }
+
+        #{$self}--work &:nth-child(5) {
+            grid-area: 2/3/2/5;
+        }
+
+        #{$self}--work &:nth-child(4),
+        #{$self}--work &:nth-child(5) {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            #{$self}__text {
+                align-self: center;
+            }
+
+            #{$self}__inner {
+                align-self: center;
+                margin-right: 45px;
+            }
+        }
+
+        #{$self}--wms &:first-child,
+        #{$self}--ring &:first-child {
+            padding: 0;
+        }
+
+        #{$self}--wms &:nth-child(3),
+        #{$self}--wms &:nth-child(6),
+        #{$self}--ring &:nth-child(3),
+        #{$self}--ring &:nth-child(4),
+        #{$self}--ring &:nth-child(6),
+        #{$self}--work &:nth-child(2),
+        #{$self}--work &:nth-child(5) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        #{$self}--wms &:nth-child(5),
+        #{$self}--work &:nth-child(4) {
+            background-color: rgba(255, 255, 255, 0.1);
+
+            #{$self}__text {
+                max-width: 100%;
+            }
+        }
+
+        #{$self}--wms &:nth-child(4),
+        #{$self}--ring &:nth-child(4),
+        #{$self}--work &:nth-child(1),
+        #{$self}--work &:nth-child(4) {
+            padding-left: 8.6vw;
+        }
+
+        #{$self}--ring &:nth-child(2) {
+            #{$self}__text {
+                max-width: 235px;
+            }
+        }
+
+        #{$self}--ring &:nth-child(4) {
+            #{$self}__text {
+                max-width: 250px;
+            }
+        }
+
+        #{$self}--ring &:nth-child(5) {
+            display: block;
+
+            #{$self}__text {
+                max-width: 210px;
+            }
+        }
+
+        #{$self}--ring &:nth-child(6) {
+            #{$self}__text {
+                font-size: 20px;
+                max-width: 450px;
+            }
+        }
+
+        #{$self}--work &:nth-child(2) {
+            #{$self}__text {
+                max-width: 150px;
+            }
+        }
+    }
+
+    &__picture {
+        display: flex;
+        overflow: hidden;
+        grid-area: -1/1;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__label {
+        display: flex;
+        grid-area: -1/1;
+        justify-self: self-end;
+        align-self: self-start;
+        padding: 12px 20px 16px 22px;
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 174px;
+        background-color: #29357F;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+
+        #{$self}--work & {
+            justify-self: self-start;
+            margin-top: 34px;
+            margin-left: 35px;
+            padding: 13px 15px 15px 19px;
+            width: 211px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-self: self-start;
+        color: #fff;
+        line-height: 24px; 
+        max-width: 196px;
+
+       &--size-md {
+        font-size: 20px;
+        line-height: normal;
+        max-width: 250px;
+       }
+
+       &--weight-600 {
+        font-weight: 600;
+       }
+    }
+
+    &__icon {
+        fill: #E8E9F1;
+        opacity: 0.375;
+    }
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        align-self: self-end;
+        min-height: 80px;
+    }
+
+    &__number {
+        display: flex;
+        align-self: self-start;
+        font-size: 54px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+}

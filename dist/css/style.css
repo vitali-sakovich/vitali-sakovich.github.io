@@ -5698,3 +5698,192 @@ button {
 .ymaps-2-1-79-controls__toolbar {
   display: none;
 }
+
+.warehouses-desc {
+  background-color: #222D6E;
+}
+.warehouses-desc__head {
+  padding: 75px 20px 75px 8.6vw;
+}
+.warehouses-desc--wms .warehouses-desc__head {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.warehouses-desc__title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+}
+.warehouses-desc__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 457px 318px;
+  background-color: #29357f;
+}
+.warehouses-desc--work .warehouses-desc__container {
+  grid-template-rows: 457px 173px;
+}
+.warehouses-desc__box {
+  display: grid;
+  padding: 50px;
+}
+.warehouses-desc__box:nth-child(1) {
+  grid-area: 1/1/1/3;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(1) {
+  grid-area: 1/1/1/2;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(1) .warehouses-desc__text {
+  max-width: 180px;
+}
+.warehouses-desc--ring .warehouses-desc__box:nth-child(6) {
+  grid-area: 2/3/3/5;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(3) {
+  grid-area: 1/3/1/5;
+  padding: 0;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(3) .warehouses-desc__label {
+  width: 211px;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(4) {
+  grid-area: 2/1/2/3;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(5) {
+  grid-area: 2/3/2/5;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(4), .warehouses-desc--work .warehouses-desc__box:nth-child(5) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(4) .warehouses-desc__text, .warehouses-desc--work .warehouses-desc__box:nth-child(5) .warehouses-desc__text {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(4) .warehouses-desc__inner, .warehouses-desc--work .warehouses-desc__box:nth-child(5) .warehouses-desc__inner {
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-right: 45px;
+}
+.warehouses-desc--wms .warehouses-desc__box:first-child, .warehouses-desc--ring .warehouses-desc__box:first-child {
+  padding: 0;
+}
+.warehouses-desc--wms .warehouses-desc__box:nth-child(3), .warehouses-desc--wms .warehouses-desc__box:nth-child(6), .warehouses-desc--ring .warehouses-desc__box:nth-child(3), .warehouses-desc--ring .warehouses-desc__box:nth-child(4), .warehouses-desc--ring .warehouses-desc__box:nth-child(6), .warehouses-desc--work .warehouses-desc__box:nth-child(2), .warehouses-desc--work .warehouses-desc__box:nth-child(5) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.warehouses-desc--wms .warehouses-desc__box:nth-child(5), .warehouses-desc--work .warehouses-desc__box:nth-child(4) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.warehouses-desc--wms .warehouses-desc__box:nth-child(5) .warehouses-desc__text, .warehouses-desc--work .warehouses-desc__box:nth-child(4) .warehouses-desc__text {
+  max-width: 100%;
+}
+.warehouses-desc--wms .warehouses-desc__box:nth-child(4), .warehouses-desc--ring .warehouses-desc__box:nth-child(4), .warehouses-desc--work .warehouses-desc__box:nth-child(1), .warehouses-desc--work .warehouses-desc__box:nth-child(4) {
+  padding-left: 8.6vw;
+}
+.warehouses-desc--ring .warehouses-desc__box:nth-child(2) .warehouses-desc__text {
+  max-width: 235px;
+}
+.warehouses-desc--ring .warehouses-desc__box:nth-child(4) .warehouses-desc__text {
+  max-width: 250px;
+}
+.warehouses-desc--ring .warehouses-desc__box:nth-child(5) {
+  display: block;
+}
+.warehouses-desc--ring .warehouses-desc__box:nth-child(5) .warehouses-desc__text {
+  max-width: 210px;
+}
+.warehouses-desc--ring .warehouses-desc__box:nth-child(6) .warehouses-desc__text {
+  font-size: 20px;
+  max-width: 450px;
+}
+.warehouses-desc--work .warehouses-desc__box:nth-child(2) .warehouses-desc__text {
+  max-width: 150px;
+}
+.warehouses-desc__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  grid-area: -1/1;
+  width: 100%;
+  height: 100%;
+}
+.warehouses-desc__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.warehouses-desc__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-area: -1/1;
+  justify-self: self-end;
+  align-self: self-start;
+  padding: 12px 20px 16px 22px;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 174px;
+  background-color: #29357F;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.warehouses-desc--work .warehouses-desc__label {
+  justify-self: self-start;
+  margin-top: 34px;
+  margin-left: 35px;
+  padding: 13px 15px 15px 19px;
+  width: 211px;
+}
+.warehouses-desc__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: self-start;
+  align-self: self-start;
+  color: #fff;
+  line-height: 24px;
+  max-width: 196px;
+}
+.warehouses-desc__text--size-md {
+  font-size: 20px;
+  line-height: normal;
+  max-width: 250px;
+}
+.warehouses-desc__text--weight-600 {
+  font-weight: 600;
+}
+.warehouses-desc__icon {
+  fill: #E8E9F1;
+  opacity: 0.375;
+}
+.warehouses-desc__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-item-align: self-end;
+  align-self: self-end;
+  min-height: 80px;
+}
+.warehouses-desc__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: self-start;
+  align-self: self-start;
+  font-size: 54px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
