@@ -165,25 +165,6 @@
             background: url("../img/delivery-geography-map.jpg") center
                 top/cover no-repeat;
         }
-
-        &::before {
-            content: "";
-            --size-cloud: #{em(700, $fz)};
-            grid-area: -1/1;
-            width: 100%;
-            height: 70%;
-            background: url("../img/cloud.png") 0% / var(--size-cloud) 100%
-                repeat-x;
-            will-change: background-position;
-            pointer-events: none;
-            user-select: none;
-            z-index: 1;
-            opacity: 0.7;
-
-            @media (prefers-reduced-motion: no-preference) {
-                animation: moving 100s linear infinite both;
-            }
-        }
     }
 
     &__city {
@@ -270,6 +251,23 @@
             margin-right: em(950, $fz);
             text-align: right;
         }
+    }
+}
+
+.cloud {
+    --size-cloud: #{em(700, $fz)};
+    grid-area: -1/1;
+    width: 100%;
+    height: 70%;
+    background: url("../img/cloud.png") 0% / var(--size-cloud) 100% repeat-x;
+    will-change: background-position;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+    opacity: 0.7;
+
+    @media (prefers-reduced-motion: no-preference) {
+        animation: moving 100s linear infinite both;
     }
 }
 
@@ -1313,7 +1311,7 @@
             -ms-overflow-style: none;
             overflow: -moz-scrollbars-none;
 
-            &::-webkit-scrollbar { 
+            &::-webkit-scrollbar {
                 display: none;
                 width: 0;
                 height: 0;
