@@ -178,17 +178,14 @@ function openModal(modal) {
 
 // закрытие модалок
 function modal(modal) {
-    const overlay = modal.querySelector(".popup__overlay");
-    const closeModal = modal.querySelectorAll(".popup__close");
+    const closeModal = modal.querySelectorAll(".js-popup-close");
 
-    if (!overlay) {
+    if (!closeModal) {
         return;
     }
     closeModal.forEach(function (closeModalItem) {
         closeModalItem.addEventListener("click", modalHidden);
     });
-
-    overlay.addEventListener("click", modalHidden);
 
     function modalHidden() {
         modal.classList.remove("popup--show");
