@@ -496,6 +496,7 @@
 .title-block {
     padding-top: 26px;
     padding-left: 16.7%;
+    padding-right: 60px;
 
     @media screen and (max-width: 1500px) {
         padding-left: 8.3%;
@@ -513,7 +514,6 @@
     &__title {
         margin-top: 0;
         margin-bottom: 0;
-        padding-right: 60px;
         max-width: 950px;
     }
 }
