@@ -2930,6 +2930,11 @@ button {
   background-color: #6f7dd6;
   color: #fff;
   margin-right: 18px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.form__btn:hover {
+  opacity: 0.8;
 }
 @media screen and (max-width: 599.98px) {
   .form__btn {
