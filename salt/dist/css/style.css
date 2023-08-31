@@ -417,3 +417,113 @@ main {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
 }
+
+a {
+  text-decoration: none;
+}
+
+.services {
+  display: grid;
+  grid-row-gap: 50px;
+  padding-right: 320px;
+  padding-left: 8.3%;
+}
+
+.services-block {
+  display: grid;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  grid-column-gap: 60px;
+  border-radius: 13px;
+  border: 1px solid #4B91D8;
+  padding: 75px;
+  max-width: 1600px;
+}
+@media screen and (min-width: 1600px) {
+  .services-block {
+    grid-template-columns: 1fr 25%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .services-block:first-child {
+    --area-types: 2/2/5/3;
+  }
+}
+.services-block__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+@media screen and (min-width: 1600px) {
+  .services-block__title {
+    grid-column: 1/2;
+  }
+}
+.services-block__title:hover {
+  opacity: 0.7;
+}
+.services-block__icon {
+  stroke: #fff;
+  margin-left: 8px;
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px);
+}
+.services-block__text {
+  line-height: 1.7;
+  max-width: 730px;
+}
+@media screen and (min-width: 1600px) {
+  .services-block__text {
+    grid-column: 1/2;
+  }
+}
+@media screen and (max-width: 1599.98px) {
+  .services-block__text {
+    margin-bottom: 60px;
+  }
+}
+.services-block__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+  grid-gap: 32px;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1600px) {
+  .services-block__images {
+    grid-column: 1/2;
+  }
+}
+.services-block__img {
+  width: 100%;
+  height: auto;
+}
+.services-block__types {
+  display: grid;
+  grid-row-gap: 30px;
+}
+@media screen and (min-width: 1600px) {
+  .services-block__types {
+    grid-area: var(--area-types, 1/2/5/3);
+  }
+}
+.services-block__type {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.services-block__type:hover {
+  opacity: 0.7;
+}

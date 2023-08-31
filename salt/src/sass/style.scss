@@ -53,6 +53,11 @@ main {
     flex: 1 0 auto;
 }
 
+a {
+    text-decoration: none
+}
+
 
 @import "blocks/header";
 @import "blocks/footer";
+@import "blocks/services";
