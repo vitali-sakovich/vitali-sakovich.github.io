@@ -147,9 +147,134 @@
                     </div>
                 </div>
             </section>
+            <section class="section-form">
+                <h2 class="section-form__title">Обсудить проект</h2>
+                <div class="section-form__container">
+                    <form
+                        data-parsley-validate
+                        method="post"
+                        action="javascript:void(0);"
+                        id="form"
+                        name="index"
+                        class="form"
+                    >
+                        <input name="action" value="" hidden="" />
+                        <label class="label form__label">
+                            <input
+                                type="text"
+                                name="name"
+                                data-parsley-required-message="Введите ваше имя"
+                                class="input"
+                            />
+                            <span class="placeholder">Ваше имя</span>
+                            <span class="clear-input"
+                                ><img src="../img/clear-input.svg" alt=""
+                            /></span>
+                        </label>
+                        <label class="label form__label">
+                            <input
+                                type="text"
+                                name="phone"
+                                data-parsley-required-message="Введите ваш номер телефона"
+                                data-parsley-required="true"
+                                data-parsley-trigger="change"
+                                class="input phone_validate"
+                            />
+                            <span class="placeholder">Телефон *</span>
+                            <span class="clear-input"
+                                ><img src="../img/clear-input.svg" alt=""
+                            /></span>
+                        </label>
+                        <label class="label form__label">
+                            <input
+                                type="text"
+                                data-parsley-required-message="Введите название компания"
+                                class="input"
+                            />
+                            <span class="placeholder">Компания</span>
+                            <span class="clear-input"
+                                ><img src="../img/clear-input.svg" alt=""
+                            /></span>
+                        </label>
+                        <label class="label form__label">
+                            <input
+                                type="text"
+                                data-parsley-required-message="Введите ваш сайт"
+                                class="input"
+                            />
+                            <span class="placeholder"
+                                >Ваш сайт (если есть)</span
+                            >
+                            <span class="clear-input"
+                                ><img src="../img/clear-input.svg" alt=""
+                            /></span>
+                        </label>
+                        <label class="label-textarea form__label">
+                            <textarea
+                                name="text"
+                                class="textarea auto"
+                                style="height: 87px"
+                            ></textarea>
+                            <span class="placeholder">Сообщение</span>
+                            <span class="clear-input"
+                                ><img src="../img/clear-input.svg" alt=""
+                            /></span>
+                        </label>
+                        <div class="btn-form__box">
+                            <div>
+                                <input
+                                    name="file"
+                                    type="file"
+                                    id="file"
+                                    class="input-file"
+                                    data-multiple-caption="{count} files selected"
+                                    multiple="multiple"
+                                />
+                                <label for="file" class="label-file">
+                                    <span class="file-name">
+                                        Прикрепить файл
+                                        <img
+                                            src="../img/attach.svg"
+                                            alt=""
+                                            class="attach"
+                                        />
+                                    </span>
+                                </label>
+                            </div>
+                            <button class="btn-form">Отправить</button>
+                        </div>
+                        <div class="chek__label">
+                            <label class="check-inner">
+                                <input
+                                    type="checkbox"
+                                    name="ch"
+                                    data-parsley-required="true"
+                                    required=""
+                                    data-parsley-multiple="ch"
+                                    data-parsley-required-message="Примите согласие на обработку персональных данных"
+                                    checked="checked"
+                                    class="check-data"
+                                />
+                                <span class="checkbox-data"></span>
+                            </label>
+                            <span class="data-span"
+                                >Я даю свое
+                                <span class="data-span__link btn-agree"
+                                    >согласие на обработку персональных
+                                    данных</span
+                                >
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </main>
         <footer class="footer"></footer>
 
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <script src="./js/parsley.js"></script>
+        <script src="./js/jquery.maskedinput.min.js"></script>
+        <script src="./js/form.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>
