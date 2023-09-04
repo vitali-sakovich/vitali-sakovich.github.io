@@ -422,6 +422,115 @@ a {
   text-decoration: none;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 57px 3.5% 85px 8.3%;
+}
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header__btn {
+  padding: 8px 14px;
+  border-radius: 20.5px;
+  background-color: #00346f;
+  line-height: 24px;
+  margin-left: 42px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.header__btn:hover {
+  opacity: 0.7;
+}
+.header__sity {
+  margin-left: 59px;
+}
+.header__link {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.header__link:hover {
+  opacity: 0.7;
+}
+
+.title-block {
+  padding-left: 8.3%;
+  margin-bottom: 40px;
+}
+.title-block__breadcrumb {
+  margin-bottom: 50px;
+}
+
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+}
+.breadcrumb__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.breadcrumb__link:first-child {
+  position: relative;
+}
+.breadcrumb__link:first-child::before {
+  content: url("../img/arrow-breadcrumb.svg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 18px;
+}
+
+.title {
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 280px 8.3% 100px;
+}
+.footer__copyright, .footer__link {
+  opacity: 0.27;
+  font-size: 14px;
+}
+.footer__link {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.footer__link:hover {
+  opacity: 0.6;
+}
+.footer__link:not(:last-child) {
+  margin-right: 67px;
+}
+
 .services {
   display: grid;
   grid-row-gap: 50px;
@@ -436,7 +545,7 @@ a {
   align-items: start;
   grid-column-gap: 60px;
   border-radius: 13px;
-  border: 1px solid #4B91D8;
+  border: 1px solid #4b91d8;
   padding: 75px;
   max-width: 1600px;
 }
@@ -539,6 +648,54 @@ a {
   font-weight: 500;
   margin-bottom: 64px;
 }
+.section-form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 65%;
+  max-width: 1150px;
+}
+.section-form__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.section-form__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.section-form__phone {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.section-form__mail {
+  font-size: 20px;
+  color: #2993de;
+}
+.section-form__address {
+  font-size: 16px;
+  max-width: 230px;
+}
+.section-form__address span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
 
 .form {
   position: relative;
@@ -600,7 +757,9 @@ a {
 }
 
 .clear-input {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -617,12 +776,18 @@ a {
   z-index: 10;
   width: 25px;
   height: 25px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.clear-input__icon {
+  fill: #fff;
 }
 
 .is-active ~ .clear-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .label-textarea {
@@ -652,6 +817,10 @@ a {
   display: flex;
   position: relative;
   padding-right: 40px;
+}
+.label-file__icon {
+  fill: rgba(255, 255, 255, 0.5);
+  margin-right: 13px;
 }
 
 .file-name {
@@ -731,7 +900,15 @@ a {
 }
 
 .checkbox-data {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 16px;
   min-width: 16px;
   height: 16px;
@@ -743,23 +920,15 @@ a {
   cursor: pointer;
 }
 
-.checkbox-data::before {
-  content: url(../img/path.svg);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.checkbox-data__icon {
+  fill: rgba(255, 255, 255, 0.5);
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-.check-data:checked ~ .checkbox-data::before {
+.check-data:checked ~ .checkbox-data .checkbox-data__icon {
   opacity: 1;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
 }
 
 .chek__label {

@@ -11,7 +11,7 @@
     align-items: start;
     grid-column-gap: 60px;
     border-radius: 13px;
-    border: 1px solid #4B91D8;
+    border: 1px solid #4b91d8;
     padding: 75px;
     max-width: 1600px;
 
@@ -23,7 +23,6 @@
         @media screen and (min-width: 1600px) {
             --area-types: 2/2/5/3;
         }
-      
     }
 
     &__title {
@@ -63,7 +62,7 @@
 
     &__images {
         display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(auto, 320px));
+        grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
         grid-gap: 32px;
         margin-top: 60px;
 

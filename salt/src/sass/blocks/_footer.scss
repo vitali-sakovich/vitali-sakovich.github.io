@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 280px 8.3% 100px;
+
+    &__copyright,
+    &__link {
+        opacity: 0.27;
+        font-size: 14px;
+    }
+
+    &__link {
+        transition: opacity 0.3s;
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:not(:last-child) {
+            margin-right: 67px;
+        }
+    }
+}

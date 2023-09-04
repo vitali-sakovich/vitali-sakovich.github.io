@@ -14,7 +14,48 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
-        <header class="header"></header>
+        <header class="header">
+            <a href="/" class="header-logo header__logo">
+                <img
+                    src="./img/salt-logo.svg"
+                    width="113"
+                    height="31"
+                    alt="Логотип"
+                    class="header-logo__img"
+                />
+            </a>
+            <div class="burger header__burger">
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+            </div>
+            <div class="header__contacts">
+                <a href="tel:+73912699961" class="header__link">
+                    <span>+7 (391) 269-99-61</span>
+                    <img
+                        src="/bitrix/templates/newsalt/img/phone-icon.svg"
+                        alt=""
+                    />
+                </a>
+                <span class="header__sity"> Красноярск </span>
+                <a
+                    href="javascript:void(0)"
+                    data-drop-toggle="dropFeedback2"
+                    class="header__btn"
+                    >Связаться</a
+                >
+            </div>
+        </header>
+        <div class="title-block">
+            <ul class="breadcrumb title-block__breadcrumb">
+                <li class="breadcrumb__item">
+                    <a href="/services/" class="breadcrumb__link">
+                        <span>Главная</span>
+                    </a>
+                </li>
+            </ul>
+            <h1 class="title">Услуги</h1>
+        </div>
         <main class="content">
             <section class="services">
                 <div class="services-block services__block">
@@ -150,6 +191,24 @@
             <section class="section-form">
                 <h2 class="section-form__title">Обсудить проект</h2>
                 <div class="section-form__container">
+                    <div class="section-form__info">
+                        <div class="section-form__contacts">
+                            <a
+                                href="tel: +73912699961"
+                                class="section-form__phone"
+                                >+7 (391) 269-99-61</a
+                            >
+                            <a
+                                href="mailto: info@websalt.ru"
+                                class="section-form__mail"
+                                >info@websalt.ru</a
+                            >
+                        </div>
+                        <div class="section-form__address">
+                            <span>Красноярск</span>
+                            660093, ул. Вавилова, д.2ж, оф. 6-04
+                        </div>
+                    </div>
                     <form
                         data-parsley-validate
                         method="post"
@@ -164,12 +223,21 @@
                                 type="text"
                                 name="name"
                                 data-parsley-required-message="Введите ваше имя"
+                                required
                                 class="input"
                             />
-                            <span class="placeholder">Ваше имя</span>
-                            <span class="clear-input"
-                                ><img src="../img/clear-input.svg" alt=""
-                            /></span>
+                            <span class="placeholder">Ваше имя *</span>
+                            <span class="clear-input">
+                                <svg
+                                    width="16"
+                                    height="17"
+                                    class="clear-input__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/svg-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </span>
                         </label>
                         <label class="label form__label">
                             <input
@@ -181,9 +249,17 @@
                                 class="input phone_validate"
                             />
                             <span class="placeholder">Телефон *</span>
-                            <span class="clear-input"
-                                ><img src="../img/clear-input.svg" alt=""
-                            /></span>
+                            <span class="clear-input">
+                                <svg
+                                    width="16"
+                                    height="17"
+                                    class="clear-input__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/svg-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </span>
                         </label>
                         <label class="label form__label">
                             <input
@@ -192,9 +268,17 @@
                                 class="input"
                             />
                             <span class="placeholder">Компания</span>
-                            <span class="clear-input"
-                                ><img src="../img/clear-input.svg" alt=""
-                            /></span>
+                            <span class="clear-input">
+                                <svg
+                                    width="16"
+                                    height="17"
+                                    class="clear-input__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/svg-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </span>
                         </label>
                         <label class="label form__label">
                             <input
@@ -205,20 +289,35 @@
                             <span class="placeholder"
                                 >Ваш сайт (если есть)</span
                             >
-                            <span class="clear-input"
-                                ><img src="../img/clear-input.svg" alt=""
-                            /></span>
+                            <span class="clear-input">
+                                <svg
+                                    width="16"
+                                    height="17"
+                                    class="clear-input__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/svg-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </span>
                         </label>
                         <label class="label-textarea form__label">
                             <textarea
                                 name="text"
                                 class="textarea auto"
-                                style="height: 87px"
                             ></textarea>
                             <span class="placeholder">Сообщение</span>
-                            <span class="clear-input"
-                                ><img src="../img/clear-input.svg" alt=""
-                            /></span>
+                            <span class="clear-input">
+                                <svg
+                                    width="16"
+                                    height="17"
+                                    class="clear-input__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/svg-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </span>
                         </label>
                         <div class="btn-form__box">
                             <div>
@@ -233,11 +332,15 @@
                                 <label for="file" class="label-file">
                                     <span class="file-name">
                                         Прикрепить файл
-                                        <img
-                                            src="../img/attach.svg"
-                                            alt=""
-                                            class="attach"
-                                        />
+                                        <svg
+                                            width="16"
+                                            height="20"
+                                            class="label-file__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/svg-sprite.svg#attach"
+                                            ></use>
+                                        </svg>
                                     </span>
                                 </label>
                             </div>
@@ -255,7 +358,17 @@
                                     checked="checked"
                                     class="check-data"
                                 />
-                                <span class="checkbox-data"></span>
+                                <span class="checkbox-data">
+                                    <svg
+                                        width="12"
+                                        height="10"
+                                        class="checkbox-data__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/svg-sprite.svg#chek"
+                                        ></use>
+                                    </svg>
+                                </span>
                             </label>
                             <span class="data-span"
                                 >Я даю свое
@@ -269,7 +382,17 @@
                 </div>
             </section>
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <p class="footer__copyright">
+                Веб-студия Соль. Создание и продвижение сайтов
+            </p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link"
+                    >Согласие на обработку персональных данных</a
+                >
+            </div>
+        </footer>
 
         <script src="./js/jquery-3.4.1.min.js"></script>
         <script src="./js/parsley.js"></script>
