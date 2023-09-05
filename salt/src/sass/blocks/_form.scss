@@ -8,6 +8,11 @@
         font-size: 42px;
         font-weight: 500;
         margin-bottom: 64px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 30px;
+            margin-bottom: 80px;
+        }
     }
 
     &__container {
@@ -15,12 +20,17 @@
         justify-content: space-between;
         width: 65%;
         max-width: 1150px;
+
+        @media screen and (max-width: 1599.98px) {
+            width: 62%;
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-bottom: 45px;
     }
 
     &__contacts {
@@ -53,6 +63,10 @@
 .form {
     position: relative;
     width: 528px;
+
+    @media screen and (max-width: 1599.98px) {
+        width: 417px;
+    }
 
     &__label {
         margin-bottom: 24px;
@@ -256,6 +270,11 @@
     position: absolute;
     right: -267px;
     bottom: 45px;
+
+    @media screen and (max-width: 1599.98px) {
+        right: -250px;
+        bottom: 46px;
+    }
 }
 
 .check-data {
