@@ -4,6 +4,20 @@
     padding-left: 8.3%;
     width: 100%;
 
+    @media screen and (max-width: 1199.98px) {
+        padding-top: 140px;
+        padding-right: 17%;
+    }
+    @media screen and (max-width: 849.98px) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @media screen and (max-width: 649.98px) {
+        padding-top: 100px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
     &__title {
         font-size: 42px;
         font-weight: 500;
@@ -12,6 +26,10 @@
         @media screen and (max-width: 1599.98px) {
             font-size: 30px;
             margin-bottom: 80px;
+        }
+        @media screen and (max-width: 649.98px) {
+            font-size: 30px;
+            margin-bottom: 62px;
         }
     }
 
@@ -24,6 +42,13 @@
         @media screen and (max-width: 1599.98px) {
             width: 62%;
         }
+        @media screen and (max-width: 1199.98px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 649.98px) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
     }
 
     &__info {
@@ -31,31 +56,65 @@
         flex-direction: column;
         justify-content: space-between;
         padding-bottom: 45px;
+
+        @media screen and (max-width: 1199.98px) {
+            justify-content: flex-start;
+        }
+        @media screen and (max-width: 649.98px) {
+            flex-direction: row;
+            padding-bottom: 40px;
+        }
     }
 
     &__contacts {
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: 1599.98px) {
+            margin-bottom: 38px;
+        }
+        @media screen and (max-width: 649.98px) {
+            justify-content: space-between;
+            margin-bottom: 0;
+            margin-right: 37px;
+            min-width: 140px;
+        }
     }
 
     &__phone {
         font-size: 20px;
         margin-bottom: 16px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 16px;
+        }
     }
 
     &__mail {
         font-size: 20px;
         color: #2993de;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 16px;
+        }
     }
 
     &__address {
         font-size: 16px;
         max-width: 230px;
 
+        @media screen and (max-width: 1599.98px) {
+            font-size: 14px;
+        }
+
         span {
             display: block;
             font-size: 20px;
             margin-bottom: 16px;
+
+            @media screen and (max-width: 1599.98px) {
+                font-size: 16px;
+            }
         }
     }
 }
@@ -66,6 +125,9 @@
 
     @media screen and (max-width: 1599.98px) {
         width: 417px;
+    }
+    @media screen and (max-width: 649.98px) {
+        width: 93%;
     }
 
     &__label {
@@ -245,6 +307,14 @@
     transition: box-shadow 0.3s;
     transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
     cursor: pointer;
+
+    @media screen and (max-width: 1199.98px) {
+        margin-top: 40px;
+    }
+    @media screen and (max-width: 649.98px) {
+        width: 100%;
+        text-align: left;
+    }
 }
 
 .btn-form:hover {
@@ -274,6 +344,9 @@
     @media screen and (max-width: 1599.98px) {
         right: -250px;
         bottom: 46px;
+    }
+    @media screen and (max-width: 1199.98px) {
+        position: static;
     }
 }
 
@@ -364,31 +437,4 @@
 
 .parsley-required {
     color: #ff0909;
-}
-
-@media (max-width: 950px) {
-    .btn-form__box {
-        position: static;
-    }
-    .btn-form__box {
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 700.98px) {
-    .section-form {
-        padding-top: 49px;
-    }
-}
-
-@media (max-width: 599.98px) {
-    .form {
-        width: 100%;
-    }
-}
-
-@media (max-width: 499.98px) {
-    .btn-form {
-        margin-top: 33px;
-    }
 }

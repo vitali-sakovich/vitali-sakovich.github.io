@@ -54,11 +54,65 @@ main {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
 }
 
+.title {
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &--size-xl {
+        font-size: 48px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 36px;
+        }
+        @media screen and (max-width: 1199.98px) {
+            font-size: 28px;
+        }
+        @media screen and (max-width: 649.98px) {
+            font-size: 24px;
+        }
+    }
+
+    &--size-lg {
+        font-size: 42px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 36px;
+        }
+
+        @media screen and (max-width: 649.98px) {
+            font-size: 24px;
+        }
+    }
+
+    &--size-md {
+        font-size: 32px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 26px;
+        }
+        @media screen and (max-width: 649.98px) {
+            font-size: 24px;
+        }
+    }
+
+    &--size-sm {
+        font-size: 24px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 649.98px) {
+            font-size: 16px;
+        }
+    }
+}
 
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/services";
 @import "blocks/form";
+@import "blocks/case";

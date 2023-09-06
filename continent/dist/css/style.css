@@ -3368,6 +3368,7 @@ button {
   height: 0;
   -webkit-animation: showsBrend 0.3s forwards;
   animation: showsBrend 0.3s forwards;
+  will-change: height;
 }
 @media screen and (max-width: 1500px) {
   .products__subbrend {
@@ -5454,6 +5455,12 @@ button {
   opacity: 0.7;
 }
 
+@media screen and (max-width: 599.98px) {
+  .smartfilter {
+    width: 100%;
+  }
+}
+
 .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5669,7 +5676,7 @@ button {
   }
 }
 .requisites-item__name {
-  min-width: 150px;
+  min-width: 166px;
   margin-right: 60px;
 }
 @media screen and (max-width: 899.98px) {
@@ -6943,4 +6950,54 @@ button {
   -webkit-transform: translate(6.75em, 2.8125em);
   -ms-transform: translate(6.75em, 2.8125em);
   transform: translate(6.75em, 2.8125em);
+}
+
+.policies {
+  padding-top: 50px;
+  padding-right: 16.7%;
+  padding-left: 16.7%;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1500px) {
+  .policies {
+    padding-top: 40px;
+    padding-right: 8.3%;
+    padding-left: 8.3%;
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .policies {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .policies {
+    padding-top: 20px;
+    padding-right: 5.4%;
+    padding-left: 5.4%;
+  }
+}
+.policies a {
+  color: #fff;
+  text-decoration: underline;
+}
+.policies a:hover {
+  text-decoration: none;
+}
+.policies p {
+  margin-bottom: 20px;
+}
+.policies ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.policies li {
+  margin-bottom: 15px;
+}
+.policies h3 {
+  margin-bottom: 10px;
 }

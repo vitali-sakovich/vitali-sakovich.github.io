@@ -12,24 +12,22 @@
     </head>
     <body>
         <header class="header">
-            <a href="/" class="header-logo header__logo">
+            <a href="/" class="header__logo">
                 <img src="./img/salt-logo.svg" width="113" height="31" alt="Логотип" class="header-logo__img">
             </a>
-            <div class="burger header__burger">
+            <div class="burger header__burger js-open-menu">
                 <div class="burger__item"></div>
                 <div class="burger__item"></div>
                 <div class="burger__item"></div>
             </div>
-            <div class="header__contacts">
-                <a href="tel:+73912699961" class="header__link">
-                    <span>+7 (391) 269-99-61</span>
-                    <svg width="26" height="36" aria-hidden="true" class="header__icon">
-                        <use xlink:href="./img/svg-sprite.svg#phone"/>
-                    </svg>
-                </a>
-                <span class="header__sity"> Красноярск </span>
-                <a href="javascript:void(0)" data-drop-toggle="dropFeedback2" class="header__btn">Связаться</a>
-            </div>
+            <a href="tel:+73912699961" class="header__link">
+                <span>+7 (391) 269-99-61</span>
+                <svg width="26" height="36" aria-hidden="true" class="header__icon">
+                    <use xlink:href="./img/svg-sprite.svg#phone"/>
+                </svg>
+            </a>
+            <span class="header__sity"> Красноярск </span>
+            <a href="javascript:void(0)" data-drop-toggle="dropFeedback2" class="header__btn">Связаться</a>
             <nav class="nav header__nav">
                 <span class="nav__slogon">Интернет- магазины со вкусом</span>
                 <div class="nav__container">
@@ -68,6 +66,7 @@
                     </div>
                 </div>
             </nav>
+            <span class="header__slogan">Интернет- магазины со&nbsp;вкусом</span>
         </header>
         <div class="title-block">
             <ul class="breadcrumb title-block__breadcrumb">
@@ -77,7 +76,7 @@
                     </a>
                 </li>
             </ul>
-            <h1 class="title">Услуги</h1>
+            <h1 class="title title--size-lg">Услуги</h1>
         </div>
         <main class="content">
             <section class="services">

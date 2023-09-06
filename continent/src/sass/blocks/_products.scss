@@ -124,6 +124,7 @@
         overflow: hidden;
         height: 0;
         animation: showsBrend 0.3s forwards;
+        will-change: height;
 
         @media screen and (max-width: 1500px) {
             padding-right: 8.3%;

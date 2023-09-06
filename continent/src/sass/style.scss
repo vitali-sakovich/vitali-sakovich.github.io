@@ -169,3 +169,56 @@ button {
 @import "blocks/vacancy";
 @import "blocks/contacts";
 @import "blocks/warehouses-complexes";
+
+.policies {
+    padding-top: 50px;
+    padding-right: 16.7%;
+    padding-left: 16.7%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.4;
+
+    @media screen and (max-width: 1500px) {
+        padding-top: 40px;
+        padding-right: 8.3%;
+        padding-left: 8.3%;
+    }
+
+    @media screen and (max-width: 899.98px) {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    @media screen and (max-width: 599.98px) {
+        padding-top: 20px;
+        padding-right: 5.4%;
+        padding-left: 5.4%;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+    }
+}
