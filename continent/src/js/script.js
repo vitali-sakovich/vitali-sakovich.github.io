@@ -8,6 +8,7 @@ if (document.querySelector(".vacancies-select__select")) {
     });
 }
 
+
 var swiper = new Swiper(".clients-slider", {
     slidesPerView: 3,
     spaceBetween: 30,

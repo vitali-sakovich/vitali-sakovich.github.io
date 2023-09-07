@@ -67,11 +67,15 @@
   transform: translateY(100%);
   left: 0;
   right: 0;
-  bottom: -1px;
+  bottom: 0;
   z-index: 5;
   display: none;
   border-radius: 0 0 5px 5px;
   overflow: hidden;
+}
+
+.nativejs-select__options {
+  background-color: #3f4a8c;
 }
 
 .nativejs-select__option {

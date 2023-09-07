@@ -71,7 +71,7 @@ a {
         @media screen and (max-width: 1199.98px) {
             font-size: 28px;
         }
-        @media screen and (max-width: 649.98px) {
+        @media screen and (max-width: 849.98px) {
             font-size: 24px;
         }
     }
@@ -116,3 +116,4 @@ a {
 @import "blocks/services";
 @import "blocks/form";
 @import "blocks/case";
+@import "blocks/blog";

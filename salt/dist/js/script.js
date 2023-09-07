@@ -1,23 +1,32 @@
-var swiper = new Swiper(".projects-slider__swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
+(() => {
+    if (!document.querySelector(".projects-slider__swiper")) return;
+
+    var swiper = new Swiper(".projects-slider__swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-        600: {
-            slidesPerView: 2,
+        breakpoints: {
+            320: {
+                slidesPerView: "auto",
+            },
+            600: {
+                spaceBetween: 39,
+                slidesPerView: 2,
+            },
+            1200: {
+                spaceBetween: 37,
+                slidesPerView: 3,
+            },
+            1600: {
+                spaceBetween: 60,
+            },
         },
-        900: {
-            slidesPerView: 3,
-        },
-    },
-});
+    });
+})();
 
 (() => {
     const item = document.querySelector(".nav-networks__link--showreel");
@@ -45,6 +54,29 @@ var swiper = new Swiper(".projects-slider__swiper", {
             header.classList.remove("header--is-active");
             document.body.classList.remove("hidden");
             setTimeout(() => (nav.style.display = "none"), 300);
+        }
+    });
+})();
+
+(() => {
+    const tags = document.querySelector(".blog-tags");
+
+    if (!tags) return;
+
+    const btn = tags.querySelector(".js-add-btn-tags");
+    const item = tags.querySelectorAll(".blog-tags__item");
+
+    if (item.length < 15) {
+        btn.remove();
+    }
+
+    btn.addEventListener("click", () => {
+        if (!tags.classList.contains("blog-tags--is-show")) {
+            tags.classList.add("blog-tags--is-show");
+            btn.innerHTML = "Скрыть теги";
+        } else {
+            tags.classList.remove("blog-tags--is-show");
+            btn.innerHTML = "Ещё теги";
         }
     });
 })();
