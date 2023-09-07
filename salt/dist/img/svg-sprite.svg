@@ -32,4 +32,7 @@
     <symbol viewBox="0 0 23 14" id="arrow">
         <path fill-rule="evenodd" d="M22.4 6.296H2.788L9.098 0H6.997L0 6.995 6.997 14h2.1L2.789 7.7H22.4V6.296Z" clip-rule="evenodd"/>
     </symbol>
+    <symbol viewBox="0 0 29 32" id="sharing">
+        <circle cx="24.065" cy="4.935" r="3.935" stroke-width="2"/><circle cx="4.935" cy="15.658" r="3.935" stroke-width="2"/><circle cx="24.065" cy="26.319" r="3.935" stroke-width="2"/><path d="m8.226 13.8 12.216-6.885M8.224 17.037l12.08 7.121" stroke-width="2"/>
+    </symbol>
 </svg>

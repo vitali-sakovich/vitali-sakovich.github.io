@@ -1,3 +1,5 @@
+Fancybox.bind("[data-fancybox]", {});
+
 (() => {
     if (!document.querySelector(".projects-slider__swiper")) return;
 
