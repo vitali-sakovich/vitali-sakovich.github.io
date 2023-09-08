@@ -10,8 +10,13 @@ if (document.querySelector(".vacancies-select__select")) {
 
 var swiper = new Swiper(".clients-slider", {
     slidesPerView: 3,
+    slidesPerGroup: 3,
     spaceBetween: 30,
     loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -19,12 +24,15 @@ var swiper = new Swiper(".clients-slider", {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         600: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
         },
         900: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
         },
     },
 });
