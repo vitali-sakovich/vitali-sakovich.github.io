@@ -33,7 +33,6 @@ Fancybox.bind("[data-fancybox]", {});
 (() => {
     const item = document.querySelector(".nav-networks__link--showreel");
     window.addEventListener("scroll", (e) => {
-        console.log(window.pageYOffset);
         if (window.pageYOffset > 0) {
             item.classList.add("nav-networks__link--is-show");
         } else {
@@ -79,6 +78,30 @@ Fancybox.bind("[data-fancybox]", {});
         } else {
             tags.classList.remove("blog-tags--is-show");
             btn.innerHTML = "Ещё теги";
+        }
+    });
+})();
+
+(() => {
+    const container = document.querySelector(".reviews");
+    const box = container.querySelectorAll(".review-card");
+    const btn = container.querySelector(".js-btn-all-reviews");
+
+    for (let i = 9; i < box.length; i++) {
+        box[i].style.display = "none";
+    }
+
+    let countD = 9;
+    btn.addEventListener("click", function () {
+        const box = container.querySelectorAll(".review-card");
+        countD += 9;
+
+        for (let i = 0; i < countD; i++) {
+            if (box[i] == undefined) {
+                btn.remove();
+                return;
+            }
+            box[i].style.display = "grid";
         }
     });
 })();
