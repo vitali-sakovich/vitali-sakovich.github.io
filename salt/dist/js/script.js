@@ -120,3 +120,110 @@ Fancybox.bind("[data-fancybox]", {});
         }
     });
 })();
+
+(() => {
+    const shareButtons = document.querySelectorAll(".js-btn-sharing");
+
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (
+                isMobile.Android() ||
+                isMobile.BlackBerry() ||
+                isMobile.iOS() ||
+                isMobile.Opera() ||
+                isMobile.Windows()
+            );
+        },
+    };
+
+    shareButtons.forEach((shareButton) => {
+        if (shareButton) {
+            let thisUrl = window.location.href;
+            let thisTitle = document.title;
+            shareButton.addEventListener("click", function () {
+                // Проверка поддержки navigator.share
+                if (navigator.share && isMobile.any()) {
+                    // navigator.share принимает объект с URL, title или text
+                    navigator
+                        .share({
+                            title: thisTitle,
+                            url: thisUrl,
+                        })
+                        .then(function () {
+                            // Shareing successfull
+                        })
+                        .catch(function () {
+                            // Sharing failed
+                        });
+                } else {
+                    openModal(document.querySelector(".popup--sharing"));
+                    copyUrl();
+                }
+            });
+        }
+    });
+
+    function copyUrl() {
+        const copyButton = document.querySelector(".js-btn-copy-link");
+        const copyInput = document.querySelector(".js-input-copy");
+
+        copyInput.value = window.location.href;
+
+        copyButton.addEventListener("click", function (e) {
+            copyInput.select();
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+            copyButton.innerHTML = "Ссылка скопированна";
+            copyButton.setAttribute("disabled", "true");
+
+            setTimeout(() => {
+                copyButton.innerHTML = "Скопировать ссылку";
+                copyButton.removeAttribute("disabled");
+            }, 1000);
+        });
+    }
+})();
+
+// закрытие модалок
+function modal(modal) {
+    const closeModal = modal.querySelectorAll(".js-popup-close");
+
+    if (!closeModal) {
+        return;
+    }
+    closeModal.forEach(function (closeModalItem) {
+        closeModalItem.addEventListener("click", modalHidden);
+    });
+
+    function modalHidden() {
+        modal.classList.remove("popup--show");
+        document.body.classList.remove("hidden");
+        window.setTimeout(function () {
+            modal.style.display = "none";
+        }, 300);
+    }
+}
+const modals = document.querySelectorAll(".popup");
+modals.forEach(modal);
+
+// открытие модалок
+function openModal(modal) {
+    modal.style.display = "flex";
+    document.body.classList.add("hidden");
+    modal.classList.add("popup--show");
+}
