@@ -4443,3 +4443,6 @@ a {
     opacity: 0;
   }
 }
+.input--copy {
+  padding-right: 20px;
+}
