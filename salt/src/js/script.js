@@ -31,6 +31,20 @@ Fancybox.bind("[data-fancybox]", {});
 })();
 
 (() => {
+    if (!document.querySelector(".team-slider")) return;
+
+    var swiper = new Swiper(".team-slider", {
+        slidesPerView: 1,
+        autoHeight: true,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+})();
+
+(() => {
     const item = document.querySelector(".nav-networks__link--showreel");
     window.addEventListener("scroll", (e) => {
         if (window.pageYOffset > 0) {
@@ -84,6 +98,7 @@ Fancybox.bind("[data-fancybox]", {});
 
 (() => {
     const container = document.querySelector(".reviews");
+    if (!container) return;
     const box = container.querySelectorAll(".review-card");
     const btn = container.querySelector(".js-btn-all-reviews");
 

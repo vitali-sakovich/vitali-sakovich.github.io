@@ -248,6 +248,7 @@
     &__container {
         position: fixed;
         top: 28vh;
+        z-index: 10;
 
         @media screen and (max-width: 1199.98px) {
             top: 26vh;
