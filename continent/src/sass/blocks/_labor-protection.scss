@@ -51,16 +51,14 @@
         display: flex;
         margin-bottom: 30px;
         font-size: 28px;
-        color: #FFF;
 
         @media screen and (max-width: 599.98px) {
             font-size: 23px;
         }
-    } 
+    }
 
     &__list {
         list-style: none;
-        color: #fff;
     }
 
     &__item {
@@ -68,7 +66,7 @@
         margin-bottom: 25px;
 
         &::before {
-            content: '•';
+            content: "•";
             font-size: 18px;
             display: inline;
             padding-right: 5px;
@@ -89,7 +87,7 @@
             width: 405px;
         }
         @media screen and (max-width: 899.98px) {
-            width: 40%; 
+            width: 40%;
         }
         @media screen and (max-width: 599.98px) {
             width: 100%;
@@ -136,7 +134,7 @@
 
     &__link {
         margin-bottom: 44px;
-        
+
         @media screen and (max-width: 599.98px) {
             margin-bottom: 16px;
         }
@@ -146,10 +144,10 @@
 .download {
     display: flex;
     max-width: 1000px;
-    
+
     &__icon {
         display: flex;
-        fill: #E8E9F1;
+        fill: var(--gray-color-5);
         opacity: 0.375;
         margin-right: 20px;
         width: 56px;
@@ -164,16 +162,14 @@
         display: flex;
         position: relative;
         font-size: 20px;
-        color: #fff;
         padding-bottom: 7px;
         margin-bottom: 5px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid var(--secondary-color-12);
     }
 
     &__size {
         display: block;
         font-size: 14px;
         line-height: 22px;
-        color: #fff;
     }
 }

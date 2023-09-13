@@ -470,12 +470,27 @@
     &__icon {
         stroke: #748fb1;
         fill: transparent;
-        margin-right: 16px;
+        width: 29px;
+        height: auto;
 
         @media screen and (max-width: 1599.98px) {
             width: 24px;
             height: 26px;
         }
+
+        &--size-md {
+            width: 37px;
+
+            @media screen and (max-width: 1599.98px) {
+                width: 37px;
+                height: auto;
+            }
+        }
+    }
+
+    span {
+        display: block;
+        margin-left: 16px;
     }
 }
 

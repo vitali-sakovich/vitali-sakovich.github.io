@@ -21,7 +21,6 @@
         margin-bottom: 30px;
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
 
         @media screen and (max-width: 499.98px) {
             margin-bottom: 23px;
@@ -86,7 +85,6 @@
     &__name {
         display: flex;
         align-items: center;
-        color: #fff;
         min-width: 130px;
         margin-right: 40px;
 
@@ -97,7 +95,6 @@
     }
 
     &__link {
-        color: #fff;
         font-weight: 600;
         transition: opacity 0.3s;
 
@@ -111,7 +108,7 @@
     }
 
     &__icon {
-        fill: #486295;
+        fill: var(--primary-color-12);
     }
 }
 
@@ -141,7 +138,6 @@
     &__title {
         font-size: 30px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 30px;
 
         @media screen and (max-width: 499.98px) {
@@ -151,7 +147,6 @@
     }
 
     &__name {
-        color: #fff;
         margin-bottom: 30px;
     }
 
@@ -163,7 +158,6 @@
 .requisites-item {
     display: flex;
     align-items: center;
-    color: #fff;
 
     @media screen and (max-width: 499.98px) {
         flex-direction: column;

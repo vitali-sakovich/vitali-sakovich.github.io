@@ -1,6 +1,5 @@
 .products {
     &__text {
-        color: #fff;
         font-size: 18px;
         line-height: 26px;
         max-width: 370px;
@@ -68,8 +67,8 @@
             --block-show: flex;
             --brend-bg: linear-gradient(
                 180deg,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.1) 100%
+                var(--secondary-color-8) 0%,
+                var(--secondary-color-6) 100%
             );
             padding-bottom: var(--height-block);
         }
@@ -114,7 +113,7 @@
         position: absolute;
         align-items: center;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--secondary-color-6);
         left: 0;
         right: 0;
         padding-right: 16.7%;
@@ -183,7 +182,7 @@
     &__nav {
         display: flex;
         border-radius: 31px;
-        background: rgba(255, 255, 255, 0.17);
+        background: var(--secondary-color-11);
         margin-bottom: 50px;
 
         @media screen and (max-width: 899.98px) {
@@ -204,11 +203,10 @@
         border-radius: 31px;
         transition: background-color 0.3s, color 0.3s;
         font-size: 18px;
-        color: #fff;
 
         &.tabs__btn--active {
-            background-color: #d9e0e7;
-            color: #000;
+            background-color: var(--gray-color-4);
+            color: var(--black-color);
         }
     }
 }

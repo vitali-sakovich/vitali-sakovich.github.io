@@ -1,4 +1,3 @@
-
 .paument {
     padding-right: 16.7%;
     padding-left: 16.7%;
@@ -30,7 +29,6 @@
     &__title {
         font-size: 30px;
         font-weight: 600;
-        color: #fff;
         min-width: 280px;
         margin-right: 90px;
 
@@ -50,7 +48,6 @@
         display: flex;
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 27px;
 
         @media screen and (max-width: 599.98px) {
@@ -110,17 +107,16 @@
     }
 
     &__title {
-      font-size: 30px;
-      font-weight: 600;
-      color: #fff;  
-      margin-bottom: 63px;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 63px;
 
-      @media screen and (max-width: 899.98px) {
-        margin-bottom: 40px;
-      }
-      @media screen and (max-width: 599.98px) {
-        font-size: 25px;
-    }
+        @media screen and (max-width: 899.98px) {
+            margin-bottom: 40px;
+        }
+        @media screen and (max-width: 599.98px) {
+            font-size: 25px;
+        }
     }
 
     &__container {

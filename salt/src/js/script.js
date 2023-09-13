@@ -227,3 +227,26 @@ function openModal(modal) {
     document.body.classList.add("hidden");
     modal.classList.add("popup--show");
 }
+
+(() => {
+    const faq = document.querySelector(".faq");
+    if (!faq) return;
+    const items = faq.querySelectorAll(".faq__item");
+
+    items.forEach((item) => {
+        const btn = item.querySelector(".faq__btn");
+        const content = item.querySelector(".faq__content");
+
+        btn.addEventListener("click", () => {
+            if (!btn.classList.contains("faq__btn--is-active")) {
+                btn.classList.add("faq__btn--is-active");
+                content.classList.add("faq__content--is-active");
+                content.style.height = content.scrollHeight + "px";
+            } else {
+                btn.classList.remove("faq__btn--is-active");
+                content.classList.remove("faq__content--is-active");
+                content.style.height = 0;
+            }
+        });
+    });
+})();

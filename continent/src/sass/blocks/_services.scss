@@ -6,7 +6,7 @@
 
     @media screen and (max-width: 1500px) {
         padding-right: 8.3%;
-        padding-left: 8.3%;  
+        padding-left: 8.3%;
     }
     @media screen and (max-width: 899.98px) {
         padding-top: 40px;
@@ -39,7 +39,7 @@
         align-items: center;
         width: 100%;
         min-height: 147px;
-        background-color: #000;
+        background-color: var(--black-color);
         margin-bottom: 43px;
 
         @media screen and (max-width: 1199.98px) {
@@ -73,7 +73,6 @@
         padding: 5px 20px 5px 107px;
         font-size: 38px;
         font-weight: 600;
-        color: #FFF;
 
         @media screen and (max-width: 1199.98px) {
             padding-left: 80px;
@@ -123,18 +122,16 @@
         display: flex;
         font-size: 20px;
         font-weight: 600;
-        color: #FFF;
         margin-bottom: 22px;
     }
 
     &__list {
         margin-bottom: 35px;
-        color: #FFF;
         list-style: none;
         line-height: 26px;
 
         @media screen and (max-width: 599.98px) {
-            margin-bottom: 25px; 
+            margin-bottom: 25px;
         }
     }
 
@@ -156,7 +153,7 @@
         }
 
         &::before {
-            content: '•';
+            content: "•";
             font-size: 18px;
             display: inline;
             padding-right: 5px;

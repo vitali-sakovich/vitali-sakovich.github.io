@@ -45,7 +45,7 @@
             grid-area: -1/1;
         }
         @media screen and (max-width: 899.98px) {
-            background-color: #5b5fa9;
+            background-color: var(--primary-color-13);
             margin-top: -2px;
             padding-right: 6%;
             padding-bottom: 20px;
@@ -63,7 +63,6 @@
         display: flex;
         font-size: 46px;
         font-weight: 700;
-        color: #fff;
         transform: translate(-20vw, -34vw) rotate(-12deg) skew(-13deg);
         letter-spacing: 1px;
 
@@ -125,8 +124,8 @@
                 width: 1px;
                 background-image: linear-gradient(
                     0deg,
-                    #fff,
-                    #fff 50%,
+                    var(--primary-on-color),
+                    var(--primary-on-color) 50%,
                     transparent 50%,
                     transparent 100%
                 );
@@ -304,7 +303,6 @@
     &__text {
         position: relative;
         font-size: 14px;
-        color: #fff;
 
         @media screen and (max-width: 899.98px) {
             margin-bottom: 10px;
@@ -316,7 +314,6 @@
         margin-top: var(--margin-top-number, 10px);
         margin-bottom: var(--margin-bottom-number, 10px);
         font-weight: 500;
-        color: #fff;
 
         @media screen and (max-width: 899.98px) {
             margin-top: 0;

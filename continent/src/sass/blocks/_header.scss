@@ -1,6 +1,6 @@
 .header {
     padding: 27px 8.3% 32px;
-    background-color: #fff;
+    background-color: var(--primary-on-color);
 
     @media screen and (max-width: 1500px) {
         padding-left: 3.8%;
@@ -44,7 +44,7 @@
             bottom: 0;
             left: 0;
             z-index: 100;
-            background-color: #fff;
+            background-color: var(--primary-on-color);
             padding-top: 83px;
             height: 100%;
             opacity: 0;
@@ -131,10 +131,10 @@
         display: flex;
         justify-content: center;
         padding: 20px;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid var(--gray-color-2);
     }
     &__link {
-        color: #2d3da0;
+        color: var(--primary-color-4);
         font-size: 14px;
         transition: opacity 0.3s;
         text-align: center;
@@ -144,9 +144,6 @@
             @media screen and (max-width: 899.98px) {
                 margin-right: 77px;
             }
-        }
-        @media screen and (max-width: 899.98px) {
-            color: #2d3da0;
         }
         @media screen and (max-width: 599.98px) {
             max-width: 103px;
@@ -203,8 +200,10 @@
         }
 
         @media screen and (max-width: 899.98px) {
+            width: 100%;
             margin-top: 0;
-            margin-bottom: 34px;
+            margin-right: 0;
+            margin-bottom: 0;
         }
 
         &:hover {
@@ -219,16 +218,21 @@
         align-items: center;
         cursor: pointer;
         font-size: 17px;
-        color: #2d3da0;
+        color: var(--primary-color-4);
         transition: opacity 0.3s;
 
         &:hover {
             opacity: 0.7;
         }
+
+        @media screen and (max-width: 899.98px) {
+            padding-top: 17px;
+            padding-bottom: 17px;
+        }
     }
 
     &__icon {
-        fill: #2d3da0;
+        fill: var(--primary-color-4);
         margin-left: 8px;
 
         @media screen and (max-width: 899.98px) {
@@ -247,12 +251,12 @@
         align-items: center;
         justify-content: center;
         padding-bottom: 15px;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid var(--gray-color-2);
     }
 
     &__btn {
         background: none;
-        color: #2d3da0;
+        color: var(--primary-color-4);
         font-size: 14px;
         margin-bottom: 18px;
         transition: opacity 0.3s;
@@ -268,7 +272,7 @@
     }
 
     &__link {
-        color: #6f6f6f;
+        color: var(--gray-color);
         font-size: 20px;
         transition: opacity 0.3s;
 
@@ -294,20 +298,16 @@
         --nav-dropdown: block;
         position: static;
         transform: translateX(0);
-        padding-top: 34px;
+        padding-top: 0;
     }
 
     &__block {
         @media screen and (min-width: 899.99px) {
-            background-color: #fff;
-            padding: 30px;
+            background-color: var(--primary-on-color);
             border-radius: 10px;
-            filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0 10px 10px var(--secondary-color));
             min-width: 260px;
-        }
-
-        @media screen and (max-width: 899.98px) {
-            padding-left: 20px;
+            overflow: hidden;
         }
     }
 
@@ -315,27 +315,22 @@
         list-style: none;
     }
 
-    &__item {
-        &:not(:last-child) {
-            margin-bottom: 20px;
-
-            @media screen and (max-width: 899.98px) {
-                margin-bottom: 34px;
-            }
-        }
-    }
-
     &__link {
+        display: block;
         font-size: 17px;
-        color: #2d3da0;
-        transition: opacity 0.3s;
+        color: var(--primary-color-4);
+        transition: background-color 0.3s;
+        padding: 13px 30px;
 
         &:hover {
-            opacity: 0.7;
+            @media screen and (min-width: 899.99px) {
+                background-color: var(--gray-color-3);
+            }
         }
 
         @media screen and (max-width: 899.98px) {
             opacity: 0.7;
+            padding: 17px 0 17px 20px;
         }
     }
 }
@@ -365,13 +360,13 @@
         bottom: 0;
         left: 0;
         opacity: 0.7;
-        background-color: #000;
+        background-color: var(--black-color);
         cursor: url("../img/close.svg"), auto;
     }
 
     &__block {
         z-index: 50;
-        background-color: #5c60a7;
+        background-color: var(--primary-color-2);
         min-width: 436px;
 
         @media screen and (max-width: 599.98px) {
@@ -385,7 +380,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 46px 40px 35px 35px;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid var(--gray-color-2);
 
         @media screen and (max-width: 599.98px) {
             padding: 20px;
@@ -393,7 +388,6 @@
     }
 
     &__title {
-        color: #fff;
         font-size: 30px;
         font-weight: 600;
 
@@ -421,7 +415,7 @@
             grid-area: -1/1;
             width: 2px;
             height: 30px;
-            background-color: #fff;
+            background-color: var(--primary-on-color);
         }
 
         &::before {
@@ -444,7 +438,6 @@
     }
 
     &__text {
-        color: #fff;
         line-height: 20px;
         max-width: 270px;
         margin-bottom: 33px;
@@ -474,7 +467,7 @@
         grid-area: -1/1;
         width: 30px;
         height: 3px;
-        background-color: #313c84;
+        background-color: var(--primary-color-6);
         transition: transform 0.2s;
 
         &:first-child {
@@ -529,7 +522,6 @@
 
     &__link {
         font-weight: 400;
-        color: #fff;
         opacity: 0.5;
         margin-right: 15px;
         transition: opacity 0.3s;

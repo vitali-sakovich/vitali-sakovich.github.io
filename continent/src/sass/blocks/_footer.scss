@@ -67,7 +67,6 @@
     &__btn {
         background: none;
         font-size: 14px;
-        color: #fff;
         opacity: 0.5;
         transition: opacity 0.3s;
         margin-top: 6px;
@@ -129,7 +128,6 @@
     &__link {
         text-align: center;
         font-size: 14px;
-        color: #fff;
         opacity: 0.5;
     }
 
@@ -177,7 +175,6 @@
 
     &__link {
         font-size: 18px;
-        color: #fff;
         transition: opacity 0.3s;
 
         &[href]:hover {
@@ -196,7 +193,6 @@
 .footer-subnav {
     &__link {
         font-size: 15px;
-        color: #fff;
         transition: opacity 0.3s;
         opacity: 0.7;
         margin-right: 37px;
@@ -211,7 +207,6 @@
 .footer-contact-link {
     display: flex;
     font-size: 30px;
-    color: #fff;
     transition: opacity 0.3s;
 
     @media screen and (max-width: 899.98px) {
@@ -246,7 +241,6 @@
     &__name {
         display: flex;
         font-size: 14px;
-        color: #fff;
         opacity: 0.5;
         margin-bottom: 20px;
 
@@ -295,7 +289,6 @@
 
     &__text {
         font-size: 14px;
-        color: #fff;
         opacity: 0.5;
         margin-right: 5px;
     }

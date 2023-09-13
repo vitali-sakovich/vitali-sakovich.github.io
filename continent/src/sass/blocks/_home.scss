@@ -15,7 +15,7 @@
         padding: 0;
         flex-direction: column-reverse;
         align-items: flex-start;
-        background: #5c60a7;
+        background: var(--primary-color-2);
         min-height: 0;
     }
 
@@ -41,7 +41,6 @@
         margin-bottom: 33px;
         font-size: 44px;
         font-weight: 600;
-        color: #fff;
 
         @media screen and (max-width: 899.98px) {
             font-size: 25px;
@@ -57,7 +56,6 @@
     &__text {
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
 
         @media screen and (max-width: 1199.98px) {
             max-width: 400px;
@@ -94,7 +92,7 @@
         padding-right: 10px;
         width: 74px;
         height: 74px;
-        background-color: #fff;
+        background-color: var(--primary-on-color);
         clip-path: polygon(100% 50%, 0 0, 0 100%);
         margin-bottom: 25px;
 
@@ -103,7 +101,7 @@
             grid-area: -1/1;
             width: 47px;
             height: 47px;
-            background-color: #707ed6;
+            background-color: var(--primary-color-7);
             clip-path: polygon(100% 50%, 0 0, 0 100%);
         }
     }
@@ -111,7 +109,6 @@
     &__text {
         font-size: 16px;
         font-weight: 600;
-        color: #fff;
     }
 }
 
@@ -123,7 +120,7 @@
 
 .delivery-geography {
     position: relative;
-    background-color: #5c60a7;
+    background-color: var(--primary-color-2);
 
     &::before {
         content: "";
@@ -134,8 +131,8 @@
         height: 168px;
         background-image: linear-gradient(
             0deg,
-            #3e498c 0%,
-            rgba(91, 96, 167, 0) 100%
+            var(--primary-color-14) 0%,
+            var(--secondary-color-2) 100%
         );
 
         @media screen and (max-width: 899.98px) {
@@ -179,7 +176,6 @@
         max-width: 200px;
         font-size: 44px;
         font-weight: 600;
-        color: #fff;
 
         @media screen and (max-width: 1500px) {
             margin-left: 8.3%;
@@ -225,7 +221,6 @@
         align-self: center;
         grid-area: -1/1;
         font-size: em($fz, $fz_base);
-        color: #fff;
         font-weight: 700;
         max-width: em(250, $fz);
         transform: rotate(-11deg) skew(-13deg);
@@ -372,7 +367,6 @@
 
     &__name {
         $fz: 15;
-        color: #fff;
         font-size: em($fz, $fz_base);
         letter-spacing: 1px;
     }
@@ -381,7 +375,7 @@
         display: flex;
         margin-right: var(--margin-right-img, #{em(15, $fz)});
         margin-left: var(--margin-left-img, 0);
-        filter: drop-shadow(em(0 5 17, $fz) #0e1e7d);
+        filter: drop-shadow(em(0 5 17, $fz) var(--primary-color-16));
     }
 
     &__img {
@@ -449,11 +443,11 @@
 
     &:first-child,
     &:nth-child(4) {
-        background-color: #343f86;
+        background-color: var(--primary-color-3);
     }
 
     &:nth-child(2) {
-        background-color: #29357f;
+        background-color: var(--primary-color);
     }
 
     &:nth-child(3) {
@@ -527,7 +521,7 @@
     &__title {
         font-size: 40px;
         font-weight: 600;
-        color: var(--text-color, #fff);
+        color: var(--text-color, --primary-on-color);
         max-width: 330px;
         margin-bottom: 20px;
         transition: color 0.3s;
@@ -568,7 +562,7 @@
     }
 
     &__text {
-        color: var(--text-color, #fff);
+        color: var(--text-color, --primary-on-color);
         font-size: 16px;
         line-height: 20px;
         transition: color 0.3s;
@@ -585,7 +579,7 @@
     &__arrow {
         display: flex;
         margin-top: auto;
-        fill: #707ed6;
+        fill: var(--primary-color-7);
     }
 
     &__picture {
@@ -649,8 +643,8 @@
     &[href]:not(:nth-child(3)) {
         @media screen and (min-width: 1100px) {
             &:hover {
-                --text-color: #000;
-                background-color: #fff;
+                --text-color: var(--black-color);
+                background-color: var(--primary-on-color);
             }
         }
     }
@@ -675,7 +669,6 @@
     }
 
     &__symbol {
-        color: #fff;
         font-size: 54px;
         font-weight: 300;
         margin-right: 15px;
@@ -732,7 +725,7 @@
         }
 
         &:last-child {
-            background-color: #3d488b;
+            background-color: var(--primary-color-8);
             padding-left: 4.2vw;
 
             @media screen and (max-width: 1700px) {
@@ -758,7 +751,6 @@
     &__title {
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 20px;
 
         #{$self}--market & {
@@ -868,7 +860,6 @@
     &__value {
         font-size: 46px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 13px;
 
         @media screen and (max-width: 899.98px) {
@@ -881,14 +872,13 @@
     }
 
     &__name {
-        color: #fff;
         line-height: 24px;
         max-width: 150px;
     }
 }
 
 .clients {
-    background-color: #fff;
+    background-color: var(--primary-on-color);
     padding: 100px 8.3vw;
 
     @media screen and (max-width: 1700px) {
@@ -966,14 +956,14 @@
 
 .clients-slider-btn {
     height: 100%;
-    background-color: #fff;
+    background-color: var(--primary-on-color);
     --swiper-navigation-top-offset: 40%;
     margin-top: 0 !important;
     top: 50%;
     transform: translateY(-50%);
 
     &:hover {
-        --icon-fill: #000;
+        --icon-fill: var(--black-color);
     }
 
     &::after {
@@ -1022,7 +1012,7 @@
 .section-form {
     display: flex;
     position: relative;
-    background-color: #001545;
+    background-color: var(--primary-color-9);
     padding-top: 150px;
     padding-bottom: 130px;
     padding-left: 22%;
@@ -1105,7 +1095,6 @@
     &__title {
         font-size: 54px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 35px;
 
         @media screen and (max-width: 899.98px) {
@@ -1120,7 +1109,6 @@
     &__text {
         font-size: 18px;
         line-height: 26px;
-        color: #fff;
         max-width: var(--form-text-width, 100%);
 
         @media screen and (max-width: 899.98px) {
@@ -1148,8 +1136,7 @@
         width: 162px;
         height: 48px;
         border-radius: 3px;
-        background-color: #6f7dd6;
-        color: #fff;
+        background-color: var(--primary-color-5);
         margin-right: 18px;
         transition: opacity 0.3s;
 
@@ -1176,7 +1163,7 @@
         display: flex;
         flex-direction: column;
         padding: 14px;
-        border: 2px dashed rgba(255, 255, 255, 0.38);
+        border: 2px dashed var(--secondary-color-3);
         border-radius: 5px;
         margin-bottom: 5px;
         max-width: 360px;
@@ -1189,7 +1176,6 @@
     &__text {
         font-size: 12px;
         line-height: 18px;
-        color: #fff;
         margin-bottom: 33px;
     }
 
@@ -1219,7 +1205,7 @@
         justify-content: flex-end;
         font-size: 18px;
         line-height: 22px;
-        color: rgba(255, 255, 255, 0.63);
+        color: var(--secondary-color-4);
         cursor: pointer;
         padding-right: 25px;
         width: 100%;
@@ -1231,7 +1217,7 @@
     }
 
     &__icon {
-        fill: #fff;
+        fill: var(--primary-on-color);
         margin-right: 10px;
     }
 
@@ -1246,12 +1232,12 @@
     background: none;
 
     &:hover {
-        --fill-icon: #fff;
+        --fill-icon: var(--primary-on-color);
     }
 
     &__icon {
         transition: fill 0.3s;
-        fill: var(--fill-icon, rgba(255, 255, 255, 0.7));
+        fill: var(--fill-icon, --secondary-color-5);
         pointer-events: none;
     }
 }
@@ -1263,7 +1249,7 @@
         --placeholder-x: 0;
         --placeholder-y: -20px;
         --placeholder-size: 12px;
-        --placeholder-color: #fff;
+        --placeholder-color: var(--primary-on-color);
         --clear-opacity: 1;
         --clear-events: auto;
 
@@ -1271,7 +1257,7 @@
             --placeholder-x: 16px;
             --placeholder-y: 14px;
             --placeholder-size: 18px;
-            --placeholder-color: rgba(255, 255, 255, 0.63);
+            --placeholder-color: var(--secondary-color-4);
 
             & ~ .label__clear {
                 --clear-opacity: 0;
@@ -1291,19 +1277,18 @@
     }
 
     &__input {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0);
+        background-color: var(--secondary-color-6);
+        border: 1px solid var(--secondary-color-8);
         transition: border-color 0.3s;
         outline: none;
         border-radius: 5px;
         font-size: 18px;
-        color: #fff;
         padding-right: 60px;
         padding-left: 16px;
         width: 100%;
 
         &:focus {
-            border-color: rgba(255, 255, 255, 0.25);
+            border-color: var(--secondary-color-9);
         }
 
         &--textarea {
@@ -1324,7 +1309,7 @@
         }
 
         &.error {
-            border: 1px solid #d61a1a;
+            border: 1px solid var(--error-color);
         }
     }
 
@@ -1342,7 +1327,7 @@
         pointer-events: var(--clear-events, none);
 
         &:hover {
-            --fill-icon: #fff;
+            --fill-icon: var(--primary-on-color);
         }
     }
 
@@ -1351,7 +1336,7 @@
         align-self: self-start;
         pointer-events: none;
         user-select: none;
-        color: var(--placeholder-color, rgba(255, 255, 255, 0.63));
+        color: var(--placeholder-color, var(--secondary-color-4));
         font-size: var(--placeholder-size, 18px);
         transition: transform 0.3s, color 0.3s, font-size 0.3s;
         transform: translate(
@@ -1362,7 +1347,7 @@
     }
 
     &__icon {
-        fill: var(--fill-icon, rgba(255, 255, 255, 0.7));
+        fill: var(--fill-icon, --secondary-color-5);
         transition: fill 0.3s;
     }
 }
@@ -1390,11 +1375,11 @@
         min-width: 16px;
         height: 16px;
         border-radius: 2px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid var(--secondary-color-10);
     }
 
     &__icon {
-        fill: rgba(255, 255, 255, 0.5);
+        fill: var(--secondary-color-10);
         opacity: var(--icon-opacity, 0);
         transition: opacity 0.3s;
     }
@@ -1402,7 +1387,7 @@
     &__span {
         font-size: 12px;
         line-height: 16px;
-        color: rgba(255, 255, 255, 0.5);
+        color: var(--secondary-color-10);
         max-width: 163px;
 
         @media screen and (max-width: 599.98px) {

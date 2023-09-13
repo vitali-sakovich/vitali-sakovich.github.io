@@ -20,13 +20,13 @@
     }
 
     &__block {
-        background-color: #222d6e;
+        background-color: var(--primary-color-10);
     }
 
     &__head {
         display: flex;
         justify-content: space-between;
-        background-color: #3e498c;
+        background-color: var(--primary-color-14);
         padding: 35px 32px 35px 40px;
 
         @media screen and (max-width: 599.98px) {
@@ -44,7 +44,6 @@
     &__title {
         font-size: 30px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 7px;
 
         @media screen and (max-width: 899.98px) {
@@ -58,7 +57,6 @@
 
     &__city {
         font-size: 20px;
-        color: #fff;
     }
 
     &__btn {
@@ -69,8 +67,7 @@
         min-width: 250px;
         height: 48px;
         border-radius: 3px;
-        background: #6f7dd6;
-        color: #fff;
+        background-color: var(--primary-color-6);
         transition: opacity 0.3s;
 
         &:hover {
@@ -109,7 +106,6 @@
         display: flex;
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 15px;
     }
 
@@ -119,7 +115,6 @@
 
     &__item {
         position: relative;
-        color: #fff;
         font-size: 18px;
         line-height: 25px;
 
@@ -186,17 +181,16 @@
         flex-direction: column;
         align-items: center;
         padding: 50px 20px 60px;
-        color: #fff;
 
         &:first-child {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: var(--secondary-color-6);
         }
 
         &:nth-child(2) {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: var(--secondary-color-7);
         }
         &:last-child {
-            background-color: #222d6e;
+            background-color: var(--primary-color-10);
         }
     }
 
@@ -256,7 +250,7 @@
     }
 
     &__icon {
-        fill: #57b9ff;
+        fill: var(--primary-color-15);
     }
 
     &__image {
@@ -270,7 +264,6 @@
         display: flex;
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
         text-align: center;
         margin-bottom: 20px;
 
@@ -289,7 +282,6 @@
     }
 
     &__text {
-        color: #fff;
         line-height: 24px;
         text-align: center;
         max-width: 307px;
@@ -319,7 +311,6 @@
 
     &__title {
         font-size: 47px;
-        color: #fff;
         font-weight: 400;
         margin-bottom: 33px;
 
@@ -359,16 +350,15 @@
 .vacancies-select {
     &__select {
         display: block;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--secondary-color-6);
         width: 358px;
         height: 48px;
         border-radius: 5px;
-        color: #fff;
         font-size: 18px;
         padding-left: 15px;
 
         option {
-            color: #000;
+            color: var(--black-color);
         }
 
         &[hidden] {
@@ -379,7 +369,6 @@
     &__placeholder {
         font-size: 12px;
         line-height: 22px;
-        color: #fff;
     }
 }
 
@@ -400,7 +389,6 @@
         text-align: center;
         font-size: 30px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 18px;
     }
 
@@ -413,7 +401,7 @@
     &__link {
         display: flex;
         font-size: 21px;
-        color: #76a2ff;
+        color: var(--primary-color-11);
         text-align: center;
         margin-bottom: 15px;
         transition: opacity 0.3s;

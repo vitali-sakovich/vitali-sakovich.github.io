@@ -1,6 +1,6 @@
 .warehouses-desc {
     $self: &;
-    background-color: #222d6e;
+    background-color: var(--primary-color-11);
 
     &__head {
         padding: 75px 20px 75px 8.6vw;
@@ -34,7 +34,6 @@
     &__title {
         font-size: 36px;
         font-weight: 600;
-        color: #fff;
 
         @media screen and (max-width: 599.98px) {
             font-size: 25px;
@@ -45,7 +44,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 457px 318px;
-        background-color: #29357f;
+        background-color: var(--primary-color);
 
         @media screen and (max-width: 1199.98px) {
             grid-template-columns: repeat(2, 1fr);
@@ -58,10 +57,10 @@
 
         #{$self}--ring & {
             @media screen and (max-width: 1199.98px) {
-            grid-template-rows: 400px 300px 300px 200px;
+                grid-template-rows: 400px 300px 300px 200px;
             }
             @media screen and (max-width: 599.98px) {
-                grid-template-rows: auto; 
+                grid-template-rows: auto;
             }
         }
 
@@ -72,10 +71,9 @@
                 grid-template-rows: 400px 260px 260px;
             }
             @media screen and (max-width: 599.98px) {
-                grid-template-rows: auto; 
+                grid-template-rows: auto;
             }
         }
-       
     }
 
     &__box {
@@ -165,7 +163,7 @@
         #{$self}--work &:nth-child(4),
         #{$self}--work &:nth-child(5) {
             display: flex;
-            
+
             @media screen and (min-width: 1199.99px) {
                 align-items: center;
                 padding-top: 20px;
@@ -202,12 +200,12 @@
         #{$self}--ring &:nth-child(6),
         #{$self}--work &:nth-child(2),
         #{$self}--work &:nth-child(5) {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: var(--secondary-color-7);
         }
 
         #{$self}--wms &:nth-child(5),
         #{$self}--work &:nth-child(4) {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: var(--secondary-color-6);
 
             #{$self}__text {
                 max-width: 100%;
@@ -322,10 +320,9 @@
         margin-top: 20px;
         margin-right: 20px;
         width: 174px;
-        background-color: #29357f;
+        background-color: var(--primary-color);
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
 
         #{$self}--work & {
             justify-self: self-start;
@@ -346,7 +343,6 @@
     &__text {
         display: flex;
         align-self: self-start;
-        color: #fff;
         line-height: 24px;
         max-width: 196px;
 
@@ -366,7 +362,7 @@
     }
 
     &__icon {
-        fill: #e8e9f1;
+        fill: var(--gray-color-5);
         opacity: 0.375;
     }
 
@@ -386,7 +382,6 @@
         align-self: self-start;
         font-size: 54px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 10px;
     }
 }
@@ -397,7 +392,7 @@
         align-content: center;
         position: relative;
         overflow: hidden;
-        background-color: #5b5fa9;
+        background-color: var(--primary-color-10);
         clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
         padding-top: 200px;
         margin-top: -200px;
@@ -538,7 +533,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    color: #fff;
 
     @media screen and (max-width: 850px) {
         transform: translate(0, 0) !important;
@@ -550,19 +544,10 @@
         position: absolute;
         left: -20px;
         width: 1px;
-        background-image: -webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            from(#fff),
-            color-stop(50%, #fff),
-            color-stop(50%, transparent),
-            to(transparent)
-        );
         background-image: linear-gradient(
             0deg,
-            #fff,
-            #fff 50%,
+            var(--primary-on-color),
+            var(--primary-on-color) 50%,
             transparent 50%,
             transparent 100%
         );
@@ -616,19 +601,10 @@
             z-index: -1;
             transform: rotate(78deg);
             transform-origin: left bottom;
-            background-image: -webkit-gradient(
-                linear,
-                left bottom,
-                left top,
-                from(#fff),
-                color-stop(50%, #fff),
-                color-stop(50%, transparent),
-                to(transparent)
-            );
             background-image: linear-gradient(
                 0deg,
-                #fff,
-                #fff 50%,
+                var(--primary-on-color),
+                var(--primary-on-color) 50%,
                 transparent 50%,
                 transparent 100%
             );
@@ -722,7 +698,6 @@
         transform: translate(43vw, 16vw);
         max-width: 130px;
 
-
         @media screen and (min-width: 851px) {
             text-align: right;
         }
@@ -784,7 +759,6 @@
         @media screen and (max-width: 1199.98px) {
             transform: translate(47vw, -29vw);
         }
-        
     }
 
     &--11 {
@@ -905,7 +879,6 @@
 .warehouses-scheme-desc {
     display: flex;
     align-items: flex-end;
-    color: #fff;
     transform: rotate(-12deg) skew(-13deg);
 
     &__number {
@@ -932,7 +905,6 @@
 
 .warehouses-scheme-area {
     font-size: 44px;
-    color: #fff;
 
     @media screen and (max-width: 859px) {
         font-size: 34px;
@@ -958,7 +930,7 @@
 .warehouses-map {
     display: grid;
     position: relative;
-    background-color: #222d6e;
+    background-color: var(--primary-color-11);
 
     &__container {
         display: grid;
@@ -971,7 +943,7 @@
             background-position-x: 32%;
             font-size: 1.6vw;
         }
-    
+
         &::before,
         &:after {
             content: "";
@@ -980,22 +952,22 @@
             left: 0;
             height: em(168, $fz);
         }
-    
+
         &::before {
             top: -1px;
             background-image: linear-gradient(
                 0deg,
-                rgba(91, 96, 167, 0) 0%,
-                #5b5fa7 100%
+                var(--secondary-color-2) 0%,
+                var(--primary-color-17) 100%
             );
             z-index: 2;
         }
-    
+
         &::after {
             bottom: 0;
             background-image: linear-gradient(
                 0deg,
-                #222d6e 0%,
+                var(--primary-color-10) 0%,
                 rgba(34, 45, 110, 0) 100%
             );
         }
@@ -1044,7 +1016,6 @@
         position: relative;
         font-size: 36px;
         font-weight: 600;
-        color: #fff;
         max-width: 550px;
 
         @media screen and (max-width: 599.98px) {
@@ -1078,18 +1049,16 @@
         align-items: flex-end;
         font-size: 50px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 2px;
 
         span {
-            font-size: 30px; 
+            font-size: 30px;
             margin-bottom: 4px;
         }
     }
 
     &__text {
         font-size: 20px;
-        color: #fff;
     }
 
     .map-city {

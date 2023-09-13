@@ -18,7 +18,7 @@
             position: absolute;
             left: 0;
             right: 0;
-            background-color: rgba(91, 95, 167, 0.469);
+            background-color: var(--secondary-color-13);
         }
 
         &::before {
@@ -124,7 +124,6 @@
     &__title {
         font-size: 30px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 35px;
         max-width: 560px;
 
@@ -147,7 +146,6 @@
     }
 
     &__text {
-        color: #fff;
         line-height: 20px;
 
         &:not(:last-child) {
@@ -191,7 +189,7 @@
         }
 
         &:first-child {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: var(--secondary-color-7);
             padding-left: 21%;
 
             @media screen and (max-width: 1500px) {
@@ -202,7 +200,7 @@
             }
         }
         &:nth-child(2) {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: var(--secondary-color-6);
             padding-left: 40px;
 
             @media screen and (max-width: 599.98px) {
@@ -214,19 +212,17 @@
     &__title {
         font-size: 20px;
         font-weight: 600;
-        color: #fff;
         margin-bottom: 17px;
         max-width: 428px;
     }
 
     &__text {
         font-size: 20px;
-        color: #fff;
         margin-bottom: 30px;
     }
 
     &__icon {
-        fill: #e8e9f1;
+        fill: var(--gray-color-5);
         opacity: 0.375;
     }
 }
