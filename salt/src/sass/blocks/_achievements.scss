@@ -21,6 +21,7 @@
     }
 
     &__picture {
+        position: relative;
         width: 454px;
         min-width: 454px;
         margin-right: 10.7%;
@@ -54,6 +55,12 @@
     &__img {
         width: 100%;
         height: auto;
+        position: sticky;
+        top: 90px;
+
+        @media screen and (max-width: 1599.98px) {
+            top: 20px;
+        }
     }
 
     &__year {

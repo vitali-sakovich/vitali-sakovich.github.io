@@ -269,6 +269,14 @@
         @media screen and (max-width: 649.98px) {
             width: 35px;
             height: 35px;
+            margin-right: 2px;
+            margin-left: 2px;
+        }
+        @media screen and (max-width: 349.98px) {
+            margin-right: 0;
+            margin-left: 0;
+            width: 33px;
+            height: 33px;
         }
 
         &--is-active {
@@ -289,7 +297,8 @@
         height: 40px;
 
         @media screen and (max-width: 649.98px) {
-            display: none;
+            width: 35px;
+            height: 35px;
         }
 
         &:hover {
@@ -298,11 +307,19 @@
 
         &--prew {
             margin-right: 50px;
+
+            @media screen and (max-width: 649.98px) {
+                margin-right: 0;
+            }
         }
 
         &--next {
             transform: scaleX(-1);
             margin-left: 50px;
+
+            @media screen and (max-width: 649.98px) {
+                margin-left: 0;
+            }
         }
     }
 
@@ -319,6 +336,10 @@
         margin-right: 10px;
         margin-left: 10px;
         pointer-events: none;
+        @media screen and (max-width: 649.98px) {
+            margin-right: 5px;
+            margin-left: 2px;
+        }
     }
 }
 
@@ -347,10 +368,10 @@
     }
 
     &__desc {
-        margin-bottom: 100px;
+        margin-bottom: 140px;
 
         @media screen and (max-width: 1599.98px) {
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
         @media screen and (max-width: 649.98px) {
             margin-bottom: 60px;
