@@ -41,7 +41,8 @@
     }
 
     &__approach,
-    &__get {
+    &__get,
+    &__advantage {
         margin-bottom: 180px;
 
         @media screen and (max-width: 1199.98px) {
@@ -72,12 +73,24 @@
 }
 
 .service-preview {
-    display: flex;
-    align-items: flex-end;
+    $self: &;
     position: relative;
 
-    @media screen and (max-width: 649.98px) {
-        flex-direction: column;
+    &__container {
+        display: flex;
+        align-items: flex-end;
+
+        @media screen and (max-width: 649.98px) {
+            flex-direction: column;
+        }
+
+        #{$self}--website & {
+            margin-bottom: 120px;
+
+            @media screen and (max-width: 649.98px) {
+                margin-bottom: 100px;
+            }
+        }
     }
 
     &__picture {
@@ -110,12 +123,58 @@
             padding-top: 0;
             margin: 0 0 26px;
         }
+
+        #{$self}--website & {
+            width: 34.5%;
+            min-width: 34.5%;
+            margin-right: 7%;
+            margin-bottom: 0;
+            margin-left: -35px;
+
+            @media screen and (max-width: 1599.98px) {
+                width: 39%;
+                min-width: 39%;
+                margin-right: 8%;
+                margin-left: -61px;
+            }
+            @media screen and (max-width: 1199.98px) {
+                width: 43%;
+                min-width: 43%;
+                margin-right: 5%;
+                margin-left: -68px;
+            }
+            @media screen and (max-width: 849.98px) {
+                margin-left: -30px;
+            }
+            @media screen and (max-width: 649.98px) {
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+                margin-bottom: 21px;
+            }
+        }
     }
 
     &__img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    &__content {
+        #{$self}--website & {
+            padding-bottom: 60px;
+
+            @media screen and (max-width: 1599.98px) {
+                padding-bottom: 40px;
+            }
+            @media screen and (max-width: 1199.98px) {
+                padding-bottom: 10px;
+            }
+            @media screen and (max-width: 849.98px) {
+                padding-bottom: 0;
+            }
+        }
     }
 
     &__title {
@@ -137,6 +196,18 @@
         }
         @media screen and (max-width: 849.98px) {
             font-size: 24px;
+        }
+
+        #{$self}--website & {
+            @media screen and (max-width: 1599.98px) {
+                max-width: 420px;
+            }
+            @media screen and (max-width: 1199.98px) {
+                max-width: 340px;
+            }
+            @media screen and (max-width: 849.98px) {
+                max-width: 288px;
+            }
         }
     }
 
@@ -623,6 +694,22 @@
 }
 
 .service-stages {
+    $self: &;
+
+    &--website {
+        margin-bottom: 150px;
+
+        @media screen and (max-width: 649.98px) {
+            margin-bottom: 100px;
+        }
+
+        .title {
+            @media screen and (max-width: 1199.98px) {
+                max-width: 475px;
+            }
+        }
+    }
+
     &__container {
         display: grid;
         grid-template-columns: repeat(3, 325px);
@@ -653,22 +740,35 @@
             margin-left: 0;
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: -20px;
-            left: 48px;
-            background: url("../img/line.png") top/100% 100% no-repeat;
-            width: 1067px;
-            height: 410px;
-            z-index: -1;
-
+        #{$self}--website & {
             @media screen and (max-width: 1599.98px) {
-                background-image: url("../img/line-1280.png");
+                grid-gap: 115px 162px;
+            }
+            @media screen and (max-width: 1199.98px) {
+                grid-template-columns: repeat(2, 320px);
+                grid-gap: 73px 93px;
+                margin-top: 80px;
+                margin-left: 0;
+            }
+            @media screen and (max-width: 849.98px) {
+                grid-column-gap: 40px;
+            }
+            @media screen and (max-width: 649.98px) {
+                grid-template-columns: 1fr;
+                grid-row-gap: 0;
+            }
+        }
+
+        &::before {
+            @media screen and (max-width: 1599.98px) {
+                content: "";
+                position: absolute;
+                background: url("../img/line-1280.png") top/100% 100% no-repeat;
                 width: 1000px;
                 height: 638px;
                 top: -2px;
                 left: -88px;
+                z-index: -1;
             }
             @media screen and (max-width: 1199.98px) {
                 width: 830px;
@@ -683,12 +783,107 @@
             @media screen and (max-width: 649.98px) {
                 display: none;
             }
+
+            #{$self}--website & {
+                @media screen and (max-width: 1599.98px) {
+                    top: -23px;
+                    left: -95px;
+                    background-image: url("../img/line-website1280.png");
+                    width: 1109px;
+                    height: 934px;
+                }
+                @media screen and (max-width: 1199.98px) {
+                    top: -16px;
+                    left: -78px;
+                    width: 940px;
+                    height: 820px;
+                }
+                @media screen and (max-width: 849.98px) {
+                    width: 830px;
+                    left: -71px;
+                }
+            }
         }
     }
 
     &__box {
+        position: relative;
+
+        @media screen and (max-width: 649.98px) {
+            display: grid;
+            grid-template-columns: 57px 1fr;
+            grid-gap: 16px 20px;
+            align-items: center;
+            position: relative;
+
+            &:not(:last-child) {
+                padding-bottom: 60px;
+            }
+
+            &:not(:last-child)::before {
+                content: "";
+                position: absolute;
+                top: 53px;
+                bottom: -1px;
+                left: 40px;
+                background: url("../img/line-375.png") top/100% 100% no-repeat;
+                width: 10px;
+                z-index: -1;
+
+                #{$self}--website & {
+                    background-image: url("../img/line-375-2.png");
+                    width: 22px;
+                }
+            }
+
+            &:nth-child(even) {
+                &::before {
+                    transform: scaleX(-1);
+                    left: 5px;
+
+                    #{$self}--website & {
+                        transform: scaleX(1);
+                        left: 33px;
+                    }
+                }
+            }
+
+            &:nth-child(odd) {
+                &::before {
+                    #{$self}--website & {
+                        transform: scaleX(-1);
+                        left: 0px;
+                    }
+                }
+            }
+        }
+
+        #{$self}__number {
+            &::before {
+                content: "";
+                position: absolute;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                z-index: -1;
+
+                @media screen and (max-width: 1599.98px) {
+                    display: none;
+                }
+            }
+        }
+
         &:nth-child(1) {
             order: 1;
+
+            #{$self}__number {
+                &::before {
+                    width: 923px;
+                    height: 93px;
+                    top: -20px;
+                    left: 45px;
+                    background-image: url("../img/line-top.png");
+                }
+            }
         }
         &:nth-child(2) {
             order: 2;
@@ -701,6 +896,15 @@
             }
             @media screen and (max-width: 649.98px) {
                 order: 3;
+            }
+
+            #{$self}--website & {
+                @media screen and (max-width: 1599.98px) {
+                    transform: translateX(-25px);
+                }
+                @media screen and (max-width: 649.98px) {
+                    transform: translateX(0);
+                }
             }
         }
         &:nth-child(4) {
@@ -719,32 +923,58 @@
             @media screen and (max-width: 1599.98px) {
                 order: 5;
             }
-        }
 
-        @media screen and (max-width: 649.98px) {
-            display: flex;
-            align-items: center;
-            position: relative;
-
-            &:not(:last-child) {
-                padding-bottom: 60px;
+            #{$self}--website & {
+                @media screen and (max-width: 1599.98px) and (min-width: 650px) {
+                    display: grid;
+                    grid-template-columns: 60px 1fr;
+                    grid-gap: 24px;
+                    align-items: center;
+                    transform: translateX(156px);
+                    grid-column: 1/3;
+                    max-width: 472px;
+                }
+                @media screen and (max-width: 1199.98px) {
+                    transform: translate(138px, 10px);
+                }
+                @media screen and (max-width: 849.98px) {
+                    transform: translate(120px, 10px);
+                }
+                @media screen and (max-width: 649.98px) {
+                    transform: translate(0, 0);
+                }
             }
 
-            &::before {
-                content: "";
-                position: absolute;
-                top: 53px;
-                bottom: -1px;
-                left: 40px;
-                background: url("../img/line-375.png") top/100% 100% no-repeat;
-                width: 10px;
-                z-index: -1;
-            }
-
-            &:nth-child(even) {
+            #{$self}__number {
                 &::before {
-                    transform: scaleX(-1);
-                    left: 5px;
+                    width: 1110px;
+                    height: 255px;
+                    top: -200px;
+                    left: 54px;
+                    background-image: url("../img/line-bottom.png");
+                }
+
+                #{$self}--website & {
+                    @media screen and (max-width: 1599.98px) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            #{$self}__name {
+                #{$self}--website & {
+                    @media screen and (max-width: 1599.98px) {
+                        margin-bottom: 0;
+                        max-width: 300px;
+                    }
+                }
+            }
+
+            #{$self}__text {
+                #{$self}--website & {
+                    @media screen and (max-width: 1599.98px) and (min-width: 650px) {
+                        grid-column: 1/3;
+                    }
                 }
             }
         }
@@ -754,6 +984,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
         width: 60px;
         height: 60px;
         background-color: #022450;
@@ -772,7 +1003,6 @@
             margin-bottom: 24px;
         }
         @media screen and (max-width: 649.98px) {
-            margin-right: 24px;
             margin-bottom: 0;
         }
     }
@@ -785,6 +1015,27 @@
 
         @media screen and (max-width: 1199.98px) {
             font-size: 16px;
+        }
+    }
+
+    &__name {
+        display: block;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 649.98px) {
+            grid-area: 1/2/2/3;
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        line-height: 168%;
+        @media screen and (max-width: 649.98px) {
+            grid-area: 2/2/3/3;
+            font-size: 14px;
         }
     }
 }
@@ -922,5 +1173,358 @@
         @media screen and (max-width: 649.98px) {
             padding-top: 24px;
         }
+    }
+}
+
+.service-preview-desc {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 649.98px) {
+        flex-direction: column;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 64px;
+        margin-right: 210px;
+
+        @media screen and (max-width: 1599.98px) {
+            margin-right: 19%;
+            padding-left: 40px;
+        }
+        @media screen and (max-width: 1199.98px) {
+            margin-right: 13%;
+        }
+        @media screen and (max-width: 849.98px) {
+            margin-right: 8%;
+        }
+        @media screen and (max-width: 649.98px) {
+            margin-right: 0;
+            margin-bottom: 60px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 3px;
+            background-color: #4b91d8;
+            width: 3px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 500;
+        width: max-content;
+        transition: opacity 0.3s;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 20px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+
+            @media screen and (max-width: 1599.98px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__icon {
+        width: 28px;
+        height: auto;
+        fill: transparent;
+        stroke: #fff;
+        margin-left: 10px;
+
+        @media screen and (max-width: 1599.98px) {
+            width: 26px;
+        }
+    }
+
+    &__text {
+        line-height: 168%;
+        max-width: 480px;
+
+        @media screen and (max-width: 1199.98px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.text-block {
+    position: relative;
+    padding-left: 32px;
+    font-size: 24px;
+    line-height: 168%;
+    max-width: 990px;
+
+    @media screen and (max-width: 1599.98px) {
+        font-size: 20px;
+        max-width: 725px;
+        padding-left: 24px;
+    }
+    @media screen and (max-width: 649.98px) {
+        padding-top: 24px;
+        padding-left: 0;
+        font-size: 14px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 3px;
+        background-color: #4b91d8;
+        width: 3px;
+
+        @media screen and (max-width: 649.98px) {
+            width: 80px;
+            height: 4px;
+        }
+    }
+}
+
+.service-advantage {
+    &__title {
+        margin-bottom: 60px;
+        max-width: 745px;
+
+        @media screen and (max-width: 1599.98px) {
+            max-width: 700px;
+        }
+        @media screen and (max-width: 1199.98px) {
+            max-width: 600px;
+        }
+        @media screen and (max-width: 649.98px) {
+            font-size: 32px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 100px;
+
+        @media screen and (max-width: 649.98px) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        grid-gap: 36px;
+
+        @media screen and (max-width: 1599.98px) {
+            grid-template-columns: repeat(2, 0.5fr);
+        }
+        @media screen and (max-width: 1199.98px) {
+            grid-gap: 24px;
+        }
+        @media screen and (max-width: 649.98px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        @media screen and (min-width: 1600px) {
+            min-height: 491px;
+        }
+
+        &:nth-child(5) {
+            align-self: self-start;
+
+            @media screen and (min-width: 1600px) {
+                grid-area: 1/3/3/4;
+                min-height: 642px;
+            }
+            @media screen and (max-width: 1599.98px) {
+                grid-column: 1/3;
+            }
+            @media screen and (max-width: 649.98px) {
+                grid-column: 1/2;
+            }
+        }
+    }
+}
+
+.service-advantage-card {
+    $self: &;
+    padding: 50px 68px 60px;
+    background-color: #0c2e5a;
+    border-radius: 10px;
+
+    @media screen and (max-width: 1199.98px) {
+        padding-right: 38px;
+        padding-bottom: 75px;
+        padding-left: 40px;
+    }
+    @media screen and (max-width: 649.98px) {
+        padding-right: 35px;
+        padding-bottom: 70px;
+        padding-left: 35px;
+    }
+
+    &:nth-child(5) {
+        padding-right: 49px;
+        padding-left: 46px;
+
+        @media screen and (max-width: 1599.98px) and (min-width: 650px) {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            align-items: center;
+            grid-gap: 32px;
+        }
+        @media screen and (max-width: 649.98px) {
+            padding-right: 35px;
+            padding-bottom: 70px;
+            padding-left: 35px;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        min-height: 106px;
+        margin-bottom: 20px;
+
+        #{$self}:nth-child(5) & {
+            @media screen and (max-width: 1599.98px) and (min-width: 650px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__icon {
+        fill: transparent;
+    }
+
+    &__name {
+        display: block;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 1199.98px) {
+            margin-bottom: 16px;
+        }
+
+        #{$self}:nth-child(5) & {
+            @media screen and (max-width: 1599.98px) and (min-width: 650px) {
+                margin-bottom: 0;
+                max-width: 320px;
+            }
+        }
+    }
+
+    &__text {
+        line-height: 168%;
+
+        #{$self}:nth-child(5) & {
+            @media screen and (max-width: 1599.98px) and (min-width: 650px) {
+                grid-column: 1/3;
+                max-width: 750px;
+            }
+            @media screen and (max-width: 1199.98px) {
+                max-width: 620px;
+            }
+        }
+
+        @media screen and (max-width: 1199.98px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.service-cost-website {
+    &__title {
+        max-width: 800px;
+        margin-bottom: 18px;
+
+        @media screen and (max-width: 1599.98px) {
+            max-width: 650px;
+            margin-bottom: 32px;
+        }
+        @media screen and (max-width: 1199.98px) {
+            max-width: 600px;
+            margin-bottom: 48px;
+        }
+        @media screen and (max-width: 649.98px) {
+            font-size: 32px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-end;
+
+        @media screen and (max-width: 1599.98px) {
+            align-items: center;
+        }
+        @media screen and (max-width: 649.98px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__text {
+        line-height: 168%;
+        max-width: 634px;
+        margin-right: 7%;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 1599.98px) {
+            margin-right: 2.5%;
+            margin-bottom: 0;
+        }
+        @media screen and (max-width: 1199.98px) {
+            font-size: 14px;
+            max-width: 363px;
+            margin-right: 6.5%;
+        }
+        @media screen and (max-width: 649.98px) {
+            margin-right: 0;
+        }
+    }
+
+    &__picture {
+        width: 45%;
+        min-width: 45%;
+
+        @media screen and (max-width: 1599.98px) {
+            width: 60%;
+            min-width: 60%;
+            margin-right: -109px;
+        }
+        @media screen and (max-width: 1199.98px) {
+            width: 49%;
+            min-width: 49%;
+            margin-right: -40px;
+        }
+        @media screen and (max-width: 649.98px) {
+            width: calc(100% + 30px);
+            margin-right: 10px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }

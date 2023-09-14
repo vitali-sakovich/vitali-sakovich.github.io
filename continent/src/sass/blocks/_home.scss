@@ -928,6 +928,7 @@
     &__title {
         font-size: 54px;
         font-weight: 600;
+        color: var(--black-color);
 
         @media screen and (max-width: 899.98px) {
             font-size: 34px;
@@ -944,6 +945,7 @@
         font-size: 18px;
         line-height: 26px;
         max-width: 370px;
+        color: var(--black-color);
 
         @media screen and (max-width: 899.98px) {
             max-width: 230px;

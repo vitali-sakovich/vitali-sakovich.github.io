@@ -2708,6 +2708,7 @@ button {
 .clients__title {
   font-size: 54px;
   font-weight: 600;
+  color: var(--black-color);
 }
 @media screen and (max-width: 899.98px) {
   .clients__title {
@@ -2726,6 +2727,7 @@ button {
   font-size: 18px;
   line-height: 26px;
   max-width: 370px;
+  color: var(--black-color);
 }
 @media screen and (max-width: 899.98px) {
   .clients__text {
@@ -5024,7 +5026,7 @@ button {
   min-width: 250px;
   height: 48px;
   border-radius: 3px;
-  background-color: var(--primary-color-6);
+  background-color: var(--primary-color-5);
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -5683,7 +5685,7 @@ button {
 }
 
 .warehouses-desc {
-  background-color: var(--primary-color-11);
+  background-color: var(--primary-color-10);
 }
 .warehouses-desc__head {
   padding: 75px 20px 75px 8.6vw;
@@ -6094,7 +6096,7 @@ button {
   align-content: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--primary-color-10);
+  background-color: var(--primary-color-13);
   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
   padding-top: 200px;

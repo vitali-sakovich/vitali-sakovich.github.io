@@ -1,6 +1,6 @@
 .warehouses-desc {
     $self: &;
-    background-color: var(--primary-color-11);
+    background-color: var(--primary-color-10);
 
     &__head {
         padding: 75px 20px 75px 8.6vw;
@@ -392,7 +392,7 @@
         align-content: center;
         position: relative;
         overflow: hidden;
-        background-color: var(--primary-color-10);
+        background-color: var(--primary-color-13);
         clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
         padding-top: 200px;
         margin-top: -200px;
