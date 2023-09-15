@@ -1,0 +1,233 @@
+.achievements {
+    display: flex;
+    padding-top: 50px;
+    padding-right: 16%;
+    padding-left: 8.3%;
+
+    @media screen and (max-width: 1599.98px) {
+        padding-right: 15%;
+    }
+    @media screen and (max-width: 1199.98px) {
+        padding-top: 90px;
+    }
+    @media screen and (max-width: 849.98px) {
+        padding-top: 60px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @media screen and (max-width: 649.98px) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    &__picture {
+        position: relative;
+        width: 454px;
+        min-width: 454px;
+        margin-right: 10.7%;
+
+        @media screen and (max-width: 1799.98px) {
+            margin-right: 6%;
+        }
+        @media screen and (max-width: 1599.98px) {
+            width: 418px;
+            min-width: 418px;
+            margin-left: -85px;
+            margin-right: 5%;
+        }
+        @media screen and (max-width: 1199.98px) {
+            width: 46%;
+            min-width: 46%;
+            margin-top: -20px;
+            margin-right: 0;
+            margin-left: -80px;
+        }
+        @media screen and (max-width: 849.98px) {
+            width: 40%;
+            min-width: 40%;
+            margin-left: -60px;
+        }
+        @media screen and (max-width: 649.98px) {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        top: 90px;
+
+        @media screen and (max-width: 1599.98px) {
+            top: 20px;
+        }
+    }
+
+    &__year {
+        background-color: #00346f;
+        padding: 10px 32px;
+        font-size: 42px;
+        font-weight: 500;
+        margin-bottom: 70px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 32px;
+        }
+        @media screen and (max-width: 1199.98px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__block {
+        width: 100%;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 60px;
+
+            @media screen and (max-width: 1599.98px) {
+                margin-bottom: 50px;
+            }
+            @media screen and (max-width: 1199.98px) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__box {
+        &:not(:last-child) {
+            margin-bottom: 130px;
+
+            @media screen and (max-width: 1199.98px) {
+                margin-bottom: 118px;
+            }
+            @media screen and (max-width: 649.98px) {
+                margin-bottom: 85px;
+            }
+        }
+    }
+}
+
+.achievements-item {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 32px;
+
+    &--gold {
+        @media screen and (max-width: 649.98px) {
+            --size-label: 21px;
+        }
+    }
+
+    @media screen and (max-width: 649.98px) {
+        padding-left: 0;
+    }
+
+    &__place {
+        margin-right: 11%;
+        width: 200px;
+        min-width: 200px;
+
+        @media screen and (max-width: 1599.98px) {
+            min-width: 178px;
+            width: 178px;
+            margin-right: 6.6%;
+        }
+        @media screen and (max-width: 1199.98px) {
+            min-width: 160px;
+            width: 160px;
+        }
+        @media screen and (max-width: 849.98px) {
+            min-width: 140px;
+            width: 140px;
+        }
+        @media screen and (max-width: 649.98px) {
+            min-width: 130px;
+            width: 130px;
+            margin-right: 8%;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+
+        @media screen and (max-width: 649.98px) {
+            padding-top: 2px;
+        }
+    }
+
+    &__sity {
+        display: flex;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 8px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__name {
+        display: flex;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+    }
+
+    &__categorization {
+        font-size: 20px;
+        color: #2993de;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.achievements-item-place {
+    display: flex;
+    align-items: flex-start;
+
+    &__img {
+        margin-right: 1px;
+        width: 34px;
+        height: auto;
+        margin-top: -5px;
+
+        @media screen and (max-width: 1599.98px) {
+            width: 30px;
+            margin-right: 4px;
+        }
+        @media screen and (max-width: 849.98px) {
+            margin-top: -10px;
+        }
+        @media screen and (max-width: 849.98px) {
+            width: 27px;
+            margin-right: 1px;
+        }
+    }
+
+    &__label {
+        font-size: var(--size-label, 36px);
+        font-weight: 600;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: var(--size-label, 32px);
+        }
+        @media screen and (max-width: 1199.98px) {
+            font-size: var(--size-label, 28px);
+        }
+        @media screen and (max-width: 849.98px) {
+            font-size: var(--size-label, 24px);
+        }
+    }
+}
