@@ -250,3 +250,41 @@ function openModal(modal) {
         });
     });
 })();
+
+(() => {
+    const container = document.querySelector(".team__container");
+    const popupTeam = document.querySelector(".popup-team");
+    if (!popupTeam || !container) return;
+    const namePopup = popupTeam.querySelector(".popup-team__name");
+    const positionPopup = popupTeam.querySelector(".popup-team__position");
+    const textPopup = popupTeam.querySelector(".popup-team__text");
+    const imgJpgPopup = popupTeam.querySelector(".popup-team__img");
+    const imgWebpPopup = popupTeam.querySelector(".popup-team__picture source");
+
+    container.addEventListener("click", (e) => {
+        let btn = e.target.closest(".team-card");
+
+        if (!btn) return;
+
+        if (!container.contains(btn)) return;
+
+        changePopupTeam(btn);
+    });
+
+    function changePopupTeam(item) {
+        const name = item.querySelector(".team-card__name");
+        const position = item.querySelector(".team-card__position");
+        const text = item.querySelector(".team-card__text");
+        const imgJpg = item.querySelector(".team-card__img");
+        const imgWebp = item.querySelector(".team-card__picture source");
+
+        namePopup.innerHTML = name.innerHTML;
+        positionPopup.innerHTML = position.innerHTML;
+        textPopup.innerHTML = text.innerHTML;
+        imgWebpPopup.srcset = imgWebp.srcset;
+        imgJpgPopup.src = imgJpg.src;
+        imgJpgPopup.alt = name.innerHTML;
+
+        openModal(document.querySelector(".popup--team"));
+    }
+})();

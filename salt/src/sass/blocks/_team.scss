@@ -150,6 +150,7 @@
 
 .team-card {
     display: grid;
+    padding: 0;
 
     &:nth-child(3n):not(:nth-child(6n)),
     &:nth-child(4n):not(:nth-child(8n)):not(:nth-child(12n)):not(
@@ -158,6 +159,8 @@
     &:nth-child(10n):not(:nth-child(20n)):not(:nth-child(30n)),
     &:nth-child(16n),
     &:nth-child(22n) {
+        --team-card-padding: 32px;
+        
         @media screen and (max-width: 1599.98px) {
             --team-card-padding: 24px;
             --team-card-size-name: 36px;
@@ -222,6 +225,7 @@
         justify-content: flex-end;
         position: relative;
         grid-area: -1/1;
+        height: 100%;
         padding: var(--team-card-padding, 24px);
         opacity: var(--opacity-content-team, 0);
         transition: opacity 0.3s;
@@ -260,8 +264,10 @@
     }
 
     &__position {
+        display: block;
         font-size: 20px;
         line-height: 158%;
+        text-align: left;
 
         @media screen and (max-width: 1599.98px) {
             font-size: 16px;
@@ -269,6 +275,10 @@
         @media screen and (max-width: 1199.98px) {
             font-size: 14px;
         }
+    }
+
+    &__text {
+        display: none;
     }
 }
 
