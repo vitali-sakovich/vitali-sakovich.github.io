@@ -20,13 +20,12 @@
     }
 
     &__overlay {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: #194073;
-        opacity: 0.8;
+        background-color: rgba(0, 0, 0, 0.6);
     }
 
     &__block {
@@ -39,6 +38,7 @@
 
         @media screen and (max-width: 649.98px) {
             padding: 40px 20px;
+            max-height: calc(100vh - 30px);
         }
 
         &--team {
@@ -46,7 +46,7 @@
             padding: 100px 100px 130px;
 
             @media screen and (max-width: 1599.98px) {
-                padding: 67px 67px 109px;
+                padding: 50px 67px 85px;
                 max-width: 1102px;
             }
             @media screen and (max-width: 1199.98px) {
@@ -55,6 +55,8 @@
             }
             @media screen and (max-width: 649.98px) {
                 padding: 40px 24px 70px;
+                max-height: calc(100vh - 30px);
+                overflow-y: auto;
             }
         }
     }
@@ -190,8 +192,9 @@
         }
         @media screen and (max-width: 649.98px) {
             width: 100%;
+            min-width: 0;
             height: 79vw;
-            min-height: 0;
+            min-height: 79vw;
             margin-right: 0;
             margin-bottom: 32px;
         }

@@ -4860,11 +4860,6 @@ a {
   display: flex;
   margin-bottom: 100px;
 }
-@media screen and (max-width: 1599.98px) {
-  .service-approach__container {
-    margin-bottom: 120px;
-  }
-}
 @media screen and (max-width: 849.98px) {
   .service-approach__container {
     -webkit-box-orient: vertical;
@@ -4891,8 +4886,9 @@ a {
 }
 @media screen and (max-width: 1599.98px) {
   .service-approach__picture {
-    width: 77%;
-    min-width: 77%;
+    width: 740px;
+    min-width: 740px;
+    max-height: 1022px;
     margin-top: -100px;
     margin-right: -29%;
   }
@@ -4901,6 +4897,7 @@ a {
   .service-approach__picture {
     width: 82%;
     min-width: 82%;
+    max-height: 885px;
     margin-top: -130px;
   }
 }
@@ -4909,6 +4906,7 @@ a {
     margin-top: -20px;
     margin-right: auto;
     margin-left: auto;
+    max-height: 100%;
   }
 }
 @media screen and (max-width: 649.98px) {
@@ -4937,11 +4935,17 @@ a {
 @media screen and (max-width: 1599.98px) {
   .service-approach__block {
     margin-right: 5%;
+    max-width: 450px;
   }
 }
 @media screen and (max-width: 1199.98px) {
   .service-approach__block {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 849.98px) {
+  .service-approach__block {
+    max-width: 100%;
   }
 }
 .service-approach__item:not(:last-child) {
@@ -4993,6 +4997,11 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.service-approach-item[href]:hover {
+  opacity: 0.7;
 }
 .service-approach-item__image {
   width: 60px;
@@ -6630,13 +6639,12 @@ a {
   padding: 15px;
 }
 .popup__overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #194073;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .popup__block {
   position: relative;
@@ -6649,6 +6657,7 @@ a {
 @media screen and (max-width: 649.98px) {
   .popup__block {
     padding: 40px 20px;
+    max-height: calc(100vh - 30px);
   }
 }
 .popup__block--team {
@@ -6657,7 +6666,7 @@ a {
 }
 @media screen and (max-width: 1599.98px) {
   .popup__block--team {
-    padding: 67px 67px 109px;
+    padding: 50px 67px 85px;
     max-width: 1102px;
   }
 }
@@ -6670,6 +6679,8 @@ a {
 @media screen and (max-width: 649.98px) {
   .popup__block--team {
     padding: 40px 24px 70px;
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
   }
 }
 .popup__head {
@@ -6841,8 +6852,9 @@ a {
 @media screen and (max-width: 649.98px) {
   .popup-team__picture {
     width: 100%;
+    min-width: 0;
     height: 79vw;
-    min-height: 0;
+    min-height: 79vw;
     margin-right: 0;
     margin-bottom: 32px;
   }
