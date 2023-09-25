@@ -2643,7 +2643,7 @@ button {
 }
 
 .clients {
-  background-color: var(--primary-on-color);
+  background: url("../img/bg-clients.jpg") center/cover no-repeat;
   padding: 100px 8.3vw;
 }
 @media screen and (max-width: 1700px) {
@@ -2669,15 +2669,7 @@ button {
   }
 }
 .clients__slider {
-  padding-right: 35px;
-  padding-left: 35px;
   min-height: 50px;
-}
-@media screen and (max-width: 899.98px) {
-  .clients__slider {
-    margin-right: 6%;
-    margin-left: 6%;
-  }
 }
 .clients__head {
   display: -webkit-box;
@@ -2708,7 +2700,7 @@ button {
 .clients__title {
   font-size: 54px;
   font-weight: 600;
-  color: var(--black-color);
+  color: var(--primary-on-color);
 }
 @media screen and (max-width: 899.98px) {
   .clients__title {
@@ -2727,7 +2719,7 @@ button {
   font-size: 18px;
   line-height: 26px;
   max-width: 370px;
-  color: var(--black-color);
+  color: var(--primary-on-color);
 }
 @media screen and (max-width: 899.98px) {
   .clients__text {
@@ -2739,10 +2731,21 @@ button {
     max-width: 100%;
   }
 }
+.clients__container {
+  position: relative;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+@media screen and (max-width: 899.98px) {
+  .clients__container {
+    margin-right: 6%;
+    margin-left: 6%;
+  }
+}
 
 .clients-slider-btn {
   height: 100%;
-  background-color: var(--primary-on-color);
+  background-color: transparent;
   --swiper-navigation-top-offset: 40%;
   margin-top: 0 !important;
   top: 50%;
@@ -2751,7 +2754,7 @@ button {
   transform: translateY(-50%);
 }
 .clients-slider-btn:hover {
-  --icon-fill: var(--black-color);
+  --icon-fill: var(--primary-on-color);
 }
 .clients-slider-btn::after {
   display: none;
