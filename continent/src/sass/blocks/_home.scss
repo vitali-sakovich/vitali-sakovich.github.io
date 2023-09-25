@@ -1320,6 +1320,7 @@
     }
 
     &__clear {
+        --fill-icon: var(--secondary-color-5);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1353,7 +1354,7 @@
     }
 
     &__icon {
-        fill: var(--fill-icon, --secondary-color-5);
+        fill: var(--fill-icon);
         transition: fill 0.3s;
     }
 }
