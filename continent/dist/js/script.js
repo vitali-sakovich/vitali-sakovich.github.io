@@ -1,3 +1,18 @@
+(() => {
+    const header = document.querySelector(".header");
+
+    function scrollTop() {
+        if (window.pageYOffset > 0) {
+            header.classList.add("header--is-fixed");
+        } else {
+            header.classList.remove("header--is-fixed");
+        }
+    }
+    scrollTop();
+
+    document.addEventListener("scroll", scrollTop);
+})();
+
 Fancybox.bind("[data-fancybox]", {});
 
 if (document.querySelector(".vacancies-select__select")) {

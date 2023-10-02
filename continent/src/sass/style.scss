@@ -20,6 +20,9 @@
     --primary-color-15: #57b9ff;
     --primary-color-16: #0e1e7d;
     --primary-color-17: #5b5fa7;
+    --primary-color-18: rgba(11, 16, 38, 0.85);
+    --primary-color-19: #26337b;
+    --primary-color-20: #384593;
     --primary-on-color: #fff;
     --gray-color: #6f6f6f;
     --gray-color-2: #d8d8d8;
@@ -40,6 +43,7 @@
     --secondary-color-11: rgba(255, 255, 255, 0.17);
     --secondary-color-12: rgba(255, 255, 255, 0.3);
     --secondary-color-13: rgba(91, 95, 167, 0.469);
+    --secondary-color-14: rgba(0, 0, 0, 0.22);
     --error-color: #d61a1a;
 }
 
@@ -68,6 +72,11 @@ body {
     flex-direction: column;
     min-height: 100%;
     background-color: var(--primary-color);
+    padding-top: 117px;
+
+    @media screen and (max-width: 899.98px) {
+        padding-top: 71px;
+    }
 
     &.hidden {
         overflow: hidden;

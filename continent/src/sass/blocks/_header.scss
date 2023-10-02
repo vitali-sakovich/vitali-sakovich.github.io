@@ -1,6 +1,22 @@
 .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     padding: 27px 8.3% 32px;
-    background-color: var(--primary-on-color);
+    background-color: var(--header-bg);
+    transition: background-color 0.2s;
+    will-change: background-color;
+    z-index: 100;
+
+    @media screen and (min-width: 900px) {
+        --header-bg: var(--primary-color-18);
+        --header-color: var(--primary-on-color);
+        --header-dropdown-bg: var(--primary-color-19);
+        --header-dropdown-link-hover: var(--primary-color-20);
+        --header-phone-color: var(--primary-on-color);
+        --dropdown-filter: drop-shadow(0 2px 14px var(--secondary-color-11));
+    }
 
     @media screen and (max-width: 1500px) {
         padding-left: 3.8%;
@@ -15,6 +31,31 @@
     }
     @media screen and (max-width: 899.98px) {
         padding: 17px 26px 15px 20px;
+        --header-bg: var(--primary-on-color);
+        --header-color: var(--primary-color-4);
+        --header-dropdown-bg: var(--primary-on-color);
+        --header-dropdown-link-hover: var(--gray-color-3);
+        --header-phone-color: var(--gray-color);
+        --logo-default: 0;
+        --logo-fixed: 1;
+    }
+
+    &--is-fixed {
+        @media screen and (min-width: 900px) {
+            --header-bg: var(--primary-on-color);
+            --header-color: var(--primary-color-4);
+            --header-dropdown-bg: var(--primary-on-color);
+            --header-dropdown-link-hover: var(--gray-color-3);
+            --header-phone-color: var(--gray-color);
+            --logo-default: 0;
+            --logo-fixed: 1;
+            --dropdown-filter: drop-shadow(
+                0 32px 82px var(--secondary-color-14)
+            );
+            --header-hidden-item: none;
+            padding-top: 11px;
+            padding-bottom: 8px;
+        }
     }
 
     &__container {
@@ -120,13 +161,27 @@
 }
 
 .header-logo {
+    display: grid;
     &__img {
+        grid-area: -1/1;
         width: 100%;
         height: auto;
+        transition: opacity 0.2s;
+        will-change: opacity;
+
+        &--default {
+            opacity: var(--logo-default);
+        }
+
+        &--fixed {
+            opacity: var(--logo-fixed, 0);
+        }
     }
 }
 
 .header-lk {
+    display: var(--header-hidden-item, block);
+
     @media screen and (max-width: 899.98px) {
         display: flex;
         justify-content: center;
@@ -134,10 +189,11 @@
         border-bottom: 1px solid var(--gray-color-2);
     }
     &__link {
-        color: var(--primary-color-4);
+        color: var(--header-color);
         font-size: 14px;
-        transition: opacity 0.3s;
+        transition: opacity 0.3s, color 0.2s;
         text-align: center;
+        will-change: color;
 
         &:not(:last-child) {
             margin-right: 40px;
@@ -218,8 +274,9 @@
         align-items: center;
         cursor: pointer;
         font-size: 17px;
-        color: var(--primary-color-4);
-        transition: opacity 0.3s;
+        color: var(--header-color);
+        transition: opacity 0.3s, color 0.2s;
+        will-change: color;
 
         &:hover {
             opacity: 0.7;
@@ -232,8 +289,10 @@
     }
 
     &__icon {
-        fill: var(--primary-color-4);
+        fill: var(--header-color);
         margin-left: 8px;
+        transition: fill 0.2s;
+        will-change: fill;
 
         @media screen and (max-width: 899.98px) {
             display: none;
@@ -255,11 +314,13 @@
     }
 
     &__btn {
+        display: var(--header-hidden-item, block);
         background: none;
-        color: var(--primary-color-4);
+        color: var(--header-color);
         font-size: 14px;
         margin-bottom: 18px;
-        transition: opacity 0.3s;
+        transition: opacity 0.3s, color 0.2s;
+        will-change: color;
 
         @media screen and (max-width: 899.98px) {
             margin-bottom: 0;
@@ -272,9 +333,10 @@
     }
 
     &__link {
-        color: var(--gray-color);
+        color: var(--header-phone-color);
         font-size: 20px;
-        transition: opacity 0.3s;
+        transition: opacity 0.3s, color 0.2s;
+        will-change: color;
 
         &:hover {
             opacity: 0.7;
@@ -285,7 +347,7 @@
 .nav-dropdown {
     position: absolute;
     top: 100%;
-    left: 77%;
+    left: 97%;
     transform: translateX(-50%);
     padding-top: 15px;
     display: var(--nav-dropdown, none);
@@ -303,9 +365,9 @@
 
     &__block {
         @media screen and (min-width: 899.99px) {
-            background-color: var(--primary-on-color);
-            border-radius: 10px;
-            filter: drop-shadow(0 10px 10px var(--secondary-color));
+            background-color: var(--header-dropdown-bg);
+            border-radius: 5px;
+            filter: var(--dropdown-filter);
             min-width: 260px;
             overflow: hidden;
         }
@@ -318,13 +380,13 @@
     &__link {
         display: block;
         font-size: 17px;
-        color: var(--primary-color-4);
-        transition: background-color 0.3s;
-        padding: 13px 30px;
+        color: var(--header-color);
+        transition: background-color 0.2s;
+        padding: 15px 20px;
 
         &:hover {
             @media screen and (min-width: 899.99px) {
-                background-color: var(--gray-color-3);
+                background-color: var(--header-dropdown-link-hover);
             }
         }
 

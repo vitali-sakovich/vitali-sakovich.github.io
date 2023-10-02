@@ -389,6 +389,9 @@ template {
   --primary-color-15: #57b9ff;
   --primary-color-16: #0e1e7d;
   --primary-color-17: #5b5fa7;
+  --primary-color-18: rgba(11, 16, 38, 0.85);
+  --primary-color-19: #26337b;
+  --primary-color-20: #384593;
   --primary-on-color: #fff;
   --gray-color: #6f6f6f;
   --gray-color-2: #d8d8d8;
@@ -409,6 +412,7 @@ template {
   --secondary-color-11: rgba(255, 255, 255, 0.17);
   --secondary-color-12: rgba(255, 255, 255, 0.3);
   --secondary-color-13: rgba(91, 95, 167, 0.469);
+  --secondary-color-14: rgba(0, 0, 0, 0.22);
   --error-color: #d61a1a;
 }
 
@@ -437,6 +441,12 @@ body {
   flex-direction: column;
   min-height: 100%;
   background-color: var(--primary-color);
+  padding-top: 117px;
+}
+@media screen and (max-width: 899.98px) {
+  body {
+    padding-top: 71px;
+  }
 }
 body.hidden {
   overflow: hidden;
@@ -564,8 +574,26 @@ button {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   padding: 27px 8.3% 32px;
-  background-color: var(--primary-on-color);
+  background-color: var(--header-bg);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  will-change: background-color;
+  z-index: 100;
+}
+@media screen and (min-width: 900px) {
+  .header {
+    --header-bg: var(--primary-color-18);
+    --header-color: var(--primary-on-color);
+    --header-dropdown-bg: var(--primary-color-19);
+    --header-dropdown-link-hover: var(--primary-color-20);
+    --header-phone-color: var(--primary-on-color);
+    --dropdown-filter: drop-shadow(0 2px 14px var(--secondary-color-11));
+  }
 }
 @media screen and (max-width: 1500px) {
   .header {
@@ -587,6 +615,30 @@ button {
 @media screen and (max-width: 899.98px) {
   .header {
     padding: 17px 26px 15px 20px;
+    --header-bg: var(--primary-on-color);
+    --header-color: var(--primary-color-4);
+    --header-dropdown-bg: var(--primary-on-color);
+    --header-dropdown-link-hover: var(--gray-color-3);
+    --header-phone-color: var(--gray-color);
+    --logo-default: 0;
+    --logo-fixed: 1;
+  }
+}
+@media screen and (min-width: 900px) {
+  .header--is-fixed {
+    --header-bg: var(--primary-on-color);
+    --header-color: var(--primary-color-4);
+    --header-dropdown-bg: var(--primary-on-color);
+    --header-dropdown-link-hover: var(--gray-color-3);
+    --header-phone-color: var(--gray-color);
+    --logo-default: 0;
+    --logo-fixed: 1;
+    --dropdown-filter: drop-shadow(
+        0 32px 82px var(--secondary-color-14)
+    );
+    --header-hidden-item: none;
+    padding-top: 11px;
+    padding-bottom: 8px;
   }
 }
 .header__container {
@@ -734,11 +786,27 @@ button {
     opacity: 0;
   }
 }
+.header-logo {
+  display: grid;
+}
 .header-logo__img {
+  grid-area: -1/1;
   width: 100%;
   height: auto;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  will-change: opacity;
+}
+.header-logo__img--default {
+  opacity: var(--logo-default);
+}
+.header-logo__img--fixed {
+  opacity: var(--logo-fixed, 0);
 }
 
+.header-lk {
+  display: var(--header-hidden-item, block);
+}
 @media screen and (max-width: 899.98px) {
   .header-lk {
     display: -webkit-box;
@@ -752,11 +820,12 @@ button {
   }
 }
 .header-lk__link {
-  color: var(--primary-color-4);
+  color: var(--header-color);
   font-size: 14px;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s, color 0.2s;
+  transition: opacity 0.3s, color 0.2s;
   text-align: center;
+  will-change: color;
 }
 .header-lk__link:not(:last-child) {
   margin-right: 40px;
@@ -865,9 +934,10 @@ button {
   align-items: center;
   cursor: pointer;
   font-size: 17px;
-  color: var(--primary-color-4);
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  color: var(--header-color);
+  -webkit-transition: opacity 0.3s, color 0.2s;
+  transition: opacity 0.3s, color 0.2s;
+  will-change: color;
 }
 .header-nav__link:hover {
   opacity: 0.7;
@@ -879,8 +949,11 @@ button {
   }
 }
 .header-nav__icon {
-  fill: var(--primary-color-4);
+  fill: var(--header-color);
   margin-left: 8px;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+  will-change: fill;
 }
 @media screen and (max-width: 899.98px) {
   .header-nav__icon {
@@ -917,12 +990,14 @@ button {
   }
 }
 .header-phone__btn {
+  display: var(--header-hidden-item, block);
   background: none;
-  color: var(--primary-color-4);
+  color: var(--header-color);
   font-size: 14px;
   margin-bottom: 18px;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s, color 0.2s;
+  transition: opacity 0.3s, color 0.2s;
+  will-change: color;
 }
 @media screen and (max-width: 899.98px) {
   .header-phone__btn {
@@ -934,10 +1009,11 @@ button {
   opacity: 0.7;
 }
 .header-phone__link {
-  color: var(--gray-color);
+  color: var(--header-phone-color);
   font-size: 20px;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s, color 0.2s;
+  transition: opacity 0.3s, color 0.2s;
+  will-change: color;
 }
 .header-phone__link:hover {
   opacity: 0.7;
@@ -946,7 +1022,7 @@ button {
 .nav-dropdown {
   position: absolute;
   top: 100%;
-  left: 77%;
+  left: 97%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -971,10 +1047,10 @@ button {
 }
 @media screen and (min-width: 899.99px) {
   .nav-dropdown__block {
-    background-color: var(--primary-on-color);
-    border-radius: 10px;
-    -webkit-filter: drop-shadow(0 10px 10px var(--secondary-color));
-    filter: drop-shadow(0 10px 10px var(--secondary-color));
+    background-color: var(--header-dropdown-bg);
+    border-radius: 5px;
+    -webkit-filter: var(--dropdown-filter);
+    filter: var(--dropdown-filter);
     min-width: 260px;
     overflow: hidden;
   }
@@ -985,14 +1061,14 @@ button {
 .nav-dropdown__link {
   display: block;
   font-size: 17px;
-  color: var(--primary-color-4);
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  padding: 13px 30px;
+  color: var(--header-color);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  padding: 15px 20px;
 }
 @media screen and (min-width: 899.99px) {
   .nav-dropdown__link:hover {
-    background-color: var(--gray-color-3);
+    background-color: var(--header-dropdown-link-hover);
   }
 }
 @media screen and (max-width: 899.98px) {
