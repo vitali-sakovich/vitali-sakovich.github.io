@@ -2643,6 +2643,7 @@ button {
 }
 
 .clients {
+  position: relative;
   background: url("../img/bg-clients.jpg") center/cover no-repeat;
   padding: 100px 8.3vw;
 }
@@ -2668,13 +2669,25 @@ button {
     padding-bottom: 40px;
   }
 }
+.clients::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(26, 37, 104, 0.9);
+  pointer-events: none;
+}
 .clients__slider {
   min-height: 50px;
+  width: 100%;
 }
 .clients__head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;

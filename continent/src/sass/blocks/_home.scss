@@ -878,6 +878,7 @@
 }
 
 .clients {
+    position: relative;
     background: url("../img/bg-clients.jpg") center/cover no-repeat;
     padding: 100px 8.3vw;
 
@@ -897,12 +898,25 @@
         padding-bottom: 40px;
     }
 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(26, 37, 104, 0.9);
+        pointer-events: none;
+    }
+
     &__slider {
         min-height: 50px;
+        width: 100%;
     }
 
     &__head {
         display: flex;
+        position: relative;
         justify-content: space-between;
         margin-bottom: 60px;
 
