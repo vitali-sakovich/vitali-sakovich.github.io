@@ -2,7 +2,7 @@
     const header = document.querySelector(".header");
 
     function scrollTop() {
-        if (window.pageYOffset > 0) {
+        if (window.pageYOffset > 50) {
             header.classList.add("header--is-fixed");
         } else {
             header.classList.remove("header--is-fixed");
