@@ -389,7 +389,7 @@ template {
   --primary-color-15: #57b9ff;
   --primary-color-16: #0e1e7d;
   --primary-color-17: #5b5fa7;
-  --primary-color-18: rgba(11, 16, 38, 0.85);
+  --primary-color-18: rgba(16, 27, 75, 0.85);
   --primary-color-19: #26337b;
   --primary-color-20: #384593;
   --primary-on-color: #fff;
@@ -615,11 +615,14 @@ button {
 @media screen and (max-width: 899.98px) {
   .header {
     padding: 17px 26px 15px 20px;
-    --header-bg: var(--primary-on-color);
+    --header-bg: var(--primary-color-18);
     --header-color: var(--primary-color-4);
     --header-dropdown-bg: var(--primary-on-color);
     --header-dropdown-link-hover: var(--gray-color-3);
     --header-phone-color: var(--gray-color);
+  }
+  .header--is-active {
+    --shows-menu: shows 0.3s forwards;
     --logo-default: 0;
     --logo-fixed: 1;
   }
@@ -690,12 +693,8 @@ button {
     padding-top: 83px;
     height: 100%;
     opacity: 0;
-    -webkit-animation: hidden 0.3s forwards;
-    animation: hidden 0.3s forwards;
-  }
-  .header__wrapper--is-active {
-    -webkit-animation: shows 0.3s forwards;
-    animation: shows 0.3s forwards;
+    -webkit-animation: var(--shows-menu, hidden 0.3s forwards);
+    animation: var(--shows-menu, hidden 0.3s forwards);
   }
 }
 .header__logo {
@@ -1209,6 +1208,7 @@ button {
   --burget-item-rotate-last: -45deg;
   --burget-item-y: 0;
   --item-center: none;
+  --burger-item-bg: var(--primary-color-6);
 }
 @media screen and (max-width: 899.98px) {
   .burger {
@@ -1219,7 +1219,7 @@ button {
   grid-area: -1/1;
   width: 30px;
   height: 3px;
-  background-color: var(--primary-color-6);
+  background-color: var(--burger-item-bg, var(--primary-on-color));
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;

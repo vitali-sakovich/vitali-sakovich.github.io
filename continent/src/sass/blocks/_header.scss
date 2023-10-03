@@ -31,13 +31,17 @@
     }
     @media screen and (max-width: 899.98px) {
         padding: 17px 26px 15px 20px;
-        --header-bg: var(--primary-on-color);
+        --header-bg: var(--primary-color-18);
         --header-color: var(--primary-color-4);
         --header-dropdown-bg: var(--primary-on-color);
         --header-dropdown-link-hover: var(--gray-color-3);
         --header-phone-color: var(--gray-color);
-        --logo-default: 0;
-        --logo-fixed: 1;
+
+        &--is-active {
+           --shows-menu: shows 0.3s forwards;
+           --logo-default: 0;
+           --logo-fixed: 1;
+        }
     }
 
     &--is-fixed {
@@ -89,11 +93,7 @@
             padding-top: 83px;
             height: 100%;
             opacity: 0;
-            animation: hidden 0.3s forwards;
-
-            &--is-active {
-                animation: shows 0.3s forwards;
-            }
+            animation: var(--shows-menu, hidden 0.3s forwards);
         }
     }
 
@@ -519,6 +519,7 @@
         --burget-item-rotate-last: -45deg;
         --burget-item-y: 0;
         --item-center: none;
+        --burger-item-bg: var(--primary-color-6);
     }
 
     @media screen and (max-width: 899.98px) {
@@ -529,7 +530,7 @@
         grid-area: -1/1;
         width: 30px;
         height: 3px;
-        background-color: var(--primary-color-6);
+        background-color: var(--burger-item-bg, var(--primary-on-color));
         transition: transform 0.2s;
 
         &:first-child {

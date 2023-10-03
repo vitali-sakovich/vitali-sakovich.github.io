@@ -263,17 +263,18 @@ document.addEventListener("click", function (e) {
 });
 
 (() => {
-    const menu = document.querySelector(".header__wrapper");
-    const btn = document.querySelector(".burger");
+    const header = document.querySelector(".header");
+    const menu = header.querySelector(".header__wrapper");
+    const btn = header.querySelector(".burger");
 
     btn.addEventListener("click", () => {
-        if (!menu.classList.contains("header__wrapper--is-active")) {
+        if (!header.classList.contains("header--is-active")) {
             document.body.classList.add("hidden");
             btn.classList.add("burger--is-active");
             menu.style.display = "flex";
-            menu.classList.add("header__wrapper--is-active");
+            header.classList.add("header--is-active");
         } else {
-            menu.classList.remove("header__wrapper--is-active");
+            header.classList.remove("header--is-active");
             btn.classList.remove("burger--is-active");
             window.setTimeout(function () {
                 menu.style.display = "none";
