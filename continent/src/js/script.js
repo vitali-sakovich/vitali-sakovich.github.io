@@ -28,8 +28,9 @@ var swiper = new Swiper(".clients-slider", {
     slidesPerGroup: 3,
     spaceBetween: 30,
     loop: true,
+    speed: 5000,
     autoplay: {
-        delay: 3000,
+        delay: 1500,
         disableOnInteraction: false,
     },
     navigation: {
@@ -40,14 +41,17 @@ var swiper = new Swiper(".clients-slider", {
         320: {
             slidesPerView: 1,
             slidesPerGroup: 1,
+            speed: 1500,
         },
         600: {
             slidesPerView: 2,
             slidesPerGroup: 2,
+            speed: 3000,
         },
         900: {
             slidesPerView: 3,
             slidesPerGroup: 3,
+            speed: 5000,
         },
     },
 });
