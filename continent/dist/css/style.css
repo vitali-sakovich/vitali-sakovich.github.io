@@ -392,6 +392,7 @@ template {
   --primary-color-18: rgba(16, 27, 75, 0.85);
   --primary-color-19: #26337b;
   --primary-color-20: #384593;
+  --primary-color-21: #5b65a7;
   --primary-on-color: #fff;
   --gray-color: #6f6f6f;
   --gray-color-2: #d8d8d8;
@@ -1827,7 +1828,7 @@ button {
 }
 .delivery-geography {
   position: relative;
-  background-color: var(--primary-color-2);
+  background-color: var(--primary-color-21);
 }
 .delivery-geography::before {
   content: "";
@@ -1920,7 +1921,7 @@ button {
     font-size: 1.3vw;
   }
 }
-.delivery-geography__gif {
+.delivery-geography__video {
   grid-area: -1/1;
   width: 85.25em;
   height: auto;
