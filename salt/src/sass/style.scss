@@ -63,6 +63,20 @@ a {
     margin-top: 0;
     margin-bottom: 0;
 
+    &--size-xxl {
+        font-size: 52px;
+
+        @media screen and (max-width: 1599.98px) {
+            font-size: 48px;
+        }
+        @media screen and (max-width: 1199.98px) {
+            font-size: 44px;
+        }
+        @media screen and (max-width: 849.98px) {
+            font-size: 32px;
+        }
+    }
+
     &--size-xl {
         font-size: 48px;
 

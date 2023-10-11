@@ -74,7 +74,7 @@ Fancybox.bind("[data-fancybox]", {});
 })();
 
 (() => {
-    const tags = document.querySelector(".blog-tags");
+    const tags = document.querySelector(".js-blog-tags");
 
     if (!tags) return;
 
