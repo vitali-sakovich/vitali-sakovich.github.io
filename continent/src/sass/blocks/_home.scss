@@ -851,6 +851,8 @@
 }
 
 .clients {
+    display: flex;
+    flex-direction: column;
     position: relative;
     background: url("../img/bg-clients.jpg") center/cover no-repeat;
     padding: 100px 8.3vw;
