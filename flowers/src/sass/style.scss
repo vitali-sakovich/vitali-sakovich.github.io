@@ -24,7 +24,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100%;
-    background-color: #F2EEF4;
+    background-color: #f2eef4;
     padding-left: em(95, $fz);
 
     &.hidden {
@@ -105,11 +105,11 @@ button {
 
     &--primary {
         --btn-text-color: #fff;
-        background-color: #533DD4;
+        background-color: #533dd4;
     }
 
     &__text {
-        color: var(--btn-text-color, #000)
+        color: var(--btn-text-color, #000);
     }
 }
 
@@ -130,3 +130,4 @@ button {
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/home";
+@import "blocks/popups";

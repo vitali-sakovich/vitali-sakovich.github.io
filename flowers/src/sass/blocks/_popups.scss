@@ -1,0 +1,185 @@
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(242, 238, 244, 0.7);
+        z-index: -1;
+        cursor: url("../img/close.svg"), auto;
+    }
+}
+
+.sidebar {
+    display: flex;
+    height: 100%;
+    max-width: em(1342, $fz);
+    background-color: #fff;
+    box-shadow: em(0 0 40, $fz) rgba(83, 61, 212, 0.38);
+}
+
+.sidebar-close {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: em(46, $fz);
+    background-color: transparent;
+
+    &:hover {
+        --btn-close-transform: #{em(-10, $fz)};
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: em(36, $fz);
+        width: 1px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.28);
+        transform: translateX(var(--btn-close-transform));
+        transition: transform 0.3s;
+        will-change: transform;
+    }
+
+    &__wrap {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: em(100, $fz);
+        background-color: #fff;
+        transform: translate(var(--btn-close-transform, 0), em(-50, $fz));
+        transition: transform 0.3s;
+        will-change: transform;
+    }
+
+    &__icon {
+        margin-bottom: em(10, $fz);
+    }
+
+    &__text {
+        line-height: 1.5;
+    }
+}
+
+.sidebar-catalog {
+    display: flex;
+
+    &__block {
+        --sidebar-catalog-head-height: #{em(141, $fz)};
+        height: 100%;
+
+        &:first-child {
+            border-right: 1px solid rgba(0, 0, 0, 0.28);
+        }
+
+        &--retail {
+            --grid-number-col: 4;
+            --label-header-bg: #9da63b;
+            padding-left: em(60, $fz);
+        }
+
+        &--opt {
+            --grid-number-col: 2;
+            --label-header-bg: #b15933;
+            padding-left: em(55, $fz);
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        padding-top: em(60, $fz);
+        padding-bottom: em(40, $fz);
+        padding-left: em(20, $fz);
+        min-height: var(--sidebar-catalog-head-height);
+    }
+
+    &__title {
+        margin-right: em(8, $fz);
+    }
+
+    &__label {
+        $fz: 17;
+        border-radius: em(7, $fz);
+        background-color: var(--label-header-bg);
+        font-size: em($fz, $fz_base);
+        font-weight: 700;
+        padding: em(6 30, $fz);
+        color: #fff;
+    }
+
+    &__grid {
+        display: grid;
+        align-content: start;
+        grid-template-columns: repeat(var(--grid-number-col), em(160, $fz));
+        grid-row-gap: em(20, $fz);
+        height: calc(100% - var(--sidebar-catalog-head-height));
+        padding-right: em(64, $fz);
+        overflow-y: auto;
+    }
+}
+
+.popup-title {
+    $fz: 36;
+    font-size: em($fz, $fz_base);
+    font-weight: 600;
+}
+
+.catalog-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+        --catalog-link-img-scale: 1.1;
+    }
+
+    &__picture {
+        display: flex;
+        border-radius: em(35, $fz);
+        overflow: hidden;
+        width: em(120, $fz);
+        height: em(120, $fz);
+        margin-bottom: em(12, $fz);
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(var(--catalog-link-img-scale));
+        transition: transform 0.3s;
+        will-change: transform;
+    }
+
+    &__label {
+        border-radius: em(7, $fz);
+        background-color: #533dd4;
+        padding-right: em(8, $fz);
+        padding-left: em(8, $fz);
+        font-weight: 600;
+        line-height: 1.5;
+        color: #fff;
+    }
+
+    &__name {
+        display: flex;
+        line-height: 1.5;
+        color: #000;
+        text-align: center;
+        min-height: em(66, $fz);
+    }
+}
