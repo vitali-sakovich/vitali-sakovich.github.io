@@ -1,0 +1,31 @@
+@use 'sass:math';
+
+$fz: 16;
+$fz_base: 16;
+
+@function strip-units($number) {
+  @return math.div($number, $number * 0 + 1);
+}
+@function em($values...) {
+  $context: strip-units(nth($values, length($values)));
+  $result: ();
+  $separator: list_separator($values);
+
+  @for $i from 1 through length($values) - 1 {
+    $value: nth($values, $i);
+
+    
+    @if type-of($value) == 'number' {
+      $value: strip-units($value);
+      $result: append($result, math.div($value, $context) * 1em, $separator);
+    }
+
+    @else if type-of($value) == 'list' {
+      $result: append($result, em(append($value, $context)...), $separator);
+    } @else {
+      $result: append($result, $value, $separator);
+    }
+  }
+
+  @return if(length($result) == 1, nth($result, 1), $result);
+}
