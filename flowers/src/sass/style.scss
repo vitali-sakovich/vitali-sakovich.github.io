@@ -62,6 +62,15 @@ button {
     cursor: pointer;
 }
 
+input,
+textarea {
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
 .title {
     font-weight: 400;
 
@@ -102,10 +111,22 @@ button {
     padding-left: em(10, $fz);
     min-height: em(48, $fz);
     border-radius: em(24, $fz);
+    border-width: 1px solid transparent;
 
     &--primary {
         --btn-text-color: #fff;
         background-color: #533dd4;
+        border-color: #533dd4;
+    }
+
+    &--border {
+        background-color: transparent;
+        border-color: #000;
+    }
+
+    &--link {
+        background-color: transparent;
+        text-decoration: dashed;
     }
 
     &__text {
@@ -121,13 +142,40 @@ button {
 }
 
 .error[data-type="validator-error"] {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
     text-align: right;
     font-size: 12px;
     color: rgb(150, 4, 4);
     margin-top: 2px;
 }
 
+@mixin scrollbar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+    scrollbar-width: thin;
+    scrollbar-arrow-color: transparent;
+    scrollbar-face-color: transparent;
+    scrollbar-track-color: transparent;
+    scrollbar-base-color: transparent;
+
+    &::-webkit-scrollbar {
+        width: em(5, $fz);
+      }
+  
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}
+
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/home";
 @import "blocks/popups";
+@import "blocks/forms";

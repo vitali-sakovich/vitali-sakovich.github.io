@@ -1,0 +1,114 @@
+.form {
+    &__label {
+        margin-bottom: em(32, $fz);
+        max-width: var(--form-label-width, 100%);
+    }
+
+    &__input,
+    &__textarea {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        line-height: 1.22;
+        padding: em(12 50 12 16, $fz);
+        border: var(--input-border-size, 3px) solid var(--input-border-color, #575757);
+        width: 100%;
+        border-radius: em(5, $fz);
+        background-color: transparent;
+        transition: border-color 0.3s;
+
+        &:focus {
+            border-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__input {
+        height: em(48, $fz);
+    }
+
+    &__textarea {
+        min-height: em(104, $fz);
+    }
+
+    &__placeholder {
+        $fz: 18;
+        position: absolute;
+        top: em(17, $fz);
+        left: em(16, $fz);
+        font-size: em($fz, $fz_base);
+        color: rgba(0, 0, 0, 0.60);
+        transform: var(--placeholder-shows);
+        transition: transform 0.3s;
+    }
+
+    &__clear {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        top: em(2, $fz);
+        right: 0;
+        width: em(40, $fz);
+        height: em(50, $fz);
+        background-color: transparent;
+        opacity: var(--clear-show, 0);
+        pointer-events: var(--clear-events, none);
+        transition: opacity 0.3s;
+
+        &:hover {
+            --clear-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    &__icon {
+        transition: fill 0.3s;
+        fill: var(--clear-color ,rgba(0, 0, 0, 0.6));
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.label {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    &--is-active {
+        --placeholder-shows: translate(#{em(-28, $fz)}, #{em(-31, $fz)}) scale(0.7);
+        --clear-show: 1;
+        --clear-events: auto;
+    }
+}
+
+.form-consent {
+    $fz: 12;
+    font-size: em($fz, $fz_base);
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.5);
+
+    &__link {
+        text-decoration: underline;
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.form-popup {
+    --input-border-size: 1px;
+    --input-border-color: rgba(0, 0, 0, 0.23);
+    --form-label-width: #{em(440, $fz)};
+
+    &__btn {
+        width: em(232, $fz);
+    }
+
+    &__consent {
+        max-width: em(320, $fz);
+        margin-left: em(25, $fz);
+    }
+}

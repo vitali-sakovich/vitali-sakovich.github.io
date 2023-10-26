@@ -44,10 +44,6 @@
         padding-left: em(16, $fz);
         font-size: em($fz, $fz_base);
 
-        &:focus-visible {
-            outline: none;
-        }
-
         &::placeholder {
             color: rgba(0, 0, 0, 0.6);
         }

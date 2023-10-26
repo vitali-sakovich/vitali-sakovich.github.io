@@ -1,10 +1,54 @@
+@keyframes overlay-shows {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes overlay-hidden {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes popup-shows {
+    0% {
+        transform: translateX(var(--translate-x-popup, 100%));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes popup-hidden {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(var(--translate-x-popup, 100%));
+    }
+}
+
 .popup {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1001;
+
+    &:not(.popup--sidebar) {
+        justify-content: flex-end;
+    }
+
+    &--is-show {
+        --overlay-show: overlay-shows;
+        --popup-show: popup-shows;
+    }
 
     &__overlay {
         position: absolute;
@@ -15,15 +59,65 @@
         background-color: rgba(242, 238, 244, 0.7);
         z-index: -1;
         cursor: url("../img/close.svg"), auto;
+        animation: var(--overlay-show, overlay-hidden) 0.3s forwards;
+        will-change: opacity;
+    }
+
+    &__block {
+        width: em(710, $fz);
+        background-color: #fff;
+        animation: var(--popup-show, popup-hidden) 0.2s forwards;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: em(53 35 30 66, $fz);
+        border-bottom: 1px solid #CACACA;
+    }
+
+    &__close {
+        background-color: transparent;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__content {
+        padding: em(55 66, $fz);
+    }
+
+    &__text {
+        $fz: 18;
+        display: block;
+        font-size: em($fz, $fz_base);
+        line-height: 1.4;
+        max-width: em(500, $fz);
+        margin-bottom: em(50, $fz);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 .sidebar {
+    --translate-x-popup: -100%;
     display: flex;
     height: 100%;
     max-width: em(1342, $fz);
     background-color: #fff;
     box-shadow: em(0 0 40, $fz) rgba(83, 61, 212, 0.38);
+    animation: var(--popup-show, popup-hidden) 0.2s forwards;
+    will-change: transform;
+
+    &__catalog {
+        width: 100%;
+    }
 }
 
 .sidebar-close {
@@ -79,6 +173,7 @@
 
     &__block {
         --sidebar-catalog-head-height: #{em(141, $fz)};
+        width: 100%;
         height: 100%;
 
         &:first-child {
@@ -122,13 +217,14 @@
     }
 
     &__grid {
+        @include scrollbar;
         display: grid;
         align-content: start;
         grid-template-columns: repeat(var(--grid-number-col), em(160, $fz));
         grid-row-gap: em(20, $fz);
         height: calc(100% - var(--sidebar-catalog-head-height));
         padding-right: em(64, $fz);
-        overflow-y: auto;
+        padding-bottom: em(20, $fz);
     }
 }
 
@@ -181,5 +277,21 @@
         color: #000;
         text-align: center;
         min-height: em(66, $fz);
+    }
+}
+
+.popup-thank {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        line-height: 1.5;
+    }
+
+    &__icon {
+        margin-left: em(25, $fz);
+        fill: #2FA827;
     }
 }
