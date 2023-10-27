@@ -103,6 +103,7 @@ textarea {
 }
 
 .btn {
+    $self: &;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +112,7 @@ textarea {
     padding-left: em(10, $fz);
     min-height: em(48, $fz);
     border-radius: em(24, $fz);
-    border-width: 1px solid transparent;
+    border: 1px solid transparent;
 
     &--primary {
         --btn-text-color: #fff;
@@ -131,6 +132,18 @@ textarea {
 
     &__text {
         color: var(--btn-text-color, #000);
+
+        #{$self}--link & {
+            background-image: linear-gradient(to right, #000, #000 49.9%, transparent 50%);
+            background-repeat: round no-repeat;
+            background-position-y: 100%;
+            background-size: 5px 1px;
+            transition: background-size 1s;
+        }
+
+        #{$self}--link:hover & {
+            background-size: 0;
+        }
     }
 }
 
@@ -152,6 +165,7 @@ textarea {
 }
 
 @mixin scrollbar {
+    flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-color: rgba(0, 0, 0, 0.15) transparent;

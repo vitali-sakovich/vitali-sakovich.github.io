@@ -33,21 +33,39 @@
 }
 
 .popup {
+    $self: &;
     display: none;
     position: fixed;
+    justify-content: flex-end;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1001;
 
-    &:not(.popup--sidebar) {
-        justify-content: flex-end;
+    &--sidebar {
+        justify-content: flex-start;
     }
 
     &--is-show {
         --overlay-show: overlay-shows;
         --popup-show: popup-shows;
+    }
+
+    &--sharing {
+        --popup-block-width: #{em(550, $fz)};
+        --translate-x-popup: 0;
+        align-items: center;
+        justify-content: center;
+        animation: var(--overlay-show, overlay-hidden) 0.3s forwards;
+
+        .js-btn-copy-btn {
+            width: 100%;
+        }
+    }
+
+    &--basket {
+        --popup-block-width: #{em(980, $fz)};
     }
 
     &__overlay {
@@ -64,9 +82,13 @@
     }
 
     &__block {
-        width: em(710, $fz);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: var(--popup-block-width, em(710, $fz));
         background-color: #fff;
         animation: var(--popup-show, popup-hidden) 0.2s forwards;
+        box-shadow: em(0 0 40, $fz) rgba(83, 61, 212, 0.38);
     }
 
     &__head {
@@ -87,7 +109,13 @@
     }
 
     &__content {
+        @include scrollbar;
         padding: em(55 66, $fz);
+
+        #{$self}--add-profile &,
+        #{$self}--sharing & {
+            padding-top: em(30, $fz);
+        }
     }
 
     &__text {
@@ -103,6 +131,15 @@
         display: flex;
         flex-direction: column;
     }
+
+    &__share {
+        margin-bottom: em(65, $fz) !important;
+    }
+
+    &__search {
+        width: 100%;
+        max-width: em(740, $fz);
+    } 
 }
 
 .sidebar {
@@ -172,7 +209,8 @@
     display: flex;
 
     &__block {
-        --sidebar-catalog-head-height: #{em(141, $fz)};
+        display: flex;
+        flex-direction: column;
         width: 100%;
         height: 100%;
 
@@ -199,7 +237,7 @@
         padding-top: em(60, $fz);
         padding-bottom: em(40, $fz);
         padding-left: em(20, $fz);
-        min-height: var(--sidebar-catalog-head-height);
+        min-height: em(141, $fz);
     }
 
     &__title {
@@ -222,7 +260,6 @@
         align-content: start;
         grid-template-columns: repeat(var(--grid-number-col), em(160, $fz));
         grid-row-gap: em(20, $fz);
-        height: calc(100% - var(--sidebar-catalog-head-height));
         padding-right: em(64, $fz);
         padding-bottom: em(20, $fz);
     }
@@ -293,5 +330,191 @@
     &__icon {
         margin-left: em(25, $fz);
         fill: #2FA827;
+    }
+}
+
+.tabs {
+    &__nav {
+        display: grid;
+        grid-template-columns: 47% 53%;
+        grid-column-gap: em(3, $fz);
+        border-radius: em(31, $fz);
+        background-color: #D9E0E7;
+        max-width: em(440, $fz);
+        padding: em(4 5, $fz);
+        margin-bottom: em(40, $fz);
+    }
+
+    &__btn {
+        $fz: 18;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: em(54, $fz);
+        border-radius: em(31, $fz);
+        font-size: em($fz, $fz_base);
+        background-color: transparent;
+        transition: background-color 0.3s;
+
+        &--active {
+            background-color: #fff;
+        }
+    }
+
+    &__panel {
+        display: none;
+        flex-direction: column;
+
+        &--show {
+            display: flex;
+        }
+    }
+}
+
+.popup-search {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fff;
+    animation: var(--popup-show, popup-hidden) 0.2s forwards;
+    box-shadow: em(0 0 40, $fz) rgba(83, 61, 212, 0.38);
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: em(40, $fz);
+        padding-right: em(35, $fz);
+        padding-left: em(94, $fz);
+        margin-bottom: em(50, $fz);
+    }
+
+    &__form {
+        display: grid;
+        width: em(520, $fz);
+    }
+
+    &__label {
+        grid-area: -1/1;
+    }
+
+    &__input {
+        border-radius: em(32, $fz);
+        border: em(3, $fz) solid #575757;
+        width: 100%;
+        height: em(58, $fz);
+        padding-right: em(60, $fz);
+        padding-left: em(24, $fz);
+        color: #3D4A62;
+        transition: border-color 0.3s;
+
+        &:focus {
+            border-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: -1/1;
+        justify-self: self-end;
+        align-self: center;
+        width: em(60, $fz);
+        height: em(50, $fz);
+        background-color: transparent;
+
+        &:hover {
+            --btn-search-fill: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    &__icon {
+        transition: fill 0.3s;
+        fill: var(--btn-search-fill, #575757);
+    }
+}
+
+.search-autocomplete {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    overflow: hidden;
+
+    &__list {
+        @include scrollbar;
+        display: flex;
+        flex-direction: column;
+        padding-right: em(125, $fz);
+        padding-left: em(108, $fz);
+    }
+
+    &__item {
+        margin-bottom: em(20, $fz);
+    }
+
+    &__controls {
+        position: relative;
+        width: 100%; 
+        background-color: #fff;
+        padding: em(34 125 34 108, $fz);
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 100%;
+            height: em(20, $fz);
+            background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.14) 0%, rgba(255, 255, 255, 0.00) 99.99%);
+            pointer-events: none;
+        }
+    }
+}
+
+.search-autocomplete-item {
+    display: grid;
+    align-content: start;
+    grid-template-columns: em(80, $fz) 1fr;
+    grid-gap: em(2 20, $fz);
+
+    &:hover {
+        --autocomplete-item-scale: 1.2;
+        --autocomplete-item-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__picture {
+        width: em(80, $fz);
+        height: em(80, $fz);
+        grid-area: 1/1/4/2;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(var(--autocomplete-item-scale));
+        transition: transform 0.3s;
+        will-change: transform;
+    }
+
+    &__name,
+    &__cost {
+        transition: color 0.3s;
+        color: var(--autocomplete-item-color, #000);
+    }
+
+    &__name {
+        line-height: 1.5;
+    }
+
+    &__cost {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        line-height: 1.2;
+        font-weight: 600;
     }
 }

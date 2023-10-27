@@ -30,14 +30,14 @@
     }
 
     &__placeholder {
-        $fz: 18;
         position: absolute;
-        top: em(17, $fz);
-        left: em(16, $fz);
-        font-size: em($fz, $fz_base);
+        top: em(16, $fz);
+        left: 0;
+        font-size: em(var(--fz-placeholder, 18px), $fz_base);
         color: rgba(0, 0, 0, 0.60);
-        transform: var(--placeholder-shows);
-        transition: transform 0.3s;
+        transform: var(--placeholder-shows, translate(em(16, $fz), 0));
+        transition: transform 0.3s, font-size 0.3s;
+        pointer-events: none;
     }
 
     &__clear {
@@ -76,9 +76,10 @@
     flex-direction: column;
 
     &--is-active {
-        --placeholder-shows: translate(#{em(-28, $fz)}, #{em(-31, $fz)}) scale(0.7);
+        --placeholder-shows: translate(0, #{em(-37, $fz)});
         --clear-show: 1;
         --clear-events: auto;
+        --fz-placeholder: 12px;
     }
 }
 
@@ -105,10 +106,22 @@
 
     &__btn {
         width: em(232, $fz);
+
+        &--signup {
+            margin-top: em(32, $fz);
+        }
+
+        &--account {
+            margin-top: em(10, $fz);
+        }
     }
 
     &__consent {
         max-width: em(320, $fz);
         margin-left: em(25, $fz);
+    }
+
+    &__forgot {
+        margin-left: em(35, $fz);
     }
 }

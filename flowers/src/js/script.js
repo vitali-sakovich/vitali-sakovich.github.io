@@ -155,6 +155,13 @@ function modal(modal) {
         closeModalItem.addEventListener("click", modalHidden);
     });
 
+    document.addEventListener("keydown", function (event) {
+        const key = event.key;
+        if (key === "Escape") {
+            modalHidden();
+        }
+    });
+
     function modalHidden() {
         modal.classList.remove("popup--is-show");
         document.body.classList.remove("hidden");
@@ -206,3 +213,145 @@ document.addEventListener("click", function (e) {
         });
     });
 });
+
+// табы
+(() => {
+    class ItcTabs {
+        constructor(target, config) {
+            const defaultConfig = {};
+            this._config = Object.assign(defaultConfig, config);
+            this._elTabs =
+                typeof target === "string"
+                    ? document.querySelector(target)
+                    : target;
+            this._elButtons = this._elTabs.querySelectorAll(".tabs__btn");
+            this._elPanes = this._elTabs.querySelectorAll(".tabs__panel");
+            this._eventShow = new Event("tab.itc.change");
+            this._init();
+            this._events();
+        }
+        _init() {
+            this._elTabs.setAttribute("role", "tablist");
+            this._elButtons.forEach((el, index) => {
+                el.dataset.index = index;
+                el.setAttribute("role", "tab");
+                this._elPanes[index].setAttribute("role", "tabpanel");
+            });
+        }
+        show(elLinkTarget) {
+            const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
+            const elLinkActive =
+                this._elTabs.querySelector(".tabs__btn--active");
+            const elPaneShow = this._elTabs.querySelector(".tabs__panel--show");
+            if (elLinkTarget === elLinkActive) {
+                return;
+            }
+            elLinkActive
+                ? elLinkActive.classList.remove("tabs__btn--active")
+                : null;
+            elPaneShow
+                ? elPaneShow.classList.remove("tabs__panel--show")
+                : null;
+            elLinkTarget.classList.add("tabs__btn--active");
+            elPaneTarget.classList.add("tabs__panel--show");
+            this._elTabs.dispatchEvent(this._eventShow);
+            elLinkTarget.focus();
+        }
+        showByIndex(index) {
+            const elLinkTarget = this._elButtons[index];
+            elLinkTarget ? this.show(elLinkTarget) : null;
+        }
+        _events() {
+            this._elTabs.addEventListener("click", (e) => {
+                const target = e.target.closest(".tabs__btn");
+                if (target) {
+                    e.preventDefault();
+                    this.show(target);
+                }
+            });
+        }
+    }
+
+    if (document.querySelector(".tabs")) {
+        new ItcTabs(".tabs");
+    }
+})();
+
+(() => {
+    const shareButtons = document.querySelectorAll(".js-btn-sharing");
+
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (
+                isMobile.Android() ||
+                isMobile.BlackBerry() ||
+                isMobile.iOS() ||
+                isMobile.Opera() ||
+                isMobile.Windows()
+            );
+        },
+    };
+
+    shareButtons.forEach((shareButton) => {
+        if (shareButton) {
+            let thisUrl = window.location.href;
+            let thisTitle = document.title;
+            shareButton.addEventListener("click", function () {
+                // Проверка поддержки navigator.share
+                if (navigator.share && isMobile.any()) {
+                    // navigator.share принимает объект с URL, title или text
+                    navigator
+                        .share({
+                            title: thisTitle,
+                            url: thisUrl,
+                        })
+                        .then(function () {
+                            // Shareing successfull
+                        })
+                        .catch(function () {
+                            // Sharing failed
+                        });
+                } else {
+                    openModal(document.querySelector(".popup--sharing"));
+                    copyUrl();
+                }
+            });
+        }
+    });
+
+    function copyUrl() {
+        const copyButton = document.querySelector(".js-btn-copy-btn");
+        const copyInput = document.querySelector(".js-input-copy");
+        const btnText = copyButton.querySelector("span");
+
+        copyInput.value = window.location.href;
+
+        copyButton.addEventListener("click", function (e) {
+            copyInput.select();
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+            btnText.innerHTML = "Ссылка скопированна";
+            copyButton.setAttribute("disabled", "true");
+
+            setTimeout(() => {
+                btnText.innerHTML = "Скопировать ссылку";
+                copyButton.removeAttribute("disabled");
+            }, 1000);
+        });
+    }
+})();

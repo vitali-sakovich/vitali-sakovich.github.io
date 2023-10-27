@@ -64,7 +64,7 @@
                     <span class="btn-call__text">Заказать звонок</span>
                 </button>
             </div>
-            <button type="button" class="btn-search header__search">
+            <button data-open-modal=".popup--search" type="button" class="btn-search header__search js-open-modal">
                 <span class="btn-search__text">Поиск по товарам</span>
                 <svg width="27" height="26" class="btn-search__icon">
                     <use xlink:href="./img/icons-sprite.svg#search"></use>
@@ -76,12 +76,12 @@
                 </svg>
                 <span class="btn-control__counter">3</span>
             </a>
-            <button title="Личный кабинет" aria-label="Личный кабинет" class="btn-control header__control">
+            <button title="Личный кабинет" aria-label="Личный кабинет" data-open-modal=".popup--authorization" class="btn-control header__control js-open-modal">
                 <svg width="24" height="24" class="btn-control__icon">
                     <use xlink:href="./img/icons-sprite.svg#lk"></use>
                 </svg>
             </button>
-            <button title="Корзина" aria-label="Корзина" class="btn-control header__control">
+            <button title="Корзина" aria-label="Корзина" data-open-modal=".popup--basket" class="btn-control header__control js-open-modal">
                 <svg width="30" height="24" class="btn-control__icon">
                     <use xlink:href="./img/icons-sprite.svg#basket"></use>
                 </svg>
@@ -106,6 +106,24 @@
             </button>
             <button data-open-modal=".popup--authorization" style="margin-bottom: 20px" class="btn btn--primary js-open-modal">
                 <span class="btn__text">Авторизация</span>
+            </button>
+            <button data-open-modal=".popup--registration" style="margin-bottom: 20px" class="btn btn--primary js-open-modal">
+                <span class="btn__text">Регистрация</span>
+            </button>
+            <button data-open-modal=".popup--password-change" style="margin-bottom: 20px" class="btn btn--primary js-open-modal">
+                <span class="btn__text">Смена пароля</span>
+            </button>
+            <button data-open-modal=".popup--data-individuals" style="margin-bottom: 20px" class="btn btn--primary js-open-modal">
+                <span class="btn__text">Изменение данных физ</span>
+            </button>
+            <button data-open-modal=".popup--data-legal" style="margin-bottom: 20px" class="btn btn--primary js-open-modal">
+                <span class="btn__text">Изменение данных юр</span>
+            </button>
+            <button data-open-modal=".popup--add-profile" style="margin-bottom: 20px" class="btn btn--primary js-open-modal">
+                <span class="btn__text">Добавить профиль</span>
+            </button>
+            <button style="margin-bottom: 20px" class="btn btn--primary js-btn-sharing">
+                <span class="btn__text">Поделиться</span>
             </button>
         </main>
         <footer class="footer">
@@ -503,14 +521,561 @@
                             <button type="submit" class="btn btn--primary form-popup__btn last-elem">
                                 <span class="btn__text">Войти</span>
                             </button>
-                            <button type="button" class="btn btn--link">
+                            <button type="button" class="btn btn--link form-popup__forgot">
                                 <span class="btn__text">Забыли пароль?</span>
                             </button>
                         </div>
-                        <button type="button" class="btn btn--border form-popup__btn">
+                        <button type="button" class="btn btn--border form-popup__btn form-popup__btn--signup">
                             <span class="btn__text">Зарегистрироваться</span>
                         </button>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--registration">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Регистрация</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="password" name="password" data-rule="required|minlength-6" class="form__input js-input">
+                            <span class="form__placeholder">Пароль</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="password" name="password" data-rule="required|minlength-6" class="form__input js-input">
+                            <span class="form__placeholder">Подтверждение пароля</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                                <span class="btn__text">Зарегистрироваться</span>
+                            </button>
+                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                        <button type="button" class="btn btn--link form-popup__btn form-popup__btn--account">
+                            <span class="btn__text">Уже есть аккаунт</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--password-change">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Смена пароля</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input type="password" name="password" data-rule="required|minlength-6" class="form__input first-elem js-input">
+                            <span class="form__placeholder">Новый пароль</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                            <span class="btn__text">Войти</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--data-individuals">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Изменение данных</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">ФИО</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="address" data-rule="required" class="form__input js-input">
+                            <span class="form__placeholder">Адрес доставки</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                            <span class="btn__text">Сохранить</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--data-legal">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Изменение данных</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input type="text" name="companie" data-rule="required" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Название компании</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="inn" data-rule="required" class="form__input js-input">
+                            <span class="form__placeholder">ИНН</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="inn" data-rule="required|name" class="form__input js-input">
+                            <span class="form__placeholder">Контактное лицо</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="address" data-rule="required" class="form__input js-input">
+                            <span class="form__placeholder">Адрес доставки</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                            <span class="btn__text">Сохранить</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--add-profile">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Добавить профиль</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <div class="tabs">
+                        <div class="tabs__nav">
+                            <button type="button" class="tabs__btn tabs__btn--active">
+                                Физическое лицо
+                            </button>
+                            <button type="button" class="tabs__btn">
+                                Юридическое лицо
+                            </button>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__panel tabs__panel--show">
+                                <form action="#" class="form form-popup">
+                                    <label class="label form__label js-label">
+                                        <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                                        <span class="form__placeholder">ФИО</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                                        <span class="form__placeholder">Телефон</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                                        <span class="form__placeholder">E-mail</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input type="text" name="address" data-rule="required" class="form__input js-input">
+                                        <span class="form__placeholder">Адрес доставки</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                                        <span class="btn__text">Сохранить</span>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="tabs__panel">
+                                <form action="#" class="form form-popup">
+                                    <label class="label form__label js-label">
+                                        <input type="text" name="companie" data-rule="required" class="form__input js-input first-elem">
+                                        <span class="form__placeholder">Название компании</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input type="text" name="inn" data-rule="required" class="form__input js-input">
+                                        <span class="form__placeholder">ИНН</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input type="text" name="inn" data-rule="required|name" class="form__input js-input">
+                                        <span class="form__placeholder">Контактное лицо</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                                        <span class="form__placeholder">E-mail</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                                        <span class="form__placeholder">Телефон</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input type="text" name="address" data-rule="required" class="form__input js-input">
+                                        <span class="form__placeholder">Адрес доставки</span>
+                                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                            <svg width="16" height="16" class="form__icon">
+                                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                                        <span class="btn__text">Сохранить</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--sharing">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Поделиться</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <script async src="https://usocial.pro/usocial/usocial.js?uid=b9c206e7a3f53798&v=6.1.5" data-script="usocial" charset="utf-8"></script>
+                    <div class="popup__share">
+                        <div class="uSocial-Share popup__share" data-pid="f762a0f57b1fb4025ce5b05d95233650" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right" data-social="vk,ok,telegram,wa,vi"></div>
+                    </div>
+                    <form class="form form-popup">
+                        <label class="label label--is-active form__label">
+                            <input type="text" name="link" class="form__input js-input-copy">
+                            <span class="form__placeholder">Ссылка на товар</span>
+                        </label>
+                    </form>
+                    <button class="btn btn--primary js-btn-copy-btn">
+                        <span class="btn__text"> Скопировать ссылку</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--search">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup-search popup__search">
+                <div class="popup-search__head">
+                    <form action="#" class="popup-search__form">
+                        <label class="popup-search__label">
+                            <input type="text" name="serch" placeholder="Поиск по товарам" class="popup-search__input first-elem">
+                        </label>
+                        <button type="submit" class="popup-search__btn last-elem">
+                            <svg width="27" height="26" class="popup-search__icon">
+                                <use xlink:href="./img/icons-sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-autocomplete popup-search__autocomplete">
+                    <div class="search-autocomplete__list">
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost">180 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost">4 000 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost">180 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost">4 000 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost">180 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost">4 000 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost">180 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost">4 000 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost">180 ₽</span>
+                        </a>
+                        <a href="#" class="search-autocomplete-item search-autocomplete__item">
+                            <picture class="search-autocomplete-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="80" height="80" alt="Ветка гвоздики 20 цветков" class="search-autocomplete-item__img">
+                            </picture>
+                            <span class="search-autocomplete-item__name">Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost">4 000 ₽</span>
+                        </a>
+                    </div>
+                    <div class="search-autocomplete__controls">
+                        <a href="#" class="btn btn--border search-autocomplete__btn">
+                            <span class="btn__text">Показать все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup--basket">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Корзина</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="basket">
+                    <div class="basket__list">
+                        <div class="basket-item basket__item">
+                            <picture class="basket-item__picture">
+                                <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                <img src="./img/catalog/catalog-news.png" width="94" height="96" alt="Ветка гвоздики 20 цветков" class="basket-item__img">
+                            </picture>
+                            <div class="basket-item__content">
+                                <span class="basket-item__name">Ветка гвоздики 20 цветков
+                                </span>
+                                <span class="basket-item__color">Цвет: <span>фиолетовый</span></span>
+                                <div class="basket-item__wrap">
+                                    <span class="basket-item__price">180 ₽</span>
+                                    <span class="basket-item__old">200 ₽</span>
+                                    <span class="basket-item__text">за штуку</span>
+                                </div>
+                                <div class="basket-item__number">
+                                    <div class="basket-counter"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
