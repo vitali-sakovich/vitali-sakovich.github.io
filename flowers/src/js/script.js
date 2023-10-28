@@ -355,3 +355,36 @@ document.addEventListener("click", function (e) {
         });
     }
 })();
+
+// счетчик
+(() => {
+    function addHandlers(count) {
+        const btnPlus = count.querySelector(".counter__btn--plus");
+        const btnMinus = count.querySelector(".counter__btn--minus");
+        const input = count.querySelector(".counter__input");
+
+        input.addEventListener("input", () => {
+            input.value = input.value.replace(/[^\d,]/g, "");
+            disabledBtn();
+        });
+        btnPlus.addEventListener("click", () => {
+            input.value++;
+            disabledBtn();
+        });
+        btnMinus.addEventListener("click", () => {
+            input.value--;
+            disabledBtn();
+        });
+
+        function disabledBtn() {
+            if (input.value <= 1) {
+                btnMinus.setAttribute("disabled", "disabled");
+            } else {
+                btnMinus.removeAttribute("disabled");
+            }
+        }
+        disabledBtn();
+    }
+    const counts = document.querySelectorAll(".counter");
+    counts.forEach(addHandlers);
+})();

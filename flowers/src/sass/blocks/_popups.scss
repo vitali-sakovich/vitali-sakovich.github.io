@@ -96,7 +96,7 @@
         justify-content: space-between;
         align-items: center;
         padding: em(53 35 30 66, $fz);
-        border-bottom: 1px solid #CACACA;
+        border-bottom: 1px solid #cacaca;
     }
 
     &__close {
@@ -139,7 +139,7 @@
     &__search {
         width: 100%;
         max-width: em(740, $fz);
-    } 
+    }
 }
 
 .sidebar {
@@ -329,7 +329,7 @@
 
     &__icon {
         margin-left: em(25, $fz);
-        fill: #2FA827;
+        fill: #2fa827;
     }
 }
 
@@ -337,9 +337,8 @@
     &__nav {
         display: grid;
         grid-template-columns: 47% 53%;
-        grid-column-gap: em(3, $fz);
         border-radius: em(31, $fz);
-        background-color: #D9E0E7;
+        background-color: #d9e0e7;
         max-width: em(440, $fz);
         padding: em(4 5, $fz);
         margin-bottom: em(40, $fz);
@@ -406,7 +405,7 @@
         height: em(58, $fz);
         padding-right: em(60, $fz);
         padding-left: em(24, $fz);
-        color: #3D4A62;
+        color: #3d4a62;
         transition: border-color 0.3s;
 
         &:focus {
@@ -457,18 +456,22 @@
 
     &__controls {
         position: relative;
-        width: 100%; 
+        width: 100%;
         background-color: #fff;
         padding: em(34 125 34 108, $fz);
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             right: 0;
             left: 0;
             bottom: 100%;
             height: em(20, $fz);
-            background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.14) 0%, rgba(255, 255, 255, 0.00) 99.99%);
+            background-image: linear-gradient(
+                bottom,
+                rgba(0, 0, 0, 0.14) 0%,
+                rgba(255, 255, 255, 0) 99.99%
+            );
             pointer-events: none;
         }
     }
@@ -516,5 +519,331 @@
         font-size: em($fz, $fz_base);
         line-height: 1.2;
         font-weight: 600;
+    }
+}
+
+.basket {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+
+    &__list {
+        @include scrollbar;
+        min-width: em(624, $fz);
+        border-right: 1px solid #cacaca;
+    }
+
+    &__checkout {
+        @include scrollbar;
+        display: flex;
+        flex-direction: column;
+        padding: em(17 20 20 35, $fz);
+    }
+
+    &__cost {
+        margin-bottom: em(26, $fz);
+    }
+
+    &__info {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+        line-height: 1.36;
+        color: #fe7200;
+        max-width: em(185, $fz);
+        margin-top: em(11, $fz);
+    }
+
+    &__delivery {
+        margin-top: em(27, $fz);
+        margin-bottom: em(22, $fz);
+    }
+
+    &__btn {
+        max-width: em(174, $fz);
+        margin-bottom: em(18, $fz);
+    }
+
+    &__purchase {
+        max-width: em(174, $fz);
+        min-height: em(34, $fz);
+    }
+
+    &__discount {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        min-width: em(110, $fz);
+    }
+}
+
+.basket-card {
+    display: flex;
+    padding-left: em(20, $fz);
+    border-bottom: 1px solid #cacaca;
+
+    &__picture {
+        width: em(94, $fz);
+        min-width: em(94, $fz);
+        height: em(96, $fz);
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: em(20, $fz);
+    }
+
+    &__name {
+        display: flex;
+        color: #000;
+        line-height: 1.5;
+        margin-bottom: em(3, $fz);
+    }
+
+    &__color {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        line-height: 1.7;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: flex-end;
+        margin-top: em(8, $fz);
+        margin-bottom: em(12, $fz);
+    }
+
+    &__cost {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+    }
+
+    &__old {
+        display: flex;
+        font-weight: 600;
+        text-decoration: line-through;
+        color: rgba(0, 0, 0, 0.5);
+        margin-left: em(15, $fz);
+    }
+
+    &__text {
+        display: flex;
+        margin-left: em(15, $fz);
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__counter {
+        width: em(109, $fz);
+        height: em(48, $fz);
+        margin-right: em(14, $fz);
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        padding-top: em(13, $fz);
+        padding-right: em(6, $fz);
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: em(36, $fz);
+        height: em(34, $fz);
+        margin-bottom: em(5, $fz);
+        border-radius: em(5, $fz);
+        background-color: transparent;
+        transition: background-color 0.3s;
+
+        &:hover {
+            --basket-btn-icon-color: #fff;
+            background-color: #533dd4;
+        }
+    }
+
+    &__icon {
+        transition: fill 0.3s;
+        fill: var(--basket-btn-icon-color, #c9beb4);
+    }
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    border-radius: em(5, $fz);
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    overflow: hidden;
+
+    &__btn {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 38%;
+        height: 100%;
+        background-color: transparent;
+
+        &::before,
+        &--plus::after {
+            content: "";
+            grid-area: -1/1;
+            width: em(17, $fz);
+            height: em(3, $fz);
+            background-color: #8a8a8a;
+            transition: background-color 0.3s;
+        }
+
+        &:not(:disabled):hover {
+            &::before,
+            &::after {
+                background-color: rgba(138, 138, 138, 0.5);
+            }
+        }
+
+        &:disabled {
+            &::before,
+            &::after {
+                background-color: rgba(138, 138, 138, 0.34);
+            }
+        }
+
+        &--plus {
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__input {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        width: 22%;
+        height: 100%;
+        text-align: center;
+    }
+}
+
+.basket-cost {
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        line-height: 1.57;
+        margin-bottom: em(3, $fz);
+    }
+
+    &__number {
+        $fz: 25;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+        line-height: 0.96;
+    }
+}
+
+.basket-delivery {
+    display: flex;
+    flex-direction: column;
+
+    &__icon {
+        width: em(21, $fz);
+        height: auto;
+        fill: #c9beb4;
+        margin-bottom: em(8, $fz);
+    }
+
+    &__text {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        line-height: 1.57;
+    }
+}
+
+.basket-btn-purchase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: em(5, $fz);
+    transition: background-color 0.3s;
+
+    &:hover {
+        --btn-purchase-color: #fff;
+        background-color: #533dd4;
+    }
+
+    &__icon {
+        display: flex;
+        width: em(16, $fz);
+        height: auto;
+        margin-right: em(11, $fz);
+        fill: var(--btn-purchase-color, #fe7200);
+        transition: fill 0.3s;
+    }
+
+    &__text {
+        $fz: 14;
+        display: flex;
+        font-size: em($fz, $fz_base);
+        line-height: 1.57;
+        transition: color 0.3s;
+        color: var(--btn-purchase-color, #000);
+    }
+}
+
+.discount-panel {
+    display: grid;
+    position: relative;
+    grid-template-rows: 25% 25% 50%;
+    background-color: #e3dbe7;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: var(--discount-height);
+        max-height: 100%;
+        background-color: #4b8702;
+    }
+
+    &__box {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        border-top: em(3, $fz) solid #fe7200;
+        padding-top: em(7, $fz);
+    }
+
+    &__cost {
+        $fz: 14;
+        display: flex;
+        color: #575757;
+        font-weight: 600;
+        font-size: em($fz, $fz_base);
+        margin-bottom: em(5, $fz);
+    }
+
+    &__percentage {
+        $fz: 17;
+        font-size: em($fz, $fz_base);
+        color: #4b8702;
+        font-weight: 700;
     }
 }
