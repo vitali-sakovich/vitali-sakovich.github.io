@@ -9,18 +9,32 @@
 
     @media screen and (max-width: 1749.98px) {
         display: grid;
-        grid-template-columns: em(410, $fz) 1fr em(465, $fz);
+        grid-template-columns: em(410, $fz) 1fr em(285 65 65 65, $fz);
         padding-right: 2.5%;
         grid-row-gap: em(10, $fz);
     }
-    @media screen and (max-width: 1499.99px) {
-        grid-template-columns: 1fr em(465, $fz);
-    }
     @media screen and (max-width: 1499.98px) {
         padding-left: 3.5%;
+        grid-template-columns: 1fr em(285 65 65 65, $fz);
     }
-    @media screen and (max-width: 999.99px) {
-        grid-template-columns: 1fr em(425, $fz);
+    @media screen and (max-width: 1099.98px) {
+        grid-template-columns: 1fr em(270 65 65 65, $fz);
+    }
+    @media screen and (max-width: 999.98px) {
+        grid-template-columns: 1fr em(230 65 65 65, $fz);
+    }
+    @media screen and (max-width: 949.98px) {
+        grid-template-columns: em(50, $fz) repeat(2, 1fr) em(50, $fz);
+        justify-items: center;
+        padding: em(15, $fz) 9%;
+    }
+    @media screen and (max-width: 499.98px) {
+        padding-right: em(20, $fz);
+        padding-left: em(20, $fz);
+    }
+    @media screen and (max-width: 339.98px) {
+        padding-right: em(10, $fz);
+        padding-left: em(10, $fz);
     }
 
     &:not(.header--home)::before {
@@ -39,24 +53,43 @@
         top: 0;
         width: em(105, $fz);
         height: 100vh;
+
+        @media screen and (max-width: 949.98px) {
+            position: static;
+            grid-area: 3/1/4/5;
+            height: em(37, $fz);
+            width: 111%;
+        }
+        @media screen and (max-width: 499.98px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 339.98px) {
+            width: 94%;
+        }
     }
 
     &__logo {
         margin-right: auto;
 
-        @media screen and (max-width: 1749.99px) {
+        @media screen and (max-width: 1749.98px) {
             grid-area: 1/1/2/2;
+        }
+        @media screen and (max-width: 949.98px) {
+            margin-right: 0;
+        }
+        @media screen and (max-width: 949.98px) {
+            grid-column: 2/4;
         }
     }
 
     &__nav {
         margin-right: auto;
 
-        @media screen and (max-width: 1749.99px) {
+        @media screen and (max-width: 1749.98px) {
             grid-area: 1/2/2/3;
             margin-left: auto;
         }
-        @media screen and (max-width: 1499.99px) {
+        @media screen and (max-width: 1499.98px) {
             grid-area: 2/1/3/2;
             margin-left: em(15, $fz);
         }
@@ -65,9 +98,17 @@
     &__phone {
         margin-bottom: em(7, $fz);
 
-        @media screen and (max-width: 1749.99px) {
+        @media screen and (max-width: 1749.98px) {
             margin-right: em(25, $fz);
             margin-bottom: 0;
+        }
+        @media screen and (max-width: 949.98px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0;
+            width: em(50, $fz);
+            height: em(50, $fz);
         }
     }
 
@@ -77,14 +118,19 @@
         align-items: flex-end;
         margin-right: auto;
 
-        @media screen and (max-width: 1749.99px) {
-            grid-area: 2/3/3/5;
+        @media screen and (max-width: 1749.98px) {
+            grid-area: 2/3/3/7;
             flex-direction: row;
             align-items: center;
             margin-left: auto;
         }
-        @media screen and (max-width: 1499.99px) {
-            grid-column: 2/3;
+        @media screen and (max-width: 1499.98px) {
+            grid-column: 2/6;
+        }
+        @media screen and (max-width: 949.98px) {
+            margin-right: 0;
+            margin-left: 0;
+            grid-column: 1/2;
         }
     }
 
@@ -93,10 +139,20 @@
         height: em(58, $fz);
         margin-right: em(15, $fz);
 
-        @media screen and (max-width: 999.99px) {
+        @media screen and (max-width: 1749.98px) {
+            grid-area: 1/3/2/4;
+        }
+        @media screen and (max-width: 1499.98px) {
+            grid-column: 2/3;
+        }
+        @media screen and (max-width: 1099.98px) {
+            margin-right: 0;
+        }
+        @media screen and (max-width: 999.98px) {
             width: em(230, $fz);
         }
         @media screen and (max-width: 949.98px) {
+            grid-column: 4/5;
             width: em(50, $fz);
             height: em(50, $fz);
         }
@@ -106,24 +162,20 @@
         width: em(50, $fz);
         height: em(50, $fz);
         margin-left: em(15, $fz);
-    }
 
-    &__controls {
-        display: flex;
-        align-items: center;
-
-        @media screen and (max-width: 1749.99px) {
-            grid-area: 1/3/2/4;
-        }
-        @media screen and (max-width: 1499.99px) {
-            grid-column: 2/3;
+        @media screen and (max-width: 949.98px) {
+            margin-left: 0;
         }
     }
 
     &__call {
-        @media screen and (max-width: 949.99px) {
+        @media screen and (max-width: 949.98px) {
             display: none !important;
         }
+    }
+
+    &__hamburger {
+        grid-column: 1/2;
     }
 }
 
@@ -132,13 +184,21 @@
     align-items: center;
 
     &__picture {
+        display: flex;
         width: em(95, $fz);
         min-width: em(95, $fz);
         margin-right: em(6, $fz);
 
-        @media screen and (max-width: 1099.99px) {
+        @media screen and (max-width: 1099.98px) {
             width: em(75, $fz);
             min-width: em(75, $fz);
+        }
+        @media screen and (max-width: 949.98px) {
+            width: em(42, $fz);
+            min-width: em(42, $fz);
+        }
+        @media screen and (max-width: 499.98px) {
+            margin-right: em(4, $fz);
         }
     }
 
@@ -154,8 +214,16 @@
         color: #533dd4;
         font-weight: 700;
 
-        @media screen and (max-width: 1099.99px) {
+        @media screen and (max-width: 1099.98px) {
             $fz: 30;
+            font-size: em($fz, $fz_base);
+        }
+        @media screen and (max-width: 949.98px) {
+            $fz: 24;
+            font-size: em($fz, $fz_base);
+        }
+        @media screen and (max-width: 499.98px) {
+            $fz: 18;
             font-size: em($fz, $fz_base);
         }
     }
@@ -166,16 +234,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-right: 0;
-    padding-left: em(10, $fz);
     background-color: #866fcb;
-    transform: translateX(em(-10, $fz));
-    transition: transform 0.3s;
-    will-change: transform;
     font-size: inherit;
+    padding-right: 0;
+    padding-left: 0;
+
+    @media screen and (min-width: 950px) {
+        transform: translateX(em(-10, $fz));
+        transition: transform 0.3s;
+        will-change: transform;
+        padding-left: em(10, $fz);
+    }
+    @media screen and (max-width: 949.98px) {
+        border-radius: em(32, $fz);
+    }
 
     &:hover {
-        transform: translateX(0);
+        @media screen and (min-width: $breakpoint-hover) {
+            transform: translateX(0);
+        }
     }
 
     &__icon {
@@ -183,6 +260,10 @@
         height: auto;
         margin-bottom: em(14, $fz);
         fill: #fff;
+
+        @media screen and (max-width: 949.98px) {
+            display: none;
+        }
     }
 
     &__text {
@@ -195,7 +276,7 @@
 .nav {
     display: flex;
 
-    @media screen and (max-width: 949.99px) {
+    @media screen and (max-width: 949.98px) {
         display: none;
     }
 
@@ -215,7 +296,7 @@
         &:not(:last-child) {
             margin-right: em(28, $fz);
 
-            @media screen and (max-width: 999.99px) {
+            @media screen and (max-width: 999.98px) {
                 margin-right: em(25, $fz);
             }
         }
@@ -229,7 +310,9 @@
         transition: opacity 0.3s;
 
         &:hover {
-            opacity: 0.7;
+            @media screen and (min-width: $breakpoint-hover) {
+                opacity: 0.7;
+            }
         }
     }
 
@@ -262,12 +345,15 @@
         transition: background-color 0.3s;
 
         &:hover {
-            background-color: #eddef5;
+            @media screen and (min-width: $breakpoint-hover) {
+                background-color: #eddef5;
+            }
         }
     }
 }
 
 .header-phone {
+    $self: &;
     display: flex;
     color: inherit;
 
@@ -277,7 +363,9 @@
         line-height: 1.5;
 
         @media screen and (max-width: 949.98px) {
-            display: none;
+            #{$self}--icon & {
+                display: none;
+            }
         }
     }
 
@@ -286,7 +374,9 @@
         fill: #575757;
 
         @media screen and (max-width: 949.98px) {
-            display: flex;
+            #{$self}--icon & {
+                display: flex;
+            }
         }
     }
 }
@@ -297,6 +387,7 @@
     padding-right: 0;
     padding-left: 0;
     font-size: inherit;
+    background: transparent;
 
     &__icon {
         width: em(15, $fz);
@@ -347,9 +438,12 @@
     font-size: inherit;
     padding-right: 0;
     padding-left: 0;
+    background-color: transparent;
 
     &:hover {
-        --icon-opacity: 0.7;
+        @media screen and (min-width: $breakpoint-hover) {
+            --icon-opacity: 0.7;
+        }
     }
 
     &__icon {
@@ -378,12 +472,23 @@
 
 .hamburger {
     display: none;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
     width: em(29, $fz);
     height: em(19, $fz);
 
-    @media screen and (max-width: 949.99px) {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: em(50, $fz);
+        height: em(50, $fz);
+    }
+
+    @media screen and (max-width: 949.98px) {
         display: flex;
     }
 

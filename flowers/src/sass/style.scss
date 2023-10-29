@@ -2,6 +2,8 @@
 @import "fonts";
 @import "function";
 
+$breakpoint-hover: 1000px;
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +27,10 @@ body {
     flex-direction: column;
     min-height: 100%;
     background-color: #f2eef4;
-    padding-left: em(95, $fz);
+
+    @media screen and (min-width: 950px) {
+        padding-left: em(95, $fz);
+    }
 
     &.hidden {
         overflow: hidden;
@@ -133,6 +138,13 @@ input[type="number"]:focus {
         --btn-text-color: #fff;
         background-color: #533dd4;
         border-color: #533dd4;
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                background-color: #866fcb;
+                border-color: #866fcb;
+            }
+        }
     }
 
     &--border {
@@ -140,9 +152,11 @@ input[type="number"]:focus {
         border-color: #000;
 
         &:not(:disabled):hover {
-            --btn-text-color: #fff;
-            background-color: #533dd4;
-            border-color: #533dd4;
+            @media screen and (min-width: $breakpoint-hover) {
+                --btn-text-color: #fff;
+                background-color: #533dd4;
+                border-color: #533dd4;
+            }
         }
     }
 
@@ -175,7 +189,9 @@ input[type="number"]:focus {
         }
 
         #{$self}--link:hover & {
-            background-size: 0;
+            @media screen and (min-width: $breakpoint-hover) {
+                background-size: 0;
+            }
         }
     }
 }

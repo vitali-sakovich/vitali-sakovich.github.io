@@ -10,7 +10,8 @@
         font-size: em($fz, $fz_base);
         line-height: 1.22;
         padding: em(12 50 12 16, $fz);
-        border: var(--input-border-size, 3px) solid var(--input-border-color, #575757);
+        border: var(--input-border-size, 3px) solid
+            var(--input-border-color, #575757);
         width: 100%;
         border-radius: em(5, $fz);
         background-color: transparent;
@@ -34,7 +35,7 @@
         top: em(16, $fz);
         left: 0;
         font-size: em(var(--fz-placeholder, 18px), $fz_base);
-        color: rgba(0, 0, 0, 0.60);
+        color: rgba(0, 0, 0, 0.6);
         transform: var(--placeholder-shows, translate(em(16, $fz), 0));
         transition: transform 0.3s, font-size 0.3s;
         pointer-events: none;
@@ -55,18 +56,24 @@
         transition: opacity 0.3s;
 
         &:hover {
-            --clear-color: rgba(0, 0, 0, 0.8);
+            @media screen and (min-width: $breakpoint-hover) {
+                --clear-color: rgba(0, 0, 0, 0.8);
+            }
         }
     }
 
     &__icon {
         transition: fill 0.3s;
-        fill: var(--clear-color ,rgba(0, 0, 0, 0.6));
+        fill: var(--clear-color, rgba(0, 0, 0, 0.6));
     }
 
     &__box {
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 499.98px) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -94,7 +101,9 @@
         color: inherit;
 
         &:hover {
-            text-decoration: none;
+            @media screen and (min-width: $breakpoint-hover) {
+                text-decoration: none;
+            }
         }
     }
 }
@@ -109,19 +118,39 @@
 
         &--signup {
             margin-top: em(32, $fz);
+
+            @media screen and (max-width: 499.98px) {
+                margin-top: em(15, $fz);
+            }
         }
 
         &--account {
             margin-top: em(10, $fz);
+        }
+
+        @media screen and (max-width: 499.98px) {
+            width: 100%;
         }
     }
 
     &__consent {
         max-width: em(320, $fz);
         margin-left: em(25, $fz);
+
+        @media screen and (max-width: 499.98px) {
+            margin-left: 0;
+            margin-top: em(20, $fz);
+            margin-right: auto;
+            max-width: 100%;
+        }
     }
 
     &__forgot {
         margin-left: em(35, $fz);
+
+        @media screen and (max-width: 499.98px) {
+            margin-top: em(10, $fz);
+            margin-left: 0;
+        }
     }
 }
