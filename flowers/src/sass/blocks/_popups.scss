@@ -768,7 +768,6 @@
 
     &__list {
         @include scrollbar;
-        min-width: em(624, $fz);
         border-right: 1px solid #cacaca;
 
         #{$self}--empty & {
@@ -780,6 +779,8 @@
         @include scrollbar;
         display: flex;
         flex-direction: column;
+        width: em(246, $fz);
+        max-width: em(246, $fz);
         padding: em(17 20 20 35, $fz);
 
         #{$self}--empty & {

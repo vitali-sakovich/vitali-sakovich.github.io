@@ -2620,7 +2620,6 @@ input[type=number]:focus {
   scrollbar-face-color: transparent;
   scrollbar-track-color: transparent;
   scrollbar-base-color: transparent;
-  min-width: 39em;
   border-right: 1px solid #cacaca;
 }
 .basket__list::-webkit-scrollbar {
@@ -2654,6 +2653,8 @@ input[type=number]:focus {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 15.375em;
+  max-width: 15.375em;
   padding: 1.0625em 1.25em 1.25em 2.1875em;
 }
 .basket__checkout::-webkit-scrollbar {
