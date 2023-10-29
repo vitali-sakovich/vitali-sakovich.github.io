@@ -66,6 +66,10 @@
 
     &--basket {
         --popup-block-width: #{em(980, $fz)};
+
+        @media screen and (max-width: 1099.98px) {
+            --popup-block-width: 100%;
+        }
     }
 
     &--basket-empty {

@@ -1721,6 +1721,11 @@ input[type=number]:focus {
 .popup--basket {
   --popup-block-width: 61.25em;
 }
+@media screen and (max-width: 1099.98px) {
+  .popup--basket {
+    --popup-block-width: 100%;
+  }
+}
 .popup--basket-empty {
   --popup-title-show: none;
   --popup-block-width: 22.1875em;
