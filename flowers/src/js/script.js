@@ -1,3 +1,42 @@
+(() => {
+    const sliders = document.querySelectorAll(".slider-products");
+
+    sliders.forEach((item) => {
+        const slider = item.querySelector(".slider-products__swiper");
+        const btnPrev = item.querySelector(".slider-control__btn--prev");
+        const btnNext = item.querySelector(".slider-control__btn--next");
+
+        var swiper = new Swiper(slider, {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 13,
+            loop: true,
+            navigation: {
+                nextEl: btnNext,
+                prevEl: btnPrev,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                },
+                650: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                },
+                1150: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                },
+                1500: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                },
+            },
+        });
+    });
+})();
+
 // события на инпут
 (() => {
     function inputEvent(label) {
@@ -387,4 +426,21 @@ document.addEventListener("click", function (e) {
     }
     const counts = document.querySelectorAll(".counter");
     counts.forEach(addHandlers);
+})();
+
+(() => {
+    const block = document.querySelector(".preview__btns");
+    block.addEventListener("mouseover", (event) => {
+        let item = event.target.closest("button");
+        if (!item) return;
+        if (!block.contains(item)) return;
+
+        changeSrc(item);
+    });
+
+    function changeSrc(item) {
+        const img = document.querySelector(".preview__img");
+        let btnSrc = item.dataset.src;
+        img.setAttribute("src", btnSrc);
+    }
 })();

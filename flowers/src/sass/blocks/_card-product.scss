@@ -1,0 +1,129 @@
+.product-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: em(13 17 24, $fz);
+    background-color: #fff;;
+    border-radius: em(30, $fz);
+    box-shadow: em(0 3 3, $fz) rgba(0, 0, 0, 0.09);
+
+    &__picture {
+        width: 100%;
+        height: em(289, $fz);
+        overflow: hidden;
+        border-radius: em(30, $fz);
+        margin-bottom: em(13, $fz);
+        // border: em(2, $fz) solid #E9DACC;
+    } 
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-left: em(10, $fz);
+    }
+
+    &__name {
+        display: flex;
+        color: #000;
+        line-height: 1.5;
+        transition: opacity 0.3s;
+        margin-bottom: em(6, $fz);
+
+        &:hover {
+            opacity: 0.7;
+        } 
+    }
+
+    &__article {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        color: rgba(0, 0, 0, 0.70);
+        line-height: 1.71;
+        margin-bottom: auto;
+    }
+
+    &__parameters {
+        display: flex;
+        margin-bottom: em(10, $fz);
+    }
+
+    &__parameter {
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.70);
+
+        span {
+            font-weight: 600;
+        }
+
+        &:not(:last-child) {
+            margin-right: em(10, $fz);
+        }
+    }
+
+    &__cost {
+        margin-bottom: em(18, $fz);
+    }
+
+    &__label {
+        position: absolute;
+        top: em(13, $fz);
+        right: em(17, $fz);
+    }
+}
+
+.product-card-cost {
+    display: flex;
+    align-items: flex-end;
+
+    &__price {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+    }
+
+    &__old {
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.50);
+        text-decoration: line-through;
+        margin-left: em(15, $fz);
+    }
+
+    &__text {
+        margin-left: em(15, $fz);
+    }
+}
+
+.product-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: em(65, $fz);
+    height: em(65, $fz);
+    overflow: hidden;
+    padding-left: em(17, $f);
+    padding-bottom: em(17, $fz);
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00BFC1;
+        transform: rotate(45deg);
+        width: em(100, $fz);
+        min-width: em(100, $fz);
+        height: em(24, $fz);
+    }
+
+    &__text {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+        color: #fff;
+    }
+}

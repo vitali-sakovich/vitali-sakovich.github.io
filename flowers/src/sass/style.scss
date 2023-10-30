@@ -11,6 +11,7 @@ $breakpoint-hover: 1000px;
     font-family: "Montserrat", sans-serif;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -91,7 +92,13 @@ input[type="number"]:focus {
 }
 
 .title {
-    font-weight: 400;
+    font-weight: 700;
+    color: #575757;
+
+    &--size-lg {
+        $fz: 56;
+        font-size: em($fz, $fz_base);
+    }
 
     // &--size-lg {
     //     font-size: 44px;
@@ -163,6 +170,11 @@ input[type="number"]:focus {
     &--link {
         background-color: transparent;
         text-decoration: dashed;
+    }
+
+    &--preview {
+        padding-right: em(40, $fz);
+        padding-left: em(40, $fz);
     }
 
     &:disabled {
@@ -242,3 +254,5 @@ input[type="number"]:focus {
 @import "blocks/home";
 @import "blocks/popups";
 @import "blocks/forms";
+@import "blocks/slider";
+@import "blocks/card-product";
