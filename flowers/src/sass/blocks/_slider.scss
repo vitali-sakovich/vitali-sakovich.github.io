@@ -2,15 +2,24 @@
     padding-right: 6.6%;
     padding-left: 4.8%;
 
+    &--margin {
+        margin-bottom: em(90, $fz);
+    }
+
     &__head {
         display: flex;
         align-items: center;
         padding-left: em(20, $fz);
-        margin-bottom: em(30, $fz);
+        margin-bottom: em(10, $fz);
     }
 
     &__control {
         margin-left: em(30, $fz);
+    }
+
+    &__wrapper {
+        padding-top: em(20, $fz);
+        padding-bottom: em(20, $fz);
     }
 }
 
@@ -26,6 +35,7 @@
         align-items: center;
         border-radius: em(32, $fz);
         border: 1px solid #000;
+        background-color: transparent;
         transition: border-color 0.3s, background-color 0.3s;
 
         &--prev {
@@ -39,9 +49,11 @@
         }
 
         &:hover {
-            --slider-control-btn-fill: #fff;
-            background-color: #533dd4;
-            border-color: #533dd4;
+            @media screen and (min-width: $breakpoint-hover) {
+                --slider-control-btn-fill: #fff;
+                background-color: #533dd4;
+                border-color: #533dd4;
+            }
         }
     }
 

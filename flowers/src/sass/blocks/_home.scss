@@ -70,7 +70,9 @@
     border-radius: em(25, $fz);
 
     &:hover {
-        --btn-down-y: #{em(2, $fz)};
+        @media screen and (min-width: $breakpoint-hover) {
+            --btn-down-y: #{em(2, $fz)};
+        }
     }
 
     &__icon {
@@ -96,5 +98,227 @@
     }
     100% {
         transform: rotate(-90deg);
+    }
+}
+
+.advantage {
+    display: grid;
+    grid-template-columns: repeat(2, em(741, $fz));
+    grid-column-gap: 5%;
+    padding-left: 6%;
+    grid-template-rows: em(250, $fz);
+
+    &--margin {
+        margin-bottom: em(110, $fz);
+    }
+
+    &--margin-xl {
+        margin-bottom: em(180, $fz);
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: em(125, $fz);
+        padding-right: em(70, $fz);
+
+        &--delivery {
+            --advantage-title-margin: #{em(30, $fz)};
+            background-image: url("../img/advantage-delivery.jpg");
+            padding-left: 42%;
+        }
+
+        &--payment {
+            --advantage-title-color: #7a5e8e;
+            --btn-circle-color: #000;
+            background-image: url("../img/advantage-payment.png");
+            background-size: auto 100%;
+            background-position-x: 5%;
+            background-color: #fff;
+            padding-left: 40%;
+        }
+
+        &--discount {
+            background-image: url("../img/advantage-discount.jpg");
+            padding-left: 37%;
+        }
+
+        &--amount {
+            --advantage-title-color: #4b8702;
+            --advantage-title-width: #{em(500, $fz)};
+            background-image: url("../img/advantage-amount.jpg");
+            background-size: auto 100%;
+            background-position-x: 2%;
+            background-color: #fff;
+            padding-right: em(20, $fz);
+            padding-left: 38%;
+        }
+
+        &--onorder {
+            --advantage-title-color: #575757;
+            --advantage-title-width: #{em(215, $fz)};
+            background-image: url("../img/advantage-onorder.jpg");
+            padding-right: em(50, $fz);
+            padding-left: 12%;
+        }
+
+        &--colors {
+            --advantage-title-width: #{em(230, $fz)};
+            background-image: url("../img/advantage-colors.jpg");
+            padding-left: 12%;
+        }
+    }
+
+    &__btn {
+        width: em(48, $fz);
+        height: em(48, $fz);
+    }
+
+    &__title {
+        $fz: 40;
+        display: flex;
+        font-size: em($fz, $fz_base);
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--advantage-title-color, #fff);
+        max-width: var(--advantage-title-width, #{em(256, $fz)});
+        margin-bottom: var(--advantage-title-margin);
+    }
+}
+
+.btn-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--btn-circle-color, #fff);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+            --btn-circle-color: #fff;
+            background-color: #533dd4;
+            border-color: #533dd4;
+        }
+    }
+
+    &__icon {
+        width: em(24, $fz);
+        height: auto;
+        fill: var(--btn-circle-color, #fff);
+        transition: fill 0.3s;
+    }
+}
+
+.section-form {
+    display: flex;
+    justify-content: center;
+    padding-right: 10%;
+
+    &--margin {
+        margin-bottom: em(130, $fz);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-right: em(80, $fz);
+    }
+
+    &__title {
+        width: em(504, $fz);
+        height: auto;
+        margin-right: em(57, $fz);
+        margin-bottom: em(38, $fz);
+    }
+
+    &__inner {
+        max-width: em(430, $fz);
+        margin-left: auto;
+    }
+
+    &__form {
+        width: em(427, $fz);
+        .btn {
+            width: 100%;
+            margin-bottom: em(17, $fz);
+        }
+    }
+}
+
+.our-company {
+    display: flex;
+    justify-content: center;
+    margin-bottom: em(128, $fz);
+
+    &__block {
+        position: relative;
+    }
+
+    &__title {
+        $fz: 96;
+        font-size: em($fz, $fz_base);
+        font-weight: 700;
+        color: #575757;
+    }
+
+    &__text {
+        max-width: em(500, $fz);
+        margin-top: em(35, $fz);
+        margin-bottom: em(40, $fz);
+        margin-left: em(84, $fz);
+
+        :first-child {
+            margin-bottom: em(30, $fz);
+        }
+    }
+
+    &__picture {
+        display: flex;
+        width: em(644, $fz);
+        height: auto;
+        margin-left: -11%;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__btn {
+        margin-left: em(84, $fz);
+    }
+}
+
+.btn-more {
+    --btn-circle-color: #4b8702;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+            --btn-circle-color: #533dd4;
+            --btn-more-text-color: #533dd4;
+        }
+    }
+
+    &__text {
+        $fz: 26;
+        font-size: em($fz, $fz_base);
+        color: var(--btn-more-text-color, #4b8702);
+        transition: color 0.3s;
+    }
+
+    &__circle {
+        width: em(48, $fz);
+        height: em(48, $fz);
+        margin-left: em(20, $fz);
+        pointer-events: none;
     }
 }

@@ -99,28 +99,13 @@ input[type="number"]:focus {
         $fz: 56;
         font-size: em($fz, $fz_base);
     }
-
-    // &--size-lg {
-    //     font-size: 44px;
-    //     font-weight: 600;
-
-    //     @media screen and (max-width: 899.98px) {
-    //         font-size: 34px;
-    //     }
-    // }
-
-    // &--size-xl {
-    //     font-size: 47px;
-
-    //     @media screen and (max-width: 599.98px) {
-    //         font-size: 27px;
-    //     }
-    // }
 }
 
 .text {
     &--size-md {
-        font-size: 18px;
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        line-height: 1.44;
     }
 
     &--size-sm {

@@ -37,6 +37,23 @@
     });
 })();
 
+(() => {
+    const sliders = document.querySelectorAll(".product-card-slider");
+
+    sliders.forEach((slider) => {
+        const popagination = slider.querySelector(".swiper-pagination");
+
+        var swiper = new Swiper(slider, {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            pagination: {
+                el: popagination,
+            },
+        });
+    });
+})();
+
 // события на инпут
 (() => {
     function inputEvent(label) {
