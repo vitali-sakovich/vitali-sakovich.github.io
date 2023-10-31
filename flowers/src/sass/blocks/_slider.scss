@@ -2,8 +2,28 @@
     padding-right: 6.6%;
     padding-left: 4.8%;
 
+    @media screen and (max-width: 1499.98px) {
+        padding-left: 2.8%;
+        padding-right: 4.2%;
+    }
+    @media screen and (max-width: 1199.98px) {
+        padding-left: 2.2%;
+        padding-right: 2%;
+    }
+    @media screen and (max-width: 949.98px) {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
     &--margin {
         margin-bottom: em(90, $fz);
+
+        @media screen and (max-width: 1499.98px) {
+            margin-bottom: em(65, $fz); 
+        }
+        @media screen and (max-width: 1199.98px) {
+            margin-bottom: em(23, $fz); 
+        }
     }
 
     &__head {
@@ -11,15 +31,32 @@
         align-items: center;
         padding-left: em(20, $fz);
         margin-bottom: em(10, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            padding-right: em(10, $fz);
+            margin-bottom: 0;
+        }
+        @media screen and (max-width: 599.98px) {
+            padding-left: em(9, $fz);
+        }
     }
 
     &__control {
         margin-left: em(30, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            margin-left: auto;
+        }
     }
 
     &__wrapper {
         padding-top: em(20, $fz);
         padding-bottom: em(20, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            padding-top: em(10, $fz);
+            padding-bottom: em(10, $fz);
+        }
     }
 }
 

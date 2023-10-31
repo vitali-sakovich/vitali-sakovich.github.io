@@ -9,6 +9,10 @@
     height: auto;
     transition: transform 0.3s, box-shadow 0.3s;
 
+    @media screen and (max-width: 949.98px) {
+        padding: em(9 8 5, $fz);
+    }
+
     &:hover {
         @media screen and (min-width: $breakpoint-hover) {
             transform: translateY(em(-10, $fz));
@@ -32,6 +36,10 @@
         flex-direction: column;
         flex-grow: 1;
         padding-left: em(10, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            padding-right: em(10, $fz);
+        }
     }
 
     &__name {
@@ -84,6 +92,11 @@
         top: em(13, $fz);
         right: em(17, $fz);
         z-index: 1;
+
+        @media screen and (max-width: 949.98px) {
+            top: em(9, $fz);
+            right: em(8, $fz);
+        }
     }
 
     &__colors {
@@ -95,6 +108,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: em(10, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            grid-template-columns: 1fr;
+            grid-row-gap: em(5, $fz);
+        }
     }
 }
 
@@ -124,8 +142,9 @@
     width: 100%;
     height: em(289, $fz);
     overflow: hidden;
-    border-radius: em(30, $fz);
+    border-radius: em(20, $fz);
     margin-bottom: em(13, $fz);
+    pointer-events: auto;
 }
 
 .btn-favorites {

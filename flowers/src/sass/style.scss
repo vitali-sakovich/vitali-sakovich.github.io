@@ -98,6 +98,11 @@ input[type="number"]:focus {
     &--size-lg {
         $fz: 56;
         font-size: em($fz, $fz_base);
+
+        @media screen and (max-width: 949.98px) {
+          $fz: 26;
+          font-size: em($fz, $fz_base);  
+        }
     }
 }
 
@@ -160,6 +165,15 @@ input[type="number"]:focus {
     &--preview {
         padding-right: em(40, $fz);
         padding-left: em(40, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            padding-right: em(22, $fz);
+            padding-left: em(22, $fz);
+
+            .btn__text {
+                white-space: nowrap;
+            }
+        }
     }
 
     &:disabled {

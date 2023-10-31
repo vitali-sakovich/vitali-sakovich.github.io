@@ -20,15 +20,21 @@
                     slidesPerView: 1,
                     slidesPerGroup: 1,
                 },
-                650: {
+                600: {
                     slidesPerView: 2,
                     slidesPerGroup: 2,
+                    spaceBetween: 7,
+                },
+                950: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 23,
                 },
                 1150: {
                     slidesPerView: 3,
                     slidesPerGroup: 3,
                 },
-                1500: {
+                1600: {
                     slidesPerView: 4,
                     slidesPerGroup: 4,
                 },
@@ -49,6 +55,7 @@
             loop: true,
             pagination: {
                 el: popagination,
+                clickable: true,
             },
         });
     });
