@@ -498,3 +498,56 @@
         background-color: #575757;
     }
 }
+
+.title-block {
+    padding-top: em(35, $fz);
+    padding-left: 5.5%;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__breadcrumb {
+        margin-bottom: em(35, $fz);
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: #000;
+        line-height: 1.5;
+        transition: color 0.3s;
+
+        &[href] {
+            &:hover {
+                color: rgba(0, 0, 0, 0.6);
+
+                &::before {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        &:first-child {
+            &::before {
+                content: url(../img/arrow-brea.svg);
+                margin-right: em(20, $fz);
+                transition: opacity 0.3s;
+            }
+        }
+
+        &:not(:last-child)::after {
+            content: "/";
+            margin-right: em(10, $fz);
+            margin-left: em(10, $fz);
+            pointer-events: none;
+            color: #000;
+        }
+    }
+}

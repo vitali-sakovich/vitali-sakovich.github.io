@@ -53,11 +53,55 @@
             slidesPerView: 1,
             slidesPerGroup: 1,
             loop: true,
+            effect: "fade",
             pagination: {
                 el: popagination,
                 clickable: true,
             },
+            on: {
+                init() {
+                    setTimeout(updateFraction, 0, this);
+                },
+            },
         });
+
+        function updateFraction(slider) {
+            const width = 100 / slider.slides.length;
+            popagination
+                .querySelectorAll(".swiper-pagination-bullet")
+                .forEach((el, index) => {
+                    el.style.setProperty("--element-width", width + "%");
+                    el.style.setProperty(
+                        "--element-position",
+                        width * index + "%"
+                    );
+                    el.addEventListener("mouseenter", function (e) {
+                        el.click();
+                    });
+                });
+        }
+    });
+})();
+
+(() => {
+    var swiper = new Swiper(".slider-thumbs", {
+        direction: "vertical",
+        loop: true,
+        spaceBetween: 24,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".slider-product", {
+        loop: true,
+        effect: "fade",
+        navigation: {
+            nextEl: ".btn-slider-detail--next",
+            prevEl: ".btn-slider-detail--prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
     });
 })();
 
@@ -454,6 +498,7 @@ document.addEventListener("click", function (e) {
 
 (() => {
     const block = document.querySelector(".preview__btns");
+    if (!block) return;
     block.addEventListener("mouseover", (event) => {
         let item = event.target.closest("button");
         if (!item) return;

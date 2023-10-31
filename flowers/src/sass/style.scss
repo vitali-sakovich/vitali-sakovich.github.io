@@ -100,8 +100,8 @@ input[type="number"]:focus {
         font-size: em($fz, $fz_base);
 
         @media screen and (max-width: 949.98px) {
-          $fz: 26;
-          font-size: em($fz, $fz_base);  
+            $fz: 26;
+            font-size: em($fz, $fz_base);
         }
     }
 }
@@ -255,3 +255,4 @@ input[type="number"]:focus {
 @import "blocks/forms";
 @import "blocks/slider";
 @import "blocks/card-product";
+@import "blocks/product-detail";

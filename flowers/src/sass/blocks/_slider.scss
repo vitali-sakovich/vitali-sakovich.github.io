@@ -1,4 +1,5 @@
 .slider-products {
+    $self: &;
     padding-right: 6.6%;
     padding-left: 4.8%;
 
@@ -19,10 +20,10 @@
         margin-bottom: em(90, $fz);
 
         @media screen and (max-width: 1499.98px) {
-            margin-bottom: em(65, $fz); 
+            margin-bottom: em(65, $fz);
         }
         @media screen and (max-width: 1199.98px) {
-            margin-bottom: em(23, $fz); 
+            margin-bottom: em(23, $fz);
         }
     }
 
@@ -38,6 +39,18 @@
         }
         @media screen and (max-width: 599.98px) {
             padding-left: em(9, $fz);
+            margin-bottom: em(10, $fz);
+        }
+        @media screen and (max-width: 369.98px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #{$self}--watched & {
+            @media screen and (max-width: 599.98px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     }
 
@@ -46,6 +59,17 @@
 
         @media screen and (max-width: 949.98px) {
             margin-left: auto;
+        }
+        @media screen and (max-width: 369.98px) {
+            margin-top: em(20, $fz);
+            margin-left: 0;
+        }
+
+        #{$self}--watched & {
+            @media screen and (max-width: 599.98px) {
+                margin-top: em(20, $fz);
+                margin-left: 0;
+            }
         }
     }
 

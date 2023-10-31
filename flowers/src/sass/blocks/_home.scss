@@ -61,6 +61,7 @@
         justify-items: center;
         align-items: center;
         font-size: 0.833vw;
+        pointer-events: none;
 
         @media screen and (max-width: 1199.98px) {
             font-size: 1.6vw;
@@ -302,7 +303,7 @@
                 padding-left: em(250, $fz);
             }
             @media screen and (max-width: 599.98px) {
-                padding-left: em(136, $fz); 
+                padding-left: em(136, $fz);
             }
         }
 
@@ -322,7 +323,7 @@
                 padding-left: em(240, $fz);
             }
             @media screen and (max-width: 599.98px) {
-                padding-left: em(121, $fz); 
+                padding-left: em(121, $fz);
             }
         }
 
@@ -337,7 +338,7 @@
                 padding-left: em(240, $fz);
             }
             @media screen and (max-width: 599.98px) {
-                padding-left: em(122, $fz); 
+                padding-left: em(122, $fz);
             }
         }
 
@@ -359,7 +360,7 @@
             }
             @media screen and (max-width: 599.98px) {
                 background-position-x: 2%;
-                padding-left: em(122, $fz); 
+                padding-left: em(122, $fz);
             }
         }
 
@@ -374,7 +375,7 @@
                 padding-left: em(95, $fz);
             }
             @media screen and (max-width: 599.98px) {
-                padding-left: em(40, $fz); 
+                padding-left: em(40, $fz);
             }
         }
 
@@ -388,7 +389,7 @@
                 padding-left: em(95, $fz);
             }
             @media screen and (max-width: 599.98px) {
-                padding-left: em(40, $fz); 
+                padding-left: em(40, $fz);
             }
         }
     }
@@ -524,7 +525,7 @@
     &__inner {
         max-width: em(430, $fz);
         margin-left: auto;
-        
+
         @media screen and (max-width: 1199.98px) {
             max-width: em(365, $fz);
         }
@@ -607,7 +608,7 @@
             margin-bottom: em(30, $fz);
 
             @media screen and (max-width: 599.98px) {
-                margin-bottom: em(20, $fz); 
+                margin-bottom: em(20, $fz);
             }
         }
 
@@ -646,6 +647,7 @@
             margin-left: em(-155, $fz);
         }
         @media screen and (max-width: 949.98px) {
+            width: 70%;
             margin-left: auto;
             margin-top: em(-130, $fz);
         }
