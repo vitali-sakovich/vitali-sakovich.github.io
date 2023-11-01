@@ -4885,13 +4885,16 @@ input[type=number]:focus {
   color: #fff;
 }
 
-.product-card-slider .swiper-pagination-bullet::before {
-  content: "";
-  position: absolute;
-  bottom: -0.5em;
-  left: var(--element-position);
-  width: var(--element-width);
-  height: 18.0625em;
+@media screen and (min-width: 1050px) {
+  .product-card-slider .swiper-pagination-bullet::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: var(--element-position);
+    width: var(--element-width);
+    height: 16.4375em;
+    cursor: default;
+  }
 }
 
 .product {

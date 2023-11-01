@@ -231,12 +231,15 @@
 }
 
 .product-card-slider .swiper-pagination-bullet {
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: em(-8, $fz);
-        left: var(--element-position);
-        width: var(--element-width);
-        height: em(289, $fz);
+    @media screen and (min-width: 1050px) {
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: var(--element-position);
+            width: var(--element-width);
+            height: em(263, $fz);
+            cursor: default;
+        }
     }
 }
