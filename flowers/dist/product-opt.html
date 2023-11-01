@@ -319,11 +319,17 @@
                                 <div class="product-control__inner">
                                     <div class="product-price product-control__price">
                                         <div class="product-price__wrap">
+                                            <span class="product-price__final">1020 ₽</span>
+                                            <span class="product-price__old">1200 ₽</span>
+                                        </div>
+                                        <span class="product-price__text">за упаковку</span>
+                                    </div>
+                                    <div class="product-price product-price--one product-control__price product-control__price--one">
+                                        <div class="product-price__wrap">
                                             <span class="product-price__final">120 ₽</span>
                                             <span class="product-price__old">200 ₽</span>
                                         </div>
-
-                                        <span class="product-price__text">за штуку</span>
+                                        <span class="product-price__text">за штуку (10 шт. в уп.)</span>
                                     </div>
                                 </div>
                                 <button class="btn-share product-control__share js-btn-sharing">
@@ -332,8 +338,7 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="product-color product-control__color">
-                                <span class="product-color__text">Выберите цвет</span>
+                            <div class="product-color product-color--opt product-control__color">
                                 <div class="product-color__row">
                                     <label class="product-color__label">
                                         <input type="radio" name="color" checked="checked" value="#b832e1" class="product-color__input">
@@ -352,10 +357,22 @@
                                         <span style="background-color: #e1bc32" class="product-color__box"></span>
                                     </label>
                                     <label class="product-color__label">
-                                        <input type="radio" name="color" disabled="disabled" value="#a0e132" class="product-color__input">
+                                        <input type="radio" name="color" value="#a0e132" class="product-color__input">
                                         <span style="background-color: #a0e132" class="product-color__box"></span>
                                     </label>
                                 </div>
+
+                                <button class="hint product-color__hint">
+                                    <div class="icon-hint hint__icon">?</div>
+                                    <div class="hint__drop">
+                                        <span class="hint__text">
+                                            Выбор расцветок при оптовой покупке
+                                            не возможен. Если вы хотите выбрать
+                                            конкретные цвета товара, перейдите
+                                            в каталог для розничных покупателей
+                                        </span>
+                                    </div>
+                                </button>
                             </div>
                             <div class="product-control__btns">
                                 <div class="counter product-control__counter">

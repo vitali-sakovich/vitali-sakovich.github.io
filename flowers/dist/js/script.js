@@ -85,12 +85,37 @@
 
 (() => {
     var swiper = new Swiper(".slider-thumbs", {
-        direction: "vertical",
         loop: true,
         spaceBetween: 24,
         slidesPerView: 3,
         freeMode: true,
         watchSlidesProgress: true,
+        breakpoints: {
+            320: {
+                direction: "horizontal",
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 8,
+            },
+            650: {
+                direction: "horizontal",
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 20,
+            },
+            950: {
+                direction: "vertical",
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 24,
+            },
+            1500: {
+                direction: "vertical",
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 24,
+            },
+        },
     });
     var swiper2 = new Swiper(".slider-product", {
         loop: true,

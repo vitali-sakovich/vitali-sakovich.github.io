@@ -28,6 +28,9 @@
         @media screen and (max-width: 949.98px) {
             padding-left: 4.8%;
         }
+        @media screen and (max-width: 499.98px) {
+            padding-left: em(20, $fz);
+        }
     }
 
     &__title {
