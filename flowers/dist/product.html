@@ -279,13 +279,13 @@
                         </div>
                     </div>
                     <div class="product__btns">
-                        <a href="#" class="btn-favorites product-detail__btn">
+                        <a href="#" class="btn-favorites product__btn">
                             <svg width="21" height="17" class="btn-favorites__icon">
                                 <use xlink:href="./img/icons-sprite.svg#delivery"></use>
                             </svg>
                             <span class="btn-favorites__text">Доставка и оплата</span>
                         </a>
-                        <a href="#" class="btn-favorites product-detail__btn">
+                        <a href="#" class="btn-favorites product__btn">
                             <div class="btn-favorites__hint icon-hint">?</div>
                             <span class="btn-favorites__text">Как заказать?</span>
                         </a>
@@ -293,16 +293,18 @@
                     <h1 class="product__title">
                         Ветка гвоздики 20 цветков пурпурно-фиолетовый
                     </h1>
-                    <div class="product__article">
-                        Артикул: <span>CD125</span>
-                    </div>
-                    <div class="product-control product__control">
-                        <div class="product-control__row">
-                            <div class="product-control__inner">
-                                <div class="product-price product-control__price">
-                                    <span class="product-price__final">120 ₽</span>
-                                    <span class="product-price__old">200 ₽</span>
-                                    <span class="product-price__text">за штуку</span>
+                    <div class="product__wrap">
+                        <div class="product__article">
+                            Артикул: <span>CD125</span>
+                        </div>
+                        <div class="product-control product__control">
+                            <div class="product-control__row">
+                                <div class="product-control__inner">
+                                    <div class="product-price product-control__price">
+                                        <span class="product-price__final">120 ₽</span>
+                                        <span class="product-price__old">200 ₽</span>
+                                        <span class="product-price__text">за штуку</span>
+                                    </div>
                                 </div>
                                 <button class="btn-share product-control__share js-btn-sharing">
                                     <svg width="30" height="30" class="btn-share__icon">
@@ -310,32 +312,83 @@
                                     </svg>
                                 </button>
                             </div>
-                        </div>
-                        <div class="product-color product__color">
-                            <span class="product-color__text">Выберите цвет</span>
-                            <div class="product-color__row">
-                                <label class="product-color__label">
-                                    <input type="radio" name="color" class="product-color__input">
-                                    <span style="background-color: #b832e1" class="product-color__box"></span>
-                                </label>
-                                <label class="product-color__label">
-                                    <input type="radio" name="color" class="product-color__input">
-                                    <span style="background-color: #328ae1" class="product-color__box"></span>
-                                </label>
-                                <label class="product-color__label">
-                                    <input type="radio" name="color" class="product-color__input">
-                                    <span style="background-color: #e13232" class="product-color__box"></span>
-                                </label>
-                                <label class="product-color__label">
-                                    <input type="radio" name="color" class="product-color__input">
-                                    <span style="background-color: #e1bc32" class="product-color__box"></span>
-                                </label>
-                                <label class="product-color__label">
-                                    <input type="radio" name="color" disabled="disabled" class="product-color__input">
-                                    <span style="background-color: #a0e132" class="product-color__box"></span>
-                                </label>
+                            <div class="product-color product__color">
+                                <span class="product-color__text">Выберите цвет</span>
+                                <div class="product-color__row">
+                                    <label class="product-color__label">
+                                        <input type="radio" name="color" checked="checked" value="#b832e1" class="product-color__input">
+                                        <span style="background-color: #b832e1" class="product-color__box"></span>
+                                    </label>
+                                    <label class="product-color__label">
+                                        <input type="radio" name="color" value="#328ae1" class="product-color__input">
+                                        <span style="background-color: #328ae1" class="product-color__box"></span>
+                                    </label>
+                                    <label class="product-color__label">
+                                        <input type="radio" name="color" value="#e13232" class="product-color__input">
+                                        <span style="background-color: #e13232" class="product-color__box"></span>
+                                    </label>
+                                    <label class="product-color__label">
+                                        <input type="radio" name="color" value="#e1bc32" class="product-color__input">
+                                        <span style="background-color: #e1bc32" class="product-color__box"></span>
+                                    </label>
+                                    <label class="product-color__label">
+                                        <input type="radio" name="color" disabled="disabled" value="#a0e132" class="product-color__input">
+                                        <span style="background-color: #a0e132" class="product-color__box"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="product-control__btns">
+                                <div class="counter product-control__counter">
+                                    <button type="button" class="counter__btn counter__btn--minus"></button>
+                                    <input type="number" name="counter" value="66" class="counter__input">
+                                    <button type="button" class="counter__btn counter__btn--plus"></button>
+                                </div>
+                                <button class="btn btn--primary product-control__btn product-control__btn--basket">
+                                    <span class="btn__text">В корзину</span>
+                                </button>
+                                <button class="btn-favorites product-control__btn product-control__btn--favorites">
+                                    <svg width="27" height="26" class="btn-favorites__icon">
+                                        <use xlink:href="./img/icons-sprite.svg#favorites-btn"></use>
+                                    </svg>
+                                    <span class="btn-favorites__text">В избранное</span>
+                                </button>
+                                <a href="#" class="btn-favorites product-control__btn product-control__btn--purchase">
+                                    <svg width="16" height="16" class="btn-favorites__icon">
+                                        <use xlink:href="./img/icons-sprite.svg#purchase"></use>
+                                    </svg>
+                                    <span class="btn-favorites__text">Быстрая покупка</span>
+                                </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="product-parameters product__parameters">
+                    <div class="product-parameters__item">
+                        <span class="product-parameters__name">Материал</span>
+                        <span class="product-parameters__value">Ткань, Пластик
+                        </span>
+                    </div>
+                    <div class="product-parameters__item">
+                        <span class="product-parameters__name">Название цветка</span>
+                        <span class="product-parameters__value">Роза</span>
+                    </div>
+                    <div class="product-parameters__item">
+                        <span class="product-parameters__name">Количество в упаковке</span>
+                        <span class="product-parameters__value">20</span>
+                    </div>
+                    <div class="product-parameters__item">
+                        <span class="product-parameters__name">Расцветок в упаковке</span>
+                        <span class="product-parameters__value">8</span>
+                    </div>
+                    <div class="product-parameters__item">
+                        <span class="product-parameters__name">
+                            Высота, см</span>
+                        <span class="product-parameters__value">8</span>
+                    </div>
+                    <div class="product-parameters__item">
+                        <span class="product-parameters__name">
+                            Диаметр, см</span>
+                        <span class="product-parameters__value">7</span>
                     </div>
                 </div>
             </section>

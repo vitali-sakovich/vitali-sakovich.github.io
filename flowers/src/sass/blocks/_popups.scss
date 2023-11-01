@@ -1033,7 +1033,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        width: 38%;
+        width: 35%;
         height: 100%;
         background-color: transparent;
 
@@ -1073,7 +1073,7 @@
     &__input {
         $fz: 18;
         font-size: em($fz, $fz_base);
-        width: 22%;
+        width: 30%;
         height: 100%;
         text-align: center;
     }
