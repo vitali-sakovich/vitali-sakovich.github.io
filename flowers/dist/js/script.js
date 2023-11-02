@@ -544,3 +544,47 @@ document.addEventListener("click", function (e) {
         img.setAttribute("src", btnSrc);
     }
 })();
+
+// функция инициализации слайдера
+const rangeSliderInit = (slider) => {
+    const range = slider.querySelector(".js-range");
+    const inputMin = slider.querySelector(".js-value-min");
+    const inputMax = slider.querySelector(".js-value-max");
+    const toValue = Number(range.dataset.to);
+    const fromValue = Number(range.dataset.from);
+
+    console.log(typeof toValue);
+
+    if (!range || !inputMin || !inputMax) return;
+
+    const inputs = [inputMin, inputMax];
+
+    noUiSlider.create(range, {
+        start: [fromValue, toValue],
+        connect: true,
+        range: {
+            min: fromValue,
+            max: toValue,
+        },
+        step: 1,
+    });
+
+    range.noUiSlider.on("update", function (values, handle) {
+        inputs[handle].value = parseInt(values[handle]);
+    });
+
+    inputMin.addEventListener("change", function () {
+        range.noUiSlider.set([this.value, null]);
+    });
+
+    inputMax.addEventListener("change", function () {
+        range.noUiSlider.set([null, this.value]);
+    });
+};
+
+const init = () => {
+    const ranges = document.querySelectorAll(".range");
+    ranges.forEach(rangeSliderInit);
+};
+
+window.addEventListener("DOMContentLoaded", init);

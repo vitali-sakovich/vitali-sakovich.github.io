@@ -3,12 +3,27 @@
     padding: em(40, $fz) 6.6% em(100, $fz) 5.5%;
     width: 100%;
 
+    @media screen and (max-width: 1499.98px) {
+        padding-right: 4.2%;
+        padding-left: 4.5%;
+    }
+    @media screen and (max-width: 1149.98px) {
+        padding-right: 2%;
+        padding-left: 4.6%;
+    }
+
     &__filters {
         display: flex;
         flex-direction: column;
         width: em(268, $fz);
         min-width: em(268, $fz);
         margin-right: em(55, $fz);
+
+        @media screen and (max-width: 1149.98px) {
+            width: em(248, $fz);
+            min-width: em(248, $fz);
+            margin-right: em(28, $fz);
+        }
     }
 
     &__block {
@@ -16,13 +31,21 @@
     }
 
     &__head {
-        margin-bottom: em(25, $fz);
+        margin-bottom: em(20, $fz);
     }
 
     &__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(em(380, $fz), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(em(320, $fz), 1fr));
         grid-gap: em(26 33, $fz);
+
+        @media screen and (max-width: 1499.98px) {
+            grid-gap: em(33 14, $fz);
+        }
+        @media screen and (max-width: 1199.98px) {
+            grid-template-columns: repeat(auto-fill, minmax(em(260, $fz), 1fr));
+            grid-gap: em(30 11, $fz);
+        }
     }
 
     &__card {
@@ -32,7 +55,7 @@
     &__sort {
         display: flex;
         justify-content: space-between;
-        margin-bottom: em(25, $fz);
+        margin-bottom: em(20, $fz);
     }
 
     &__tags {
@@ -42,8 +65,13 @@
     }
 
     &__tag {
+        margin-top: em(5, $fz);
         margin-right: em(10, $fz);
-        margin-bottom: em(10, $fz);
+        margin-bottom: em(5, $fz);
+    }
+
+    &__pagination {
+        margin-top: em(50, $fz);
     }
 }
 
@@ -62,7 +90,7 @@
     border-radius: em(5, $fz);
     min-height: em(34, $fz);
     padding: em(6 10 6 8, $fz);
-    background-color: #533DD4;
+    background-color: #533dd4;
 
     &__btn {
         display: flex;
@@ -78,7 +106,7 @@
 
     &__name {
         $fz: 14;
-        color: #fff; 
+        color: #fff;
         font-size: em($fz, $fz_base);
     }
 }
@@ -90,22 +118,37 @@
     padding-right: em(9, $fz);
     padding-left: em(9, $fz);
     border-radius: em(5, $fz);
+    background-color: transparent;
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: rgba(99, 99, 99, 0.1);
+        @media screen and (min-width: $breakpoint-hover) {
+            background-color: rgba(99, 99, 99, 0.1);
+        }
     }
 
     &__icon {
-       width: em(17, $fz);
-       height: auto;
+        width: em(17, $fz);
+        height: auto;
         margin-right: em(10, $fz);
-        fill: #8A8A8A;
+        fill: #8a8a8a;
     }
 
     &__text {
         $fz: 14;
         font-size: em($fz, $fz_base);
+    }
+}
+
+.filters {
+    &__box {
+        margin-bottom: em(40, $fz);
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -117,9 +160,21 @@
         margin-bottom: em(20, $fz);
     }
 
+    &__title {
+        $fz: 17;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+    }
+
     &__categories {
         display: flex;
         flex-direction: column;
+    }
+
+    &__content {
+        @include scrollbar;
+        max-height: em(243, $fz);
+        padding-bottom: em(4, $fz);
     }
 
     &__link {
@@ -139,13 +194,201 @@
             margin-bottom: 2px;
         }
 
-        &--active,
         &:hover {
-            border-color: #8A8A8A;
+            @media screen and (min-width: $breakpoint-hover) {
+                border-color: #8a8a8a;
+            }
         }
 
         &--active {
+            border-color: #8a8a8a;
             cursor: default;
+        }
+    }
+
+    &__checkbox {
+        &:not(:last-child) {
+            margin-bottom: em(16, $fz);
+        }
+    }
+}
+
+.checkbox {
+    $self: &;
+    display: flex;
+
+    &__input {
+        display: none;
+
+        &:checked ~ #{$self}__label::before {
+            background-color: #4c4c4c;
+            border-color: #4c4c4c;
+        }
+    }
+
+    &__text {
+        color: #5b5b5b;
+        line-height: 1.37;
+        user-select: none;
+        margin-top: em(3, $fz);
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            &::before {
+                @media screen and (min-width: $breakpoint-hover) {
+                    background-color: rgba(0, 0, 0, 0.05);
+                    border-color: rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+
+        &::before {
+            content: "";
+            display: flex;
+            border-radius: em(5, $fz);
+            border: 1px solid rgba(0, 0, 0, 0.23);
+            background-color: #fff;
+            box-shadow: em(0 2 4, $fz) -1px rgba(0, 0, 0, 0.4);
+            width: em(24, $fz);
+            min-width: em(24, $fz);
+            height: em(24, $fz);
+            margin-right: em(8, $fz);
+            background-size: em(16 12, $fz);
+            background-image: url("../img/cheker.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+    }
+}
+
+.pagination {
+    $self: &;
+    display: flex;
+    grid-column: -1/1;
+
+    &__link {
+        $fz: 18;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: em($fz, $fz_base);
+        width: 11.4%;
+        min-height: em(40, $fz);
+        border: 1px solid #cacaca;
+        background-color: #fff;
+        color: var(--pagination-link-color, #000);
+        transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+        &--prev {
+            margin-right: 2.4%;
+        }
+        &--next {
+            margin-left: 2.4%;
+        }
+
+        &--active {
+            pointer-events: none;
+            --pagination-link-color: #fff;
+            background-color: #4b8702;
+            border-color: #4b8702;
+        }
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                --pagination-link-color: #fff;
+                background-color: #4b8702;
+                border-color: #4b8702;
+            }
+        }
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: em(10, $fz);
+        width: 7.5%;
+    }
+
+    &__icon {
+        width: em(22, $fz);
+        height: auto;
+        fill: var(--pagination-link-color, rgba(0, 0, 0, 0.55));
+        transition: fill 0.3s;
+
+        #{$self}__link--next & {
+            transform: scaleX(-1);
+        }
+    }
+}
+
+.range {
+    &__values {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: em(12, $fz);
+    }
+
+    &__input {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        max-width: em(100, $fz);
+        min-height: em(48, $fz);
+        border: 1px solid rgba(0, 0, 0, 0.23);
+        background-color: #fff;
+        border-radius: em(5, $fz);
+        text-align: center;
+    }
+
+    &__line {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+    }
+
+    &__slider {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        .noUi-horizontal {
+            height: 2px;
+            background: rgba(0, 0, 0, 0.14);
+            border: none;
+            box-shadow: none;
+        }
+
+        .noUi-connect {
+            background: transparent;
+        }
+
+        .noUi-handle {
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            background: #b39785;
+            box-shadow: none;
+            cursor: pointer;
+            top: -13px;
+            right: -13.5px;
+            border: 5px solid transparent;
+            transition: background-color 0.3s, border-color 0.3s;
+
+            &:hover {
+                @media screen and (min-width: $breakpoint-hover) {
+                    background-color: #fff;
+                    border-color: #533dd4;
+                }
+            }
+
+            &::before,
+            &::after {
+                content: none;
+            }
         }
     }
 }

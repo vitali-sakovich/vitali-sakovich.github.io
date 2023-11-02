@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="./css/fancybox.css">
         <link rel="stylesheet" href="./css/swiper.css">
         <link rel="stylesheet" href="./css/nativejs-select.css">
+        <link rel="stylesheet" href="./css/nouislider.min.css">
         <link rel="stylesheet" href="./css/style.css">
     </head>
 
@@ -33,7 +34,7 @@
                     <li class="nav__item">
                         <a href="#" class="nav__link">
                             <span class="nav__text">Покупателям</span>
-                            <svg width="14" height="7" class="nav__icon">
+                            <svg aria-hidden="true" width="14" height="7" class="nav__icon">
                                 <use xlink:href="./img/icons-sprite.svg#dropdown-arrow"></use>
                             </svg>
                         </a>
@@ -58,12 +59,12 @@
             <div class="header__box">
                 <a href="tel: 88002295951" class="header-phone header-phone--icon header__phone">
                     <span class="header-phone__text">8 800 229-59-51</span>
-                    <svg width="22" height="31" class="header-phone__icon">
+                    <svg aria-hidden="true" width="22" height="31" class="header-phone__icon">
                         <use xlink:href="./img/icons-sprite.svg#phone-icon-mobi"></use>
                     </svg>
                 </a>
                 <button data-open-modal=".popup--call" class="btn-call header__call js-open-modal">
-                    <svg width="15" height="20" class="btn-call__icon">
+                    <svg aria-hidden="true" width="15" height="20" class="btn-call__icon">
                         <use xlink:href="./img/icons-sprite.svg#call-icon"></use>
                     </svg>
                     <span class="btn-call__text">Заказать звонок</span>
@@ -71,29 +72,29 @@
             </div>
             <button data-open-modal=".popup--search" type="button" class="btn-search header__search js-open-modal">
                 <span class="btn-search__text">Поиск по товарам</span>
-                <svg width="27" height="26" class="btn-search__icon">
+                <svg aria-hidden="true" width="27" height="26" class="btn-search__icon">
                     <use xlink:href="./img/icons-sprite.svg#search"></use>
                 </svg>
             </button>
             <a href="#" title="Избранное" aria-label="Избранное" class="btn-control header__control header__control--favorites">
-                <svg width="27" height="26" class="btn-control__icon">
+                <svg aria-hidden="true" width="27" height="26" class="btn-control__icon">
                     <use xlink:href="./img/icons-sprite.svg#favorites"></use>
                 </svg>
                 <span class="btn-control__counter">3</span>
             </a>
             <button title="Личный кабинет" aria-label="Личный кабинет" data-open-modal=".popup--authorization" class="btn-control header__control header__control--lk js-open-modal">
-                <svg width="24" height="24" class="btn-control__icon">
+                <svg aria-hidden="true" width="24" height="24" class="btn-control__icon">
                     <use xlink:href="./img/icons-sprite.svg#lk"></use>
                 </svg>
             </button>
             <button title="Корзина" aria-label="Корзина" data-open-modal=".popup--basket" class="btn-control header__control header__control--basket js-open-modal">
-                <svg width="30" height="24" class="btn-control__icon">
+                <svg aria-hidden="true" width="30" height="24" class="btn-control__icon">
                     <use xlink:href="./img/icons-sprite.svg#basket"></use>
                 </svg>
                 <span class="btn-control__counter">99</span>
             </button>
             <button type="button" data-open-modal=".popup--sidebar" class="btn-sidebar header__sidebar js-open-modal">
-                <svg width="29" height="19" class="btn-sidebar__icon">
+                <svg aria-hidden="true" width="29" height="19" class="btn-sidebar__icon">
                     <use xlink:href="./img/icons-sprite.svg#sidebar-icon"></use>
                 </svg>
                 <span class="btn-sidebar__text">Каталог</span>
@@ -103,7 +104,7 @@
             <div class="popup popup--menu-mobi">
                 <div class="menu">
                     <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close popup__close--menu-mobi js-popup-close">
-                        <svg width="28" height="28" class="popup__icon">
+                        <svg aria-hidden="true" width="28" height="28" class="popup__icon">
                             <use xlink:href="./img/icons-sprite.svg#close"></use>
                         </svg>
                     </button>
@@ -112,7 +113,7 @@
                             <span class="header-phone__text">8 800 229-59-51</span>
                         </a>
                         <button class="btn-call menu__call">
-                            <svg width="15" height="20" class="btn-call__icon">
+                            <svg aria-hidden="true" width="15" height="20" class="btn-call__icon">
                                 <use xlink:href="./img/icons-sprite.svg#call-icon"></use>
                             </svg>
                             <span class="btn-call__text">Заказать звонок</span>
@@ -135,7 +136,7 @@
 
                         <div class="menu__contacts">
                             <a href="tel:+79001234567" class="contact-item menu__contact">
-                                <svg width="13" height="20" class="contact-item__icon contact-item__icon--theme-orange">
+                                <svg aria-hidden="true" width="13" height="20" class="contact-item__icon contact-item__icon--theme-orange">
                                     <use xlink:href="./img/icons-sprite.svg#phone"></use>
                                 </svg>
                                 <span class="contact-item__text">
@@ -193,46 +194,208 @@
                     <form name="filter" action="#" method="get" class="filters__form">
                         <div class="filter filters__box">
                             <div class="filter__head">
+                                <h2 class="filter__title">Цена (₽)</h2>
+                            </div>
+                            <div class="range filter__range">
+                                <div class="range__values">
+                                    <input type="number" class="range__input js-value-min">
+                                    <span class="range__line">—</span>
+                                    <input type="number" class="range__input js-value-max">
+                                </div>
+                                <div class="range__slider">
+                                    <div data-from="10" data-to="200" class="js-range"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter filters__box">
+                            <div class="filter__head">
+                                <h2 class="filter__title">Высота (мм)</h2>
+                            </div>
+                            <div class="range filter__range">
+                                <div class="range__values">
+                                    <input type="number" placeholder="От" class="range__input js-value-min">
+                                    <span class="range__line">—</span>
+                                    <input type="number" placeholder="До" class="range__input js-value-max">
+                                </div>
+                                <div class="range__slider">
+                                    <div data-from="10" data-to="100" class="js-range"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter filters__box">
+                            <div class="filter__head">
+                                <h2 class="filter__title">
+                                    Количество в упаковке
+                                </h2>
+                            </div>
+                            <div class="range filter__range">
+                                <div class="range__values">
+                                    <input type="number" placeholder="От" class="range__input js-value-min">
+                                    <span class="range__line">—</span>
+                                    <input type="number" placeholder="До" class="range__input js-value-max">
+                                </div>
+                                <div class="range__slider">
+                                    <div data-from="22" data-to="999" class="js-range"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter filters__box">
+                            <div class="filter__head">
                                 <h2 class="filter__title">Название цветка</h2>
                             </div>
                             <div class="filter__content">
-                                <div class="checkbox">
-                                    <input type="checkbox" name="checkbox" checked="checked" class="checkbox__input">
-                                    <label for="checkbox" class="checkbox__label">
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox1" id="checkbox1" class="checkbox__input">
+                                    <label for="checkbox1" class="checkbox__label">
                                         <span class="checkbox__text">Азалия</span>
                                     </label>
                                 </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" name="checkbox" class="checkbox__input">
-                                    <label for="checkbox" class="checkbox__label">
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox2" id="checkbox2" class="checkbox__input">
+                                    <label for="checkbox2" class="checkbox__label">
                                         <span class="checkbox__text">Акация</span>
                                     </label>
                                 </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" name="checkbox" class="checkbox__input">
-                                    <label for="checkbox" class="checkbox__label">
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox3" id="checkbox3" class="checkbox__input">
+                                    <label for="checkbox3" class="checkbox__label">
                                         <span class="checkbox__text">Анемон</span>
                                     </label>
                                 </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" name="checkbox" class="checkbox__input">
-                                    <label for="checkbox" class="checkbox__label">
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox4" id="checkbox4" class="checkbox__input">
+                                    <label for="checkbox4" class="checkbox__label">
                                         <span class="checkbox__text">Антуриум</span>
                                     </label>
                                 </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" name="checkbox" class="checkbox__input">
-                                    <label for="checkbox" class="checkbox__label">
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox5" id="checkbox5" class="checkbox__input">
+                                    <label for="checkbox5" class="checkbox__label">
                                         <span class="checkbox__text">Аспаргус</span>
                                     </label>
                                 </div>
-                                <div class="checkbox">
-                                    <input type="checkbox" name="checkbox" class="checkbox__input">
-                                    <label for="checkbox" class="checkbox__label">
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox6" id="checkbox6" class="checkbox__input">
+                                    <label for="checkbox6" class="checkbox__label">
+                                        <span class="checkbox__text">Астра</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox8" id="checkbox8" class="checkbox__input">
+                                    <label for="checkbox8" class="checkbox__label">
+                                        <span class="checkbox__text">Аспаргус</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox7" id="checkbox7" class="checkbox__input">
+                                    <label for="checkbox7" class="checkbox__label">
                                         <span class="checkbox__text">Астра</span>
                                     </label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="filter filters__box">
+                            <div class="filter__head">
+                                <h2 class="filter__title">Материал</h2>
+                            </div>
+                            <div class="filter__content">
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox1a" id="checkbox1a" class="checkbox__input">
+                                    <label for="checkbox1a" class="checkbox__label">
+                                        <span class="checkbox__text">Азалия</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox2a" id="checkbox2a" class="checkbox__input">
+                                    <label for="checkbox2a" class="checkbox__label">
+                                        <span class="checkbox__text">Акация</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox3a" id="checkbox3a" class="checkbox__input">
+                                    <label for="checkbox3a" class="checkbox__label">
+                                        <span class="checkbox__text">Анемон</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox4a" id="checkbox4a" class="checkbox__input">
+                                    <label for="checkbox4a" class="checkbox__label">
+                                        <span class="checkbox__text">Антуриум</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox5a" id="checkbox5a" class="checkbox__input">
+                                    <label for="checkbox5a" class="checkbox__label">
+                                        <span class="checkbox__text">Аспаргус</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox6a" id="checkbox6a" class="checkbox__input">
+                                    <label for="checkbox6a" class="checkbox__label">
+                                        <span class="checkbox__text">Астра</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox8a" id="checkbox8a" class="checkbox__input">
+                                    <label for="checkbox8a" class="checkbox__label">
+                                        <span class="checkbox__text">Аспаргус</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox7a" id="checkbox7a" class="checkbox__input">
+                                    <label for="checkbox7a" class="checkbox__label">
+                                        <span class="checkbox__text">Астра</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter filters__box">
+                            <div class="filter__head">
+                                <h2 class="filter__title">Материал</h2>
+                            </div>
+                            <div class="filter__content">
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox1b" id="checkbox1b" class="checkbox__input">
+                                    <label for="checkbox1b" class="checkbox__label">
+                                        <span class="checkbox__text">Азалия</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox2b" id="checkbox2b" class="checkbox__input">
+                                    <label for="checkbox2b" class="checkbox__label">
+                                        <span class="checkbox__text">Акация</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox3b" id="checkbox3b" class="checkbox__input">
+                                    <label for="checkbox3b" class="checkbox__label">
+                                        <span class="checkbox__text">Анемон</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox4b" id="checkbox4b" class="checkbox__input">
+                                    <label for="checkbox4b" class="checkbox__label">
+                                        <span class="checkbox__text">Антуриум</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox filter__checkbox">
+                                    <input type="checkbox" name="checkbox5b" id="checkbox5b" class="checkbox__input">
+                                    <label for="checkbox5b" class="checkbox__label">
+                                        <span class="checkbox__text">Аспаргус</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__btns">
+                            <button type="button" class="btn-reset filters__reset">
+                                <svg width="17" height="18" class="btn-reset__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#reset"></use>
+                                </svg>
+                                <span class="btn-reset__text">Сбросить</span>
+                            </button>
+                            <button type="button" class="btn btn--primary filters__apply">
+                                <span class="btn__text">Применить</span>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -774,6 +937,27 @@
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="pagination catalog__pagination">
+                            <a href="#" class="pagination__link pagination__link--prev">
+                                <svg aria-hidden="true" width="24" height="14" class="pagination__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#arrow-pogin"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="pagination__link"> 1 </a>
+                            <span class="pagination__dots">…</span>
+                            <a href="#" class="pagination__link"> 7 </a>
+                            <a href="#" class="pagination__link pagination__link--active">
+                                8
+                            </a>
+                            <a href="#" class="pagination__link"> 9 </a>
+                            <span class="pagination__dots">…</span>
+                            <a href="#" class="pagination__link"> 16 </a>
+                            <a href="#" class="pagination__link pagination__link--next">
+                                <svg aria-hidden="true" width="24" height="14" class="pagination__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#arrow-pogin"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -2141,7 +2325,7 @@
                                         <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
                                         <span class="form__placeholder">Телефон</span>
                                         <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                            <svg width="16" height="16" class="form__icon">
+                                            <svg aria-hidden="true" width="16" height="16" class="form__icon">
                                                 <use xlink:href="./img/icons-sprite.svg#clear"></use>
                                             </svg>
                                         </button>
@@ -2150,7 +2334,7 @@
                                         <input type="text" name="address" data-rule="required" class="form__input js-input">
                                         <span class="form__placeholder">Адрес доставки</span>
                                         <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                            <svg width="16" height="16" class="form__icon">
+                                            <svg aria-hidden="true" width="16" height="16" class="form__icon">
                                                 <use xlink:href="./img/icons-sprite.svg#clear"></use>
                                             </svg>
                                         </button>
@@ -2173,7 +2357,7 @@
                 <div class="popup__head">
                     <h2 class="popup-title">Поделиться</h2>
                     <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
-                        <svg width="28" height="28" class="popup__icon">
+                        <svg aria-hidden="true" width="28" height="28" class="popup__icon">
                             <use xlink:href="./img/icons-sprite.svg#close"></use>
                         </svg>
                     </button>
@@ -2200,6 +2384,7 @@
         <script src="./js/swiper.js"></script>
         <script src="./js/nativejs-select.min.js"></script>
         <script src="./js/js-form-validator.min.js"></script>
+        <script src="./js/nouislider.min.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>

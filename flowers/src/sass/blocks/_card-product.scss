@@ -10,7 +10,7 @@
     transition: transform 0.3s, box-shadow 0.3s;
 
     @media screen and (max-width: 949.98px) {
-        padding: em(9 8 5, $fz);
+        padding: em(9 8 12, $fz);
     }
 
     &:hover {
@@ -35,6 +35,7 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        padding-right: em(10, $fz);
         padding-left: em(10, $fz);
 
         @media screen and (max-width: 949.98px) {
@@ -106,14 +107,9 @@
 
     &__controls {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: em(10, $fz);
+        grid-template-columns: repeat(auto-fit, minmax(em(146, $fz), 1fr));
+        grid-gap: em(5 10, $fz);
         margin-top: em(10, $fz);
-
-        @media screen and (max-width: 949.98px) {
-            grid-template-columns: 1fr;
-            grid-row-gap: em(5, $fz);
-        }
     }
 }
 
@@ -141,7 +137,6 @@
     --swiper-theme-color: rgba(0, 0, 0, 0.26);
     --swiper-pagination-bullet-inactive-opacity: 0.127;
     width: 100%;
-    height: em(289, $fz);
     overflow: hidden;
     border-radius: em(20, $fz);
     margin-bottom: em(13, $fz);

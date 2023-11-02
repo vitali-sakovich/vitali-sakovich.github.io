@@ -350,7 +350,9 @@
     background-color: transparent;
 
     &:hover {
-        --btn-share-icon-color: #533dd4;
+        @media screen and (min-width: $breakpoint-hover) {
+            --btn-share-icon-color: #533dd4;
+        }
     }
 
     &__icon {
@@ -453,7 +455,9 @@
     align-items: center;
 
     &:hover {
-        --btn-slider-detail-fill-icon: rgba(0, 0, 0, 0.5);
+        @media screen and (min-width: $breakpoint-hover) {
+            --btn-slider-detail-fill-icon: rgba(0, 0, 0, 0.5);
+        }
     }
 
     &__icon {
