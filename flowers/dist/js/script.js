@@ -130,6 +130,12 @@
     });
 })();
 
+new NativejsSelect({
+    selector: "select",
+    disableMobile: false,
+    enableSearch: false,
+});
+
 // события на инпут
 (() => {
     function inputEvent(label) {

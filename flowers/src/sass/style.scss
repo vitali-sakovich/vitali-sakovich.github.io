@@ -98,17 +98,23 @@ input[type="number"]:focus {
 }
 
 .title {
-    font-weight: 700;
-    color: #575757;
-
     &--size-lg {
         $fz: 56;
         font-size: em($fz, $fz_base);
+        font-weight: 700;
+        color: #575757;
 
         @media screen and (max-width: 949.98px) {
             $fz: 26;
             font-size: em($fz, $fz_base);
         }
+    }
+
+    &--size-sm {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+        color: #000;
     }
 }
 
@@ -213,6 +219,20 @@ input[type="number"]:focus {
     }
 }
 
+.wrapper {
+    padding-right: 6.6%;
+    padding-left: 5.5%;
+
+    @media screen and (max-width: 1499.98px) {
+        padding-right: 4.1%;
+        padding-left: 4.5%;
+    }
+    @media screen and (max-width: 1149.98px) {
+        padding-left: 4.6%;
+        padding-right: 2%;
+    }
+}
+
 .error-text {
     padding-top: 40px;
     padding-bottom: 60px;
@@ -262,3 +282,5 @@ input[type="number"]:focus {
 @import "blocks/slider";
 @import "blocks/card-product";
 @import "blocks/product-detail";
+@import "blocks/catalog-cotigories";
+@import "blocks/catalog";

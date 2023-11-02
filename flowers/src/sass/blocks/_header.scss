@@ -29,8 +29,8 @@
         padding: em(15, $fz) 9%;
     }
     @media screen and (max-width: 499.98px) {
-        padding-right: em(20, $fz);
-        padding-left: em(20, $fz);
+        padding-right: 5.5%;
+        padding-left: 5.5%;
     }
     @media screen and (max-width: 339.98px) {
         padding-right: em(10, $fz);
@@ -527,6 +527,9 @@
     @media screen and (max-width: 949.98px) {
         padding-top: em(15, $fz);
         padding-right: 0;
+    }
+    @media screen and (max-width: 499.98px) {
+        padding-left: 5.5%;
     }
 
     &__title {

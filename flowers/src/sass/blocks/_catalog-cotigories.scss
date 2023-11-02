@@ -1,0 +1,47 @@
+.catalog-cotigories {
+    display: flex;
+    flex-direction: column;
+    padding: em(35, $fz) 6.6% em(87, $fz) 5.5%;
+
+    @media screen and (max-width: 1499.98px) {
+        padding-right: 4.1%;
+        padding-left: 4.5%;
+    }
+    @media screen and (max-width: 1149.98px) {
+        padding-left: 4.6%;
+    }
+    @media screen and (max-width: 499.98px) {
+        padding: em(20, $fz) 5.5% em(40, $fz);
+    }
+
+    &__head {
+        margin-bottom: em(40, $fz);
+        
+        @media screen and (max-width: 499.98px) {
+            margin-bottom: em(20, $fz);
+        }
+    }
+
+    &__block {
+        &:not(:last-child) {
+            margin-bottom: em(55, $fz);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(em(150, $fz), 1fr));
+        grid-row-gap: em(34, $fz);
+        max-width: 91%;
+        margin-left: em(-20, $fz);
+
+        @media screen and (max-width: 1699.98px) {
+            max-width: 100%;
+        }
+        @media screen and (max-width: 499.98px) {
+            grid-row-gap: em(20, $fz);
+            grid-template-columns: repeat(auto-fill, minmax(em(110, $fz), 1fr));
+            margin-left: 0;
+        }
+    }
+}

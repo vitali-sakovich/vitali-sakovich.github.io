@@ -22,8 +22,8 @@
         padding-bottom: em(24, $fz);
     }
     @media screen and (max-width: 499.98px) {
-        padding-right: em(20, $fz);
-        padding-left: em(20, $fz);
+        padding-right: 5.5%;
+        padding-left: 5.5%;
     }
 
     &__container {
