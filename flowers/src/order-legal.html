@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <title>Каталог</title>
+        <title>Оформление заказа</title>
         <meta name="description" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -326,1699 +326,746 @@
         <div class="title-block">
             <div class="breadcrumb title-block__breadcrumb">
                 <a href="/" class="breadcrumb__link">Главная</a>
-                <a href="#" class="breadcrumb__link">Каталог</a>
-                <a href="#" class="breadcrumb__link">Букеты</a>
-                <a class="breadcrumb__link">Пластиковые букеты</a>
             </div>
             <h1 class="title title--size-lg title-block__title">
-                Пластиковые букеты
+                Оформление заказа
             </h1>
         </div>
         <main class="content">
-            <div class="catalog">
-                <div class="filters catalog__filters">
-                    <div class="filter filter--categories filters__box">
-                        <div class="filter__head">
-                            <h2 class="filter__title">Букеты</h2>
-                        </div>
-                        <div class="filter__categories">
-                            <a
-                                href="#"
-                                class="filter__link filter__link--active"
-                                >Пластиковые букеты</a
-                            >
-                            <a href="#" class="filter__link">Шёлковые букеты</a>
-                            <a href="#" class="filter__link"
-                                >Бархатные букеты</a
-                            >
+            <div class="order">
+                <form action="#" method="POST" class="form order__form">
+                    <div class="total-price order__price">
+                        <div class="total-price__block">
+                            <div class="total-price__row">
+                                <span class="total-price__name">Стоимость</span>
+                                <span class="total-price__value">5 800 ₽</span>
+                            </div>
+                            <div class="total-price__row">
+                                <span class="total-price__name">Скидка</span>
+                                <span class="total-price__value">-174 ₽</span>
+                            </div>
+                            <div class="total-price__row">
+                                <span class="total-price__name">Доставка</span>
+                                <span class="total-price__value"
+                                    >бесплатно</span
+                                >
+                            </div>
+                            <div class="total-price__row">
+                                <span class="total-price__name">Итого</span>
+                                <span class="total-price__value">5 626 ₽</span>
+                            </div>
                         </div>
                     </div>
-                    <form
-                        name="filter"
-                        action="#"
-                        method="get"
-                        class="filters__form"
-                    >
-                        <div class="filter filters__box">
-                            <div class="filter__head">
-                                <h2 class="filter__title">Цена (₽)</h2>
-                            </div>
-                            <div class="range filter__range">
-                                <div class="range__values">
-                                    <input
-                                        type="number"
-                                        class="range__input js-value-min"
-                                    />
-                                    <span class="range__line">—</span>
-                                    <input
-                                        type="number"
-                                        class="range__input js-value-max"
-                                    />
-                                </div>
-                                <div class="range__slider">
-                                    <div
-                                        data-from="10"
-                                        data-to="200"
-                                        class="js-range"
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter filters__box">
-                            <div class="filter__head">
-                                <h2 class="filter__title">Высота (мм)</h2>
-                            </div>
-                            <div class="range filter__range">
-                                <div class="range__values">
-                                    <input
-                                        type="number"
-                                        placeholder="От"
-                                        class="range__input js-value-min"
-                                    />
-                                    <span class="range__line">—</span>
-                                    <input
-                                        type="number"
-                                        placeholder="До"
-                                        class="range__input js-value-max"
-                                    />
-                                </div>
-                                <div class="range__slider">
-                                    <div
-                                        data-from="10"
-                                        data-to="100"
-                                        class="js-range"
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter filters__box">
-                            <div class="filter__head">
-                                <h2 class="filter__title">
-                                    Количество в упаковке
-                                </h2>
-                            </div>
-                            <div class="range filter__range">
-                                <div class="range__values">
-                                    <input
-                                        type="number"
-                                        placeholder="От"
-                                        class="range__input js-value-min"
-                                    />
-                                    <span class="range__line">—</span>
-                                    <input
-                                        type="number"
-                                        placeholder="До"
-                                        class="range__input js-value-max"
-                                    />
-                                </div>
-                                <div class="range__slider">
-                                    <div
-                                        data-from="22"
-                                        data-to="999"
-                                        class="js-range"
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter filters__box">
-                            <div class="filter__head">
-                                <h2 class="filter__title">Название цветка</h2>
-                            </div>
-                            <div class="filter__content">
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox1"
-                                        id="checkbox1"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox1"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Азалия</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox2"
-                                        id="checkbox2"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox2"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Акация</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox3"
-                                        id="checkbox3"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox3"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Анемон</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox4"
-                                        id="checkbox4"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox4"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Антуриум</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox5"
-                                        id="checkbox5"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox5"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Аспаргус</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox6"
-                                        id="checkbox6"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox6"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Астра</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox8"
-                                        id="checkbox8"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox8"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Аспаргус</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox7"
-                                        id="checkbox7"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox7"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Астра</span
-                                        >
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter filters__box">
-                            <div class="filter__head">
-                                <h2 class="filter__title">Материал</h2>
-                            </div>
-                            <div class="filter__content">
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox1a"
-                                        id="checkbox1a"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox1a"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Азалия</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox2a"
-                                        id="checkbox2a"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox2a"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Акация</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox3a"
-                                        id="checkbox3a"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox3a"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Анемон</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox4a"
-                                        id="checkbox4a"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox4a"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Антуриум</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox5a"
-                                        id="checkbox5a"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox5a"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Аспаргус</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox6a"
-                                        id="checkbox6a"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox6a"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Астра</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox8a"
-                                        id="checkbox8a"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox8a"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Аспаргус</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox7a"
-                                        id="checkbox7a"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox7a"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Астра</span
-                                        >
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter filters__box">
-                            <div class="filter__head">
-                                <h2 class="filter__title">Материал</h2>
-                            </div>
-                            <div class="filter__content">
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox1b"
-                                        id="checkbox1b"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox1b"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Азалия</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox2b"
-                                        id="checkbox2b"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox2b"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Акация</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox3b"
-                                        id="checkbox3b"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox3b"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Анемон</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox4b"
-                                        id="checkbox4b"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox4b"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Антуриум</span
-                                        >
-                                    </label>
-                                </div>
-                                <div class="checkbox filter__checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox5b"
-                                        id="checkbox5b"
-                                        class="checkbox__input"
-                                    />
-                                    <label
-                                        for="checkbox5b"
-                                        class="checkbox__label"
-                                    >
-                                        <span class="checkbox__text"
-                                            >Аспаргус</span
-                                        >
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filters__btns">
-                            <button
-                                type="button"
-                                class="btn-reset filters__reset"
+                    <div class="order-composition order__composition">
+                        <div class="order-composition__head">
+                            <h2
+                                class="title title--size-sm order-composition__title"
                             >
+                                Состав заказа
+                            </h2>
+                        </div>
+                        <div class="order-composition__list">
+                            <div
+                                class="order-composition-card order-composition__card"
+                            >
+                                <a
+                                    href="#"
+                                    class="order-composition-card__link"
+                                >
+                                    <picture
+                                        class="order-composition-card__picture"
+                                    >
+                                        <source
+                                            srcset="
+                                                ./img/catalog/catalog-news.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/catalog/catalog-news.png"
+                                            width="78"
+                                            height="80"
+                                            alt="Ветка гвоздики 20 цветков"
+                                            class="order-composition-card__img"
+                                        />
+                                    </picture>
+                                </a>
+                                <div class="order-composition-card__content">
+                                    <a
+                                        href="#"
+                                        class="order-composition-card__name"
+                                        >Ветка гвоздики 20 цветков</a
+                                    >
+                                    <div class="order-composition-card__row">
+                                        <div
+                                            class="order-composition-card__number"
+                                        >
+                                            180 ₽/шт.
+                                        </div>
+                                        <div
+                                            class="order-composition-card__number"
+                                        >
+                                            × 10 шт.
+                                        </div>
+                                        <div
+                                            class="order-composition-card__number"
+                                        >
+                                            = 1 800 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="order-composition-card order-composition__card"
+                            >
+                                <a
+                                    href="#"
+                                    class="order-composition-card__link"
+                                >
+                                    <picture
+                                        class="order-composition-card__picture"
+                                    >
+                                        <source
+                                            srcset="
+                                                ./img/catalog/catalog-news.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="./img/catalog/catalog-news.png"
+                                            width="78"
+                                            height="80"
+                                            alt="Ветка гвоздики 20 цветков"
+                                            class="order-composition-card__img"
+                                        />
+                                    </picture>
+                                </a>
+                                <div class="order-composition-card__content">
+                                    <a
+                                        href="#"
+                                        class="order-composition-card__name"
+                                        >Ветка гвоздики 20 цветков</a
+                                    >
+                                    <div class="order-composition-card__row">
+                                        <div
+                                            class="order-composition-card__number"
+                                        >
+                                            99 000 ₽/шт.
+                                        </div>
+                                        <div
+                                            class="order-composition-card__number"
+                                        >
+                                            × 99 шт.
+                                        </div>
+                                        <div
+                                            class="order-composition-card__number"
+                                        >
+                                            = 999 000 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-block order__block">
+                        <div class="order-head order-block__head">
+                            <div class="order-head__wrap">
                                 <svg
-                                    width="17"
-                                    height="18"
-                                    class="btn-reset__icon"
+                                    width="23"
+                                    height="15"
+                                    class="order-head__icon"
                                 >
                                     <use
-                                        xlink:href="./img/icons-sprite.svg#reset"
+                                        xlink:href="./img/icons-sprite.svg#order-location"
                                     ></use>
                                 </svg>
-                                <span class="btn-reset__text">Сбросить</span>
-                            </button>
-                            <button
-                                type="button"
-                                class="btn btn--primary filters__apply"
-                            >
-                                <span class="btn__text">Применить</span>
-                            </button>
+                            </div>
+                            <h2 class="title title--size-sm">Местоположение</h2>
                         </div>
-                    </form>
-                </div>
-                <div class="catalog__block">
-                    <div class="catalog__head">
-                        <div class="catalog__sort">
-                            <div class="sort sort--catalog">
-                                <span class="sort__text">Сортировка</span>
-                                <select
-                                    name="CATALOG_SORT"
-                                    class="select sort__select"
+                        <div class="order-block__content">
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="location"
+                                    class="form__input js-input"
+                                />
+                                <span class="form__placeholder"
+                                    >Выберите местоположение</span
                                 >
-                                    <option value="sort" selected="selected">
-                                        По умолчанию
-                                    </option>
-                                    <option value="cheap">
-                                        По возрастанию цены
-                                    </option>
-                                    <option value="expensive">
-                                        По убыванию цены
-                                    </option>
-                                    <option value="sale">Сначала акции</option>
-                                    <option value="new">Сначала новинки</option>
-                                </select>
-                            </div>
-                            <div class="sort sort--number">
-                                <select name="sort" class="select sort__select">
-                                    <option value="12" selected="selected">
-                                        Показывать по 12
-                                    </option>
-                                    <option value="24">Показывать по 24</option>
-                                    <option value="60">Показывать по 60</option>
-                                </select>
-                            </div>
-                            <button class="btn-setting-filter catalog__setting">
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="order-block order__block">
+                        <div class="order-head order-block__head">
+                            <div class="order-head__wrap">
                                 <svg
                                     width="20"
                                     height="20"
-                                    class="btn-setting-filter__icon"
+                                    class="order-head__icon"
                                 >
                                     <use
-                                        xlink:href="./img/icons-sprite.svg#setting"
+                                        xlink:href="./img/icons-sprite.svg#order-customer"
                                     ></use>
                                 </svg>
-                            </button>
+                            </div>
+                            <h2 class="title title--size-sm">Покупатель</h2>
                         </div>
-                        <div class="catalog__tags">
-                            <div class="tag catalog__tag">
-                                <span class="tag__name">Астра</span>
-                                <button class="tag__btn">
+                        <div
+                            class="order-block__content order-block__content--customer"
+                        >
+                            <label class="order-radio">
+                                <input
+                                    type="radio"
+                                    name="customer"
+                                    class="order-radio__input"
+                                />
+                                <div class="order-radio__box">
+                                    <div class="order-radio__row">
+                                        <span class="order-radio__name"
+                                            >Физическое лицо</span
+                                        >
+                                        <span
+                                            class="order-radio__cheker"
+                                        ></span>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="order-radio">
+                                <input
+                                    type="radio"
+                                    name="customer"
+                                    checked
+                                    class="order-radio__input"
+                                />
+                                <div class="order-radio__box">
+                                    <div class="order-radio__row">
+                                        <span class="order-radio__name"
+                                            >Юридическое лицо</span
+                                        >
+                                        <span
+                                            class="order-radio__cheker"
+                                        ></span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="order-block order__block">
+                        <div class="order-head order-block__head">
+                            <div class="order-head__wrap">
+                                <svg
+                                    width="21"
+                                    height="21"
+                                    class="order-head__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#order-deliveri"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <h2 class="title title--size-sm">
+                                Способ доставки
+                            </h2>
+                        </div>
+                        <div
+                            class="order-block__content order-block__content--delivery"
+                        >
+                            <label class="order-radio">
+                                <input
+                                    type="radio"
+                                    name="delivery"
+                                    checked
+                                    class="order-radio__input"
+                                />
+                                <div class="order-radio__box">
+                                    <div class="order-radio__row">
+                                        <span class="order-radio__name"
+                                            >Самовывоз</span
+                                        >
+                                        <span
+                                            class="order-radio__cheker"
+                                        ></span>
+                                    </div>
+                                    <p class="order-radio__text">
+                                        По адресу г. Красноярск с ПН по ПТ с
+                                        9:00 до 18:00
+                                    </p>
+                                </div>
+                            </label>
+                            <label class="order-radio">
+                                <input
+                                    type="radio"
+                                    name="delivery"
+                                    class="order-radio__input"
+                                />
+                                <div class="order-radio__box">
+                                    <div class="order-radio__row">
+                                        <span class="order-radio__name"
+                                            >Доставка транспортной
+                                            компанией</span
+                                        >
+                                        <span
+                                            class="order-radio__cheker"
+                                        ></span>
+                                    </div>
+                                    <p class="order-radio__text">
+                                        от 150 рублей
+                                    </p>
+                                </div>
+                            </label>
+                            <label class="order-radio">
+                                <input
+                                    type="radio"
+                                    name="delivery"
+                                    class="order-radio__input"
+                                />
+                                <div class="order-radio__box">
+                                    <div class="order-radio__row">
+                                        <span class="order-radio__name"
+                                            >Курьером</span
+                                        >
+                                        <span
+                                            class="order-radio__cheker"
+                                        ></span>
+                                    </div>
+                                    <p class="order-radio__text">
+                                        от 150 рублей
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="order-block order__block">
+                        <div class="order-head order-block__head">
+                            <div class="order-head__wrap">
+                                <svg
+                                    width="19"
+                                    height="15"
+                                    class="order-head__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#order-payment"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <h2 class="title title--size-sm">Способ оплаты</h2>
+                        </div>
+                        <div
+                            class="order-block__content order-block__content--delivery"
+                        >
+                            <label class="order-radio">
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    checked
+                                    class="order-radio__input"
+                                />
+                                <div class="order-radio__box">
+                                    <div class="order-radio__row">
+                                        <span class="order-radio__name"
+                                            >Наличными</span
+                                        >
+                                        <span
+                                            class="order-radio__cheker"
+                                        ></span>
+                                    </div>
+                                    <p class="order-radio__text">
+                                        При самовывозе или курьеру
+                                    </p>
+                                </div>
+                            </label>
+                            <label class="order-radio">
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    class="order-radio__input"
+                                />
+                                <div class="order-radio__box">
+                                    <div class="order-radio__row">
+                                        <span class="order-radio__name"
+                                            >Банковской картой</span
+                                        >
+                                        <span
+                                            class="order-radio__cheker"
+                                        ></span>
+                                    </div>
+                                    <div class="order-radio__images">
+                                        <img
+                                            src="./img/mir.svg"
+                                            alt="МИР"
+                                            width="46"
+                                            height="13"
+                                            class="order-radio__img"
+                                        />
+                                        <img
+                                            src="./img/visa.svg"
+                                            alt="МИР"
+                                            width="42"
+                                            height="14"
+                                            class="order-radio__img"
+                                        />
+                                        <img
+                                            src="./img/mastercard.svg"
+                                            alt="МИР"
+                                            width="38"
+                                            height="23"
+                                            class="order-radio__img"
+                                        />
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="order-radio">
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    class="order-radio__input"
+                                />
+                                <div class="order-radio__box">
+                                    <div class="order-radio__row">
+                                        <span class="order-radio__name"
+                                            >Счет на оплату</span
+                                        >
+                                        <span
+                                            class="order-radio__cheker"
+                                        ></span>
+                                    </div>
+                                    <p class="order-radio__text">Пара слов</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="order-block order__block">
+                        <div class="order-head order-block__head">
+                            <div class="order-head__wrap">
+                                <svg
+                                    width="22"
+                                    height="15"
+                                    class="order-head__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#order-info"
+                                    ></use>
+                                </svg>
+                            </div>
+                            <h2 class="title title--size-sm">
+                                Информация о покупателе
+                            </h2>
+                        </div>
+                        <div
+                            class="order-block__content order-block__content--data"
+                        >
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    data-rule="required|name"
+                                    class="form__input js-input"
+                                />
+                                <span class="form__placeholder"
+                                    >Название компании *</span
+                                >
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
                                     <svg
                                         width="16"
                                         height="16"
-                                        class="tag__icon"
+                                        class="form__icon"
                                     >
                                         <use
                                             xlink:href="./img/icons-sprite.svg#clear"
                                         ></use>
                                     </svg>
                                 </button>
-                            </div>
-                            <div class="tag catalog__tag">
-                                <span class="tag__name">Бархат</span>
-                                <button class="tag__btn">
+                            </label>
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    class="form__input js-input"
+                                />
+                                <span class="form__placeholder">ИНН</span>
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
                                     <svg
                                         width="16"
                                         height="16"
-                                        class="tag__icon"
+                                        class="form__icon"
                                     >
                                         <use
                                             xlink:href="./img/icons-sprite.svg#clear"
                                         ></use>
                                     </svg>
                                 </button>
-                            </div>
-                            <button class="btn-reset catalog__reset">
-                                <svg
-                                    width="17"
-                                    height="18"
-                                    class="btn-reset__icon"
+                            </label>
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    data-rule="required|name"
+                                    class="form__input js-input"
+                                />
+                                <span class="form__placeholder"
+                                    >Контактное лицо *</span
                                 >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#reset"
-                                    ></use>
-                                </svg>
-                                <span class="btn-reset__text">Сбросить</span>
-                            </button>
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="label form__label js-label">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    data-rule="required|email"
+                                    class="form__input js-input"
+                                />
+                                <span class="form__placeholder">E-mail *</span>
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    data-rule="required|phone"
+                                    class="form__input js-input-mask js-input"
+                                />
+                                <span class="form__placeholder">Телефон *</span>
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label
+                                class="label form__label js-label label--comment"
+                            >
+                                <textarea
+                                    name="commentary"
+                                    cols="30"
+                                    rows="10"
+                                    class="form__textarea js-input"
+                                ></textarea>
+                                <span class="form__placeholder"
+                                    >Комментарий к заказу</span
+                                >
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
                         </div>
                     </div>
-                    <div class="catalog__grid">
-                        <div class="product-card catalog__card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Георгин "Эдинбург" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #a0e132"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #328ae1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e13232"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card catalog__card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Гортензия метельчатая коралловая</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #32e1dd"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e132a8"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card catalog__card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Ветка гвоздики 20 цветков
-                                    пурпурно-фиолетовый</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ff4501"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #fffaf0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #9400d3"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ffb6c1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #f0f"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >180 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >200 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        disabled="disabled"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзине</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card catalog__card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Букет лилий "Робинзон" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card-color--package product-card__colors"
-                                >
-                                    <p class="product-card-color__text">
-                                        В упаковке:
-                                    </p>
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Штук в уп. <span>500</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >710 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >820 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за упаковку</span
-                                    >
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >71 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >80 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзину</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card catalog__card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Георгин "Эдинбург" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #a0e132"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #328ae1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e13232"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card catalog__card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Гортензия метельчатая коралловая</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #32e1dd"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e132a8"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card catalog__card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Ветка гвоздики 20 цветков
-                                    пурпурно-фиолетовый</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ff4501"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #fffaf0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #9400d3"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ffb6c1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #f0f"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >180 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >200 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        disabled="disabled"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзине</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card catalog__card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Букет лилий "Робинзон" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card-color--package product-card__colors"
-                                >
-                                    <p class="product-card-color__text">
-                                        В упаковке:
-                                    </p>
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Штук в уп. <span>500</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >710 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >820 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за упаковку</span
-                                    >
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >71 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >80 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзину</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pagination catalog__pagination">
-                            <a
-                                href="#"
-                                class="pagination__link pagination__link--prev"
-                            >
+                    <div class="order-block order__block">
+                        <div class="order-head order-block__head">
+                            <div class="order-head__wrap">
                                 <svg
-                                    aria-hidden="true"
-                                    width="24"
-                                    height="14"
-                                    class="pagination__icon"
+                                    width="14"
+                                    height="20"
+                                    class="order-head__icon"
                                 >
                                     <use
-                                        xlink:href="./img/icons-sprite.svg#arrow-pogin"
+                                        xlink:href="./img/icons-sprite.svg#order-address"
                                     ></use>
                                 </svg>
-                            </a>
-                            <a href="#" class="pagination__link"> 1 </a>
-                            <span class="pagination__dots">…</span>
-                            <a href="#" class="pagination__link"> 7 </a>
-                            <a
-                                href="#"
-                                class="pagination__link pagination__link--active"
-                            >
-                                8
-                            </a>
-                            <a href="#" class="pagination__link"> 9 </a>
-                            <span class="pagination__dots">…</span>
-                            <a href="#" class="pagination__link"> 16 </a>
-                            <a
-                                href="#"
-                                class="pagination__link pagination__link--next"
-                            >
-                                <svg
-                                    aria-hidden="true"
-                                    width="24"
-                                    height="14"
-                                    class="pagination__icon"
+                            </div>
+                            <h2 class="title title--size-sm">Адрес доставки</h2>
+                        </div>
+                        <div
+                            class="order-block__content order-block__content--data"
+                        >
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="street"
+                                    class="form__input js-input"
+                                />
+                                <span class="form__placeholder">Улица</span>
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
                                 >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#arrow-pogin"
-                                    ></use>
-                                </svg>
-                            </a>
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <div class="order-block__row">
+                                <label class="label form__label js-label">
+                                    <input
+                                        type="text"
+                                        name="street"
+                                        class="form__input js-input"
+                                    />
+                                    <span class="form__placeholder">Дом</span>
+                                    <button
+                                        type="button"
+                                        title="Очистить"
+                                        aria-label="Очистить"
+                                        class="form__clear js-clear-input"
+                                    >
+                                        <svg
+                                            width="16"
+                                            height="16"
+                                            class="form__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/icons-sprite.svg#clear"
+                                            ></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                                <label class="label form__label js-label">
+                                    <input
+                                        type="text"
+                                        name="corpus"
+                                        class="form__input js-input"
+                                    />
+                                    <span class="form__placeholder"
+                                        >Корпус</span
+                                    >
+                                    <button
+                                        type="button"
+                                        title="Очистить"
+                                        aria-label="Очистить"
+                                        class="form__clear js-clear-input"
+                                    >
+                                        <svg
+                                            width="16"
+                                            height="16"
+                                            class="form__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/icons-sprite.svg#clear"
+                                            ></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                                <label class="label form__label js-label">
+                                    <input
+                                        type="text"
+                                        name="quarter"
+                                        class="form__input js-input"
+                                    />
+                                    <span class="form__placeholder"
+                                        >Кварт.</span
+                                    >
+                                    <button
+                                        type="button"
+                                        title="Очистить"
+                                        aria-label="Очистить"
+                                        class="form__clear js-clear-input"
+                                    >
+                                        <svg
+                                            width="16"
+                                            height="16"
+                                            class="form__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/icons-sprite.svg#clear"
+                                            ></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="order__box">
+                        <button
+                            type="submit"
+                            class="btn btn--primary order__btn"
+                        >
+                            <span class="btn__text">Оформить заказ</span>
+                        </button>
+                        <span class="form-consent order__consent"
+                            >Отправляя данные, я даю свое
+                            <a href="#" class="form-consent__link"
+                                >согласие на обработку перс. данных</a
+                            ></span
+                        >
+                    </div>
+                </form>
             </div>
         </main>
         <footer class="footer">

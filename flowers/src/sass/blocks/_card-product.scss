@@ -68,6 +68,7 @@
 
     &__parameters {
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: em(10, $fz);
     }
 
@@ -107,9 +108,18 @@
 
     &__controls {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(em(146, $fz), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(em(140, $fz), 1fr));
         grid-gap: em(5 10, $fz);
         margin-top: em(10, $fz);
+
+        @media screen and (max-width: 499.98px) {
+            grid-template-columns: repeat(auto-fit, minmax(em(160, $fz), 1fr));
+        }
+    }
+
+    &__btn {
+        padding-right: em(10, $fz);
+        padding-left: em(10, $fz);
     }
 }
 
@@ -178,23 +188,21 @@
 
 .product-card-cost {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
 
     &__price {
         $fz: 20;
         font-size: em($fz, $fz_base);
         font-weight: 600;
+        margin-right: em(15, $fz);
     }
 
     &__old {
         font-weight: 600;
         color: rgba(0, 0, 0, 0.5);
         text-decoration: line-through;
-        margin-left: em(15, $fz);
-    }
-
-    &__text {
-        margin-left: em(15, $fz);
+        margin-right: em(15, $fz);
     }
 }
 
@@ -235,8 +243,7 @@
             bottom: 100%;
             left: var(--element-position);
             width: var(--element-width);
-            height: em(263, $fz);
-            cursor: default;
+            height: em(280, $fz);
         }
     }
 }

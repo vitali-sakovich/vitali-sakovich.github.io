@@ -1010,8 +1010,7 @@
 
         &:hover {
             @media screen and (min-width: $breakpoint-hover) {
-                --basket-btn-icon-color: #fff;
-                background-color: #533dd4;
+                background-color: rgba(61, 74, 98, 0.1);
             }
         }
     }

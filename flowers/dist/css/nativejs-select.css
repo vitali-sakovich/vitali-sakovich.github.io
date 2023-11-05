@@ -32,9 +32,14 @@
   transition: background-color 0.3s;
 }
 
-.nativejs-select_active .nativejs-select__placeholder,
-.nativejs-select__placeholder:hover {
+.nativejs-select_active .nativejs-select__placeholder {
   background-color: rgba(99, 99, 99, 0.1);
+}
+
+@media screen and (min-width: 1000px) {
+  .nativejs-select__placeholder:hover {
+    background-color: rgba(99, 99, 99, 0.1);
+  }
 }
 
 .nativejs-select_active {

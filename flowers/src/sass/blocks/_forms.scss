@@ -1,7 +1,10 @@
 .form {
     &__label {
-        margin-bottom: em(32, $fz);
         max-width: var(--form-label-width, 100%);
+
+        &:not(:last-child) {
+            margin-bottom: em(32, $fz);
+        }
     }
 
     &__input,
@@ -14,7 +17,7 @@
             var(--input-border-color, #575757);
         width: 100%;
         border-radius: em(5, $fz);
-        background-color: transparent;
+        background-color: var(--input-bg, transparent);
         transition: border-color 0.3s;
 
         &:focus {

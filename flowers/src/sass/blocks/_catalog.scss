@@ -9,7 +9,17 @@
     }
     @media screen and (max-width: 1149.98px) {
         padding-right: 2%;
+        padding-bottom: em(60, $fz);
         padding-left: 4.6%;
+    }
+    @media screen and (max-width: 949.98px) {
+        padding-top: em(5, $fz);
+        padding-right: 4.6%;
+        padding-left: 4.6%;
+    }
+    @media screen and (max-width: 499.98px) {
+        padding-right: 3%;
+        padding-left: 3%;
     }
 
     &__filters {
@@ -24,6 +34,15 @@
             min-width: em(248, $fz);
             margin-right: em(28, $fz);
         }
+        @media screen and (max-width: 949.98px) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 101;
+            width: 100%;
+        }
     }
 
     &__block {
@@ -32,19 +51,42 @@
 
     &__head {
         margin-bottom: em(20, $fz);
+
+        @media screen and (max-width: 499.98px) {
+            padding-right: 2.5%;
+            padding-left: 2.5%;
+        }
     }
 
     &__grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(em(320, $fz), 1fr));
-        grid-gap: em(26 33, $fz);
+        grid-gap: em(33 25, $fz);
 
         @media screen and (max-width: 1499.98px) {
-            grid-gap: em(33 14, $fz);
+            grid-column-gap: em(14, $fz);
         }
         @media screen and (max-width: 1199.98px) {
             grid-template-columns: repeat(auto-fill, minmax(em(260, $fz), 1fr));
             grid-gap: em(30 11, $fz);
+        }
+        @media screen and (max-width: 949.98px) {
+            grid-column-gap: em(7, $fz);
+        }
+        @media screen and (max-width: 499.98px) {
+            grid-row-gap: em(25, $fz);
+        }
+
+        &--favorites {
+            @media screen and (min-width: 1500px) {
+                grid-column-gap: em(20, $fz);
+            }
+            @media screen and (min-width: 950px) and (max-width: 1149.98px) {
+                grid-template-columns: repeat(
+                    auto-fill,
+                    minmax(em(280, $fz), 1fr)
+                );
+            }
         }
     }
 
@@ -56,12 +98,21 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: em(20, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            margin-bottom: em(10, $fz);
+            margin-left: em(-10, $fz);
+        }
     }
 
     &__tags {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+
+        @media screen and (max-width: 949.98px) {
+            display: none;
+        }
     }
 
     &__tag {
@@ -72,6 +123,15 @@
 
     &__pagination {
         margin-top: em(50, $fz);
+
+        @media screen and (max-width: 1149.98px) {
+            margin-top: em(20, $fz);
+        }
+    }
+
+    &__setting {
+        width: em(55, $fz);
+        height: em(55, $fz);
     }
 }
 
@@ -79,8 +139,18 @@
     display: flex;
     align-items: center;
 
+    &--number {
+        @media screen and (max-width: 949.98px) {
+            display: none;
+        }
+    }
+
     &__text {
         margin-right: em(14, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            display: none;
+        }
     }
 }
 
@@ -141,6 +211,24 @@
 }
 
 .filters {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 949.98px) {
+        display: none;
+        background-color: #fff;
+    }
+
+    &__form {
+        @media screen and (max-width: 949.98px) {
+            padding-right: em(30, $fz);
+            padding-bottom: em(50, $fz);
+            padding-left: em(30, $fz);
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+
     &__box {
         margin-bottom: em(40, $fz);
     }
@@ -149,6 +237,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (max-width: 949.98px) {
+            display: none;
+        }
     }
 }
 
@@ -156,8 +248,18 @@
     display: flex;
     flex-direction: column;
 
+    &--categories {
+        @media screen and (max-width: 949.98px) {
+            display: none;
+        }
+    }
+
     &__head {
         margin-bottom: em(20, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            margin-bottom: em(17, $fz);
+        }
     }
 
     &__title {
@@ -172,9 +274,12 @@
     }
 
     &__content {
-        @include scrollbar;
-        max-height: em(243, $fz);
         padding-bottom: em(4, $fz);
+
+        @media screen and (min-width: 950px) {
+            @include scrollbar;
+            max-height: em(243, $fz);
+        }
     }
 
     &__link {
@@ -302,8 +407,8 @@
         &:hover {
             @media screen and (min-width: $breakpoint-hover) {
                 --pagination-link-color: #fff;
-                background-color: #4b8702;
-                border-color: #4b8702;
+                background-color: rgba(75, 135, 2, 0.8);
+                border-color: rgba(75, 135, 2, 0.8);
             }
         }
     }
@@ -345,6 +450,10 @@
         background-color: #fff;
         border-radius: em(5, $fz);
         text-align: center;
+
+        @media screen and (max-width: 949.98px) {
+            max-width: em(126, $fz);
+        }
     }
 
     &__line {
@@ -390,5 +499,57 @@
                 content: none;
             }
         }
+    }
+}
+
+.btn-setting-filter {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: em(3, $fz);
+    background-color: #fff;
+
+    @media screen and (max-width: 949.98px) {
+        display: flex;
+    }
+
+    &__icon {
+        fill: #533dd4;
+    }
+}
+
+.empty-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: em(25 20 100, $fz);
+    padding-top: em(25, $fz);
+    padding-bottom: em(100, $fz);
+
+    @media screen and (max-width: 949.98px) {
+        padding-bottom: em(50, $fz);
+    }
+
+    &__oval {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.07);
+        width: em(170, $fz);
+        height: em(170, $fz);
+    }
+
+    &__name {
+        $fz: 24;
+        display: block;
+        font-size: em($fz, $fz_base);
+        line-height: 1.5;
+        margin-top: em(-42, $fz);
+        margin-bottom: em(30, $fz);
+    }
+
+    &__text {
+        text-align: center;
     }
 }

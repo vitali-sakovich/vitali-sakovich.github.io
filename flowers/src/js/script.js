@@ -33,10 +33,12 @@
                 1150: {
                     slidesPerView: 3,
                     slidesPerGroup: 3,
+                    spaceBetween: 12,
                 },
                 1600: {
                     slidesPerView: 4,
                     slidesPerGroup: 4,
+                    spaceBetween: 15,
                 },
             },
         });
@@ -56,7 +58,18 @@
             effect: "fade",
             pagination: {
                 el: popagination,
-                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    pagination: {
+                        clickable: true,
+                    },
+                },
+                1050: {
+                    pagination: {
+                        clickable: false,
+                    },
+                },
             },
             on: {
                 init() {
@@ -75,8 +88,8 @@
                         "--element-position",
                         width * index + "%"
                     );
-                    el.addEventListener("mouseenter", function (e) {
-                        el.click();
+                    el.addEventListener("mouseenter", () => {
+                        slider.slideTo(index);
                     });
                 });
         }
@@ -552,8 +565,6 @@ const rangeSliderInit = (slider) => {
     const inputMax = slider.querySelector(".js-value-max");
     const toValue = Number(range.dataset.to);
     const fromValue = Number(range.dataset.from);
-
-    console.log(typeof toValue);
 
     if (!range || !inputMin || !inputMax) return;
 

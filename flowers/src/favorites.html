@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <title>Искусственные цветы оптом и в розницу</title>
+        <title>Избранное</title>
         <meta name="description" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -14,11 +14,12 @@
         <link rel="stylesheet" href="./css/fancybox.css" />
         <link rel="stylesheet" href="./css/swiper.css" />
         <link rel="stylesheet" href="./css/nativejs-select.css" />
+        <link rel="stylesheet" href="./css/nouislider.min.css" />
         <link rel="stylesheet" href="./css/style.css" />
     </head>
 
     <body>
-        <header class="header header--home">
+        <header class="header">
             <button
                 type="button"
                 data-open-modal=".popup--menu-mobi"
@@ -46,7 +47,12 @@
                     <li class="nav__item">
                         <a href="#" class="nav__link">
                             <span class="nav__text">Покупателям</span>
-                            <svg width="14" height="7" class="nav__icon">
+                            <svg
+                                aria-hidden="true"
+                                width="14"
+                                height="7"
+                                class="nav__icon"
+                            >
                                 <use
                                     xlink:href="./img/icons-sprite.svg#dropdown-arrow"
                                 ></use>
@@ -86,7 +92,12 @@
                     class="header-phone header-phone--icon header__phone"
                 >
                     <span class="header-phone__text">8 800 229-59-51</span>
-                    <svg width="22" height="31" class="header-phone__icon">
+                    <svg
+                        aria-hidden="true"
+                        width="22"
+                        height="31"
+                        class="header-phone__icon"
+                    >
                         <use
                             xlink:href="./img/icons-sprite.svg#phone-icon-mobi"
                         ></use>
@@ -96,7 +107,12 @@
                     data-open-modal=".popup--call"
                     class="btn-call header__call js-open-modal"
                 >
-                    <svg width="15" height="20" class="btn-call__icon">
+                    <svg
+                        aria-hidden="true"
+                        width="15"
+                        height="20"
+                        class="btn-call__icon"
+                    >
                         <use
                             xlink:href="./img/icons-sprite.svg#call-icon"
                         ></use>
@@ -110,7 +126,12 @@
                 class="btn-search header__search js-open-modal"
             >
                 <span class="btn-search__text">Поиск по товарам</span>
-                <svg width="27" height="26" class="btn-search__icon">
+                <svg
+                    aria-hidden="true"
+                    width="27"
+                    height="26"
+                    class="btn-search__icon"
+                >
                     <use xlink:href="./img/icons-sprite.svg#search"></use>
                 </svg>
             </button>
@@ -120,7 +141,12 @@
                 aria-label="Избранное"
                 class="btn-control header__control header__control--favorites"
             >
-                <svg width="27" height="26" class="btn-control__icon">
+                <svg
+                    aria-hidden="true"
+                    width="27"
+                    height="26"
+                    class="btn-control__icon"
+                >
                     <use xlink:href="./img/icons-sprite.svg#favorites"></use>
                 </svg>
                 <span class="btn-control__counter">3</span>
@@ -131,7 +157,12 @@
                 data-open-modal=".popup--authorization"
                 class="btn-control header__control header__control--lk js-open-modal"
             >
-                <svg width="24" height="24" class="btn-control__icon">
+                <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    class="btn-control__icon"
+                >
                     <use xlink:href="./img/icons-sprite.svg#lk"></use>
                 </svg>
             </button>
@@ -141,7 +172,12 @@
                 data-open-modal=".popup--basket"
                 class="btn-control header__control header__control--basket js-open-modal"
             >
-                <svg width="30" height="24" class="btn-control__icon">
+                <svg
+                    aria-hidden="true"
+                    width="30"
+                    height="24"
+                    class="btn-control__icon"
+                >
                     <use xlink:href="./img/icons-sprite.svg#basket"></use>
                 </svg>
                 <span class="btn-control__counter">99</span>
@@ -151,7 +187,12 @@
                 data-open-modal=".popup--sidebar"
                 class="btn-sidebar header__sidebar js-open-modal"
             >
-                <svg width="29" height="19" class="btn-sidebar__icon">
+                <svg
+                    aria-hidden="true"
+                    width="29"
+                    height="19"
+                    class="btn-sidebar__icon"
+                >
                     <use xlink:href="./img/icons-sprite.svg#sidebar-icon"></use>
                 </svg>
                 <span class="btn-sidebar__text">Каталог</span>
@@ -166,7 +207,12 @@
                         aria-label="Закрыть"
                         class="popup__close popup__close--menu-mobi js-popup-close"
                     >
-                        <svg width="28" height="28" class="popup__icon">
+                        <svg
+                            aria-hidden="true"
+                            width="28"
+                            height="28"
+                            class="popup__icon"
+                        >
                             <use
                                 xlink:href="./img/icons-sprite.svg#close"
                             ></use>
@@ -182,7 +228,12 @@
                             >
                         </a>
                         <button class="btn-call menu__call">
-                            <svg width="15" height="20" class="btn-call__icon">
+                            <svg
+                                aria-hidden="true"
+                                width="15"
+                                height="20"
+                                class="btn-call__icon"
+                            >
                                 <use
                                     xlink:href="./img/icons-sprite.svg#call-icon"
                                 ></use>
@@ -211,6 +262,7 @@
                                 class="contact-item menu__contact"
                             >
                                 <svg
+                                    aria-hidden="true"
                                     width="13"
                                     height="20"
                                     class="contact-item__icon contact-item__icon--theme-orange"
@@ -271,1312 +323,49 @@
                 </div>
             </div>
         </header>
+        <div class="title-block">
+            <div class="breadcrumb title-block__breadcrumb">
+                <a href="/" class="breadcrumb__link">Главная</a>
+            </div>
+            <h1 class="title title--size-lg title-block__title">Избранное</h1>
+        </div>
         <main class="content">
-            <section class="preview">
-                <div class="preview__block">
-                    <img
-                        src="./img/title-main.svg"
-                        width="772"
-                        height="245"
-                        alt="Искусственные цветы оптом и в розницу"
-                        class="preview__title"
-                    />
-                    <div class="preview__btns">
-                        <button
-                            data-src="./img/preview-2.jpg"
-                            type="button"
-                            class="btn btn--border btn--preview preview__btn"
-                        >
-                            <span class="btn__text">Букеты</span>
-                        </button>
-                        <button
-                            data-src="./img/preview-3.jpg"
-                            type="button"
-                            class="btn btn--border btn--preview preview__btn"
-                        >
-                            <span class="btn__text">Листья</span>
-                        </button>
-                        <button
-                            data-src="./img/preview-2.jpg"
-                            type="button"
-                            class="btn btn--border btn--preview preview__btn"
-                        >
-                            <span class="btn__text">Лианы</span>
-                        </button>
-                        <button
-                            data-src="./img/preview-3.jpg"
-                            type="button"
-                            class="btn btn--border btn--preview preview__btn"
-                        >
-                            <span class="btn__text">Искусственные елки</span>
-                        </button>
-                        <button
-                            data-src="./img/preview-1.jpg"
-                            type="button"
-                            class="btn btn--border btn--preview preview__btn"
-                        >
-                            <span class="btn__text">Цветочные головы</span>
-                        </button>
-                        <button
-                            data-src="./img/preview-2.jpg"
-                            type="button"
-                            class="btn btn--border btn--preview preview__btn"
-                        >
-                            <span class="btn__text">Деревья</span>
-                        </button>
-                        <button
-                            data-src="./img/preview-3.jpg"
-                            type="button"
-                            class="btn btn--border btn--preview preview__btn"
-                        >
-                            <span class="btn__text">Фрукты и овощи</span>
-                        </button>
-                    </div>
-                    <a href="#down" class="btn-down preview__down">
-                        <svg width="9" height="12" class="btn-down__icon">
-                            <use
-                                xlink:href="./img/icons-sprite.svg#arrow-down"
-                            ></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="preview__images">
-                    <picture class="preview__picture">
-                        <img
-                            src="./img/preview-1.jpg"
-                            alt="Картинка"
-                            width="812"
-                            height="812"
-                            class="preview__img"
-                        />
-                    </picture>
-                    <img
-                        src="./img/okrug.svg"
-                        alt="Текст"
-                        width="880"
-                        height="880"
-                        class="preview__slogan"
-                    />
-                </div>
-            </section>
-            <section id="down" class="slider-products slider-products--margin">
-                <div class="slider-products__head">
-                    <h2 class="title title--size-lg slider-products__title">
-                        Акции
-                    </h2>
-                    <div class="slider-control slider-products__control">
-                        <button
-                            class="slider-control__btn slider-control__btn--prev"
-                        >
-                            <svg
-                                width="12"
-                                height="22"
-                                class="slider-control__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#arrow-slider"
-                                ></use>
-                            </svg>
-                        </button>
-                        <button
-                            class="slider-control__btn slider-control__btn--next"
-                        >
-                            <svg
-                                width="12"
-                                height="22"
-                                class="slider-control__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#arrow-slider"
-                                ></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper slider-products__swiper">
-                    <div class="swiper-wrapper slider-products__wrapper">
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Георгин "Эдинбург" 6 цветков</a
+            <div class="catalog">
+                <div class="catalog__block">
+                    <div class="catalog__head">
+                        <div class="catalog__sort">
+                            <div class="sort sort--catalog">
+                                <span class="sort__text">Сортировка</span>
+                                <select
+                                    name="CATALOG_SORT"
+                                    class="select sort__select"
                                 >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #a0e132"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #328ae1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e13232"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
+                                    <option value="sort" selected="selected">
+                                        По умолчанию
+                                    </option>
+                                    <option value="cheap">
+                                        По возрастанию цены
+                                    </option>
+                                    <option value="expensive">
+                                        По убыванию цены
+                                    </option>
+                                    <option value="sale">Сначала акции</option>
+                                    <option value="new">Сначала новинки</option>
+                                </select>
                             </div>
-                            <div class="product-label product-card__label">
-                                <div class="product-label__inner">
-                                    <span class="product-label__text"
-                                        >Акция</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Гортензия метельчатая коралловая</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #32e1dd"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e132a8"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-label product-card__label">
-                                <div class="product-label__inner">
-                                    <span class="product-label__text"
-                                        >Акция</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Ветка гвоздики 20 цветков
-                                    пурпурно-фиолетовый</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ff4501"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #fffaf0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #9400d3"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ffb6c1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #f0f"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >180 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >200 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        disabled="disabled"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзине</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-label product-card__label">
-                                <div class="product-label__inner">
-                                    <span class="product-label__text"
-                                        >Акция</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Букет лилий "Робинзон" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card-color--package product-card__colors"
-                                >
-                                    <p class="product-card-color__text">
-                                        В упаковке:
-                                    </p>
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Штук в уп. <span>500</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >710 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >820 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за упаковку</span
-                                    >
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >71 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >80 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзину</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-label product-card__label">
-                                <div class="product-label__inner">
-                                    <span class="product-label__text"
-                                        >Акция</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Георгин "Эдинбург" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #a0e132"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #328ae1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e13232"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-label product-card__label">
-                                <div class="product-label__inner">
-                                    <span class="product-label__text"
-                                        >Акция</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Гортензия метельчатая коралловая</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #32e1dd"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e132a8"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-label product-card__label">
-                                <div class="product-label__inner">
-                                    <span class="product-label__text"
-                                        >Акция</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Ветка гвоздики 20 цветков
-                                    пурпурно-фиолетовый</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ff4501"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #fffaf0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #9400d3"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ffb6c1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #f0f"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >180 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >200 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        disabled="disabled"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзине</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-label product-card__label">
-                                <div class="product-label__inner">
-                                    <span class="product-label__text"
-                                        >Акция</span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Букет лилий "Робинзон" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card-color--package product-card__colors"
-                                >
-                                    <p class="product-card-color__text">
-                                        В упаковке:
-                                    </p>
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Штук в уп. <span>500</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >710 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >820 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за упаковку</span
-                                    >
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >71 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >80 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзину</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-label product-card__label">
-                                <div class="product-label__inner">
-                                    <span class="product-label__text"
-                                        >Акция</span
-                                    >
-                                </div>
+                            <div class="sort sort--number">
+                                <select name="sort" class="select sort__select">
+                                    <option value="12" selected="selected">
+                                        Показывать по 12
+                                    </option>
+                                    <option value="24">Показывать по 24</option>
+                                    <option value="60">Показывать по 60</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="advantage advantage--margin">
-                <div class="advantage__block advantage__block--delivery">
-                    <h3 class="advantage__title">Бесплатная доставка</h3>
-                    <a href="#" class="btn-circle advantage__btn">
-                        <svg width="24" height="16" class="btn-circle__icon">
-                            <use
-                                xlink:href="./img/icons-sprite.svg#arrow"
-                            ></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="advantage__block advantage__block--payment">
-                    <h3 class="advantage__title">Различные способы оплаты</h3>
-                    <a href="#" class="btn-circle advantage__btn">
-                        <svg width="24" height="16" class="btn-circle__icon">
-                            <use
-                                xlink:href="./img/icons-sprite.svg#arrow"
-                            ></use>
-                        </svg>
-                    </a>
-                </div>
-            </section>
-            <section class="slider-products slider-products--margin">
-                <div class="slider-products__head">
-                    <h2 class="title title--size-lg slider-products__title">
-                        Новинки
-                    </h2>
-                    <div class="slider-control slider-products__control">
-                        <button
-                            class="slider-control__btn slider-control__btn--prev"
-                        >
-                            <svg
-                                width="12"
-                                height="22"
-                                class="slider-control__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#arrow-slider"
-                                ></use>
-                            </svg>
-                        </button>
-                        <button
-                            class="slider-control__btn slider-control__btn--next"
-                        >
-                            <svg
-                                width="12"
-                                height="22"
-                                class="slider-control__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#arrow-slider"
-                                ></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper slider-products__swiper">
-                    <div class="swiper-wrapper slider-products__wrapper">
-                        <div class="swiper-slide product-card">
+                    <div class="catalog__grid catalog__grid--favorites">
+                        <div class="product-card catalog__card">
                             <a href="#" class="swiper product-card-slider">
                                 <div class="swiper-wrapper">
                                     <div
@@ -1705,7 +494,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide product-card">
+                        <div class="product-card catalog__card">
                             <a href="#" class="swiper product-card-slider">
                                 <div class="swiper-wrapper">
                                     <div
@@ -1813,7 +602,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide product-card">
+                        <div class="product-card catalog__card">
                             <a href="#" class="swiper product-card-slider">
                                 <div class="swiper-wrapper">
                                     <div
@@ -1962,7 +751,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide product-card">
+                        <div class="product-card catalog__card">
                             <a href="#" class="swiper product-card-slider">
                                 <div class="swiper-wrapper">
                                     <div
@@ -2108,7 +897,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide product-card">
+                        <div class="product-card catalog__card">
                             <a href="#" class="swiper product-card-slider">
                                 <div class="swiper-wrapper">
                                     <div
@@ -2237,7 +1026,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide product-card">
+                        <div class="product-card catalog__card">
                             <a href="#" class="swiper product-card-slider">
                                 <div class="swiper-wrapper">
                                     <div
@@ -2345,7 +1134,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide product-card">
+                        <div class="product-card catalog__card">
                             <a href="#" class="swiper product-card-slider">
                                 <div class="swiper-wrapper">
                                     <div
@@ -2494,7 +1283,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide product-card">
+                        <div class="product-card catalog__card">
                             <a href="#" class="swiper product-card-slider">
                                 <div class="swiper-wrapper">
                                     <div
@@ -2640,1280 +1429,53 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section class="advantage advantage--margin-xl">
-                <div class="advantage__block advantage__block--discount">
-                    <h3 class="advantage__title">Гибкая система скидок</h3>
-                    <a href="#" class="btn-circle advantage__btn">
-                        <svg width="24" height="16" class="btn-circle__icon">
-                            <use
-                                xlink:href="./img/icons-sprite.svg#arrow"
-                            ></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="advantage__block advantage__block--amount">
-                    <h3 class="advantage__title">
-                        Без минимальной суммы заказа
-                    </h3>
-                </div>
-            </section>
-            <section class="section-form section-form--margin">
-                <div class="section-form__content">
-                    <img
-                        src="./img/form-title-help.svg"
-                        alt="Требуется попмощь в подборе"
-                        width="504"
-                        height="206"
-                        class="section-form__title"
-                    />
-                    <div class="section-form__inner">
-                        <p class="text text--size-md">
-                            Оставьте контакты и мы поможем оформить и
-                            проконсультируем
-                        </p>
-                    </div>
-                </div>
-                <form action="#" class="form section-form__form">
-                    <label class="label form__label js-label">
-                        <input
-                            type="text"
-                            name="name"
-                            data-rule="required|name"
-                            class="form__input js-input"
-                        />
-                        <span class="form__placeholder">Ваше имя *</span>
-                        <button
-                            type="button"
-                            title="Очистить"
-                            aria-label="Очистить"
-                            class="form__clear js-clear-input"
-                        >
-                            <svg width="16" height="16" class="form__icon">
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#clear"
-                                ></use>
-                            </svg>
-                        </button>
-                    </label>
-                    <label class="label form__label js-label">
-                        <input
-                            type="text"
-                            name="phone"
-                            data-rule="required|phone"
-                            class="form__input js-input-mask js-input"
-                        />
-                        <span class="form__placeholder">Телефон *</span>
-                        <button
-                            type="button"
-                            title="Очистить"
-                            aria-label="Очистить"
-                            class="form__clear js-clear-input"
-                        >
-                            <svg width="16" height="16" class="form__icon">
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#clear"
-                                ></use>
-                            </svg>
-                        </button>
-                    </label>
-                    <label class="label form__label js-label">
-                        <textarea
-                            name="commentary"
-                            cols="30"
-                            rows="10"
-                            class="form__textarea js-input"
-                        ></textarea>
-                        <span class="form__placeholder">Комментарий</span>
-                        <button
-                            type="button"
-                            title="Очистить"
-                            aria-label="Очистить"
-                            class="form__clear js-clear-input"
-                        >
-                            <svg width="16" height="16" class="form__icon">
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#clear"
-                                ></use>
-                            </svg>
-                        </button>
-                    </label>
-                    <button type="submit" class="btn btn--primary">
-                        <span class="btn__text">Отправить</span>
-                    </button>
-                    <span class="form-consent"
-                        >Отправляя данные, я даю свое
-                        <a href="#" class="form-consent__link"
-                            >согласие на обработку перс. данных</a
-                        ></span
-                    >
-                </form>
-            </section>
-            <section class="our-company">
-                <div class="our-company__block">
-                    <h2 class="our-company__title">Наша компания</h2>
-                    <div class="our-company__text">
-                        <p class="text text--size-md">
-                            занимается продажей ритуальных и декоративных
-                            искусственных цветов оптом и в розницу. Мы
-                            предлагаем широкий выбор цветов для декора, включая
-                            розы, лилии, хризантемы, тюльпаны и многие другие.
-                            Наши цветы могут быть использованы для украшения
-                            свадеб, похоронных процессий, корпоративных
-                            мероприятий и других торжественных событий.
-                        </p>
-                        <p class="text text--size-md">
-                            Если вы ищете надежного поставщика искусственных
-                            цветов, то наша компания – это именно то, что вам
-                            нужно. Мы гарантируем высокое качество продукции и
-                            индивидуальный подход к каждому клиенту.
-                        </p>
-                    </div>
-                    <a href="#" class="btn-more our-company__btn">
-                        <span class="btn-more__text">Подробнее</span>
-                        <span class="btn-circle btn-more__circle">
-                            <svg
-                                width="24"
-                                height="16"
-                                class="btn-circle__icon"
+                        <div class="pagination catalog__pagination">
+                            <a
+                                href="#"
+                                class="pagination__link pagination__link--prev"
                             >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#arrow"
-                                ></use>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-                <picture class="our-company__picture">
-                    <source srcset="./img/our-company.webp" type="image/webp" />
-                    <img
-                        src="./img/our-company.png"
-                        width="644"
-                        height="644"
-                        alt="Наша компания"
-                        class="our-company__img"
-                    />
-                </picture>
-            </section>
-            <section class="advantage advantage--margin">
-                <div class="advantage__block advantage__block--onorder">
-                    <h3 class="advantage__title">
-                        Привезем для вас товар под заказ, которого нет в наличии
-                    </h3>
-                </div>
-                <div class="advantage__block advantage__block--colors">
-                    <h3 class="advantage__title">
-                        Возможность выбора расцветок для розничных покупателей
-                    </h3>
-                </div>
-            </section>
-            <section
-                class="slider-products slider-products--watched slider-products--margin"
-            >
-                <div class="slider-products__head">
-                    <h2 class="title title--size-lg slider-products__title">
-                        Ранее вы смотрели
-                    </h2>
-                    <div class="slider-control slider-products__control">
-                        <button
-                            class="slider-control__btn slider-control__btn--prev"
-                        >
-                            <svg
-                                width="12"
-                                height="22"
-                                class="slider-control__icon"
+                                <svg
+                                    aria-hidden="true"
+                                    width="24"
+                                    height="14"
+                                    class="pagination__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#arrow-pogin"
+                                    ></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="pagination__link"> 1 </a>
+                            <span class="pagination__dots">…</span>
+                            <a href="#" class="pagination__link"> 7 </a>
+                            <a
+                                href="#"
+                                class="pagination__link pagination__link--active"
                             >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#arrow-slider"
-                                ></use>
-                            </svg>
-                        </button>
-                        <button
-                            class="slider-control__btn slider-control__btn--next"
-                        >
-                            <svg
-                                width="12"
-                                height="22"
-                                class="slider-control__icon"
+                                8
+                            </a>
+                            <a href="#" class="pagination__link"> 9 </a>
+                            <span class="pagination__dots">…</span>
+                            <a href="#" class="pagination__link"> 16 </a>
+                            <a
+                                href="#"
+                                class="pagination__link pagination__link--next"
                             >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#arrow-slider"
-                                ></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper slider-products__swiper">
-                    <div class="swiper-wrapper slider-products__wrapper">
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
+                                <svg
+                                    aria-hidden="true"
+                                    width="24"
+                                    height="14"
+                                    class="pagination__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#arrow-pogin"
+                                    ></use>
+                                </svg>
                             </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Георгин "Эдинбург" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #a0e132"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #328ae1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e13232"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Гортензия метельчатая коралловая</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #32e1dd"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e132a8"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Ветка гвоздики 20 цветков
-                                    пурпурно-фиолетовый</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ff4501"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #fffaf0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #9400d3"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ffb6c1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #f0f"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >180 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >200 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        disabled="disabled"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзине</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Букет лилий "Робинзон" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card-color--package product-card__colors"
-                                >
-                                    <p class="product-card-color__text">
-                                        В упаковке:
-                                    </p>
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Штук в уп. <span>500</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >710 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >820 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за упаковку</span
-                                    >
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >71 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >80 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзину</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Георгин Эдинбург 6 цветков"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Георгин "Эдинбург" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #a0e132"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #328ae1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e13232"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Гортензия метельчатая коралловая"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Гортензия метельчатая коралловая</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #32e1dd"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #e132a8"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >94 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >100 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text"
-                                            >Выбрать цвет</span
-                                        >
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Ветка гвоздики 20 цветков
-                                    пурпурно-фиолетовый</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card__colors"
-                                >
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ff4501"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #fffaf0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #9400d3"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #ffb6c1"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #f0f"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >180 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >200 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        disabled="disabled"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзине</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide product-card">
-                            <a href="#" class="swiper product-card-slider">
-                                <div class="swiper-wrapper">
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-2.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-2.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product-3.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product-3.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <div
-                                        class="swiper-slide product-card-slider__slide"
-                                    >
-                                        <picture class="product-card__picture">
-                                            <source
-                                                srcset="./img/product.webp"
-                                                type="image/webp"
-                                            />
-                                            <img
-                                                src="./img/product.jpg"
-                                                width="356"
-                                                height="289"
-                                                alt="Ветка гвоздики 20 цветков пурпурно-фиолетовый"
-                                                class="product-card__img"
-                                            />
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </a>
-                            <div class="product-card__content">
-                                <a href="#" class="product-card__name"
-                                    >Букет лилий "Робинзон" 6 цветков</a
-                                >
-                                <span class="product-card__article"
-                                    >Артикул: <span>CD125</span></span
-                                >
-                                <div
-                                    class="product-card-color product-card-color--package product-card__colors"
-                                >
-                                    <p class="product-card-color__text">
-                                        В упаковке:
-                                    </p>
-                                    <span
-                                        style="background-color: #ff0"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #8b0000"
-                                        class="product-card-color__item"
-                                    ></span>
-                                    <span
-                                        style="background-color: #4b0082"
-                                        class="product-card-color__item"
-                                    ></span>
-                                </div>
-                                <div class="product-card__parameters">
-                                    <div class="product-card__parameter">
-                                        Высота <span>26</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Диаметр <span>4</span>
-                                    </div>
-                                    <div class="product-card__parameter">
-                                        Штук в уп. <span>500</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >710 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >820 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за упаковку</span
-                                    >
-                                </div>
-                                <div
-                                    class="product-card-cost product-card__cost"
-                                >
-                                    <span class="product-card-cost__price"
-                                        >71 ₽</span
-                                    >
-                                    <span class="product-card-cost__old"
-                                        >80 ₽</span
-                                    >
-                                    <span class="product-card-cost__text"
-                                        >за штуку</span
-                                    >
-                                </div>
-                                <div class="product-card__controls">
-                                    <button
-                                        type="button"
-                                        class="btn btn--border product-card__btn"
-                                    >
-                                        <span class="btn__text">В корзину</span>
-                                    </button>
-                                    <button
-                                        class="btn-favorites product-card__favorites"
-                                    >
-                                        <svg
-                                            width="27"
-                                            height="26"
-                                            class="btn-favorites__icon"
-                                        >
-                                            <use
-                                                xlink:href="./img/icons-sprite.svg#favorites-btn"
-                                            ></use>
-                                        </svg>
-                                        <span class="btn-favorites__text"
-                                            >В избранное</span
-                                        >
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -6756,6 +4318,7 @@
                                             class="form__clear js-clear-input"
                                         >
                                             <svg
+                                                aria-hidden="true"
                                                 width="16"
                                                 height="16"
                                                 class="form__icon"
@@ -6783,6 +4346,7 @@
                                             class="form__clear js-clear-input"
                                         >
                                             <svg
+                                                aria-hidden="true"
                                                 width="16"
                                                 height="16"
                                                 class="form__icon"
@@ -6819,7 +4383,12 @@
                         aria-label="Закрыть"
                         class="popup__close js-popup-close"
                     >
-                        <svg width="28" height="28" class="popup__icon">
+                        <svg
+                            aria-hidden="true"
+                            width="28"
+                            height="28"
+                            class="popup__icon"
+                        >
                             <use
                                 xlink:href="./img/icons-sprite.svg#close"
                             ></use>
@@ -6865,6 +4434,7 @@
         <script src="./js/swiper.js"></script>
         <script src="./js/nativejs-select.min.js"></script>
         <script src="./js/js-form-validator.min.js"></script>
+        <script src="./js/nouislider.min.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>

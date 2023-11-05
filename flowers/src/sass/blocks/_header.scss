@@ -533,9 +533,22 @@
         padding-left: 5.5%;
     }
 
+    &--secondary {
+        @media screen and (min-width: 1500px) {
+            padding-left: 12.3%;
+        }
+    }
+
     &__title {
         margin-top: 0;
         margin-bottom: 0;
+
+        @media screen and (max-width: 949.98px) {
+            padding-right: 4.6%;
+        }
+        @media screen and (max-width: 499.98px) {
+            padding-right: 5.5%;
+        }
     }
 
     &__breadcrumb {
