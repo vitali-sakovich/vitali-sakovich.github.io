@@ -1304,6 +1304,9 @@ input[type=number]:focus {
     margin-bottom: 1.25em;
   }
 }
+.title-block__icon {
+  fill: #2fa827;
+}
 
 .breadcrumb {
   display: -webkit-box;

@@ -558,6 +558,10 @@
             margin-bottom: em(20, $fz);
         }
     }
+
+    &__icon {
+        fill: #2fa827;
+    }
 }
 
 .breadcrumb {
