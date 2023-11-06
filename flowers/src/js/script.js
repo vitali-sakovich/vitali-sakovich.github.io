@@ -599,3 +599,24 @@ const init = () => {
 };
 
 window.addEventListener("DOMContentLoaded", init);
+
+(() => {
+    function showsOrderDetails(item) {
+        const btn = item.querySelector(".order-card__btn");
+        const block = item.querySelector(".order-details");
+
+        btn.addEventListener("click", () => {
+            if (!block.classList.contains("order-details--is-show")) {
+                block.style.height = block.scrollHeight + "px";
+                block.classList.add("order-details--is-show");
+                btn.firstElementChild.textContent = "Свернуть детали заказа";
+            } else {
+                block.style.height = 0;
+                block.classList.remove("order-details--is-show");
+                btn.firstElementChild.textContent = "Показать детали заказа";
+            }
+        });
+    }
+    const counts = document.querySelectorAll(".order-card");
+    counts.forEach(showsOrderDetails);
+})();

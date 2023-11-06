@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Оформление заказа</title>
+        <title>Личный кабинет</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
@@ -172,362 +172,461 @@
                 <a href="/" class="breadcrumb__link">Главная</a>
             </div>
             <h1 class="title title--size-lg title-block__title">
-                Оформление заказа
+                Личный кабинет
             </h1>
         </div>
         <main class="content">
-            <div class="order">
-                <form action="#" method="POST" class="form order__form">
-                    <div class="total-price order__price">
-                        <div class="total-price__block">
-                            <div class="total-price__row">
-                                <span class="total-price__name">Стоимость</span>
-                                <span class="total-price__value">5 800 ₽</span>
-                            </div>
-                            <div class="total-price__row">
-                                <span class="total-price__name">Скидка</span>
-                                <span class="total-price__value">-174 ₽</span>
-                            </div>
-                            <div class="total-price__row">
-                                <span class="total-price__name">Доставка</span>
-                                <span class="total-price__value">бесплатно</span>
-                            </div>
-                            <div class="total-price__row">
-                                <span class="total-price__name">Итого</span>
-                                <span class="total-price__value">5 626 ₽</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-composition order-composition--order order__composition">
-                        <div class="order-composition__head">
-                            <h2 class="title title--size-sm order-composition__title">
-                                Состав заказа
+            <div class="account">
+                <div class="account__row">
+                    <div class="account-card account-card--data account__card">
+                        <div class="account-card__head">
+                            <h2 class="title title--size-md">
+                                Данные аккаунта
                             </h2>
+                            <button class="btn btn--border account-card__out">
+                                <span class="btn__text">Выйти из аккаунта</span>
+                            </button>
                         </div>
-                        <div class="order-composition__list">
-                            <div class="order-composition-card order-composition__card">
-                                <a href="#" class="order-composition-card__link">
-                                    <picture class="order-composition-card__picture">
-                                        <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
-                                        <img src="./img/catalog/catalog-news.png" width="78" height="80" alt="Ветка гвоздики 20 цветков" class="order-composition-card__img">
-                                    </picture>
-                                </a>
-                                <div class="order-composition-card__content">
-                                    <a href="#" class="order-composition-card__name">Ветка гвоздики 20 цветков</a>
-                                    <div class="order-composition-card__row">
-                                        <div class="order-composition-card__number">
-                                            180 ₽/шт.
-                                        </div>
-                                        <div class="order-composition-card__number">
-                                            × 10 шт.
-                                        </div>
-                                        <div class="order-composition-card__number">
-                                            = 1 800 ₽
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order-composition-card order-composition__card">
-                                <a href="#" class="order-composition-card__link">
-                                    <picture class="order-composition-card__picture">
-                                        <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
-                                        <img src="./img/catalog/catalog-news.png" width="78" height="80" alt="Ветка гвоздики 20 цветков" class="order-composition-card__img">
-                                    </picture>
-                                </a>
-                                <div class="order-composition-card__content">
-                                    <a href="#" class="order-composition-card__name">Ветка гвоздики 20 цветков</a>
-                                    <div class="order-composition-card__row">
-                                        <div class="order-composition-card__number">
-                                            99 000 ₽/шт.
-                                        </div>
-                                        <div class="order-composition-card__number">
-                                            × 99 шт.
-                                        </div>
-                                        <div class="order-composition-card__number">
-                                            = 999 000 ₽
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-block order__block">
-                        <div class="order-head order-block__head">
-                            <div class="order-head__wrap">
-                                <svg width="23" height="15" class="order-head__icon">
-                                    <use xlink:href="./img/icons-sprite.svg#order-location"></use>
-                                </svg>
-                            </div>
-                            <h2 class="title title--size-sm">Местоположение</h2>
-                        </div>
-                        <div class="order-block__content">
-                            <label class="label form__label js-label">
-                                <input type="text" name="location" class="form__input js-input">
-                                <span class="form__placeholder">Выберите местоположение</span>
-                                <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                    <svg width="16" height="16" class="form__icon">
-                                        <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                        <div class="card-data account-card__data">
+                            <div class="card-data__row">
+                                <span class="card-data__name">ФИО</span>
+                                <span class="card-data__value">Михаил Пореченков</span>
+                                <button title="Изменить" aria-label="Изменить" class="btn-control card-data__btn">
+                                    <svg width="20" height="20" class="btn-control__icon">
+                                        <use xlink:href="./img/icons-sprite.svg#change-data"></use>
                                     </svg>
                                 </button>
-                            </label>
+                            </div>
+                            <div class="card-data__row">
+                                <span class="card-data__name">E-mai</span>
+                                <span class="card-data__value">MP@ya.ru</span>
+                                <button title="Изменить" aria-label="Изменить" class="btn-control card-data__btn">
+                                    <svg width="20" height="20" class="btn-control__icon">
+                                        <use xlink:href="./img/icons-sprite.svg#change-data"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-data__row">
+                                <span class="card-data__name">Телефон</span>
+                                <span class="card-data__value">не указан</span>
+                                <button title="Изменить" aria-label="Изменить" class="btn-control card-data__btn">
+                                    <svg width="20" height="20" class="btn-control__icon">
+                                        <use xlink:href="./img/icons-sprite.svg#change-data"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-data__row">
+                                <span class="card-data__name">Пароль</span>
+                                <span class="card-data__value">********</span>
+                                <button title="Изменить" aria-label="Изменить" class="btn-control card-data__btn">
+                                    <svg width="20" height="20" class="btn-control__icon">
+                                        <use xlink:href="./img/icons-sprite.svg#change-data"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="order-block order__block">
-                        <div class="order-head order-block__head">
-                            <div class="order-head__wrap">
-                                <svg width="20" height="20" class="order-head__icon">
-                                    <use xlink:href="./img/icons-sprite.svg#order-customer"></use>
-                                </svg>
-                            </div>
-                            <h2 class="title title--size-sm">Покупатель</h2>
-                        </div>
-                        <div class="order-block__content order-block__content--customer">
-                            <label class="order-radio">
-                                <input type="radio" name="customer" class="order-radio__input">
-                                <div class="order-radio__box">
-                                    <div class="order-radio__row">
-                                        <span class="order-radio__name">Физическое лицо</span>
-                                        <span class="order-radio__cheker"></span>
-                                    </div>
-                                </div>
-                            </label>
-                            <label class="order-radio">
-                                <input type="radio" name="customer" checked="checked" class="order-radio__input">
-                                <div class="order-radio__box">
-                                    <div class="order-radio__row">
-                                        <span class="order-radio__name">Юридическое лицо</span>
-                                        <span class="order-radio__cheker"></span>
-                                    </div>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="order-block order__block">
-                        <div class="order-head order-block__head">
-                            <div class="order-head__wrap">
-                                <svg width="21" height="21" class="order-head__icon">
-                                    <use xlink:href="./img/icons-sprite.svg#order-deliveri"></use>
-                                </svg>
-                            </div>
-                            <h2 class="title title--size-sm">
-                                Способ доставки
+                    <div class="account-card account-card--profile account__card">
+                        <div class="account-card__head">
+                            <h2 class="title title--size-md">
+                                Профили доставки
                             </h2>
+                            <button data-open-modal=".popup--add-profile" class="btn btn--border js-open-modal account-card__add">
+                                <span class="btn__text">Добавить профиль</span>
+                            </button>
                         </div>
-                        <div class="order-block__content order-block__content--delivery">
-                            <label class="order-radio">
-                                <input type="radio" name="delivery" checked="checked" class="order-radio__input">
-                                <div class="order-radio__box">
-                                    <div class="order-radio__row">
-                                        <span class="order-radio__name">Самовывоз</span>
-                                        <span class="order-radio__cheker"></span>
-                                    </div>
-                                    <p class="order-radio__text">
-                                        По адресу г. Красноярск с ПН по ПТ с
-                                        9:00 до 18:00
-                                    </p>
-                                </div>
-                            </label>
-                            <label class="order-radio">
-                                <input type="radio" name="delivery" class="order-radio__input">
-                                <div class="order-radio__box">
-                                    <div class="order-radio__row">
-                                        <span class="order-radio__name">Доставка транспортной
-                                            компанией</span>
-                                        <span class="order-radio__cheker"></span>
-                                    </div>
-                                    <p class="order-radio__text">
-                                        от 150 рублей
-                                    </p>
-                                </div>
-                            </label>
-                            <label class="order-radio">
-                                <input type="radio" name="delivery" class="order-radio__input">
-                                <div class="order-radio__box">
-                                    <div class="order-radio__row">
-                                        <span class="order-radio__name">Курьером</span>
-                                        <span class="order-radio__cheker"></span>
-                                    </div>
-                                    <p class="order-radio__text">
-                                        от 150 рублей
-                                    </p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="order-block order__block">
-                        <div class="order-head order-block__head">
-                            <div class="order-head__wrap">
-                                <svg width="19" height="15" class="order-head__icon">
-                                    <use xlink:href="./img/icons-sprite.svg#order-payment"></use>
-                                </svg>
-                            </div>
-                            <h2 class="title title--size-sm">Способ оплаты</h2>
-                        </div>
-                        <div class="order-block__content order-block__content--delivery">
-                            <label class="order-radio">
-                                <input type="radio" name="payment" checked="checked" class="order-radio__input">
-                                <div class="order-radio__box">
-                                    <div class="order-radio__row">
-                                        <span class="order-radio__name">Наличными</span>
-                                        <span class="order-radio__cheker"></span>
-                                    </div>
-                                    <p class="order-radio__text">
-                                        При самовывозе или курьеру
-                                    </p>
-                                </div>
-                            </label>
-                            <label class="order-radio">
-                                <input type="radio" name="payment" class="order-radio__input">
-                                <div class="order-radio__box">
-                                    <div class="order-radio__row">
-                                        <span class="order-radio__name">Банковской картой</span>
-                                        <span class="order-radio__cheker"></span>
-                                    </div>
-                                    <div class="order-radio__images">
-                                        <img src="./img/mir.svg" alt="МИР" width="46" height="13" class="order-radio__img">
-                                        <img src="./img/visa.svg" alt="МИР" width="42" height="14" class="order-radio__img">
-                                        <img src="./img/mastercard.svg" alt="МИР" width="38" height="23" class="order-radio__img">
+                        <div class="card-profile account-card__profile">
+                            <div class="card-profile__row">
+                                <div class="card-profile__content">
+                                    <label class="card-profile__label">
+                                        <input type="radio" name="profile" checked="checked" class="card-profile__input">
+                                        <span class="card-profile__cheker"></span>
+                                        <span class="card-profile__address">Железнодорожников 13 к2, оф.
+                                            213</span>
+                                    </label>
+                                    <div class="card-profile__data">
+                                        <span class="card-profile__text">Михаил Пореченков</span>
+                                        <span class="card-profile__text">8913-564-67-78</span>
+                                        <span class="card-profile__text">физическое лицо</span>
+                                        <span class="card-profile__text">mikhail@mail.ru</span>
                                     </div>
                                 </div>
-                            </label>
-                            <label class="order-radio">
-                                <input type="radio" name="payment" class="order-radio__input">
-                                <div class="order-radio__box">
-                                    <div class="order-radio__row">
-                                        <span class="order-radio__name">Счет на оплату</span>
-                                        <span class="order-radio__cheker"></span>
-                                    </div>
-                                    <p class="order-radio__text">Пара слов</p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="order-block order__block">
-                        <div class="order-head order-block__head">
-                            <div class="order-head__wrap">
-                                <svg width="22" height="15" class="order-head__icon">
-                                    <use xlink:href="./img/icons-sprite.svg#order-info"></use>
-                                </svg>
-                            </div>
-                            <h2 class="title title--size-sm">
-                                Информация о покупателе
-                            </h2>
-                        </div>
-                        <div class="order-block__content order-block__content--data">
-                            <label class="label form__label js-label">
-                                <input type="text" name="name" data-rule="required|name" class="form__input js-input">
-                                <span class="form__placeholder">Название компании *</span>
-                                <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                    <svg width="16" height="16" class="form__icon">
-                                        <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="label form__label js-label">
-                                <input type="text" name="name" class="form__input js-input">
-                                <span class="form__placeholder">ИНН</span>
-                                <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                    <svg width="16" height="16" class="form__icon">
-                                        <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="label form__label js-label">
-                                <input type="text" name="name" data-rule="required|name" class="form__input js-input">
-                                <span class="form__placeholder">Контактное лицо *</span>
-                                <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                    <svg width="16" height="16" class="form__icon">
-                                        <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="label form__label js-label">
-                                <input type="email" name="email" data-rule="required|email" class="form__input js-input">
-                                <span class="form__placeholder">E-mail *</span>
-                                <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                    <svg width="16" height="16" class="form__icon">
-                                        <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="label form__label js-label">
-                                <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
-                                <span class="form__placeholder">Телефон *</span>
-                                <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                    <svg width="16" height="16" class="form__icon">
-                                        <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="label form__label js-label label--comment">
-                                <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
-                                <span class="form__placeholder">Комментарий к заказу</span>
-                                <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                    <svg width="16" height="16" class="form__icon">
-                                        <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                    </svg>
-                                </button>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="order-block order__block">
-                        <div class="order-head order-block__head">
-                            <div class="order-head__wrap">
-                                <svg width="14" height="20" class="order-head__icon">
-                                    <use xlink:href="./img/icons-sprite.svg#order-address"></use>
-                                </svg>
-                            </div>
-                            <h2 class="title title--size-sm">Адрес доставки</h2>
-                        </div>
-                        <div class="order-block__content order-block__content--data">
-                            <label class="label form__label js-label">
-                                <input type="text" name="street" class="form__input js-input">
-                                <span class="form__placeholder">Улица</span>
-                                <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                    <svg width="16" height="16" class="form__icon">
-                                        <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                    </svg>
-                                </button>
-                            </label>
-                            <div class="order-block__row">
-                                <label class="label form__label js-label">
-                                    <input type="text" name="street" class="form__input js-input">
-                                    <span class="form__placeholder">Дом</span>
-                                    <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                        <svg width="16" height="16" class="form__icon">
-                                            <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                <div class="card-profile__btns">
+                                    <button data-open-modal=".popup--data-individuals" class="btn btn--change card-profile__btn js-open-modal">
+                                        <span class="btn__text">Изменить данные</span>
+                                    </button>
+                                    <button class="btn-control card-profile__delete">
+                                        <svg width="15" height="19" class="btn-control__icon">
+                                            <use xlink:href="./img/icons-sprite.svg#delete"></use>
                                         </svg>
                                     </button>
-                                </label>
-                                <label class="label form__label js-label">
-                                    <input type="text" name="corpus" class="form__input js-input">
-                                    <span class="form__placeholder">Корпус</span>
-                                    <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                        <svg width="16" height="16" class="form__icon">
-                                            <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </div>
+                            </div>
+                            <div class="card-profile__row">
+                                <div class="card-profile__content">
+                                    <label class="card-profile__label">
+                                        <input type="radio" name="profile" class="card-profile__input">
+                                        <span class="card-profile__cheker"></span>
+                                        <span class="card-profile__address">Бабушкина 2, 65</span>
+                                    </label>
+                                    <div class="card-profile__data">
+                                        <span class="card-profile__text">Соль</span>
+                                        <span class="card-profile__text">8999-111-22-33</span>
+                                        <span class="card-profile__text">юридическое лицо</span>
+                                        <span class="card-profile__text">alevtina@mail.ru</span>
+                                    </div>
+                                </div>
+                                <div class="card-profile__btns">
+                                    <button data-open-modal=".popup--data-legal" class="btn btn--change card-profile__btn js-open-modal">
+                                        <span class="btn__text">Изменить данные</span>
+                                    </button>
+                                    <button class="btn-control card-profile__delete">
+                                        <svg width="15" height="19" class="btn-control__icon">
+                                            <use xlink:href="./img/icons-sprite.svg#delete"></use>
                                         </svg>
                                     </button>
-                                </label>
-                                <label class="label form__label js-label">
-                                    <input type="text" name="quarter" class="form__input js-input">
-                                    <span class="form__placeholder">Кварт.</span>
-                                    <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                        <svg width="16" height="16" class="form__icon">
-                                            <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </div>
+                            </div>
+                            <div class="card-profile__row">
+                                <div class="card-profile__content">
+                                    <label class="card-profile__label">
+                                        <input type="radio" name="profile" class="card-profile__input">
+                                        <span class="card-profile__cheker"></span>
+                                        <span class="card-profile__address">Железнодорожников 13 к2, оф.
+                                            213</span>
+                                    </label>
+                                    <div class="card-profile__data">
+                                        <span class="card-profile__text">Михаил Пореченков</span>
+                                        <span class="card-profile__text">8913-564-67-78</span>
+                                        <span class="card-profile__text">физическое лицо</span>
+                                        <span class="card-profile__text">mikhail@mail.ru</span>
+                                    </div>
+                                </div>
+                                <div class="card-profile__btns">
+                                    <button data-open-modal=".popup--data-individuals" class="btn btn--change card-profile__btn js-open-modal">
+                                        <span class="btn__text">Изменить данные</span>
+                                    </button>
+                                    <button class="btn-control card-profile__delete">
+                                        <svg width="15" height="19" class="btn-control__icon">
+                                            <use xlink:href="./img/icons-sprite.svg#delete"></use>
                                         </svg>
                                     </button>
-                                </label>
+                                </div>
+                            </div>
+                            <div class="card-profile__row">
+                                <div class="card-profile__content">
+                                    <label class="card-profile__label">
+                                        <input type="radio" name="profile" class="card-profile__input">
+                                        <span class="card-profile__cheker"></span>
+                                        <span class="card-profile__address">Бабушкина 2, 65</span>
+                                    </label>
+                                    <div class="card-profile__data">
+                                        <span class="card-profile__text">Соль</span>
+                                        <span class="card-profile__text">8999-111-22-33</span>
+                                        <span class="card-profile__text">юридическое лицо</span>
+                                        <span class="card-profile__text">alevtina@mail.ru</span>
+                                    </div>
+                                </div>
+                                <div class="card-profile__btns">
+                                    <button data-open-modal=".popup--data-legal" class="btn btn--change card-profile__btn js-open-modal">
+                                        <span class="btn__text">Изменить данные</span>
+                                    </button>
+                                    <button class="btn-control card-profile__delete">
+                                        <svg width="15" height="19" class="btn-control__icon">
+                                            <use xlink:href="./img/icons-sprite.svg#delete"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="order__box">
-                        <button type="submit" class="btn btn--primary order__btn">
-                            <span class="btn__text">Оформить заказ</span>
+                </div>
+                <div class="order-history">
+                    <div class="order-history__head">
+                        <h2 class="title title--size-md">История заказов</h2>
+                        <div class="sort order-history__sort">
+                            <select name="order-history" class="select sort__select">
+                                <option value="sort" selected="selected">
+                                    По возрастанию суммы заказа
+                                </option>
+                                <option value="cheap">
+                                    По возрастанию цены
+                                </option>
+                                <option value="expensive">
+                                    По убыванию цены
+                                </option>
+                                <option value="sale">Сначала акции</option>
+                                <option value="new">Сначала новинки</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="order-card order-history__card">
+                        <div class="order-card__head">
+                            <div class="order-card__wrap">
+                                <h3 class="title title-size-sm">Заказ №350</h3>
+                                <span class="order-card__date">от 23.08.2017</span>
+                                <span class="order-card__amount">= 1120 ₽</span>
+                            </div>
+
+                            <!-- для стататусов меняем классы -->
+                            <!-- order-card-status--accept Принят, ожидается оплата -->
+                            <!-- order-card-status--paid Оплачен, формируется к отправке -->
+                            <!-- order-card-status--fulfilled Выполнен -->
+                            <!-- order-card-status--unfulfilled Не выполнен -->
+                            <div class="order-card-status order-card-status--accept order-card__status">
+                                <span class="order-card-status__text">Принят, ожидается оплата</span>
+                            </div>
+                        </div>
+                        <div class="order-composition order-composition--account order-card__composition">
+                            <div class="order-composition__head">
+                                <h2 class="title title--size-sm">
+                                    Состав заказа
+                                </h2>
+                            </div>
+                            <div class="order-composition__list">
+                                <div class="order-composition-card order-composition__card">
+                                    <a href="#" class="order-composition-card__link">
+                                        <picture class="order-composition-card__picture">
+                                            <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                            <img src="./img/catalog/catalog-news.png" width="78" height="80" alt="Ветка гвоздики 20 цветков" class="order-composition-card__img">
+                                        </picture>
+                                    </a>
+                                    <div class="order-composition-card__content">
+                                        <a href="#" class="order-composition-card__name">Ветка гвоздики 20 цветков</a>
+                                        <div class="order-composition-card__row">
+                                            <div class="order-composition-card__number">
+                                                180 ₽/шт.
+                                            </div>
+                                            <div class="order-composition-card__number">
+                                                × 10 шт.
+                                            </div>
+                                            <div class="order-composition-card__number">
+                                                = 1 800 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-composition-card order-composition__card">
+                                    <a href="#" class="order-composition-card__link">
+                                        <picture class="order-composition-card__picture">
+                                            <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                            <img src="./img/catalog/catalog-news.png" width="78" height="80" alt="Ветка гвоздики 20 цветков" class="order-composition-card__img">
+                                        </picture>
+                                    </a>
+                                    <div class="order-composition-card__content">
+                                        <a href="#" class="order-composition-card__name">Ветка гвоздики 20 цветков</a>
+                                        <div class="order-composition-card__row">
+                                            <div class="order-composition-card__number">
+                                                99 000 ₽/шт.
+                                            </div>
+                                            <div class="order-composition-card__number">
+                                                × 99 шт.
+                                            </div>
+                                            <div class="order-composition-card__number">
+                                                = 999 000 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn--change order-card__btn">
+                            <span class="btn__text">
+                                Показать детали заказа
+                            </span>
                         </button>
-                        <span class="form-consent order__consent">Отправляя данные, я даю свое
-                            <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        <div class="order-details order-history__details">
+                            <div class="order-details__wrapper">
+                                <div class="order-details__list">
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Заказ</span>
+                                        <span class="order-details__value">№350</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Время заказа</span>
+                                        <span class="order-details__value">23.08.2017 16:06</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">ФИО</span>
+                                        <span class="order-details__value">Константин Попов</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Телефон</span>
+                                        <span class="order-details__value">89029816053</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">E-mail</span>
+                                        <span class="order-details__value">2140571@bk.ru</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Адрес доставки</span>
+                                        <span class="order-details__value">г. Красноярск, ул. Мира, дом 4-11,
+                                            оф. 410</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Способ оплаты</span>
+                                        <span class="order-details__value">Оплата в магазине</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Способ доставки</span>
+                                        <span class="order-details__value">Самовывоз</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Сумма заказа</span>
+                                        <span class="order-details__value">26800 ₽</span>
+                                    </div>
+                                </div>
+                                <div class="order-details-price order-details__price">
+                                    <span class="order-details-price__text">Сумма заказа</span>
+                                    <span class="order-details-price__value">= 1120 ₽</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                    <div class="order-card order-history__card">
+                        <div class="order-card__head">
+                            <div class="order-card__wrap">
+                                <h3 class="title title-size-sm">Заказ №350</h3>
+                                <span class="order-card__date">от 23.08.2017</span>
+                                <span class="order-card__amount">= 1120 ₽</span>
+                            </div>
+                            <!-- для стататусов меняем классы -->
+                            <!-- order-card-status--accept Принят, ожидается оплата -->
+                            <!-- order-card-status--paid Оплачен, формируется к отправке -->
+                            <!-- order-card-status--fulfilled Выполнен -->
+                            <!-- order-card-status--unfulfilled Не выполнен -->
+                            <div class="order-card-status order-card-status--paid order-card__status">
+                                <span class="order-card-status__text">Оплачен, формируется к отправке</span>
+                            </div>
+                        </div>
+                        <div class="order-composition order-composition--account order-card__composition">
+                            <div class="order-composition__head">
+                                <h2 class="title title--size-sm">
+                                    Состав заказа
+                                </h2>
+                            </div>
+                            <div class="order-composition__list">
+                                <div class="order-composition-card order-composition__card">
+                                    <a href="#" class="order-composition-card__link">
+                                        <picture class="order-composition-card__picture">
+                                            <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                            <img src="./img/catalog/catalog-news.png" width="78" height="80" alt="Ветка гвоздики 20 цветков" class="order-composition-card__img">
+                                        </picture>
+                                    </a>
+                                    <div class="order-composition-card__content">
+                                        <a href="#" class="order-composition-card__name">Ветка гвоздики 20 цветков</a>
+                                        <div class="order-composition-card__row">
+                                            <div class="order-composition-card__number">
+                                                180 ₽/шт.
+                                            </div>
+                                            <div class="order-composition-card__number">
+                                                × 10 шт.
+                                            </div>
+                                            <div class="order-composition-card__number">
+                                                = 1 800 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-composition-card order-composition__card">
+                                    <a href="#" class="order-composition-card__link">
+                                        <picture class="order-composition-card__picture">
+                                            <source srcset="./img/catalog/catalog-news.webp" type="image/webp">
+                                            <img src="./img/catalog/catalog-news.png" width="78" height="80" alt="Ветка гвоздики 20 цветков" class="order-composition-card__img">
+                                        </picture>
+                                    </a>
+                                    <div class="order-composition-card__content">
+                                        <a href="#" class="order-composition-card__name">Ветка гвоздики 20 цветков</a>
+                                        <div class="order-composition-card__row">
+                                            <div class="order-composition-card__number">
+                                                99 000 ₽/шт.
+                                            </div>
+                                            <div class="order-composition-card__number">
+                                                × 99 шт.
+                                            </div>
+                                            <div class="order-composition-card__number">
+                                                = 999 000 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn--change order-card__btn">
+                            <span class="btn__text">
+                                Показать детали заказа
+                            </span>
+                        </button>
+                        <div class="order-details order-history__details">
+                            <div class="order-details__wrapper">
+                                <div class="order-details__list">
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Заказ</span>
+                                        <span class="order-details__value">№350</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Время заказа</span>
+                                        <span class="order-details__value">23.08.2017 16:06</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">ФИО</span>
+                                        <span class="order-details__value">Константин Попов</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Телефон</span>
+                                        <span class="order-details__value">89029816053</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">E-mail</span>
+                                        <span class="order-details__value">2140571@bk.ru</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Адрес доставки</span>
+                                        <span class="order-details__value">г. Красноярск, ул. Мира, дом 4-11,
+                                            оф. 410</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Способ оплаты</span>
+                                        <span class="order-details__value">Оплата в магазине</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Способ доставки</span>
+                                        <span class="order-details__value">Самовывоз</span>
+                                    </div>
+                                    <div class="order-details__item">
+                                        <span class="order-details__name">Сумма заказа</span>
+                                        <span class="order-details__value">26800 ₽</span>
+                                    </div>
+                                </div>
+                                <div class="order-details-price order-details__price">
+                                    <span class="order-details-price__text">Сумма заказа</span>
+                                    <span class="order-details-price__value">= 1120 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination order-history__pagination">
+                        <a href="#" class="pagination__link pagination__link--prev">
+                            <svg aria-hidden="true" width="24" height="14" class="pagination__icon">
+                                <use xlink:href="./img/icons-sprite.svg#arrow-pogin"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="pagination__link"> 1 </a>
+                        <span class="pagination__dots">…</span>
+                        <a href="#" class="pagination__link"> 7 </a>
+                        <a href="#" class="pagination__link pagination__link--active">
+                            8
+                        </a>
+                        <a href="#" class="pagination__link"> 9 </a>
+                        <span class="pagination__dots">…</span>
+                        <a href="#" class="pagination__link"> 16 </a>
+                        <a href="#" class="pagination__link pagination__link--next">
+                            <svg aria-hidden="true" width="24" height="14" class="pagination__icon">
+                                <use xlink:href="./img/icons-sprite.svg#arrow-pogin"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </main>
         <footer class="footer">

@@ -103,13 +103,28 @@
 }
 
 .order-composition {
-    padding: em(33 88 47 40, $fz);
-    border-radius: em(40, $fz);
-    background-color: #fff;
+    &--order {
+        padding: em(33 88 47 40, $fz);
+        border-radius: em(40, $fz);
+        background-color: #fff;
 
-    @media screen and (max-width: 499.98px) {
-        border-radius: 0;
-        padding: em(30, $fz) 5.5% em(35, $fz);
+        @media screen and (max-width: 499.98px) {
+            border-radius: 0;
+            padding: em(30, $fz) 5.5% em(35, $fz);
+        }
+    }
+
+    &--account {
+        padding: em(38 121 27, $fz);
+
+        @media screen and (max-width: 1499.98px) {
+            padding-left: em(43, $fz);
+        }
+        @media screen and (max-width: 499.98px) {
+            padding-top: em(10, $fz);
+            padding-right: em(10, $fz);
+            padding-left: 5.5%;
+        }
     }
 
     &__head {

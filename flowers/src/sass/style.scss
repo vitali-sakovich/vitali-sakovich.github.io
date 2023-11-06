@@ -110,6 +110,17 @@ input[type="number"]:focus {
         }
     }
 
+    &--size-md {
+        $fz: 30;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+
+        @media screen and (max-width: 949.98px) {
+            $fz: 22;
+            font-size: em($fz, $fz_base);
+        }
+    }
+
     &--size-sm {
         $fz: 20;
         font-size: em($fz, $fz_base);
@@ -126,8 +137,6 @@ input[type="number"]:focus {
     }
 
     &--size-sm {
-        $fz: 16;
-        font-size: em($fz, $fz_base);
         line-height: 1.5;
     }
 }
@@ -190,6 +199,16 @@ input[type="number"]:focus {
         }
     }
 
+    &--change {
+        background-color: #f0ebe6;
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                background-color: rgba(61, 74, 98, 0.1);
+            }
+        }
+    }
+
     &:disabled {
         --btn-text-color: #000;
         background-color: #e7ddd4;
@@ -218,6 +237,25 @@ input[type="number"]:focus {
                 background-size: 0;
             }
         }
+    }
+}
+
+.btn-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: em(5, $fz);
+    transition: background-color 0.3s;
+    background-color: transparent;
+
+    &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+            background-color: rgb(61, 74, 98, 0.1);
+        }
+    }
+
+    &__icon {
+        fill: #bcbcbc;
     }
 }
 
@@ -304,3 +342,4 @@ input[type="number"]:focus {
 @import "blocks/catalog-cotigories";
 @import "blocks/catalog";
 @import "blocks/order";
+@import "blocks/account";
