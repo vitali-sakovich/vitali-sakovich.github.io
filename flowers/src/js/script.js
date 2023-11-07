@@ -1,3 +1,5 @@
+Fancybox.bind("[data-fancybox]", {});
+
 (() => {
     const sliders = document.querySelectorAll(".slider-products");
 
