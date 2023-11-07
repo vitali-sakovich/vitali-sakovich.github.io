@@ -353,6 +353,24 @@
                             >
                         </div>
                     </div>
+                    <div class="filters__head">
+                        <h2 class="popup-title">Фильтры</h2>
+                        <button
+                            type="button"
+                            aria-label="Закрыть"
+                            class="filters-close js-filters-close"
+                        >
+                            <svg
+                                width="28"
+                                height="28"
+                                class="filters-close__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#close"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
                     <form
                         name="filter"
                         action="#"
@@ -443,6 +461,11 @@
                         <div class="filter filters__box">
                             <div class="filter__head">
                                 <h2 class="filter__title">Название цветка</h2>
+                                <button class="filter-uncover">
+                                    <span class="filter-uncover__text"
+                                        >Раскрыть все</span
+                                    >
+                                </button>
                             </div>
                             <div class="filter__content">
                                 <div class="checkbox filter__checkbox">
@@ -578,6 +601,11 @@
                         <div class="filter filters__box">
                             <div class="filter__head">
                                 <h2 class="filter__title">Материал</h2>
+                                <button class="filter-uncover">
+                                    <span class="filter-uncover__text"
+                                        >Раскрыть все</span
+                                    >
+                                </button>
                             </div>
                             <div class="filter__content">
                                 <div class="checkbox filter__checkbox">
@@ -713,6 +741,11 @@
                         <div class="filter filters__box">
                             <div class="filter__head">
                                 <h2 class="filter__title">Материал</h2>
+                                <button class="filter-uncover">
+                                    <span class="filter-uncover__text"
+                                        >Раскрыть все</span
+                                    >
+                                </button>
                             </div>
                             <div class="filter__content">
                                 <div class="checkbox filter__checkbox">
@@ -820,6 +853,19 @@
                                 <span class="btn__text">Применить</span>
                             </button>
                         </div>
+                        <!-- панель показать фильтры для мобилки -->
+                        <div class="filters-panel-mobi">
+                            <div class="filters-panel-mobi__text">
+                                Найдено товаров: <span>23</span>
+                            </div>
+                            <button
+                                class="filter-btn-show filters-panel-mobi__btn"
+                            >
+                                <span class="filter-btn-show__text"
+                                    >Показать</span
+                                >
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <div class="catalog__block">
@@ -853,7 +899,9 @@
                                     <option value="60">Показывать по 60</option>
                                 </select>
                             </div>
-                            <button class="btn-setting-filter catalog__setting">
+                            <button
+                                class="btn-setting-filter catalog__setting js-show-filter"
+                            >
                                 <svg
                                     width="20"
                                     height="20"

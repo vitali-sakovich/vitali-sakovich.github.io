@@ -303,23 +303,22 @@ function modal(modal) {
         return;
     }
     closeModal.forEach(function (closeModalItem) {
-        closeModalItem.addEventListener("click", modalHidden);
+        closeModalItem.addEventListener("click", () => modalHidden(modal));
     });
 
     document.addEventListener("keydown", function (event) {
         const key = event.key;
         if (key === "Escape") {
-            modalHidden();
+            modalHidden(modal);
         }
     });
-
-    function modalHidden() {
-        modal.classList.remove("popup--is-show");
-        document.body.classList.remove("hidden");
-        window.setTimeout(function () {
-            modal.style.display = "none";
-        }, 300);
-    }
+}
+function modalHidden(modal) {
+    modal.classList.remove("popup--is-show");
+    document.body.classList.remove("hidden");
+    window.setTimeout(function () {
+        modal.style.display = "none";
+    }, 300);
 }
 const modals = document.querySelectorAll(".popup");
 modals.forEach(modal);
@@ -619,4 +618,41 @@ window.addEventListener("DOMContentLoaded", init);
     }
     const counts = document.querySelectorAll(".order-card");
     counts.forEach(showsOrderDetails);
+})();
+
+(() => {
+    const btnShowFilter = document.querySelector(".js-show-filter");
+    const btnCloseFilter = document.querySelector(".js-filters-close");
+
+    if (!btnShowFilter) return;
+    btnShowFilter.addEventListener("click", () => {
+        openModal(document.querySelector(".filters"));
+    });
+    btnCloseFilter.addEventListener("click", () => {
+        modalHidden(document.querySelector(".filters"));
+    });
+})();
+
+(() => {
+    function showFilter(item) {
+        const btn = item.querySelector(".filter-uncover");
+        const checkboxs = item.querySelectorAll(".checkbox");
+
+        if (!btn) return;
+
+        if (checkboxs.length <= 6) {
+            btn.remove();
+        }
+
+        btn.addEventListener("click", () => {
+            if (!item.classList.contains("filter--is-show")) {
+                btn.firstElementChild.textContent = "Скрыть все";
+                item.classList.add("filter--is-show");
+            } else {
+                btn.firstElementChild.textContent = "Раскрыть все";
+                item.classList.remove("filter--is-show");
+            }
+        });
+    }
+    document.querySelectorAll(".filter").forEach(showFilter);
 })();
