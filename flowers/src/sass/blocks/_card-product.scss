@@ -166,7 +166,8 @@
 
     &:hover {
         @media screen and (min-width: $breakpoint-hover) {
-            background-color: rgba(99, 99, 99, 0.1);
+            --btn-favorites-text-color: #fff;
+            background-color: #533dd4;
         }
     }
 
