@@ -180,7 +180,7 @@ new NativejsSelect({
                 inputValueСheck();
 
                 if (textarea) {
-                    textarea.style.height = 75 + "px";
+                    textarea.style.height = 104 + "px";
                 }
             });
         }
@@ -648,7 +648,7 @@ window.addEventListener("DOMContentLoaded", init);
 
         btn.addEventListener("click", () => {
             if (!item.classList.contains("filter--is-show")) {
-                btn.firstElementChild.textContent = "Скрыть все";
+                btn.firstElementChild.textContent = "Скрыть";
                 item.classList.add("filter--is-show");
             } else {
                 btn.firstElementChild.textContent = "Раскрыть все";
@@ -657,4 +657,22 @@ window.addEventListener("DOMContentLoaded", init);
         });
     }
     document.querySelectorAll(".filter").forEach(showFilter);
+})();
+
+(() => {
+    const btn = document.querySelector(".btn-show-requisite");
+    if (!btn) return;
+    const requisite = document.querySelector(".conracts-requisite__list");
+
+    btn.addEventListener("click", () => {
+        if (
+            !requisite.classList.contains("conracts-requisite__list--is-show")
+        ) {
+            requisite.classList.add("conracts-requisite__list--is-show");
+            btn.firstElementChild.textContent = "Скрыть реквизиты";
+        } else {
+            requisite.classList.remove("conracts-requisite__list--is-show");
+            btn.firstElementChild.textContent = "Показать реквизиты";
+        }
+    });
 })();

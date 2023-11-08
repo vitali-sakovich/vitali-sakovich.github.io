@@ -125,7 +125,7 @@ input[type="number"]:focus {
         $fz: 20;
         font-size: em($fz, $fz_base);
         font-weight: 600;
-        color: #000;
+        color: var(--title-sm-color, #000);
     }
 }
 
@@ -346,3 +346,4 @@ input[type="number"]:focus {
 @import "blocks/order";
 @import "blocks/account";
 @import "blocks/about";
+@import "blocks/contacts";

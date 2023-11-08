@@ -334,21 +334,23 @@
                 <div class="contacts__container">
                     <div class="contacts-data contacts__data">
                         <div class="contacts-data__head">
-                            <h2 class="contacts-data__title">
+                            <h2 class="title title--size-sm">
                                 Контактные данные
                             </h2>
                         </div>
                         <div class="contacts-data__list">
                             <div class="contacts-data__item">
-                                <svg
-                                    width="13"
-                                    height="20"
-                                    class="contacts-data__icon"
-                                >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#phone"
-                                    ></use>
-                                </svg>
+                                <div class="contacts-data__inner">
+                                    <svg
+                                        width="13"
+                                        height="20"
+                                        class="contacts-data__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#phone"
+                                        ></use>
+                                    </svg>
+                                </div>
                                 <div class="contacts-data__wrap">
                                     <span class="contacts-data__name"
                                         >Телефон</span
@@ -361,15 +363,17 @@
                                 </div>
                             </div>
                             <div class="contacts-data__item">
-                                <svg
-                                    width="20"
-                                    height="16"
-                                    class="contacts-data__icon"
-                                >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#email"
-                                    ></use>
-                                </svg>
+                                <div class="contacts-data__inner">
+                                    <svg
+                                        width="20"
+                                        height="16"
+                                        class="contacts-data__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#email"
+                                        ></use>
+                                    </svg>
+                                </div>
                                 <div class="contacts-data__wrap">
                                     <span class="contacts-data__name"
                                         >E-mail</span
@@ -385,13 +389,17 @@
                     </div>
                     <div class="conracts-requisite">
                         <div class="conracts-requisite__head">
-                            <h2 class="conracts-requisite__title">Реквизиты</h2>
+                            <h2 class="title title--size-sm">Реквизиты</h2>
                         </div>
                         <div class="conracts-requisite__content">
-                            <h3 class="conracts-requisite__subtitle">
-                                Индивидуальный предприниматель Иванов Иван
-                                Иванович
-                            </h3>
+                            <div class="conracts-requisite__inner">
+                                <span class="conracts-requisite__subtitle"
+                                    >Индивидуальный предприниматель</span
+                                >
+                                <span class="conracts-requisite__subtitle"
+                                    >Иванов Иван Иванович</span
+                                >
+                            </div>
                             <div class="conracts-requisite__list">
                                 <div class="conracts-requisite__item">
                                     <span class="conracts-requisite__name"
@@ -401,7 +409,36 @@
                                         >2465190439</span
                                     >
                                 </div>
+                                <div class="conracts-requisite__item">
+                                    <span class="conracts-requisite__name"
+                                        >ИНН</span
+                                    >
+                                    <span class="conracts-requisite__value"
+                                        >2465190439</span
+                                    >
+                                </div>
+                                <div class="conracts-requisite__item">
+                                    <span class="conracts-requisite__name"
+                                        >ИНН</span
+                                    >
+                                    <span class="conracts-requisite__value"
+                                        >2465190439</span
+                                    >
+                                </div>
+                                <div class="conracts-requisite__item">
+                                    <span class="conracts-requisite__name"
+                                        >ИНН</span
+                                    >
+                                    <span class="conracts-requisite__value"
+                                        >2465190439</span
+                                    >
+                                </div>
                             </div>
+                            <button class="btn-show-requisite">
+                                <span class="btn-show-requisite__text"
+                                    >Показать реквизиты</span
+                                >
+                            </button>
                             <a
                                 href="#"
                                 download
@@ -473,19 +510,19 @@
                 </script>
                 <div class="contacts__map" id="map"></div>
             </div>
-            <section class="section-form">
+            <section class="section-form section-form--feedback">
                 <div class="section-form__content">
                     <img
-                        src="./img/form-title-help.svg"
-                        alt="Требуется попмощь в подборе"
-                        width="504"
-                        height="206"
+                        src="./img/feedback-title.svg"
+                        alt="Обратная связь"
+                        width="407"
+                        height="124"
                         class="section-form__title"
                     />
                     <div class="section-form__inner">
                         <p class="text text--size-md">
-                            Оставьте контакты и мы поможем оформить и
-                            проконсультируем
+                            Задайте вопрос, направьте нам претензию или оставьте
+                            отзыв о работе нашего сайта
                         </p>
                     </div>
                 </div>
@@ -497,7 +534,7 @@
                             data-rule="required|name"
                             class="form__input js-input"
                         />
-                        <span class="form__placeholder">Ваше имя *</span>
+                        <span class="form__placeholder">Ваше имя</span>
                         <button
                             type="button"
                             title="Очистить"
@@ -518,7 +555,28 @@
                             data-rule="required|phone"
                             class="form__input js-input-mask js-input"
                         />
-                        <span class="form__placeholder">Телефон *</span>
+                        <span class="form__placeholder">Телефон</span>
+                        <button
+                            type="button"
+                            title="Очистить"
+                            aria-label="Очистить"
+                            class="form__clear js-clear-input"
+                        >
+                            <svg width="16" height="16" class="form__icon">
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#clear"
+                                ></use>
+                            </svg>
+                        </button>
+                    </label>
+                    <label class="label form__label js-label">
+                        <input
+                            type="email"
+                            name="email"
+                            data-rule="required|email"
+                            class="form__input js-input"
+                        />
+                        <span class="form__placeholder">E-mail</span>
                         <button
                             type="button"
                             title="Очистить"

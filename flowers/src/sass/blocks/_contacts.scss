@@ -1,0 +1,314 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: em(35, $fz);
+    padding-bottom: em(100, $fz);
+    padding-right: 9%;
+
+    @media screen and (max-width: 1199.98px) {
+        padding-right: 5%;
+    }
+    @media screen and (max-width: 1149.98px) {
+        padding-right: 3.3%;
+        padding-bottom: em(90, $fz);
+    }
+    @media screen and (max-width: 949.98px) {
+        padding-top: em(20, $fz);
+        padding-right: 4.6%;
+        padding-bottom: em(52, $fz);
+    }
+    @media screen and (max-width: 949.98px) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__container {
+        display: grid;
+        align-items: start;
+        grid-template-columns: 45% 50%;
+        grid-column-gap: 5%;
+        margin-bottom: em(66, $fz);
+
+        @media screen and (max-width: 1149.98px) {
+            grid-template-columns: 46% 51%;
+            grid-column-gap: 3%;
+        }
+        @media screen and (max-width: 949.98px) {
+            flex-direction: column;
+            grid-template-columns: 100%;
+            align-items: start;
+            grid-row-gap: em(20, $fz);
+            margin-bottom: em(48, $fz);
+        }
+    }
+
+    &__container,
+    &__map {
+        max-width: em(1235, $fz);
+    }
+
+    &__map {
+        width: 100%;
+        height: em(444, $fz);
+        border-radius: em(40, $fz);
+        overflow: hidden;
+
+        .ymaps-2-1-79-controls__toolbar,
+        .ymaps-2-1-79-copyrights-pane {
+            display: none;
+        }
+    }
+}
+
+.contacts-data,
+.conracts-requisite {
+    border-radius: em(40, $fz);
+    padding-top: em(31, $fz);
+
+    @media screen and (min-width: 500px) {
+        min-height: em(310, $fz);
+    }
+}
+
+.contacts-data {
+    --title-sm-color: #fff;
+    background-color: #4b8702;
+    padding-left: em(68, $fz);
+
+    @media screen and (max-width: 1149.98px) {
+        padding-left: em(28, $fz);
+    }
+    @media screen and (max-width: 949.98px) {
+        padding-left: em(23, $fz);
+    }
+    @media screen and (max-width: 499.98px) {
+        padding-bottom: em(40, $fz);
+    }
+
+    &__head {
+        margin-bottom: em(42, $fz);
+
+        @media screen and (max-width: 499.98px) {
+            margin-bottom: em(22, $fz);
+        }
+    }
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: em(50, $fz);
+
+            @media screen and (max-width: 499.98px) {
+                margin-bottom: em(28, $fz);
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: em(20, $fz);
+        min-width: em(20, $fz);
+        height: em(20, $fz);
+        margin-right: em(13, $fz);
+    }
+
+    &__icon {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        fill: rgba(255, 255, 255, 0.24);
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1px;
+    }
+
+    &__name {
+        display: flex;
+        color: #fff;
+        line-height: 1.25;
+        margin-bottom: em(18, $fz);
+    }
+
+    &__link {
+        $fz: 26;
+        font-size: em($fz, $fz_base);
+        color: #fff;
+        font-weight: 600;
+        line-height: 0.77;
+    }
+}
+
+.conracts-requisite {
+    padding-bottom: em(34, $fz);
+    padding-left: em(98, $fz);
+    padding-right: em(30, $fz);
+    background-color: #fff;
+
+    @media screen and (max-width: 1149.98px) {
+        padding-left: em(58, $fz);
+    }
+    @media screen and (max-width: 949.98px) {
+        padding-left: em(53, $fz);
+    }
+
+    &__head {
+        margin-bottom: em(37, $fz);
+
+        @media screen and (max-width: 499.98px) {
+            margin-bottom: em(14, $fz);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: em(25, $fz);
+    }
+
+    &__subtitle {
+        display: flex;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    &__list {
+        display: grid;
+        grid-row-gap: em(15, $fz);
+        margin-bottom: em(13, $fz);
+
+        &--is-show {
+            --requisite-show: grid;
+        }
+    }
+
+    &__item {
+        display: var(--requisite-show, none);
+        grid-template-columns: em(120, $fz) auto;
+
+        &:first-child {
+            display: grid;
+        }
+    }
+
+    &__name,
+    &__value {
+        line-height: 1.25;
+    }
+
+    &__value {
+        font-weight: 600;
+    }
+}
+
+.btn-show-requisite {
+    $self: &;
+    display: grid;
+    background-color: transparent;
+    margin-bottom: em(40, $fz);
+
+    &__text {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        line-height: 1.5;
+        color: #525252;
+        background-image: linear-gradient(
+            90deg,
+            #000,
+            #000 50%,
+            transparent 50%,
+            transparent 100%
+        );
+        background-size: 6px 1px;
+        background-position-y: bottom;
+        background-repeat: repeat-x;
+
+        #{$self}:hover & {
+            background-image: linear-gradient(
+                90deg,
+                transparent,
+                transparent 100%
+            );
+        }
+    }
+}
+
+.download {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: opacity 0.3;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &__icon {
+        fill: #de7474;
+        width: em(20, $fz);
+        height: auto;
+        margin-right: em(12, $fz);
+    }
+
+    &__name {
+        display: flex;
+        color: #000;
+        line-height: 1.5;
+        margin-right: em(12, $fz);
+    }
+
+    &__size {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        color: #858585;
+    }
+}
+
+.conracts-location {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: em(70, $fz);
+    padding-left: em(68, $fz);
+
+    @media screen and (max-width: 1499.98px) {
+        padding-left: 0;
+    }
+    @media screen and (max-width: 949.98px) {
+        margin-bottom: em(32, $fz);
+    }
+    @media screen and (max-width: 499.98px) {
+        padding-left: em(20, $fz);
+        padding-right: em(10, $fz);
+    }
+
+    &__icon {
+        fill: #ccc;
+        width: em(14, $fz);
+        min-width: em(14, $fz);
+        height: auto;
+        margin-right: em(16, $fz);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        display: block;
+        line-height: 1.25;
+        margin-bottom: em(20, $fz);
+    }
+
+    &__address {
+        $fz: 26;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+    }
+}

@@ -30,6 +30,7 @@
     }
 
     &__textarea {
+        height: em(104, $fz);
         min-height: em(104, $fz);
     }
 
