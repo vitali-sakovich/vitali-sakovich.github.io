@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Как заказать</title>
+        <title>Оптовым клиентам</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
@@ -172,64 +172,92 @@
                 <a href="/" class="breadcrumb__link">Главная</a>
             </div>
             <h1 class="title title--size-lg title-block__title">
-                Как заказать
+                Оптовым клиентам
             </h1>
         </div>
         <main class="content">
-            <div class="how-order wrapper">
-                <div class="how-order__container">
-                    <div class="how-order__block">
-                        <picture class="how-order__picture">
-                            <source srcset="./img/how-order1.webp" type="image/webp">
-                            <img src="./img/how-order1.jpg" width="560" height="251" alt="Выбор цвет" class="how-order__img">
-                        </picture>
-                        <div class="how-order__content">
-                            <h2 class="title title--size-sm">
-                                1. Выберите цвет, кликнув на соответствующий
-                                квадратик с цветом. Затем нажмите на большую
-                                оранжевую кнопку «В корзину»
-                            </h2>
-                            <p class="text text--size-md">
-                                Обратите внимание, что есть опция быстрой
-                                покупки, нажав на которую, вы сможете вписать
-                                свой телефон и менеджер сам свяжется с вами
-                                и оформит заказ
-                            </p>
-                        </div>
-                    </div>
-                    <div class="how-order__block">
-                        <picture class="how-order__picture">
-                            <source srcset="./img/how-order2.webp" type="image/webp">
-                            <img src="./img/how-order2.jpg" width="560" height="251" alt="состав заказа " class="how-order__img">
-                        </picture>
-                        <div class="how-order__content">
-                            <h2 class="title title--size-sm">
-                                2. Нажмите на иконку корзины в верхнем правом
-                                углу. Сверьте состав заказа и нажмите «Оформить
-                                заказ»
-                            </h2>
-                            <p class="text text--size-md">
-                                Обратите вниманиена шкалу скидок справа. Она
-                                подсказывает сколько надо добрать, чтобы
-                                получить скидку
-                            </p>
-                        </div>
-                    </div>
-                    <div class="how-order__block">
-                        <picture class="how-order__picture">
-                            <source srcset="./img/how-order3.webp" type="image/webp">
-                            <img src="./img/how-order3.jpg" width="560" height="251" alt="состав заказа " class="how-order__img">
-                        </picture>
-                        <div class="how-order__content">
-                            <h2 class="title title--size-sm">
-                                3. На странице оформления укажите свои параметры
-                                и контакты, отправьте и ждите звонка менеждера,
-                                который подтвердит детали.
-                            </h2>
-                        </div>
+            <div class="wholesale wrapper">
+                <div class="wholesale__desc">
+                    <p class="text text--size-md">
+                        Мы рады пригласить вас к оптовому сотрудничеству с нашим
+                        магазином искусственных цветов! Мы предлагаем широкий
+                        ассортимент красивых и качественных цветов, которые
+                        будут радовать ваших клиентов на протяжении многих лет.
+                    </p>
+                    <p class="text text--size-md">
+                        Наша продукция идеально подходит для декорирования
+                        интерьеров, создания букетов и композиций, а также для
+                        использования в событийном бизнесе. Мы гарантируем
+                        высокое качество нашей продукции, быструю доставку и
+                        конкурентоспособные цены. Наша команда готова
+                        предоставить вам профессиональную консультацию и помощь
+                        в выборе наиболее подходящих товаров для вашего бизнеса.
+                        Присоединяйтесь к нашей семье и получите доступ к лучшим
+                        искусственным цветам на рынке!
+                    </p>
+                </div>
+                <picture class="wholesale__picture">
+                    <source srcset="./img/wholesale.webp" type="image/webp">
+                    <img src="./img/wholesale.jpg" width="484" height="388" alt="Оптовым клиентам" class="wholesale__img">
+                </picture>
+            </div>
+            <section class="section-form section-form--feedback">
+                <div class="section-form__content">
+                    <img src="./img/wholesale-title.svg" alt="Обратная связь" width="407" height="124" class="section-form__title">
+                    <div class="section-form__inner">
+                        <p class="text text--size-md">
+                            Воспользуйтесь формой обратной связи или свяжитесь с
+                            нами по телефону
+                            <a href="tel:8 800 229-59-51">88002295951</a>
+                            или электронной почте
+                            <a href="mailto: info@mail.ru">info@mail.ru</a>
+                        </p>
                     </div>
                 </div>
-            </div>
+                <form action="#" class="form section-form__form">
+                    <label class="label form__label js-label">
+                        <input type="text" name="name" data-rule="required|name" class="form__input js-input">
+                        <span class="form__placeholder">Ваше имя</span>
+                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                            <svg width="16" height="16" class="form__icon">
+                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </label>
+                    <label class="label form__label js-label">
+                        <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                        <span class="form__placeholder">Телефон</span>
+                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                            <svg width="16" height="16" class="form__icon">
+                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </label>
+                    <label class="label form__label js-label">
+                        <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                        <span class="form__placeholder">E-mail</span>
+                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                            <svg width="16" height="16" class="form__icon">
+                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </label>
+                    <label class="label form__label js-label">
+                        <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                        <span class="form__placeholder">Комментарий</span>
+                        <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                            <svg width="16" height="16" class="form__icon">
+                                <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </label>
+                    <button type="submit" class="btn btn--primary">
+                        <span class="btn__text">Отправить</span>
+                    </button>
+                    <span class="form-consent">Отправляя данные, я даю свое
+                        <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                </form>
+            </section>
         </main>
         <footer class="footer">
             <div class="footer__container">

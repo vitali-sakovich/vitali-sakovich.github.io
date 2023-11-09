@@ -1,0 +1,171 @@
+.questions {
+    display: flex;
+
+    @media screen and (min-width: 1150px) and (max-width: 1499.98px) {
+        padding-right: 7%;
+    }
+    @media screen and (max-width: 949.98px) {
+        flex-direction: column;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__accordion {
+        width: 100%;
+        max-width: em(1070, $fz);
+    }
+
+    &__nav {
+        width: em(200, $fz);
+        min-width: em(200, $fz);
+        margin-right: em(100, $fz);
+
+        @media screen and (min-width: 950px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 1499.98px) {
+            margin-right: em(40, $fz);
+        }
+        @media screen and (max-width: 1149.98px) {
+            margin-right: em(20, $fz);
+        }
+        @media screen and (max-width: 949.98px) {
+            column-count: 2;
+            width: 100%;
+            max-width: em(600, $fz);
+            padding-left: 4.6%;
+            padding-right: 4.6%;
+            margin-bottom: em(30, $fz);
+        }
+        @media screen and (max-width: 499.98px) {
+            padding-left: 5.5%;
+        }
+        @media screen and (max-width: 369.98px) {
+            column-count: 1;
+        }
+    }
+
+    &__link {
+        display: flex;
+        color: #533dd4;
+        line-height: 1.25;
+        transition: color 0.3s;
+
+        &:not(:last-child) {
+            margin-bottom: em(25, $fz);
+
+            @media screen and (max-width: 949.98px) {
+                margin-bottom: em(20, $fz);
+            }
+        }
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                color: #000;
+            }
+        }
+
+        &--active {
+            color: #000;
+            pointer-events: none;
+        }
+    }
+}
+
+.accordion {
+    border: 1px solid #b4b0ad;
+
+    @media screen and (max-width: 949.98px) {
+        border-right: 0;
+        border-left: 0;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            border-bottom: 1px solid #b4b0ad;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        padding: em(30 100 30 40, $fz);
+        width: 100%;
+        text-align: left;
+        background-color: transparent;
+
+        @media screen and (max-width: 949.98px) {
+            padding-left: 4.6%;
+        }
+        @media screen and (max-width: 499.98px) {
+            padding-right: em(60, $fz);
+            padding-left: 5.5%;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: em(40, $fz);
+            width: em(31, $fz);
+            height: em(3, $fz);
+            right: em(30, $fz);
+            background-color: #575757;
+            transition: background-color 0.3s;
+            transition: transform 0.3s;
+
+            @media screen and (max-width: 499.98px) {
+                right: em(20, $fz);
+            }
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+
+        &:hover {
+            &::before,
+            &::after {
+                background-color: #000;
+            }
+        }
+
+        &.active {
+            &::after {
+                transform: rotate(130deg);
+            }
+
+            &::before {
+                transform: rotate(40deg);
+            }
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s;
+        will-change: height;
+    }
+
+    &__wrap {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        line-height: 1.44;
+        padding-bottom: em(31, $fz);
+        padding-left: em(72, $fz);
+        padding-right: em(140, $fz);
+
+        @media screen and (max-width: 1149.98px) {
+            padding-right: em(50, $fz);
+        }
+        @media screen and (max-width: 949.98px) {
+            padding-left: em(60, $fz);
+        }
+        @media screen and (max-width: 499.98px) {
+            padding-right: 5.5%;
+            padding-left: 5.5%;
+        }
+    }
+}

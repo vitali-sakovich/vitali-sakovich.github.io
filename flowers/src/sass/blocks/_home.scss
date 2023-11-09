@@ -535,7 +535,9 @@
         #{$self}--feedback & {
             @media screen and (max-width: 1149.98px) {
                 flex-direction: row;
+                align-items: flex-start;
                 margin-right: 0;
+                margin-bottom: em(30, $fz);
             }
             @media screen and (max-width: 949.98px) {
                 flex-direction: column;
@@ -574,6 +576,7 @@
             }
             @media screen and (max-width: 1149.98px) {
                 margin-right: 0;
+                margin-bottom: 0;
             }
             @media screen and (max-width: 949.98px) {
                 width: em(327, $fz);
@@ -606,15 +609,19 @@
             }
 
             @media screen and (max-width: 1149.98px) {
-                max-width: em(284, $fz);
+                max-width: em(340, $fz);
                 margin-top: em(10, $fz);
-                margin-left: 10%;
+                margin-left: 8%;
             }
             @media screen and (max-width: 949.98px) {
                 max-width: 100%;
                 margin-top: 0;
                 margin-left: 0;
             }
+        }
+
+        a {
+            color: inherit;
         }
     }
 
