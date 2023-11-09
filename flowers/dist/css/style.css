@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -454,7 +455,7 @@ input[type=number]:focus {
 .title--size-lg {
   font-size: 3.5em;
   font-weight: 700;
-  color: #575757;
+  color: var(--title-color-lg, #575757);
 }
 @media screen and (max-width: 949.98px) {
   .title--size-lg {
@@ -601,12 +602,18 @@ input[type=number]:focus {
 }
 
 .wrapper {
-  padding-left: 12.3%;
+  padding: 2.1875em 9% 8.75em 12.3%;
+}
+@media screen and (max-width: 1699.98px) {
+  .wrapper {
+    padding-right: 5%;
+  }
 }
 @media screen and (max-width: 1499.98px) {
   .wrapper {
-    padding-right: 4.1%;
+    padding-right: 9%;
     padding-left: 4.5%;
+    padding-bottom: 6.25em;
   }
 }
 @media screen and (max-width: 1149.98px) {
@@ -615,9 +622,18 @@ input[type=number]:focus {
     padding-right: 2%;
   }
 }
+@media screen and (max-width: 949.98px) {
+  .wrapper {
+    padding-top: 1.25em;
+    padding-right: 4.6%;
+    padding-bottom: 3.75em;
+  }
+}
 @media screen and (max-width: 499.98px) {
   .wrapper {
+    padding-right: 5.5%;
     padding-left: 5.5%;
+    padding-bottom: 2.5em;
   }
 }
 
@@ -1312,6 +1328,7 @@ input[type=number]:focus {
 }
 @media screen and (max-width: 949.98px) {
   .title-block {
+    --title-color-lg: #000;
     padding-top: 0.9375em;
     padding-right: 0;
   }
@@ -8447,38 +8464,9 @@ input[type=number]:focus {
   line-height: 1.4;
 }
 
-.about {
-  padding-top: 2.1875em;
-  padding-right: 9%;
-  padding-bottom: 9.375em;
-}
-@media screen and (max-width: 1699.98px) {
-  .about {
-    padding-right: 5%;
-  }
-}
-@media screen and (max-width: 1499.98px) {
-  .about {
-    padding-right: 8%;
-  }
-}
-@media screen and (max-width: 1149.98px) {
+@media screen and (min-width: 950px) and (max-width: 1149.98px) {
   .about {
     padding-right: 3.3%;
-    padding-bottom: 6.25em;
-  }
-}
-@media screen and (max-width: 949.98px) {
-  .about {
-    padding-top: 1.5em;
-    padding-right: 4.6%;
-    padding-bottom: 3.75em;
-  }
-}
-@media screen and (max-width: 499.98px) {
-  .about {
-    padding-right: 5.5%;
-    padding-bottom: 2.5em;
   }
 }
 .about__block {
@@ -8772,7 +8760,6 @@ input[type=number]:focus {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding-top: 2.1875em;
   padding-bottom: 6.25em;
   padding-right: 9%;
 }
@@ -8789,7 +8776,6 @@ input[type=number]:focus {
 }
 @media screen and (max-width: 949.98px) {
   .contacts {
-    padding-top: 1.25em;
     padding-right: 4.6%;
     padding-bottom: 3.25em;
   }
@@ -9113,4 +9099,82 @@ input[type=number]:focus {
 .conracts-location__address {
   font-size: 1.625em;
   font-weight: 600;
+}
+
+.description {
+  display: grid;
+  grid-row-gap: 4.375em;
+}
+@media screen and (min-width: 950px) and (max-width: 1149.98px) {
+  .description {
+    padding-right: 10%;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .description {
+    grid-row-gap: 2.5em;
+  }
+}
+.description--exchanges {
+  --description-row-gap: 3.125em;
+}
+@media screen and (max-width: 949.98px) {
+  .description--exchanges {
+    --description-row-gap: 2.5em;
+  }
+}
+.description__head {
+  margin-bottom: 2.5em;
+}
+@media screen and (max-width: 949.98px) {
+  .description__head {
+    margin-bottom: 1.25em;
+  }
+}
+.description__box {
+  display: grid;
+  grid-template-columns: 20em 1fr;
+  grid-column-gap: 11%;
+}
+@media screen and (max-width: 1499.98px) {
+  .description__box {
+    grid-template-columns: 15.625em 1fr;
+    grid-column-gap: 3%;
+  }
+}
+@media screen and (max-width: 1149.98px) {
+  .description__box {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.875em;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .description__box {
+    grid-row-gap: 0.6875em;
+  }
+}
+.description__wrap {
+  display: grid;
+  grid-row-gap: 1.25em;
+}
+@media screen and (max-width: 499.98px) {
+  .description__wrap {
+    grid-row-gap: 1.0625em;
+  }
+}
+.description__content {
+  display: grid;
+  grid-row-gap: var(--description-row-gap, 1.875em);
+}
+
+.list {
+  list-style: none;
+}
+.list__item {
+  font-size: 1.125em;
+  line-height: 1.44;
+}
+.list__item::before {
+  content: "•";
+  margin-right: 0.1111111111em;
 }

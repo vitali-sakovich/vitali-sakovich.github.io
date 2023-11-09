@@ -1,0 +1,3405 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Обмен и возврат</title>
+        <meta name="description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,user-scalable=0"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="" />
+        <link rel="stylesheet" href="./css/fancybox.css" />
+        <link rel="stylesheet" href="./css/swiper.css" />
+        <link rel="stylesheet" href="./css/nativejs-select.css" />
+        <link rel="stylesheet" href="./css/nouislider.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+
+    <body>
+        <header class="header">
+            <button
+                type="button"
+                data-open-modal=".popup--menu-mobi"
+                class="hamburger header__hamburger js-open-modal"
+            >
+                <span class="hamburger__item"></span>
+                <span class="hamburger__item"></span>
+                <span class="hamburger__item"></span>
+            </button>
+            <a href="#" class="header-logo header__logo">
+                <picture class="header-logo__picture">
+                    <source srcset="./img/logo.webp" type="image/webp" />
+                    <img
+                        src="./img/logo.png"
+                        width="95"
+                        height="78"
+                        alt="Логотип"
+                        class="header-logo__img"
+                    />
+                </picture>
+                <span class="header-logo__text">Цветочный сад</span>
+            </a>
+            <nav class="nav header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <span class="nav__text">Покупателям</span>
+                            <svg
+                                aria-hidden="true"
+                                width="14"
+                                height="7"
+                                class="nav__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#dropdown-arrow"
+                                ></use>
+                            </svg>
+                        </a>
+                        <div class="nav-dropdown nav__dropdown">
+                            <div class="nav-dropdown__list">
+                                <a href="#" class="nav-dropdown__link"
+                                    >Доставка и оплата</a
+                                >
+                                <a href="#" class="nav-dropdown__link"
+                                    >Обмен и возврат</a
+                                >
+                                <a href="#" class="nav-dropdown__link"
+                                    >Вопросы и ответы</a
+                                >
+                                <a href="#" class="nav-dropdown__link"
+                                    >Оптовым клиентам</a
+                                >
+                                <a href="#" class="nav-dropdown__link"
+                                    >Как заказать</a
+                                >
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link"> О компании </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link"> Контакты </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__box">
+                <a
+                    href="tel: 88002295951"
+                    class="header-phone header-phone--icon header__phone"
+                >
+                    <span class="header-phone__text">8 800 229-59-51</span>
+                    <svg
+                        aria-hidden="true"
+                        width="22"
+                        height="31"
+                        class="header-phone__icon"
+                    >
+                        <use
+                            xlink:href="./img/icons-sprite.svg#phone-icon-mobi"
+                        ></use>
+                    </svg>
+                </a>
+                <button
+                    data-open-modal=".popup--call"
+                    class="btn-call header__call js-open-modal"
+                >
+                    <svg
+                        aria-hidden="true"
+                        width="15"
+                        height="20"
+                        class="btn-call__icon"
+                    >
+                        <use
+                            xlink:href="./img/icons-sprite.svg#call-icon"
+                        ></use>
+                    </svg>
+                    <span class="btn-call__text">Заказать звонок</span>
+                </button>
+            </div>
+            <button
+                data-open-modal=".popup--search"
+                type="button"
+                class="btn-search header__search js-open-modal"
+            >
+                <span class="btn-search__text">Поиск по товарам</span>
+                <svg
+                    aria-hidden="true"
+                    width="27"
+                    height="26"
+                    class="btn-search__icon"
+                >
+                    <use xlink:href="./img/icons-sprite.svg#search"></use>
+                </svg>
+            </button>
+            <a
+                href="#"
+                title="Избранное"
+                aria-label="Избранное"
+                class="btn-control header__control header__control--favorites"
+            >
+                <svg
+                    aria-hidden="true"
+                    width="27"
+                    height="26"
+                    class="btn-control__icon"
+                >
+                    <use xlink:href="./img/icons-sprite.svg#favorites"></use>
+                </svg>
+                <span class="btn-control__counter">3</span>
+            </a>
+            <button
+                title="Личный кабинет"
+                aria-label="Личный кабинет"
+                data-open-modal=".popup--authorization"
+                class="btn-control header__control header__control--lk js-open-modal"
+            >
+                <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    class="btn-control__icon"
+                >
+                    <use xlink:href="./img/icons-sprite.svg#lk"></use>
+                </svg>
+            </button>
+            <button
+                title="Корзина"
+                aria-label="Корзина"
+                data-open-modal=".popup--basket"
+                class="btn-control header__control header__control--basket js-open-modal"
+            >
+                <svg
+                    aria-hidden="true"
+                    width="30"
+                    height="24"
+                    class="btn-control__icon"
+                >
+                    <use xlink:href="./img/icons-sprite.svg#basket"></use>
+                </svg>
+                <span class="btn-control__counter">99</span>
+            </button>
+            <button
+                type="button"
+                data-open-modal=".popup--sidebar"
+                class="btn-sidebar header__sidebar js-open-modal"
+            >
+                <svg
+                    aria-hidden="true"
+                    width="29"
+                    height="19"
+                    class="btn-sidebar__icon"
+                >
+                    <use xlink:href="./img/icons-sprite.svg#sidebar-icon"></use>
+                </svg>
+                <span class="btn-sidebar__text">Каталог</span>
+            </button>
+
+            <!-- попап Мобильное меню  -->
+            <div class="popup popup--menu-mobi">
+                <div class="menu">
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close popup__close--menu-mobi js-popup-close"
+                    >
+                        <svg
+                            aria-hidden="true"
+                            width="28"
+                            height="28"
+                            class="popup__icon"
+                        >
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                    <div class="menu__block">
+                        <a
+                            href="tel: 88002295951"
+                            class="header-phone menu__phone"
+                        >
+                            <span class="header-phone__text"
+                                >8 800 229-59-51</span
+                            >
+                        </a>
+                        <button class="btn-call menu__call">
+                            <svg
+                                aria-hidden="true"
+                                width="15"
+                                height="20"
+                                class="btn-call__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#call-icon"
+                                ></use>
+                            </svg>
+                            <span class="btn-call__text">Заказать звонок</span>
+                        </button>
+                        <div class="menu__list">
+                            <a href="#" class="menu__link">
+                                Доставка и оплата
+                            </a>
+                            <a href="#" class="menu__link"> Обмен и возврат </a>
+                            <a href="#" class="menu__link">
+                                Вопросы и ответы
+                            </a>
+                            <a href="#" class="menu__link">
+                                Оптовым клиентам
+                            </a>
+                            <a href="#" class="menu__link"> Как заказать </a>
+                            <a href="#" class="menu__link"> О компании </a>
+                            <a href="#" class="menu__link"> Контакты </a>
+                        </div>
+
+                        <div class="menu__contacts">
+                            <a
+                                href="tel:+79001234567"
+                                class="contact-item menu__contact"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    width="13"
+                                    height="20"
+                                    class="contact-item__icon contact-item__icon--theme-orange"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#phone"
+                                    ></use>
+                                </svg>
+                                <span class="contact-item__text">
+                                    +7 900 123-45-67</span
+                                >
+                            </a>
+                            <a
+                                href="mailto:info@mail.ru"
+                                class="contact-item menu__contact"
+                            >
+                                <svg
+                                    width="20"
+                                    height="16"
+                                    class="contact-item__icon contact-item__icon--theme-orange"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#email"
+                                    ></use>
+                                </svg>
+                                <span class="contact-item__text">
+                                    info@mail.ru</span
+                                >
+                            </a>
+                            <a href="#" class="contact-item menu__contact">
+                                <svg
+                                    width="24"
+                                    height="14"
+                                    class="contact-item__icon contact-item__icon--theme-blue"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#vk"
+                                    ></use>
+                                </svg>
+                                <span class="contact-item__text">
+                                    tsvetochnysad</span
+                                >
+                            </a>
+                            <a href="#" class="contact-item menu__contact">
+                                <svg
+                                    width="21"
+                                    height="23"
+                                    class="contact-item__icon contact-item__icon--theme-purple"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#viber"
+                                    ></use>
+                                </svg>
+                                <span class="contact-item__text">12345678</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="title-block title-block--secondary">
+            <div class="breadcrumb title-block__breadcrumb">
+                <a href="/" class="breadcrumb__link">Главная</a>
+            </div>
+            <h1 class="title title--size-lg title-block__title">
+                Обмен и возврат
+            </h1>
+        </div>
+        <main class="content">
+            <div class="description description--exchanges wrapper">
+                <div class="description__content">
+                    <div class="description__box">
+                        <h3 class="title title--size-sm">
+                            Общие правила возврата
+                        </h3>
+                        <div class="description__wrap">
+                            <ul class="list">
+                                <li class="list__item">
+                                    Перед тем, как приступить к использованию
+                                    приобретенного товара, советуем ознакомиться
+                                    с прилагаемой к нему инструкцией по
+                                    эксплуатации.
+                                </li>
+                                <li class="list__item">
+                                    При возникновении любых вопросов по качеству
+                                    приобретенного товара, его использовании или
+                                    комплектации заказа, свяжитесь с менеджером
+                                    Цветочный сад по телефону 8 800 300 28 79
+                                    или написать в форме обратной связи на
+                                    странице "Контакты"
+                                </li>
+                                <li class="list__item">
+                                    Менеджер Цветочный сад может запросить у Вас
+                                    фотографии или видео проблемы товара, по
+                                    поводу которого возник вопрос.
+                                </li>
+                                <li class="list__item">
+                                    После согласования возврата с нашим
+                                    менеджером Вам сообщат пункт, куда нужно
+                                    сдать товар и трек-номер, который нужно
+                                    назвать в пункте.
+                                </li>
+                                <li class="list__item">
+                                    При возврате товара в посылку необходимо
+                                    вложить: возвращаемый товар в заводской
+                                    упаковке, в полной комплектации.
+                                </li>
+                                <li class="list__item">
+                                    Возврат денежных средств производится на
+                                    карту, с которой производилась оплата заказа
+                                    от 3 до 10 рабочих дней с момента
+                                    поступления возврата на наш склад.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="description__box">
+                        <h3 class="title title--size-sm">
+                            Вы можете вернуть товар надлежащего качества, если:
+                        </h3>
+                        <div class="description__wrap">
+                            <ul class="list">
+                                <li class="list__item">
+                                    С момента доставки товара прошло не более 7
+                                    дней.
+                                </li>
+                                <li class="list__item">
+                                    Сохранен товарный вид, упаковка,
+                                    потребительские свойства, товар не был в
+                                    употреблении.
+                                </li>
+                                <li class="list__item">
+                                    Товар не входит в Перечень товаров, не
+                                    подлежащих возврату или обмену на
+                                    аналогичный товар, утвержденный
+                                    Постановлением Правительства РФ от 31
+                                    декабря 2020г. М2463. (Предметы личной
+                                    гигиены. Например, зубные щетки, расчески,
+                                    заколки. Парфюмерия и косметика. Товары,
+                                    которые измеряются в метрах. Например:
+                                    ткани, ленты, тесьма, кружева, провода,
+                                    шнуры, кабели, линолеум, пленка. Швейные и
+                                    трикотажные изделия. Пластиковые товары,
+                                    контактирующие с пищей. Например,
+                                    пластиковая посуда и кухонные
+                                    принадлежности, бутыли, канистры для пищевых
+                                    продуктов). Мебель бытовая (мебельные
+                                    гарнитуры и комплекты).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="description__box">
+                        <h3 class="title title--size-sm">
+                            Обмен и возврат товара ненадлежащего качества
+                        </h3>
+                        <div class="description__wrap">
+                            <ul class="list">
+                                <li class="list__item">
+                                    В течении гарантийного срока мы обменяем
+                                    бракованный товар на качественный или вернем
+                                    денежные средства.
+                                </li>
+                                <li class="list__item">
+                                    Товар ненадлежащего качества, на который НЕ
+                                    установлен гарантийный срок от производителя
+                                    можно вернуть в течение 30 дней с момента
+                                    получения заказа.
+                                </li>
+                                <li class="list__item">
+                                    При возврате технически сложного товара
+                                    может потребоваться до 10 дней для проверки.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__newsletter">
+                    <span class="footer__text"
+                        >Узнавайте первыми о новых поступлениях и акциях
+                        компании</span
+                    >
+                    <form action="#" class="footer__form">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="E-mail"
+                            class="footer__input"
+                        />
+                        <button
+                            type="submit"
+                            class="btn btn--primary footer__submit"
+                        >
+                            <span class="btn__text"
+                                >Подписаться на рассылку</span
+                            >
+                        </button>
+                    </form>
+                </div>
+                <div class="footer__content">
+                    <div class="footer-nav footer__nav">
+                        <a href="#" class="footer-nav__link"
+                            >Доставка и оплата</a
+                        >
+                        <a href="#" class="footer-nav__link">Обмен и возврат</a>
+                        <a href="#" class="footer-nav__link"
+                            >Вопросы и ответы</a
+                        >
+                        <a href="#" class="footer-nav__link"
+                            >Оптовым клиентам</a
+                        >
+                        <a href="#" class="footer-nav__link">Как заказать</a>
+                        <a href="#" class="footer-nav__link">О компании</a>
+                        <a href="#" class="footer-nav__link">Контакты</a>
+                    </div>
+                    <div class="footer-contact footer__contact">
+                        <a
+                            href="tel:+79001234567"
+                            class="contact-item footer-contact__link"
+                        >
+                            <svg
+                                width="13"
+                                height="20"
+                                class="contact-item__icon contact-item__icon--theme-orange"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#phone"
+                                ></use>
+                            </svg>
+                            <span class="contact-item__text">
+                                +7 900 123-45-67</span
+                            >
+                        </a>
+                        <a
+                            href="mailto:info@mail.ru"
+                            class="contact-item footer-contact__link"
+                        >
+                            <svg
+                                width="20"
+                                height="16"
+                                class="contact-item__icon contact-item__icon--theme-orange"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#email"
+                                ></use>
+                            </svg>
+                            <span class="contact-item__text">
+                                info@mail.ru</span
+                            >
+                        </a>
+                        <a href="#" class="contact-item footer-contact__link">
+                            <svg
+                                width="24"
+                                height="14"
+                                class="contact-item__icon contact-item__icon--theme-blue"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#vk"
+                                ></use>
+                            </svg>
+                            <span class="contact-item__text">
+                                tsvetochnysad</span
+                            >
+                        </a>
+                        <a href="#" class="contact-item footer-contact__link">
+                            <svg
+                                width="21"
+                                height="23"
+                                class="contact-item__icon contact-item__icon--theme-purple"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#viber"
+                                ></use>
+                            </svg>
+                            <span class="contact-item__text">12345678</span>
+                        </a>
+                    </div>
+                    <div class="footer__info">
+                        <span class="footer__copyright">
+                            2024 © Цветочный сад
+                        </span>
+                        <div class="footer__inner">
+                            <a href="#" class="footer__link"
+                                >Политика конфиденциальности</a
+                            >
+                            <a href="#" class="footer__link"
+                                >Согласие на обработку персональных данных</a
+                            >
+                        </div>
+
+                        <a
+                            href="https://websalt.ru/"
+                            target="_blank"
+                            class="footer__developers"
+                        >
+                            Создание сайта
+                            <img
+                                width="75"
+                                height="13"
+                                src="./img/salt.png"
+                                alt="Создание сайта"
+                                class="footer__img"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- попап Каталог  -->
+        <div class="popup popup--sidebar">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="sidebar">
+                <button type="button" class="sidebar-close js-popup-close">
+                    <div class="sidebar-close__wrap">
+                        <svg width="28" height="28" class="sidebar-close__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                        <span class="sidebar-close__text">Закрыть</span>
+                    </div>
+                </button>
+                <div class="sidebar-catalog sidebar__catalog">
+                    <div
+                        class="sidebar-catalog__block sidebar-catalog__block--retail"
+                    >
+                        <div class="sidebar-catalog__head">
+                            <h2 class="popup-title sidebar-catalog__title">
+                                Каталог
+                            </h2>
+                            <span class="sidebar-catalog__label">Розница</span>
+                        </div>
+                        <div class="sidebar-catalog__grid">
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="./img/catalog/catalog-news.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-news.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Новинки"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__label">Новинки</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/calalog-bouquets.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/calalog-bouquets.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Букеты"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Букеты</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-single.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-single.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Одиночные цветы, ветки"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name"
+                                    >Одиночные <br />
+                                    цветы, ветки</span
+                                >
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-flower-heads.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-flower-heads.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Цветочные головы"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name"
+                                    >Цветочные <br />
+                                    головы</span
+                                >
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-stems.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-stems.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Стебли"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Стебли</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-trees.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-trees.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Деревья"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Деревья</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-greens.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-greens.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Зелень"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Зелень</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-lawns.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-lawns.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Газоны"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Газоны</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-accessories.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-accessories.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Комплектующие для искусственных цветов"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name"
+                                    >Комплектующие для искусственных
+                                    цветов</span
+                                >
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-boxwoods.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-boxwoods.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Самшиты"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Самшиты</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="sidebar-catalog__block sidebar-catalog__block--opt"
+                    >
+                        <div class="sidebar-catalog__head">
+                            <span class="sidebar-catalog__label">Опт</span>
+                        </div>
+                        <div class="sidebar-catalog__grid">
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="./img/catalog/catalog-news.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-news.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Новинки"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__label">Новинки</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/calalog-bouquets.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/calalog-bouquets.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Букеты"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Букеты</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-flower-heads.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-flower-heads.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Цветочные головы"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name"
+                                    >Цветочные <br />
+                                    головы</span
+                                >
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-stems.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-stems.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Стебли"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Стебли</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-trees.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-trees.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Деревья"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Деревья</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-greens.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-greens.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Зелень"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Зелень</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-lawns.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-lawns.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Газоны"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Газоны</span>
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-accessories.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-accessories.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Комплектующие для искусственных цветов"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name"
+                                    >Комплектующие для искусственных
+                                    цветов</span
+                                >
+                            </a>
+                            <a href="#" class="catalog-link">
+                                <picture class="catalog-link__picture">
+                                    <source
+                                        srcset="
+                                            ./img/catalog/catalog-boxwoods.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="./img/catalog/catalog-boxwoods.jpg"
+                                        width="120"
+                                        height="120"
+                                        alt="Самшиты"
+                                        class="catalog-link__img"
+                                    />
+                                </picture>
+                                <span class="catalog-link__name">Самшиты</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Поиск -->
+        <div class="popup popup--search">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup-search popup__search">
+                <div class="popup-search__head">
+                    <form action="#" class="popup-search__form">
+                        <label class="popup-search__label">
+                            <input
+                                type="text"
+                                name="serch"
+                                placeholder="Поиск по товарам"
+                                class="popup-search__input first-elem"
+                            />
+                        </label>
+                        <button
+                            type="submit"
+                            class="popup-search__btn last-elem"
+                        >
+                            <svg
+                                width="27"
+                                height="26"
+                                class="popup-search__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#search"
+                                ></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-autocomplete popup-search__autocomplete">
+                    <div class="search-autocomplete__list">
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >180 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >4 000 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >180 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >4 000 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >180 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >4 000 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >180 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >4 000 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Ветка гвоздики 20 цветков
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >180 ₽</span
+                            >
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="80"
+                                    height="80"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Гортензия метельчатая коралловая
+                            </span>
+                            <span class="search-autocomplete-item__cost"
+                                >4 000 ₽</span
+                            >
+                        </a>
+                    </div>
+                    <div class="search-autocomplete__controls">
+                        <a
+                            href="#"
+                            class="btn btn--border search-autocomplete__btn"
+                        >
+                            <span class="btn__text">Показать все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Корзина -->
+        <div class="popup popup--basket">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Корзина</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="basket">
+                    <div class="basket__list">
+                        <div class="basket-card">
+                            <picture class="basket-card__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="94"
+                                    height="96"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="basket-card__img"
+                                />
+                            </picture>
+                            <div class="basket-card__content">
+                                <a href="#" class="basket-card__name"
+                                    >Ветка гвоздики 20 цветков
+                                </a>
+                                <span class="basket-card__color"
+                                    >Цвет: <span>фиолетовый</span></span
+                                >
+                                <div class="basket-card__wrap">
+                                    <span class="basket-card__cost">180 ₽</span>
+                                    <span class="basket-card__old">200 ₽</span>
+                                    <span class="basket-card__text"
+                                        >за штуку</span
+                                    >
+                                </div>
+                                <div class="basket-card__box">
+                                    <div class="counter basket-card__counter">
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--minus"
+                                        ></button>
+                                        <input
+                                            type="number"
+                                            name="counter"
+                                            value="1"
+                                            class="counter__input"
+                                        />
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--plus"
+                                        ></button>
+                                    </div>
+                                    <span class="basket-card__cost"
+                                        >= <span>4 000 ₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="basket-card__controls">
+                                <button
+                                    type="button"
+                                    title="Удалить из корзины"
+                                    aria-label="Удалить из корзины"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="15"
+                                        height="19"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#delete"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    title="Добавить в избранное"
+                                    aria-label="Добавить в избранное"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#favorites"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="basket-card">
+                            <picture class="basket-card__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="94"
+                                    height="96"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="basket-card__img"
+                                />
+                            </picture>
+                            <div class="basket-card__content">
+                                <a href="#" class="basket-card__name"
+                                    >Гортензия метельчатая коралловая
+                                </a>
+                                <div class="basket-card__wrap">
+                                    <span class="basket-card__cost">180 ₽</span>
+                                    <span class="basket-card__old">200 ₽</span>
+                                    <span class="basket-card__text"
+                                        >за штуку</span
+                                    >
+                                </div>
+                                <div class="basket-card__box">
+                                    <div class="counter basket-card__counter">
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--minus"
+                                        ></button>
+                                        <input
+                                            type="number"
+                                            name="counter"
+                                            value="66"
+                                            class="counter__input"
+                                        />
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--plus"
+                                        ></button>
+                                    </div>
+                                    <span class="basket-card__cost"
+                                        >= <span>99 000 ₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="basket-card__controls">
+                                <button
+                                    type="button"
+                                    title="Удалить из корзины"
+                                    aria-label="Удалить из корзины"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="15"
+                                        height="19"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#delete"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    title="Добавить в избранное"
+                                    aria-label="Добавить в избранное"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#favorites"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="basket-card">
+                            <picture class="basket-card__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="94"
+                                    height="96"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="basket-card__img"
+                                />
+                            </picture>
+                            <div class="basket-card__content">
+                                <a href="#" class="basket-card__name"
+                                    >Ветка гвоздики 20 цветков
+                                </a>
+                                <span class="basket-card__color"
+                                    >Цвет: <span>фиолетовый</span></span
+                                >
+                                <div class="basket-card__wrap">
+                                    <span class="basket-card__cost">180 ₽</span>
+                                    <span class="basket-card__old">200 ₽</span>
+                                    <span class="basket-card__text"
+                                        >за штуку</span
+                                    >
+                                </div>
+                                <div class="basket-card__box">
+                                    <div class="counter basket-card__counter">
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--minus"
+                                        ></button>
+                                        <input
+                                            type="number"
+                                            name="counter"
+                                            value="1"
+                                            class="counter__input"
+                                        />
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--plus"
+                                        ></button>
+                                    </div>
+                                    <span class="basket-card__cost"
+                                        >= <span>4 000 ₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="basket-card__controls">
+                                <button
+                                    type="button"
+                                    title="Удалить из корзины"
+                                    aria-label="Удалить из корзины"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="15"
+                                        height="19"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#delete"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    title="Добавить в избранное"
+                                    aria-label="Добавить в избранное"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#favorites"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="basket-card">
+                            <picture class="basket-card__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="94"
+                                    height="96"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="basket-card__img"
+                                />
+                            </picture>
+                            <div class="basket-card__content">
+                                <a href="#" class="basket-card__name"
+                                    >Гортензия метельчатая коралловая
+                                </a>
+                                <div class="basket-card__wrap">
+                                    <span class="basket-card__cost">180 ₽</span>
+                                    <span class="basket-card__old">200 ₽</span>
+                                    <span class="basket-card__text"
+                                        >за штуку</span
+                                    >
+                                </div>
+                                <div class="basket-card__box">
+                                    <div class="counter basket-card__counter">
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--minus"
+                                        ></button>
+                                        <input
+                                            type="number"
+                                            name="counter"
+                                            value="66"
+                                            class="counter__input"
+                                        />
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--plus"
+                                        ></button>
+                                    </div>
+                                    <span class="basket-card__cost"
+                                        >= <span>99 000 ₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="basket-card__controls">
+                                <button
+                                    type="button"
+                                    title="Удалить из корзины"
+                                    aria-label="Удалить из корзины"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="15"
+                                        height="19"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#delete"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    title="Добавить в избранное"
+                                    aria-label="Добавить в избранное"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#favorites"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="basket-card">
+                            <picture class="basket-card__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="94"
+                                    height="96"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="basket-card__img"
+                                />
+                            </picture>
+                            <div class="basket-card__content">
+                                <a href="#" class="basket-card__name"
+                                    >Ветка гвоздики 20 цветков
+                                </a>
+                                <span class="basket-card__color"
+                                    >Цвет: <span>фиолетовый</span></span
+                                >
+                                <div class="basket-card__wrap">
+                                    <span class="basket-card__cost">180 ₽</span>
+                                    <span class="basket-card__old">200 ₽</span>
+                                    <span class="basket-card__text"
+                                        >за штуку</span
+                                    >
+                                </div>
+                                <div class="basket-card__box">
+                                    <div class="counter basket-card__counter">
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--minus"
+                                        ></button>
+                                        <input
+                                            type="number"
+                                            name="counter"
+                                            value="1"
+                                            class="counter__input"
+                                        />
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--plus"
+                                        ></button>
+                                    </div>
+                                    <span class="basket-card__cost"
+                                        >= <span>4 000 ₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="basket-card__controls">
+                                <button
+                                    type="button"
+                                    title="Удалить из корзины"
+                                    aria-label="Удалить из корзины"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="15"
+                                        height="19"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#delete"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    title="Добавить в избранное"
+                                    aria-label="Добавить в избранное"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#favorites"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="basket-card">
+                            <picture class="basket-card__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="94"
+                                    height="96"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="basket-card__img"
+                                />
+                            </picture>
+                            <div class="basket-card__content">
+                                <a href="#" class="basket-card__name"
+                                    >Гортензия метельчатая коралловая
+                                </a>
+                                <div class="basket-card__wrap">
+                                    <span class="basket-card__cost">180 ₽</span>
+                                    <span class="basket-card__old">200 ₽</span>
+                                    <span class="basket-card__text"
+                                        >за штуку</span
+                                    >
+                                </div>
+                                <div class="basket-card__box">
+                                    <div class="counter basket-card__counter">
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--minus"
+                                        ></button>
+                                        <input
+                                            type="number"
+                                            name="counter"
+                                            value="66"
+                                            class="counter__input"
+                                        />
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--plus"
+                                        ></button>
+                                    </div>
+                                    <span class="basket-card__cost"
+                                        >= <span>99 000 ₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="basket-card__controls">
+                                <button
+                                    type="button"
+                                    title="Удалить из корзины"
+                                    aria-label="Удалить из корзины"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="15"
+                                        height="19"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#delete"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    title="Добавить в избранное"
+                                    aria-label="Добавить в избранное"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#favorites"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="basket-card">
+                            <picture class="basket-card__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="94"
+                                    height="96"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="basket-card__img"
+                                />
+                            </picture>
+                            <div class="basket-card__content">
+                                <a href="#" class="basket-card__name"
+                                    >Ветка гвоздики 20 цветков
+                                </a>
+                                <span class="basket-card__color"
+                                    >Цвет: <span>фиолетовый</span></span
+                                >
+                                <div class="basket-card__wrap">
+                                    <span class="basket-card__cost">180 ₽</span>
+                                    <span class="basket-card__old">200 ₽</span>
+                                    <span class="basket-card__text"
+                                        >за штуку</span
+                                    >
+                                </div>
+                                <div class="basket-card__box">
+                                    <div class="counter basket-card__counter">
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--minus"
+                                        ></button>
+                                        <input
+                                            type="number"
+                                            name="counter"
+                                            value="1"
+                                            class="counter__input"
+                                        />
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--plus"
+                                        ></button>
+                                    </div>
+                                    <span class="basket-card__cost"
+                                        >= <span>4 000 ₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="basket-card__controls">
+                                <button
+                                    type="button"
+                                    title="Удалить из корзины"
+                                    aria-label="Удалить из корзины"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="15"
+                                        height="19"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#delete"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    title="Добавить в избранное"
+                                    aria-label="Добавить в избранное"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#favorites"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="basket-card">
+                            <picture class="basket-card__picture">
+                                <source
+                                    srcset="./img/catalog/catalog-news.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/catalog/catalog-news.png"
+                                    width="94"
+                                    height="96"
+                                    alt="Ветка гвоздики 20 цветков"
+                                    class="basket-card__img"
+                                />
+                            </picture>
+                            <div class="basket-card__content">
+                                <a href="#" class="basket-card__name"
+                                    >Гортензия метельчатая коралловая
+                                </a>
+                                <div class="basket-card__wrap">
+                                    <span class="basket-card__cost">180 ₽</span>
+                                    <span class="basket-card__old">200 ₽</span>
+                                    <span class="basket-card__text"
+                                        >за штуку</span
+                                    >
+                                </div>
+                                <div class="basket-card__box">
+                                    <div class="counter basket-card__counter">
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--minus"
+                                        ></button>
+                                        <input
+                                            type="number"
+                                            name="counter"
+                                            value="66"
+                                            class="counter__input"
+                                        />
+                                        <button
+                                            type="button"
+                                            class="counter__btn counter__btn--plus"
+                                        ></button>
+                                    </div>
+                                    <span class="basket-card__cost"
+                                        >= <span>99 000 ₽</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="basket-card__controls">
+                                <button
+                                    type="button"
+                                    title="Удалить из корзины"
+                                    aria-label="Удалить из корзины"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="15"
+                                        height="19"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#delete"
+                                        ></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    title="Добавить в избранное"
+                                    aria-label="Добавить в избранное"
+                                    class="basket-card__btn"
+                                >
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        class="basket-card__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#favorites"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__checkout">
+                        <div class="basket-cost basket__cost">
+                            <span class="basket-cost__text">Стоимость</span>
+                            <span class="basket-cost__number">5 800 ₽</span>
+                        </div>
+                        <div class="basket-cost">
+                            <span class="basket-cost__text">Скидка</span>
+                            <span class="basket-cost__number">-174 ₽</span>
+                        </div>
+                        <div class="basket__info">
+                            Для скидки <span>5%</span>, докупите на
+                            <span>1200 ₽</span>
+                        </div>
+                        <div class="basket-delivery basket__delivery">
+                            <svg
+                                width="21"
+                                height="17"
+                                class="basket-delivery__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#delivery"
+                                ></use>
+                            </svg>
+                            <span class="basket-delivery__text"
+                                >Доступные способы доставки можно выбрать при
+                                оформлении заказа</span
+                            >
+                        </div>
+                        <div class="basket-cost basket__cost">
+                            <span class="basket-cost__text">Итого</span>
+                            <span class="basket-cost__number">5 626 ₽</span>
+                        </div>
+                        <a href="#" class="btn btn--primary basket__btn"
+                            ><span class="btn__text">Оформить заказ</span></a
+                        >
+                        <a
+                            href="#"
+                            class="basket-btn-purchase basket__purchase"
+                        >
+                            <svg
+                                width="16"
+                                height="16"
+                                class="basket-btn-purchase__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#purchase"
+                                ></use>
+                            </svg>
+                            <span class="basket-btn-purchase__text"
+                                >Быстрая покупка</span
+                            >
+                        </a>
+                    </div>
+                    <div
+                        style="--discount-height: 60%"
+                        class="discount-panel discount-panel--basket basket__discount"
+                    >
+                        <div class="discount-panel__box">
+                            <span class="discount-panel__cost">10 000 ₽</span>
+                            <span class="discount-panel__percentage">-10%</span>
+                        </div>
+                        <div class="discount-panel__box">
+                            <span class="discount-panel__cost">7 000 ₽</span>
+                            <span class="discount-panel__percentage">-5%</span>
+                        </div>
+                        <div class="discount-panel__box">
+                            <span class="discount-panel__cost">5 000 ₽</span>
+                            <span class="discount-panel__percentage">-3%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Пустая корзина -->
+        <div class="popup popup--basket-empty">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Корзина</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="basket basket--empty">
+                    <div class="basket__list"></div>
+                    <div class="basket__checkout">
+                        <div class="basket-cost basket__cost">
+                            <span class="basket-cost__text">Стоимость</span>
+                            <span class="basket-cost__number">5 800 ₽</span>
+                        </div>
+                        <div class="basket-cost">
+                            <span class="basket-cost__text">Скидка</span>
+                            <span class="basket-cost__number">-174 ₽</span>
+                        </div>
+                        <div class="basket__info">
+                            Для скидки <span>5%</span>, докупите на
+                            <span>1200 ₽</span>
+                        </div>
+                        <div class="basket-delivery basket__delivery">
+                            <svg
+                                width="21"
+                                height="17"
+                                class="basket-delivery__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#delivery"
+                                ></use>
+                            </svg>
+                            <span class="basket-delivery__text"
+                                >Доступные способы доставки можно выбрать при
+                                оформлении заказа</span
+                            >
+                        </div>
+                        <div class="basket-cost basket__cost">
+                            <span class="basket-cost__text">Итого</span>
+                            <span class="basket-cost__number">5 626 ₽</span>
+                        </div>
+                        <a href="#" class="btn btn--primary basket__btn"
+                            ><span class="btn__text">Оформить заказ</span></a
+                        >
+                        <a
+                            href="#"
+                            class="basket-btn-purchase basket__purchase"
+                        >
+                            <svg
+                                width="16"
+                                height="16"
+                                class="basket-btn-purchase__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#purchase"
+                                ></use>
+                            </svg>
+                            <span class="basket-btn-purchase__text"
+                                >Быстрая покупка</span
+                            >
+                        </a>
+                    </div>
+                    <div class="basket-empty basket__empty">
+                        <svg width="53" height="43" class="basket-empty__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#basket-empty"
+                            ></use>
+                        </svg>
+                        <span class="basket-empty__text"
+                            >В корзине <br />
+                            пока ничего нет</span
+                        >
+                        <span class="basket-empty__info">
+                            Помощь в покупке
+                            <a href="tel: 88001234567"> 8 800 123 45 67</a>
+                        </span>
+                    </div>
+                    <div
+                        style="--discount-height: 0"
+                        class="discount-panel discount-panel--basket basket__discount"
+                    >
+                        <div class="discount-panel__box">
+                            <span class="discount-panel__cost">10 000 ₽</span>
+                            <span class="discount-panel__percentage">-10%</span>
+                        </div>
+                        <div class="discount-panel__box">
+                            <span class="discount-panel__cost">7 000 ₽</span>
+                            <span class="discount-panel__percentage">-5%</span>
+                        </div>
+                        <div class="discount-panel__box">
+                            <span class="discount-panel__cost">5 000 ₽</span>
+                            <span class="discount-panel__percentage">-3%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Заказать звонок  -->
+        <div class="popup popup--call">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Заказать звонок</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <p class="popup__text">
+                        Оставьте контактные данные и мы свяжемся с вами для
+                        уточнения деталей
+                    </p>
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="name"
+                                data-rule="required|name"
+                                class="form__input js-input first-elem"
+                            />
+                            <span class="form__placeholder">Ваше имя *</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="phone"
+                                data-rule="required|phone"
+                                class="form__input js-input-mask js-input"
+                            />
+                            <span class="form__placeholder">Телефон *</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea
+                                name="commentary"
+                                cols="30"
+                                rows="10"
+                                class="form__textarea js-input"
+                            ></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button
+                                type="submit"
+                                class="btn btn--primary form-popup__btn last-elem"
+                            >
+                                <span class="btn__text">Заказать</span>
+                            </button>
+                            <span class="form-consent form-popup__consent"
+                                >Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link"
+                                    >согласие на обработку перс. данных</a
+                                ></span
+                            >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Заказ товара  -->
+        <div class="popup popup--product">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Заказ товара</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <p class="popup__text">
+                        Оставьте контактные данные и мы свяжемся с вами для
+                        уточнения деталей
+                    </p>
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="name"
+                                data-rule="required|name"
+                                class="form__input js-input first-elem"
+                            />
+                            <span class="form__placeholder">Ваше имя</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="phone"
+                                data-rule="required|phone"
+                                class="form__input js-input-mask js-input"
+                            />
+                            <span class="form__placeholder">Телефон</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button
+                                type="submit"
+                                class="btn btn--primary form-popup__btn last-elem"
+                            >
+                                <span class="btn__text">Заказать</span>
+                            </button>
+                            <span class="form-consent form-popup__consent"
+                                >Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link"
+                                    >согласие на обработку перс. данных</a
+                                ></span
+                            >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Спасибо  -->
+        <div class="popup popup--thank">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Спасибо</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <div class="popup-thank">
+                        <p class="popup-thank__text">
+                            Мы свяжемся с вами в ближайшее время
+                        </p>
+                        <svg width="38" height="30" class="popup-thank__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#thank"
+                            ></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Авторизация  -->
+        <div class="popup popup--authorization">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Авторизация</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input
+                                type="email"
+                                name="email"
+                                data-rule="required|email"
+                                class="form__input js-input first-elem"
+                            />
+                            <span class="form__placeholder">E-mail</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="password"
+                                name="password"
+                                data-rule="required|minlength-6"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder">Пароль</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button
+                                type="submit"
+                                class="btn btn--primary form-popup__btn last-elem"
+                            >
+                                <span class="btn__text">Войти</span>
+                            </button>
+                            <button
+                                type="button"
+                                data-open-modal=".popup--recovery-password"
+                                class="btn btn--link form-popup__forgot js-open-modal js-popup-close"
+                            >
+                                <span class="btn__text">Забыли пароль?</span>
+                            </button>
+                        </div>
+                        <button
+                            type="button"
+                            data-open-modal=".popup--registration"
+                            class="btn btn--border form-popup__btn form-popup__btn--signup js-open-modal js-popup-close"
+                        >
+                            <span class="btn__text">Зарегистрироваться</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Регистрация  -->
+        <div class="popup popup--registration">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Регистрация</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="name"
+                                data-rule="required|name"
+                                class="form__input js-input first-elem"
+                            />
+                            <span class="form__placeholder">Ваше имя</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="phone"
+                                data-rule="required|phone"
+                                class="form__input js-input-mask js-input"
+                            />
+                            <span class="form__placeholder">Телефон</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="email"
+                                name="email"
+                                data-rule="required|email"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder">E-mail</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="password"
+                                name="password"
+                                data-rule="required|minlength-6"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder">Пароль</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="password"
+                                name="password"
+                                data-rule="required|minlength-6"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                >Подтверждение пароля</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button
+                                type="submit"
+                                class="btn btn--primary form-popup__btn last-elem"
+                            >
+                                <span class="btn__text"
+                                    >Зарегистрироваться</span
+                                >
+                            </button>
+                            <span class="form-consent form-popup__consent"
+                                >Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link"
+                                    >согласие на обработку перс. данных</a
+                                ></span
+                            >
+                        </div>
+                        <button
+                            type="button"
+                            data-open-modal=".popup--authorization"
+                            class="btn btn--link form-popup__btn form-popup__btn--account js-open-modal js-popup-close"
+                        >
+                            <span class="btn__text">Уже есть аккаунт</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Восстановление пароля  -->
+        <div class="popup popup--recovery-password">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Восстановление пароля</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <p class="popup__text">
+                        Укажите адрес электронной почты, с которым вы
+                        регистрировались ранее, и мы вышлем инструкцию по смене
+                        пароля
+                    </p>
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input
+                                type="email"
+                                name="email"
+                                data-rule="required|email"
+                                class="form__input js-input first-elem"
+                            />
+                            <span class="form__placeholder">E-mail</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button
+                                type="submit"
+                                class="btn btn--primary form-popup__btn last-elem"
+                            >
+                                <span class="btn__text">Отправить</span>
+                            </button>
+                            <button
+                                type="button"
+                                data-open-modal=".popup--authorization"
+                                class="btn btn--link form-popup__forgot js-open-modal js-popup-close"
+                            >
+                                <span class="btn__text">Авторизация</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Смена пароля  -->
+        <div class="popup popup--password-change">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Смена пароля</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input
+                                type="password"
+                                name="password"
+                                data-rule="required|minlength-6"
+                                class="form__input first-elem js-input"
+                            />
+                            <span class="form__placeholder">Новый пароль</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <button
+                            type="submit"
+                            class="btn btn--primary form-popup__btn last-elem"
+                        >
+                            <span class="btn__text">Войти</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Изменение данных физических лиц  -->
+        <div class="popup popup--data-individuals">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Изменение данных</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="name"
+                                class="form__input js-input first-elem"
+                            />
+                            <span class="form__placeholder">ФИО</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="phone"
+                                class="form__input js-input-mask js-input"
+                            />
+                            <span class="form__placeholder">Телефон</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="email"
+                                name="email"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder">E-mail</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="address"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                >Адрес доставки</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <button
+                            type="submit"
+                            class="btn btn--primary form-popup__btn last-elem"
+                        >
+                            <span class="btn__text">Сохранить</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Изменение данных юридических лиц  -->
+        <div class="popup popup--data-legal">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Изменение данных</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup">
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="companie"
+                                class="form__input js-input first-elem"
+                            />
+                            <span class="form__placeholder"
+                                >Название компании</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="inn"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder">ИНН</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="inn"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                >Контактное лицо</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="email"
+                                name="email"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder">E-mail</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="phone"
+                                class="form__input js-input-mask js-input"
+                            />
+                            <span class="form__placeholder">Телефон</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="address"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                >Адрес доставки</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <button
+                            type="submit"
+                            class="btn btn--primary form-popup__btn last-elem"
+                        >
+                            <span class="btn__text">Сохранить</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Добавить профиль -->
+        <div class="popup popup--add-profile">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Добавить профиль</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg width="28" height="28" class="popup__icon">
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <div class="tabs">
+                        <div class="tabs__nav">
+                            <button
+                                type="button"
+                                class="tabs__btn tabs__btn--active"
+                            >
+                                Физическое лицо
+                            </button>
+                            <button type="button" class="tabs__btn">
+                                Юридическое лицо
+                            </button>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="tabs__panel tabs__panel--show">
+                                <form action="#" class="form form-popup">
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            data-rule="required|name"
+                                            class="form__input js-input first-elem"
+                                        />
+                                        <span class="form__placeholder"
+                                            >ФИО</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            data-rule="required|phone"
+                                            class="form__input js-input-mask js-input"
+                                        />
+                                        <span class="form__placeholder"
+                                            >Телефон</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            data-rule="required|email"
+                                            class="form__input js-input"
+                                        />
+                                        <span class="form__placeholder"
+                                            >E-mail</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="text"
+                                            name="address"
+                                            data-rule="required"
+                                            class="form__input js-input"
+                                        />
+                                        <span class="form__placeholder"
+                                            >Адрес доставки</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <button
+                                        type="submit"
+                                        class="btn btn--primary form-popup__btn last-elem"
+                                    >
+                                        <span class="btn__text">Сохранить</span>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="tabs__panel">
+                                <form action="#" class="form form-popup">
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="text"
+                                            name="companie"
+                                            data-rule="required"
+                                            class="form__input js-input first-elem"
+                                        />
+                                        <span class="form__placeholder"
+                                            >Название компании</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="text"
+                                            name="inn"
+                                            data-rule="required"
+                                            class="form__input js-input"
+                                        />
+                                        <span class="form__placeholder"
+                                            >ИНН</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="text"
+                                            name="inn"
+                                            data-rule="required|name"
+                                            class="form__input js-input"
+                                        />
+                                        <span class="form__placeholder"
+                                            >Контактное лицо</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            data-rule="required|email"
+                                            class="form__input js-input"
+                                        />
+                                        <span class="form__placeholder"
+                                            >E-mail</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            data-rule="required|phone"
+                                            class="form__input js-input-mask js-input"
+                                        />
+                                        <span class="form__placeholder"
+                                            >Телефон</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                aria-hidden="true"
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <label class="label form__label js-label">
+                                        <input
+                                            type="text"
+                                            name="address"
+                                            data-rule="required"
+                                            class="form__input js-input"
+                                        />
+                                        <span class="form__placeholder"
+                                            >Адрес доставки</span
+                                        >
+                                        <button
+                                            type="button"
+                                            title="Очистить"
+                                            aria-label="Очистить"
+                                            class="form__clear js-clear-input"
+                                        >
+                                            <svg
+                                                aria-hidden="true"
+                                                width="16"
+                                                height="16"
+                                                class="form__icon"
+                                            >
+                                                <use
+                                                    xlink:href="./img/icons-sprite.svg#clear"
+                                                ></use>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <button
+                                        type="submit"
+                                        class="btn btn--primary form-popup__btn last-elem"
+                                    >
+                                        <span class="btn__text">Сохранить</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Поделиться -->
+        <div class="popup popup--sharing">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup-title">Поделиться</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup__close js-popup-close"
+                    >
+                        <svg
+                            aria-hidden="true"
+                            width="28"
+                            height="28"
+                            class="popup__icon"
+                        >
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <script
+                        async
+                        src="https://usocial.pro/usocial/usocial.js?uid=b9c206e7a3f53798&v=6.1.5"
+                        data-script="usocial"
+                        charset="utf-8"
+                    ></script>
+                    <div class="popup__share">
+                        <div
+                            class="uSocial-Share popup__share"
+                            data-pid="f762a0f57b1fb4025ce5b05d95233650"
+                            data-type="share"
+                            data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right"
+                            data-social="vk,ok,telegram,wa,vi"
+                        ></div>
+                    </div>
+                    <form class="form form-popup">
+                        <label class="label label--is-active form__label">
+                            <input
+                                type="text"
+                                name="link"
+                                class="form__input js-input-copy"
+                            />
+                            <span class="form__placeholder"
+                                >Ссылка на товар</span
+                            >
+                        </label>
+                    </form>
+                    <button class="btn btn--primary js-btn-copy-btn">
+                        <span class="btn__text"> Скопировать ссылку</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/fancybox.js"></script>
+        <script src="./js/swiper.js"></script>
+        <script src="./js/nativejs-select.min.js"></script>
+        <script src="./js/js-form-validator.min.js"></script>
+        <script src="./js/nouislider.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

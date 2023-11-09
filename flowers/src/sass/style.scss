@@ -102,7 +102,7 @@ input[type="number"]:focus {
         $fz: 56;
         font-size: em($fz, $fz_base);
         font-weight: 700;
-        color: #575757;
+        color: var(--title-color-lg,#575757 );
 
         @media screen and (max-width: 949.98px) {
             $fz: 26;
@@ -260,18 +260,29 @@ input[type="number"]:focus {
 }
 
 .wrapper {
-    padding-left: 12.3%;
+    padding: em(35, $fz) 9% em(140, $fz) 12.3%;
 
+    @media screen and (max-width: 1699.98px) {
+        padding-right: 5%;
+    }
     @media screen and (max-width: 1499.98px) {
-        padding-right: 4.1%;
+        padding-right: 9%;
         padding-left: 4.5%;
+        padding-bottom: em(100, $fz);
     }
     @media screen and (max-width: 1149.98px) {
         padding-left: 4.6%;
         padding-right: 2%;
     }
+    @media screen and (max-width: 949.98px) {
+        padding-top: em(20, $fz);
+        padding-right: 4.6%;
+        padding-bottom: em(60, $fz);
+    }
     @media screen and (max-width: 499.98px) {
+        padding-right: 5.5%;
         padding-left: 5.5%;
+        padding-bottom: em(40, $fz);
     }
 }
 
@@ -347,3 +358,4 @@ input[type="number"]:focus {
 @import "blocks/account";
 @import "blocks/about";
 @import "blocks/contacts";
+@import "blocks/delivery";

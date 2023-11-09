@@ -1,0 +1,75 @@
+.description {
+    display: grid;
+    grid-row-gap: em(70, $fz);
+
+    @media screen and (min-width: 950px) and (max-width: 1149.98px) { 
+        padding-right: 10%;
+    }
+    @media screen and (max-width: 949.98px) {
+        grid-row-gap: em(40, $fz);
+    }
+
+    &--exchanges {
+        --description-row-gap: #{em(50, $fz)};
+
+        @media screen and (max-width: 949.98px) {
+            --description-row-gap: #{em(40, $fz)};
+        }
+    }
+
+    &__head {
+        margin-bottom: em(40, $fz);
+
+        @media screen and (max-width: 949.98px) { 
+            margin-bottom: em(20, $fz);
+        }
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: em(320, $fz) 1fr;
+        grid-column-gap: 11%;
+
+        @media screen and (max-width: 1499.98px) { 
+            grid-template-columns: em(250, $fz) 1fr;
+            grid-column-gap: 3%;
+        }
+
+        @media screen and (max-width: 1149.98px) { 
+            grid-template-columns: 1fr;
+            grid-row-gap: em(30, $fz);
+        }
+        @media screen and (max-width: 949.98px) {
+            grid-row-gap: em(11, $fz);
+        }
+    }
+
+    &__wrap {
+        display: grid;
+        grid-row-gap: em(20, $fz);
+
+        @media screen and (max-width: 499.98px) {
+            grid-row-gap: em(17, $fz); 
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-row-gap: var(--description-row-gap, #{em(30, $fz)});
+    }
+}
+
+.list {
+    list-style: none;
+
+    &__item {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        line-height: 1.44;
+
+        &::before {
+            content: '•';
+            margin-right: em(2, $fz);
+        }
+    }
+}

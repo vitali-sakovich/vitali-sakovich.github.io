@@ -1,7 +1,6 @@
 .contacts {
     display: flex;
     flex-direction: column;
-    padding-top: em(35, $fz);
     padding-bottom: em(100, $fz);
     padding-right: 9%;
 
@@ -13,7 +12,6 @@
         padding-bottom: em(90, $fz);
     }
     @media screen and (max-width: 949.98px) {
-        padding-top: em(20, $fz);
         padding-right: 4.6%;
         padding-bottom: em(52, $fz);
     }
