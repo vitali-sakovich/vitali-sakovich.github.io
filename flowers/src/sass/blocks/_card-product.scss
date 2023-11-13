@@ -120,6 +120,12 @@
     &__btn {
         padding-right: em(10, $fz);
         padding-left: em(10, $fz);
+
+        &--active {
+            --btn-text-color: #000;
+            background-color: #e7ddd4;
+            border-color: #e7ddd4;
+        }
     }
 }
 

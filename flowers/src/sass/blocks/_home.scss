@@ -75,8 +75,7 @@
             margin-left: auto;
         }
         @media screen and (max-width: 599.98px) {
-            font-size: 4.267vw;
-            margin-right: em(-34, $fz);
+            font-size: 3.7vw;
         }
     }
 
@@ -342,6 +341,10 @@
             }
             @media screen and (max-width: 599.98px) {
                 padding-left: em(122, $fz);
+            }
+
+            .advantage__btn {
+                display: none;
             }
         }
 

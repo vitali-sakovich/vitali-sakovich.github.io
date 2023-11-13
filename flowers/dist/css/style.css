@@ -2004,8 +2004,7 @@ input[type=number]:focus {
 }
 @media screen and (max-width: 599.98px) {
   .preview__images {
-    font-size: 4.267vw;
-    margin-right: -2.125em;
+    font-size: 3.7vw;
   }
 }
 .preview__picture {
@@ -2367,6 +2366,9 @@ input[type=number]:focus {
   .advantage__block--discount {
     padding-left: 7.625em;
   }
+}
+.advantage__block--discount .advantage__btn {
+  display: none;
 }
 .advantage__block--amount {
   --advantage-title-color: #4b8702;
@@ -3944,30 +3946,36 @@ input[type=number]:focus {
 @media screen and (max-width: 649.98px) {
   .basket {
     grid-template-columns: 1fr;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 .basket__list {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
-  scrollbar-width: thin;
-  scrollbar-arrow-color: transparent;
-  scrollbar-face-color: transparent;
-  scrollbar-track-color: transparent;
-  scrollbar-base-color: transparent;
   border-right: 1px solid #cacaca;
 }
-.basket__list::-webkit-scrollbar {
-  width: 0.3125em;
-}
-.basket__list::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.15);
-}
-.basket__list::-webkit-scrollbar-track {
-  background-color: transparent;
+@media screen and (min-width: 650px) {
+  .basket__list {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+    scrollbar-width: thin;
+    scrollbar-arrow-color: transparent;
+    scrollbar-face-color: transparent;
+    scrollbar-track-color: transparent;
+    scrollbar-base-color: transparent;
+  }
+  .basket__list::-webkit-scrollbar {
+    width: 0.3125em;
+  }
+  .basket__list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  .basket__list::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 }
 @media screen and (max-width: 849.98px) {
   .basket__list {
@@ -5149,6 +5157,11 @@ input[type=number]:focus {
 .product-card__btn {
   padding-right: 0.625em;
   padding-left: 0.625em;
+}
+.product-card__btn--active {
+  --btn-text-color: #000;
+  background-color: #e7ddd4;
+  border-color: #e7ddd4;
 }
 
 .product-card-color {
