@@ -63,6 +63,10 @@
         grid-template-columns: repeat(auto-fill, minmax(em(320, $fz), 1fr));
         grid-gap: em(33 25, $fz);
 
+        @media screen and (min-width: 2300px) {
+            grid-template-columns: repeat(auto-fill, minmax(em(350, $fz), 1fr));
+        }
+
         @media screen and (max-width: 1499.98px) {
             grid-column-gap: em(14, $fz);
         }
@@ -180,6 +184,8 @@
 
     &__icon {
         fill: #fff;
+        width: em(16, $fz);
+        height: auto;
     }
 
     &__name {

@@ -530,6 +530,10 @@
         z-index: 1;
     }
 
+    &__picture {
+        display: flex;
+    }
+
     &__picture,
     &__img {
         width: 100%;

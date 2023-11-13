@@ -29,6 +29,9 @@ body {
     min-height: 100%;
     background-color: #f2eef4;
 
+    @media screen and (min-width: 2000px) {
+        font-size: 0.75vw;
+    }
     @media screen and (min-width: 950px) {
         padding-left: em(95, $fz);
     }
@@ -208,7 +211,7 @@ input[type="number"]:focus {
             }
         }
     }
-    
+
     &:disabled {
         --btn-text-color: #000;
         background-color: #e7ddd4;

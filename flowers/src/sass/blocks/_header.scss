@@ -333,6 +333,8 @@
     &__icon {
         fill: rgba(0, 0, 0, 0.5);
         margin-left: em(8, $fz);
+        width: em(14, $fz);
+        height: auto;
     }
 
     &__dropdown {
@@ -465,6 +467,8 @@
         fill: #575757;
         opacity: var(--icon-opacity);
         transition: opacity 0.3s;
+        width: auto;
+        height: em(25, $fz);
     }
 
     &__counter {
@@ -603,11 +607,15 @@
 
         &:first-child {
             &::before {
-                content: url(../img/arrow-brea.svg);
+                content: "";
                 position: absolute;
                 left: em(-38, $fz);
                 margin-right: em(20, $fz);
                 transition: opacity 0.3s;
+                background: url("../img/arrow-brea.svg") center/contain
+                    no-repeat;
+                width: em(18, $fz);
+                height: em(13, $fz);
             }
         }
 

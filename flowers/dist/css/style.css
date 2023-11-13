@@ -385,6 +385,11 @@ body {
   min-height: 100%;
   background-color: #f2eef4;
 }
+@media screen and (min-width: 2000px) {
+  body {
+    font-size: 0.75vw;
+  }
+}
 @media screen and (min-width: 950px) {
   body {
     padding-left: 5.9375em;
@@ -1127,6 +1132,8 @@ input[type=number]:focus {
 .nav__icon {
   fill: rgba(0, 0, 0, 0.5);
   margin-left: 0.5em;
+  width: 0.875em;
+  height: auto;
 }
 .nav__dropdown {
   position: absolute;
@@ -1271,6 +1278,8 @@ input[type=number]:focus {
   opacity: var(--icon-opacity);
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  width: auto;
+  height: 1.5625em;
 }
 .btn-control__counter {
   display: -webkit-box;
@@ -1436,12 +1445,15 @@ input[type=number]:focus {
   opacity: 0.6;
 }
 .breadcrumb__link:first-child::before {
-  content: url(../img/arrow-brea.svg);
+  content: "";
   position: absolute;
   left: -2.375em;
   margin-right: 1.25em;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  background: url("../img/arrow-brea.svg") center/contain no-repeat;
+  width: 1.125em;
+  height: 0.8125em;
 }
 .breadcrumb__link:not(:last-child)::after {
   content: "/";
@@ -1765,6 +1777,8 @@ input[type=number]:focus {
   display: -ms-flexbox;
   display: flex;
   margin-left: 0.625em;
+  width: 4.6875em;
+  height: auto;
 }
 .footer__inner {
   display: -webkit-box;
@@ -2430,9 +2444,9 @@ input[type=number]:focus {
   }
 }
 .advantage__btn {
-  width: 48px;
-  min-width: 48px;
-  height: 48px;
+  width: 3em;
+  min-width: 3em;
+  height: 3em;
 }
 .advantage__title {
   display: -webkit-box;
@@ -2480,7 +2494,7 @@ input[type=number]:focus {
   }
 }
 .btn-circle__icon {
-  width: 24px;
+  width: 1.5em;
   height: auto;
   fill: var(--btn-circle-color, #fff);
   -webkit-transition: fill 0.3s;
@@ -3150,6 +3164,10 @@ input[type=number]:focus {
   margin-left: auto;
   margin-bottom: 0.3125em;
 }
+.popup__icon {
+  width: 1.75em;
+  height: auto;
+}
 .popup__content {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -3340,6 +3358,8 @@ input[type=number]:focus {
 }
 .sidebar-close__icon {
   fill: #575757;
+  width: 1.75em;
+  height: auto;
 }
 @media screen and (min-width: 700px) {
   .sidebar-close__icon {
@@ -3795,14 +3815,19 @@ input[type=number]:focus {
   background-color: transparent;
 }
 @media screen and (min-width: 1000px) {
-  .popup-search__btn:hover {
+  .popup-search__btn:not(:disabled):hover {
     --btn-search-fill: rgba(0, 0, 0, 0.8);
   }
+}
+.popup-search__btn:disabled {
+  pointer-events: none;
 }
 .popup-search__icon {
   -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
   fill: var(--btn-search-fill, #575757);
+  width: 1.6875em;
+  height: auto;
 }
 
 .search-autocomplete {
@@ -4264,6 +4289,8 @@ input[type=number]:focus {
   -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
   fill: var(--basket-btn-icon-color, #c9beb4);
+  width: auto;
+  height: 1.1875em;
 }
 
 .counter {
@@ -4721,7 +4748,7 @@ input[type=number]:focus {
   position: absolute;
   top: 1em;
   left: 0;
-  font-size: var(--fz-placeholder, 18px);
+  font-size: var(--fz-placeholder, 1.125em);
   color: rgba(0, 0, 0, 0.6);
   -webkit-transform: var(--placeholder-shows, translate(1em, 0));
   -ms-transform: var(--placeholder-shows, translate(1em, 0));
@@ -4762,6 +4789,8 @@ input[type=number]:focus {
   -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
   fill: var(--clear-color, rgba(0, 0, 0, 0.6));
+  width: 1em;
+  height: auto;
 }
 .form__box {
   display: -webkit-box;
@@ -4794,7 +4823,7 @@ input[type=number]:focus {
   --placeholder-shows: translate(0, -2.3125em);
   --clear-show: 1;
   --clear-events: auto;
-  --fz-placeholder: 12px;
+  --fz-placeholder: 0.75em;
 }
 
 .form-consent {
@@ -5965,6 +5994,11 @@ input[type=number]:focus {
   right: 0;
   z-index: 1;
 }
+.slider-product__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .slider-product__picture, .slider-product__img {
   width: 100%;
   height: 100%;
@@ -6411,6 +6445,11 @@ input[type=number]:focus {
   grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
   grid-gap: 2.0625em 1.5625em;
 }
+@media screen and (min-width: 2300px) {
+  .catalog__grid {
+    grid-template-columns: repeat(auto-fill, minmax(21.875em, 1fr));
+  }
+}
 @media screen and (max-width: 1499.98px) {
   .catalog__grid {
     grid-column-gap: 0.875em;
@@ -6547,6 +6586,8 @@ input[type=number]:focus {
 }
 .tag__icon {
   fill: #fff;
+  width: 1em;
+  height: auto;
 }
 .tag__name {
   color: #fff;
