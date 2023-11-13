@@ -208,7 +208,7 @@ input[type="number"]:focus {
             }
         }
     }
-
+    
     &:disabled {
         --btn-text-color: #000;
         background-color: #e7ddd4;
@@ -342,6 +342,20 @@ input[type="number"]:focus {
         padding-bottom: em(40, $fz);
         padding-left: 5.5%;
     }
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2eef4;
+    z-index: 1003;
+    transition: opacity 0.1s;
 }
 
 @import "blocks/header";

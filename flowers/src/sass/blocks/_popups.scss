@@ -61,6 +61,7 @@
 
         .js-btn-copy-btn {
             width: 100%;
+            margin-top: em(32, $fz);
         }
     }
 
@@ -777,12 +778,16 @@
     }
     @media screen and (max-width: 649.98px) {
         grid-template-columns: 1fr;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     &__list {
-        @include scrollbar;
         border-right: 1px solid #cacaca;
 
+        @media screen and (min-width: 650px) {
+            @include scrollbar;
+        }
         @media screen and (max-width: 849.98px) {
             grid-area: 1/1/2/2;
         }

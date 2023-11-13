@@ -597,7 +597,6 @@
         justify-content: center;
         align-items: center;
         padding: em(9 10, $fz);
-        cursor: pointer;
 
         &:not(:last-child) {
             border-right: 1px solid #cacaca;
@@ -620,7 +619,11 @@
         display: none;
 
         &:disabled ~ .product-color__box:after {
-            content: "";
+            width: em(4, $fz);
+            height: em(69, $fz);
+            transform: rotate(-45deg);
+            background-color: rgba(27, 27, 27, 0.21);
+            pointer-events: none;
         }
 
         &:checked ~ .product-color__box:before {
@@ -638,14 +641,14 @@
 
         &::before,
         &::after {
-            position: absolute;
-        }
-
-        &::before {
             content: "";
+            position: absolute;
             background-color: transparent;
             width: em(55, $fz);
             height: em(55, $fz);
+        }
+
+        &::before {
             z-index: -1;
             transition: background-color 0.3s;
 
@@ -655,11 +658,7 @@
         }
 
         &::after {
-            content: none;
-            width: em(4, $fz);
-            height: em(69, $fz);
-            transform: rotate(-45deg);
-            background-color: rgba(27, 27, 27, 0.21);
+            cursor: pointer;
         }
     }
 
