@@ -262,7 +262,7 @@
                         </div>
                         <div class="order-block__content">
                             <label class="label form__label js-label">
-                                <input type="text" name="location" class="form__input js-input">
+                                <input type="text" name="location" data-rule="required" class="form__input js-input">
                                 <span class="form__placeholder">Выберите местоположение</span>
                                 <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
                                     <svg width="16" height="16" class="form__icon">
@@ -415,7 +415,7 @@
                         </div>
                         <div class="order-block__content order-block__content--data">
                             <label class="label form__label js-label">
-                                <input type="text" name="name" data-rule="required|name" class="form__input js-input">
+                                <input type="text" name="name-comp" data-rule="required|name" class="form__input js-input">
                                 <span class="form__placeholder">Название компании *</span>
                                 <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
                                     <svg width="16" height="16" class="form__icon">
@@ -479,45 +479,16 @@
                             </div>
                             <h2 class="title title--size-sm">Адрес доставки</h2>
                         </div>
-                        <div class="order-block__content order-block__content--data">
+                        <div class="order-block__content order-block__content--address">
                             <label class="label form__label js-label">
-                                <input type="text" name="street" class="form__input js-input">
-                                <span class="form__placeholder">Улица</span>
+                                <input type="text" name="address" class="form__input js-input">
+                                <span class="form__placeholder">Адрес доставки</span>
                                 <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
                                     <svg width="16" height="16" class="form__icon">
                                         <use xlink:href="./img/icons-sprite.svg#clear"></use>
                                     </svg>
                                 </button>
                             </label>
-                            <div class="order-block__row">
-                                <label class="label form__label js-label">
-                                    <input type="text" name="street" class="form__input js-input">
-                                    <span class="form__placeholder">Дом</span>
-                                    <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                        <svg width="16" height="16" class="form__icon">
-                                            <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                        </svg>
-                                    </button>
-                                </label>
-                                <label class="label form__label js-label">
-                                    <input type="text" name="corpus" class="form__input js-input">
-                                    <span class="form__placeholder">Корпус</span>
-                                    <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                        <svg width="16" height="16" class="form__icon">
-                                            <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                        </svg>
-                                    </button>
-                                </label>
-                                <label class="label form__label js-label">
-                                    <input type="text" name="quarter" class="form__input js-input">
-                                    <span class="form__placeholder">Кварт.</span>
-                                    <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
-                                        <svg width="16" height="16" class="form__icon">
-                                            <use xlink:href="./img/icons-sprite.svg#clear"></use>
-                                        </svg>
-                                    </button>
-                                </label>
-                            </div>
                         </div>
                     </div>
                     <div class="order__box">
