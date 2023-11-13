@@ -3040,6 +3040,7 @@ input[type=number]:focus {
 }
 .popup--sharing .js-btn-copy-btn {
   width: 100%;
+  margin-top: 2em;
 }
 .popup--basket {
   --popup-block-width: 61.25em;
