@@ -401,9 +401,9 @@
     }
 
     &__btn {
-        width: 48px;
-        min-width: 48px;
-        height: 48px;
+        width: em(48, $fz);
+        min-width: em(48, $fz);
+        height: em(48, $fz);
     }
 
     &__title {
@@ -445,7 +445,7 @@
     }
 
     &__icon {
-        width: 24px;
+        width: em(24, $fz);
         height: auto;
         fill: var(--btn-circle-color, #fff);
         transition: fill 0.3s;

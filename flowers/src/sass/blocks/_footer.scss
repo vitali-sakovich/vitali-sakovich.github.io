@@ -246,6 +246,8 @@
     &__img {
         display: flex;
         margin-left: em(10, $fz);
+        width: em(75, $fz);
+        height: auto;
     }
 
     &__inner {

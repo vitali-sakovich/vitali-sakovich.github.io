@@ -38,7 +38,7 @@
         position: absolute;
         top: em(16, $fz);
         left: 0;
-        font-size: em(var(--fz-placeholder, 18px), $fz_base);
+        font-size: var(--fz-placeholder, #{em(18, $fz_base)});
         color: rgba(0, 0, 0, 0.6);
         transform: var(--placeholder-shows, translate(em(16, $fz), 0));
         transition: transform 0.3s, font-size 0.3s;
@@ -69,6 +69,8 @@
     &__icon {
         transition: fill 0.3s;
         fill: var(--clear-color, rgba(0, 0, 0, 0.6));
+        width: em(16, $fz);
+        height: auto;
     }
 
     &__box {
@@ -90,7 +92,7 @@
         --placeholder-shows: translate(0, #{em(-37, $fz)});
         --clear-show: 1;
         --clear-events: auto;
-        --fz-placeholder: 12px;
+        --fz-placeholder: #{em(12, $fz)};
     }
 }
 

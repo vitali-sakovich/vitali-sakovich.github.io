@@ -678,27 +678,47 @@ window.addEventListener("DOMContentLoaded", init);
 })();
 
 (() => {
-    (() => {
-        const block = document.querySelector(".accordion");
-        if (!block) return;
-        block.addEventListener("click", (event) => {
-            let item = event.target.closest("button");
-            if (!item) return;
-            if (!block.contains(item)) return;
+    const block = document.querySelector(".accordion");
+    if (!block) return;
+    block.addEventListener("click", (event) => {
+        let item = event.target.closest("button");
+        if (!item) return;
+        if (!block.contains(item)) return;
 
-            heightItem(item);
-        });
+        heightItem(item);
+    });
 
-        function heightItem(item) {
-            const height = item.nextElementSibling.scrollHeight + "px";
+    function heightItem(item) {
+        const height = item.nextElementSibling.scrollHeight + "px";
 
-            if (!item.classList.contains("active")) {
-                item.classList.add("active");
-                item.nextElementSibling.style.height = height;
-            } else {
-                item.nextElementSibling.style.height = 0;
-                item.classList.remove("active");
-            }
+        if (!item.classList.contains("active")) {
+            item.classList.add("active");
+            item.nextElementSibling.style.height = height;
+        } else {
+            item.nextElementSibling.style.height = 0;
+            item.classList.remove("active");
         }
-    })();
+    }
+})();
+
+(() => {
+    const input = document.querySelector(".popup-search__input");
+    const clear = document.querySelector(".popup-search__btn");
+    const icon = clear.querySelector(".popup-search__icon");
+
+    input.addEventListener("input", () => {
+        if (input.value != "") {
+            icon.innerHTML = `<use xlink:href="./img/icons-sprite.svg#clear"></use>`;
+            clear.removeAttribute("disabled");
+        } else {
+            icon.innerHTML = `<use xlink:href="./img/icons-sprite.svg#search"></use>`;
+            clear.setAttribute("disabled", "disabled");
+        }
+    });
+
+    clear.addEventListener("click", () => {
+        input.value = "";
+        icon.innerHTML = `<use xlink:href="./img/icons-sprite.svg#search"></use>`;
+        clear.setAttribute("disabled", "disabled");
+    });
 })();
