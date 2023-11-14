@@ -7087,6 +7087,8 @@ input[type=number]:focus {
   padding: 1.5625em 1.25em 6.25em;
   padding-top: 1.5625em;
   padding-bottom: 6.25em;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 @media screen and (max-width: 949.98px) {
   .empty-page {

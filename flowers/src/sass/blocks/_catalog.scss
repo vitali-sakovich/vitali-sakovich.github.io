@@ -632,6 +632,8 @@
     padding: em(25 20 100, $fz);
     padding-top: em(25, $fz);
     padding-bottom: em(100, $fz);
+    margin-top: auto;
+    margin-bottom: auto;
 
     @media screen and (max-width: 949.98px) {
         padding-bottom: em(50, $fz);
