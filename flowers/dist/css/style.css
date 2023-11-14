@@ -582,30 +582,6 @@ input[type=number]:focus {
   }
 }
 
-.btn-control {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 0.3125em;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  background-color: transparent;
-}
-@media screen and (min-width: 1000px) {
-  .btn-control:hover {
-    background-color: rgba(61, 74, 98, 0.1);
-  }
-}
-.btn-control__icon {
-  fill: #bcbcbc;
-}
-
 .wrapper {
   padding: 2.5em 9% 8.75em 12.3%;
 }
@@ -6567,6 +6543,7 @@ input[type=number]:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -6583,6 +6560,14 @@ input[type=number]:focus {
   height: 1em;
   background-color: transparent;
   margin-left: 0.4375em;
+}
+.tag__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .tag__icon {
   fill: #fff;
@@ -8095,6 +8080,7 @@ input[type=number]:focus {
 }
 .card-data__row {
   display: grid;
+  position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -8115,7 +8101,29 @@ input[type=number]:focus {
   height: 2.125em;
 }
 .card-data__value {
+  background-color: transparent;
   font-weight: 600;
+  color: #000;
+  border-radius: 0.3125em;
+  border: 1px solid transparent;
+  padding: 0.4375em 0.3125em;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.card-data__value--is-active {
+  border-color: rgba(0, 0, 0, 0.23);
+}
+.card-data__msg {
+  position: absolute;
+  top: 100%;
+  right: 5.4285714286em;
+  font-size: 0.875em;
+  color: #43b627;
+}
+@media screen and (max-width: 499.98px) {
+  .card-data__msg {
+    right: 2.5714285714em;
+  }
 }
 
 .card-profile {
@@ -8507,9 +8515,7 @@ input[type=number]:focus {
   will-change: height;
 }
 .order-details__wrapper {
-  padding-top: 3.0625em;
-  padding-bottom: 2.875em;
-  padding-left: 8.375em;
+  padding: 3.0625em 3.125em 2.875em 8.375em;
 }
 @media screen and (max-width: 1499.98px) {
   .order-details__wrapper {
@@ -8541,25 +8547,14 @@ input[type=number]:focus {
   }
 }
 .order-details__list {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 2.5em;
   margin-bottom: 4.6875em;
-  -webkit-column-gap: 10%;
-  -moz-column-gap: 10%;
-  column-gap: 10%;
-  max-width: 56.5em;
-}
-@media screen and (max-width: 1499.98px) {
-  .order-details__list {
-    max-width: 50.25em;
-  }
 }
 @media screen and (max-width: 1149.98px) {
   .order-details__list {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
+    grid-template-columns: 1fr;
     margin-bottom: 1.5625em;
   }
 }
@@ -8570,13 +8565,13 @@ input[type=number]:focus {
 }
 .order-details__item {
   display: grid;
-  grid-template-columns: 9.375em 17.8125em;
+  grid-template-columns: 9.375em auto;
   grid-column-gap: 2.1875em;
   margin-bottom: 1.25em;
 }
 @media screen and (max-width: 1499.98px) {
   .order-details__item {
-    grid-template-columns: 9.0625em 13.75em;
+    grid-template-columns: 9.0625em auto;
   }
 }
 @media screen and (max-width: 1149.98px) {
@@ -8606,6 +8601,35 @@ input[type=number]:focus {
   display: flex;
   font-size: 1.25em;
   line-height: 1.4;
+}
+
+.btn-delete,
+.btn-enter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.3125em;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: transparent;
+}
+@media screen and (min-width: 1000px) {
+  .btn-delete:hover,
+  .btn-enter:hover {
+    background-color: rgba(61, 74, 98, 0.1);
+  }
+}
+.btn-delete__icon,
+.btn-enter__icon {
+  fill: #bcbcbc;
+  width: auto;
+  height: 1.25em;
 }
 
 @media screen and (min-width: 950px) and (max-width: 1149.98px) {

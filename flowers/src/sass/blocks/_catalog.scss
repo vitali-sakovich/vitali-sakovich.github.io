@@ -168,6 +168,7 @@
 
 .tag {
     display: flex;
+    position: relative;
     align-items: center;
     border-radius: em(5, $fz);
     min-height: em(34, $fz);
@@ -180,6 +181,15 @@
         height: em(16, $fz);
         background-color: transparent;
         margin-left: em(7, $fz);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     &__icon {
