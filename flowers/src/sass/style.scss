@@ -243,25 +243,6 @@ input[type="number"]:focus {
     }
 }
 
-.btn-control {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: em(5, $fz);
-    transition: background-color 0.3s;
-    background-color: transparent;
-
-    &:hover {
-        @media screen and (min-width: $breakpoint-hover) {
-            background-color: rgb(61, 74, 98, 0.1);
-        }
-    }
-
-    &__icon {
-        fill: #bcbcbc;
-    }
-}
-
 .wrapper {
     padding: em(40, $fz) 9% em(140, $fz) 12.3%;
 

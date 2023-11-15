@@ -344,84 +344,117 @@
                             </button>
                         </div>
                         <div class="card-data account-card__data">
-                            <div class="card-data__row">
-                                <span class="card-data__name">ФИО</span>
-                                <span class="card-data__value"
-                                    >Михаил Пореченков</span
-                                >
-                                <button
-                                    title="Изменить"
-                                    aria-label="Изменить"
-                                    class="btn-control card-data__btn"
-                                >
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        class="btn-control__icon"
+                            <form
+                                method="post"
+                                name="updateUser"
+                                action="/personal/"
+                                class="card-data__form"
+                            >
+                                <div class="card-data__row">
+                                    <span class="card-data__name">ФИО</span>
+                                    <input
+                                        type="text"
+                                        disabled
+                                        name="name"
+                                        value="Михаил Пореченков"
+                                        class="card-data__value"
+                                    />
+                                    <button
+                                        title="Изменить"
+                                        aria-label="Изменить"
+                                        type="button"
+                                        class="btn-enter card-data__btn"
                                     >
-                                        <use
-                                            xlink:href="./img/icons-sprite.svg#change-data"
-                                        ></use>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-data__row">
-                                <span class="card-data__name">E-mai</span>
-                                <span class="card-data__value">MP@ya.ru</span>
-                                <button
-                                    title="Изменить"
-                                    aria-label="Изменить"
-                                    class="btn-control card-data__btn"
-                                >
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        class="btn-control__icon"
+                                        <svg
+                                            width="20"
+                                            height="20"
+                                            class="btn-enter__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/icons-sprite.svg#change-data"
+                                            ></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="card-data__row">
+                                    <span class="card-data__name">E-mai</span>
+                                    <input
+                                        type="text"
+                                        disabled
+                                        name="email"
+                                        value="MP@ya.ru"
+                                        class="card-data__value"
+                                    />
+                                    <button
+                                        title="Изменить"
+                                        aria-label="Изменить"
+                                        type="button"
+                                        class="btn-enter card-data__btn"
                                     >
-                                        <use
-                                            xlink:href="./img/icons-sprite.svg#change-data"
-                                        ></use>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-data__row">
-                                <span class="card-data__name">Телефон</span>
-                                <span class="card-data__value">не указан</span>
-                                <button
-                                    title="Изменить"
-                                    aria-label="Изменить"
-                                    class="btn-control card-data__btn"
-                                >
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        class="btn-control__icon"
+                                        <svg
+                                            width="20"
+                                            height="20"
+                                            class="btn-enter__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/icons-sprite.svg#change-data"
+                                            ></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="card-data__row">
+                                    <span class="card-data__name">Телефон</span>
+                                    <input
+                                        type="text"
+                                        disabled
+                                        value="не указан"
+                                        name="phone"
+                                        class="card-data__value js-input-mask"
+                                    />
+                                    <button
+                                        title="Изменить"
+                                        aria-label="Изменить"
+                                        type="button"
+                                        class="btn-enter card-data__btn"
                                     >
-                                        <use
-                                            xlink:href="./img/icons-sprite.svg#change-data"
-                                        ></use>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-data__row">
-                                <span class="card-data__name">Пароль</span>
-                                <span class="card-data__value">********</span>
-                                <button
-                                    title="Изменить"
-                                    aria-label="Изменить"
-                                    class="btn-control card-data__btn"
-                                >
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        class="btn-control__icon"
+                                        <svg
+                                            width="20"
+                                            height="20"
+                                            class="btn-enter__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/icons-sprite.svg#change-data"
+                                            ></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="card-data__row">
+                                    <span class="card-data__name">Пароль</span>
+                                    <input
+                                        type="password"
+                                        disabled
+                                        name="password"
+                                        value="23232323ddddd"
+                                        class="card-data__value"
+                                    />
+                                    <button
+                                        title="Изменить"
+                                        aria-label="Изменить"
+                                        type="button"
+                                        class="btn-enter card-data__btn"
                                     >
-                                        <use
-                                            xlink:href="./img/icons-sprite.svg#change-data"
-                                        ></use>
-                                    </svg>
-                                </button>
-                            </div>
+                                        <svg
+                                            width="20"
+                                            height="20"
+                                            class="btn-enter__icon"
+                                        >
+                                            <use
+                                                xlink:href="./img/icons-sprite.svg#change-data"
+                                            ></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div
@@ -481,12 +514,15 @@
                                         >
                                     </button>
                                     <button
-                                        class="btn-control card-profile__delete"
+                                        type="button"
+                                        title="Удалить профиль"
+                                        aria-label="Удалить профиль"
+                                        class="btn-delete card-profile__delete"
                                     >
                                         <svg
                                             width="15"
                                             height="19"
-                                            class="btn-control__icon"
+                                            class="btn-delete__icon"
                                         >
                                             <use
                                                 xlink:href="./img/icons-sprite.svg#delete"
@@ -535,12 +571,15 @@
                                         >
                                     </button>
                                     <button
-                                        class="btn-control card-profile__delete"
+                                        type="button"
+                                        title="Удалить профиль"
+                                        aria-label="Удалить профиль"
+                                        class="btn-delete card-profile__delete"
                                     >
                                         <svg
                                             width="15"
                                             height="19"
-                                            class="btn-control__icon"
+                                            class="btn-delete__icon"
                                         >
                                             <use
                                                 xlink:href="./img/icons-sprite.svg#delete"
@@ -590,12 +629,15 @@
                                         >
                                     </button>
                                     <button
-                                        class="btn-control card-profile__delete"
+                                        type="button"
+                                        title="Удалить профиль"
+                                        aria-label="Удалить профиль"
+                                        class="btn-delete card-profile__delete"
                                     >
                                         <svg
                                             width="15"
                                             height="19"
-                                            class="btn-control__icon"
+                                            class="btn-delete__icon"
                                         >
                                             <use
                                                 xlink:href="./img/icons-sprite.svg#delete"
@@ -644,12 +686,15 @@
                                         >
                                     </button>
                                     <button
-                                        class="btn-control card-profile__delete"
+                                        type="button"
+                                        title="Удалить профиль"
+                                        aria-label="Удалить профиль"
+                                        class="btn-delete card-profile__delete"
                                     >
                                         <svg
                                             width="15"
                                             height="19"
-                                            class="btn-control__icon"
+                                            class="btn-delete__icon"
                                         >
                                             <use
                                                 xlink:href="./img/icons-sprite.svg#delete"

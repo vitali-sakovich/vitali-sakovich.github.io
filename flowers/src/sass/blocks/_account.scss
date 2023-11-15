@@ -143,6 +143,7 @@
 
     &__row {
         display: grid;
+        position: relative;
         align-items: center;
         grid-template-columns: em(72, $fz) 1fr em(36, $fz);
         grid-column-gap: em(40, $fz);
@@ -163,7 +164,30 @@
     }
 
     &__value {
+        background-color: transparent;
         font-weight: 600;
+        color: #000;
+        border-radius: em(5, $fz);
+        border: 1px solid transparent;
+        padding: em(7 5, $fz);
+        transition: border-color 0.3s;
+
+        &--is-active {
+            border-color: rgba(0, 0, 0, 0.23);
+        }
+    }
+
+    &__msg {
+        $fz: 14;
+        position: absolute;
+        top: 100%;
+        right: em(76, $fz);
+        font-size: em($fz, $fz_base);
+        color: #43b627;
+
+        @media screen and (max-width: 499.98px) {
+            right: em(36, $fz);
+        }
     }
 }
 
@@ -544,5 +568,27 @@
         display: flex;
         font-size: em($fz, $fz_base);
         line-height: 1.4;
+    }
+}
+
+.btn-delete,
+.btn-enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: em(5, $fz);
+    transition: background-color 0.3s;
+    background-color: transparent;
+
+    &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+            background-color: rgb(61, 74, 98, 0.1);
+        }
+    }
+
+    &__icon {
+        fill: #bcbcbc;
+        width: auto;
+        height: em(20, $fz);
     }
 }

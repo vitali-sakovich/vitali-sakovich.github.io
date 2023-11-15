@@ -722,3 +722,48 @@ window.addEventListener("DOMContentLoaded", init);
         clear.setAttribute("disabled", "disabled");
     });
 })();
+
+// ЛК изменение данных
+(() => {
+    function dataModification(item) {
+        const input = item.querySelector(".card-data__value");
+        const btn = item.querySelector(".card-data__btn");
+
+        btn.addEventListener("click", (event) => {
+            if (btn.type != "submit") {
+                setTimeout(() => {
+                    btn.type = "submit";
+                });
+                input.removeAttribute("disabled");
+                input.classList.add("card-data__value--is-active");
+                input.focus();
+                btn.firstElementChild.innerHTML = `<use xlink:href="./img/icons-sprite.svg#enter"></use>`;
+                btn.title = "Сохранить";
+                btn.ariaLabel = "Сохранить";
+            } else {
+                event.preventDefault();
+                btn.type = "button";
+                btn.title = "Изменить";
+                btn.ariaLabel = "Изменить";
+                btn.firstElementChild.innerHTML = `<use xlink:href="./img/icons-sprite.svg#change-data"></use>`;
+                input.setAttribute("disabled", "disabled");
+                input.classList.remove("card-data__value--is-active");
+                addMsg(item);
+            }
+        });
+    }
+
+    function addMsg(item) {
+        let div = document.createElement("div");
+        div.className = "card-data__msg";
+        div.innerHTML = "Изменения внесены";
+        item.append(div);
+
+        setTimeout(() => {
+            div.remove();
+        }, 1000);
+    }
+
+    const arrayItem = document.querySelectorAll(".card-data__row");
+    arrayItem.forEach(dataModification);
+})();
