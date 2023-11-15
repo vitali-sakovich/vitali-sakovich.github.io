@@ -4508,28 +4508,12 @@ input[type=number]:focus {
   background-image: linear-gradient(180deg, rgba(11, 11, 11, 0) 0%, rgba(5, 5, 5, 0.05) 100%);
   pointer-events: none;
 }
-.discount-panel::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: var(--discount-height);
-  max-height: 100%;
-  background-color: #4b8702;
-}
 @media screen and (max-width: 849.98px) {
   .discount-panel--basket {
     grid-template-rows: 3.9375em;
     grid-template-columns: 50% 25% 25%;
     -webkit-box-shadow: 0em 0em 0.9375em rgba(0, 0, 0, 0.5);
     box-shadow: 0em 0em 0.9375em rgba(0, 0, 0, 0.5);
-  }
-  .discount-panel--basket::before {
-    height: 100%;
-    width: var(--discount-height);
-    top: 0;
-    right: auto;
   }
 }
 .discount-panel__box {
@@ -4546,6 +4530,12 @@ input[type=number]:focus {
   align-items: center;
   border-top: 0.1875em solid #fe7200;
   padding-top: 0.4375em;
+}
+.discount-panel__box--active {
+  --discount-panel-percentage-bg: #533DD4;
+  --discount-panel-color: #fff;
+  background-color: #4B8702;
+  border-color: #fff;
 }
 @media screen and (max-width: 849.98px) {
   .discount-panel--basket .discount-panel__box {
@@ -4582,16 +4572,19 @@ input[type=number]:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #575757;
+  color: var(--discount-panel-color, #575757);
   font-weight: 600;
   font-size: 0.875em;
-  margin-bottom: 0.3571428571em;
+  margin-bottom: 0.4285714286em;
 }
 .discount-panel__percentage {
   font-size: 1.0625em;
   color: #4b8702;
+  color: var(--discount-panel-color, #4b8702);
   font-weight: 700;
-  background: inherit;
+  background-color: var(--discount-panel-percentage-bg);
+  border-radius: 0.4117647059em;
+  padding: 0.1176470588em 0.5882352941em;
 }
 .discount-panel__inner {
   display: -webkit-box;
@@ -4604,9 +4597,6 @@ input[type=number]:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.3125em 0.625em;
-  background-color: #e3dbe7;
-  border-radius: 0.3125em;
 }
 
 .discount-panel-wrapper {
