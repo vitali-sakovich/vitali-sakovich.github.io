@@ -470,9 +470,7 @@
     will-change: height;
 
     &__wrapper {
-        padding-top: em(49, $fz);
-        padding-bottom: em(46, $fz);
-        padding-left: em(134, $fz);
+        padding: em(49 50 46 134, $fz);
 
         @media screen and (max-width: 1499.98px) {
             padding-left: em(43, $fz);
@@ -502,16 +500,13 @@
     }
 
     &__list {
-        column-count: 2;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-column-gap: em(40, $fz);
         margin-bottom: em(75, $fz);
-        column-gap: 10%;
-        max-width: em(904, $fz);
 
-        @media screen and (max-width: 1499.98px) {
-            max-width: em(804, $fz);
-        }
         @media screen and (max-width: 1149.98px) {
-            column-count: 1;
+            grid-template-columns: 1fr;
             margin-bottom: em(25, $fz);
         }
         @media screen and (max-width: 499.98px) {
@@ -521,12 +516,12 @@
 
     &__item {
         display: grid;
-        grid-template-columns: em(150 285, $fz);
+        grid-template-columns: em(150, $fz) auto;
         grid-column-gap: em(35, $fz);
         margin-bottom: em(20, $fz);
 
         @media screen and (max-width: 1499.98px) {
-            grid-template-columns: em(145 220, $fz);
+            grid-template-columns: em(145, $fz) auto;
         }
         @media screen and (max-width: 1149.98px) {
             grid-template-columns: em(150, $fz) auto;

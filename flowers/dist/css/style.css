@@ -8507,9 +8507,7 @@ input[type=number]:focus {
   will-change: height;
 }
 .order-details__wrapper {
-  padding-top: 3.0625em;
-  padding-bottom: 2.875em;
-  padding-left: 8.375em;
+  padding: 3.0625em 3.125em 2.875em 8.375em;
 }
 @media screen and (max-width: 1499.98px) {
   .order-details__wrapper {
@@ -8541,25 +8539,14 @@ input[type=number]:focus {
   }
 }
 .order-details__list {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 2.5em;
   margin-bottom: 4.6875em;
-  -webkit-column-gap: 10%;
-  -moz-column-gap: 10%;
-  column-gap: 10%;
-  max-width: 56.5em;
-}
-@media screen and (max-width: 1499.98px) {
-  .order-details__list {
-    max-width: 50.25em;
-  }
 }
 @media screen and (max-width: 1149.98px) {
   .order-details__list {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
+    grid-template-columns: 1fr;
     margin-bottom: 1.5625em;
   }
 }
@@ -8570,13 +8557,13 @@ input[type=number]:focus {
 }
 .order-details__item {
   display: grid;
-  grid-template-columns: 9.375em 17.8125em;
+  grid-template-columns: 9.375em auto;
   grid-column-gap: 2.1875em;
   margin-bottom: 1.25em;
 }
 @media screen and (max-width: 1499.98px) {
   .order-details__item {
-    grid-template-columns: 9.0625em 13.75em;
+    grid-template-columns: 9.0625em auto;
   }
 }
 @media screen and (max-width: 1149.98px) {
