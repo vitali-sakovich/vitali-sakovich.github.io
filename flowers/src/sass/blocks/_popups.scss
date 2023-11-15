@@ -1308,6 +1308,18 @@
                 border-right: em(3, $fz) solid #fe7200;
             }
         }
+
+        @media screen and (max-width: 849.98px) {
+            &:nth-child(1) {
+                order: 3;
+            }
+            &:nth-child(2) {
+                order: 2;
+            }
+            &:nth-child(3) {
+                order: 1;
+            }
+        }
     }
 
     &__cost {
@@ -1324,6 +1336,16 @@
         font-size: em($fz, $fz_base);
         color: #4b8702;
         font-weight: 700;
+        background: inherit;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: em(5 10px, $fz);
+        background-color: #e3dbe7;
+        border-radius: em(5, $fz);
     }
 }
 

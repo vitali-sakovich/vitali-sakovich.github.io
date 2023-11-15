@@ -4561,6 +4561,23 @@ input[type=number]:focus {
     border-right: 0.1875em solid #fe7200;
   }
 }
+@media screen and (max-width: 849.98px) {
+  .discount-panel__box:nth-child(1) {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  .discount-panel__box:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .discount-panel__box:nth-child(3) {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
 .discount-panel__cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4574,6 +4591,22 @@ input[type=number]:focus {
   font-size: 1.0625em;
   color: #4b8702;
   font-weight: 700;
+  background: inherit;
+}
+.discount-panel__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.3125em 0.625em;
+  background-color: #e3dbe7;
+  border-radius: 0.3125em;
 }
 
 .discount-panel-wrapper {
