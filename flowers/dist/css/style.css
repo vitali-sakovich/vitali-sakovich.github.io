@@ -4514,6 +4514,7 @@ input[type=number]:focus {
   bottom: 0;
   right: 0;
   left: 0;
+  height: var(--discount-height);
   max-height: 100%;
   background-color: #4b8702;
 }
@@ -8093,7 +8094,7 @@ input[type=number]:focus {
 @media screen and (max-width: 499.98px) {
   .card-data__row {
     grid-column-gap: 0;
-    grid-template-columns: 5.375em 1fr 2.25em;
+    grid-template-columns: 5.375em minmax(6.25em, 1fr) 2.25em;
   }
 }
 .card-data__btn {

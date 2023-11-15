@@ -154,7 +154,7 @@
 
         @media screen and (max-width: 499.98px) {
             grid-column-gap: 0;
-            grid-template-columns: em(86, $fz) 1fr em(36, $fz);
+            grid-template-columns: em(86, $fz) minmax(em(100, $fz), 1fr) em(36, $fz);
         }
     }
 
