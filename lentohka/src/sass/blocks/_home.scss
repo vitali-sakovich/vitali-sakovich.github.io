@@ -1,0 +1,584 @@
+.preview {
+    display: flex;
+    flex-direction: column;
+    padding-right: 3.85%;
+    padding-left: 2.2%;
+    overflow: hidden;
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-right: 1.7%;
+        padding-left: 3.5%;
+    }
+    
+    &__container {
+        flex-grow: 1;
+        height: em(726, $fz);
+        
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            height: em(435, $fz);
+        }
+    }
+
+    &__slider {
+        --swiper-pagination-bottom: #{em(12, $fz)};
+        --swiper-pagination-bullet-border-radius: 0;
+        --swiper-pagination-bullet-width: 100%;
+        --swiper-pagination-bullet-height: #{em(5, $fz)};
+        --swiper-pagination-bullet-horizontal-gap: #{em(10, $fz)};
+        --swiper-pagination-bullet-inactive-color: hsl(0, 0%, 100%);
+        --swiper-pagination-bullet-inactive-opacity: 0.3;
+        --swiper-pagination-color: hsla(0, 0%, 100%, 0.7);
+        width: 100%;
+        height: 100%;
+    }
+
+    &__slide,
+    &__content {
+        display: grid;
+    }
+
+    &__slide {
+        flex-grow: 1;
+        overflow: hidden;
+        border-radius: em(10, $fz);
+        background-color: hsl(197, 98%, 17%);    
+
+        &::after{
+            content: "";
+            position: absolute;
+            background: url("../../img/home-priview-gradient.png") top/100% 100% no-repeat;
+            width: em(814, $fz);
+            height: em(726, $fz);
+            pointer-events: none;
+        }
+    }
+
+    &__content,
+    &__picture {
+        grid-area: -1/1;
+    }
+
+    &__picture {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    &__content {
+        position: relative;
+        flex-grow: 1;
+        z-index: 1;
+        align-items: start;
+        align-content: center;
+        padding: 0 8.2% em(12, $fz); 
+        grid-row-gap: em(66, $fz);
+        overflow: hidden;
+
+        @media screen and (max-width: $breakpoint_HD_plus) {
+            padding-left: 3.7%;
+        }
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            padding-left: 7.1%;
+            grid-row-gap: em(26, $fz);
+        }
+    }
+
+    &__btn {
+        width: em(235, $fz);
+    }
+
+    &__title,
+    &__text {
+        color: hsl(0, 0%, 100%);
+    }
+
+    &__title {
+        $fz: 44;
+        font-size: em($fz, $fz_base);
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 600;
+        max-width: em(400, $fz);
+    }
+
+    &__text {
+        $fz: 26;
+        font-size: em($fz, $fz_base);
+        max-width: em(470, $fz);
+    }
+
+    &__img {
+        height: 100%;
+        width: auto;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        padding-right: 7.7%;
+        padding-left: 7.7%;
+
+        @media screen and (max-width: $breakpoint_HD_plus) {
+            padding-right: 3%;
+            padding-left: 3%; 
+        }
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            padding-right: 6.3%;
+            padding-left: 6.3%; 
+        }
+    }
+}
+
+.home-catalog,
+.home-advantages,
+.home-map,
+.home-about {
+    padding-right: var(--home-section-padding-right, 9.9%);
+    padding-left: var(--home-section-padding-left, 10%);
+
+    @media screen and (max-width: $breakpoint_HD_plus) {
+        padding-right: var(--home-section-padding-right, 5.7%);
+        padding-left: var(--home-section-padding-left, 5.7%);
+    }
+    
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-right: var(--home-section-padding-right, 9%);
+        padding-left: var(--home-section-padding-left, 10.2%);
+    }
+}
+
+.home-catalog {
+    $self: &;
+    display: flex;
+    padding-top: em(102, $fz);
+    padding-bottom: em(102, $fz);
+
+    &__container,
+    &__link {
+        display: grid;
+    }
+    &__container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: em(28, $fz);
+        max-width: em(1440, $fz);
+        width: 100%;
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__link {
+        background-color: hsl(0, 0%, 91%);
+        border-radius: em(10, $fz);
+        min-height: em(252, $fz);
+        transition: 0.3s background-color;
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            min-height: em(344, $fz);
+        }
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                --home-catalog-text-color: hsl(0, 0%, 100%);
+                --home-catalog-fill-icon: hsla(0, 0%, 100%, 0.5);
+                background-color: hsl(198, 100%, 45%);
+            }
+        }
+
+        &:first-child {
+            grid-column: 1/3;
+
+            #{$self}__picture {
+                margin-bottom: em(20, $fz);
+            }
+
+            #{$self}__img {
+                width: em(356, $fz);
+                height: em(145, $fz);
+
+                @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+                    width: em(487, $fz);
+                    height: em(203, $fz);
+                }
+            }
+        }
+    }
+
+    &__content,
+    &__picture {
+        grid-area: -1/1;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: em(31 28 27, $fz);
+    }
+
+    &__text {
+        $fz: 26;
+        font-size: em($fz, $fz_base);
+        transition: color 0.3s;
+        color: var(--home-catalog-text-color, hsl(198, 100%, 38%));
+        font-weight: 600;
+        line-height: 1.07;
+    }
+
+    &__icon {
+        width: em(38, $fz);
+        height: em(38, $fz);
+        fill: var(--home-catalog-fill-icon, hsla(0, 0%, 0%, 0.5));
+        transition: fill 0.3s;
+    }
+
+    &__picture {
+        display: flex;
+        justify-self: end;
+        align-self: end;
+    }
+
+    &__img {
+        width: em(206, $fz);
+        height: em(174, $fz);
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            width: em(280, $fz);
+            height: em(174, $fz);
+        }
+    }
+}
+
+.home-advantages {
+    $self: &;
+    display: flex;
+    background-color: hsl(198, 100%, 38%);
+    padding-top: em(100, $fz);
+    padding-bottom: em(100, $fz);
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-top: em(90, $fz);
+        padding-bottom: em(90, $fz);
+    }
+
+    &__container {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, em(302, $fz));
+        width: 100%;
+        max-width: em(1440, $fz);
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            grid-template-columns: repeat(2, em(302, $fz));
+            grid-row-gap: em(80, $fz);
+            max-width: em(807, $fz);
+        }
+    }
+
+    &__item {
+        #{$self}--first & {
+            &:first-child {
+                --home-advantages-text-width: #{em(200, $fz)};
+            }
+        }
+
+        #{$self}--second & {
+            &:first-child {
+                --home-advantages-text-width: #{em(220, $fz)};
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                --home-advantages-text-width: #{em(210, $fz)};
+            }
+        }
+    }
+
+    &__icon {
+        fill: hsl(198, 100%, 68%);
+        width: em(143, $fz);
+        height: em(128, $fz);
+        margin-bottom: em(40, $fz);
+    }
+
+    &__text {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+        line-height: 1.3;
+        color: hsl(0, 0%, 100%);
+        max-width: var(--home-advantages-text-width);
+    }
+}
+
+.home-about {
+    display: flex;
+    justify-content: flex-end;
+    min-height: em(780, $fz);
+
+    @media screen and (min-width: 900px) {
+        --home-section-padding-right: 0;
+    }
+
+    &__container {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: 1fr minmax(em(418, $fz), em(878, $fz));
+        grid-column-gap: em(100, $fz);
+        width: 100%;
+        max-width: em(1635, $fz);
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            grid-template-columns: minmax(em(334, $fz), em(426, $fz)) minmax(em(418, $fz), em(878, $fz));
+        }
+    }
+
+    &__picture {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: em(878, $fz);
+        height: em(780, $fz);
+    }
+
+    &__title {
+        $fz: 44;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+    }
+
+    &__text {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        line-height: 1.66;
+        margin-top: em(40, $fz);
+        max-width: em(480, $fz);
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        margin-top: em(57, $fz);
+    }
+
+    &__btn {
+        height: em(62, $fz);
+    
+
+        &--video {
+            width: em(273, $fz);
+            margin-right: em(73, $fz);
+
+            @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+                margin-right: em(30, $fz);
+            }
+        }
+
+        &--more {
+            width: em(170, $fz);
+        }
+    }
+}
+
+.btn-more,
+.btn-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-secondary {
+    border-radius: em(40, $fz);
+    background-color: var(--btn-secondar-bg, hsl(198, 100%, 38%));
+    color: var(--btn-secondar-color, hsl(0, 0%, 100%));
+    transition: background-color 0.3s;
+
+    &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+            --btn-secondar-bg: hsl(198, 100%, 30%);
+        }
+    }
+
+    &__label {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        font-weight: var(--btn-secondar-label-weight, 500);
+    }
+
+    &__icon {
+        fill: var(--btn-secondar-icon-fill, transparent);
+        stroke: var(--btn-secondar-icon-stroke, currentColor);
+        width: em(27, $fz);
+        height: em(27, $fz);
+        margin-right: var(--btn-secondar-icon-margin-right, em(22, $fz));
+        margin-left: var(--btn-secondar-icon-margin-left);
+    }
+}
+
+.btn-more {
+    color: hsl(198, 100%, 45%);
+    transition: color 0.3s;
+
+    &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+              color: hsl(198, 100%, 30%);
+        }
+    }
+
+    &__label {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        margin-right: em(14, $fz);
+    }
+
+    &__icon {
+        width: em(28, $fz);
+        height: em(10, $fz);
+        fill: currentColor;
+        transition: fill 0.3s;
+    }
+}
+
+.home-map {
+    background: linear-gradient(180deg, rgba(24, 82, 112, 0.00) 0.05%, #15516F 45%, hsl(200, 68%, 26%) 100%) center bottom/ 100% em(373, $fz) no-repeat,
+    url("../../img/home-map.jpg") top center/em(1829 811, $fz) no-repeat;
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        background-size: 100% em(430, $fz), em(1829 811, $fz);
+    }
+    min-height: em(1008, $fz);
+    padding-top: em(88, $fz);
+    padding-bottom: em(116, $fz);
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-bottom: em(65, $fz);
+        min-height: em(1050, $fz);
+    }
+
+    &,
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__container {
+        flex-grow: 1;
+    }
+
+    &__title,
+    &__text,
+    &__name {
+        color: hsl(0, 0%, 100%);
+        font-weight: 600;
+    }
+
+    &__title {
+        $fz: 44;
+        font-size: em($fz, $fz_base);
+        max-width: em(361, $fz);
+        margin-bottom: em(21, $fz);
+    }
+
+    &__text {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+    }
+
+    &__list {
+        display: grid;
+        justify-content: space-between;
+        margin-top: auto;
+        grid-template-columns: repeat(2, em(330, $fz)) em(411, $fz);
+        grid-row-gap: em(36, $fz);
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            grid-template-columns: em(377, $fz) em(411, $fz);
+        }
+    }
+
+    &__contacts {
+        display: flex;
+    }
+
+    &__name {
+        $fz: 24;
+        display: block;
+        font-size: em($fz, $fz_base);
+        margin-bottom: em(9, $fz);
+    }
+
+    &__address {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        color: hsl(0, 0%, 100%);
+        margin-right: em(23, $fz);
+    }
+
+    &__link {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        font-weight: 500;
+        color: hsl(198, 100%, 77%);
+        transition: color 0.3s;
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                color: hsl(198, 100%, 60%);
+          }
+        }
+    }
+}
+
+.section-form {
+    display: flex;
+    padding-top: em(106, $fz);
+    padding-bottom: em(72, $fz);
+    background: url("../../img/section-form.png") center top/cover no-repeat, hsl(200, 68%, 26%);
+
+    &--center {
+        @media screen and (min-width: $breakpoint_laptop_m) {
+            justify-content: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            padding-right: 9%;
+            padding-left: 10.2%;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: em(390 415, $fz);
+        grid-column-gap: em(95, $fz);
+    }
+
+    &__title,
+    &__text {
+        color: hsl(0, 0%, 100%);
+    }
+
+    &__title {
+        $fz: 44;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+        margin-bottom: em(23, $fz);
+    }
+
+    &__text {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        line-height: 1.35;
+        max-width: em(368, $fz);
+    }
+}

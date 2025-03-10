@@ -1,0 +1,219 @@
+@import "normalize";
+@import "fonts";
+@import "function";
+
+$breakpoint-hover: 1024px;
+
+$breakpoint_FullHD: 1920px;
+$breakpoint_HD_plus: 1680px;
+$breakpoint_laptop_l: 1600px;
+$breakpoint_laptop_m: 1440px;
+$breakpoint_laptop_s: 1366px;
+$breakpoint_HD: 1280px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100%;
+
+    @media screen and (min-width: 2000px) {
+        font-size: 0.75vw;
+    }
+    @media screen and (min-width: 950px) {
+        padding-left: em(91, $fz);
+    }
+
+    &.hidden {
+        scrollbar-gutter: stable;
+        overflow: hidden;
+    }
+}
+
+header,
+footer {
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    width: 100%;
+    min-height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.error-text {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 16.7%;
+    color: hsl(0, 100%, 50%);
+}
+
+.error[data-type="validator-error"] {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    text-align: right;
+    font-size: 12px;
+    color: hsl(0, 100%, 50%);
+    margin-top: 2px;
+}
+
+.btn {
+    $self: &;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: inherit;
+    padding: em(15, $fz);
+    min-height: em(48, $fz);
+    border-radius: em(5, $fz);
+    transition: background-color 0.3s;
+    color: hsl(0, 0%, 100%);
+
+    &--primary {
+        --btn-text-weight: 500;
+        background-color: hsl(198, 100%, 45%);
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                background-color: hsl(198, 100%, 35%);
+            }
+        }
+    }
+
+    &--border {
+        border: 1px solid hsl(0, 0%, 100%);
+        background-color: transparent;
+        transition: border 0.3s, background-color 0.3s;
+
+        &:not(:disabled):hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                background-color: hsl(198, 100%, 45%);
+                border-color: hsl(198, 100%, 45%);
+            }
+        }
+    }
+
+    &__text {
+        font-weight: var(--btn-text-weight);
+    }
+}
+
+@mixin scrollbar {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @supports (scrollbar-width: auto) {
+        scrollbar-width: auto;
+    }
+
+    @-moz-document url-prefix() {
+        scrollbar-width: thin;
+        scrollbar-color: hsla(0, 0%, 100%, 0.15) transparent;
+        scrollbar-arrow-color: transparent;
+        scrollbar-face-color: transparent;
+        scrollbar-track-color: transparent;
+        scrollbar-base-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: em(5, $fz);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: hsla(0, 0%, 100%, 0.15);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2eef4;
+    z-index: 1003;
+    transition: opacity 0.1s;
+}
+
+.fancybox {
+    &__container {
+        --fancybox-bg: hsla(0, 0%, 100%, 0.65);
+        --fancybox-color: hsl(0, 0%, 0%);
+    }
+}
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/home";
+@import "blocks/popups";
+@import "blocks/forms";

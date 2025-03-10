@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Режущий инструмент любых видов</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="">
+        <link rel="stylesheet" href="./css/fancybox.css">
+        <link rel="stylesheet" href="./css/swiper.css">
+        <link rel="stylesheet" href="./css/nativejs-select.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <script src="./js/preloader.js"></script>
+
+        <header class="header header--home">
+            <div class="header__container">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#" class="header__link"> О компании </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link"> Лизинг </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link"> Акции </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link"> Блог </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__wrap">
+                    <div class="header-networks header__networks">
+                        <a href="#" target="_blank" class="header-networks__link">
+                            <svg width="22" height="23" aria-hidden="true" class="header-networks__icon">
+                                <use xlink:href="./img/icons-sprite.svg#viber"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="header-networks__link">
+                            <svg width="25" height="21" aria-hidden="true" class="header-networks__icon">
+                                <use xlink:href="./img/icons-sprite.svg#telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="header-networks__link">
+                            <svg width="25" height="20" aria-hidden="true" class="header-networks__icon">
+                                <use xlink:href="./img/icons-sprite.svg#mail"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header-phone header__phone">
+                        <a href="tel: 83912745455" class="header-phone__link">
+                            <span class="header-phone__text">
+                                8 391 274-54-55
+                            </span>
+                            <svg width="14" height="8" aria-hidden="true" class="header-phone__icon">
+                                <use xlink:href="./img/icons-sprite.svg#arrow-drop"></use>
+                            </svg>
+                        </a>
+                        <div class="header-phone__dropdown">
+                            <a href="tel: 89504200020" class="header-phone__link header-phone__link--size-s">
+                                8 (950) 420-00-20
+                            </a>
+                            <button data-open-modal=".popup--call" class="header-phone__btn js-open-modal">
+                                <span class="header-phone__label">
+                                    перезвоните мне
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <button data-open-modal=".popup--search" class="header-btn-search header__btn js-open-modal">
+                        <span class="header-btn-search__text">
+                            Поиск по товарам
+                        </span>
+                        <svg width="24" height="23" aria-hidden="true" class="header-btn-search__icon">
+                            <use xlink:href="./img/icons-sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-sidebar header__sidebar">
+                    <a href="/" class="header-sidebar__logo">
+                        <img width="70" height="60" src="./img/logo.svg" alt="Логотип" class="header-sidebar__img">
+                    </a>
+                    <div class="header-sidebar__box">
+                        <button type="button" data-open-modal=".popup--сatalog" class="header-sidebar__btn header-sidebar__btn--catalog js-open-modal js-popup-close">
+                            <svg width="32" height="33" aria-hidden="true" class="header-sidebar__icon header-sidebar__icon--catalog">
+                                <use xlink:href="./img/icons-sprite.svg#sidebar-btn-catalog-saw"></use>
+                            </svg>
+                            <span class="header-sidebar__text"> Каталог </span>
+                        </button>
+                        <button type="button" data-open-modal=".popup--services" class="header-sidebar__btn header-sidebar__btn--services js-open-modal js-popup-close">
+                            <span class="header-sidebar__icons">
+                                <svg width="17" height="17" aria-hidden="true" class="header-sidebar__icon header-sidebar__icon--services">
+                                    <use xlink:href="./img/icons-sprite.svg#sidebar-btn-services-star"></use>
+                                </svg>
+                                <svg width="32" height="13" aria-hidden="true" class="header-sidebar__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#sidebar-btn-services-saw"></use>
+                                </svg>
+                            </span>
+                            <span class="header-sidebar__text"> Услуги </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <section class="preview">
+                <div class="preview__container">
+                    <div class="swiper preview__slider js-preview-slider">
+                        <div class="swiper-wrapper preview__wrapper">
+                            <div class="swiper-slide preview__slide">
+                                <picture class="preview__picture">
+                                    <source srcset="./img/home-preview1.webp" type="image/webp">
+                                    <img src="./img/home-preview1.jpg" width="1721" height="726" alt="Режущий инструмент любых видов" class="preview__img">
+                                </picture>
+                                <div class="preview__content">
+                                    <h1 class="preview__title">
+                                        Режущий инструмент любых видов
+                                    </h1>
+                                    <p class="preview__text">
+                                        Ленточные пилы, дисковые пилы, рамные
+                                        пилы и многое другое
+                                    </p>
+                                    <a href="#" class="btn btn--border preview__btn">
+                                        <span class="btn__text">Подробнее</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide preview__slide">
+                                <picture class="preview__picture">
+                                    <source srcset="./img/home-preview2.webp" type="image/webp">
+                                    <img src="./img/home-preview2.jpg" width="1721" height="726" alt="Режущий инструмент любых видов" class="preview__img">
+                                </picture>
+                                <div class="preview__content">
+                                    <h1 class="preview__title">
+                                        Подготовка и обслуживание инструмента
+                                    </h1>
+                                    <p class="preview__text">
+                                        Заточка, сварка, напайка, правка,
+                                        вальцовка пил и инструментов
+                                    </p>
+                                    <a href="#" class="btn btn--border preview__btn">
+                                        <span class="btn__text">Подробнее</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="home-catalog">
+                <div class="home-catalog__container">
+                    <a href="#" class="home-catalog__link">
+                        <div class="home-catalog__content">
+                            <span class="home-catalog__text">Ленточные пилы</span>
+                            <svg width="32" height="33" aria-hidden="true" class="home-catalog__icon">
+                                <use xlink:href="./img/icons-sprite.svg#circle-arrow"></use>
+                            </svg>
+                        </div>
+                        <picture class="home-catalog__picture">
+                            <source srcset="./img/home-catalog/home-catalog1.webp" type="image/webp">
+                            <img src="./img/home-catalog/home-catalog1.png" width="356" height="145" alt="Ленточные пилы" class="home-catalog__img">
+                        </picture>
+                    </a>
+                    <a href="#" class="home-catalog__link">
+                        <div class="home-catalog__content">
+                            <span class="home-catalog__text">Дисковые пилы</span>
+                            <svg width="32" height="33" aria-hidden="true" class="home-catalog__icon">
+                                <use xlink:href="./img/icons-sprite.svg#circle-arrow"></use>
+                            </svg>
+                        </div>
+                        <picture class="home-catalog__picture">
+                            <source srcset="./img/home-catalog/home-catalog2.webp" type="image/webp">
+                            <img src="./img/home-catalog/home-catalog2.png" width="206" height="174" alt="Дисковые пилы" class="home-catalog__img">
+                        </picture>
+                    </a>
+                    <a href="#" class="home-catalog__link">
+                        <div class="home-catalog__content">
+                            <span class="home-catalog__text">Упаковочное оборудование</span>
+                            <svg width="32" height="33" aria-hidden="true" class="home-catalog__icon">
+                                <use xlink:href="./img/icons-sprite.svg#circle-arrow"></use>
+                            </svg>
+                        </div>
+                        <picture class="home-catalog__picture">
+                            <source srcset="./img/home-catalog/home-catalog3.webp" type="image/webp">
+                            <img src="./img/home-catalog/home-catalog3.png" width="206" height="174" alt="Упаковочное оборудование" class="home-catalog__img">
+                        </picture>
+                    </a>
+                    <a href="#" class="home-catalog__link">
+                        <div class="home-catalog__content">
+                            <span class="home-catalog__text">Запчасти и расходники</span>
+                            <svg width="32" height="33" aria-hidden="true" class="home-catalog__icon">
+                                <use xlink:href="./img/icons-sprite.svg#circle-arrow"></use>
+                            </svg>
+                        </div>
+                        <picture class="home-catalog__picture">
+                            <source srcset="./img/home-catalog/home-catalog4.webp" type="image/webp">
+                            <img src="./img/home-catalog/home-catalog4.png" width="206" height="174" alt="Запчасти и расходники" class="home-catalog__img">
+                        </picture>
+                    </a>
+                    <a href="#" class="home-catalog__link">
+                        <div class="home-catalog__content">
+                            <span class="home-catalog__text">Оборудование</span>
+                            <svg width="32" height="33" aria-hidden="true" class="home-catalog__icon">
+                                <use xlink:href="./img/icons-sprite.svg#circle-arrow"></use>
+                            </svg>
+                        </div>
+                        <picture class="home-catalog__picture">
+                            <source srcset="./img/home-catalog/home-catalog5.webp" type="image/webp">
+                            <img src="./img/home-catalog/home-catalog5.png" width="206" height="174" alt="Оборудование" class="home-catalog__img">
+                        </picture>
+                    </a>
+                    <a href="#" class="home-catalog__link">
+                        <div class="home-catalog__content">
+                            <span class="home-catalog__text">Ножи, фрезы, бланкеты</span>
+                            <svg width="32" height="33" aria-hidden="true" class="home-catalog__icon">
+                                <use xlink:href="./img/icons-sprite.svg#circle-arrow"></use>
+                            </svg>
+                        </div>
+                        <picture class="home-catalog__picture">
+                            <source srcset="./img/home-catalog/home-catalog6.webp" type="image/webp">
+                            <img src="./img/home-catalog/home-catalog6.png" width="206" height="174" alt="Ножи, фрезы, бланкеты" class="home-catalog__img">
+                        </picture>
+                    </a>
+                    <a href="#" class="home-catalog__link">
+                        <div class="home-catalog__content">
+                            <span class="home-catalog__text">Аспирация</span>
+                            <svg width="32" height="33" aria-hidden="true" class="home-catalog__icon">
+                                <use xlink:href="./img/icons-sprite.svg#circle-arrow"></use>
+                            </svg>
+                        </div>
+                        <picture class="home-catalog__picture">
+                            <source srcset="./img/home-catalog/home-catalog7.webp" type="image/webp">
+                            <img src="./img/home-catalog/home-catalog7.png" width="206" height="174" alt="Аспирация" class="home-catalog__img">
+                        </picture>
+                    </a>
+                </div>
+            </section>
+            <section class="home-advantages home-advantages--first">
+                <div class="home-advantages__container">
+                    <div class="home-advantages__item">
+                        <svg width="143" height="128" aria-hidden="true" class="home-advantages__icon">
+                            <use xlink:href="./img/icons-sprite.svg#home-advantages1"></use>
+                        </svg>
+                        <p class="home-advantages__text">
+                            Товар всегда в наличии на складе
+                        </p>
+                    </div>
+                    <div class="home-advantages__item">
+                        <svg width="143" height="128" aria-hidden="true" class="home-advantages__icon">
+                            <use xlink:href="./img/icons-sprite.svg#home-advantages2"></use>
+                        </svg>
+                        <p class="home-advantages__text">
+                            Цены заводов производителей
+                        </p>
+                    </div>
+                    <div class="home-advantages__item">
+                        <svg width="143" height="128" aria-hidden="true" class="home-advantages__icon">
+                            <use xlink:href="./img/icons-sprite.svg#home-advantages3"></use>
+                        </svg>
+                        <p class="home-advantages__text">
+                            Оперативная отправка любыми транспортными компаниями
+                        </p>
+                    </div>
+                    <div class="home-advantages__item">
+                        <svg width="143" height="128" aria-hidden="true" class="home-advantages__icon">
+                            <use xlink:href="./img/icons-sprite.svg#home-advantages4"></use>
+                        </svg>
+                        <p class="home-advantages__text">
+                            Собственное производство, немецкое оборудование
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="home-about">
+                <div class="home-about__container">
+                    <div class="home-about__content">
+                        <h2 class="home-about__title">О компании</h2>
+                        <p class="home-about__text">
+                            Компания «Ленточка» является узкоспециализированным
+                            предприятием, направленным на реализацию
+                            индустриального режущего инструмента.
+                        </p>
+                        <p class="home-about__text">
+                            Более 17 лет успешно занимается изготовлением и
+                            реализацией ленточных и дисковых пил для различных
+                            отраслей промышленности. А так же оборудования во
+                            всех сферах переработки сырья.
+                        </p>
+                        <div class="home-about__btns">
+                            <a href="https://www.youtube.com/watch?v=aUrIJUD3Ui0&ab_channel=ArminvanBuuren" data-fancybox="about" class="btn-secondary home-about__btn home-about__btn--video">
+                                <svg width="27" height="27" aria-hidden="true" class="btn-secondary__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#triangle"></use>
+                                </svg>
+                                <span class="btn-secondary__label">Видео о нас</span>
+                            </a>
+                            <a href="#" class="btn-more home-about__btn home-about__btn--more">
+                                <span class="btn-more__label">Подробнее</span>
+                                <svg width="28" height="10" aria-hidden="true" class="btn-more__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#arrow-btn"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <picture class="home-about__picture">
+                        <source srcset="./img/home-about.webp" type="image/webp">
+                        <img src="./img/home-about.png" width="878" height="779" alt="О компании" class="home-about__img">
+                    </picture>
+                </div>
+            </section>
+            <section class="home-advantages home-advantages--second">
+                <div class="home-advantages__container">
+                    <div class="home-advantages__item">
+                        <svg width="143" height="128" aria-hidden="true" class="home-advantages__icon">
+                            <use xlink:href="./img/icons-sprite.svg#home-advantages5"></use>
+                        </svg>
+                        <p class="home-advantages__text">
+                            Гарантия на инструмент и оборудование
+                        </p>
+                    </div>
+                    <div class="home-advantages__item">
+                        <svg width="143" height="128" aria-hidden="true" class="home-advantages__icon">
+                            <use xlink:href="./img/icons-sprite.svg#home-advantages6"></use>
+                        </svg>
+                        <p class="home-advantages__text">
+                            Разнообразие товаров в одном месте
+                        </p>
+                    </div>
+                    <div class="home-advantages__item">
+                        <svg width="143" height="128" aria-hidden="true" class="home-advantages__icon">
+                            <use xlink:href="./img/icons-sprite.svg#home-advantages7"></use>
+                        </svg>
+                        <p class="home-advantages__text">
+                            Обучение после внедрения
+                        </p>
+                    </div>
+                    <div class="home-advantages__item">
+                        <svg width="143" height="128" aria-hidden="true" class="home-advantages__icon">
+                            <use xlink:href="./img/icons-sprite.svg#home-advantages8"></use>
+                        </svg>
+                        <p class="home-advantages__text">
+                            Технические консультации от обученых специалистов
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="home-map">
+                <div class="home-map__container">
+                    <h2 class="home-map__title">
+                        Мы работаем в семи городах Сибири
+                    </h2>
+                    <p class="home-map__text">И доставляем по всей стране</p>
+                    <div class="home-map__list">
+                        <div class="home-map__item">
+                            <span class="home-map__name">Красноярск</span>
+                            <div class="home-map__contacts">
+                                <span class="home-map__address">
+                                    Калинина 91
+                                </span>
+                                <a href="tel: +73912745455" class="home-map__link">+7 (391) 274-54-55</a>
+                            </div>
+                        </div>
+                        <div class="home-map__item">
+                            <span class="home-map__name">Ачинск</span>
+                            <div class="home-map__contacts">
+                                <span class="home-map__address">
+                                    5 Июля, 17а
+                                </span>
+                                <a href="tel: +79029100005" class="home-map__link">+7 (902) 910-00-05</a>
+                            </div>
+                        </div>
+                        <div class="home-map__item">
+                            <span class="home-map__name">Лесосибирск</span>
+                            <div class="home-map__contacts">
+                                <span class="home-map__address">
+                                    Енисейская 23,а
+                                </span>
+                                <a href="tel: +79029100077" class="home-map__link">+7 (902) 910-00-77</a>
+                            </div>
+                        </div>
+                        <div class="home-map__item">
+                            <span class="home-map__name">Абакан</span>
+                            <div class="home-map__contacts">
+                                <span class="home-map__address">
+                                    Хлебная, 14
+                                </span>
+                                <a href="tel: +79532555520" class="home-map__link">+7 (953) 255-55-20</a>
+                            </div>
+                        </div>
+                        <div class="home-map__item">
+                            <span class="home-map__name">Канск</span>
+                            <div class="home-map__contacts">
+                                <span class="home-map__address">
+                                    Залесная, 2
+                                </span>
+                                <a href="tel: +79504010001" class="home-map__link">+7 (950) 401-00-01</a>
+                            </div>
+                        </div>
+                        <div class="home-map__item">
+                            <span class="home-map__name">Томск</span>
+                            <div class="home-map__contacts">
+                                <span class="home-map__address">
+                                    Айвазовского, 27с1
+                                </span>
+                                <a href="tel: +79504200040" class="home-map__link">+7 (950) 420-00-40</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-form section-form--center">
+                <div class="section-form__container">
+                    <div class="section-form__content">
+                        <h2 class="section-form__title">Оставьте заявку</h2>
+                        <p class="section-form__text">
+                            Пожалуйста, заполните все поля. Наш специалист
+                            свяжется с вами в ближайшее время.
+                        </p>
+                    </div>
+                    <form action="#" class="form section-form__form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя*</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон*</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                                <span class="btn__text">Отправить</span>
+                            </button>
+                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer footer--home">
+            <div class="footer__container">
+                <div class="footer-nav footer__nav">
+                    <a href="#" class="footer-nav__link">О компании</a>
+                    <a href="#" class="footer-nav__link">Доставка и оплата</a>
+                    <a href="#" class="footer-nav__link">Лизинг</a>
+                    <a href="#" class="footer-nav__link">Акции</a>
+                    <a href="#" class="footer-nav__link">Блог</a>
+                    <a href="#" class="footer-nav__link">Контакты</a>
+                </div>
+                <div class="footer-contact footer__contact">
+                    <div class="footer-contact__item">
+                        <div class="footer-contact__wrap">
+                            <svg width="12" height="20" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#phone"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <a href="tel: +7 (391) 274-54-55" class="footer-contact__link">+7 (391) 274-54-55</a>
+                            <a href="tel: 89504200020" class="footer-contact__link">8 (950) 420-00-20</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item footer-contact__item--clocks">
+                        <div class="footer-contact__wrap">
+                            <svg width="17" height="17" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#clocks"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <span class="footer-contact__link">Ежедневно 9:00 – 18:00</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item footer-contact__item--address">
+                        <div class="footer-contact__wrap">
+                            <svg width="14" height="20" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#marker"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <span class="footer-contact__link">Красноярск, Калинина, 91, оф. 1-1</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item">
+                        <div class="footer-contact__wrap">
+                            <svg width="20" height="16" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#mail"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <a href="mailto: lenta.kr@mail.ru" class="footer-contact__link">lenta.kr@mail.ru</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item">
+                        <div class="footer-contact__wrap">
+                            <svg width="20" height="21" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#viber"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <a href="#" class="footer-contact__link">lentochka</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item">
+                        <div class="footer-contact__wrap">
+                            <svg width="19" height="16" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#telegram"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <a href="#" class="footer-contact__link">lentochka</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <span class="footer__copyright"> 2025 © Ленточка </span>
+                    <div class="footer__wrap">
+                        <a href="#" class="footer__link">Политика конфиденциальности</a>
+                        <a href="#" class="footer__link">Согласие на обработку персональных данных</a>
+                    </div>
+                    <a href="https://websalt.ru/" target="_blank" class="footer__link">
+                        Создание сайта
+                        <img width="76" height="13" src="./img/salt.png" alt="Создание сайта" class="footer__img">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- попап Каталог  -->
+        <div class="popup popup--sidebar popup--сatalog">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="sidebar popup__sidebar">
+                <div class="sidebar__header">
+                    <h2 class="sidebar__title">Каталог</h2>
+                    <button type="button" class="sidebar__close js-popup-close">
+                        <svg width="38" height="38" aria-hidden="true" class="sidebar__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="sidebar-catalog sidebar-catalog--catalog sidebar__catalog">
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Ленточные пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Пилы для пилорам
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Пилы по мясу
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Пилы по металлу
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Пилы столярные
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Дисковые пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Для кромкообрезных
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Для многопильных станков
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Для торцовых станков
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Для столярных работ
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Запчасти и расходники
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Абразивные камни
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Алмазные камни
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Расходные материалы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link"> РТИ </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Упаковочное оборудование
+                        </a>
+                        <a href="#" class="sidebar-catalog__link"> Упаковка </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Ручной инструмент
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Упаковочное оборудование
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Ножи, фрезы, бланкеты
+                        </a>
+                        <a href="#" class="sidebar-catalog__link"> Ножи </a>
+                        <a href="#" class="sidebar-catalog__link"> Фрезы </a>
+                        <a href="#" class="sidebar-catalog__link"> Бланкеты </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Асперация
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Воздуховоды
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Асперационные системы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Вентиляторы
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Оборудование
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Деревообработка
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Металлообработка
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Услуг  -->
+        <div class="popup popup--sidebar popup--services">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="sidebar popup__sidebar">
+                <div class="sidebar__header">
+                    <h2 class="sidebar__title">Услуги</h2>
+                    <button type="button" class="sidebar__close js-popup-close">
+                        <svg width="38" height="38" aria-hidden="true" class="sidebar__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="sidebar-catalog sidebar-catalog--services sidebar__catalog">
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка и разводка ленточных пил
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Сварка, ремонт ленточной пилы
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка дисковых пил
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Переоснащение дисковой пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Восстановление тела дисковой пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Правка дисковой пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Выполнение крепежных отверстий дисковой пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Расточка посадочного отверстия дисковой пилы
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка концевых фрез
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ножа для рейсмуса
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ножа для рубанка
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ножа для фуганка
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ножей для мясорубки
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка рубительных ножей
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ручных пищевых ножей
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Заказать звонок  -->
+        <div class="popup popup--call">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Заказать звонок</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <p class="popup__text">
+                        Оставьте контактные данные и мы свяжемся с вами для
+                        уточнения деталей
+                    </p>
+                    <form action="#" class="form form-popup popup__form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя *</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон *</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                                <span class="btn__text">Заказать звонок</span>
+                            </button>
+                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Заказать  -->
+        <div class="popup popup--order">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Заказать</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup popup__form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                                <span class="btn__text">Заказать</span>
+                            </button>
+                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Заказать услугу  -->
+        <div class="popup popup--order">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Заказать услугу</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup popup__form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                                <span class="btn__text">Заказать услугу</span>
+                            </button>
+                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/fancybox.js"></script>
+        <script src="./js/swiper.js"></script>
+        <script src="./js/nativejs-select.min.js"></script>
+        <script src="./js/js-form-validator.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+setTimeout(() => {
+    window.sessionStorage.setItem("preloader", true);
+});
+
+if (!window.sessionStorage.getItem("preloader")) {
+    preloaderAdd();
+}
+
+function preloaderAdd() {
+    let div = document.createElement("div");
+    div.className = "preloader";
+    div.innerHTML = `<div class="preloader__wrap">
+                            <img
+                                src="./img/loader.gif"
+                                width="123"
+                                height="124"
+                                class="preloader__img"
+                            />
+                        </div>`;
+    document.body.append(div);
+
+    window.addEventListener("load", () => {
+        div.style.opacity = "0";
+
+        setTimeout(() => {
+            div.remove();
+        }, 100);
+    });
+}
