@@ -1146,7 +1146,7 @@ input[type=number]:focus {
 .preview__slide::after {
   content: "";
   position: absolute;
-  background: url("../../img/home-priview-gradient.png") top/100% 100% no-repeat;
+  background: url("./../img/home-priview-gradient.png") top/100% 100% no-repeat;
   width: 50.875em;
   height: 45.375em;
   pointer-events: none;
@@ -1561,8 +1561,8 @@ input[type=number]:focus {
 }
 
 .home-map {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05%, rgba(24, 82, 112, 0)), color-stop(45%, #15516F), to(hsl(200, 68%, 26%))) center bottom/100% 23.3125em no-repeat, url("../../img/home-map.jpg") top center/114.3125em 50.6875em no-repeat;
-  background: linear-gradient(180deg, rgba(24, 82, 112, 0) 0.05%, #15516F 45%, hsl(200, 68%, 26%) 100%) center bottom/100% 23.3125em no-repeat, url("../../img/home-map.jpg") top center/114.3125em 50.6875em no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05%, rgba(24, 82, 112, 0)), color-stop(45%, #15516F), to(hsl(200, 68%, 26%))) center bottom/100% 23.3125em no-repeat, url("./../img/home-map.jpg") top center/114.3125em 50.6875em no-repeat;
+  background: linear-gradient(180deg, rgba(24, 82, 112, 0) 0.05%, #15516F 45%, hsl(200, 68%, 26%) 100%) center bottom/100% 23.3125em no-repeat, url("./../img/home-map.jpg") top center/114.3125em 50.6875em no-repeat;
   min-height: 63em;
   padding-top: 5.5em;
   padding-bottom: 7.25em;

@@ -46,7 +46,7 @@
         &::after{
             content: "";
             position: absolute;
-            background: url("../../img/home-priview-gradient.png") top/100% 100% no-repeat;
+            background: url("./../img/home-priview-gradient.png") top/100% 100% no-repeat;
             width: em(814, $fz);
             height: em(726, $fz);
             pointer-events: none;
@@ -451,7 +451,7 @@
 
 .home-map {
     background: linear-gradient(180deg, rgba(24, 82, 112, 0.00) 0.05%, #15516F 45%, hsl(200, 68%, 26%) 100%) center bottom/ 100% em(373, $fz) no-repeat,
-    url("../../img/home-map.jpg") top center/em(1829 811, $fz) no-repeat;
+    url("./../img/home-map.jpg") top center/em(1829 811, $fz) no-repeat;
 
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
         background-size: 100% em(430, $fz), em(1829 811, $fz);
