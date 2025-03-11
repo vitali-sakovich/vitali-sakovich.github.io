@@ -234,7 +234,7 @@ window.addEventListener("DOMContentLoaded", function () {
             modal.style.display = "none";
         }, 300);
     }
-    const modals = document.querySelectorAll(".popup");
+    const modals = document.querySelectorAll(".js-popup");
     modals.forEach(modal);
 
     // вызов модалок

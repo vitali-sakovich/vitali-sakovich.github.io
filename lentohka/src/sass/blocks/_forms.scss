@@ -78,8 +78,29 @@
         display: flex;
         align-items: center;
 
-        @media screen and (max-width: 499.98px) {
+        @media screen and (max-width: 529.98px) {
             flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__btn {
+        width: em(227, $fz);
+        height: em(54, $fz);
+        margin-right: em(44, $fz);
+
+        @media screen and (max-width: 529.98px) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: em(13, $fz);
+        }
+    }
+
+    &__consent {
+        max-width: em(250, $fz);
+
+        @media screen and (max-width: 529.98px) {
+            max-width: em(375, $fz);
         }
     }
 }
@@ -113,17 +134,5 @@
                 text-decoration: none;
             }
         }
-    }
-}
-
-.form-popup {
-    &__btn {
-        width: em(227, $fz);
-        height: em(54, $fz);
-        margin-right: em(44, $fz);
-    }
-
-    &__consent {
-        max-width: em(250, $fz);
     }
 }

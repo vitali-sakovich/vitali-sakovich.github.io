@@ -23,11 +23,21 @@
         padding-left: 9%;
         padding-right: 9%;
     }
+    @media screen and (max-width: 949.98px) {
+        padding: em(44 16 61 89, $fz);
+    }
+    @media screen and (max-width: 529.98px) {
+        padding-left: em(20, $fz);
+    }
 
     &__container {
         display: grid;
         grid-row-gap: em(56, $fz);
         flex-grow: 1;
+
+        @media screen and (max-width: 949.98px) {
+            grid-row-gap: em(40, $fz);
+        }
     }
 
     &__info,
@@ -43,6 +53,9 @@
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
             align-items: flex-start;
         }
+        @media screen and (max-width: 949.98px) {
+            flex-direction: column;
+        }
     }
 
     &__wrap {
@@ -54,6 +67,11 @@
             flex-direction: column;
             margin-right: auto;
             margin-left: em(50, $fz);
+        }
+        @media screen and (max-width: 949.98px) {
+            margin-top: em(13, $fz);
+            margin-left: 0;
+            margin-bottom: em(18, $fz);
         }
     }
 
@@ -91,11 +109,23 @@
 .footer-nav {
     display: flex;
 
+    @media screen and (max-width: 949.98px) {
+        flex-direction: column;
+    }
+
     &__link {
         color: hsl(0, 0%, 100%);
         line-height: 1.5;
         margin-right: em(29, $fz);
         transition: color 0.3s;
+
+        @media screen and (max-width: 949.98px) {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-bottom: em(14, $fz);
+            }
+        }
 
         &:hover {
             @media screen and (min-width: $breakpoint-hover) {
@@ -123,6 +153,10 @@
         display: grid;
         grid-template-columns: em(155 150 180, $fz);
         grid-gap: em(31 86, $fz);
+    }
+    @media screen and (max-width: 949.98px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: em(20, $fz);
     }
 
     &__item {

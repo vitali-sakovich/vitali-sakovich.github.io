@@ -18,7 +18,7 @@
         <script src="./js/preloader.js"></script>
 
         <header class="header header--home">
-            <div class="header__container">
+            <div class="header__container js-popup">
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
@@ -43,53 +43,76 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header__wrap">
-                    <div class="header-networks header__networks">
-                        <a href="#" target="_blank" class="header-networks__link">
-                            <svg width="22" height="23" aria-hidden="true" class="header-networks__icon">
-                                <use xlink:href="./img/icons-sprite.svg#viber"></use>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" class="header-networks__link">
-                            <svg width="25" height="21" aria-hidden="true" class="header-networks__icon">
-                                <use xlink:href="./img/icons-sprite.svg#telegram"></use>
-                            </svg>
-                        </a>
-                        <a href="#" target="_blank" class="header-networks__link">
-                            <svg width="25" height="20" aria-hidden="true" class="header-networks__icon">
-                                <use xlink:href="./img/icons-sprite.svg#mail"></use>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="header-phone header__phone">
-                        <a href="tel: 83912745455" class="header-phone__link">
-                            <span class="header-phone__text">
-                                8 391 274-54-55
-                            </span>
-                            <svg width="14" height="8" aria-hidden="true" class="header-phone__icon">
-                                <use xlink:href="./img/icons-sprite.svg#arrow-drop"></use>
-                            </svg>
-                        </a>
-                        <div class="header-phone__dropdown">
-                            <a href="tel: 89504200020" class="header-phone__link header-phone__link--size-s">
-                                8 (950) 420-00-20
-                            </a>
-                            <button data-open-modal=".popup--call" class="header-phone__btn js-open-modal">
-                                <span class="header-phone__label">
-                                    перезвоните мне
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                    <button data-open-modal=".popup--search" class="header-btn-search header__btn js-open-modal">
-                        <span class="header-btn-search__text">
-                            Поиск по товарам
-                        </span>
-                        <svg width="24" height="23" aria-hidden="true" class="header-btn-search__icon">
-                            <use xlink:href="./img/icons-sprite.svg#search"></use>
+                <div class="header-networks header__networks">
+                    <button data-open-modal=".popup--call" class="header-networks__btn js-open-modal">
+                        <svg width="22" height="31" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#phone2"></use>
+                        </svg>
+                    </button>
+                    <a href="#" target="_blank" class="header-networks__link">
+                        <svg width="22" height="23" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#viber"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="header-networks__link">
+                        <svg width="25" height="21" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="header-networks__link">
+                        <svg width="25" height="20" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#mail"></use>
+                        </svg>
+                    </a>
+                    <button class="header-networks__btn js-popup-close">
+                        <svg width="25" height="25" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close-mobi"></use>
                         </svg>
                     </button>
                 </div>
+                <div class="header-phone header__phone">
+                    <a href="tel: 83912745455" class="header-phone__link">
+                        <span class="header-phone__text">
+                            8 391 274-54-55
+                        </span>
+                        <svg width="14" height="8" aria-hidden="true" class="header-phone__icon">
+                            <use xlink:href="./img/icons-sprite.svg#arrow-drop"></use>
+                        </svg>
+                    </a>
+                    <div class="header-phone__dropdown">
+                        <a href="tel: 89504200020" class="header-phone__link header-phone__link--size-s">
+                            8 (950) 420-00-20
+                        </a>
+                        <button data-open-modal=".popup--call" class="header-phone__btn js-open-modal">
+                            <span class="header-phone__label">
+                                перезвоните мне
+                            </span>
+                        </button>
+                    </div>
+                    <span class="header-phone__address">
+                        Красноярск, Калинина 91, оф. 1-1
+                    </span>
+                </div>
+                <button data-open-modal=".popup--search" class="header-btn-search header__btn js-open-modal">
+                    <span class="header-btn-search__text">
+                        Поиск по товарам
+                    </span>
+                    <svg width="24" height="23" aria-hidden="true" class="header-btn-search__icon">
+                        <use xlink:href="./img/icons-sprite.svg#search"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="header__top">
+                <button data-open-modal=".header__container" class="btn-burger header__burger js-open-modal">
+                    <svg width="33" height="23" aria-hidden="true" class="btn-burger__icon">
+                        <use xlink:href="./img/icons-sprite.svg#burger"></use>
+                    </svg>
+                </button>
+                <button class="btn-search-mobi header__search">
+                    <svg width="24" height="23" aria-hidden="true" class="btn-search-mobi__icon">
+                        <use xlink:href="./img/icons-sprite.svg#search"></use>
+                    </svg>
+                </button>
                 <div class="header-sidebar header__sidebar">
                     <a href="/" class="header-sidebar__logo">
                         <img width="70" height="60" src="./img/logo.svg" alt="Логотип" class="header-sidebar__img">
@@ -360,10 +383,15 @@
             </section>
             <section class="home-map">
                 <div class="home-map__container">
-                    <h2 class="home-map__title">
-                        Мы работаем в семи городах Сибири
-                    </h2>
-                    <p class="home-map__text">И доставляем по всей стране</p>
+                    <div class="home-map__wrap">
+                        <h2 class="home-map__title">
+                            Мы работаем <br>
+                            в семи городах Сибири
+                        </h2>
+                        <p class="home-map__text">
+                            И доставляем по всей стране
+                        </p>
+                    </div>
                     <div class="home-map__list">
                         <div class="home-map__item">
                             <span class="home-map__name">Красноярск</span>
@@ -469,10 +497,10 @@
                             </button>
                         </label>
                         <div class="form__box">
-                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                            <button type="submit" class="btn btn--primary form__btn last-elem">
                                 <span class="btn__text">Отправить</span>
                             </button>
-                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                            <span class="form-consent form__consent">Отправляя данные, я даю свое
                                 <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
                         </div>
                     </form>
@@ -567,7 +595,7 @@
         </footer>
 
         <!-- попап Каталог  -->
-        <div class="popup popup--sidebar popup--сatalog">
+        <div class="popup popup--sidebar popup--сatalog js-popup">
             <div class="popup__overlay js-popup-close"></div>
             <div class="sidebar popup__sidebar">
                 <div class="sidebar__header">
@@ -678,7 +706,7 @@
         </div>
 
         <!-- попап Услуг  -->
-        <div class="popup popup--sidebar popup--services">
+        <div class="popup popup--sidebar popup--services js-popup">
             <div class="popup__overlay js-popup-close"></div>
             <div class="sidebar popup__sidebar">
                 <div class="sidebar__header">
@@ -746,7 +774,7 @@
         </div>
 
         <!-- попап Заказать звонок  -->
-        <div class="popup popup--call">
+        <div class="popup popup--call js-popup">
             <div class="popup__overlay js-popup-close"></div>
             <div class="popup__block">
                 <div class="popup__head">
@@ -791,10 +819,10 @@
                             </button>
                         </label>
                         <div class="form__box">
-                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                            <button type="submit" class="btn btn--primary form__btn last-elem">
                                 <span class="btn__text">Заказать звонок</span>
                             </button>
-                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                            <span class="form-consent form__consent">Отправляя данные, я даю свое
                                 <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
                         </div>
                     </form>
@@ -803,7 +831,7 @@
         </div>
 
         <!-- попап Заказать  -->
-        <div class="popup popup--order">
+        <div class="popup popup--order js-popup">
             <div class="popup__overlay js-popup-close"></div>
             <div class="popup__block">
                 <div class="popup__head">
@@ -853,10 +881,10 @@
                             </button>
                         </label>
                         <div class="form__box">
-                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                            <button type="submit" class="btn btn--primary form__btn last-elem">
                                 <span class="btn__text">Заказать</span>
                             </button>
-                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                            <span class="form-consent form__consent">Отправляя данные, я даю свое
                                 <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
                         </div>
                     </form>
@@ -865,7 +893,7 @@
         </div>
 
         <!-- попап Заказать услугу  -->
-        <div class="popup popup--order">
+        <div class="popup popup--order js-popup">
             <div class="popup__overlay js-popup-close"></div>
             <div class="popup__block">
                 <div class="popup__head">
@@ -915,10 +943,10 @@
                             </button>
                         </label>
                         <div class="form__box">
-                            <button type="submit" class="btn btn--primary form-popup__btn last-elem">
+                            <button type="submit" class="btn btn--primary form__btn last-elem">
                                 <span class="btn__text">Заказать услугу</span>
                             </button>
-                            <span class="form-consent form-popup__consent">Отправляя данные, я даю свое
+                            <span class="form-consent form__consent">Отправляя данные, я даю свое
                                 <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
                         </div>
                     </form>
