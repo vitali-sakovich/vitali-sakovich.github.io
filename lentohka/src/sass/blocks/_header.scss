@@ -6,12 +6,16 @@
     &--home {
         padding-right: 3.85%;
         padding-left: 5%;
+    }
 
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            padding-right: 4.2%;
-            padding-bottom: em(30, $fz);
-            padding-left: 10.34%;
-        }
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-right: 4.2%;
+        padding-bottom: em(30, $fz);
+        padding-left: 10.34%;
+    }
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        padding-bottom: em(17, $fz);
+        padding-left: 9%;
     }
 
     &,
@@ -31,6 +35,9 @@
         @media screen and (max-width: 1584px) {
             align-items: flex-start;
         }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            flex-direction: column;
+        }
     }
     
     &__wrap {
@@ -40,8 +47,11 @@
     &__nav {
         margin-right: em(10, $fz);
 
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        @media screen and (min-width: #{$breakpoint_HD - 4}) and (max-width: #{$breakpoint_laptop_m - 1}) {
             margin-top: em(15, $fz);
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            margin-bottom: em(15, $fz);
         }
     }
 
@@ -90,6 +100,10 @@
         left: 0;
         width: em(91, $fz);
         z-index: 1004;
+
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            width: em(83, $fz);
+        }
     }
 }
 

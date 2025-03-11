@@ -9,6 +9,10 @@
         padding-right: 1.7%;
         padding-left: 3.5%;
     }
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        padding-right: 2.2%;
+        padding-left: 2.2%;
+    }
     
     &__container {
         flex-grow: 1;
@@ -30,6 +34,10 @@
         --swiper-pagination-color: hsla(0, 0%, 100%, 0.7);
         width: 100%;
         height: 100%;
+
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            --swiper-pagination-bottom: #{em(20, $fz)};
+        }
     }
 
     &__slide,
@@ -84,6 +92,10 @@
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
             padding-left: 7.1%;
             grid-row-gap: em(26, $fz);
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            padding-right: 7.2%;
+            padding-left: 7.2%;
         }
     }
 
@@ -148,6 +160,9 @@
         padding-right: var(--home-section-padding-right, 9%);
         padding-left: var(--home-section-padding-left, 10.2%);
     }
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        padding-left: var(--home-section-padding-left, 9%);
+    }
 }
 
 .home-catalog {
@@ -176,6 +191,7 @@
         border-radius: em(10, $fz);
         min-height: em(252, $fz);
         transition: 0.3s background-color;
+        overflow: hidden;
 
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
             min-height: em(344, $fz);
@@ -240,6 +256,7 @@
         display: flex;
         justify-self: end;
         align-self: end;
+        transform: translate(1px, 1px);
     }
 
     &__img {
@@ -247,8 +264,8 @@
         height: em(174, $fz);
 
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            width: em(280, $fz);
-            height: em(174, $fz);
+            width: em(289, $fz);
+            height: em(243, $fz);
         }
     }
 }
@@ -276,6 +293,10 @@
             grid-template-columns: repeat(2, em(302, $fz));
             grid-row-gap: em(80, $fz);
             max-width: em(807, $fz);
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            padding-right: 4%;
+            padding-left: 4%;
         }
     }
 
@@ -319,6 +340,7 @@
     display: flex;
     justify-content: flex-end;
     min-height: em(780, $fz);
+    overflow: hidden;
 
     @media screen and (min-width: 900px) {
         --home-section-padding-right: 0;
@@ -335,6 +357,7 @@
 
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
             grid-template-columns: minmax(em(334, $fz), em(426, $fz)) minmax(em(418, $fz), em(878, $fz));
+            grid-column-gap: em(83, $fz);
         }
     }
 
@@ -369,23 +392,37 @@
         display: flex;
         align-items: center;
         margin-top: em(57, $fz);
+
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 
     &__btn {
-        height: em(62, $fz);
     
 
         &--video {
             width: em(273, $fz);
+            height: em(62, $fz);
             margin-right: em(73, $fz);
 
             @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
                 margin-right: em(30, $fz);
             }
+            @media screen and (max-width: #{$breakpoint_HD - 5}) {
+                width: em(237, $fz);
+                margin-bottom: em(28, $fz);
+            }
         }
 
         &--more {
             width: em(170, $fz);
+            height: em(30, $fz);
+
+            @media screen and (max-width: #{$breakpoint_HD - 5}) {
+                margin-left: em(-10, $fz);
+            }
         }
     }
 }
@@ -450,19 +487,22 @@
 }
 
 .home-map {
-    background: linear-gradient(180deg, rgba(24, 82, 112, 0.00) 0.05%, #15516F 45%, hsl(200, 68%, 26%) 100%) center bottom/ 100% em(373, $fz) no-repeat,
+    background: linear-gradient(180deg, hsla(200, 65%, 27%, 0) 0.05%, #15516F 45%, hsl(200, 68%, 26%) 100%) center bottom/ 100% em(373, $fz) no-repeat,
     url("./../img/home-map.jpg") top center/em(1829 811, $fz) no-repeat;
-
-    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-        background-size: 100% em(430, $fz), em(1829 811, $fz);
-    }
     min-height: em(1008, $fz);
     padding-top: em(88, $fz);
     padding-bottom: em(116, $fz);
 
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        background-size: 100% em(430, $fz), em(1829 811, $fz);
         padding-bottom: em(65, $fz);
         min-height: em(1050, $fz);
+    }
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        min-height: em(1280, $fz);
+        background: linear-gradient(180deg, hsla(200, 65%, 27%, 0) 0.05%, #15516F 28%, hsl(200, 68%, 26%) 100%) center bottom/ 100% em(650, $fz) no-repeat,
+        url("./../img/home-map.jpg") top center/em(1829 811, $fz) no-repeat;
+        padding-bottom: 0;
     }
 
     &,
@@ -503,6 +543,9 @@
 
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
             grid-template-columns: em(377, $fz) em(411, $fz);
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            grid-template-columns: 1fr;
         }
     }
 
@@ -551,16 +594,25 @@
             padding-left: 0;
             padding-right: 0;
         }
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            padding-right: 9%;
-            padding-left: 10.2%;
-        }
+    }
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-right: 9%;
+        padding-left: 10.2%;
+    }
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        padding-left: 9%;
+        padding-bottom: em(110, $fz);
     }
 
     &__container {
         display: grid;
-        grid-template-columns: em(390 415, $fz);
+        grid-template-columns: minmax(em(240, $fz), em(390, $fz)) em(415, $fz);
         grid-column-gap: em(95, $fz);
+
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            grid-column-gap: em(70, $fz);
+        }
     }
 
     &__title,

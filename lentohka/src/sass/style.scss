@@ -39,8 +39,12 @@ body {
         font-size: 0.75vw;
     }
     @media screen and (min-width: 950px) {
+        padding-left: em(83, $fz);
+    }
+    @media screen and (min-width: #{$breakpoint_HD - 4}) {
         padding-left: em(91, $fz);
     }
+   
 
     &.hidden {
         scrollbar-gutter: stable;

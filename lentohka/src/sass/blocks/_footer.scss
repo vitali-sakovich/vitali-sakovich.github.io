@@ -19,6 +19,10 @@
         padding-left: 10.2%;
         padding-right: 10.1%;
     }
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
 
     &__container {
         display: grid;
@@ -60,6 +64,7 @@
         align-items: center;
         font-size: em($fz, $fz_base);
         color: hsl(0, 0%, 100%);
+        line-height: 1.57;
     }
 
     &__link {
@@ -67,7 +72,7 @@
 
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
             &:nth-child(2){
-                margin-top: em(13, $fz);
+                margin-top: em(15, $fz);
             }
         }
 
