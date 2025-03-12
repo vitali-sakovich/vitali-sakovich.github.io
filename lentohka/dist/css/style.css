@@ -517,7 +517,7 @@ input[type=number]:focus {
 }
 @media screen and (min-width: 1024px) {
   .btn--primary:hover {
-    background-color: hsl(198, 100%, 35%);
+    background-color: hsl(198, 100%, 30%);
   }
 }
 .btn--border {

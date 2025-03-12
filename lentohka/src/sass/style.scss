@@ -159,7 +159,7 @@ input[type="number"]:focus {
 
         &:hover {
             @media screen and (min-width: $breakpoint-hover) {
-                background-color: hsl(198, 100%, 35%);
+                background-color: hsl(198, 100%, 30%);
             }
         }
     }
