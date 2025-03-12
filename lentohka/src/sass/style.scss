@@ -123,6 +123,24 @@ input[type="number"]:focus {
     margin-top: 2px;
 }
 
+.text {
+    line-height: 1.55;
+
+    &--size-md {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+    }
+
+    &--size-lg {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+    }
+
+    &--weight--semi {
+        font-weight: 600;
+    }
+}
+
 .btn {
     $self: &;
     display: flex;
@@ -161,6 +179,11 @@ input[type="number"]:focus {
 
     &__text {
         font-weight: var(--btn-text-weight);
+
+        &--size-l {
+            $fz: 18;
+            font-size: em($fz, $fz_base);
+        }
     }
 }
 
@@ -223,4 +246,5 @@ input[type="number"]:focus {
 @import "blocks/forms";
 @import "blocks/title-block";
 @import "blocks/catalog";
+@import "blocks/product";
 @import "blocks/filters";

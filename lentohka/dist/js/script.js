@@ -11,53 +11,52 @@ window.addEventListener("DOMContentLoaded", function () {
         },
       });
 
-    // (() => {
-    //     const sliders = document.querySelectorAll(".slider-products");
-
-    //     sliders.forEach((item) => {
-    //         const slider = item.querySelector(".slider-products__swiper");
-    //         const btnPrev = item.querySelector(".slider-control__btn--prev");
-    //         const btnNext = item.querySelector(".slider-control__btn--next");
-
-    //         var swiper = new Swiper(slider, {
-    //             slidesPerView: 4,
-    //             slidesPerGroup: 4,
-    //             spaceBetween: 13,
-    //             loop: true,
-    //             navigation: {
-    //                 nextEl: btnNext,
-    //                 prevEl: btnPrev,
-    //             },
-    //             breakpoints: {
-    //                 320: {
-    //                     slidesPerView: 1,
-    //                     slidesPerGroup: 1,
-    //                 },
-    //                 600: {
-    //                     slidesPerView: 2,
-    //                     slidesPerGroup: 2,
-    //                     spaceBetween: 7,
-    //                 },
-    //                 950: {
-    //                     slidesPerView: 2,
-    //                     slidesPerGroup: 2,
-    //                     spaceBetween: 23,
-    //                 },
-    //                 1150: {
-    //                     slidesPerView: 3,
-    //                     slidesPerGroup: 3,
-    //                     spaceBetween: 12,
-    //                 },
-    //                 1600: {
-    //                     slidesPerView: 4,
-    //                     slidesPerGroup: 4,
-    //                     spaceBetween: 15,
-    //                 },
-    //             },
-    //         });
-    //     });
-    // })();
-
+    (() => {
+        var swiper = new Swiper(".js-slider-thumbs", {
+            loop: true,
+            spaceBetween: 24,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                320: {
+                    direction: "horizontal",
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 8,
+                },
+                650: {
+                    direction: "horizontal",
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 20,
+                },
+                950: {
+                    direction: "vertical",
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 24,
+                },
+                1500: {
+                    direction: "vertical",
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 24,
+                },
+            },
+        });
+        var swiper2 = new Swiper(".js-slider-product", {
+            loop: true,
+            effect: "fade",
+            navigation: {
+                nextEl: ".js-slider-btn-next",
+                prevEl: ".js-slider-btn-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    })();
 
     new NativejsSelect({
         selector: "select",
@@ -318,4 +317,91 @@ window.addEventListener("DOMContentLoaded", function () {
         ranges.forEach(rangeSliderInit);
     };
     init();
+
+    (() => {
+        function showFilter(item) {
+            const btn = item.querySelector(".filter-uncover");
+            const checkboxs = item.querySelectorAll(".checkbox");
+    
+            if (!btn) return;
+    
+            if (checkboxs.length <= 6) {
+                btn.remove();
+            }
+    
+            btn.addEventListener("click", () => {
+                if (!item.classList.contains("filter--is-show")) {
+                    btn.firstElementChild.textContent = "Скрыть";
+                    item.classList.add("filter--is-show");
+                } else {
+                    btn.firstElementChild.textContent = "Раскрыть все";
+                    item.classList.remove("filter--is-show");
+                }
+            });
+        }
+        document.querySelectorAll(".filter").forEach(showFilter);
+    })();
+
+    // табы
+    (() => {
+        class ItcTabs {
+            constructor(target, config) {
+                const defaultConfig = {};
+                this._config = Object.assign(defaultConfig, config);
+                this._elTabs =
+                    typeof target === "string"
+                        ? document.querySelector(target)
+                        : target;
+                this._elButtons = this._elTabs.querySelectorAll(".tabs__btn");
+                this._elPanes = this._elTabs.querySelectorAll(".tabs__panel");
+                this._eventShow = new Event("tab.itc.change");
+                this._init();
+                this._events();
+            }
+            _init() {
+                this._elTabs.setAttribute("role", "tablist");
+                this._elButtons.forEach((el, index) => {
+                    el.dataset.index = index;
+                    el.setAttribute("role", "tab");
+                    this._elPanes[index].setAttribute("role", "tabpanel");
+                });
+            }
+            show(elLinkTarget) {
+                const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
+                const elLinkActive =
+                    this._elTabs.querySelector(".tab-btn--active");
+                const elPaneShow = this._elTabs.querySelector(".tabs__panel--show");
+                if (elLinkTarget === elLinkActive) {
+                    return;
+                }
+                elLinkActive
+                    ? elLinkActive.classList.remove("tab-btn--active")
+                    : null;
+                elPaneShow
+                    ? elPaneShow.classList.remove("tabs__panel--show")
+                    : null;
+                elLinkTarget.classList.add("tab-btn--active");
+                elPaneTarget.classList.add("tabs__panel--show");
+                this._elTabs.dispatchEvent(this._eventShow);
+                elLinkTarget.focus();
+            }
+            showByIndex(index) {
+                const elLinkTarget = this._elButtons[index];
+                elLinkTarget ? this.show(elLinkTarget) : null;
+            }
+            _events() {
+                this._elTabs.addEventListener("click", (e) => {
+                    const target = e.target.closest(".tabs__btn");
+                    if (target) {
+                        e.preventDefault();
+                        this.show(target);
+                    }
+                });
+            }
+        }
+
+        if (document.querySelector(".tabs")) {
+            new ItcTabs(".tabs");
+        }
+    })();
 });

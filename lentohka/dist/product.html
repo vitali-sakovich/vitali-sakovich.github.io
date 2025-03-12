@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Фрезерно-гравировальный станок с ЧПУ WoodTec VA 1325 4-axis
+        </title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="">
+        <link rel="stylesheet" href="./css/fancybox.css">
+        <link rel="stylesheet" href="./css/swiper.css">
+        <link rel="stylesheet" href="./css/nativejs-select.css">
+        <link rel="stylesheet" href="./css/nouislider.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <script src="./js/preloader.js"></script>
+
+        <header class="header">
+            <div class="header__container js-popup">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#" class="header__link"> О компании </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link"> Лизинг </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link"> Акции </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link"> Блог </a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-networks header__networks">
+                    <button data-open-modal=".popup--call" class="header-networks__btn js-open-modal">
+                        <svg width="22" height="31" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#phone2"></use>
+                        </svg>
+                    </button>
+                    <a href="#" target="_blank" class="header-networks__link">
+                        <svg width="22" height="23" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#viber"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="header-networks__link">
+                        <svg width="25" height="21" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" class="header-networks__link">
+                        <svg width="25" height="20" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#mail"></use>
+                        </svg>
+                    </a>
+                    <button class="header-networks__btn js-popup-close">
+                        <svg width="25" height="25" aria-hidden="true" class="header-networks__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close-mobi"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-phone header__phone">
+                    <a href="tel: 83912745455" class="header-phone__link">
+                        <span class="header-phone__text">
+                            8 391 274-54-55
+                        </span>
+                        <svg width="14" height="8" aria-hidden="true" class="header-phone__icon">
+                            <use xlink:href="./img/icons-sprite.svg#arrow-drop"></use>
+                        </svg>
+                    </a>
+                    <div class="header-phone__dropdown">
+                        <a href="tel: 89504200020" class="header-phone__link header-phone__link--size-s">
+                            8 (950) 420-00-20
+                        </a>
+                        <button data-open-modal=".popup--call" class="header-phone__btn js-open-modal">
+                            <span class="header-phone__label">
+                                перезвоните мне
+                            </span>
+                        </button>
+                    </div>
+                    <span class="header-phone__address">
+                        Красноярск, Калинина 91, оф. 1-1
+                    </span>
+                </div>
+                <button data-open-modal=".popup--search" class="header-btn-search header__btn js-open-modal">
+                    <span class="header-btn-search__text">
+                        Поиск по товарам
+                    </span>
+                    <svg width="24" height="23" aria-hidden="true" class="header-btn-search__icon">
+                        <use xlink:href="./img/icons-sprite.svg#search"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="header__top">
+                <button data-open-modal=".header__container" class="btn-burger header__burger js-open-modal">
+                    <svg width="33" height="23" aria-hidden="true" class="btn-burger__icon">
+                        <use xlink:href="./img/icons-sprite.svg#burger"></use>
+                    </svg>
+                </button>
+                <button class="btn-search-mobi header__search">
+                    <svg width="24" height="23" aria-hidden="true" class="btn-search-mobi__icon">
+                        <use xlink:href="./img/icons-sprite.svg#search"></use>
+                    </svg>
+                </button>
+                <div class="header-sidebar header__sidebar">
+                    <a href="/" class="header-sidebar__logo">
+                        <img width="70" height="60" src="./img/logo.svg" alt="Логотип" class="header-sidebar__img">
+                    </a>
+                    <div class="header-sidebar__box">
+                        <button type="button" data-open-modal=".popup--сatalog" class="header-sidebar__btn header-sidebar__btn--catalog js-open-modal js-popup-close">
+                            <svg width="32" height="33" aria-hidden="true" class="header-sidebar__icon header-sidebar__icon--catalog">
+                                <use xlink:href="./img/icons-sprite.svg#sidebar-btn-catalog-saw"></use>
+                            </svg>
+                            <span class="header-sidebar__text"> Каталог </span>
+                        </button>
+                        <button type="button" data-open-modal=".popup--services" class="header-sidebar__btn header-sidebar__btn--services js-open-modal js-popup-close">
+                            <span class="header-sidebar__icons">
+                                <svg width="17" height="17" aria-hidden="true" class="header-sidebar__icon header-sidebar__icon--services">
+                                    <use xlink:href="./img/icons-sprite.svg#sidebar-btn-services-star"></use>
+                                </svg>
+                                <svg width="32" height="13" aria-hidden="true" class="header-sidebar__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#sidebar-btn-services-saw"></use>
+                                </svg>
+                            </span>
+                            <span class="header-sidebar__text"> Услуги </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <section class="product">
+                <div class="product__container">
+                    <div class="product__row">
+                        <div class="product-sliders product__sliders">
+                            <div class="product-sliders__inner">
+                                <div class="swiper slider-thumbs product-sliders__thumbs js-slider-thumbs">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider-thumbs__slide">
+                                            <picture class="slider-thumbs__picture">
+                                                <source srcset="./img/product1.webp" type="image/webp">
+                                                <img src="./img/product1.png" width="100" height="72" class="slider-thumbs__img">
+                                            </picture>
+                                        </div>
+                                        <div class="swiper-slide slider-thumbs__slide">
+                                            <picture class="slider-thumbs__picture">
+                                                <source srcset="./img/M51.webp" type="image/webp">
+                                                <img src="./img/M51.jpg" width="131" height="88" class="slider-thumbs__img">
+                                            </picture>
+                                        </div>
+                                        <div class="swiper-slide slider-thumbs__slide">
+                                            <picture class="slider-thumbs__picture">
+                                                <source srcset="./img/M42.webp" type="image/webp">
+                                                <img src="./img/M42.jpg" width="131" height="88" class="slider-thumbs__img">
+                                            </picture>
+                                        </div>
+                                        <div class="swiper-slide slider-thumbs__slide">
+                                            <picture class="slider-thumbs__picture">
+                                                <source srcset="./img/product1.webp" type="image/webp">
+                                                <img src="./img/product1.png" width="100" height="72" class="slider-thumbs__img">
+                                            </picture>
+                                        </div>
+                                        <div class="swiper-slide slider-thumbs__slide">
+                                            <picture class="slider-thumbs__picture">
+                                                <source srcset="./img/M51.webp" type="image/webp">
+                                                <img src="./img/M51.jpg" width="131" height="88" class="slider-thumbs__img">
+                                            </picture>
+                                        </div>
+                                        <div class="swiper-slide slider-thumbs__slide">
+                                            <picture class="slider-thumbs__picture">
+                                                <source srcset="./img/M42.webp" type="image/webp">
+                                                <img src="./img/M42.jpg" width="131" height="88" class="slider-thumbs__img">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-sliders__btns">
+                                    <button class="product-sliders__btn product-sliders__btn--prev js-slider-btn-prev">
+                                        <svg width="28" height="19" class="product-sliders__icon">
+                                            <use xlink:href="./img/icons-sprite.svg#arrow-slider"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="product-sliders__btn product-sliders__btn--next js-slider-btn-next">
+                                        <svg width="28" height="19" class="product-sliders__icon">
+                                            <use xlink:href="./img/icons-sprite.svg#arrow-slider"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="swiper slider-product product-sliders__slider js-slider-product">
+                                <div class="swiper-wrapper">
+                                    <a href="./img/product1.png" data-fancybox="product" class="swiper-slide slider-product__slide">
+                                        <picture class="slider-product__picture">
+                                            <source srcset="./img/product1.webp" type="image/webp">
+                                            <img src="./img/product1.png" width="519" height="519" class="slider-product__img">
+                                        </picture>
+                                    </a>
+                                    <a href="./img/M51.jpg" data-fancybox="product" class="swiper-slide slider-product__slide">
+                                        <picture class="slider-product__picture">
+                                            <source srcset="./img/M51.webp" type="image/webp">
+                                            <img src="./img/M51.jpg" width="519" height="519" class="slider-product__img">
+                                        </picture>
+                                    </a>
+                                    <a href="./img/M42.jpg" data-fancybox="product" class="swiper-slide slider-product__slide">
+                                        <picture class="slider-product__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.jpg" width="519" height="519" class="slider-product__img">
+                                        </picture>
+                                    </a>
+                                    <a href="./img/product1.png" data-fancybox="product" class="swiper-slide slider-product__slide">
+                                        <picture class="slider-product__picture">
+                                            <source srcset="./img/product1.webp" type="image/webp">
+                                            <img src="./img/product1.png" width="519" height="519" class="slider-product__img">
+                                        </picture>
+                                    </a>
+                                    <a href="./img/M51.jpg" data-fancybox="product" class="swiper-slide slider-product__slide">
+                                        <picture class="slider-product__picture">
+                                            <source srcset="./img/M51.webp" type="image/webp">
+                                            <img src="./img/M51.jpg" width="519" height="519" class="slider-product__img">
+                                        </picture>
+                                    </a>
+                                    <a href="./img/M42.jpg" data-fancybox="product" class="swiper-slide slider-product__slide">
+                                        <picture class="slider-product__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.jpg" width="519" height="519" class="slider-product__img">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__block">
+                            <div class="title-block">
+                                <div class="breadcrumb title-block__breadcrumb">
+                                    <a href="/" class="breadcrumb__link">Главная</a>
+                                    <a href="#" class="breadcrumb__link">Каталог</a>
+                                    <a class="breadcrumb__link">Фрезерно-гравировальные станки с ЧПУ</a>
+                                </div>
+                                <h1 class="title-block__title">
+                                    Фрезерно-гравировальный станок с ЧПУ WoodTec
+                                    VA 1325 4-axis
+                                </h1>
+                            </div>
+                            <div class="product-article product__article">
+                                <span class="product-article__text">
+                                    Артикул: <span>645647448</span>
+                                </span>
+                            </div>
+                            <div class="product-status product__status">
+                                <svg width="20" height="19" aria-hidden="true" class="product-status__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#cheker"></use>
+                                </svg>
+                                <span class="product-status__text">В наличии</span>
+                            </div>
+                            <span class="product__price">390 000 ₽</span>
+                            <span class="product__text">Товар можно приобрести в лизинг</span>
+                            <div class="product__btns">
+                                <button data-open-modal=".popup--order" class="btn btn--primary product__btn js-open-modal">
+                                    <span class="btn__text btn__text--size-l">Заказать</span>
+                                </button>
+                                <button class="btn-share product__share">
+                                    <svg width="24" height="24" aria-hidden="true" class="btn-share__icon">
+                                        <use xlink:href="./img/icons-sprite.svg#share"></use>
+                                    </svg>
+                                    <span class="btn-share__text">Поделиться</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__info">
+                        <a href="#" download class="link-download">
+                            <svg width="56" height="70" aria-hidden="true" class="link-download__icon">
+                                <use xlink:href="./img/icons-sprite.svg#download"></use>
+                            </svg>
+                            <span class="link-download__col">
+                                <span class="link-download__name">
+                                    Буклет о товаре
+                                </span>
+                                <span class="link-download__size">
+                                    PDF, 0.5 MB
+                                </span>
+                            </span>
+                        </a>
+                        <div class="tabs product__tabs">
+                            <div class="tabs__btns">
+                                <button class="tab-btn tab-btn--active tabs__btn">
+                                    <span class="tab-btn__text">
+                                        Описание
+                                    </span>
+                                </button>
+                                <button class="tab-btn tabs__btn">
+                                    <span class="tab-btn__text">
+                                        Характеристики товара
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="tabs__panels">
+                                <div class="tabs__panel tabs__panel--show">
+                                    <div class="product-description tabs__description">
+                                        <p class="text text--size-md">
+                                            Все пилы изготавливаются в
+                                            соответствии стандартам ISO-9001.
+                                            Материалом для полотна служит прокат
+                                            итальянского концерна «Metallurgica
+                                            Pessina», выпускающего ленты из
+                                            пружинной закаленной стали с 1934
+                                            года. Ограниченная серия
+                                            подвергается 100 % выходному
+                                            контролю.
+                                        </p>
+                                        <p class="text text--size-md">
+                                            <b>Товар сертифицирован</b><br>
+                                            Каждая бухта пил имеет свой номер и
+                                            технологическую карту, что позволяет
+                                            нам отслеживать поставки каждой
+                                            партии и, в случае выявления брака,
+                                            произвести замену полотна или
+                                            возврат средств.
+                                        </p>
+                                        <p class="text text--size-md">
+                                            <b>Цена</b><br>
+                                            По сравнению с аналогичными пилами
+                                            других производителей, полотна
+                                            EuroWood дешевле на 20 % за
+                                            счеттого, что изготавливаются в
+                                            России и не облагаются таможенными
+                                            сборами и пошлинами.
+                                        </p>
+                                        <p class="text text--size-md">
+                                            <b>Самая дорогая и надежная
+                                                технология изготовления</b><br>
+                                            Штамповка закрытым штампом на
+                                            оборудовании Bruderer ( Швейцария ),
+                                            индукционная закалка,
+                                            автома­тическая разводка Vollmer
+                                            (Германия), заточка эльборовыми
+                                            кругами в масляной среде на
+                                            оборудовании Vollmer (Германия) уже
+                                            разведенного зуба, что дает пиле
+                                            правильный, сформированный угол
+                                            атаки, до­полнительная разводка всей
+                                            пилы, 100% выходной контроль.<br>
+                                            Производитель рекомендует проводить
+                                            заточку пилы профильными алмазными
+                                            кругами, на полнопро­фильных
+                                            заточных станках с масленым
+                                            охлаждением.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="tabs__panel">
+                                    <div class="product-description tabs__description">
+                                        <p class="text text--size-md">
+                                            <b>Товар сертифицирован</b><br>
+                                            Каждая бухта пил имеет свой номер и
+                                            технологическую карту, что позволяет
+                                            нам отслеживать поставки каждой
+                                            партии и, в случае выявления брака,
+                                            произвести замену полотна или
+                                            возврат средств.
+                                        </p>
+                                        <p class="text text--size-md">
+                                            Все пилы изготавливаются в
+                                            соответствии стандартам ISO-9001.
+                                            Материалом для полотна служит прокат
+                                            итальянского концерна «Metallurgica
+                                            Pessina», выпускающего ленты из
+                                            пружинной закаленной стали с 1934
+                                            года. Ограниченная серия
+                                            подвергается 100 % выходному
+                                            контролю.
+                                        </p>
+                                        <p class="text text--size-md">
+                                            <b>Цена</b><br>
+                                            По сравнению с аналогичными пилами
+                                            других производителей, полотна
+                                            EuroWood дешевле на 20 % за
+                                            счеттого, что изготавливаются в
+                                            России и не облагаются таможенными
+                                            сборами и пошлинами.
+                                        </p>
+                                        <p class="text text--size-md">
+                                            <b>Самая дорогая и надежная
+                                                технология изготовления</b><br>
+                                            Штамповка закрытым штампом на
+                                            оборудовании Bruderer ( Швейцария ),
+                                            индукционная закалка,
+                                            автома­тическая разводка Vollmer
+                                            (Германия), заточка эльборовыми
+                                            кругами в масляной среде на
+                                            оборудовании Vollmer (Германия) уже
+                                            разведенного зуба, что дает пиле
+                                            правильный, сформированный угол
+                                            атаки, до­полнительная разводка всей
+                                            пилы, 100% выходной контроль.<br>
+                                            Производитель рекомендует проводить
+                                            заточку пилы профильными алмазными
+                                            кругами, на полнопро­фильных
+                                            заточных станках с масленым
+                                            охлаждением.
+                                        </p>
+                                        <p class="text text--size-md">
+                                            <b>Цена</b><br>
+                                            По сравнению с аналогичными пилами
+                                            других производителей, полотна
+                                            EuroWood дешевле на 20 % за
+                                            счеттого, что изготавливаются в
+                                            России и не облагаются таможенными
+                                            сборами и пошлинами.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewed-products product__viewed">
+                            <h3 class="viewed-products__title">
+                                Вас может заинтересовать
+                            </h3>
+                            <div class="viewed-products__list">
+                                <div class="product-card catalog__card">
+                                    <a href="#" class="product-card__link">
+                                        <picture class="product-card__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.png" width="76" height="76" alt="Bahco 13-0.6 Любой шаг. Любая длина." class="product-card__img">
+                                        </picture>
+                                        <div class="product-card__col">
+                                            <span class="product-card__name">Bahco 13-0.6 Любой шаг. Любая
+                                                длина.</span>
+                                            <div class="product-card__status">
+                                                <svg width="20" height="19" aria-hidden="true" class="product-card__icon">
+                                                    <use xlink:href="./img/icons-sprite.svg#cheker"></use>
+                                                </svg>
+                                                <span class="product-card__label">В наличии</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-card__wrap">
+                                        <span class="product-card__text">Цена по запросу</span>
+                                        <a href="#" class="btn btn--primary product-card__btn">
+                                            <span class="btn__text">Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-card catalog__card">
+                                    <a href="#" class="product-card__link">
+                                        <picture class="product-card__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.png" width="76" height="76" alt="Рамная пила 1250х180х2,5х26 9ХФ" class="product-card__img">
+                                        </picture>
+                                        <div class="product-card__col">
+                                            <span class="product-card__name">Рамная пила 1250х180х2,5х26 9ХФ
+                                                "Нижний Новгород"</span>
+                                            <div class="product-card__status">
+                                                <svg width="20" height="19" aria-hidden="true" class="product-card__icon">
+                                                    <use xlink:href="./img/icons-sprite.svg#to-order"></use>
+                                                </svg>
+                                                <span class="product-card__label">Под заказ</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-card__wrap">
+                                        <span class="product-card__text">Цена по запросу</span>
+                                        <a href="#" class="btn btn--primary product-card__btn">
+                                            <span class="btn__text">Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-card catalog__card">
+                                    <a href="#" class="product-card__link">
+                                        <picture class="product-card__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.png" width="76" height="76" alt="Bahco 13-0.6 Любой шаг. Любая длина." class="product-card__img">
+                                        </picture>
+                                        <div class="product-card__col">
+                                            <span class="product-card__name">Bahco 13-0.6 Любой шаг. Любая
+                                                длина.</span>
+                                            <div class="product-card__status">
+                                                <svg width="20" height="19" aria-hidden="true" class="product-card__icon">
+                                                    <use xlink:href="./img/icons-sprite.svg#cheker"></use>
+                                                </svg>
+                                                <span class="product-card__label">В наличии</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-card__wrap">
+                                        <span class="product-card__text">Цена по запросу</span>
+                                        <a href="#" class="btn btn--primary product-card__btn">
+                                            <span class="btn__text">Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-card catalog__card">
+                                    <a href="#" class="product-card__link">
+                                        <picture class="product-card__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.png" width="76" height="76" alt="Рамная пила 1250х180х2,5х26 9ХФ" class="product-card__img">
+                                        </picture>
+                                        <div class="product-card__col">
+                                            <span class="product-card__name">Рамная пила 1250х180х2,5х26 9ХФ
+                                                "Нижний Новгород"</span>
+                                            <div class="product-card__status">
+                                                <svg width="20" height="19" aria-hidden="true" class="product-card__icon">
+                                                    <use xlink:href="./img/icons-sprite.svg#to-order"></use>
+                                                </svg>
+                                                <span class="product-card__label">Под заказ</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-card__wrap">
+                                        <span class="product-card__text">Цена по запросу</span>
+                                        <a href="#" class="btn btn--primary product-card__btn">
+                                            <span class="btn__text">Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-card catalog__card">
+                                    <a href="#" class="product-card__link">
+                                        <picture class="product-card__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.png" width="76" height="76" alt="Bahco 13-0.6 Любой шаг. Любая длина." class="product-card__img">
+                                        </picture>
+                                        <div class="product-card__col">
+                                            <span class="product-card__name">Bahco 13-0.6 Любой шаг. Любая
+                                                длина.</span>
+                                            <div class="product-card__status">
+                                                <svg width="20" height="19" aria-hidden="true" class="product-card__icon">
+                                                    <use xlink:href="./img/icons-sprite.svg#cheker"></use>
+                                                </svg>
+                                                <span class="product-card__label">В наличии</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-card__wrap">
+                                        <span class="product-card__text">Цена по запросу</span>
+                                        <a href="#" class="btn btn--primary product-card__btn">
+                                            <span class="btn__text">Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="viewed-products product__viewed">
+                            <h3 class="viewed-products__title">
+                                Ранее вы смотрели
+                            </h3>
+                            <div class="viewed-products__list">
+                                <div class="product-card catalog__card">
+                                    <a href="#" class="product-card__link">
+                                        <picture class="product-card__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.png" width="76" height="76" alt="Bahco 13-0.6 Любой шаг. Любая длина." class="product-card__img">
+                                        </picture>
+                                        <div class="product-card__col">
+                                            <span class="product-card__name">Bahco 13-0.6 Любой шаг. Любая
+                                                длина.</span>
+                                            <div class="product-card__status">
+                                                <svg width="20" height="19" aria-hidden="true" class="product-card__icon">
+                                                    <use xlink:href="./img/icons-sprite.svg#cheker"></use>
+                                                </svg>
+                                                <span class="product-card__label">В наличии</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-card__wrap">
+                                        <span class="product-card__text">Цена по запросу</span>
+                                        <a href="#" class="btn btn--primary product-card__btn">
+                                            <span class="btn__text">Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-card catalog__card">
+                                    <a href="#" class="product-card__link">
+                                        <picture class="product-card__picture">
+                                            <source srcset="./img/M42.webp" type="image/webp">
+                                            <img src="./img/M42.png" width="76" height="76" alt="Рамная пила 1250х180х2,5х26 9ХФ" class="product-card__img">
+                                        </picture>
+                                        <div class="product-card__col">
+                                            <span class="product-card__name">Рамная пила 1250х180х2,5х26 9ХФ
+                                                "Нижний Новгород"</span>
+                                            <div class="product-card__status">
+                                                <svg width="20" height="19" aria-hidden="true" class="product-card__icon">
+                                                    <use xlink:href="./img/icons-sprite.svg#to-order"></use>
+                                                </svg>
+                                                <span class="product-card__label">Под заказ</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-card__wrap">
+                                        <span class="product-card__text">Цена по запросу</span>
+                                        <a href="#" class="btn btn--primary product-card__btn">
+                                            <span class="btn__text">Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer-nav footer__nav">
+                    <a href="#" class="footer-nav__link">О компании</a>
+                    <a href="#" class="footer-nav__link">Доставка и оплата</a>
+                    <a href="#" class="footer-nav__link">Лизинг</a>
+                    <a href="#" class="footer-nav__link">Акции</a>
+                    <a href="#" class="footer-nav__link">Блог</a>
+                    <a href="#" class="footer-nav__link">Контакты</a>
+                </div>
+                <div class="footer-contact footer__contact">
+                    <div class="footer-contact__item">
+                        <div class="footer-contact__wrap">
+                            <svg width="12" height="20" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#phone"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <a href="tel: +7 (391) 274-54-55" class="footer-contact__link">+7 (391) 274-54-55</a>
+                            <a href="tel: 89504200020" class="footer-contact__link">8 (950) 420-00-20</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item footer-contact__item--clocks">
+                        <div class="footer-contact__wrap">
+                            <svg width="17" height="17" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#clocks"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <span class="footer-contact__link">Ежедневно 9:00 – 18:00</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item footer-contact__item--address">
+                        <div class="footer-contact__wrap">
+                            <svg width="14" height="20" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#marker"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <span class="footer-contact__link">Красноярск, Калинина, 91, оф. 1-1</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item">
+                        <div class="footer-contact__wrap">
+                            <svg width="20" height="16" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#mail"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <a href="mailto: lenta.kr@mail.ru" class="footer-contact__link">lenta.kr@mail.ru</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item">
+                        <div class="footer-contact__wrap">
+                            <svg width="20" height="21" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#viber"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <a href="#" class="footer-contact__link">lentochka</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact__item">
+                        <div class="footer-contact__wrap">
+                            <svg width="19" height="16" aria-hidden="true" class="footer-contact__icon">
+                                <use xlink:href="./img/icons-sprite.svg#telegram"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-contact__links">
+                            <a href="#" class="footer-contact__link">lentochka</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <span class="footer__copyright"> 2025 © Ленточка </span>
+                    <div class="footer__wrap">
+                        <a href="#" class="footer__link">Политика конфиденциальности</a>
+                        <a href="#" class="footer__link">Согласие на обработку персональных данных</a>
+                    </div>
+                    <a href="https://websalt.ru/" target="_blank" class="footer__link">
+                        Создание сайта
+                        <img width="76" height="13" src="./img/salt.png" alt="Создание сайта" class="footer__img">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- попап Каталог  -->
+        <div class="popup popup--sidebar popup--сatalog js-popup">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="sidebar popup__sidebar">
+                <div class="sidebar__header">
+                    <h2 class="sidebar__title">Каталог</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup-btn-close sidebar__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup-btn-close__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="sidebar-catalog sidebar-catalog--catalog sidebar__catalog">
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Ленточные пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Пилы для пилорам
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Пилы по мясу
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Пилы по металлу
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Пилы столярные
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Дисковые пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Для кромкообрезных
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Для многопильных станков
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Для торцовых станков
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Для столярных работ
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Запчасти и расходники
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Абразивные камни
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Алмазные камни
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Расходные материалы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link"> РТИ </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Упаковочное оборудование
+                        </a>
+                        <a href="#" class="sidebar-catalog__link"> Упаковка </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Ручной инструмент
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Упаковочное оборудование
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Ножи, фрезы, бланкеты
+                        </a>
+                        <a href="#" class="sidebar-catalog__link"> Ножи </a>
+                        <a href="#" class="sidebar-catalog__link"> Фрезы </a>
+                        <a href="#" class="sidebar-catalog__link"> Бланкеты </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Асперация
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Воздуховоды
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Асперационные системы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Вентиляторы
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Оборудование
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Деревообработка
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Металлообработка
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Услуг  -->
+        <div class="popup popup--sidebar popup--services js-popup">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="sidebar popup__sidebar">
+                <div class="sidebar__header">
+                    <h2 class="sidebar__title">Услуги</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup-btn-close sidebar__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup-btn-close__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="sidebar-catalog sidebar-catalog--services sidebar__catalog">
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка и разводка ленточных пил
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Сварка, ремонт ленточной пилы
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка дисковых пил
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Переоснащение дисковой пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Восстановление тела дисковой пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Правка дисковой пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Выполнение крепежных отверстий дисковой пилы
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Расточка посадочного отверстия дисковой пилы
+                        </a>
+                    </div>
+                    <div class="sidebar-catalog__list">
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка концевых фрез
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ножа для рейсмуса
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ножа для рубанка
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ножа для фуганка
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ножей для мясорубки
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка рубительных ножей
+                        </a>
+                        <a href="#" class="sidebar-catalog__link">
+                            Заточка ручных пищевых ножей
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Заказать звонок  -->
+        <div class="popup popup--call js-popup">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Заказать звонок</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup-btn-close popup__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup-btn-close__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <p class="popup__text">
+                        Оставьте контактные данные и мы свяжемся с вами для
+                        уточнения деталей
+                    </p>
+                    <form action="#" class="form form-popup popup__form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя *</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон *</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form__btn last-elem">
+                                <span class="btn__text">Заказать звонок</span>
+                            </button>
+                            <span class="form-consent form__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Заказать  -->
+        <div class="popup popup--order js-popup">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Заказать</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup-btn-close popup__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup-btn-close__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup popup__form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form__btn last-elem">
+                                <span class="btn__text">Заказать</span>
+                            </button>
+                            <span class="form-consent form__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Заказать услугу  -->
+        <div class="popup popup--order js-popup">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Заказать услугу</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup-btn-close popup__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup-btn-close__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form action="#" class="form form-popup popup__form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" data-rule="required|email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form__btn last-elem">
+                                <span class="btn__text">Заказать услугу</span>
+                            </button>
+                            <span class="form-consent form__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/fancybox.js"></script>
+        <script src="./js/swiper.js"></script>
+        <script src="./js/nativejs-select.min.js"></script>
+        <script src="./js/js-form-validator.min.js"></script>
+        <script src="./js/nouislider.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

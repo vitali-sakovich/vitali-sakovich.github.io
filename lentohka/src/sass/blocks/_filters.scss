@@ -10,11 +10,12 @@
 
     &__form {
         @media screen and (max-width: 949.98px) {
-            padding-right: 8%;
-            padding-bottom: em(50, $fz);
-            padding-left: 8%;
-            overflow-x: hidden;
-            overflow-y: auto;
+            @include scrollbar(hsla(0, 0%, 0%, 0.15));
+            padding: em(20 30 80, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            padding-right: em(20, $fz);
+            padding-left: em(20, $fz);
         }
     }
 
@@ -41,10 +42,24 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: em(33, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            padding: em(23 30, $fz);;
+            margin-bottom: 0;
+        }
+        @media screen and (max-width: 599.98px) {
+            padding-right: em(20, $fz);
+            padding-left: em(20, $fz);
+        }
     }
 
     &__close {
         display: none;
+
+        @media screen and (max-width: 949.98px) {
+            display: flex;
+            color: hsl(198, 100%, 45%);
+        }
     }
 
     &__title {
@@ -207,7 +222,7 @@
             justify-content: center;
             padding: em(6 12, $fz);
             border-radius: em(19, $fz);
-            background-color: #f2eef4;
+            background-color: #EEE;
             min-height: em(34, $fz);
             transition: background-color 0.3s;
         }
@@ -264,7 +279,11 @@
         filter: drop-shadow(em(0 2 4, $fz) hsla(0, 0%, 0%, 0.4));
         text-align: center;
 
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            width: em(83, $fz);
+        }
         @media screen and (max-width: 949.98px) {
+            width: 100%;
             max-width: 40%;
         }
     }
@@ -355,14 +374,18 @@
     justify-content: center;
     align-items: center;
     border-radius: em(3, $fz);
-    background-color: #fff;
+    background-color: hsl(0, 0%, 93%);
+    min-width: em(55, $fz);
+    min-height: em(55, $fz);
 
     @media screen and (max-width: 949.98px) {
         display: flex;
     }
 
     &__icon {
-        fill: #533dd4;
+        fill: hsl(198, 100%, 45%);
+        width: em(20, $fz);
+        height: em(20, $fz);
     }
 }
 
@@ -377,7 +400,7 @@
     }
 
     &__text {
-        color: #533dd4;
+        color: hsl(198, 100%, 45%);
         line-height: 1.25;
     }
 }
@@ -391,8 +414,9 @@
     justify-content: space-between;
     align-items: center;
     padding: em(9 13 9 16, $fz);
-    background-color: #4c4c4c;
+    background-color: hsl(0, 0%, 30%);
     border-radius: em(5, $fz);
+    z-index: 10;
 
     @media screen and (max-width: 949.98px) {
         display: flex;
@@ -409,11 +433,11 @@
         $fz: 12;
         font-size: em($fz, $fz_base);
         line-height: 1.5;
-        color: #fff;
+        color: hsl(0, 0%, 100%);
     }
 }
 
 .filter-btn-show {
     border-radius: em(3, $fz);
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
 }

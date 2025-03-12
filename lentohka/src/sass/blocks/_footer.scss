@@ -2,11 +2,12 @@
     flex-direction: column;
     padding-top: em(75, $fz);
     padding-bottom: em(66, $fz);
+    padding-right: 8.8%;
+    padding-left: 12.6%;
     background-color: hsl(200, 69%, 22%);
     min-height: em(345, $fz);
 
     &--home {
-        padding-right: 8.8%;
         padding-left: 9.9%;
 
         @media screen and (max-width: $breakpoint_HD_plus) {

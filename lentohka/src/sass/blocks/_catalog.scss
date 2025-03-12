@@ -1,15 +1,57 @@
 .catalog {
    padding-left: 5%;
    padding-right: 8.8%;
+   padding-bottom: em(87, $fz);
+
+   @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+    padding-left: 7.6%;
+    padding-right: 8.9%;
+   }
+   @media screen and (max-width: #{$breakpoint_HD - 5}) {
+    padding-left: 9%;
+    padding-right: 4%;
+   }
+   @media screen and (max-width: 949.98px) {
+        padding-right: 4.4%;
+        padding-bottom: em(44, $fz);
+        padding-left: 4.4%;
+    }
+    @media screen and (max-width: 599.98px) {
+        padding-bottom: em(20, $fz);
+        padding-right: em(20, $fz);
+        padding-left: em(20, $fz);
+    }
 
    &__container {
     display: flex;
     padding-top: em(33, $fz);
+
+    @media screen and (max-width: 949.98px) {
+        padding-top: em(16, $fz);
+    }
    }
 
    &__filters {
+    flex-shrink: 0;
     width: em(250, $fz);
     margin-right: em(66, $fz);
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            width: em(215, $fz);   
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            width: em(211, $fz);   
+            margin-right: em(35, $fz);
+        }
+        @media screen and (max-width: 949.98px) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 101;
+            width: 100%;
+        }
    }
 
    &__content {
@@ -20,11 +62,16 @@
 
    &__head {
     margin-bottom: em(43, $fz);
+
+    @media screen and (max-width: 949.98px) {
+        margin-bottom: em(10, $fz);
+    }
    }
 
    &__sort {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: em(8, $fz);
    }
 
@@ -42,17 +89,73 @@
    }
 
    &__model {
-    margin-right: em(20, $fz);
     margin-bottom: em(10, $fz);
+
+    &:not(:last-child) {
+        margin-right: em(20, $fz);
+
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            margin-right: em(16, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            margin-right: 0;
+        }
+    }
+
+        @media screen and (max-width: 599.98px) {
+            width: 100%;
+        }
    }
 
    &__models {
     margin-bottom: em(22, $fz);
+
+    @media screen and (max-width: 949.98px) {
+        margin-bottom: em(6, $fz);
+    }
    }
 
    &__grid {
     display: grid;
     grid-row-gap: em(5, $fz);
+    margin-bottom: em(112, $fz);
+
+    @media screen and (max-width: 949.98px) {
+        margin-bottom: em(44, $fz);
+    }
+   }
+
+   &__pagination {
+    margin-top: em(40, $fz);
+
+        @media screen and  (max-width: #{$breakpoint_laptop_m - 1}) {
+            margin-left: 10%;
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            margin-left: 0;
+        }
+        @media screen and (max-width: 949.98px) {
+            margin-top: em(27, $fz);
+        }
+    }
+
+   &__description {
+    line-height: 1.87;
+
+    p {
+        margin-bottom: em(25, $fz); 
+    }
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-left: 10%;
+    }
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        padding-left: 0;
+    }
+   }
+
+   &__text {
+    margin-bottom: em(25, $fz);
    }
 }
 
@@ -61,7 +164,7 @@
     align-items: center;
 
     &--number {
-        @media screen and (max-width: 949.98px) {
+        @media screen and (max-width: 994.98px) {
             display: none;
         }
     }
@@ -117,7 +220,6 @@
 .pagination {
     $self: &;
     display: flex;
-    grid-column: -1/1;
 
     &__link {
         $fz: 18;
@@ -125,12 +227,16 @@
         justify-content: center;
         align-items: center;
         font-size: em($fz, $fz_base);
-        width: 11.4%;
+        width: 11.6%;
         min-height: em(40, $fz);
-        border: 1px solid #cacaca;
-        background-color: #fff;
-        color: var(--pagination-link-color, #000);
+        border: 1px solid hsl(0, 0%, 79%);
+        background-color: hsl(0, 0%, 100%);
+        color: var(--pagination-link-color, hsl(0, 0%, 0%));
         transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+        @media screen and (max-width: 599.98px) {
+            min-height: em(70, $fz);
+        }
 
         &--prev {
             margin-right: 2.4%;
@@ -141,16 +247,16 @@
 
         &--active {
             pointer-events: none;
-            --pagination-link-color: #fff;
-            background-color: #4b8702;
-            border-color: #4b8702;
+            --pagination-link-color: hsl(0, 0%, 100%);
+            background-color: hsl(218, 14%, 48%);
+            border-color: hsl(218, 15%, 48%);
         }
 
         &:hover {
             @media screen and (min-width: $breakpoint-hover) {
-                --pagination-link-color: #fff;
-                background-color: rgba(75, 135, 2, 0.8);
-                border-color: rgba(75, 135, 2, 0.8);
+                --pagination-link-color: hsl(0, 0%, 100%);
+                background-color: hsl(218, 14%, 40%);
+                border-color: hsl(218, 14%, 35%);
             }
         }
     }
@@ -160,17 +266,188 @@
         justify-content: center;
         align-items: flex-end;
         padding-bottom: em(10, $fz);
-        width: 7.5%;
+        width: 7.7%;
     }
 
     &__icon {
         width: em(22, $fz);
         height: auto;
-        fill: var(--pagination-link-color, rgba(0, 0, 0, 0.55));
+        fill: var(--pagination-link-color, hsla(0, 0%, 0%, 0.55));
         transition: fill 0.3s;
 
         #{$self}__link--next & {
             transform: scaleX(-1);
+        }
+    }
+}
+
+.btn-model {
+    background-color: transparent;
+    border-radius: em(5, $fz);
+    border: 1px solid hsl(0, 0%, 80%);
+    min-width: em(314, $fz);
+    min-height: em(122, $fz);
+    overflow: hidden;
+    padding: em(10, $fz);
+
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        min-width: em(265, $fz);
+    }
+    @media screen and (max-width: 949.98px) {
+        min-height: em(90, $fz);
+    }
+
+    &,
+    &__picture {
+        display: flex;
+        align-items: center;
+    }
+
+    &__picture {
+        margin-right: em(30, $fz);
+        width: em(110, $fz);
+        height: em(110, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            width: em(66, $fz);
+            height: em(66, $fz); 
+            margin-right: em(18, $fz);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__text {
+        $fz: 17;
+        font-size: em($fz, $fz_base);
+        color: hsl(198, 100%, 45%);
+        font-weight: 600;
+    }
+}
+
+.product-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: em(5, $fz);
+    border: 1px solid hsl(0, 0%, 80%);
+    padding: em(4 18 4 15, $fz);
+    min-height: em(85, $fz);
+    overflow: hidden;
+
+    @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        padding-right: em(14, $fz);
+    }
+    @media screen and (max-width: 599.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: em(3 12 23 6, $fz);
+    }
+
+    &__link,
+    &__wrap,
+    &__status {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        color: hsl(0, 0%, 0%);
+        padding-right: em(25, $fz);
+
+        @media screen and (max-width: 599.98px) {
+            padding-right: 0;
+            align-items: flex-start;
+            margin-bottom: em(20, $fz);
+        }
+    }
+
+    &__picture {
+        flex-shrink: 0;
+        width: em(76, $fz);
+        height: em(76, $fz);
+        margin-right: em(53, $fz);
+
+        @media screen and (max-width: $breakpoint_HD_plus) {
+            width: em(106, $fz);
+            height: em(106, $fz);
+            margin-right: em(23, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            width: em(87, $fz);
+            height: em(87, $fz);
+            margin-right: em(14, $fz);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 599.98px) {
+            padding-top: em(11, $fz);
+        }
+    }
+
+    &__name {
+        $fz: 17;
+        font-size: em($fz, $fz_base);
+        line-height: 1.47;
+    }
+
+    &__label {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        line-height: 1;
+        color: hsl(0, 0%, 0%);
+    }
+
+    &__status {
+        margin-top: em(6, $fz);
+    }
+
+    &__icon {
+        width: em(20, $fz);
+        height: em(19, $fz);
+        margin-right: em(10, $fz);
+    }
+
+    &__wrap {
+        @media screen and (max-width: $breakpoint_HD_plus) {
+            align-items: self-start;
+            flex-direction: column;
+            min-width: em(153, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            padding-left: em(101, $fz);
+        }
+    }
+
+    &__text {
+        $fz: 17;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+    }
+
+    &__btn {
+        width: em(209, $fz);
+        margin-left: em(45, $fz);
+
+
+        @media screen and (max-width: $breakpoint_HD_plus) {
+            width: em(134, $fz);
+            margin-top: em(11, $fz);
+            margin-left: 0;
         }
     }
 }
@@ -210,111 +487,5 @@
 
     &__text {
         text-align: center;
-    }
-}
-
-.btn-model {
-    background-color: transparent;
-    border-radius: em(5, $fz);
-    border: 1px solid hsl(0, 0%, 80%);
-    min-width: em(314, $fz);
-    min-height: em(122, $fz);
-    overflow: hidden;
-    padding: em(10, $fz);
-
-    &,
-    &__picture {
-        display: flex;
-        align-items: center;
-        width: em(110, $fz);
-        height: em(110, $fz);
-    }
-
-    &__picture {
-        margin-right: em(30, $fz)
-    }
-
-    &__img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    &__text {
-        $fz: 17;
-        font-size: em($fz, $fz_base);
-        color: hsl(198, 100%, 45%);
-        font-weight: 600;
-    }
-}
-
-.product-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: em(5, $fz);
-    border: 1px solid hsl(0, 0%, 80%);
-    padding: em(4 18 4 15, $fz);
-    min-height: em(85, $fz);
-    overflow: hidden;
-
-    &__link,
-    &__wrap,
-    &__status {
-        display: flex;
-        align-items: center;
-    }
-
-    &__link {
-        color: hsl(0, 0%, 0%);
-    }
-
-    &__picture {
-        width: em(76, $fz);
-        height: em(76, $fz);
-        margin-right: em(53, $fz);
-    }
-
-    &__img {
-        object-fit: contain;
-    }
-
-    &__col {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__name {
-        $fz: 17;
-        font-size: em($fz, $fz_base);
-        line-height: 1.47;
-    }
-
-    &__label {
-        $fz: 14;
-        font-size: em($fz, $fz_base);
-        line-height: 1;
-        color: hsl(0, 0%, 0%);
-    }
-
-    &__status {
-        margin-top: em(6, $fz);
-    }
-
-    &__icon {
-        width: em(20, $fz);
-        height: em(19, $fz);
-        margin-right: em(10, $fz);
-    }
-
-    &__text {
-        $fz: 17;
-        font-size: em($fz, $fz_base);
-        font-weight: 600;
-    }
-
-    &__btn {
-        width: em(209, $fz);
-        margin-left: em(45, $fz);
     }
 }

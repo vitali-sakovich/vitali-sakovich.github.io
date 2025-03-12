@@ -7,19 +7,29 @@
         padding-right: 3.85%;
         padding-left: 5%;
         margin-bottom: 0;
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            padding-left: 10.34%;
+        }
     }
 
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
         padding-right: 4.2%;
         padding-bottom: em(30, $fz);
-        padding-left: 10.34%;
+        padding-left: 7.6%;
+        margin-bottom: em(30, $fz);
     }
     @media screen and (max-width: #{$breakpoint_HD - 5}) {
         padding-bottom: em(17, $fz);
         padding-left: 9%;
+        margin-bottom: em(17, $fz);
     }
     @media screen and (max-width: 949.98px) {
         padding: em(10 0 18, $fz);
+        margin-bottom: em(5, $fz);
+    }
+    @media screen and (max-width: 599.98px) {
+        margin-bottom: 0;
     }
 
     &,

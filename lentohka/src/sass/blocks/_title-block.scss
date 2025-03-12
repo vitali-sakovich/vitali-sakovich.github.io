@@ -1,6 +1,15 @@
 .title-block {
     &__breadcrumb {
         margin-bottom: em(23, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            margin-bottom: em(16, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            padding-left: em(20, $fz);
+            width: calc(100% + em(40, $fz));
+            margin-left: em(-20, $fz);
+        }
     }
 
     &__title {
@@ -9,11 +18,25 @@
         font-weight: 600;  
         margin-top: 0;
         margin-bottom: 0;
+
+        @media screen and (max-width: 949.98px) {
+            $fz: 34;
+            font-size: em($fz, $fz_base);
+        }
+        @media screen and (max-width: 599.98px) {
+            $fz: 24;
+            font-size: em($fz, $fz_base);
+        }
     }
 }
 
 .breadcrumb {
     display: flex;
+    overflow-x: auto;
+
+    @media screen and (max-width: 599.98px) {
+        padding-bottom: em(2, $fz);
+    }
 
     &__link {
         display: flex;
@@ -22,6 +45,7 @@
         color: hsl(198, 100%, 45%);
         transition: color 0.3s;
         line-height: 1.5;
+        white-space: nowrap;
 
         &[href]:hover {
             @media screen and (min-width: $breakpoint-hover) {
