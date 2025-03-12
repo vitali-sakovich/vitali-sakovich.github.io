@@ -114,27 +114,11 @@
     &__close {
         width: em(38, $fz);
         height: em(38, $fz);
-        margin-left: auto;
-        background-color: transparent;
-        transition: color 0.3s;
-        color: hsl(0, 0%, 100%);
-
-        &:hover {
-            @media screen and (min-width: $breakpoint-hover) {
-                color: hsla(0, 0%, 100%, 0.7);
-            }
-        }
 
         @media screen and (max-width: 949.98px) {
             width: em(25, $fz);
             height: em(25, $fz);
         }
-    }
-
-    &__icon {
-        width: 100%;
-        height: 100%;
-        fill: currentColor
     }
 
     &__head,
@@ -195,6 +179,24 @@
         @media screen and (max-width: 949.98px) {
             margin-left: 0;
         }
+    }
+}
+
+.popup-btn-close {
+    background-color: transparent;
+    transition: color 0.3s;
+    color: hsl(0, 0%, 100%);
+
+    &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+            color: hsla(0, 0%, 100%, 0.7);
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        fill: currentColor
     }
 }
 
@@ -271,28 +273,13 @@
     }
 
     &__close {
-        background-color: transparent;
         width: em(38, $fz);
         height: em(38, $fz);
-        transition: color 0.3s;
-        color: hsl(0, 0%, 100%);
-
-        &:hover {
-            @media screen and (min-width: $breakpoint-hover) {
-                color: hsla(0, 0%, 100%, 0.7);
-            }
-        }
 
         @media screen and (max-width: 949.98px) {
             width: em(25, $fz);
             height: em(25, $fz);
         }
-    }
-
-    &__icon {
-        fill: currentColor;
-        width: 100%;
-        height: 100%;
     }
 }
 

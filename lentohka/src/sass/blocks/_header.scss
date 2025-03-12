@@ -1,11 +1,12 @@
 .header {
     position: relative;
-    padding-top: em(22, $fz);
-    padding-bottom: em(22, $fz);
+    padding: em(22, $fz) 2.8% em(22, $fz) 5%;
+    margin-bottom: em(58, $fz);
 
     &--home {
         padding-right: 3.85%;
         padding-left: 5%;
+        margin-bottom: 0;
     }
 
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {

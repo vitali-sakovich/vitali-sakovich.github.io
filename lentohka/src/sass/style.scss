@@ -164,7 +164,7 @@ input[type="number"]:focus {
     }
 }
 
-@mixin scrollbar {
+@mixin scrollbar ($color: hsla(0, 0%, 100%, 0.15)) {
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
@@ -175,7 +175,7 @@ input[type="number"]:focus {
 
     @-moz-document url-prefix() {
         scrollbar-width: thin;
-        scrollbar-color: hsla(0, 0%, 100%, 0.15) transparent;
+        scrollbar-color: $color transparent;
         scrollbar-arrow-color: transparent;
         scrollbar-face-color: transparent;
         scrollbar-track-color: transparent;
@@ -187,7 +187,7 @@ input[type="number"]:focus {
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: hsla(0, 0%, 100%, 0.15);
+        background-color: $color;
     }
 
     &::-webkit-scrollbar-track {
@@ -221,3 +221,6 @@ input[type="number"]:focus {
 @import "blocks/home";
 @import "blocks/popups";
 @import "blocks/forms";
+@import "blocks/title-block";
+@import "blocks/catalog";
+@import "blocks/filters";

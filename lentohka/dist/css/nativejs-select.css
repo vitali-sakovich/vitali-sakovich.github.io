@@ -33,12 +33,12 @@
 }
 
 .nativejs-select_active .nativejs-select__placeholder {
-  background-color: rgba(99, 99, 99, 0.1);
+  background-color: hsla(198, 60%, 33%, 0.16);
 }
 
 @media screen and (min-width: 1000px) {
   .nativejs-select__placeholder:hover {
-    background-color: rgba(99, 99, 99, 0.1);
+    background-color: hsla(198, 60%, 33%, 0.16);
   }
 }
 
@@ -84,14 +84,14 @@
   display: none;
   border-radius: 0 0 20px 20px;
   overflow: hidden;
-  background-color: #f2eef4;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .nativejs-select__option {
   width: 100%;
   padding: 10px 15px;
   color: #000;
-  background-color: rgba(99, 99, 99, 0.1);
+  background-color: hsla(198, 60%, 33%, 0.16);
   display: flex;
   align-items: center;
   transition: background-color 0.3s;
@@ -99,7 +99,7 @@
 
 .nativejs-select__option:hover,
 .nativejs-select__option[data-selected="true"] {
-  background-color: rgba(99, 99, 99, 0.3);
+  background-color: hsla(198, 60%, 33%, 0.3);
 }
 
 .nativejs-select__option img {

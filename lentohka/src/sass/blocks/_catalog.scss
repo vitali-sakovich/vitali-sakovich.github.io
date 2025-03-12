@@ -1,0 +1,320 @@
+.catalog {
+   padding-left: 5%;
+   padding-right: 8.8%;
+
+   &__container {
+    display: flex;
+    padding-top: em(33, $fz);
+   }
+
+   &__filters {
+    width: em(250, $fz);
+    margin-right: em(66, $fz);
+   }
+
+   &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   }
+
+   &__head {
+    margin-bottom: em(43, $fz);
+   }
+
+   &__sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: em(8, $fz);
+   }
+
+   &__tags,
+   &__models {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   }
+
+   &__tag {
+    margin-top: em(6, $fz);
+    margin-bottom: em(6, $fz);
+    margin-right: em(10, $fz);
+   }
+
+   &__model {
+    margin-right: em(20, $fz);
+    margin-bottom: em(10, $fz);
+   }
+
+   &__models {
+    margin-bottom: em(22, $fz);
+   }
+
+   &__grid {
+    display: grid;
+    grid-row-gap: em(5, $fz);
+   }
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+
+    &--number {
+        @media screen and (max-width: 949.98px) {
+            display: none;
+        }
+    }
+
+    &__text {
+        margin-right: em(14, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            display: none;
+        }
+    }
+}
+
+.tag {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: em(5, $fz);
+    min-height: em(34, $fz);
+    padding: em(6 10 6 8, $fz);
+    background-color: hsla(198, 60%, 33%, 0.16);
+
+    &__btn {
+        display: flex;
+        width: em(16, $fz);
+        height: em(16, $fz);
+        background-color: transparent;
+        margin-left: em(7, $fz);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__icon {
+        fill: hsl(0, 0%, 54%);
+        width: em(16, $fz);
+        height: auto;
+    }
+
+    &__name {
+        $fz: 14;
+        color: hsl(0, 0%, 0%);
+        font-size: em($fz, $fz_base);
+    }
+}
+
+.pagination {
+    $self: &;
+    display: flex;
+    grid-column: -1/1;
+
+    &__link {
+        $fz: 18;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: em($fz, $fz_base);
+        width: 11.4%;
+        min-height: em(40, $fz);
+        border: 1px solid #cacaca;
+        background-color: #fff;
+        color: var(--pagination-link-color, #000);
+        transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+        &--prev {
+            margin-right: 2.4%;
+        }
+        &--next {
+            margin-left: 2.4%;
+        }
+
+        &--active {
+            pointer-events: none;
+            --pagination-link-color: #fff;
+            background-color: #4b8702;
+            border-color: #4b8702;
+        }
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                --pagination-link-color: #fff;
+                background-color: rgba(75, 135, 2, 0.8);
+                border-color: rgba(75, 135, 2, 0.8);
+            }
+        }
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: em(10, $fz);
+        width: 7.5%;
+    }
+
+    &__icon {
+        width: em(22, $fz);
+        height: auto;
+        fill: var(--pagination-link-color, rgba(0, 0, 0, 0.55));
+        transition: fill 0.3s;
+
+        #{$self}__link--next & {
+            transform: scaleX(-1);
+        }
+    }
+}
+
+.empty-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: em(25 20 100, $fz);
+    padding-top: em(25, $fz);
+    padding-bottom: em(100, $fz);
+    margin-top: auto;
+    margin-bottom: auto;
+
+    @media screen and (max-width: 949.98px) {
+        padding-bottom: em(50, $fz);
+    }
+
+    &__oval {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.07);
+        width: em(170, $fz);
+        height: em(170, $fz);
+    }
+
+    &__name {
+        $fz: 24;
+        display: block;
+        font-size: em($fz, $fz_base);
+        line-height: 1.5;
+        margin-top: em(-42, $fz);
+        margin-bottom: em(30, $fz);
+    }
+
+    &__text {
+        text-align: center;
+    }
+}
+
+.btn-model {
+    background-color: transparent;
+    border-radius: em(5, $fz);
+    border: 1px solid hsl(0, 0%, 80%);
+    min-width: em(314, $fz);
+    min-height: em(122, $fz);
+    overflow: hidden;
+    padding: em(10, $fz);
+
+    &,
+    &__picture {
+        display: flex;
+        align-items: center;
+        width: em(110, $fz);
+        height: em(110, $fz);
+    }
+
+    &__picture {
+        margin-right: em(30, $fz)
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__text {
+        $fz: 17;
+        font-size: em($fz, $fz_base);
+        color: hsl(198, 100%, 45%);
+        font-weight: 600;
+    }
+}
+
+.product-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: em(5, $fz);
+    border: 1px solid hsl(0, 0%, 80%);
+    padding: em(4 18 4 15, $fz);
+    min-height: em(85, $fz);
+    overflow: hidden;
+
+    &__link,
+    &__wrap,
+    &__status {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        color: hsl(0, 0%, 0%);
+    }
+
+    &__picture {
+        width: em(76, $fz);
+        height: em(76, $fz);
+        margin-right: em(53, $fz);
+    }
+
+    &__img {
+        object-fit: contain;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        $fz: 17;
+        font-size: em($fz, $fz_base);
+        line-height: 1.47;
+    }
+
+    &__label {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        line-height: 1;
+        color: hsl(0, 0%, 0%);
+    }
+
+    &__status {
+        margin-top: em(6, $fz);
+    }
+
+    &__icon {
+        width: em(20, $fz);
+        height: em(19, $fz);
+        margin-right: em(10, $fz);
+    }
+
+    &__text {
+        $fz: 17;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+    }
+
+    &__btn {
+        width: em(209, $fz);
+        margin-left: em(45, $fz);
+    }
+}

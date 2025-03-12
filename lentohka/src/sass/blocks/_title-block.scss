@@ -1,0 +1,42 @@
+.title-block {
+    &__breadcrumb {
+        margin-bottom: em(23, $fz);
+    }
+
+    &__title {
+        $fz: 44;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;  
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.breadcrumb {
+    display: flex;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        margin-right: em(20, $fz);
+        color: hsl(198, 100%, 45%);
+        transition: color 0.3s;
+        line-height: 1.5;
+
+        &[href]:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                color: hsl(198, 100%, 30%);
+            }
+        }
+
+        &:first-child {
+            &::before {
+                content: '';
+                background: url("./../img/arrow.svg") top/contain no-repeat;
+                width: em(18, $fz);
+                height: em(13, $fz);
+                margin-right: em(20, $fz);
+            }
+        }
+    }
+}
