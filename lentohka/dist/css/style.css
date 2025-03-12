@@ -4016,6 +4016,7 @@ input[type=number]:focus {
 }
 .product__info {
   max-width: 72.5em;
+  margin-left: 1.5625em;
 }
 .product__viewed {
   margin-top: 5.25em;
