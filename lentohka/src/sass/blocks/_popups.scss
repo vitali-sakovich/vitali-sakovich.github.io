@@ -34,6 +34,8 @@
 
 .popup {
     $self: &;
+
+    --btn-bg-hover: hsl(198, 100%, 38%);
     display: none;
     position: fixed;
     justify-content: flex-end;
@@ -75,7 +77,44 @@
         animation: var(--popup-show, popup-hidden) 0.2s forwards;
 
         @media screen and (max-width: 949.98px) {
-            max-width: 100%;
+            max-width: var(--popup-block-width, 100%);
+        }
+    }
+
+    &--sharing {
+        --popup-block-width: #{em(600, $fz)};
+        justify-content: center;
+        align-items: center;
+
+        .popup__block {
+            animation: var(--overlay-show, overlay-hidden) 0.3s forwards;
+        }
+
+        .form {
+            margin-bottom: em(32, $fz);
+        }
+
+        .popup__btn {
+            width: 100%;
+        }
+
+        .popup__content,
+        .popup__head {
+            padding-right: em(60, $fz);
+            padding-left: em(60, $fz);
+
+            @media screen and (max-width: 599.98px) {
+                padding-right: em(20, $fz);
+                padding-left: em(20, $fz); 
+            }
+        }
+
+        .popup__head {
+            padding-top: em(50, $fz);
+
+            @media screen and (max-width: 599.98px) {
+                padding-top: em(30, $fz);
+            }
         }
     }
 
@@ -179,6 +218,10 @@
         @media screen and (max-width: 949.98px) {
             margin-left: 0;
         }
+    }
+
+    &__share {
+        margin-bottom: em(65, $fz);
     }
 }
 

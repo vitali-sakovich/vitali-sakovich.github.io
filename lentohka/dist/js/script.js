@@ -33,14 +33,20 @@ window.addEventListener("DOMContentLoaded", function () {
                 },
                 950: {
                     direction: "vertical",
-                    slidesPerView: 2,
-                    slidesPerGroup: 2,
-                    spaceBetween: 24,
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 8,
+                },
+                1245: {
+                    direction: "vertical",
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                    spaceBetween: 8,
                 },
                 1500: {
                     direction: "vertical",
-                    slidesPerView: 3,
-                    slidesPerGroup: 3,
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
                     spaceBetween: 24,
                 },
             },
@@ -402,6 +408,86 @@ window.addEventListener("DOMContentLoaded", function () {
 
         if (document.querySelector(".tabs")) {
             new ItcTabs(".tabs");
+        }
+    })();
+
+
+    (() => {
+        const shareButtons = document.querySelectorAll(".js-btn-sharing");
+    
+        var isMobile = {
+            Android: function () {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function () {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function () {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function () {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function () {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function () {
+                return (
+                    isMobile.Android() ||
+                    isMobile.BlackBerry() ||
+                    isMobile.iOS() ||
+                    isMobile.Opera() ||
+                    isMobile.Windows()
+                );
+            },
+        };
+    
+        shareButtons.forEach((shareButton) => {
+            if (shareButton) {
+                let thisUrl = window.location.href;
+                let thisTitle = document.title;
+                shareButton.addEventListener("click", function () {
+                    // Проверка поддержки navigator.share
+                    if (navigator.share && isMobile.any()) {
+                        // navigator.share принимает объект с URL, title или text
+                        navigator
+                            .share({
+                                title: thisTitle,
+                                url: thisUrl,
+                            })
+                            .then(function () {
+                                // Shareing successfull
+                            })
+                            .catch(function () {
+                                // Sharing failed
+                            });
+                    } else {
+                        openModal(document.querySelector(".popup--sharing"));
+                        copyUrl();
+                    }
+                });
+            }
+        });
+    
+        function copyUrl() {
+            const copyButton = document.querySelector(".js-btn-copy-btn");
+            const copyInput = document.querySelector(".js-input-copy");
+            const btnText = copyButton.querySelector("span");
+    
+            copyInput.value = window.location.href;
+    
+            copyButton.addEventListener("click", function (e) {
+                copyInput.select();
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+                btnText.innerHTML = "Ссылка скопированна";
+                copyButton.setAttribute("disabled", "true");
+    
+                setTimeout(() => {
+                    btnText.innerHTML = "Скопировать ссылку";
+                    copyButton.removeAttribute("disabled");
+                }, 1000);
+            });
         }
     })();
 });

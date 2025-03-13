@@ -271,7 +271,7 @@
                                 <button data-open-modal=".popup--order" class="btn btn--primary product__btn js-open-modal">
                                     <span class="btn__text btn__text--size-l">Заказать</span>
                                 </button>
-                                <button class="btn-share product__share">
+                                <button class="btn-share product__share js-btn-sharing">
                                     <svg width="24" height="24" aria-hidden="true" class="btn-share__icon">
                                         <use xlink:href="./img/icons-sprite.svg#share"></use>
                                     </svg>
@@ -564,8 +564,8 @@
                                             <img src="./img/M42.png" width="76" height="76" alt="Bahco 13-0.6 Любой шаг. Любая длина." class="product-card__img">
                                         </picture>
                                         <div class="product-card__col">
-                                            <span class="product-card__name">Bahco 13-0.6 Любой шаг. Любая
-                                                длина.</span>
+                                            <span class="product-card__name">Фрезерно-гравировальный станок
+                                                с ЧПУ WoodTec T-2512×8</span>
                                             <div class="product-card__status">
                                                 <svg width="20" height="19" aria-hidden="true" class="product-card__icon">
                                                     <use xlink:href="./img/icons-sprite.svg#cheker"></use>
@@ -1054,6 +1054,36 @@
                                 <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Поделиться -->
+        <div class="popup popup--sharing js-popup">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Поделиться</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup-btn-close popup__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup-btn-close__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <script async src="https://usocial.pro/usocial/usocial.js?uid=b9c206e7a3f53798&v=6.1.5" data-script="usocial" charset="utf-8"></script>
+                    <div class="popup__share">
+                        <div class="uSocial-Share popup__social" data-pid="f762a0f57b1fb4025ce5b05d95233650" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right" data-social="vk,ok,telegram,wa,vi"></div>
+                    </div>
+                    <form class="form">
+                        <label class="label label--is-active form__label">
+                            <input type="text" name="link" class="form__input js-input-copy">
+                            <span class="form__placeholder">Ссылка на товар</span>
+                        </label>
+                    </form>
+                    <button class="btn btn--primary popup__btn js-btn-copy-btn">
+                        <span class="btn__text"> Скопировать ссылку</span>
+                    </button>
                 </div>
             </div>
         </div>

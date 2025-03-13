@@ -1,0 +1,329 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 1629.98px) {
+        align-items: flex-start;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: em(1370, $fz);
+        padding-right: em(90, $fz);
+        padding-bottom: em(70, $fz);
+
+        @media screen and (max-width: 1629.98px) {
+            padding-right: 5.3%;
+            padding-left: 5.3%;
+            max-width: 100%;
+        }
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) { 
+            padding-right: 9%;
+            padding-left: 8.3%;
+            padding-bottom: em(97, $fz);
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            padding-left: 9%;
+            padding-bottom: em(91, $fz);
+        }
+        @media screen and (max-width: 949.98px) {
+            padding-right: 4.4%;
+            padding-left: 4.4%;
+        }
+        @media screen and (max-width: 599.98px) {
+            padding-right: em(20, $fz);
+            padding-left: em(20, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            padding-bottom: em(52, $fz);
+        }
+    }
+
+    &__box {
+        margin-top: em(14, $fz);
+        margin-bottom: em(38, $fz);
+
+        @media screen and (max-width: 599.98px) {
+            margin-top: em(12, $fz);
+            margin-bottom: em(27, $fz);
+        }
+    }
+
+    &__text {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        line-height: 1.55;
+    }
+
+    &__links {
+        margin-bottom: em(70, $fz);
+        width: 100%;
+
+        @media screen and (max-width: 1199.98px) {
+            margin-bottom: em(48, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            margin-left: em(-20, $fz);
+            width: calc(100% + em(40, $fz));
+        }
+        @media screen and (max-width: 599.98px) {
+            margin-bottom: em(29, $fz);
+        }
+    }
+
+    &__cities {
+        margin-bottom: em(75, $fz);
+
+        @media screen and (max-width: 599.98px) {
+            margin-bottom: em(43, $fz);
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: em(509, $fz);
+        margin-bottom: em(64, $fz);
+
+        @media screen and (max-width: 1199.98px) {
+            margin-bottom: em(52, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            height: em(421, $fz);
+            margin-bottom: em(43, $fz);
+        }
+    }
+}
+.contacts-links {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: em(10 55 8 69, $fz);
+    background-color: hsl(200, 55%, 96%);
+
+    &,
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) { 
+        justify-content: flex-start;
+        padding-bottom: em(27, $fz);
+    }
+
+    @media screen and (max-width: 599.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        padding: em(14 20 22, $fz);
+    }
+
+    &__link {
+        color: hsl(0, 0%, 0%);
+        margin-top: em(23, $fz);
+        margin-bottom: em(23, $fz);
+
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) { 
+            margin-right: 15%;
+        }
+        @media screen and (max-width: 599.98px) {
+            margin-top: em(17, $fz);
+            margin-right: 0;
+            margin-bottom: em(17, $fz);
+        }
+
+        &:first-child {
+            --contacts-networks-icon-width: #{em(35, $fz)};
+            --contacts-networks-icon-margin-right: #{em(25, $fz)};
+
+            @media screen and (max-width: 599.98px) {
+                --contacts-networks-icon-height: #{em(35, $fz)};
+            }
+        }
+
+        &:last-child {
+            --contacts-networks-icon-width: #{em(35, $fz)};
+            --contacts-networks-icon-height: #{em(32, $fz)};
+        }
+
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+
+    }
+
+    &__icon {
+        fill: hsl(198, 100%, 45%);
+        width: var(--contacts-networks-icon-width, em(44, $fz));
+        height: var(--contacts-networks-icon-height, em(47, $fz));
+        margin-right: var(--contacts-networks-icon-margin-right, em(30, $fz));
+
+        &--viber {
+            margin-right: em(20, $fz);
+        }
+
+        @media screen and (max-width: 599.98px) {
+            width: var(--contacts-networks-icon-width, em(34, $fz));
+            height: var(--contacts-networks-icon-height, em(32, $fz));
+        }
+    }
+
+    &__number {
+        $fz: 24;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+
+        @media screen and (max-width: 599.98px) {
+            $fz: 20;
+            font-size: em($fz, $fz_base);
+        }
+    }
+}
+
+.contacts-cities {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(em(500, $fz), em(600, $fz)));
+    grid-gap: em(70 30, $fz);
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) { 
+        grid-template-columns: minmax(em(392, $fz), em(500, $fz)) minmax(em(465, $fz), em(500, $fz));
+    }
+    @media screen and (max-width: 1199.98px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: em(44, $fz);
+    }
+    @media screen and (max-width: 599.98px) {
+        grid-row-gap: em(24, $fz);
+    }
+
+    &__picture,
+    &__item,
+    &__row {
+        display: flex;
+    }
+
+    &__picture {
+        justify-content: center;
+        align-items: center;
+        width: em(40, $fz);
+        height: em(40, $fz);
+        margin-right: em(28, $fz);
+    }
+
+    &__name {
+        $fz: 24;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+    }
+
+    &__row {
+        flex-wrap: wrap;
+    }
+
+    &__address {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        margin-right: em(24, $fz);
+        margin-top: em(9, $fz);
+    }
+
+    &__link {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+        font-weight: 500;
+        color: hsl(198, 100%, 45%);
+        transition: color 0.3s;
+        margin-top: em(9, $fz);
+
+        &:hover {
+            @media screen and (min-width: $breakpoint-hover) {
+                color: hsl(198, 100%, 30%);
+            }
+        }
+    }
+}
+
+.contacts-requisites {
+    grid-template-columns: em(340, $fz) 1fr;
+    grid-column-gap: em(156, $fz);
+
+    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) { 
+        grid-column-gap: 11%;
+    }
+    @media screen and (max-width: 1199.98px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: em(28, $fz);
+    }
+    @media screen and (max-width: 599.98px) {
+        grid-row-gap: em(26, $fz);
+    }
+
+    &__title {
+        $fz: 29;
+        font-size: em($fz, $fz_base);
+        font-weight: 600;
+
+        @media screen and (max-width: 599.98px) {
+            $fz: 20;
+            font-size: em($fz, $fz_base);
+        }
+    }
+
+    &,
+    &__list,
+    &__item,
+    &__block {
+        display: grid;
+    }
+
+    &__block {
+        grid-row-gap: em(30, $fz);
+    }
+
+    &__list {
+        grid-row-gap: em(40, $fz);
+        border-bottom: 1px solid hsl(0, 0%, 85%);
+        padding-bottom: em(30, $fz);
+
+        @media screen and (max-width: 1199.98px) {
+            grid-row-gap: em(25, $fz);
+        }
+    }
+
+    &__item {
+        grid-row-gap: em(5, $fz);
+        color: hsl(200, 2%, 24%);
+    }
+
+    &__value {
+        font-weight: 600;
+    }
+}
+
+.download-file-link {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        --download-file-link-color: hsl(198, 100%, 20%);
+    }
+
+    &__icon {
+        width: em(20, $fz);
+        height: em(20, $fz);
+        fill: hsl(0, 62%, 66%);
+        margin-right: em(12, $fz);
+    }
+
+    &__name {
+        color: var(--download-file-link-color, hsl(0, 0%, 0%));
+        margin-right: em(12, $fz);
+    }
+
+    &__size {
+        $fz: 14;
+        font-size: em($fz, $fz_base);
+        color: hsl(0, 0%, 52%);
+    }
+}

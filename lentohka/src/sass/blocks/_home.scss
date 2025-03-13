@@ -815,11 +815,19 @@
 }
 
 .section-form {
+    $self: &;
     display: flex;
     padding-top: em(106, $fz);
     padding-bottom: em(72, $fz);
     background: url("../../img/section-form.png") center top/cover no-repeat, hsl(200, 68%, 26%);
+    width: 100%;
+    justify-content: center;
 
+    @media screen and (max-width: 1629.98px) {
+        justify-content: flex-start;
+        padding-right: 5.3%;
+        padding-left: 5.3%;
+    }
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
         padding-right: 9%;
         padding-left: 10.2%;
@@ -836,9 +844,10 @@
         padding: em(30 20 6, $fz);
     }
 
-    &--center {
+    &--request {
+        --section-form-text-width: #{em(290, $fz)};
+
         @media screen and (min-width: $breakpoint_laptop_m) {
-            justify-content: center;
             padding-left: 0;
             padding-right: 0;
         }
@@ -848,6 +857,16 @@
         display: grid;
         grid-template-columns: minmax(em(240, $fz), em(390, $fz)) em(415, $fz);
         grid-column-gap: em(95, $fz);
+        width: 100%;
+        max-width: em(1370, $fz);
+
+        @media screen and (max-width: 1629.98px) {
+            max-width: auto;
+        }
+
+        #{$self}--request {
+            width: auto;
+        }
 
         @media screen and (max-width: #{$breakpoint_HD - 5}) {
             grid-column-gap: em(70, $fz);
@@ -861,6 +880,9 @@
     &__content {
         @media screen and (max-width: 949.98px) {
             margin-bottom: em(55, $fz);
+        }
+        @media screen and (max-width: 529.98px) {
+            margin-bottom: em(32, $fz);
         }
     }
 
@@ -892,6 +914,13 @@
         $fz: 20;
         font-size: em($fz, $fz_base);
         line-height: 1.35;
-        max-width: em(368, $fz);
+        max-width: var(--section-form-text-width, em(335, $fz));
+
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            max-width: var(--section-form-text-width, em(171, $fz));
+        }
+        @media screen and (max-width: 949.98px) {
+            max-width: var(--section-form-text-width, em(500, $fz));
+        }
     }
 }

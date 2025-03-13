@@ -348,7 +348,6 @@
         padding: em(3 12 23 6, $fz);
     }
 
-    &__link,
     &__wrap,
     &__status {
         display: flex;
@@ -356,12 +355,12 @@
     }
 
     &__link {
+        display: flex;
         color: hsl(0, 0%, 0%);
         padding-right: em(25, $fz);
 
         @media screen and (max-width: 599.98px) {
             padding-right: 0;
-            align-items: flex-start;
             margin-bottom: em(20, $fz);
         }
     }
@@ -393,9 +392,14 @@
     &__col {
         display: flex;
         flex-direction: column;
+        padding-top: em(11, $fz);
+        padding-bottom: em(14, $fz);
 
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            max-width: em(300, $fz);
+        }
         @media screen and (max-width: 599.98px) {
-            padding-top: em(11, $fz);
+            max-width: 100%;
         }
     }
 
@@ -442,7 +446,6 @@
     &__btn {
         width: em(209, $fz);
         margin-left: em(45, $fz);
-
 
         @media screen and (max-width: $breakpoint_HD_plus) {
             width: em(134, $fz);

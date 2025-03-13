@@ -159,7 +159,7 @@ input[type="number"]:focus {
 
         &:hover {
             @media screen and (min-width: $breakpoint-hover) {
-                background-color: hsl(198, 100%, 30%);
+                background-color: var(--btn-bg-hover, hsl(198, 100%, 30%));
             }
         }
     }
@@ -227,9 +227,14 @@ input[type="number"]:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f2eef4;
-    z-index: 1003;
+    background-color: hsl(0, 0%, 100%);
+    z-index: 1010;
     transition: opacity 0.1s;
+
+    &__img {
+        user-select: none;
+        pointer-events: none;
+    }
 }
 
 .fancybox {
@@ -247,4 +252,5 @@ input[type="number"]:focus {
 @import "blocks/title-block";
 @import "blocks/catalog";
 @import "blocks/product";
+@import "blocks/contacts";
 @import "blocks/filters";

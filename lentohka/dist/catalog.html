@@ -1186,6 +1186,36 @@
             </div>
         </div>
 
+        <!-- попап Поделиться -->
+        <div class="popup popup--sharing js-popup">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Поделиться</h2>
+                    <button type="button" title="Закрыть" aria-label="Закрыть" class="popup-btn-close popup__close js-popup-close">
+                        <svg width="28" height="28" aria-hidden="true" class="popup-btn-close__icon">
+                            <use xlink:href="./img/icons-sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <script async src="https://usocial.pro/usocial/usocial.js?uid=b9c206e7a3f53798&v=6.1.5" data-script="usocial" charset="utf-8"></script>
+                    <div class="popup__share">
+                        <div class="uSocial-Share popup__social" data-pid="f762a0f57b1fb4025ce5b05d95233650" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right" data-social="vk,ok,telegram,wa,vi"></div>
+                    </div>
+                    <form class="form">
+                        <label class="label label--is-active form__label">
+                            <input type="text" name="link" class="form__input js-input-copy">
+                            <span class="form__placeholder">Ссылка на товар</span>
+                        </label>
+                    </form>
+                    <button class="btn btn--primary popup__btn js-btn-copy-btn">
+                        <span class="btn__text"> Скопировать ссылку</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <script src="./js/fancybox.js"></script>
         <script src="./js/swiper.js"></script>
         <script src="./js/nativejs-select.min.js"></script>
