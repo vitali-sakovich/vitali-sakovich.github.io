@@ -64,6 +64,18 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     })();
 
+    (() => {
+        var swiper = new Swiper('.about-slider', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: ".js-slider-about-btn-next",
+                prevEl: ".js-slider-about-btn-prev",
+            },
+          });
+     })();
+
     new NativejsSelect({
         selector: "select",
         disableMobile: false,

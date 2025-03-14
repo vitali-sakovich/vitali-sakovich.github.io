@@ -12,8 +12,8 @@ function preloaderAdd() {
     div.innerHTML = `<div class="preloader__wrap">
                             <img
                                 src="./img/loader.gif"
-                                width="123"
-                                height="124"
+                                width="233"
+                                height="251"
                                 class="preloader__img"
                             />
                         </div>`;

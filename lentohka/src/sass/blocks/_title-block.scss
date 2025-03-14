@@ -1,4 +1,12 @@
 .title-block {
+    padding-right: var(--title-block-padding-right);
+    padding-left: var(--title-block-padding-left);
+    margin-left: var(--title-block-margin-left);
+    width: var(--title-block-width);
+    max-width: var(--title-block-max-width);
+    width: var(--title-block-width);
+    justify-self: var(--title-block-justify-self);
+    
     &__breadcrumb {
         margin-bottom: em(23, $fz);
 

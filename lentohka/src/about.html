@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <title>Режущий инструмент любых видов</title>
+        <title>О компании</title>
         <meta name="description" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -21,7 +21,7 @@
     <body>
         <script src="./js/preloader.js"></script>
 
-        <header class="header header--home">
+        <header class="header">
             <div class="header__container js-popup">
                 <nav class="header__nav">
                     <ul class="header__list">
@@ -250,706 +250,368 @@
             </div>
         </header>
         <main class="content">
-            <section class="preview">
-                <div class="preview__container">
-                    <div class="swiper preview__slider js-preview-slider">
-                        <div class="swiper-wrapper preview__wrapper">
-                            <div class="swiper-slide preview__slide">
-                                <picture class="preview__picture">
-                                    <source
-                                        srcset="./img/home-preview1.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/home-preview1.jpg"
-                                        width="1721"
-                                        height="726"
-                                        alt="Режущий инструмент любых видов"
-                                        class="preview__img"
-                                    />
-                                </picture>
-                                <div class="preview__content">
-                                    <h1 class="preview__title">
-                                        Режущий инструмент любых видов
-                                    </h1>
-                                    <p class="preview__text">
-                                        Ленточные пилы, дисковые пилы, рамные
-                                        пилы и многое другое
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="btn btn--border preview__btn"
-                                    >
-                                        <span class="btn__text">Подробнее</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide preview__slide">
-                                <picture class="preview__picture">
-                                    <source
-                                        srcset="./img/home-preview2.webp"
-                                        type="image/webp"
-                                    />
-                                    <img
-                                        src="./img/home-preview2.jpg"
-                                        width="1721"
-                                        height="726"
-                                        alt="Режущий инструмент любых видов"
-                                        class="preview__img"
-                                    />
-                                </picture>
-                                <div class="preview__content">
-                                    <h1 class="preview__title">
-                                        Подготовка и обслуживание инструмента
-                                    </h1>
-                                    <p class="preview__text">
-                                        Заточка, сварка, напайка, правка,
-                                        вальцовка пил и инструментов
-                                    </p>
-                                    <a
-                                        href="#"
-                                        class="btn btn--border preview__btn"
-                                    >
-                                        <span class="btn__text">Подробнее</span>
-                                    </a>
-                                </div>
-                            </div>
+            <section class="about">
+                <div class="title-block">
+                    <div class="breadcrumb title-block__breadcrumb">
+                        <a href="/" class="breadcrumb__link">Главная</a>
+                        <a href="#" class="breadcrumb__link">Каталог</a>
+                        <a class="breadcrumb__link">Ленточные пилы</a>
+                    </div>
+                    <h1 class="title-block__title">Пилы по металлу</h1>
+                </div>
+                <div class="swiper about-slider about__slider">
+                    <div class="swiper-wrapper about-slider__wrapper">
+                        <div class="swiper-slide about-slider__slide">
+                            <picture class="about-slider__picture">
+                                <source
+                                    srcset="./img/slider-about2.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/slider-about2.jpg"
+                                    class="about-slider__img"
+                                />
+                            </picture>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide about-slider__slide">
+                            <picture class="about-slider__picture">
+                                <source
+                                    srcset="./img/slider-about3.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/slider-about3.jpg"
+                                    class="about-slider__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide about-slider__slide">
+                            <picture class="about-slider__picture">
+                                <source
+                                    srcset="./img/slider-about1.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/slider-about1.jpg"
+                                    class="about-slider__img"
+                                />
+                            </picture>
+                        </div>
+
+                        <div class="swiper-slide about-slider__slide">
+                            <picture class="about-slider__picture">
+                                <source
+                                    srcset="./img/slider-about2.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/slider-about2.jpg"
+                                    class="about-slider__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide about-slider__slide">
+                            <picture class="about-slider__picture">
+                                <source
+                                    srcset="./img/slider-about3.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/slider-about3.jpg"
+                                    class="about-slider__img"
+                                />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide about-slider__slide">
+                            <picture class="about-slider__picture">
+                                <source
+                                    srcset="./img/slider-about1.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/slider-about1.jpg"
+                                    class="about-slider__img"
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="about-slider__btns">
+                        <button
+                            class="about-slider__btn about-slider__btn--prev js-slider-about-btn-prev"
+                            tabindex="0"
+                            aria-label="Previous slide"
+                            aria-controls="swiper-wrapper-f22a89b2d90baf56"
+                        >
+                            <svg
+                                width="25"
+                                height="61"
+                                class="about-slider__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#arrow-slide-about"
+                                ></use>
+                            </svg>
+                        </button>
+                        <button
+                            class="about-slider__btn about-slider__btn--next js-slider-about-btn-next"
+                            tabindex="0"
+                            aria-label="Next slide"
+                            aria-controls="swiper-wrapper-f22a89b2d90baf56"
+                        >
+                            <svg
+                                width="25"
+                                height="61"
+                                class="about-slider__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#arrow-slide-about"
+                                ></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-            </section>
-            <section class="home-catalog">
-                <div class="home-catalog__container">
-                    <a href="#" class="home-catalog__link">
-                        <div class="home-catalog__content">
-                            <span class="home-catalog__text"
-                                >Ленточные пилы</span
-                            >
-                            <svg
-                                width="32"
-                                height="33"
-                                aria-hidden="true"
-                                class="home-catalog__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#circle-arrow"
-                                ></use>
-                            </svg>
-                        </div>
-                        <picture class="home-catalog__picture">
-                            <source
-                                srcset="./img/home-catalog/home-catalog1.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                src="./img/home-catalog/home-catalog1.png"
-                                width="356"
-                                height="145"
-                                alt="Ленточные пилы"
-                                class="home-catalog__img"
-                            />
-                        </picture>
-                    </a>
-                    <a href="#" class="home-catalog__link">
-                        <div class="home-catalog__content">
-                            <span class="home-catalog__text"
-                                >Дисковые пилы</span
-                            >
-                            <svg
-                                width="32"
-                                height="33"
-                                aria-hidden="true"
-                                class="home-catalog__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#circle-arrow"
-                                ></use>
-                            </svg>
-                        </div>
-                        <picture class="home-catalog__picture">
-                            <source
-                                srcset="./img/home-catalog/home-catalog2.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                src="./img/home-catalog/home-catalog2.png"
-                                width="206"
-                                height="174"
-                                alt="Дисковые пилы"
-                                class="home-catalog__img"
-                            />
-                        </picture>
-                    </a>
-                    <a href="#" class="home-catalog__link">
-                        <div class="home-catalog__content">
-                            <span class="home-catalog__text"
-                                >Упаковочное оборудование</span
-                            >
-                            <svg
-                                width="32"
-                                height="33"
-                                aria-hidden="true"
-                                class="home-catalog__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#circle-arrow"
-                                ></use>
-                            </svg>
-                        </div>
-                        <picture class="home-catalog__picture">
-                            <source
-                                srcset="./img/home-catalog/home-catalog3.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                src="./img/home-catalog/home-catalog3.png"
-                                width="206"
-                                height="174"
-                                alt="Упаковочное оборудование"
-                                class="home-catalog__img"
-                            />
-                        </picture>
-                    </a>
-                    <a href="#" class="home-catalog__link">
-                        <div class="home-catalog__content">
-                            <span class="home-catalog__text"
-                                >Запчасти и расходники</span
-                            >
-                            <svg
-                                width="32"
-                                height="33"
-                                aria-hidden="true"
-                                class="home-catalog__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#circle-arrow"
-                                ></use>
-                            </svg>
-                        </div>
-                        <picture class="home-catalog__picture">
-                            <source
-                                srcset="./img/home-catalog/home-catalog4.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                src="./img/home-catalog/home-catalog4.png"
-                                width="206"
-                                height="174"
-                                alt="Запчасти и расходники"
-                                class="home-catalog__img"
-                            />
-                        </picture>
-                    </a>
-                    <a href="#" class="home-catalog__link">
-                        <div class="home-catalog__content">
-                            <span class="home-catalog__text">Оборудование</span>
-                            <svg
-                                width="32"
-                                height="33"
-                                aria-hidden="true"
-                                class="home-catalog__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#circle-arrow"
-                                ></use>
-                            </svg>
-                        </div>
-                        <picture class="home-catalog__picture">
-                            <source
-                                srcset="./img/home-catalog/home-catalog5.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                src="./img/home-catalog/home-catalog5.png"
-                                width="206"
-                                height="174"
-                                alt="Оборудование"
-                                class="home-catalog__img"
-                            />
-                        </picture>
-                    </a>
-                    <a href="#" class="home-catalog__link">
-                        <div class="home-catalog__content">
-                            <span class="home-catalog__text"
-                                >Ножи, фрезы, бланкеты</span
-                            >
-                            <svg
-                                width="32"
-                                height="33"
-                                aria-hidden="true"
-                                class="home-catalog__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#circle-arrow"
-                                ></use>
-                            </svg>
-                        </div>
-                        <picture class="home-catalog__picture">
-                            <source
-                                srcset="./img/home-catalog/home-catalog6.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                src="./img/home-catalog/home-catalog6.png"
-                                width="206"
-                                height="174"
-                                alt="Ножи, фрезы, бланкеты"
-                                class="home-catalog__img"
-                            />
-                        </picture>
-                    </a>
-                    <a href="#" class="home-catalog__link">
-                        <div class="home-catalog__content">
-                            <span class="home-catalog__text">Аспирация</span>
-                            <svg
-                                width="32"
-                                height="33"
-                                aria-hidden="true"
-                                class="home-catalog__icon"
-                            >
-                                <use
-                                    xlink:href="./img/icons-sprite.svg#circle-arrow"
-                                ></use>
-                            </svg>
-                        </div>
-                        <picture class="home-catalog__picture">
-                            <source
-                                srcset="./img/home-catalog/home-catalog7.webp"
-                                type="image/webp"
-                            />
-                            <img
-                                src="./img/home-catalog/home-catalog7.png"
-                                width="206"
-                                height="174"
-                                alt="Аспирация"
-                                class="home-catalog__img"
-                            />
-                        </picture>
-                    </a>
-                </div>
-            </section>
-            <section class="home-advantages home-advantages--first">
-                <div class="home-advantages__container">
-                    <div class="home-advantages__item">
-                        <svg
-                            width="143"
-                            height="128"
-                            aria-hidden="true"
-                            class="home-advantages__icon"
-                        >
-                            <use
-                                xlink:href="./img/icons-sprite.svg#home-advantages1"
-                            ></use>
-                        </svg>
-                        <p class="home-advantages__text">
-                            Товар всегда в наличии на складе
-                        </p>
-                    </div>
-                    <div class="home-advantages__item">
-                        <svg
-                            width="143"
-                            height="128"
-                            aria-hidden="true"
-                            class="home-advantages__icon"
-                        >
-                            <use
-                                xlink:href="./img/icons-sprite.svg#home-advantages2"
-                            ></use>
-                        </svg>
-                        <p class="home-advantages__text">
-                            Цены заводов производителей
-                        </p>
-                    </div>
-                    <div class="home-advantages__item">
-                        <svg
-                            width="143"
-                            height="128"
-                            aria-hidden="true"
-                            class="home-advantages__icon"
-                        >
-                            <use
-                                xlink:href="./img/icons-sprite.svg#home-advantages3"
-                            ></use>
-                        </svg>
-                        <p class="home-advantages__text">
-                            Оперативная отправка любыми транспортными компаниями
-                        </p>
-                    </div>
-                    <div class="home-advantages__item">
-                        <svg
-                            width="143"
-                            height="128"
-                            aria-hidden="true"
-                            class="home-advantages__icon"
-                        >
-                            <use
-                                xlink:href="./img/icons-sprite.svg#home-advantages4"
-                            ></use>
-                        </svg>
-                        <p class="home-advantages__text">
-                            Собственное производство, немецкое оборудование
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section class="home-about">
-                <div class="home-about__container">
-                    <div class="home-about__content">
-                        <h2 class="home-about__title">О компании</h2>
-                        <p class="home-about__text">
+                <div class="about__container">
+                    <div class="about__description">
+                        <p class="text text--size-md about__text">
                             Компания «Ленточка» является узкоспециализированным
                             предприятием, направленным на реализацию
-                            индустриального режущего инструмента.
+                            индустриального режущего инструмента. Более 17 лет
+                            успешно занимается изготовлением и реализацией
+                            ленточных и дисковых пил для различных отраслей
+                            промышленности. А так же оборудования во всех сферах
+                            переработки сырья.
                         </p>
-                        <p class="home-about__text">
-                            Более 17 лет успешно занимается изготовлением и
-                            реализацией ленточных и дисковых пил для различных
-                            отраслей промышленности. А так же оборудования во
-                            всех сферах переработки сырья.
+                        <p class="text text--size-md about__text">
+                            Отличительной чертой предприятия является разработка
+                            и внедрение передовых технологий, позволяющие
+                            выпускать продукцию, отвечающую запросам и
+                            потребностям международного рынка.
                         </p>
-                        <div class="home-about__btns">
-                            <a
-                                href="https://www.youtube.com/watch?v=aUrIJUD3Ui0&ab_channel=ArminvanBuuren"
-                                data-fancybox="about"
-                                class="btn-secondary home-about__btn home-about__btn--video"
+                        <p class="text text--size-md about__text">
+                            С момента основания и до настоящего времени,
+                            политикой нашей компании было и остается
+                            сотрудничество только с зарекомендовавшими себя на
+                            мировом рынке заводами-производителями, выпускающими
+                            станки и инструмент наивысшего качества.
+                        </p>
+                        <p class="text text--size-md about__text">
+                            Основу нашей компании составляют
+                            высококвалифицированные специалисты во всех областях
+                            обработки, имеющие богатый практический опыт и
+                            большое количество реализованных проектов.
+                        </p>
+                        <p class="text text--size-md about__text">
+                            Наши специалисты профессионально отнесутся к
+                            ситуации на Вашем предприятии и предложат наиболее
+                            оптимальное решение, как по функциональному
+                            потенциалу, так и по цене
+                        </p>
+                        <p class="text text--size-md about__text">
+                            Мы будем рады, используя наш опыт и наработки,
+                            реализовать Ваш проект с использованием самых
+                            перспективных технологий и на самом современном
+                            оборудовании.
+                        </p>
+                        <p class="text text--size-md about__text">
+                            Мы предлагаем своим заказчикам только разумные
+                            решения, имеющие реальную перспективу быть
+                            реализованными как в техническом, так и в
+                            экономическом плане.
+                        </p>
+                    </div>
+                    <div class="text-line about__task">
+                        <p class="text-line__text">
+                            Главная наша задача - найти решение, которое будет
+                            отвечать запросам заказчика, и устраивать его по
+                            цене.
+                        </p>
+                    </div>
+                    <div class="about-video about__video">
+                        <a
+                            href="https://www.youtube.com/watch?v=aUrIJUD3Ui0&ab_channel=ArminvanBuuren"
+                            data-fancybox="video"
+                            class="about-link-video about-video__link"
+                        >
+                            <picture class="about-link-video__picture">
+                                <source
+                                    srcset="./img/priview-about-video.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/priview-about-video.png"
+                                    width="800"
+                                    height="529"
+                                    alt="О компании"
+                                    class="about-link-video__img"
+                                />
+                            </picture>
+                            <svg
+                                width="100"
+                                height="100"
+                                aria-hidden="true"
+                                class="about-link-video__icon about-link-video__icon--play"
                             >
-                                <svg
-                                    width="27"
-                                    height="27"
-                                    aria-hidden="true"
-                                    class="btn-secondary__icon"
-                                >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#triangle"
-                                    ></use>
-                                </svg>
-                                <span class="btn-secondary__label"
-                                    >Видео о нас</span
-                                >
-                            </a>
-                            <a
-                                href="#"
-                                class="btn-more home-about__btn home-about__btn--more"
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#play"
+                                ></use>
+                            </svg>
+                            <svg
+                                width="70"
+                                height="60"
+                                aria-hidden="true"
+                                class="about-link-video__icon about-link-video__icon--logo"
                             >
-                                <span class="btn-more__label">Подробнее</span>
-                                <svg
-                                    width="28"
-                                    height="10"
-                                    aria-hidden="true"
-                                    class="btn-more__icon"
-                                >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#arrow-btn"
-                                    ></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <picture class="home-about__picture">
-                        <source
-                            srcset="./img/home-about.webp"
-                            type="image/webp"
-                        />
-                        <img
-                            src="./img/home-about.png"
-                            width="878"
-                            height="779"
-                            alt="О компании"
-                            class="home-about__img"
-                        />
-                    </picture>
-                </div>
-            </section>
-            <section class="home-advantages home-advantages--second">
-                <div class="home-advantages__container">
-                    <div class="home-advantages__item">
-                        <svg
-                            width="143"
-                            height="128"
-                            aria-hidden="true"
-                            class="home-advantages__icon"
-                        >
-                            <use
-                                xlink:href="./img/icons-sprite.svg#home-advantages5"
-                            ></use>
-                        </svg>
-                        <p class="home-advantages__text">
-                            Гарантия на инструмент и оборудование
-                        </p>
-                    </div>
-                    <div class="home-advantages__item">
-                        <svg
-                            width="143"
-                            height="128"
-                            aria-hidden="true"
-                            class="home-advantages__icon"
-                        >
-                            <use
-                                xlink:href="./img/icons-sprite.svg#home-advantages6"
-                            ></use>
-                        </svg>
-                        <p class="home-advantages__text">
-                            Разнообразие товаров в одном месте
-                        </p>
-                    </div>
-                    <div class="home-advantages__item">
-                        <svg
-                            width="143"
-                            height="128"
-                            aria-hidden="true"
-                            class="home-advantages__icon"
-                        >
-                            <use
-                                xlink:href="./img/icons-sprite.svg#home-advantages7"
-                            ></use>
-                        </svg>
-                        <p class="home-advantages__text">
-                            Обучение после внедрения
-                        </p>
-                    </div>
-                    <div class="home-advantages__item">
-                        <svg
-                            width="143"
-                            height="128"
-                            aria-hidden="true"
-                            class="home-advantages__icon"
-                        >
-                            <use
-                                xlink:href="./img/icons-sprite.svg#home-advantages8"
-                            ></use>
-                        </svg>
-                        <p class="home-advantages__text">
-                            Технические консультации от обученых специалистов
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section class="home-map">
-                <div class="home-map__container">
-                    <div class="home-map__wrap">
-                        <h2 class="home-map__title">
-                            Мы работаем <br />
-                            в семи городах Сибири
-                        </h2>
-                        <p class="home-map__text">
-                            И доставляем по всей стране
-                        </p>
-                    </div>
-                    <div class="home-map__list">
-                        <div class="home-map__item">
-                            <span class="home-map__name">Красноярск</span>
-                            <div class="home-map__contacts">
-                                <span class="home-map__address">
-                                    Калинина 91
-                                </span>
-                                <a
-                                    href="tel: +73912745455"
-                                    class="home-map__link"
-                                    >+7 (391) 274-54-55</a
-                                >
-                            </div>
-                        </div>
-                        <div class="home-map__item">
-                            <span class="home-map__name">Ачинск</span>
-                            <div class="home-map__contacts">
-                                <span class="home-map__address">
-                                    5 Июля, 17а
-                                </span>
-                                <a
-                                    href="tel: +79029100005"
-                                    class="home-map__link"
-                                    >+7 (902) 910-00-05</a
-                                >
-                            </div>
-                        </div>
-                        <div class="home-map__item">
-                            <span class="home-map__name">Лесосибирск</span>
-                            <div class="home-map__contacts">
-                                <span class="home-map__address">
-                                    Енисейская 23,а
-                                </span>
-                                <a
-                                    href="tel: +79029100077"
-                                    class="home-map__link"
-                                    >+7 (902) 910-00-77</a
-                                >
-                            </div>
-                        </div>
-                        <div class="home-map__item">
-                            <span class="home-map__name">Абакан</span>
-                            <div class="home-map__contacts">
-                                <span class="home-map__address">
-                                    Хлебная, 14
-                                </span>
-                                <a
-                                    href="tel: +79532555520"
-                                    class="home-map__link"
-                                    >+7 (953) 255-55-20</a
-                                >
-                            </div>
-                        </div>
-                        <div class="home-map__item">
-                            <span class="home-map__name">Канск</span>
-                            <div class="home-map__contacts">
-                                <span class="home-map__address">
-                                    Залесная, 2
-                                </span>
-                                <a
-                                    href="tel: +79504010001"
-                                    class="home-map__link"
-                                    >+7 (950) 401-00-01</a
-                                >
-                            </div>
-                        </div>
-                        <div class="home-map__item">
-                            <span class="home-map__name">Томск</span>
-                            <div class="home-map__contacts">
-                                <span class="home-map__address">
-                                    Айвазовского, 27с1
-                                </span>
-                                <a
-                                    href="tel: +79504200040"
-                                    class="home-map__link"
-                                    >+7 (950) 420-00-40</a
-                                >
-                            </div>
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#logo"
+                                ></use>
+                            </svg>
+                        </a>
+                        <div class="about-video__box">
+                            <h3 class="about-video__title">Видео о нас</h3>
+                            <ul class="about-video__list">
+                                <li class="about-video__item">Производство</li>
+                                <li class="about-video__item">Процессы</li>
+                                <li class="about-video__item">
+                                    Контроль качества
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="section-form section-form--request">
-                <div class="section-form__container">
-                    <div class="section-form__content">
-                        <h2 class="section-form__title">Оставьте заявку</h2>
-                        <p class="section-form__text">
-                            Пожалуйста, заполните все поля. Наш специалист
-                            свяжется с вами в ближайшее время.
-                        </p>
-                    </div>
-                    <form action="#" class="form section-form__form">
-                        <label class="label form__label js-label">
-                            <input
-                                type="text"
-                                name="name"
-                                data-rule="required|name"
-                                class="form__input js-input first-elem"
-                            />
-                            <span class="form__placeholder">Ваше имя*</span>
-                            <button
-                                type="button"
-                                title="Очистить"
-                                aria-label="Очистить"
-                                class="form__clear js-clear-input"
-                            >
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    aria-hidden="true"
-                                    class="form__icon"
-                                >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#clear"
-                                    ></use>
-                                </svg>
-                            </button>
-                        </label>
-                        <label class="label form__label js-label">
-                            <input
-                                type="text"
-                                name="phone"
-                                data-rule="required|phone"
-                                class="form__input js-input-mask js-input"
-                            />
-                            <span class="form__placeholder">Телефон*</span>
-                            <button
-                                type="button"
-                                title="Очистить"
-                                aria-label="Очистить"
-                                class="form__clear js-clear-input"
-                            >
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    aria-hidden="true"
-                                    class="form__icon"
-                                >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#clear"
-                                    ></use>
-                                </svg>
-                            </button>
-                        </label>
-                        <label class="label form__label js-label">
-                            <input
-                                type="email"
-                                name="email"
-                                class="form__input js-input"
-                            />
-                            <span class="form__placeholder">E-mail</span>
-                            <button
-                                type="button"
-                                title="Очистить"
-                                aria-label="Очистить"
-                                class="form__clear js-clear-input"
-                            >
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    aria-hidden="true"
-                                    class="form__icon"
-                                >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#clear"
-                                    ></use>
-                                </svg>
-                            </button>
-                        </label>
-                        <label class="label form__label js-label">
-                            <textarea
-                                name="commentary"
-                                cols="30"
-                                rows="10"
-                                class="form__textarea js-input"
-                            ></textarea>
-                            <span class="form__placeholder">Комментарий</span>
-                            <button
-                                type="button"
-                                title="Очистить"
-                                aria-label="Очистить"
-                                class="form__clear js-clear-input"
-                            >
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    aria-hidden="true"
-                                    class="form__icon"
-                                >
-                                    <use
-                                        xlink:href="./img/icons-sprite.svg#clear"
-                                    ></use>
-                                </svg>
-                            </button>
-                        </label>
-                        <div class="form__box">
-                            <button
-                                type="submit"
-                                class="btn btn--primary form__btn last-elem"
-                            >
-                                <span class="btn__text">Отправить</span>
-                            </button>
-                            <span class="form-consent form__consent"
-                                >Отправляя данные, я даю свое
-                                <a href="#" class="form-consent__link"
-                                    >согласие на обработку перс. данных</a
-                                ></span
-                            >
+                <div class="section-form">
+                    <div class="section-form__container">
+                        <div class="section-form__content">
+                            <p class="section-form__text">
+                                Задайте вопрос, направьте нам претензию или
+                                оставьте отзыв о работе сайта или магазина
+                            </p>
                         </div>
-                    </form>
+                        <form action="#" class="form section-form__form">
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    data-rule="required|name"
+                                    class="form__input js-input first-elem"
+                                />
+                                <span class="form__placeholder">Ваше имя*</span>
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        aria-hidden="true"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="label form__label js-label">
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    data-rule="required|phone"
+                                    class="form__input js-input-mask js-input"
+                                />
+                                <span class="form__placeholder">Телефон*</span>
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        aria-hidden="true"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="label form__label js-label">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    class="form__input js-input"
+                                />
+                                <span class="form__placeholder">E-mail</span>
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        aria-hidden="true"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="label form__label js-label">
+                                <textarea
+                                    name="commentary"
+                                    cols="30"
+                                    rows="10"
+                                    class="form__textarea js-input"
+                                ></textarea>
+                                <span class="form__placeholder"
+                                    >Комментарий</span
+                                >
+                                <button
+                                    type="button"
+                                    title="Очистить"
+                                    aria-label="Очистить"
+                                    class="form__clear js-clear-input"
+                                >
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        aria-hidden="true"
+                                        class="form__icon"
+                                    >
+                                        <use
+                                            xlink:href="./img/icons-sprite.svg#clear"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </label>
+                            <div class="form__box">
+                                <button
+                                    type="submit"
+                                    class="btn btn--primary form__btn last-elem"
+                                >
+                                    <span class="btn__text">Отправить</span>
+                                </button>
+                                <span class="form-consent form__consent"
+                                    >Отправляя данные, я даю свое
+                                    <a href="#" class="form-consent__link"
+                                        >согласие на обработку перс. данных</a
+                                    ></span
+                                >
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
         </main>
-        <footer class="footer footer--home">
+        <footer class="footer">
             <div class="footer__container">
                 <div class="footer-nav footer__nav">
                     <a href="#" class="footer-nav__link">О компании</a>

@@ -461,6 +461,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: hsl(198, 100%, 45%);
 
         @media screen and (min-width: 950px) {
             width: 100%;
@@ -541,6 +542,11 @@
 
         &--services {
             margin-bottom: em(-3, $fz);
+        }
+
+        &--logo {
+            width: em(70, $fz);
+            height: em(60, $fz);
         }
     }
 }

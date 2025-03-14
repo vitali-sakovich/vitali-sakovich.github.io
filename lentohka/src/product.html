@@ -191,13 +191,14 @@
                 </button>
                 <div class="header-sidebar header__sidebar">
                     <a href="/" class="header-sidebar__logo">
-                        <img
+                        <svg
                             width="70"
                             height="60"
-                            src="./img/logo.svg"
-                            alt="Логотип"
-                            class="header-sidebar__img"
-                        />
+                            aria-hidden="true"
+                            class="header-sidebar__icon header-sidebar__icon--logo"
+                        >
+                            <use xlink:href="./img/icons-sprite.svg#logo"></use>
+                        </svg>
                     </a>
                     <div class="header-sidebar__box">
                         <button
