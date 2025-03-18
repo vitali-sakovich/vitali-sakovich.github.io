@@ -73,6 +73,12 @@ window.addEventListener("DOMContentLoaded", function () {
                 nextEl: ".js-slider-about-btn-next",
                 prevEl: ".js-slider-about-btn-prev",
             },
+            950: {
+                slidesPerView: 'auto',
+            },
+            320: {
+                slidesPerView: 1,
+            }
           });
      })();
 
@@ -502,4 +508,31 @@ window.addEventListener("DOMContentLoaded", function () {
             });
         }
     })();
+
+    (() => {
+        const block = document.querySelector('.blog__categories');
+
+        if(!block) return;
+
+        const btnUncover = block.querySelector('.uncover-btn');
+        const link = block.querySelectorAll('.category-link');
+
+        console.log(link.length)
+        if(link.length <= 10) {
+            btnUncover.remove();
+        }
+
+        link.forEach((item)=> {
+            btnUncover.addEventListener('click', ()=> {
+                if(item.classList.contains('category-link--is-show')) {
+                    item.classList.remove('category-link--is-show');
+                    btnUncover.textContent = "Раскрыть все";
+                } else {
+                    item.classList.add('category-link--is-show');
+                    btnUncover.textContent = "Скрыть";
+                }
+              
+            });
+        })
+     })();
 });

@@ -916,7 +916,7 @@
         line-height: 1.35;
         max-width: var(--section-form-text-width, em(335, $fz));
 
-        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        @media screen and (max-width: 1025.98px) {
             max-width: var(--section-form-text-width, em(171, $fz));
         }
         @media screen and (max-width: 949.98px) {

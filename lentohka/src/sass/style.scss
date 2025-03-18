@@ -218,6 +218,32 @@ input[type="number"]:focus {
     }
 }
 
+.wrapper {
+    padding-left: 12.6%;
+    padding-right: 12%;
+
+    @media screen and (max-width: 1629.98px) {
+        padding-right: 5.3%;
+        padding-left: 5.3%;
+   }
+   @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-right: 8.3%;
+        padding-left: 8.3%;
+   }
+   @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        padding-right: 9%;
+        padding-left: 9%;
+   }
+   @media screen and (max-width: 949.98px) {
+        padding-right: 4.4%;
+        padding-left: 4.4%;
+    }
+    @media screen and (max-width: 599.98px) {
+        padding-right: em(20, $fz);
+        padding-left: em(20, $fz);
+    }
+}
+
 .preloader {
     position: fixed;
     top: 0;
@@ -255,3 +281,5 @@ input[type="number"]:focus {
 @import "blocks/contacts";
 @import "blocks/filters";
 @import "blocks/about";
+@import "blocks/blog";
+@import "blocks/blog-detail";
