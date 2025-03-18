@@ -26,6 +26,7 @@
         font-weight: 600;  
         margin-top: 0;
         margin-bottom: 0;
+        color: var(--title-block-color);
 
         @media screen and (max-width: 949.98px) {
             $fz: 34;
@@ -64,10 +65,13 @@
         &:first-child {
             &::before {
                 content: '';
-                background: url("./../img/arrow.svg") top/contain no-repeat;
+                mask-image: url("./../img/arrow.svg");
+                mask-repeat: no-repeat;
+                mask-position: center;
                 width: em(18, $fz);
                 height: em(13, $fz);
                 margin-right: em(20, $fz);
+                background-color: var(--breadcrumb-mask-bg, hsl(219, 23%, 31%));
             }
         }
     }
