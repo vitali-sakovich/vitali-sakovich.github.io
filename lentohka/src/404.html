@@ -2,10 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <title>
-            Истории успеха: Как ленточная и дисковая пила помогает людям
-            достигать целей
-        </title>
+        <title>Ошибка 404: страница не найдена</title>
         <meta name="description" content="" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -253,41 +250,153 @@
             </div>
         </header>
         <main class="content">
-            <section
-                style="display: grid; grid-row-gap: 10px; padding-bottom: 50px"
-                class="pades wrapper"
-            >
-                <a href="/lentohka/dist/index.html" class="btn btn--primary">
-                    <span class="btn__text">Главная</span>
-                </a>
-                <a href="/lentohka/dist/about.html" class="btn btn--primary">
-                    <span class="btn__text">О компании</span>
-                </a>
-                <a
-                    href="/lentohka/dist/blog-detail.html"
-                    class="btn btn--primary"
-                >
-                    <span class="btn__text">Статья</span>
-                </a>
-                <a href="/lentohka/dist/blog.html" class="btn btn--primary">
-                    <span class="btn__text">Блог</span>
-                </a>
-                <a href="/lentohka/dist/catalog.html" class="btn btn--primary">
-                    <span class="btn__text">Каталог</span>
-                </a>
-                <a href="/lentohka/dist/contacts.html" class="btn btn--primary">
-                    <span class="btn__text">Контакты</span>
-                </a>
-                <a href="/lentohka/dist/product.html" class="btn btn--primary">
-                    <span class="btn__text">Детальная товара</span>
-                </a>
-                <a href="/lentohka/dist/service.html" class="btn btn--primary">
-                    <span class="btn__text">Услуга</span>
-                </a>
-                <a href="/lentohka/dist/404.html" class="btn btn--primary">
-                    <span class="btn__text">Ошибка 404</span>
-                </a>
+            <section class="error-page wrapper">
+                <div class="title-block">
+                    <div class="breadcrumb title-block__breadcrumb">
+                        <a href="/" class="breadcrumb__link">Главная</a>
+                    </div>
+                    <h1 class="title-block__title">
+                        Ошибка 404: страница не найдена
+                    </h1>
+                </div>
+
+                <div class="error-page__box">
+                    <p class="text text--size-lg">
+                        Неправильно набран адрес или такой страницы не
+                        существует
+                    </p>
+                </div>
             </section>
+            <div class="section-form">
+                <div class="section-form__container">
+                    <div class="section-form__content">
+                        <p class="section-form__text">
+                            Задайте вопрос, направьте нам претензию или оставьте
+                            отзыв о работе сайта или магазина
+                        </p>
+                    </div>
+                    <form action="#" class="form section-form__form">
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="name"
+                                data-rule="required|name"
+                                class="form__input js-input first-elem"
+                            />
+                            <span class="form__placeholder">Ваше имя</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                    class="form__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="phone"
+                                data-rule="required|phone"
+                                class="form__input js-input-mask js-input"
+                            />
+                            <span class="form__placeholder">Телефон</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                    class="form__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="email"
+                                name="email"
+                                data-rule="required|email"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder">E-mail</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                    class="form__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea
+                                name="commentary"
+                                cols="30"
+                                rows="10"
+                                class="form__textarea js-input"
+                            ></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                    class="form__icon"
+                                >
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button
+                                type="submit"
+                                class="btn btn--primary form__btn last-elem"
+                            >
+                                <span class="btn__text">Отправить</span>
+                            </button>
+                            <span class="form-consent form__consent"
+                                >Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link"
+                                    >согласие на обработку перс. данных</a
+                                ></span
+                            >
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -940,7 +1049,7 @@
         </div>
 
         <!-- попап Заказать услугу  -->
-        <div class="popup popup--order js-popup">
+        <div class="popup popup--service js-popup">
             <div class="popup__overlay js-popup-close"></div>
             <div class="popup__block">
                 <div class="popup__head">

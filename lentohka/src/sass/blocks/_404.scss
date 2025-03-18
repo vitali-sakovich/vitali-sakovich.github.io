@@ -1,0 +1,12 @@
+.error-page {
+    padding-bottom: em(160, $fz);
+
+    @media screen and (max-width: 599.98px) {
+        padding-bottom: em(60, $fz);
+    }
+
+    &__box {
+        color: hsl(200, 2%, 24%);
+        margin-top: em(37, $fz);
+    }
+}
