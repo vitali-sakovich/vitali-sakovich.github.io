@@ -32,15 +32,12 @@
         margin-bottom: 0;
     }
 
-    &,
-    &__container,
-    &__list {
-        display: flex;
-    }
-
     &__container {
         width: 100%;
 
+        @media screen and (min-width: 950px) {
+            display: flex !important;
+        }
         @media screen and (min-width: 1585px) {
             align-items: center;
         }
@@ -87,6 +84,7 @@
     }
 
     &__list {
+        display: flex;
         flex-wrap: wrap;
         list-style: none;
         gap: em(10 23, $fz);
@@ -425,8 +423,10 @@
     transition: border 0.3s;
 
     &:hover {
-        --header-sidebar-color-border: hsl(198, 100%, 30%);
-        border-color: hsl(198, 100%, 30%);
+        @media screen and (min-width: $breakpoint-hover) {
+            --header-sidebar-color-border: hsl(198, 100%, 30%);
+            border-color: hsl(198, 100%, 30%);
+        }
     }
 
     @media screen and (min-width: 950px) {
@@ -474,10 +474,24 @@
     }
 
     &__btn {
+        position: relative;
         justify-content: center;
         align-items: center;
         color: hsl(198, 100%, 45%);
         background-color: transparent;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+            @media screen and (min-width: 950px) {
+                border-top: 1px solid var(--header-sidebar-color-border, hsl(198, 100%, 45%));
+            }
+        }
 
         &:hover {
             @media screen and (min-width: $breakpoint-hover) {
@@ -486,8 +500,26 @@
             }
         }
 
+        &--is-active {
+            background-color: hsl(198, 100%, 30%);
+            color: hsl(0, 0%, 100%);
+
+            @media screen and (min-width: 950px) {
+                transform: translateX(em(10, $fz));
+                border-top-left-radius: em(10, $fz);
+                border-bottom-left-radius: em(10, $fz);
+
+                &::before {
+                    transform: translateX(em(-10, $fz));
+                }
+
+                &:hover::before {
+                    background-color: hsl(198, 100%, 30%);
+                }
+            }
+        }
+
         @media screen and (min-width: 950px) {
-            border-top: 1px solid var(--header-sidebar-color-border, hsl(198, 100%, 45%));
             transition: background-color 0.3s, color 0.3s, border 0.3s;
         }
         @media screen and (max-width: 949.98px) {
@@ -516,7 +548,10 @@
     }
 
     &__text {
+        position: relative;
         font-weight: 500;
+        pointer-events: none;
+        user-select: none;
 
         @media screen and (min-width: 950px) {
             margin-top: em(14, $fz);
@@ -532,6 +567,8 @@
     }
 
     &__icon {
+        pointer-events: none;
+        user-select: none;
         fill: currentColor;
         will-change: transform;
 

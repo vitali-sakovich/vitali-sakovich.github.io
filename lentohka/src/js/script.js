@@ -239,6 +239,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (!closeModal) {
             return;
         }
+        
         closeModal.forEach(function (closeModalItem) {
             closeModalItem.addEventListener("click", () => modalHidden(modal));
         });
@@ -251,6 +252,15 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     }
     function modalHidden(modal) {
+        const btnSidebar = document.querySelectorAll('.header-sidebar__btn');
+
+        btnSidebar.forEach((item)=> {
+            if(!item.classList.contains('header-sidebar__btn--is-active')) return;
+            item.classList.remove('header-sidebar__btn--is-active');
+        });
+
+        if(!modal.classList.contains('popup--is-show')) return;
+        
         modal.classList.remove("popup--is-show");
         document.body.classList.remove("hidden");
         window.setTimeout(function () {
@@ -534,5 +544,29 @@ window.addEventListener("DOMContentLoaded", function () {
               
             });
         })
+     })();
+
+     (() => {   
+        const block = document.querySelector('.header-sidebar__box');
+        let selectedBtn;
+        block.onclick = function(event) {
+            let btn = event.target.closest('button');
+          
+            if (!btn) return;
+          
+            if (!block.contains(btn)) return;
+          
+            highlight(btn);
+          };
+
+          function highlight(btn) {
+            if (selectedBtn) { 
+                selectedBtn.classList.remove('header-sidebar__btn--is-active');
+            }
+         
+            selectedBtn = btn;
+            modalHidden(document.querySelector(selectedBtn.getAttribute("data-hidden-modal")));
+            selectedBtn.classList.add('header-sidebar__btn--is-active'); 
+          }
      })();
 });
