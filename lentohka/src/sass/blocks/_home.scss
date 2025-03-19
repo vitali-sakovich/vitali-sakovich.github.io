@@ -52,7 +52,7 @@
 
         @media screen and (min-width: 950px) {
             transform: translateX(var(--preview-benner-translate-x));
-            transition: transform 0.3s;
+            transition: transform 0.5s;
         }
         @media screen and (max-width: #{$breakpoint_HD - 5}) {
             --swiper-pagination-bottom: #{em(20, $fz)};
@@ -820,12 +820,23 @@
 
 .section-form {
     $self: &;
+    position: relative;
     display: flex;
     padding-top: em(106, $fz);
     padding-bottom: em(72, $fz);
-    background: url("./../img/section-form.png") center top/cover no-repeat, hsl(200, 68%, 26%);
     width: 100%;
     justify-content: center;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url("./../img/section-form.png") center top/cover no-repeat, hsl(200, 68%, 26%);
+    }
 
     @media screen and (max-width: 1629.98px) {
         justify-content: flex-start;
@@ -858,8 +869,17 @@
         }
     }
 
+    &--services {
+        --section-form-content-row-gap: #{em(30, $fz)};
+        
+        &:before {
+            left: em(71, $fz);
+        }
+    }
+
     &__container {
         display: grid;
+        position: relative;
         grid-template-columns: minmax(em(240, $fz), em(390, $fz)) em(415, $fz);
         grid-column-gap: em(95, $fz);
         width: 100%;
@@ -883,6 +903,10 @@
     }
 
     &__content {
+        display: grid;
+        align-content: start;
+        grid-row-gap: var(--section-form-content-row-gap);
+
         @media screen and (max-width: 949.98px) {
             margin-bottom: em(55, $fz);
         }

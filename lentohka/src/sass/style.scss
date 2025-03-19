@@ -149,6 +149,7 @@ input[type="number"]:focus {
 
 .title {
     font-weight: 600;
+    color: var(--title-color);
 
     &--size-sm {
         $fz: 20;
@@ -313,3 +314,4 @@ input[type="number"]:focus {
 @import "blocks/promotions";
 @import "blocks/delivery";
 @import "blocks/leasing";
+@import "blocks/services";

@@ -41,7 +41,7 @@
 
             #{$self}--home & {
                 transform: translateY(var(--header-translate-y));
-                transition: transform 0.3s;
+                transition: transform 0.5s;
             }
         }
         @media screen and (min-width: 1585px) {

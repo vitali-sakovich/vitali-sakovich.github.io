@@ -39,10 +39,11 @@
     &__row,
     &__content {
         display: grid;
+        align-content: start;
     }
 
     &__row {
-        grid-template-columns: repeat(2, em(500, $fz));
+        grid-template-columns: var(--description-template-columns, em(500 500, $fz));
         grid-gap: em(15, $fz) 10%;
 
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
@@ -61,15 +62,17 @@
     }
 
     &__content {
-        grid-row-gap: em(27, $fz);
+        grid-row-gap: var(--description-content-row-gap, em(27, $fz));
 
         @media screen and (max-width: 599.98px) {
-            grid-row-gap: em(15, $fz);  
+            grid-row-gap: var(--description-content-row-gap, em(15, $fz));  
         }
     }
 
     &__list {
+        display: grid;
         list-style-position: inside;
+        grid-row-gap: var(--description-list-row-gap);
 
         li::marker {
             $fz: 12;
