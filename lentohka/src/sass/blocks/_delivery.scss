@@ -16,42 +16,47 @@
         padding-bottom: em(40, $fz);
     }
 
-    &__description,
+    &__description {
+        margin-top: em(37, $fz);
+    
+        @media screen and (max-width: 949.98px) {
+            margin-top: em(20, $fz);
+        }
+    }
+}
+
+.description {
+    grid-row-gap: em(70, $fz);
+
+    @media screen and (max-width: 949.98px) {
+        grid-row-gap: em(50, $fz);
+    }
+    @media screen and (max-width: 599.98px) {
+        grid-row-gap: em(30, $fz);
+    }
+
+    &,
     &__row,
     &__content {
         display: grid;
     }
 
-    &__description {
-        margin-top: em(37, $fz);
-        grid-row-gap: em(70, $fz);
-
-        @media screen and (max-width: 949.98px) {
-            margin-top: em(20, $fz);
-            grid-row-gap: em(50, $fz);
-        }
-        @media screen and (max-width: 599.98px) {
-            grid-row-gap: em(30, $fz);
-        }
-    }
-
     &__row {
         grid-template-columns: repeat(2, em(500, $fz));
-        grid-column-gap: 10%;
+        grid-gap: em(15, $fz) 10%;
 
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            grid-template-columns: em(400, $fz) 1fr;
+            grid-template-columns: var(--description-template-columns, em(400, $fz) 1fr);
             grid-column-gap: 5%;
         }
         @media screen and (max-width: 1199.98px) {
-            grid-template-columns: em(200, $fz) 1fr;
+            grid-template-columns: var(--description-template-columns, em(200, $fz) 1fr);
         }
         @media screen and (max-width: 949.98px) {
-            grid-template-columns: em(160, $fz) 1fr;
+            grid-template-columns: var(--description-template-columns, em(160, $fz) 1fr);
         }
         @media screen and (max-width: 599.98px) {
-            grid-template-columns: 1fr;
-            grid-row-gap: em(15, $fz);
+            grid-template-columns: var(--description-template-columns, 1fr);
         }
     }
 

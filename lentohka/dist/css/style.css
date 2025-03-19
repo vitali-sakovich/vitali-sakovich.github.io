@@ -2658,6 +2658,9 @@ input[type=number]:focus {
 }
 @media screen and (min-width: 1440px) {
   .section-form--request {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding-left: 0;
     padding-right: 0;
   }
@@ -7445,61 +7448,180 @@ input[type=number]:focus {
     padding-bottom: 2.5em;
   }
 }
-.delivery__description, .delivery__row, .delivery__content {
-  display: grid;
-}
 .delivery__description {
   margin-top: 2.3125em;
-  grid-row-gap: 4.375em;
 }
 @media screen and (max-width: 949.98px) {
   .delivery__description {
     margin-top: 1.25em;
+  }
+}
+
+.description {
+  grid-row-gap: 4.375em;
+}
+@media screen and (max-width: 949.98px) {
+  .description {
     grid-row-gap: 3.125em;
   }
 }
 @media screen and (max-width: 599.98px) {
-  .delivery__description {
+  .description {
     grid-row-gap: 1.875em;
   }
 }
-.delivery__row {
+.description, .description__row, .description__content {
+  display: grid;
+}
+.description__row {
   grid-template-columns: repeat(2, 31.25em);
-  grid-column-gap: 10%;
+  grid-gap: 0.9375em 10%;
 }
 @media screen and (max-width: 1439px) {
-  .delivery__row {
-    grid-template-columns: 25em 1fr;
+  .description__row {
+    grid-template-columns: var(--description-template-columns, 25em 1fr);
     grid-column-gap: 5%;
   }
 }
 @media screen and (max-width: 1199.98px) {
-  .delivery__row {
-    grid-template-columns: 12.5em 1fr;
+  .description__row {
+    grid-template-columns: var(--description-template-columns, 12.5em 1fr);
   }
 }
 @media screen and (max-width: 949.98px) {
-  .delivery__row {
-    grid-template-columns: 10em 1fr;
+  .description__row {
+    grid-template-columns: var(--description-template-columns, 10em 1fr);
   }
 }
 @media screen and (max-width: 599.98px) {
-  .delivery__row {
-    grid-template-columns: 1fr;
-    grid-row-gap: 0.9375em;
+  .description__row {
+    grid-template-columns: var(--description-template-columns, 1fr);
   }
 }
-.delivery__content {
+.description__content {
   grid-row-gap: 1.6875em;
 }
 @media screen and (max-width: 599.98px) {
-  .delivery__content {
+  .description__content {
     grid-row-gap: 0.9375em;
   }
 }
-.delivery__list {
+.description__list {
   list-style-position: inside;
 }
-.delivery__list li::marker {
+.description__list li::marker {
   font-size: 0.75em;
+}
+
+.leasing {
+  padding-bottom: 8.75em;
+}
+@media screen and (min-width: 1630px) {
+  .leasing {
+    --wrapper-padding-right: 8.6%;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .leasing {
+    padding-bottom: 5.625em;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .leasing {
+    --description-template-columns: 16.25em 1fr;
+    padding-bottom: 3.75em;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .leasing {
+    --description-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .leasing {
+    padding-bottom: 1.875em;
+  }
+}
+.leasing__description {
+  margin-top: 2.3125em;
+  margin-bottom: 7.125em;
+}
+@media screen and (max-width: 1439px) {
+  .leasing__description {
+    margin-bottom: 5em;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .leasing__description {
+    margin-bottom: 3.125em;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .leasing__description {
+    margin-top: 1.25em;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .leasing__description {
+    margin-bottom: 1.875em;
+  }
+}
+
+.leasing-companies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@media screen and (max-width: 599.98px) {
+  .leasing-companies {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.leasing-companies__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 26.125em;
+  height: 5.625em;
+}
+@media screen and (max-width: 1439px) {
+  .leasing-companies__box {
+    width: 28%;
+    height: 5.625em;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .leasing-companies__box {
+    height: 3.75em;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .leasing-companies__box {
+    width: 100%;
+    margin-bottom: 1.25em;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 5em;
+  }
+}
+.leasing-companies__picture, .leasing-companies__img {
+  width: 100%;
+  height: 100%;
+}
+.leasing-companies__img {
+  -o-object-fit: contain;
+  object-fit: contain;
 }

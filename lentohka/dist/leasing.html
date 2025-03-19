@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Доставка и оплата</title>
+        <title>Лизинг</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
@@ -143,61 +143,111 @@
             </div>
         </header>
         <main class="content">
-            <section class="delivery wrapper">
+            <section class="leasing wrapper">
                 <div class="title-block">
                     <div class="breadcrumb title-block__breadcrumb">
                         <a href="/" class="breadcrumb__link">Главная</a>
                     </div>
-                    <h1 class="title-block__title">Доставка и оплата</h1>
+                    <h1 class="title-block__title">Лизинг</h1>
                 </div>
-                <div class="description delivery__description">
+                <div class="description leasing__description">
                     <div class="description__row">
-                        <h2 class="title title--size-lg">Способы доставки</h2>
+                        <h2 class="title title--size-sm">
+                            В нашей компании Вы можете приобрести оборудование в
+                            лизинг
+                        </h2>
                         <div class="description__content">
-                            <ul class="description__list">
-                                <li class="text text--size-lg">Самовывоз</li>
-                                <li class="text text--size-lg">
-                                    Доставка по Красноярску
-                                </li>
-                                <li class="text text--size-lg">
-                                    Доставка всем транспортными компаниями по
-                                    территории России
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="description__row">
-                        <h2 class="title title--size-lg">Способы оплаты</h2>
-                        <div class="description__content">
-                            <h3 class="title title--size-sm">Заголовок</h3>
                             <p class="text text--size-lg">
-                                Мы работаем с физическими и юридическими лицами.
+                                При реорганизации или расширении производства
+                                приобретение оборудования в лизинг является
+                                выгодным решением, которое позволяет проще
+                                контролировать финансовые потоки предприятия. В
+                                компании «Ленточка» вы можете приобрести в
+                                лизинг лесопильное и деревообрабатывающее
+                                оборудование.
                             </p>
                             <p class="text text--size-lg">
-                                Юридиское лицо может оплатить товар по
-                                выставленному счёту, на рассчёный счёт
-                                поставщика, с офицальными документами
-                            </p>
-                            <p class="text text--size-lg">
-                                Для физического лица, есть возможность оплатить
-                                счёт по QR коду с любого мобильного приложения
-                                банка.
-                            </p>
-                            <p class="text text--size-lg">
-                                Компания работает с электронным
-                                документооборотом.
-                            </p>
-                            <p class="text text--size-lg">
-                                Товар можем отправить любой удобной транспортной
-                                компанией.
-                            </p>
-                            <p class="text text--size-lg">
-                                Цена на ленточнопильное полотно зависит от:
-                                ширины пилы, длины пилы, назначения пилы.
-                                Стоимость определяется индивидуально.
+                                Доступно для юридических лиц и индивидуальных
+                                предпринимателей.
                             </p>
                         </div>
                     </div>
+                </div>
+                <div class="leasing-companies leasing-companies">
+                    <div class="leasing-companies__box">
+                        <picture class="leasing-companies__picture">
+                            <source srcset="./img/alfa.webp" type="image/webp">
+                            <img src="./img/alfa.jpg" width="386" height="89" alt="Альфа лизинг" class="leasing-companies__img">
+                        </picture>
+                    </div>
+                    <div class="leasing-companies__box">
+                        <picture class="leasing-companies__picture">
+                            <source srcset="./img/inter.webp" type="image/webp">
+                            <img src="./img/inter.jpg" width="353" height="90" alt="Интерлизинг" class="leasing-companies__img">
+                        </picture>
+                    </div>
+                    <div class="leasing-companies__box">
+                        <picture class="leasing-companies__picture">
+                            <source srcset="./img/invest.webp" type="image/webp">
+                            <img src="./img/invest.jpg" width="418" height="84" alt="Инвест-лизинг" class="leasing-companies__img">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="section-form section-form--request">
+                <div class="section-form__container">
+                    <div class="section-form__content">
+                        <h2 class="section-form__title">Оставьте заявку</h2>
+                        <p class="section-form__text">
+                            Пожалуйста, заполните все поля. Наш специалист
+                            свяжется с вами в ближайшее время.
+                        </p>
+                    </div>
+                    <form action="#" class="form section-form__form">
+                        <label class="label form__label js-label">
+                            <input type="text" name="name" data-rule="required|name" class="form__input js-input first-elem">
+                            <span class="form__placeholder">Ваше имя*</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="text" name="phone" data-rule="required|phone" class="form__input js-input-mask js-input">
+                            <span class="form__placeholder">Телефон*</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input type="email" name="email" class="form__input js-input">
+                            <span class="form__placeholder">E-mail</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <textarea name="commentary" cols="30" rows="10" class="form__textarea js-input"></textarea>
+                            <span class="form__placeholder">Комментарий</span>
+                            <button type="button" title="Очистить" aria-label="Очистить" class="form__clear js-clear-input">
+                                <svg width="16" height="16" aria-hidden="true" class="form__icon">
+                                    <use xlink:href="./img/icons-sprite.svg#clear"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="form__box">
+                            <button type="submit" class="btn btn--primary form__btn last-elem">
+                                <span class="btn__text">Отправить</span>
+                            </button>
+                            <span class="form-consent form__consent">Отправляя данные, я даю свое
+                                <a href="#" class="form-consent__link">согласие на обработку перс. данных</a></span>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>

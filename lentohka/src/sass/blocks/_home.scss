@@ -848,6 +848,7 @@
         --section-form-text-width: #{em(290, $fz)};
 
         @media screen and (min-width: $breakpoint_laptop_m) {
+            justify-content: center;
             padding-left: 0;
             padding-right: 0;
         }
