@@ -18,9 +18,11 @@ function preloaderAdd() {
                             />
                         </div>`;
     document.body.append(div);
+    document.body.classList.add('animation');
 
     window.addEventListener("load", () => {
         div.style.opacity = "0";
+        document.body.classList.remove('animation');
 
         setTimeout(() => {
             div.remove();

@@ -47,9 +47,14 @@ body {
     }
    
 
+    &.animation,
     &.hidden {
-        scrollbar-gutter: stable;
         overflow: hidden;
+    }
+
+    &.animation {
+        --preview-benner-translate-x: #{em(60, $fz)};
+        --header-translate-y: #{em(-40, $fz)};
     }
 }
 

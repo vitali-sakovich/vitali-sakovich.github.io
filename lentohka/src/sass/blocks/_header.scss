@@ -1,4 +1,5 @@
 .header {
+    $self: &;
     position: relative;
     padding: em(22, $fz) 2.8% em(22, $fz) 5%;
     margin-bottom: em(58, $fz);
@@ -37,6 +38,11 @@
 
         @media screen and (min-width: 950px) {
             display: flex !important;
+
+            #{$self}--home & {
+                transform: translateY(var(--header-translate-y));
+                transition: transform 0.3s;
+            }
         }
         @media screen and (min-width: 1585px) {
             align-items: center;
