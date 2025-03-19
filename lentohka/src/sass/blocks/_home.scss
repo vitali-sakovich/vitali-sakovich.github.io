@@ -864,7 +864,7 @@
             max-width: auto;
         }
 
-        #{$self}--request {
+        #{$self}--request & {
             width: auto;
         }
 

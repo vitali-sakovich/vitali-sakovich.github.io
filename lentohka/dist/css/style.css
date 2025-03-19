@@ -2674,7 +2674,7 @@ input[type=number]:focus {
     max-width: auto;
   }
 }
-.section-form__container .section-form--request {
+.section-form--request .section-form__container {
   width: auto;
 }
 @media screen and (max-width: 1275px) {
