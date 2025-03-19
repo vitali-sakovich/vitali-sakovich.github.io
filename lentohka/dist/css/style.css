@@ -498,6 +498,21 @@ input[type=number]:focus {
   font-weight: 600;
 }
 
+.title {
+  font-weight: 600;
+}
+.title--size-sm {
+  font-size: 1.25em;
+}
+.title--size-lg {
+  font-size: 1.875em;
+}
+@media screen and (max-width: 949.98px) {
+  .title--size-lg {
+    font-size: 1.25em;
+  }
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7344,4 +7359,93 @@ input[type=number]:focus {
   color: hsl(0, 0%, 0%);
   line-height: 1.5;
   margin-top: auto;
+}
+
+.delivery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 10em;
+}
+@media screen and (max-width: 1439px) {
+  .delivery {
+    padding-bottom: 7.5em;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .delivery {
+    padding-bottom: 6.25em;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .delivery {
+    padding-bottom: 5em;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .delivery {
+    padding-bottom: 2.5em;
+  }
+}
+.delivery__description, .delivery__row, .delivery__content {
+  display: grid;
+}
+.delivery__description {
+  margin-top: 2.3125em;
+  grid-row-gap: 4.375em;
+}
+@media screen and (max-width: 949.98px) {
+  .delivery__description {
+    margin-top: 1.25em;
+    grid-row-gap: 3.125em;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .delivery__description {
+    grid-row-gap: 1.875em;
+  }
+}
+.delivery__row {
+  grid-template-columns: repeat(2, 31.25em);
+  grid-column-gap: 10%;
+}
+@media screen and (max-width: 1439px) {
+  .delivery__row {
+    grid-template-columns: 25em 1fr;
+    grid-column-gap: 5%;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .delivery__row {
+    grid-template-columns: 12.5em 1fr;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .delivery__row {
+    grid-template-columns: 10em 1fr;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .delivery__row {
+    grid-template-columns: 1fr;
+    grid-row-gap: 0.9375em;
+  }
+}
+.delivery__content {
+  grid-row-gap: 1.6875em;
+}
+@media screen and (max-width: 599.98px) {
+  .delivery__content {
+    grid-row-gap: 0.9375em;
+  }
+}
+.delivery__list {
+  list-style-position: inside;
+}
+.delivery__list li::marker {
+  font-size: 0.75em;
 }

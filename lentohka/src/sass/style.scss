@@ -146,6 +146,25 @@ input[type="number"]:focus {
     }
 }
 
+.title {
+    font-weight: 600;
+
+    &--size-sm {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+    }
+
+    &--size-lg {
+        $fz: 30;
+        font-size: em($fz, $fz_base);
+
+        @media screen and (max-width: 949.98px) {
+            $fz: 20;
+            font-size: em($fz, $fz_base);
+        }
+    }
+}
+
 .btn {
     $self: &;
     display: flex;
@@ -291,3 +310,4 @@ input[type="number"]:focus {
 @import "blocks/service";
 @import "blocks/404";
 @import "blocks/promotions";
+@import "blocks/delivery";
