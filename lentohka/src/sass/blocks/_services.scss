@@ -6,9 +6,32 @@
     flex-direction: column;
     overflow: hidden;
 
+    @media screen and (min-width: 1630px) {
+        --wrapper-padding-left: 0;
+        --title-block-margin-left: 12.6%;
+    }
+    @media screen and (max-width: 1629px) {
+        --description-template-columns: #{repeat(2, 1fr)};
+    }
+    @media screen and (max-width: 949.98px) {
+        --description-template-columns: 1fr;
+    }
+    @media screen and (max-width: 599.98px) {
+        --description-content-row-gap: #{em(15, $fz)};
+        --description-list-row-gap: #{em(15, $fz)};
+    }
+
     &__description {
         margin-top: em(37, $fz);
         padding-bottom: em(73, $fz);
+
+        @media screen and (min-width: 1630px) {
+            padding-left: 12.6%;
+        }
+        @media screen and (max-width: 949.98px) {
+            margin-top: em(20, $fz);
+            padding-bottom: em(40, $fz);
+        }
     }
 
     .description__list {
@@ -22,16 +45,39 @@
     grid-row-gap: em(80, $fz);
     padding-top: em(73, $fz);
     padding-bottom: em(105, $fz);
+    margin-bottom: -1px;
+
+    @media screen and (min-width: 1630px) {
+        padding-left: 12.6%;
+    }
+    @media screen and (max-width: 949.98px) {
+        padding-top: em(40, $fz);
+        padding-bottom: em(10, $fz);
+        grid-row-gap: em(60, $fz);
+    }
+    @media screen and (max-width: 599.98px) {
+        grid-row-gap: em(40, $fz);
+    }
 
     &::before {
         content: '';
         position: absolute;
         top: 0;
-        left: em(-158, $fz);
+        left: em(70, $fz);
         bottom: 0;
-        width: 100vw;
+        width: 120vw;
         background-color: hsl(201, 64%, 26%);
         pointer-events: none;
+
+        @media screen and (max-width: 1629px) {
+            left: em(-100, $fz);
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            left: em(-110, $fz);
+        }
+        @media screen and (max-width: 599.98px) {
+            left: em(-30, $fz);
+        }
     }
 
     &,
@@ -43,11 +89,22 @@
     &__block {
         position: relative;
         grid-row-gap: em(39, $fz);
+
+        @media screen and (max-width: 949.98px) {
+            grid-row-gap: em(30, $fz);  
+        }
     }
 
     &__grid {
-        grid-template-columns: repeat(auto-fill, minmax(em(404, $fz), 1fr));
+        grid-template-columns: repeat(auto-fit, em(404, $fz));
         grid-gap: em(40 30, $fz);
+
+        @media screen and (max-width: 1199.98px) {
+            grid-template-columns: repeat(auto-fit, minmax(em(300, $fz), 1fr));
+        }
+        @media screen and (max-width: 949.98px) {
+            grid-gap: em(10, $fz);
+        }
     }
 
     &__card {
@@ -110,6 +167,11 @@
         font-size: em($fz, $fz_base);
         font-weight: 600;
         grid-area: 1/1/2/3;
+
+        @media screen and (max-width: 599.98px) {
+            $fz: 20;
+            font-size: em($fz, $fz_base);
+        }
     }
 
     &__price {

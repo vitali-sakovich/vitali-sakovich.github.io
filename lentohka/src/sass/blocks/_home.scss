@@ -853,7 +853,11 @@
     }
     @media screen and (max-width: 949.98px) {
         padding: em(80, $fz) 4.4% em(50, $fz);
-        background-image: none;
+        background-color: hsl(200, 68%, 26%);
+  
+        &::before {
+            content: none;
+        }
     }
     @media screen and (max-width: 529.98px) {
         padding: em(30 20 6, $fz);
@@ -871,9 +875,24 @@
 
     &--services {
         --section-form-content-row-gap: #{em(30, $fz)};
-        
-        &:before {
-            left: em(71, $fz);
+
+        @media screen and (min-width: 1630px) {
+            justify-content: flex-start;
+            padding-left: 12.6%;
+
+            &:before {
+                left: em(70, $fz);
+            }
+        }
+
+        @media screen and (min-width: 1276px) and (max-width: 1429.98px) {
+            padding-left: 8.3%;
+        }
+        @media screen and (max-width: 1199.98px) {
+            --section-form-text-width: 100%;
+        }
+        @media screen and (max-width: 599.98px) {
+            --section-form-content-row-gap: #{em(20, $fz)};
         }
     }
 

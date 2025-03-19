@@ -160,7 +160,7 @@ input[type="number"]:focus {
         $fz: 30;
         font-size: em($fz, $fz_base);
 
-        @media screen and (max-width: 949.98px) {
+        @media screen and (max-width: 599.98px) {
             $fz: 20;
             font-size: em($fz, $fz_base);
         }

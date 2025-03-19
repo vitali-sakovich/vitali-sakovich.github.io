@@ -506,7 +506,7 @@ input[type=number]:focus {
 .title--size-lg {
   font-size: 1.875em;
 }
-@media screen and (max-width: 949.98px) {
+@media screen and (max-width: 599.98px) {
   .title--size-lg {
     font-size: 1.25em;
   }
@@ -2674,7 +2674,10 @@ input[type=number]:focus {
 @media screen and (max-width: 949.98px) {
   .section-form {
     padding: 5em 4.4% 3.125em;
-    background-image: none;
+    background-color: hsl(200, 68%, 26%);
+  }
+  .section-form::before {
+    content: none;
   }
 }
 @media screen and (max-width: 529.98px) {
@@ -2697,8 +2700,31 @@ input[type=number]:focus {
 .section-form--services {
   --section-form-content-row-gap: 1.875em;
 }
-.section-form--services:before {
-  left: 4.4375em;
+@media screen and (min-width: 1630px) {
+  .section-form--services {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-left: 12.6%;
+  }
+  .section-form--services:before {
+    left: 4.375em;
+  }
+}
+@media screen and (min-width: 1276px) and (max-width: 1429.98px) {
+  .section-form--services {
+    padding-left: 8.3%;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .section-form--services {
+    --section-form-text-width: 100%;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .section-form--services {
+    --section-form-content-row-gap: 1.25em;
+  }
 }
 .section-form__container {
   display: grid;
@@ -7685,9 +7711,42 @@ input[type=number]:focus {
   flex-direction: column;
   overflow: hidden;
 }
+@media screen and (min-width: 1630px) {
+  .services {
+    --wrapper-padding-left: 0;
+    --title-block-margin-left: 12.6%;
+  }
+}
+@media screen and (max-width: 1629px) {
+  .services {
+    --description-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .services {
+    --description-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .services {
+    --description-content-row-gap: 0.9375em;
+    --description-list-row-gap: 0.9375em;
+  }
+}
 .services__description {
   margin-top: 2.3125em;
   padding-bottom: 4.5625em;
+}
+@media screen and (min-width: 1630px) {
+  .services__description {
+    padding-left: 12.6%;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .services__description {
+    margin-top: 1.25em;
+    padding-bottom: 2.5em;
+  }
 }
 .services .description__list {
   margin-left: 0.25em;
@@ -7699,16 +7758,49 @@ input[type=number]:focus {
   grid-row-gap: 5em;
   padding-top: 4.5625em;
   padding-bottom: 6.5625em;
+  margin-bottom: -1px;
+}
+@media screen and (min-width: 1630px) {
+  .services-types {
+    padding-left: 12.6%;
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .services-types {
+    padding-top: 2.5em;
+    padding-bottom: 0.625em;
+    grid-row-gap: 3.75em;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .services-types {
+    grid-row-gap: 2.5em;
+  }
 }
 .services-types::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -9.875em;
+  left: 4.375em;
   bottom: 0;
-  width: 100vw;
+  width: 120vw;
   background-color: hsl(201, 64%, 26%);
   pointer-events: none;
+}
+@media screen and (max-width: 1629px) {
+  .services-types::before {
+    left: -6.25em;
+  }
+}
+@media screen and (max-width: 1275px) {
+  .services-types::before {
+    left: -6.875em;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .services-types::before {
+    left: -1.875em;
+  }
 }
 .services-types, .services-types__block, .services-types__grid {
   display: grid;
@@ -7717,9 +7809,24 @@ input[type=number]:focus {
   position: relative;
   grid-row-gap: 2.4375em;
 }
+@media screen and (max-width: 949.98px) {
+  .services-types__block {
+    grid-row-gap: 1.875em;
+  }
+}
 .services-types__grid {
-  grid-template-columns: repeat(auto-fill, minmax(25.25em, 1fr));
+  grid-template-columns: repeat(auto-fit, 25.25em);
   grid-gap: 2.5em 1.875em;
+}
+@media screen and (max-width: 1199.98px) {
+  .services-types__grid {
+    grid-template-columns: repeat(auto-fit, minmax(18.75em, 1fr));
+  }
+}
+@media screen and (max-width: 949.98px) {
+  .services-types__grid {
+    grid-gap: 0.625em;
+  }
 }
 .services-types__card {
   height: 10.9375em;
@@ -7775,6 +7882,11 @@ input[type=number]:focus {
   font-size: 1.375em;
   font-weight: 600;
   grid-area: 1/1/2/3;
+}
+@media screen and (max-width: 599.98px) {
+  .services-type-card__name {
+    font-size: 1.25em;
+  }
 }
 .services-type-card__price {
   font-size: 1.125em;
