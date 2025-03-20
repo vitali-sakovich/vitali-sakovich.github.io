@@ -119,8 +119,7 @@
     min-height: em(35, $fz);
     max-width: max-content;
     position: relative;
-    padding-right: em(14, $fz_base);
-    padding-left: em(14, $fz);
+    padding: em(5 14, $fz);
     transition: background-color 0.3s, color 0.3s;
 
     &:nth-child(-n+10) {

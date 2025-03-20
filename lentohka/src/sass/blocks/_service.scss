@@ -145,6 +145,8 @@
         @media screen and (max-width: 599.98px) {
             $fz: 24;
             font-size: em($fz, $fz_base);
+            margin-top: em(14, $fz);
+            margin-bottom: em(12, $fz);
         }
     }
 

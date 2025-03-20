@@ -139,6 +139,9 @@
             @media screen and (max-width: 599.98px) {
                 --contacts-networks-icon-height: #{em(35, $fz)};
             }
+            @media screen and (max-width: 359.98px) {
+                --contacts-networks-icon-margin-right: #{em(12, $fz)};
+            }
         }
 
         &:last-child {
@@ -158,8 +161,16 @@
         height: var(--contacts-networks-icon-height, em(47, $fz));
         margin-right: var(--contacts-networks-icon-margin-right, em(30, $fz));
 
+        @media screen and (max-width: 359.98px) {
+            margin-right: var(--contacts-networks-icon-margin-right, em(13, $fz)); 
+        }
+
         &--viber {
             margin-right: em(20, $fz);
+
+            @media screen and (max-width: 359.98px) {
+                margin-right: em(15, $fz);
+            }
         }
 
         @media screen and (max-width: 599.98px) {
@@ -226,6 +237,10 @@
         font-size: em($fz, $fz_base);
         margin-right: em(24, $fz);
         margin-top: em(9, $fz);
+
+        @media screen and (max-width: 359.98px) {
+            margin-right: 0;
+        }
     }
 
     &__link {

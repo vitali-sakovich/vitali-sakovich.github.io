@@ -5139,6 +5139,11 @@ input[type=number]:focus {
     --contacts-networks-icon-height: 2.1875em;
   }
 }
+@media screen and (max-width: 359.98px) {
+  .contacts-links__link:first-child {
+    --contacts-networks-icon-margin-right: 0.75em;
+  }
+}
 .contacts-links__link:last-child {
   --contacts-networks-icon-width: 2.1875em;
   --contacts-networks-icon-height: 2em;
@@ -5152,8 +5157,18 @@ input[type=number]:focus {
   height: var(--contacts-networks-icon-height, 2.9375em);
   margin-right: var(--contacts-networks-icon-margin-right, 1.875em);
 }
+@media screen and (max-width: 359.98px) {
+  .contacts-links__icon {
+    margin-right: var(--contacts-networks-icon-margin-right, 0.8125em);
+  }
+}
 .contacts-links__icon--viber {
   margin-right: 1.25em;
+}
+@media screen and (max-width: 359.98px) {
+  .contacts-links__icon--viber {
+    margin-right: 0.9375em;
+  }
 }
 @media screen and (max-width: 599.98px) {
   .contacts-links__icon {
@@ -5223,6 +5238,11 @@ input[type=number]:focus {
   font-size: 1.25em;
   margin-right: 1.2em;
   margin-top: 0.45em;
+}
+@media screen and (max-width: 359.98px) {
+  .contacts-cities__address {
+    margin-right: 0;
+  }
 }
 .contacts-cities__link {
   font-size: 1.25em;
@@ -5883,6 +5903,9 @@ input[type=number]:focus {
   background-color: hsl(0, 0%, 100%);
 }
 
+.about {
+  overflow: hidden;
+}
 @media screen and (min-width: 1630px) {
   .about {
     --title-block-max-width: 90em;
@@ -6487,8 +6510,7 @@ input[type=number]:focus {
   max-width: -moz-max-content;
   max-width: max-content;
   position: relative;
-  padding-right: 0.875em;
-  padding-left: 0.875em;
+  padding: 0.3125em 0.875em;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -7228,6 +7250,8 @@ input[type=number]:focus {
 @media screen and (max-width: 599.98px) {
   .service__price {
     font-size: 1.5em;
+    margin-top: 0.5833333333em;
+    margin-bottom: 0.5em;
   }
 }
 .service__btn {

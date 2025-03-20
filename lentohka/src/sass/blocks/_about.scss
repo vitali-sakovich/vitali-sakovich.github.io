@@ -1,4 +1,6 @@
 .about {
+    overflow: hidden;
+    
     @media screen and (min-width: 1630px) {
         --title-block-max-width: #{em(1440, $fz)};
         --title-block-margin-left: #{em(80, $fz)};
@@ -22,7 +24,6 @@
         height: em(547, $fz);
         margin-top: em(35, $fz);
         margin-bottom: em(84, $fz);
-
         @media screen and (max-width: 1199.98px) {
             height: em(467, $fz);
             margin-bottom: em(50, $fz);
