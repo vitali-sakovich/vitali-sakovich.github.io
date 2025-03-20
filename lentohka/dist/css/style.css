@@ -1099,7 +1099,7 @@ input[type=number]:focus {
   text-align: center;
   font-weight: 600;
   color: #FFF;
-  max-width: 10.25em;
+  max-width: 11em;
 }
 @media screen and (max-width: 949.98px) {
   .header-phone__address {
@@ -2046,6 +2046,11 @@ input[type=number]:focus {
 .home-catalog__link:first-child .home-catalog__picture {
   margin-bottom: 1.25em;
 }
+@media screen and (max-width: 359.98px) {
+  .home-catalog__link:first-child .home-catalog__picture {
+    margin-bottom: 1.875em;
+  }
+}
 .home-catalog__link:first-child .home-catalog__img {
   width: 22.25em;
   height: 9.0625em;
@@ -2066,6 +2071,12 @@ input[type=number]:focus {
   .home-catalog__link:first-child .home-catalog__img {
     width: 14.9375em;
     height: 6.125em;
+  }
+}
+@media screen and (max-width: 359.98px) {
+  .home-catalog__link:first-child .home-catalog__img {
+    width: 11.9375em;
+    height: 5em;
   }
 }
 .home-catalog__link:first-child .home-catalog__text {
@@ -4262,6 +4273,7 @@ input[type=number]:focus {
   padding-bottom: 7.5em;
   padding-right: 5.3%;
   padding-left: 5.3%;
+  overflow: hidden;
 }
 @media screen and (max-width: 1439px) {
   .product {
@@ -4386,6 +4398,14 @@ input[type=number]:focus {
   display: flex;
   margin-top: 1.8125em;
 }
+@media screen and (max-width: 359.98px) {
+  .product__btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 .product__btn {
   width: 13.9375em;
   height: 4em;
@@ -4394,6 +4414,11 @@ input[type=number]:focus {
 @media screen and (max-width: 599.98px) {
   .product__btn {
     margin-right: 2.5em;
+  }
+}
+@media screen and (max-width: 359.98px) {
+  .product__btn {
+    margin-bottom: 1.25em;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -7826,6 +7851,11 @@ input[type=number]:focus {
 @media screen and (max-width: 949.98px) {
   .services-types__grid {
     grid-gap: 0.625em;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .services-types__grid {
+    grid-template-columns: repeat(auto-fit, minmax(17.5em, 1fr));
   }
 }
 .services-types__card {

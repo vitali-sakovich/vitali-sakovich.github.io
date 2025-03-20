@@ -105,6 +105,9 @@
         @media screen and (max-width: 949.98px) {
             grid-gap: em(10, $fz);
         }
+        @media screen and (max-width: 599.98px) {
+            grid-template-columns: repeat(auto-fit, minmax(em(280, $fz), 1fr));
+        }
     }
 
     &__card {

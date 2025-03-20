@@ -3,6 +3,7 @@
     padding-bottom: em(120, $fz);
     padding-right: 5.3%;
     padding-left: 5.3%;
+    overflow: hidden;
 
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
         padding-right: 8.9%;
@@ -112,6 +113,10 @@
     &__btns {
         display: flex;
         margin-top: em(29, $fz);
+
+        @media screen and (max-width: 359.98px) {
+            flex-direction: column;
+        }
     }
 
     &__btn {
@@ -121,6 +126,9 @@
 
         @media screen and (max-width: 599.98px) {
             margin-right: em(40, $fz);
+        }
+        @media screen and (max-width: 359.98px) {
+            margin-bottom: em(20, $fz);
         }
     }
 

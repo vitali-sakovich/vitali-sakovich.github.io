@@ -299,6 +299,10 @@
 
             #{$self}__picture {
                 margin-bottom: em(20, $fz);
+
+                @media screen and (max-width: 359.98px) {
+                    margin-bottom: em(30, $fz); 
+                }
             }
 
             #{$self}__img {
@@ -316,6 +320,10 @@
                 @media screen and (max-width: 529.98px) {
                     width: em(239, $fz);
                     height: em(98, $fz);
+                }
+                @media screen and (max-width: 359.98px) {
+                    width: em(191, $fz);
+                    height: em(80, $fz);
                 }
             }
 
