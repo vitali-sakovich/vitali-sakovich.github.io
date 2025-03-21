@@ -213,6 +213,37 @@ input[type="number"]:focus {
     }
 }
 
+.scrollbar {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @supports (scrollbar-width: auto) {
+        scrollbar-width: auto;
+    }
+
+    @-moz-document url-prefix() {
+        scrollbar-width: thin;
+        scrollbar-color: var(--scrollbar-thumb-color, hsla(0, 0%, 100%, 0.15)) transparent;
+        scrollbar-arrow-color: transparent;
+        scrollbar-face-color: transparent;
+        scrollbar-track-color: transparent;
+        scrollbar-base-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: em(5, $fz);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-color, hsla(0, 0%, 100%, 0.15));
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}
+
 @mixin scrollbar ($color: hsla(0, 0%, 100%, 0.15)) {
     flex-grow: 1;
     overflow-y: auto;

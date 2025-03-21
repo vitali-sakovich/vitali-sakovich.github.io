@@ -179,7 +179,10 @@
                         <use xlink:href="./img/icons-sprite.svg#burger"></use>
                     </svg>
                 </button>
-                <button class="btn-search-mobi header__search">
+                <button
+                    data-open-modal=".popup--search"
+                    class="btn-search-mobi header__search js-open-modal"
+                >
                     <svg
                         width="24"
                         height="23"
@@ -1336,7 +1339,7 @@
                     </button>
                 </div>
                 <div
-                    class="sidebar-catalog sidebar-catalog--catalog sidebar__catalog"
+                    class="sidebar-catalog sidebar-catalog--catalog sidebar__catalog scrollbar"
                 >
                     <div class="sidebar-catalog__list">
                         <a href="#" class="sidebar-catalog__link">
@@ -1461,7 +1464,7 @@
                     </button>
                 </div>
                 <div
-                    class="sidebar-catalog sidebar-catalog--services sidebar__catalog"
+                    class="sidebar-catalog sidebar-catalog--services sidebar__catalog scrollbar"
                 >
                     <div class="sidebar-catalog__list">
                         <a href="#" class="sidebar-catalog__link">
@@ -1518,6 +1521,329 @@
             </div>
         </div>
 
+        <!-- попап Поиск -->
+        <div class="popup popup--search js-popup">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <form action="#" class="search-form">
+                        <label class="search-form__label">
+                            <input
+                                type="text"
+                                name="serch"
+                                placeholder="Поиск по товарам"
+                                class="search-form__input first-elem"
+                            />
+                        </label>
+                        <button
+                            type="button"
+                            disabled
+                            class="search-form__btn last-elem"
+                        >
+                            <svg
+                                width="23"
+                                height="23"
+                                class="search-form__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#search"
+                                ></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup-btn-close popup__close js-popup-close"
+                    >
+                        <svg
+                            width="28"
+                            height="28"
+                            aria-hidden="true"
+                            class="popup-btn-close__icon"
+                        >
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-autocomplete popup__autocomplete">
+                    <div class="search-autocomplete__list scrollbar">
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/M42.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/M42.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Рамная пила 1250х180х2,5х26 9ХФ Нижний Новгород"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Рамная пила 1250х180х2,5х26 9ХФ "Нижний
+                                Новгород"
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/M51.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/M51.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Фрезерно-гравировальный станок с ЧПУ WoodTec VA1325 4-axis"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Фрезерно-гравировальный станок с ЧПУ WoodTec VA
+                                1325 4-axis
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/product1.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/product1.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Bahco 13-0.6 Любой шаг. Любая длина."
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Bahco 13-0.6 Любой шаг. Любая длина.
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/M42.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/M42.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Рамная пила 1250х180х2,5х26 9ХФ Нижний Новгород"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Рамная пила 1250х180х2,5х26 9ХФ "Нижний
+                                Новгород"
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/M51.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/M51.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Фрезерно-гравировальный станок с ЧПУ WoodTec VA1325 4-axis"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Фрезерно-гравировальный станок с ЧПУ WoodTec VA
+                                1325 4-axis
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/product1.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/product1.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Bahco 13-0.6 Любой шаг. Любая длина."
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Bahco 13-0.6 Любой шаг. Любая длина.
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/M42.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/M42.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Рамная пила 1250х180х2,5х26 9ХФ Нижний Новгород"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Рамная пила 1250х180х2,5х26 9ХФ "Нижний
+                                Новгород"
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/M51.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/M51.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Фрезерно-гравировальный станок с ЧПУ WoodTec VA1325 4-axis"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Фрезерно-гравировальный станок с ЧПУ WoodTec VA
+                                1325 4-axis
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/product1.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/product1.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Bahco 13-0.6 Любой шаг. Любая длина."
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Bahco 13-0.6 Любой шаг. Любая длина.
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/M42.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/M42.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Рамная пила 1250х180х2,5х26 9ХФ Нижний Новгород"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Рамная пила 1250х180х2,5х26 9ХФ "Нижний
+                                Новгород"
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/M51.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/M51.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Фрезерно-гравировальный станок с ЧПУ WoodTec VA1325 4-axis"
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Фрезерно-гравировальный станок с ЧПУ WoodTec VA
+                                1325 4-axis
+                            </span>
+                        </a>
+                        <a
+                            href="#"
+                            class="search-autocomplete-item search-autocomplete__item"
+                        >
+                            <picture class="search-autocomplete-item__picture">
+                                <source
+                                    srcset="./img/product1.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="./img/product1.jpg"
+                                    width="58"
+                                    height="58"
+                                    alt="Bahco 13-0.6 Любой шаг. Любая длина."
+                                    class="search-autocomplete-item__img"
+                                />
+                            </picture>
+                            <span class="search-autocomplete-item__name"
+                                >Bahco 13-0.6 Любой шаг. Любая длина.
+                            </span>
+                        </a>
+                    </div>
+                    <div class="search-autocomplete__controls">
+                        <a
+                            href="#"
+                            class="btn btn btn--primary search-autocomplete__btn"
+                        >
+                            <span class="btn__text">Смотреть все</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- попап Заказать звонок  -->
         <div class="popup popup--call js-popup">
             <div class="popup__overlay js-popup-close"></div>
@@ -1542,7 +1868,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="popup__content">
+                <div class="popup__content scrollbar">
                     <p class="popup__text">
                         Оставьте контактные данные и мы свяжемся с вами для
                         уточнения деталей
@@ -1669,7 +1995,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="popup__content">
+                <div class="popup__content scrollbar">
                     <form action="#" class="form form-popup popup__form">
                         <label class="label form__label js-label">
                             <input
@@ -1818,7 +2144,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="popup__content">
+                <div class="popup__content scrollbar">
                     <form action="#" class="form form-popup popup__form">
                         <label class="label form__label js-label">
                             <input
@@ -1967,7 +2293,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="popup__content">
+                <div class="popup__content scrollbar">
                     <script
                         async
                         src="https://usocial.pro/usocial/usocial.js?uid=b9c206e7a3f53798&v=6.1.5"
@@ -1998,6 +2324,38 @@
                     <button class="btn btn--primary popup__btn js-btn-copy-btn">
                         <span class="btn__text"> Скопировать ссылку</span>
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- попап Спасибо  -->
+        <div class="popup popup--thank">
+            <div class="popup__overlay js-popup-close"></div>
+            <div class="popup__block">
+                <div class="popup__head">
+                    <h2 class="popup__title">Спасибо</h2>
+                    <button
+                        type="button"
+                        title="Закрыть"
+                        aria-label="Закрыть"
+                        class="popup-btn-close popup__close js-popup-close"
+                    >
+                        <svg
+                            width="28"
+                            height="28"
+                            aria-hidden="true"
+                            class="popup-btn-close__icon"
+                        >
+                            <use
+                                xlink:href="./img/icons-sprite.svg#close"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content scrollbar">
+                    <p class="popup__text">
+                        Наш менеджер свяжется с вами в ближайшее время
+                    </p>
                 </div>
             </div>
         </div>
