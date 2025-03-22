@@ -13,318 +13,318 @@ $breakpoint_HD: 1280px;
 
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: "Montserrat", sans-serif;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
 
-    @media screen and (min-width: 2000px) {
-        font-size: 0.75vw;
-    }
-    @media screen and (min-width: 950px) {
-        padding-left: em(83, $fz);
-    }
-    @media screen and (min-width: #{$breakpoint_HD - 4}) {
-        padding-left: em(91, $fz);
-    }
-   
+  @media screen and (min-width: 2000px) {
+    font-size: 0.75vw;
+  }
+  @media screen and (min-width: 950px) {
+    padding-left: em(83, $fz);
+  }
+  @media screen and (min-width: #{$breakpoint_HD - 4}) {
+    padding-left: em(91, $fz);
+  }
 
-    &.animation,
-    &.hidden {
-        overflow: hidden;
-    }
 
-    &.animation {
-        --preview-benner-translate-x: #{em(60, $fz)};
-        --header-translate-y: #{em(-40, $fz)};
-    }
+  &.animation,
+  &.hidden {
+    overflow: hidden;
+  }
+
+  &.animation {
+    --preview-benner-translate-x: #{em(60, $fz)};
+    --header-translate-y: #{em(-40, $fz)};
+  }
 }
 
 header,
 footer {
-    display: flex;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+  display: flex;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    width: 100%;
-    min-height: 100%;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 1 0 auto;
+  flex: 1 0 auto;
+  flex-flow: column;
+  flex-flow: column;
+  width: 100%;
+  min-height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-flex: 1;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-    &:not(:disabled) {
-        cursor: pointer;
-    }
+  &:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 input,
 textarea {
-    outline: none;
+  outline: none;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
 }
 
-input[type="number"],
-input[type="number"]:hover,
-input[type="number"]:focus {
-    appearance: none;
-    -moz-appearance: textfield;
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus {
+  appearance: textfield;
+  appearance: none;
 }
 
 .error-text {
-    padding-top: 40px;
-    padding-bottom: 60px;
-    padding-left: 16.7%;
-    color: hsl(0, 100%, 50%);
+  padding-top: 40px;
+  padding-bottom: 60px;
+  padding-left: 16.7%;
+  color: hsl(0, 100%, 50%);
 }
 
-.error[data-type="validator-error"] {
-    position: absolute;
-    right: 0;
-    bottom: -15px;
-    text-align: right;
-    font-size: 12px;
-    color: hsl(0, 100%, 50%);
-    margin-top: 2px;
+.error[data-type='validator-error'] {
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  margin-top: 2px;
+  text-align: right;
+  font-size: 12px;
+  color: hsl(0, 100%, 50%);
 }
 
 .text {
-    line-height: 1.55;
+  line-height: 1.55;
 
-    &--size-md {
-        $fz: 18;
-        font-size: em($fz, $fz_base);
-    }
+  &--size-md {
+    $fz: 18;
+    font-size: em($fz, $fz_base);
+  }
 
-    &--size-lg {
-        $fz: 20;
-        font-size: em($fz, $fz_base);
-    }
+  &--size-lg {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+  }
 
-    &--weight--semi {
-        font-weight: 600;
-    }
+  &--weight--semi {
+    font-weight: 600;
+  }
 }
 
 .title {
-    font-weight: 600;
-    color: var(--title-color);
+  font-weight: 600;
+  color: var(--title-color);
 
-    &--size-sm {
-        $fz: 20;
-        font-size: em($fz, $fz_base);
+  &--size-sm {
+    $fz: 20;
+    font-size: em($fz, $fz_base);
+  }
+
+  &--size-lg {
+    $fz: 30;
+    font-size: em($fz, $fz_base);
+
+    @media screen and (max-width: 599.98px) {
+      $fz: 20;
+      font-size: em($fz, $fz_base);
     }
-
-    &--size-lg {
-        $fz: 30;
-        font-size: em($fz, $fz_base);
-
-        @media screen and (max-width: 599.98px) {
-            $fz: 20;
-            font-size: em($fz, $fz_base);
-        }
-    }
+  }
 }
 
 .btn {
-    $self: &;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: inherit;
-    padding: em(15, $fz);
-    min-height: em(48, $fz);
-    border-radius: em(5, $fz);
-    transition: background-color 0.3s;
-    color: hsl(0, 0%, 100%);
+  $self: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: em(15, $fz);
+  min-height: em(48, $fz);
+  border-radius: em(5, $fz);
+  font-size: inherit;
+  color: hsl(0, 0%, 100%);
+  transition: background-color 0.3s;
 
-    &--primary {
-        --btn-text-weight: 500;
+  &--primary {
+    --btn-text-weight: 500;
+    background-color: hsl(198, 100%, 45%);
+
+    &:hover {
+      @media screen and (min-width: $breakpoint-hover) {
+        background-color: var(--btn-bg-hover, hsl(198, 100%, 30%));
+      }
+    }
+  }
+
+  &--border {
+    border: 1px solid hsl(0, 0%, 100%);
+    background-color: transparent;
+    transition: border 0.3s, background-color 0.3s;
+
+    &:not(:disabled):hover {
+      @media screen and (min-width: $breakpoint-hover) {
+        border-color: hsl(198, 100%, 45%);
         background-color: hsl(198, 100%, 45%);
-
-        &:hover {
-            @media screen and (min-width: $breakpoint-hover) {
-                background-color: var(--btn-bg-hover, hsl(198, 100%, 30%));
-            }
-        }
+      }
     }
+  }
 
-    &--border {
-        border: 1px solid hsl(0, 0%, 100%);
-        background-color: transparent;
-        transition: border 0.3s, background-color 0.3s;
+  &__text {
+    font-weight: var(--btn-text-weight);
 
-        &:not(:disabled):hover {
-            @media screen and (min-width: $breakpoint-hover) {
-                background-color: hsl(198, 100%, 45%);
-                border-color: hsl(198, 100%, 45%);
-            }
-        }
+    &--size-l {
+      $fz: 18;
+      font-size: em($fz, $fz_base);
     }
-
-    &__text {
-        font-weight: var(--btn-text-weight);
-
-        &--size-l {
-            $fz: 18;
-            font-size: em($fz, $fz_base);
-        }
-    }
+  }
 }
 
 .scrollbar {
-    flex-grow: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-    @supports (scrollbar-width: auto) {
-        scrollbar-width: auto;
-    }
+  @supports (scrollbar-width: auto) {
+    scrollbar-width: auto;
+  }
 
-    @-moz-document url-prefix() {
-        scrollbar-width: thin;
-        scrollbar-color: var(--scrollbar-thumb-color, hsla(0, 0%, 100%, 0.15)) transparent;
-        scrollbar-arrow-color: transparent;
-        scrollbar-face-color: transparent;
-        scrollbar-track-color: transparent;
-        scrollbar-base-color: transparent;
-    }
+  @-moz-document url-prefix() {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color, hsla(0, 0%, 100%, 0.15)) transparent;
+    scrollbar-arrow-color: transparent;
+    scrollbar-face-color: transparent;
+    scrollbar-track-color: transparent;
+    scrollbar-base-color: transparent;
+  }
 
-    &::-webkit-scrollbar {
-        width: em(5, $fz);
-    }
+  &::-webkit-scrollbar {
+    width: em(5, $fz);
+  }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--scrollbar-thumb-color, hsla(0, 0%, 100%, 0.15));
-    }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color, hsla(0, 0%, 100%, 0.15));
+  }
 
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 }
 
 @mixin scrollbar ($color: hsla(0, 0%, 100%, 0.15)) {
-    flex-grow: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-    @supports (scrollbar-width: auto) {
-        scrollbar-width: auto;
-    }
+  @supports (scrollbar-width: auto) {
+    scrollbar-width: auto;
+  }
 
-    @-moz-document url-prefix() {
-        scrollbar-width: thin;
-        scrollbar-color: $color transparent;
-        scrollbar-arrow-color: transparent;
-        scrollbar-face-color: transparent;
-        scrollbar-track-color: transparent;
-        scrollbar-base-color: transparent;
-    }
+  @-moz-document url-prefix() {
+    scrollbar-width: thin;
+    scrollbar-color: $color transparent;
+    scrollbar-arrow-color: transparent;
+    scrollbar-face-color: transparent;
+    scrollbar-track-color: transparent;
+    scrollbar-base-color: transparent;
+  }
 
-    &::-webkit-scrollbar {
-        width: em(5, $fz);
-    }
+  &::-webkit-scrollbar {
+    width: em(5, $fz);
+  }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: $color;
-    }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+  }
 
-    &::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 }
 
 .wrapper {
-    padding-right: var(--wrapper-padding-right, 12%);
-    padding-left: var(--wrapper-padding-left, 12.6%);
+  padding-right: var(--wrapper-padding-right, 12%);
+  padding-left: var(--wrapper-padding-left, 12.6%);
 
-    @media screen and (max-width: 1629.98px) {
-        padding-right: var(--wrapper-padding-right, 5.3%);
-        padding-left: var(--wrapper-padding-left, 5.3%);
-   }
-   @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-        padding-right: var(--wrapper-padding-right, 8.3%);
-        padding-left: var(--wrapper-padding-left, 8.3%);
-   }
-   @media screen and (max-width: #{$breakpoint_HD - 5}) {
-        padding-right: var(--wrapper-padding-right, 9%);
-        padding-left: var(--wrapper-padding-left, 9%);
-   }
-   @media screen and (max-width: 949.98px) {
-        padding-right: var(--wrapper-padding-right, 4.4%);
-        padding-left: var(--wrapper-padding-left, 4.4%);
-    }
-    @media screen and (max-width: 599.98px) {
-        padding-right: var(--wrapper-padding-right, #{em(20, $fz)});
-        padding-left: var(--wrapper-padding-left, #{em(20, $fz)});
-    }
+  @media screen and (max-width: 1629.98px) {
+    padding-right: var(--wrapper-padding-right, 5.3%);
+    padding-left: var(--wrapper-padding-left, 5.3%);
+  }
+  @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+    padding-right: var(--wrapper-padding-right, 8.3%);
+    padding-left: var(--wrapper-padding-left, 8.3%);
+  }
+  @media screen and (max-width: #{$breakpoint_HD - 5}) {
+    padding-right: var(--wrapper-padding-right, 9%);
+    padding-left: var(--wrapper-padding-left, 9%);
+  }
+  @media screen and (max-width: 949.98px) {
+    padding-right: var(--wrapper-padding-right, 4.4%);
+    padding-left: var(--wrapper-padding-left, 4.4%);
+  }
+  @media screen and (max-width: 599.98px) {
+    padding-right: var(--wrapper-padding-right, #{em(20, $fz)});
+    padding-left: var(--wrapper-padding-left, #{em(20, $fz)});
+  }
 }
 
 .preloader {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(0, 0%, 100%);
-    z-index: 1010;
-    transition: opacity 0.1s;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+  transition: opacity 0.1s;
 
-    &__img {
-        user-select: none;
-        pointer-events: none;
-    }
+  &__img {
+    pointer-events: none;
+    user-select: none;
+  }
 }
 
 .fancybox {
-    &__container {
-        --fancybox-bg: hsla(0, 0%, 100%, 0.65);
-        --fancybox-color: hsl(0, 0%, 0%);
-    }
+  &__container {
+    --fancybox-bg: hsla(0, 0%, 100%, 0.65);
+    --fancybox-color: hsl(0, 0%, 0%);
+  }
 }
 
 @import "blocks/header";

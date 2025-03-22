@@ -1,675 +1,674 @@
 .product {
     justify-content: center;
-    padding-bottom: em(120, $fz);
     padding-right: 5.3%;
+    padding-bottom: em(120, $fz);
     padding-left: 5.3%;
     overflow: hidden;
-
+  
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-        padding-right: 8.9%;
-        padding-bottom: em(105, $fz);
-        padding-left: 8.6%;
+      padding-right: 8.9%;
+      padding-bottom: em(105, $fz);
+      padding-left: 8.6%;
     }
     @media screen and (max-width: #{$breakpoint_HD - 5}) {
-        padding-right: 6.5%;
-        padding-bottom: em(93, $fz);
-        padding-left: 9%;
+      padding-right: 6.5%;
+      padding-bottom: em(93, $fz);
+      padding-left: 9%;
     }
     @media screen and (max-width: 949.98px) {
-        padding-right: 4.4%;
-        padding-left: 4.4%;
+      padding-right: 4.4%;
+      padding-left: 4.4%;
     }
     @media screen and (max-width: 599.98px) {
-        padding-right: em(20, $fz);
-        padding-bottom: em(83, $fz);
-        padding-left: em(20, $fz);
+      padding-right: em(20, $fz);
+      padding-bottom: em(83, $fz);
+      padding-left: em(20, $fz);
     }
-
+  
     &,
     &__row,
     &__container,
     &__block {
-        display: flex;
+      display: flex;
     }
-
+  
     &__container,
     &__block {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     &,
     &__container,
     &__row {
-        width: 100%;
+      width: 100%;
     }
-
+  
     &__container {
-        align-items: center;
-        max-width: em(1380, $fz);
-    }  
-
+      align-items: center;
+      max-width: em(1380, $fz);
+    }
+  
     &__sliders {
-        margin-right: em(78, $fz);
-
-        @media screen and (max-width: 1599.98px) {
-            margin-right: em(38, $fz); 
-        }
-        @media screen and (max-width: #{$breakpoint_HD - 5}) {
-            margin-right: em(43, $fz); 
-        }
-        @media screen and (max-width: 849.98px) {
-            margin-right: 0;
-        }
+      margin-right: em(78, $fz);
+  
+      @media screen and (max-width: 1599.98px) {
+        margin-right: em(38, $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        margin-right: em(43, $fz);
+      }
+      @media screen and (max-width: 849.98px) {
+        margin-right: 0;
+      }
     }
-
+  
     &__row {
-        margin-bottom: em(40, $fz);
-
-        @media screen and (max-width: 849.98px) {
-            flex-direction: column-reverse;
-        }
-        @media screen and (max-width: 599.98px) {
-            margin-bottom: em(30, $fz);
-        }
+      margin-bottom: em(40, $fz);
+  
+      @media screen and (max-width: 849.98px) {
+        flex-direction: column-reverse;
+      }
+      @media screen and (max-width: 599.98px) {
+        margin-bottom: em(30, $fz);
+      }
     }
-
+  
     &__block {
-        @media screen and (min-width: 850px) {
-            overflow: hidden;
-        }
-        @media screen and (max-width: 849.98px) {
-            margin-bottom: em(40, $fz);
-        }
-        @media screen and (max-width: 599.98px) {
-            margin-bottom: em(30, $fz);
-        }
+      @media screen and (min-width: 850px) {
+        overflow: hidden;
+      }
+      @media screen and (max-width: 849.98px) {
+        margin-bottom: em(40, $fz);
+      }
+      @media screen and (max-width: 599.98px) {
+        margin-bottom: em(30, $fz);
+      }
     }
-
+  
     &__article {
-        margin-top: em(21, $fz);
-        margin-bottom: em(21, $fz);
-
-        @media screen and (max-width: 599.98px) {
-            margin-top: em(16, $fz); 
-        }
+      margin-top: em(21, $fz);
+      margin-bottom: em(21, $fz);
+  
+      @media screen and (max-width: 599.98px) {
+        margin-top: em(16, $fz);
+      }
     }
-
+  
     &__status {
-        margin-bottom: auto;
-        padding-bottom: em(20, $fz);
+      padding-bottom: em(20, $fz);
+      margin-bottom: auto;
     }
-
+  
     &__price {
-        $fz: 22;
-        font-size: em($fz, $fz_base);
-        font-weight: 600;
-        margin-bottom: em(7, $fz);
+      $fz: 22;
+      margin-bottom: em(7, $fz);
+      font-size: em($fz, $fz_base);
+      font-weight: 600;
     }
-
+  
     &__text {
-        color: #0E8B72;
+      color: hsl(168, 82%, 30%);
     }
-
+  
     &__btns {
-        display: flex;
-        margin-top: em(29, $fz);
-
-        @media screen and (max-width: 359.98px) {
-            flex-direction: column;
-        }
+      display: flex;
+      margin-top: em(29, $fz);
+  
+      @media screen and (max-width: 359.98px) {
+        flex-direction: column;
+      }
     }
-
+  
     &__btn {
-        width: em(223, $fz);
-        height: em(64, $fz);
-        margin-right: em(70, $fz);
-
-        @media screen and (max-width: 599.98px) {
-            margin-right: em(40, $fz);
-        }
-        @media screen and (max-width: 359.98px) {
-            margin-bottom: em(20, $fz);
-        }
+      width: em(223, $fz);
+      height: em(64, $fz);
+      margin-right: em(70, $fz);
+  
+      @media screen and (max-width: 599.98px) {
+        margin-right: em(40, $fz);
+      }
+      @media screen and (max-width: 359.98px) {
+        margin-bottom: em(20, $fz);
+      }
     }
-
+  
     &__info {
-        width: 100%;
-        @media screen and (min-width: $breakpoint_laptop_m) {
-            max-width: em(1160, $fz);
-            margin-left: em(25 , $fz);
-        }
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            margin-top: em(-70, $fz);
-        }
-        @media screen and (max-width: #{$breakpoint_HD - 5}) {
-            margin-top: em(-115, $fz);
-        }
-        @media screen and (max-width: 849.98px) {
-            margin-top: 0;
-        }
+      width: 100%;
+  
+      @media screen and (min-width: $breakpoint_laptop_m) {
+        max-width: em(1160, $fz);
+        margin-left: em(25 , $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        margin-top: em(-70, $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        margin-top: em(-115, $fz);
+      }
+      @media screen and (max-width: 849.98px) {
+        margin-top: 0;
+      }
     }
-
+  
     &__tabs {
-        margin-top: em(50, $fz);
-
-        @media screen and (max-width: 599.98px) {
-            margin-top: em(30, $fz);
-        }
+      margin-top: em(50, $fz);
+  
+      @media screen and (max-width: 599.98px) {
+        margin-top: em(30, $fz);
+      }
     }
-
+  
     &__viewed {
-        margin-top: em(84, $fz);
-
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            margin-top: em(70, $fz); 
+      margin-top: em(84, $fz);
+  
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        margin-top: em(70, $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        margin-top: em(60, $fz);
+      }
+      @media screen and (max-width: 599.98px) {
+        margin-top: em(33, $fz);
+      }
+    }
+  
+    .title-block {
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        min-height: em(150, $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        min-height: em(120, $fz);
+      }
+      @media screen and (max-width: 849.98px) {
+        min-height: auto;
+      }
+  
+      &__title {
+        @media screen and (max-width: 1599.98px) {
+          $fz: 34;
+          font-size: em($fz, $fz_base);
         }
         @media screen and (max-width: #{$breakpoint_HD - 5}) {
-            margin-top: em(60, $fz);   
+          $fz: 26;
+          font-size: em($fz, $fz_base);
         }
         @media screen and (max-width: 599.98px) {
-            margin-top: em(33, $fz);   
+          $fz: 24;
+          padding-right: em(20, $fz);
+          font-size: em($fz, $fz_base);
         }
+      }
+  
+      &__breadcrumb {
+        @media screen and (min-width: 600px) {
+          margin-bottom: em(33, $fz);
+  
+          @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            margin-bottom: em(9, $fz);
+          }
+        }
+      }
     }
-
-    .title-block {
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            min-height: em(150, $fz);
-        }
-        @media screen and (max-width: #{$breakpoint_HD - 5}) {
-            min-height: em(120, $fz);
-        }
-        @media screen and (max-width: 849.98px) {
-            min-height: auto;
-        }
-        &__title {
-            @media screen and (max-width: 1599.98px) {
-                $fz: 34;
-                font-size: em($fz, $fz_base);
-            }
-            @media screen and (max-width: #{$breakpoint_HD - 5}) {
-                $fz: 26;
-                font-size: em($fz, $fz_base);
-            }
-            @media screen and (max-width: 599.98px) {
-                $fz: 24;
-                font-size: em($fz, $fz_base);
-                padding-right: em(20, $fz);
-            }
-        }
-
-        &__breadcrumb {
-         @media screen and (min-width: 600px) {
-            margin-bottom: em(33, $fz);
-
-            @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-                margin-bottom: em(9, $fz);
-            }
-         }   
-        }
-    }
-
+  
     .breadcrumb__link {
-        @media screen and (min-width: 850px) {
-            &:last-child {
-                display: block;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
+      @media screen and (min-width: 850px) {
+        &:last-child {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
-
+      }
+  
     }
-}
-
-.product-sliders {
+  }
+  
+  .product-sliders {
     display: flex;
     position: relative;
-
+  
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-        align-items: flex-start;
+      align-items: flex-start;
     }
-
+  
     &__inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: em(12, $fz);
-
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            margin-right: em(3, $fz); 
-        }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: em(12, $fz);
+  
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        margin-right: em(3, $fz);
+      }
     }
-
+  
     &__thumbs {
-        height: em(475, $fz);
-        max-width: em(109, $fz);
-
-        @media screen and (max-width: 1599.98px) {
-            height: em(410, $fz);
-        }
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            height: em(305, $fz);
-            max-width: em(69, $fz);
-        }
-        @media screen and (max-width: #{$breakpoint_HD - 5}) {
-            height: em(227, $fz);
-        }
+      max-width: em(109, $fz);
+      height: em(475, $fz);
+  
+      @media screen and (max-width: 1599.98px) {
+        height: em(410, $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        max-width: em(69, $fz);
+        height: em(305, $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        height: em(227, $fz);
+      }
     }
-
+  
     &__slider {
-        width: em(519, $fz);
-        height: em(519, $fz);
-
-        @media screen and (max-width: 1599.98px) {
-            width: em(450, $fz);
-            height: em(450, $fz);
-        }
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            width: em(339, $fz);
-            height: em(339, $fz);
-        }
-        @media screen and (max-width: #{$breakpoint_HD - 5}) {
-            width: em(260, $fz);
-            height: em(260, $fz);
-        }
-
-        @media screen and (max-width: 849.98px) {
-            width: 100%;
-            margin-left: em(-3, $fz);
-            height: em(350, $fz);
-        }
-        @media screen and (max-width: 599.98px) {
-            height: em(335, $fz);
-        }
+      width: em(519, $fz);
+      height: em(519, $fz);
+  
+      @media screen and (max-width: 1599.98px) {
+        width: em(450, $fz);
+        height: em(450, $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        width: em(339, $fz);
+        height: em(339, $fz);
+      }
+      @media screen and (max-width: #{$breakpoint_HD - 5}) {
+        width: em(260, $fz);
+        height: em(260, $fz);
+      }
+      @media screen and (max-width: 849.98px) {
+        width: 100%;
+        height: em(350, $fz);
+        margin-left: em(-3, $fz);
+      }
+      @media screen and (max-width: 599.98px) {
+        height: em(335, $fz);
+      }
     }
-
+  
     &__btns {
-        display: flex;
-        margin-top: auto;
-
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            margin-top: em(10, $fz); 
-        }
+      display: flex;
+      margin-top: auto;
+  
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        margin-top: em(10, $fz);
+      }
     }
-
+  
     &__btn {
-        font-size: inherit;
-        background-color: transparent;
-        padding-right: em(8, $fz);
-        padding-left: em(8, $fz);
-        margin-right: em(2, $fz);
-        margin-left: em(2, $fz);
-        color: hsl(0, 0%, 51%);
-        transition: color 0.3s;
-
-        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            padding-right: 1px;
-            padding-left: 1px;
-        }
-
-        &:hover {
-            @media screen and (min-width: $breakpoint-hover) {
-                color: hsl(0, 0%, 20%);
-            }
-        }
-
-        &--next {
-            right: -34px;
-
-            @media screen and (max-width: 599.98px) {
-                right: -29px;
-            }
-
-            .product-sliders__icon {
-                transform: scaleY(-1)
-            }
-
-            @media screen and (max-width: 849.98px) {
-                .product-sliders__icon {
-                    transform: rotate(90deg);
-                }
-            }
-          
-        }
-
-        &--prev {
-            left: -32px;
-
-            @media screen and (max-width: 599.98px) {
-                left: -29px;
-            }
-            
-            @media screen and (max-width: 849.98px) {
-                .product-sliders__icon {
-                    transform: rotate(-90deg);
-                }
-            }
-        }
-
-        @media screen and (max-width: 849.98px) {
-            position: absolute;
-            top: 50%;
-            transform: translateY(50%);
-        }
-    }
-
-    &__icon {
-        width: em(28, $fz);
-        height: em(19, $fz);
-        fill: currentColor;
-    }
-}
-
-.slider-thumbs {
-    @media screen and (max-width: 849.98px) {
-        display: none;
-    }
-
-   &__slide {
-    width: em(109, $fz);
-    height: em(109, $fz);
-    padding: em(4, $fz);
-
-    @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-        width: em(69, $fz);
-        height: em(69, $fz);
-    }
-   } 
-}
-
-.slider-thumbs,
-.slider-product {
-    &__slide {
-        background-color: hsl(0, 0%, 100%);
-        border: 1px solid hsla(0, 0%, 59%, 0.44);
-    }
-
-    &__img,
-    &__picture {
-     width: 100%;
-     height: 100%;
-    }
-    
-    &__picture {
-     display: flex
-    }
- 
-    &__img {
-     object-fit: contain;
-    }
-}
-
-.product-article {
-    &__text {
-        $fz: 18;
-
-        display: block;
-        font-size: em($fz, $fz_base);
-    }
-}
-
-.product-status {
-    display: flex;
-    align-items: center;
-
-    &__icon {
-        width: em(20, $fz);
-        height: em(19, $fz);
-        margin-right: em(12, $fz);
-    }
-}
-
-.btn-share {
-    display: flex;
-    align-items: center;
-    font-size: inherit;
-    background-color: transparent;
-    color: hsl(198, 100%, 45%);
-    transition: color 0.3s;
-
-    &:hover {
+      padding-right: em(8, $fz);
+      padding-left: em(8, $fz);
+      margin-right: em(2, $fz);
+      margin-left: em(2, $fz);
+      background-color: transparent;
+      font-size: inherit;
+      color: hsl(0, 0%, 51%);
+      transition: color 0.3s;
+  
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        padding-right: 1px;
+        padding-left: 1px;
+      }
+      @media screen and (max-width: 849.98px) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(50%);
+      }
+  
+      &:hover {
         @media screen and (min-width: $breakpoint-hover) {
-            color: hsl(198, 100%, 30%);
+          color: hsl(0, 0%, 20%);
         }
+      }
+  
+      &--next {
+        right: -34px;
+  
+        @media screen and (max-width: 599.98px) {
+          right: -29px;
+        }
+        @media screen and (max-width: 849.98px) {
+          .product-sliders__icon {
+            transform: rotate(90deg);
+          }
+        }
+  
+        .product-sliders__icon {
+          transform: scaleY(-1);
+        }
+  
+      }
+  
+      &--prev {
+        left: -32px;
+  
+        @media screen and (max-width: 599.98px) {
+          left: -29px;
+        }
+        @media screen and (max-width: 849.98px) {
+          .product-sliders__icon {
+            transform: rotate(-90deg);
+          }
+        }
+      }
     }
   
     &__icon {
-        fill: currentColor;
-        margin-right: em(17, $fz);
+      width: em(28, $fz);
+      height: em(19, $fz);
+      fill: currentColor;
     }
-
+  }
+  
+  .slider-thumbs {
+    @media screen and (max-width: 849.98px) {
+      display: none;
+    }
+  
+    &__slide {
+      padding: em(4, $fz);
+      width: em(109, $fz);
+      height: em(109, $fz);
+  
+      @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+        width: em(69, $fz);
+        height: em(69, $fz);
+      }
+    }
+  }
+  
+  .slider-thumbs,
+  .slider-product {
+    &__slide {
+      border: 1px solid hsla(0, 0%, 59%, 0.44);
+      background-color: hsl(0, 0%, 100%);
+    }
+  
+    &__img,
+    &__picture {
+      width: 100%;
+      height: 100%;
+    }
+  
+    &__picture {
+      display: flex;
+    }
+  
+    &__img {
+      object-fit: contain;
+    }
+  }
+  
+  .product-article {
     &__text {
-        $fz: 18;
-        font-size: em($fz, $fz_base);
-        font-weight: 500;
+      $fz: 18;
+  
+      display: block;
+      font-size: em($fz, $fz_base);
     }
-}
-
-.link-download {
+  }
+  
+  .product-status {
+    display: flex;
+    align-items: center;
+  
+    &__icon {
+      width: em(20, $fz);
+      height: em(19, $fz);
+      margin-right: em(12, $fz);
+    }
+  }
+  
+  .btn-share {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-size: inherit;
+    color: hsl(198, 100%, 45%);
+    transition: color 0.3s;
+  
+    &:hover {
+      @media screen and (min-width: $breakpoint-hover) {
+        color: hsl(198, 100%, 30%);
+      }
+    }
+  
+    &__icon {
+      fill: currentColor;
+      margin-right: em(17, $fz);
+    }
+  
+    &__text {
+      $fz: 18;
+      font-size: em($fz, $fz_base);
+      font-weight: 500;
+    }
+  }
+  
+  .link-download {
     align-items: center;
     max-width: max-content;
-    color: #000;
-
+    color: hsl(0, 0%, 0%);
+  
     &:hover {
-        @media screen and (min-width: $breakpoint-hover) {
-            --link-download-fill: hsl(198, 100%, 30%);
-        }
+      @media screen and (min-width: $breakpoint-hover) {
+        --link-download-fill: hsl(198, 100%, 30%);
+      }
     }
-
+  
     &,
     &__col {
-        display: flex;
+      display: flex;
     }
-
+  
     &__col {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     &__icon {
-        fill: var(--link-download-fill, hsl(198, 100%, 45%));
-        width: em(56, $fz);
-        height: em(70, $fz);
-        transition: fill 0.3s;
-        margin-right: em(31, $fz);
+      width: em(56, $fz);
+      height: em(70, $fz);
+      margin-right: em(31, $fz);
+      transition: fill 0.3s;
+      fill: var(--link-download-fill, hsl(198, 100%, 45%));
     }
-
+  
     &__name {
-        $fz: 24;
-        font-size: em($fz, $fz_base);
-        line-height: 1.5;
-        padding-bottom: em(6, $fz);
-        border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
-        margin-bottom: em(4, $fz);
+      $fz: 24;
+      padding-bottom: em(6, $fz);
+      margin-bottom: em(4, $fz);
+      border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+      font-size: em($fz, $fz_base);
+      line-height: 1.5;
     }
-
+  
     &__size {
-        $fz: 14;
-        font-size: em($fz, $fz_base);
+      $fz: 14;
+      font-size: em($fz, $fz_base);
     }
-}
-
-.tabs {
+  }
+  
+  .tabs {
     display: flex;
     flex-direction: column;
-
+  
     &,
     &__btns {
-        display: flex;
+      display: flex;
     }
-
+  
     &__btns {
-        margin-bottom: em(36, $fz);
-
-        @media screen and (max-width: 599.98px) {
-            margin-bottom: em(30, $fz);
-        }
+      margin-bottom: em(36, $fz);
+  
+      @media screen and (max-width: 599.98px) {
+        margin-bottom: em(30, $fz);
+      }
     }
-
+  
     &__panel {
-        display: none;
-        flex-direction: column;
-
-        &--show {
-            display: flex;
-        }
+      display: none;
+      flex-direction: column;
+  
+      &--show {
+        display: flex;
+      }
     }
-}
-
-.tab-btn {
-    font-size: inherit;
-    padding-left: em(32, $fz);
+  }
+  
+  .tab-btn {
     padding-right: em(32, $fz);
-    background-color: transparent;
-    border-bottom: 2px solid hsl(210, 23%, 88%);
     padding-bottom: em(25, $fz);
+    padding-left: em(32, $fz);
+    border-bottom: 2px solid hsl(210, 23%, 88%);
+    background-color: transparent;
+    font-size: inherit;
     transition: border-color 0.3s;
-
-    &--active {
-        border-color: #3D4A62;
-        border-width: em(8, $fz);
-        padding-bottom: em(19, $fz);
-        pointer-events: none;
-    }
-
+  
     @media screen and (max-width: 599.98px) {
-        padding-left: em(12, $fz);
-        padding-right: em(12, $fz);
+      padding-right: em(12, $fz);
+      padding-left: em(12, $fz);
     }
-
+  
+    &--active {
+      padding-bottom: em(19, $fz);
+      border-width: em(8, $fz);
+      border-color: hsl(219, 23%, 31%);
+      pointer-events: none;
+    }
+  
     &:hover {
-        border-width: em(8, $fz);
-        padding-bottom: em(19, $fz);
+      padding-bottom: em(19, $fz);
+      border-width: em(8, $fz);
     }
-
+  
     &__text {
-        line-height: 1.5;
-        user-select: none;
+      line-height: 1.5;
+      user-select: none;
     }
-}
-
-.product-description {
+  }
+  
+  .product-description {
     display: grid;
     grid-row-gap: em(27, $fz);
-    
+  
     @media screen and (max-width: 599.98px) {
-        grid-row-gap: em(20, $fz)
+      grid-row-gap: em(20, $fz);
     }
-
+  
     b {
-        font-weight: 600;
+      font-weight: 600;
     }
-}
-
-.product-characteristics {
+  }
+  
+  .product-characteristics {
     grid-row-gap: em(37, $fz);
-
+  
     @media screen and (max-width: 599.98px) {
-        grid-row-gap: em(30, $fz);  
+      grid-row-gap: em(30, $fz);
     }
-
+  
     &,
     &__row,
     &__group {
-        display: grid;
+      display: grid;
     }
-
+  
     &__row {
-        grid-template-columns: var(--product-characteristics-columns, em(380, $fz) 1fr);
-        grid-column-gap: em(84, $fz);
-
-        @media screen and (max-width: 599.98px) {
-            grid-template-columns: var(--product-characteristics-columns, 1fr em(70, $fz));
-            grid-column-gap: em(30, $fz);   
-        }
+      grid-template-columns: var(--product-characteristics-columns, em(380, $fz) 1fr);
+      grid-column-gap: em(84, $fz);
+  
+      @media screen and (max-width: 599.98px) {
+        grid-template-columns: var(--product-characteristics-columns, 1fr em(70, $fz));
+        grid-column-gap: em(30, $fz);
+      }
     }
-
+  
     &__sizes {
-        display: block;
-        margin-bottom: em(16, $fz);
-
-        @media screen and (max-width: 599.98px) {
-            margin-bottom: em(5, $fz); 
-        }
+      display: block;
+      margin-bottom: em(16, $fz);
+  
+      @media screen and (max-width: 599.98px) {
+        margin-bottom: em(5, $fz);
+      }
     }
-
+  
     &__group {
-        @media screen and (max-width: 599.98px) {
-            grid-row-gap: em(10, $fz);
-        }
-        &:first-child {
-            @media screen and (max-width: 374.98px) {
-                --product-characteristics-columns: 1fr;
-            }
-        }
-    }
-}
-
-.viewed-products {
-    &__title {
-        $fz: 29;
-        font-size: em($fz, $fz_base);
-        font-weight: 600;
-
-        @media screen and (max-width: 599.98px) {
-            $fz: 20;
-            font-size: em($fz, $fz_base);
-        }
-    }
-
-    &__list {
-        display: grid;
-        margin-top: em(36, $fz);
+      @media screen and (max-width: 599.98px) {
         grid-row-gap: em(10, $fz);
-        max-width: em(1121, $fz);
-
-        @media screen and (max-width: 599.98px) {
-            margin-top: em(20, $fz);
-            grid-row-gap: em(5, $fz);
+      }
+  
+      &:first-child {
+        @media screen and (max-width: 374.98px) {
+          --product-characteristics-columns: 1fr;
         }
+      }
     }
-
-
+  }
+  
+  .viewed-products {
     @media screen and (min-width: 1249.98px) {
-        .product-card {
-            padding-top: em(15, $fz);
-            padding-bottom: em(18, $fz);
-    
-            &,
-            &__link {
-                align-items: flex-start;
-            }
-    
-            &__col {
-                padding-top: em(3, $fz);
-                padding-bottom: 0;
-                max-width: em(454, $fz);
-    
-                @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-                    max-width: em(300, $fz);
-                }
-            }
-    
-            &__picture {
-                width: em(76, $fz);
-                height: em(76, $fz);
-                margin-right: em(53, $fz);
-            }
-    
-            &__wrap {
-                flex-shrink: 0;
-                flex-direction: row;
-                align-items: center;
-            }
-    
-            &__btn {
-                width: em(209, $fz);
-                margin-left: em(45, $fz);
-            }
-    
-            &__text {
-                white-space: nowrap;
-            }
+      .product-card {
+        padding-top: em(15, $fz);
+        padding-bottom: em(18, $fz);
+  
+        &,
+        &__link {
+          align-items: flex-start;
         }
+  
+        &__col {
+          padding-top: em(3, $fz);
+          padding-bottom: 0;
+          max-width: em(454, $fz);
+  
+          @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            max-width: em(300, $fz);
+          }
+        }
+  
+        &__picture {
+          width: em(76, $fz);
+          height: em(76, $fz);
+          margin-right: em(53, $fz);
+        }
+  
+        &__wrap {
+          flex-direction: row;
+          flex-shrink: 0;
+          align-items: center;
+        }
+  
+        &__btn {
+          width: em(209, $fz);
+          margin-left: em(45, $fz);
+        }
+  
+        &__text {
+          white-space: nowrap;
+        }
+      }
     }
-}
+  
+    &__title {
+      $fz: 29;
+      font-size: em($fz, $fz_base);
+      font-weight: 600;
+  
+      @media screen and (max-width: 599.98px) {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+      }
+    }
+  
+    &__list {
+      display: grid;
+      grid-row-gap: em(10, $fz);
+      max-width: em(1121, $fz);
+      margin-top: em(36, $fz);
+  
+      @media screen and (max-width: 599.98px) {
+        grid-row-gap: em(5, $fz);
+        margin-top: em(20, $fz);
+      }
+    }
+  }
+  

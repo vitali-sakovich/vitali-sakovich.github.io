@@ -1,138 +1,139 @@
 .form {
     &__label {
-        width: 100%;
-
-        &:not(:last-child) {
-            margin-bottom: em(32, $fz);
-        }
+      width: 100%;
+  
+      &:not(:last-child) {
+        margin-bottom: em(32, $fz);
+      }
     }
-
+  
     &__input,
     &__textarea {
-        $fz: 18;
-        font-size: em($fz, $fz_base);
-        line-height: 1.22;
-        padding: em(12 50 12 16, $fz);
-        border: 1px solid hsla(0, 0%, 0%, 0.23);
-        width: 100%;
-        border-radius: em(5, $fz);
-        transition: border-color 0.3s;
-        background-color: hsl(0, 0%, 100%);
-        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.40));
-        color: hsla(0, 0%, 0%, 0.6);
-
-        &:focus {
-            border-color: hsla(0, 0%, 0%, 0.5);
-        }
+      $fz: 18;
+      padding: em(12 50 12 16, $fz);
+      width: 100%;
+      border: 1px solid hsla(0, 0%, 0%, 0.23);
+      border-radius: em(5, $fz);
+      background-color: hsl(0, 0%, 100%);
+      font-size: em($fz, $fz_base);
+      line-height: 1.22;
+      color: hsla(0, 0%, 0%, 0.6);
+      transition: border-color 0.3s;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.40));
+  
+      &:focus {
+        border-color: hsla(0, 0%, 0%, 0.5);
+      }
     }
-
+  
     &__input {
-        height: em(48, $fz);
+      height: em(48, $fz);
     }
-
+  
     &__textarea {
-        height: em(80, $fz);
-        min-height: em(80, $fz);
+      height: em(80, $fz);
+      min-height: em(80, $fz);
     }
-
+  
     &__placeholder {
-        position: absolute;
-        top: em(16, $fz);
-        left: 0;
-        font-size: var(--fz-placeholder, #{em(18, $fz_base)});
-        color: var(--placeholder-color, hsla(0, 0%, 0%, 0.6));
-        transform: var(--placeholder-shows, translate(em(16, $fz), 0));
-        transition: transform 0.3s, font-size 0.3s, color 0.3s;
-        pointer-events: none;
+      position: absolute;
+      top: em(16, $fz);
+      left: 0;
+      font-size: var(--fz-placeholder, #{em(18, $fz_base)});
+      color: var(--placeholder-color, hsla(0, 0%, 0%, 0.6));
+      transform: var(--placeholder-shows, translate(em(16, $fz), 0));
+      transition: transform 0.3s, font-size 0.3s, color 0.3s;
+      pointer-events: none;
     }
-
+  
     &__clear {
-        display: flex;
-        position: absolute;
-        align-items: center;
-        justify-content: center;
-        top: em(2, $fz);
-        right: 0;
-        width: em(40, $fz);
-        height: em(50, $fz);
-        background-color: transparent;
-        opacity: var(--clear-show, 0);
-        pointer-events: var(--clear-events, none);
-        transition: opacity 0.3s;
-
-        &:hover {
-            @media screen and (min-width: $breakpoint-hover) {
-                --clear-color: hsla(0, 0%, 0%, 0.8);
-            }
+      opacity: var(--clear-show, 0);
+      display: flex;
+      position: absolute;
+      top: em(2, $fz);
+      right: 0;
+      align-items: center;
+      justify-content: center;
+      width: em(40, $fz);
+      height: em(50, $fz);
+      background-color: transparent;
+      transition: opacity 0.3s;
+      pointer-events: var(--clear-events, none);
+  
+      &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+          --clear-color: hsla(0, 0%, 0%, 0.8);
         }
+      }
     }
-
+  
     &__icon {
-        transition: fill 0.3s;
-        fill: var(--clear-color, hsla(0, 0%, 0%, 0.6));
-        width: em(16, $fz);
-        height: auto;
+      width: em(16, $fz);
+      height: auto;
+      transition: fill 0.3s;
+      fill: var(--clear-color, hsla(0, 0%, 0%, 0.6));
     }
-
+  
     &__box {
-        display: flex;
-        align-items: center;
-
-        @media screen and (max-width: 529.98px) {
-            flex-direction: column;
-            align-items: flex-start;
-        }
+      display: flex;
+      align-items: center;
+  
+      @media screen and (max-width: 529.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
-
+  
     &__btn {
-        width: em(227, $fz);
-        height: em(54, $fz);
-        margin-right: em(44, $fz);
-
-        @media screen and (max-width: 529.98px) {
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: em(13, $fz);
-        }
+      width: em(227, $fz);
+      height: em(54, $fz);
+      margin-right: em(44, $fz);
+  
+      @media screen and (max-width: 529.98px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: em(13, $fz);
+      }
     }
-
+  
     &__consent {
-        max-width: em(250, $fz);
-
-        @media screen and (max-width: 529.98px) {
-            max-width: em(375, $fz);
-        }
+      max-width: em(250, $fz);
+  
+      @media screen and (max-width: 529.98px) {
+        max-width: em(375, $fz);
+      }
     }
-}
-
-.label {
+  }
+  
+  .label {
     display: flex;
     position: relative;
     flex-direction: column;
-
+  
     &--is-active {
-        --placeholder-shows: translate(0, #{em(-37, $fz)});
-        --clear-show: 1;
-        --clear-events: auto;
-        --fz-placeholder: #{em(12, $fz)};
-        --placeholder-color: hsl(0, 0%, 100%);
+      --placeholder-shows: translate(0, #{em(-37, $fz)});
+      --clear-show: 1;
+      --clear-events: auto;
+      --fz-placeholder: #{em(12, $fz)};
+      --placeholder-color: hsl(0, 0%, 100%);
     }
-}
-
-.form-consent {
+  }
+  
+  .form-consent {
     $fz: 12;
     font-size: em($fz, $fz_base);
     line-height: 1.5;
     color: hsla(0, 0%, 100%, 0.5);
-
+  
     &__link {
-        text-decoration: underline;
-        color: inherit;
-
-        &:hover {
-            @media screen and (min-width: $breakpoint-hover) {
-                text-decoration: none;
-            }
+      text-decoration: underline;
+      color: inherit;
+  
+      &:hover {
+        @media screen and (min-width: $breakpoint-hover) {
+          text-decoration: none;
         }
+      }
     }
-}
+  }
+  
