@@ -332,7 +332,6 @@
 .product-card {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border-radius: em(5, $fz);
     border: 1px solid hsl(0, 0%, 80%);
     padding: em(4 18 4 15, $fz);
