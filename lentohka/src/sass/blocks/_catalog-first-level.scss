@@ -1,0 +1,20 @@
+.catalog-first-level {
+    --catalog-categories-padding-top: #{em(40, $fz)};
+
+    @media screen and (min-width: 1630px) {
+        --wrapper-padding-right: 0;
+        --wrapper-padding-left: 0;
+        --title-block-padding-left: 5%;
+    }
+    @media screen and (min-width: 1630px) and (max-width: 1680px) {
+        --home-section-padding-right: 5%;
+        --home-section-padding-left: 5%;
+    }
+    @media screen and (max-width: 1629.98px) {
+        --home-section-padding-right: 0;
+        --home-section-padding-left: 0;
+    }
+    @media screen and (max-width: 599.98px) {
+        --catalog-categories-padding-top: #{em(20, $fz)};
+    }
+}

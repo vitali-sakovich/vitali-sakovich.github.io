@@ -208,7 +208,7 @@
     }
 }
 
-.home-catalog,
+.catalog-categories,
 .home-advantages,
 .home-map,
 .home-about {
@@ -228,24 +228,24 @@
         padding-left: var(--home-section-padding-left, 9%);
     }
     @media screen and (max-width: 949.98px) {
-        padding-right: 4.4%;
-        padding-left: 4.4%;
+        padding-right: var(--home-section-padding-right, 4.4%);
+        padding-left: var(--home-section-padding-left, 4.4%);
     }
     @media screen and (max-width: 529.98px) {
-        padding-right: em(20, $fz);
-        padding-left: em(20, $fz);
+        padding-right: var(--home-section-padding-right, #{em(20, $fz)});
+        padding-left: var(--home-section-padding-left, #{em(20, $fz)});
     }
 }
 
-.home-catalog {
+.catalog-categories {
     $self: &;
     display: flex;
-    padding-top: em(102, $fz);
-    padding-bottom: em(102, $fz);
+    padding-top: var(--catalog-categories-padding-top, em(102, $fz));
+    padding-bottom: var(--catalog-categories-padding-bottom, em(102, $fz));
 
     @media screen and (max-width: 949.98px) {
-        padding-top: em(50, $fz);
-        padding-bottom: em(50, $fz);
+        padding-top: var(--catalog-categories-padding-top, em(50, $fz));
+        padding-bottom: var(--catalog-categories-padding-bottom, em(50, $fz));
     }
 
     &__container,
@@ -284,8 +284,8 @@
 
         &:hover {
             @media screen and (min-width: $breakpoint-hover) {
-                --home-catalog-text-color: hsl(0, 0%, 100%);
-                --home-catalog-fill-icon: hsla(0, 0%, 100%, 0.5);
+                --catalog-categories-text-color: hsl(0, 0%, 100%);
+                --catalog-categories-fill-icon: hsla(0, 0%, 100%, 0.5);
                 background-color: hsl(198, 100%, 45%);
             }
         }
@@ -349,7 +349,7 @@
         $fz: 26;
         font-size: em($fz, $fz_base);
         transition: color 0.3s;
-        color: var(--home-catalog-text-color, hsl(198, 100%, 38%));
+        color: var(--catalog-categories-text-color, hsl(198, 100%, 38%));
         font-weight: 600;
         line-height: 1.07;
         max-width: em(220, $fz);
@@ -358,7 +358,7 @@
     &__icon {
         width: em(38, $fz);
         height: em(38, $fz);
-        fill: var(--home-catalog-fill-icon, hsla(0, 0%, 0%, 0.5));
+        fill: var(--catalog-categories-fill-icon, hsla(0, 0%, 0%, 0.5));
         transition: fill 0.3s;
     }
 
