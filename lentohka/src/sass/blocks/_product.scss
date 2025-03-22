@@ -133,12 +133,13 @@
     }
 
     &__info {
+        width: 100%;
         @media screen and (min-width: $breakpoint_laptop_m) {
             max-width: em(1160, $fz);
             margin-left: em(25 , $fz);
         }
         @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
-            margin-top: em(-90, $fz);
+            margin-top: em(-70, $fz);
         }
         @media screen and (max-width: #{$breakpoint_HD - 5}) {
             margin-top: em(-115, $fz);
@@ -171,12 +172,21 @@
     }
 
     .title-block {
+        @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            min-height: em(150, $fz);
+        }
+        @media screen and (max-width: #{$breakpoint_HD - 5}) {
+            min-height: em(120, $fz);
+        }
+        @media screen and (max-width: 849.98px) {
+            min-height: auto;
+        }
         &__title {
             @media screen and (max-width: 1599.98px) {
                 $fz: 34;
                 font-size: em($fz, $fz_base);
             }
-            @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
+            @media screen and (max-width: #{$breakpoint_HD - 5}) {
                 $fz: 26;
                 font-size: em($fz, $fz_base);
             }
@@ -539,15 +549,58 @@
 }
 
 .product-description {
+    display: grid;
+    grid-row-gap: em(27, $fz);
+    
+    @media screen and (max-width: 599.98px) {
+        grid-row-gap: em(20, $fz)
+    }
+
     b {
         font-weight: 600;
     }
+}
 
-    p:not(:last-child) {
-        margin-bottom: em(27, $fz);
+.product-characteristics {
+    grid-row-gap: em(37, $fz);
+
+    @media screen and (max-width: 599.98px) {
+        grid-row-gap: em(30, $fz);  
+    }
+
+    &,
+    &__row,
+    &__group {
+        display: grid;
+    }
+
+    &__row {
+        grid-template-columns: var(--product-characteristics-columns, em(380, $fz) 1fr);
+        grid-column-gap: em(84, $fz);
 
         @media screen and (max-width: 599.98px) {
-            margin-bottom: em(20, $fz);
+            grid-template-columns: var(--product-characteristics-columns, 1fr em(70, $fz));
+            grid-column-gap: em(30, $fz);   
+        }
+    }
+
+    &__sizes {
+        display: block;
+        margin-bottom: em(16, $fz);
+
+        @media screen and (max-width: 599.98px) {
+            margin-bottom: em(5, $fz); 
+        }
+    }
+
+    &__group {
+        @media screen and (max-width: 599.98px) {
+            grid-row-gap: em(10, $fz);
+        }
+        &:first-child {
+            @media screen and (max-width: 374.98px) {
+                --product-characteristics-columns: 1fr;
+            }
         }
     }
 }

@@ -4557,6 +4557,9 @@ input[type=number]:focus {
     margin-bottom: 1.25em;
   }
 }
+.product__info {
+  width: 100%;
+}
 @media screen and (min-width: 1440px) {
   .product__info {
     max-width: 72.5em;
@@ -4565,7 +4568,7 @@ input[type=number]:focus {
 }
 @media screen and (max-width: 1439px) {
   .product__info {
-    margin-top: -5.625em;
+    margin-top: -4.375em;
   }
 }
 @media screen and (max-width: 1275px) {
@@ -4604,12 +4607,27 @@ input[type=number]:focus {
     margin-top: 2.0625em;
   }
 }
+@media screen and (max-width: 1439px) {
+  .product .title-block {
+    min-height: 9.375em;
+  }
+}
+@media screen and (max-width: 1275px) {
+  .product .title-block {
+    min-height: 7.5em;
+  }
+}
+@media screen and (max-width: 849.98px) {
+  .product .title-block {
+    min-height: auto;
+  }
+}
 @media screen and (max-width: 1599.98px) {
   .product .title-block__title {
     font-size: 2.125em;
   }
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1275px) {
   .product .title-block__title {
     font-size: 1.625em;
   }
@@ -5009,15 +5027,57 @@ input[type=number]:focus {
   user-select: none;
 }
 
+.product-description {
+  display: grid;
+  grid-row-gap: 1.6875em;
+}
+@media screen and (max-width: 599.98px) {
+  .product-description {
+    grid-row-gap: 1.25em;
+  }
+}
 .product-description b {
   font-weight: 600;
 }
-.product-description p:not(:last-child) {
-  margin-bottom: 1.6875em;
+
+.product-characteristics {
+  grid-row-gap: 2.3125em;
 }
 @media screen and (max-width: 599.98px) {
-  .product-description p:not(:last-child) {
-    margin-bottom: 1.25em;
+  .product-characteristics {
+    grid-row-gap: 1.875em;
+  }
+}
+.product-characteristics, .product-characteristics__row, .product-characteristics__group {
+  display: grid;
+}
+.product-characteristics__row {
+  grid-template-columns: var(--product-characteristics-columns, 23.75em 1fr);
+  grid-column-gap: 5.25em;
+}
+@media screen and (max-width: 599.98px) {
+  .product-characteristics__row {
+    grid-template-columns: var(--product-characteristics-columns, 1fr 4.375em);
+    grid-column-gap: 1.875em;
+  }
+}
+.product-characteristics__sizes {
+  display: block;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 599.98px) {
+  .product-characteristics__sizes {
+    margin-bottom: 0.3125em;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .product-characteristics__group {
+    grid-row-gap: 0.625em;
+  }
+}
+@media screen and (max-width: 374.98px) {
+  .product-characteristics__group:first-child {
+    --product-characteristics-columns: 1fr;
   }
 }
 
