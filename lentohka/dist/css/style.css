@@ -6416,7 +6416,6 @@ input[type=number]:focus {
 @media screen and (max-width: 599.98px) {
   .about-video {
     grid-template-columns: 1fr;
-    grid-row-gap: 1.375em;
   }
 }
 .about-video__link {
@@ -6437,6 +6436,7 @@ input[type=number]:focus {
   .about-video__link {
     width: calc(100% + 2.5em);
     height: 15.5em;
+    margin-bottom: 1.375em;
     margin-left: -1.25em;
   }
 }

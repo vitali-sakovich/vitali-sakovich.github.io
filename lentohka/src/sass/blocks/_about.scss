@@ -240,7 +240,6 @@
     }
     @media screen and (max-width: 599.98px) {
       grid-template-columns: 1fr;
-      grid-row-gap: em(22, $fz);
     }
   
     &__link {
@@ -256,6 +255,7 @@
       @media screen and (max-width: 599.98px) {
         width: calc(100% + em(40, $fz));
         height: em(248, $fz);
+        margin-bottom: em(22, $fz);
         margin-left: em(-20, $fz);
       }
     }
