@@ -141,6 +141,7 @@
     max-width: em(1280, $fz);
   
     @media screen and (min-width: $breakpoint_laptop_m) {
+      display: flex;
       justify-content: space-between;
     }
     @media screen and (max-width: #{$breakpoint_laptop_m - 1}) {
@@ -153,7 +154,6 @@
       grid-row-gap: em(20, $fz);
     }
   
-    &,
     &__item,
     &__links,
     &__wrap {

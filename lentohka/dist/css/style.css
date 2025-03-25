@@ -1645,6 +1645,9 @@ input[type=number]:focus {
 }
 @media screen and (min-width: 1440px) {
   .footer-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -1663,7 +1666,7 @@ input[type=number]:focus {
     grid-row-gap: 1.25em;
   }
 }
-.footer-contact, .footer-contact__item, .footer-contact__links, .footer-contact__wrap {
+.footer-contact__item, .footer-contact__links, .footer-contact__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
