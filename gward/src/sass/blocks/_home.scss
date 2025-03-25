@@ -118,12 +118,12 @@
     }
   
     &__title {
-      max-width: var(--banner-preview-title-max-width, em(530, $fz));
       text-transform: var(--banner-preview-title-transform);
       font-weight: 700;
   
       @media screen and (min-width: 1000px) {
         $fz: 54;
+        max-width: var(--banner-preview-title-max-width, em(530, $fz));
         margin-bottom: em(5, $fz);
         font-size: em($fz, $fz_base);
         line-height: 1.09;
@@ -131,6 +131,7 @@
       @media screen and (max-width: 999.98px) {
         $fz: 29;
         font-size: em($fz, $fz_base);
+        max-width: var(--banner-preview-title-max-width);
       }
   
       span {

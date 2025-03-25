@@ -601,12 +601,12 @@ input[type=number]:focus {
   color: hsl(0, 0%, 100%);
 }
 .banner-preview__title {
-  max-width: var(--banner-preview-title-max-width, 33.125em);
   text-transform: var(--banner-preview-title-transform);
   font-weight: 700;
 }
 @media screen and (min-width: 1000px) {
   .banner-preview__title {
+    max-width: var(--banner-preview-title-max-width, 9.8148148148em);
     margin-bottom: 0.0925925926em;
     font-size: 3.375em;
     line-height: 1.09;
@@ -615,6 +615,7 @@ input[type=number]:focus {
 @media screen and (max-width: 999.98px) {
   .banner-preview__title {
     font-size: 1.8125em;
+    max-width: var(--banner-preview-title-max-width);
   }
 }
 .banner-preview__title span {
