@@ -79,6 +79,7 @@
       overflow: hidden;
       border-radius: em(10, $fz);
       background-color: hsl(197, 98%, 17%);
+      right: em(-15, $fz);
   
       &::after {
         content: '';

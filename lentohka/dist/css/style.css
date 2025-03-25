@@ -1826,6 +1826,7 @@ input[type=number]:focus {
   overflow: hidden;
   border-radius: 0.625em;
   background-color: hsl(197, 98%, 17%);
+  right: -0.9375em;
 }
 .preview__slide::after {
   content: "";
