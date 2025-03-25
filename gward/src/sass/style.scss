@@ -1,0 +1,83 @@
+@import "normalize";
+@import "fonts";
+@import "function";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+header,
+footer {
+  display: flex;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 1 0 auto;
+  flex: 1 0 auto;
+  flex-flow: column;
+  flex-flow: column;
+  width: 100%;
+  min-height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus {
+  appearance: textfield;
+  appearance: none;
+}
+
+
+@import "blocks/home";
