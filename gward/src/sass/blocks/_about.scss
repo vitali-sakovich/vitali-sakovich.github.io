@@ -143,6 +143,12 @@
   
   .about-video {
     color: hsl(0, 0%, 100%);
+
+    &:hover {
+        @media screen and (min-width: 1000px) {
+            --about-video-icon-play-fill: hsl(351, 100%, 60%);
+        }
+    }
   
     &,
     &__content {
@@ -223,7 +229,8 @@
         grid-area: 2/2/3/3;
         width: em(70, $fz);
         height: em(70, $fz);
-        fill: var(--about-video-icon-play-fill, hsl(351, 100%, 51%));
+        transition: fill 0.3s;
+        fill: var(--about-video-icon-play-fill, hsl(351, 100%, 45%));
   
         @media screen and (min-width: 600px) {
           width: em(100, $fz);
