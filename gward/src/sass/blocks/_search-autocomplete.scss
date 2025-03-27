@@ -1,0 +1,123 @@
+.search-autocomplete {
+    position: relative;
+    align-items: center;
+    max-height: calc(100vh - em(300, $fz));
+    background-image: linear-gradient(90deg, hsl(0, 5%, 16%) 0%, hsl(300, 7%, 3%) 100%);
+  
+    &,
+    &__block {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  
+    &__block {
+      align-items: flex-start;
+      padding-top: em(30, $fz);
+      width: 100%;
+      max-width: em(943, $fz);
+    }
+  
+    &__list {
+      padding-right: em(15, $fz);
+      width: 100%;
+    }
+  
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: em(10, $fz);
+      color: hsl(0, 0%, 100%);
+      transition: color 0.3s;
+  
+      &:hover {
+        @media screen and (min-width: 1000px) {
+          color: hsla(0, 0%, 100%, 0.7);
+        }
+      }
+    }
+  
+    &__picture {
+      display: flex;
+      flex-shrink: 0;
+      width: em(64, $fz);
+      height: em(64, $fz);
+      margin-right: em(35, $fz);
+      background-color: hsl(0, 0%, 100%);
+    }
+  
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  
+    &__name {
+      $fz: 18;
+      font-size: em($fz, $fz_base);
+    }
+  
+    &__footer {
+      padding-top: em(49, $fz);
+      padding-bottom: em(46, $fz);
+    }
+  
+    &__close {
+      position: absolute;
+      top: em(47, $fz);
+      right: em(180, $fz);
+      width: em(32, $fz);
+      height: em(32, $fz);
+      background-color: transparent;
+      color: hsl(0, 0%, 100%);
+  
+      &:hover {
+        @media screen and (min-width: 1000px) {
+          color: hsla(0, 0%, 100%, 0.7);
+        }
+      }
+    }
+  
+    &__icon {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+      transition: color 0.3s;
+    }
+  }
+  
+  @mixin scrollbar ($color: hsla(0, 0%, 100%, 0.15)) {
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    @supports (scrollbar-width: auto) {
+      scrollbar-width: auto;
+    }
+  
+    @-moz-document url-prefix() {
+      scrollbar-width: thin;
+      scrollbar-color: $color transparent;
+      scrollbar-arrow-color: transparent;
+      scrollbar-face-color: transparent;
+      scrollbar-track-color: transparent;
+      scrollbar-base-color: transparent;
+    }
+  
+    &::-webkit-scrollbar {
+      width: em(5, $fz);
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: $color;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+  
+  .scrollbar {
+    @include scrollbar;
+  }
+  
