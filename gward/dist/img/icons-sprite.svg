@@ -9,4 +9,10 @@
     <symbol viewBox="0 0 29 29" id="close">
         <path fill-rule="evenodd" d="m27.142 0 1.414 1.414-12.864 12.864 12.864 12.864-1.414 1.414-12.864-12.864L1.414 28.556 0 27.142l12.864-12.864L0 1.414 1.414 0l12.864 12.864z" clip-rule="evenodd"/>
     </symbol>
+    <symbol viewBox="0 0 16 17" id="clear">
+        <path fill-rule="evenodd" d="M8 .152c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8Zm4 11.05-1.12 1.186L8 9.338l-2.88 3.05L4 11.202l2.88-3.05L4 5.102l1.12-1.185L8 6.967l2.88-3.05L12 5.103l-2.88 3.05L12 11.201Z" clip-rule="evenodd"/>
+    </symbol>
+    <symbol viewBox="0 0 32 10" id="arrow">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 5h31m0 0-5.391 4M32 5l-5.391-4"/>
+    </symbol>
 </svg>

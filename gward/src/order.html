@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,user-scalable=0"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="shortcut icon" type="image/png" sizes="16x16" href="" />
+        <link rel="stylesheet" href="./css/fancybox.css" />
+        <link rel="stylesheet" href="./css/nativejs-select.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+
+    <body>
+        <div class="order">
+            <form action="#" method="POST" class="form order__form">
+                <div class="order__head">
+                    <h2 class="order__title">
+                        Оформление заказа на
+                        <span>13 550 ₽</span>
+                    </h2>
+                </div>
+                <div class="order__block">
+                    <div class="order__col">
+                        <h3 class="order__title order__title--size-sm">
+                            1. Контактные данные
+                        </h3>
+                    </div>
+                    <div class="order__col">
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="surname"
+                                data-rule="required"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                ><span>*</span> Фамилие</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="name"
+                                data-rule="required"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                ><span>*</span> Имя</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="patronymic"
+                                data-rule="required"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                ><span>*</span> Отчество</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="organization"
+                                data-rule="required"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                ><span>*</span> Организация</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="position"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder">Должность</span>
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="phone"
+                                data-rule="required|phone"
+                                class="form__input js-input js-input-mask"
+                            />
+                            <span class="form__placeholder"
+                                ><span>*</span> Контактный телефон</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <label class="label form__label js-label">
+                            <input
+                                type="text"
+                                name="mail"
+                                class="form__input js-input"
+                            />
+                            <span class="form__placeholder"
+                                >Электронная почта</span
+                            >
+                            <button
+                                type="button"
+                                title="Очистить"
+                                aria-label="Очистить"
+                                class="form__clear js-clear-input"
+                            >
+                                <svg width="16" height="16" class="form__icon">
+                                    <use
+                                        xlink:href="./img/icons-sprite.svg#clear"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <button type="button" class="order-btn form__btn">
+                            <span class="order-btn__label">Продолжить</span>
+                            <svg
+                                width="32"
+                                height="10"
+                                aria-hidden="true"
+                                class="order-btn__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#arrow"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="order__text"
+                        >Ваши личные данные необходимы для оформлении
+                        заказа</span
+                    >
+                </div>
+                <div class="order__block">
+                    <div class="order__col">
+                        <h3 class="order__title order__title--size-sm">
+                            2. Способ оплаты
+                        </h3>
+                    </div>
+                    <div class="order__col">
+                        <label class="label-radio form__radio">
+                            <input
+                                type="radio"
+                                name="payment"
+                                checked
+                                class="label-radio__input"
+                            />
+                            <span class="label-radio__cheker"></span>
+                            <span class="label-radio__text"
+                                >Оплата наличными при получении</span
+                            >
+                        </label>
+                        <label class="label-radio form__radio">
+                            <input
+                                type="radio"
+                                name="payment"
+                                class="label-radio__input"
+                            />
+                            <span class="label-radio__cheker"></span>
+                            <span class="label-radio__text"
+                                >Безналичный расчет</span
+                            >
+                        </label>
+                        <select name="requisites" class="select form__select">
+                            <option value="item1">item1</option>
+                            <option value="item2">item2</option>
+                            <option value="item3">item3</option>
+                            <option value="item4">item4</option>
+                            <option value="item4">item5</option>
+                        </select>
+                        <button type="button" class="order-btn form__btn">
+                            <span class="order-btn__label">Продолжить</span>
+                            <svg
+                                width="32"
+                                height="10"
+                                aria-hidden="true"
+                                class="order-btn__icon"
+                            >
+                                <use
+                                    xlink:href="./img/icons-sprite.svg#arrow"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="order__text"
+                        >Ваши личные данные необходимы для оформлении
+                        заказа</span
+                    >
+                </div>
+                <div class="order__block">
+                    <div class="order__col">
+                        <h3 class="order__title order__title--size-sm">
+                            3. Способ доставки
+                        </h3>
+                    </div>
+                    <div class="order__col">
+                        <label class="label-radio form__radio">
+                            <input
+                                type="radio"
+                                name="deliveries"
+                                checked
+                                class="label-radio__input"
+                            />
+                            <span class="label-radio__cheker"></span>
+                            <span class="label-radio__text">Самовывоз</span>
+                        </label>
+                        <label class="label-radio form__radio">
+                            <input
+                                type="radio"
+                                name="deliveries"
+                                class="label-radio__input"
+                            />
+                            <span class="label-radio__cheker"></span>
+                            <span class="label-radio__text"
+                                >Доставка «Почтой России»</span
+                            >
+                        </label>
+                        <label class="label-radio form__radio">
+                            <input
+                                type="radio"
+                                name="deliveries"
+                                class="label-radio__input"
+                            />
+                            <span class="label-radio__cheker"></span>
+                            <span class="label-radio__text"
+                                >Доставка курьером</span
+                            >
+                        </label>
+                        <button type="submit" class="order-btn form__btn">
+                            <span class="order-btn__label">Оформить заказ</span>
+                        </button>
+                    </div>
+                    <span class="order__text"
+                        >Для удобства оформления заказа можно добавить несколько
+                        банковских реквизитов</span
+                    >
+                </div>
+            </form>
+        </div>
+
+        <script src="./js/js-form-validator.min.js"></script>
+        <script src="./js/fancybox.js"></script>
+        <script src="./js/nativejs-select.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
