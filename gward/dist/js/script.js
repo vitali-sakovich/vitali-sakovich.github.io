@@ -34,10 +34,6 @@ window.addEventListener("DOMContentLoaded", function () {
                 clearBtn.addEventListener("click", () => {
                     input.value = "";
                     inputValueСheck();
-
-                    if (textarea) {
-                        textarea.style.height = 104 + "px";
-                    }
                 });
             }
 

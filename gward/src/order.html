@@ -36,7 +36,6 @@
                             <input
                                 type="text"
                                 name="surname"
-                                data-rule="required"
                                 class="form__input js-input"
                             />
                             <span class="form__placeholder"
@@ -59,7 +58,6 @@
                             <input
                                 type="text"
                                 name="name"
-                                data-rule="required"
                                 class="form__input js-input"
                             />
                             <span class="form__placeholder"
@@ -82,7 +80,6 @@
                             <input
                                 type="text"
                                 name="patronymic"
-                                data-rule="required"
                                 class="form__input js-input"
                             />
                             <span class="form__placeholder"
@@ -105,7 +102,6 @@
                             <input
                                 type="text"
                                 name="organization"
-                                data-rule="required"
                                 class="form__input js-input"
                             />
                             <span class="form__placeholder"
@@ -148,7 +144,6 @@
                             <input
                                 type="text"
                                 name="phone"
-                                data-rule="required|phone"
                                 class="form__input js-input js-input-mask"
                             />
                             <span class="form__placeholder"
@@ -238,13 +233,28 @@
                                 >Безналичный расчет</span
                             >
                         </label>
-                        <select name="requisites" class="select form__select">
+                        <select
+                            name="requisites"
+                            data-placeholder="Выбрать реквизиты из списка"
+                            class="select form__select"
+                        >
                             <option value="item1">item1</option>
                             <option value="item2">item2</option>
                             <option value="item3">item3</option>
                             <option value="item4">item4</option>
                             <option value="item4">item5</option>
                         </select>
+                        <label class="label form__label js-label">
+                            <textarea
+                                readonly
+                                name="requisites2"
+                                class="form__textarea js-input"
+                            >
+ООО 'Рога и копыта'. 
+ИНН 7713522570 / КПП 771301001. 
+Расчетный счет № 40702810400180000662 в ОАО «Отп банк» г. Москва Кор. Счет № 30101810000000000311 БИК 044525311 
+                            </textarea>
+                        </label>
                         <button type="button" class="order-btn form__btn">
                             <span class="order-btn__label">Продолжить</span>
                             <svg
@@ -303,6 +313,17 @@
                                 >Доставка курьером</span
                             >
                         </label>
+                        <select
+                            name="requisites"
+                            data-placeholder="Выбрать адрес доставки из списка"
+                            class="select form__select"
+                        >
+                            <option value="item1">item1</option>
+                            <option value="item2">item2</option>
+                            <option value="item3">item3</option>
+                            <option value="item4">item4</option>
+                            <option value="item4">item5</option>
+                        </select>
                         <button type="submit" class="order-btn form__btn">
                             <span class="order-btn__label">Оформить заказ</span>
                         </button>

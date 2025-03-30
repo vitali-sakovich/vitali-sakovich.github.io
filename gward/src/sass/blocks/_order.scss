@@ -1,214 +1,289 @@
 .order {
     display: flex;
     flex-direction: column;
-
+    padding-bottom: em(60, $fz);
+    width: 100%;
+  
     &__head {
-        margin-bottom: em(24, $fz);
+      margin-bottom: em(15, $fz);
+  
+      @media screen and (min-width: 600px) {
+        margin-bottom: em(25, $fz);
+      }
     }
-
+  
     &__title {
+      $fz: 26;
+      font-size: em($fz, $fz_base);
+      font-weight: 500;
+  
+      @media screen and (min-width: 600px) {
+        $fz: 33;
+        font-size: em($fz, $fz_base);
+      }
+      @media screen and (min-width: 800px) {
         $fz: 38;
         font-size: em($fz, $fz_base);
-        font-weight: 500;
-
-        &--size-sm {
-            $fz: 26;
-            font-size: em($fz, $fz_base);
+      }
+  
+      &--size-sm {
+        $fz: 20;
+        font-size: em($fz, $fz_base);
+  
+        @media screen and (min-width: 600px) {
+          $fz: 26;
+          font-size: em($fz, $fz_base);
         }
+      }
     }
-
+  
     &__block {
-        display: grid;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-top: em(15, $fz);
+      padding-bottom: em(15, $fz);
+      border-top: 1px dashed hsl(0, 0%, 88%);
+  
+      @media screen and (min-width: 600px) {
+        padding-top: em(25, $fz);
+        padding-bottom: em(25, $fz);
+      }
+      @media screen and (min-width: 800px) {
+        grid-template-columns: em(300 400, $fz);
+        grid-column-gap: em(50, $fz);
+      }
+      @media screen and (min-width: 1200px) {
+        grid-template-columns: em(350 620, $fz);
+        grid-column-gap: em(100, $fz);
+      }
+      @media screen and (min-width: 1440px) {
         grid-template-columns: em(350 620, $fz);
         grid-column-gap: em(300, $fz);
-        padding-top: em(26, $fz);
-        border-top: 1px dashed hsl(0, 0%, 88%);
-        padding-bottom: em(15, $fz);
+      }
+  
+      &:last-child {
+        border-bottom: 1px dashed hsl(0, 0%, 88%);
+      }
     }
-
+  
     &__col {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
+  
+      @media screen and (max-width: 799.98px) {
+        &:nth-child(2) {
+          margin-top: em(25, $fz);
+        }
+      }
+      @media screen and (max-width: 599.98px) {
+        &:nth-child(2) {
+          margin-top: em(15, $fz);
+        }
+      }
     }
-
+  
     &__text {
-        $fz: 13;
-        font-size: em($fz, $fz_base);
-        font-weight: 300;
-        color: hsla(0, 0%, 0%, 0.7);
+      $fz: 13;
+      font-size: em($fz, $fz_base);
+      font-weight: 300;
+      color: hsla(0, 0%, 0%, 0.7);
+  
+      @media screen and (min-width: 800px) {
         grid-column: 1/3;
+      }
+      @media screen and (max-width: 799.98px) {
+        margin-top: em(25, $fz);
+      }
     }
-}
-
-.form {
+  }
+  
+  .form {
     &__label {
-        position: relative;
-        margin-bottom: em(20, $fz);
+      position: relative;
+      margin-bottom: em(20, $fz);
     }
-
+  
     &__placeholder,
     &__clear {
-        position: absolute;
+      position: absolute;
     }
-
+  
+    &__input,
+    &__textarea {
+      $fz: 16;
+      padding: em(15, $fz);
+      width: 100%;
+      border: 1px solid hsl(0, 0%, 87%);
+      border-radius: em(3, $fz);
+      font-size: em($fz, $fz_base);
+      font-weight: 500;
+      color: hsl(0, 0%, 20%);
+  
+      .label--is-active & {
+        border-color: hsl(0, 0%, 60%);
+      }
+    }
+  
     &__input {
-        $fz: 16;
-        font-size: em($fz, $fz_base);
-        width: 100%;
-        height: em(50, $fz);
-        border-radius: em(3, $fz);
-        border: 1px solid hsl(0, 0%, 87%);
-        padding-right: em(15, $fz);
-        padding-left: em(15, $fz);
-        font-weight: 500;
-        color: hsl(0, 0%, 20%);
+      height: em(50, $fz);
     }
-    
-
+  
+    &__textarea {
+      padding-bottom: 2px;
+      overflow: hidden;
+      border-color: hsl(0, 0%, 60%);
+      resize: none;
+      min-height: em(50, $fz);
+    }
+  
+  
     &__placeholder {
-        display: flex;
-        align-items: center;
-        color: hsl(0, 0%, 60%);
-        top: em(17, $fz);
-        left: em(15, $fz);
-        font-weight: 300;
-        z-index: 1;
-        transform: var(--input-placeholder-transform);
-        transition: top 0.3s, left 0.3s, font-size 0.3s;
-        will-change: top, left, font-size;
-
-        span {
-            $fz: 20;
-            font-size: em($fz, $fz_base);
-            font-weight: 500;
-            color: hsl(346, 100%, 47%);
-            line-height: 0;
-            transform: translateY(em(3, $fz));
-            margin-right: em(4, $fz);
-        }
-
-        .label--is-active & {
-            $fz: 12;
-            font-size: em($fz, $fz_base);
-            top: em(-14, $fz);
-            left: 0;
-        }
+      display: flex;
+      top: em(17, $fz);
+      left: em(15, $fz);
+      z-index: 1;
+      align-items: center;
+      font-weight: 300;
+      color: hsl(0, 0%, 60%);
+      transform: var(--input-placeholder-transform);
+      transition: top 0.3s, left 0.3s, font-size 0.3s;
+      will-change: top, left, font-size;
+  
+      span {
+        $fz: 20;
+        margin-right: em(4, $fz);
+        font-size: em($fz, $fz_base);
+        font-weight: 500;
+        line-height: 0;
+        color: hsl(346, 100%, 47%);
+        transform: translateY(em(3, $fz));
+      }
+  
+      .label--is-active & {
+        $fz: 12;
+        top: em(-14, $fz);
+        left: 0;
+        font-size: em($fz, $fz_base);
+      }
     }
-
+  
     &__clear {
-        top: em(7, $fz);
-        right: 0;
-        width: em(40, $fz);
-        height: em(40, $fz);
-        background-color: transparent;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-
-        .label--is-active & {
-            opacity: 1;
-            pointer-events: auto;
-        }
+      opacity: 0;
+      top: em(7, $fz);
+      right: 0;
+      width: em(40, $fz);
+      height: em(40, $fz);
+      background-color: transparent;
+      transition: opacity 0.3s;
+      pointer-events: none;
+  
+      .label--is-active & {
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
-
+  
     &__icon {
-        fill: hsl(0, 0%, 30%);
+      fill: hsl(0, 0%, 30%);
     }
-
+  
     &__btn {
+      @media screen and (min-width: 600px) {
         width: em(240, $fz);
         margin-left: auto;
+      }
     }
-
+  
     &__radio {
-        margin-top: em(15, $fz);
+      margin-top: em(15, $fz);
     }
-}
-
-.order-btn {
+  }
+  
+  .order-btn {
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: em(25, $fz);
-    background-image: linear-gradient(90deg, hsl(350, 86%, 39%) 0%, hsl(342, 100%, 46%) 100%);
-    box-shadow: em(0 10 20, $fz) hsla(0, 100%, 44%, 0.2);
+    justify-content: center;
     min-height: em(50, $fz);
+    border-radius: em(25, $fz);
+    box-shadow: em(0 10 20, $fz) hsla(0, 100%, 44%, 0.2);
+    background-image: linear-gradient(90deg, hsl(350, 86%, 39%) 0%, hsl(342, 100%, 46%) 100%);
     color: hsl(0, 0%, 100%);
     transition: color 0.3s, box-shadow 0.3s;
-
+  
     &:not(:disabled):hover {
-        @media screen and (min-width: 1000px) {
-            background-image: linear-gradient(90deg, hsl(350, 66%, 38%) 0%, hsl(350, 66%, 38%) 100%);
-            color: hsla(0, 0%, 100%, 0.7);
-            box-shadow: none;
-        }
-    }
-
-    &:disabled {
-        background-image: linear-gradient(90deg, hsl(0, 0%, 95%) 0%, hsl(0, 0%, 95%) 100%);
-        color: hsla(0, 0%, 0%, 0.2);
+      @media screen and (min-width: 1000px) {
         box-shadow: none;
+        background-image: linear-gradient(90deg, hsl(350, 66%, 38%) 0%, hsl(350, 66%, 38%) 100%);
+        color: hsla(0, 0%, 100%, 0.7);
+      }
     }
-
+  
+    &:disabled {
+      box-shadow: none;
+      background-image: linear-gradient(90deg, hsl(0, 0%, 95%) 0%, hsl(0, 0%, 95%) 100%);
+      color: hsla(0, 0%, 0%, 0.2);
+    }
+  
     &__icon {
-        stroke: currentColor;
-        margin-left: em(12, $fz);
+      stroke: currentColor;
+      margin-left: em(12, $fz);
     }
-
+  
     &__label {
-        $fz: 14;
-        font-size: em($fz, $fz_base);
-        font-weight: 700;
-        text-transform: uppercase;
+      $fz: 14;
+      text-transform: uppercase;
+      font-size: em($fz, $fz_base);
+      font-weight: 700;
     }
-}
-
-.error[data-type="validator-error"] {
-    font-size: 12px;
+  }
+  
+  .error[data-type='validator-error'] {
     position: absolute;
     right: 0;
     bottom: 100%;
+    font-size: 12px;
     color: hsl(346, 100%, 47%);
-}
-
-.label-radio {
+  }
+  
+  .label-radio {
     display: flex;
     align-items: center;
     padding-top: em(5, $fz);
     padding-bottom: em(5, $fz);
-
+  
     &__input {
-        display: none;
+      display: none;
     }
-
+  
     &__cheker {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        width: em(20, $fz);
-        height: em(20, $fz);
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: em(20, $fz);
+      height: em(20, $fz);
+      margin-right: em(25, $fz);
+      border: 1px solid hsl(0, 0%, 77%);
+      border-radius: em(10, $fz);
+  
+      &::before {
+        content: '';
+        opacity: 0;
+        width: em(12, $fz);
+        height: em(12, $fz);
         border-radius: em(10, $fz);
-        border: 1px solid hsl(0, 0%, 77%);
-        margin-right: em(25, $fz);
-
-        &::before {
-            content: '';
-            border-radius: em(10, $fz);
-            width: em(12, $fz);
-            height: em(12, $fz);
-            background-image: linear-gradient(90deg, hsl(350, 86%, 39%) 0%, hsl(342, 100%, 46%) 100%);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
+        background-image: linear-gradient(90deg, hsl(350, 86%, 39%) 0%, hsl(342, 100%, 46%) 100%);
+        transition: opacity 0.3s;
+      }
     }
-
+  
     &__text {
-        font-weight: 300;
-        color: hsl(0, 0%, 20%);
+      font-weight: 300;
+      color: hsl(0, 0%, 20%);
     }
-}
-
-.label-radio__input:checked ~ .label-radio__cheker::before {
+  }
+  
+  .label-radio__input:checked ~ .label-radio__cheker::before {
     opacity: 1;
-}
+  }
+  
