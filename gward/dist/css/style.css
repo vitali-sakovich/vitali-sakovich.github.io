@@ -521,6 +521,7 @@ input[type=number]:focus {
     --banner-preview-picture-height: 13.3125em;
     --banner-preview-picture-justify-self: center;
     --banner-preview-picture-margin-bottom: 1.25em;
+    --banner-preview-grid-area: auto;
     padding-top: 1.5625em;
   }
 }
@@ -531,37 +532,38 @@ input[type=number]:focus {
 @media screen and (max-width: 999.98px) {
   .banner-preview__block:nth-child(2), .banner-preview__block:nth-child(3) {
     --banner-preview-btns-margin-top: 0.8125em;
+    min-height: 20.9375em;
   }
 }
 @media screen and (min-width: 1000px) {
   .banner-preview__block:nth-child(2) {
-    --banner-preview-picture-width: 26.9375em;
-    --banner-preview-picture-height: 11.625em;
+    --banner-preview-picture-width: 23.6875em;
+    --banner-preview-picture-height: 22.3125em;
+    --banner-preview-img-height: 23.6875em;
   }
 }
 @media screen and (max-width: 999.98px) {
   .banner-preview__block:nth-child(2) {
-    --banner-preview-picture-width: 18.25em;
-    --banner-preview-picture-height: 7.875em;
+    --banner-preview-picture-width: 14.9375em;
+    --banner-preview-picture-height: 14.9375em;
   }
 }
 @media screen and (min-width: 1000px) {
   .banner-preview__block:nth-child(3) {
-    --banner-preview-picture-width: 21.5em;
-    --banner-preview-picture-height: 16.0625em;
+    --banner-preview-picture-width: 20.8125em;
+    --banner-preview-picture-height: 17.9375em;
+    --banner-preview-picture-margin-top: 1.875em;
   }
 }
 @media screen and (max-width: 999.98px) {
   .banner-preview__block:nth-child(3) {
-    --banner-preview-picture-width: 16.4375em;
-    --banner-preview-picture-height: 12.3125em;
-    --banner-preview-picture-margin-bottom: -2.5em;
+    --banner-preview-picture-width: 14.9375em;
+    --banner-preview-picture-height: 12.875em;
+    --banner-preview-picture-margin-top: 0.8125em;
   }
 }
-@media screen and (min-width: 1000px) {
-  .banner-preview__content, .banner-preview__picture {
-    grid-area: -1/1;
-  }
+.banner-preview__content, .banner-preview__picture {
+  grid-area: var(--banner-preview-grid-area, -1/1);
 }
 @media screen and (min-width: 1000px) {
   .banner-preview__content {
@@ -592,8 +594,8 @@ input[type=number]:focus {
   margin-bottom: var(--banner-preview-picture-margin-bottom);
 }
 .banner-preview__img {
-  width: 100%;
-  height: 100%;
+  width: var(--banner-preview-img-width, 100%);
+  height: var(--banner-preview-img-height, 100%);
   -o-object-fit: contain;
   object-fit: contain;
 }

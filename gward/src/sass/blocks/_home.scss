@@ -37,6 +37,7 @@
         --banner-preview-picture-height: #{em(213, $fz)};
         --banner-preview-picture-justify-self: center;
         --banner-preview-picture-margin-bottom: #{em(20, $fz)};
+        --banner-preview-grid-area: auto;
         padding-top: em(25, $fz);
       }
     }
@@ -48,38 +49,39 @@
 
       @media screen and (max-width: 999.98px) {
         --banner-preview-btns-margin-top: #{em(13, $fz)};
+        min-height: em(335, $fz);
       }
     }
 
     &:nth-child(2) {
       @media screen and (min-width: 1000px) {
-        --banner-preview-picture-width: #{em(431, $fz)};
-        --banner-preview-picture-height: #{em(186, $fz)};
+        --banner-preview-picture-width: #{em(379, $fz)};
+        --banner-preview-picture-height: #{em(357, $fz)};
+        --banner-preview-img-height: #{em(379, $fz)};
       }
       @media screen and (max-width: 999.98px) {
-        --banner-preview-picture-width: #{em(292, $fz)};
-        --banner-preview-picture-height: #{em(126, $fz)};
+        --banner-preview-picture-width: #{em(239, $fz)};
+        --banner-preview-picture-height: #{em(239, $fz)};
       }
     }
 
     &:nth-child(3) {
       @media screen and (min-width: 1000px) {
-        --banner-preview-picture-width: #{em(344, $fz)};
-        --banner-preview-picture-height: #{em(257, $fz)};
+        --banner-preview-picture-width: #{em(333, $fz)};
+        --banner-preview-picture-height: #{em(287, $fz)};
+        --banner-preview-picture-margin-top: #{em(30, $fz)};
       }
       @media screen and (max-width: 999.98px) {
-        --banner-preview-picture-width: #{em(263, $fz)};
-        --banner-preview-picture-height: #{em(197, $fz)};
-        --banner-preview-picture-margin-bottom: #{em(-40, $fz)};
+        --banner-preview-picture-width: #{em(239, $fz)};
+        --banner-preview-picture-height: #{em(206, $fz)};
+        --banner-preview-picture-margin-top: #{em(13, $fz)};
       }
     }
   }
 
   &__content,
   &__picture {
-    @media screen and (min-width: 1000px) {
-      grid-area: -1/1;
-    }
+    grid-area: var(--banner-preview-grid-area, -1/1);
   }
 
   &__content {
@@ -106,8 +108,8 @@
   }
 
   &__img {
-    width: 100%;
-    height: 100%;
+    width: var(--banner-preview-img-width, 100%);
+    height: var(--banner-preview-img-height, 100%);
     object-fit: contain;
   }
 
